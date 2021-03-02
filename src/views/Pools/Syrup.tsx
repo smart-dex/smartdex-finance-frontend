@@ -80,34 +80,32 @@ const Farm: React.FC = () => {
     <Page>
       <Hero>
         <div>
-          <Heading as="h1" size="xxl" mb="16px">
+          <Heading as="h1" size="lg" mb="16px">
             {TranslateString(738, 'Syrup Pool')}
           </Heading>
-          <ul>
-            <li>{TranslateString(580, 'Stake CAKE to earn new tokens.')}</li>
-            <li>{TranslateString(486, 'You can unstake at any time.')}</li>
-            <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
-          </ul>
+          <div>
+            <span> {TranslateString(580, 'Stake CAKE to earn new tokens.')} </span>
+            <span> {TranslateString(486, 'You can unstake at any time.')}</span>
+            <span> {TranslateString(406, 'Rewards are calculated per block.')}</span>
+          </div>
         </div>
-        <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
       </Hero>
       <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <Divider />
-      <FlexLayout>
-        <Route exact path={`${path}`}>
-          <>
-            {stackedOnly
-              ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
-              : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
-            <Coming />
-          </>
-        </Route>
-        <Route path={`${path}/history`}>
-          {orderBy(finishedPools, ['sortOrder']).map((pool) => (
-            <PoolCard key={pool.sousId} pool={pool} />
-          ))}
-        </Route>
-      </FlexLayout>
+
+      <Route exact path={`${path}`}>
+        <>
+          {stackedOnly
+            ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
+            : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
+          <Coming />
+        </>
+      </Route>
+      <Route path={`${path}/history`}>
+        {orderBy(finishedPools, ['sortOrder']).map((pool) => (
+          <PoolCard key={pool.sousId} pool={pool} />
+        ))}
+      </Route>
     </Page>
   )
 }

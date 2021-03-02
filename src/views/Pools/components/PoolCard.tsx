@@ -16,6 +16,9 @@ import { useSousHarvest } from 'hooks/useHarvest'
 import Balance from 'components/Balance'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import { Pool } from 'state/types'
+import { ChevronDown, ChevronUp } from 'react-feather'
+import { CommunityTag, CoreTag, BinanceTag } from 'components/Tags'
+
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
 import CompoundModal from './CompoundModal'
@@ -24,6 +27,7 @@ import Card from './Card'
 import OldSyrupTitle from './OldSyrupTitle'
 import HarvestButton from './HarvestButton'
 import CardFooter from './CardFooter'
+import CardContent from './CardContent'
 
 interface PoolWithApy extends Pool {
   apy: BigNumber
@@ -78,6 +82,17 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const needsApproval = !accountHasStakedBalance && !allowance.toNumber() && !isBnbPool
   const isCardActive = isFinished && accountHasStakedBalance
 
+  const tags = {
+    [PoolCategory.BINANCE]: BinanceTag,
+    [PoolCategory.CORE]: CoreTag,
+    [PoolCategory.COMMUNITY]: CommunityTag,
+  }
+  const Tag = tags[poolCategory]
+
+  const [isOpenDetail, setIsOpenDetail] = useState(false)
+  const Icon = isOpenDetail ? ChevronUp : ChevronDown
+  const handleClick = () => setIsOpenDetail(!isOpenDetail)
+
   const convertedLimit = new BigNumber(stakingLimit).multipliedBy(new BigNumber(10).pow(tokenDecimals))
   const [onPresentDeposit] = useModal(
     <DepositModal
@@ -111,101 +126,128 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       {isFinished && sousId !== 0 && <PoolFinishedSash />}
-      <div style={{ padding: '24px' }}>
-        <CardTitle isFinished={isFinished && sousId !== 0}>
-          {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}
-        </CardTitle>
-        <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
-          <div style={{ flex: 1 }}>
-            <Image src={`/images/tokens/${image || tokenName}.png`} width={64} height={64} alt={tokenName} />
-          </div>
-          {account && harvest && !isOldSyrup && (
-            <HarvestButton
-              disabled={!earnings.toNumber() || pendingTx}
-              text={pendingTx ? 'Collecting' : 'Harvest'}
-              onClick={async () => {
-                setPendingTx(true)
-                await onReward()
-                setPendingTx(false)
-              }}
-            />
-          )}
-        </div>
-        {!isOldSyrup ? (
-          <BalanceAndCompound>
-            <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
-            {sousId === 0 && account && harvest && (
+      <Grid>
+        <Grid>
+          <GridItem>
+            <CardTitle isFinished={isFinished && sousId !== 0}>
+              {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}
+            </CardTitle>
+            <FlexFull>
+              <Tag />
+            </FlexFull>
+          </GridItem>
+          <GridItem style={{ display: 'flex', alignItems: 'center' }}>
+            <Image src={`/images/tokens/${image || tokenName}.png`} width={55} height={55} alt={tokenName} />
+            {account && harvest && !isOldSyrup && (
               <HarvestButton
                 disabled={!earnings.toNumber() || pendingTx}
-                text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
-                onClick={onPresentCompound}
+                text={pendingTx ? 'Collecting' : 'Harvest'}
+                onClick={async () => {
+                  setPendingTx(true)
+                  await onReward()
+                  setPendingTx(false)
+                }}
               />
             )}
-          </BalanceAndCompound>
-        ) : (
-          <OldSyrupTitle hasBalance={accountHasStakedBalance} />
-        )}
-        <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} />
-        <StyledCardActions>
-          {!account && <UnlockButton />}
-          {account &&
-            (needsApproval && !isOldSyrup ? (
-              <div style={{ flex: 1 }}>
-                <Button disabled={isFinished || requestedApproval} onClick={handleApprove} fullWidth>
-                  {`Approve ${stakingTokenName}`}
-                </Button>
-              </div>
-            ) : (
-              <>
-                <Button
-                  disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                  onClick={
-                    isOldSyrup
-                      ? async () => {
-                          setPendingTx(true)
-                          await onUnstake('0')
-                          setPendingTx(false)
-                        }
-                      : onPresentWithdraw
-                  }
-                >
-                  {`Unstake ${stakingTokenName}`}
-                </Button>
-                <StyledActionSpacer />
-                {!isOldSyrup && (
-                  <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
-                    <AddIcon color="background" />
-                  </IconButton>
-                )}
-              </>
-            ))}
-        </StyledCardActions>
-        <StyledDetails>
-          <div style={{ flex: 1 }}>{TranslateString(736, 'APR')}:</div>
-          {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ? (
-            '-'
-          ) : (
-            <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
-          )}
-        </StyledDetails>
-        <StyledDetails>
-          <div style={{ flex: 1 }}>
-            <span role="img" aria-label={stakingTokenName}>
-              🥞{' '}
-            </span>
-            {TranslateString(384, 'Your Stake')}:
-          </div>
-          <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
-        </StyledDetails>
-      </div>
-      <CardFooter
-        projectLink={projectLink}
-        totalStaked={totalStaked}
-        blocksRemaining={blocksRemaining}
-        isFinished={isFinished}
-        blocksUntilStart={blocksUntilStart}
-        poolCategory={poolCategory}
-      />
+            <div style={{ textAlign: 'center', marginLeft: '21px' }}>
+              <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} />
+              {!isOldSyrup ? (
+                <BalanceAndCompound>
+                  <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
+                  {sousId === 0 && account && harvest && (
+                    <HarvestButton
+                      disabled={!earnings.toNumber() || pendingTx}
+                      text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
+                      onClick={onPresentCompound}
+                    />
+                  )}
+                </BalanceAndCompound>
+              ) : (
+                <OldSyrupTitle hasBalance={accountHasStakedBalance} />
+              )}
+            </div>
+          </GridItem>
+        </Grid>
+
+        <Grid>
+          <GridItem>
+            <StyledDetails>
+              <StyleFlexDetail style={{ alignItems: 'center' }}>
+                <span role="img" aria-label={stakingTokenName}>
+                  🥞{' '}
+                </span>
+                {TranslateString(736, 'APR')}:
+              </StyleFlexDetail>
+              {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ? (
+                '-'
+              ) : (
+                <Balance fontSize="16px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
+              )}
+            </StyledDetails>
+            <StyledDetails>
+              <StyleFlexDetail>{TranslateString(384, 'Your Stake')}:</StyleFlexDetail>
+              <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
+            </StyledDetails>
+          </GridItem>
+          <GridItem style={{ display: 'flex' }}>
+            <StyledCardActions>
+              <Grid>
+                <GridItem>
+                  {!account && <UnlockButton />}
+                  {account &&
+                    (needsApproval && !isOldSyrup ? (
+                      <div style={{ flex: 1 }}>
+                        <Button disabled={isFinished || requestedApproval} onClick={handleApprove} fullWidth>
+                          {`Approve ${stakingTokenName}`}
+                        </Button>
+                      </div>
+                    ) : (
+                      <>
+                        <Button
+                          disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
+                          onClick={
+                            isOldSyrup
+                              ? async () => {
+                                  setPendingTx(true)
+                                  await onUnstake('0')
+                                  setPendingTx(false)
+                                }
+                              : onPresentWithdraw
+                          }
+                        >
+                          {`Unstake ${stakingTokenName}`}
+                        </Button>
+                        <StyledActionSpacer />
+                        {!isOldSyrup && (
+                          <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
+                            <AddIcon color="background" />
+                          </IconButton>
+                        )}
+                      </>
+                    ))}
+                </GridItem>
+
+                <GridItem>
+                  <Button onClick={handleClick} fullWidth>
+                    {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
+                  </Button>
+                </GridItem>
+              </Grid>
+            </StyledCardActions>
+          </GridItem>
+        </Grid>
+      </Grid>
+      {isOpenDetail && (
+        <CardFooter
+          projectLink={projectLink}
+          totalStaked={totalStaked}
+          blocksRemaining={blocksRemaining}
+          isFinished={isFinished}
+          blocksUntilStart={blocksUntilStart}
+          poolCategory={poolCategory}
+          isOpenDetail={isOpenDetail}
+        />
+      )}
     </Card>
   )
 }
@@ -224,7 +266,6 @@ const PoolFinishedSash = styled.div`
 const StyledCardActions = styled.div`
   display: flex;
   justify-content: center;
-  margin: 16px 0;
   width: 100%;
   box-sizing: border-box;
 `
@@ -243,7 +284,27 @@ const StyledActionSpacer = styled.div`
 
 const StyledDetails = styled.div`
   display: flex;
-  font-size: 14px;
+  font-size: 16px;
+`
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 `
 
+const GridItem = styled.div`
+  padding: 24px;
+  align-self: center;
+`
+
+const Row = styled.div`
+  align-items: center;
+  display: flex;
+`
+
+const FlexFull = styled.div`
+  flex: 1;
+`
+const StyleFlexDetail = styled.div`
+  flex: 1;
+`
 export default PoolCard

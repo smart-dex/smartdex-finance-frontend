@@ -15,6 +15,7 @@ const tags = {
 }
 
 interface Props {
+  isOpenDetail: boolean
   projectLink: string
   totalStaked: BigNumber
   blocksRemaining: number
@@ -26,7 +27,7 @@ interface Props {
 const StyledFooter = styled.div<{ isFinished: boolean }>`
   border-top: 1px solid ${({ theme }) => (theme.isDark ? '#524B63' : '#E9EAEB')};
   color: ${({ isFinished, theme }) => theme.colors[isFinished ? 'textDisabled2' : 'primary2']};
-  padding: 24px;
+  padding: 0 30px 24px 30px;
 `
 
 const StyledDetailsButton = styled.button`
@@ -79,6 +80,7 @@ const CardFooter: React.FC<Props> = ({
   isFinished,
   blocksUntilStart,
   poolCategory,
+  isOpenDetail,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const TranslateString = useI18n()
@@ -90,14 +92,11 @@ const CardFooter: React.FC<Props> = ({
   return (
     <StyledFooter isFinished={isFinished}>
       <Row>
-        <FlexFull>
-          <Tag />
-        </FlexFull>
-        <StyledDetailsButton onClick={handleClick}>
+        {/* <StyledDetailsButton onClick={handleClick}>
           {isOpen ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
-        </StyledDetailsButton>
+        </StyledDetailsButton> */}
       </Row>
-      {isOpen && (
+      {isOpenDetail && (
         <Details>
           <Row style={{ marginBottom: '4px' }}>
             <FlexFull>
@@ -108,14 +107,14 @@ const CardFooter: React.FC<Props> = ({
                 {TranslateString(408, 'Total')}
               </Label>
             </FlexFull>
-            <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(totalStaked)} />
+            <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(totalStaked)} />
           </Row>
           {blocksUntilStart > 0 && (
             <Row>
               <FlexFull>
                 <Label>{TranslateString(410, 'Start')}:</Label>
               </FlexFull>
-              <Balance fontSize="14px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
+              <Balance fontSize="16px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
             </Row>
           )}
           {blocksUntilStart === 0 && blocksRemaining > 0 && (
@@ -123,7 +122,7 @@ const CardFooter: React.FC<Props> = ({
               <FlexFull>
                 <Label>{TranslateString(410, 'End')}:</Label>
               </FlexFull>
-              <Balance fontSize="14px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
+              <Balance fontSize="16px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
             </Row>
           )}
           <TokenLink href={projectLink} target="_blank">
