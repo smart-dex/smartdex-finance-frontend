@@ -126,8 +126,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       {isFinished && sousId !== 0 && <PoolFinishedSash />}
-      <Grid>
-        <Grid>
+      <Grid>   
           <GridItem>
             <CardTitle isFinished={isFinished && sousId !== 0}>
               {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}
@@ -136,8 +135,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               <Tag />
             </FlexFull>
           </GridItem>
-          <GridItem style={{ display: 'flex', alignItems: 'center' }}>
-            <Image src={`/images/tokens/${image || tokenName}.png`} width={55} height={55} alt={tokenName} />
+          <GridItem>
+            <ImageCoin>
+              <img  src={`/images/tokens/${image || tokenName}.png`}  alt={tokenName} style={{width:"100%",height:"100%"}} />
+            </ImageCoin>
             {account && harvest && !isOldSyrup && (
               <HarvestButton
                 disabled={!earnings.toNumber() || pendingTx}
@@ -149,7 +150,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 }}
               />
             )}
-            <div style={{ textAlign: 'center', marginLeft: '21px' }}>
+           
+          </GridItem>
+          <GridItem>
+        
               <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} />
               {!isOldSyrup ? (
                 <BalanceAndCompound>
@@ -165,11 +169,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               ) : (
                 <OldSyrupTitle hasBalance={accountHasStakedBalance} />
               )}
-            </div>
           </GridItem>
-        </Grid>
-
-        <Grid>
           <GridItem>
             <StyledDetails>
               <StyleFlexDetail style={{ alignItems: 'center' }}>
@@ -226,7 +226,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                       </>
                     ))}
                 </GridItem>
-
                 <GridItem>
                   <Button onClick={handleClick} fullWidth>
                     {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
@@ -235,7 +234,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               </Grid>
             </StyledCardActions>
           </GridItem>
-        </Grid>
       </Grid>
       {isOpenDetail && (
         <CardFooter
@@ -285,15 +283,17 @@ const StyledActionSpacer = styled.div`
 const StyledDetails = styled.div`
   display: flex;
   font-size: 16px;
+  align-items: center;
 `
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 `
 
 const GridItem = styled.div`
   padding: 24px;
   align-self: center;
+  alignItems: 'center';
 `
 
 const Row = styled.div`
@@ -306,5 +306,9 @@ const FlexFull = styled.div`
 `
 const StyleFlexDetail = styled.div`
   flex: 1;
+`
+const ImageCoin = styled.div`
+  width:55px;
+  height:55px;
 `
 export default PoolCard
