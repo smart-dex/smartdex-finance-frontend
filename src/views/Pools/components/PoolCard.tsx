@@ -294,6 +294,7 @@ const StyledImagePool = styled.div`
   order:2;
   align-self: center;
   align-items: center;
+  padding:20px;
 `
 
 const StyledCoinEarned = styled.div`
