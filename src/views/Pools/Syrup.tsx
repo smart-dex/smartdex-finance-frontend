@@ -12,12 +12,10 @@ import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useFarms, usePriceBnbBusd, usePools, usePriceEthBnb } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
-import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
 import Coming from './components/Coming'
 import PoolCard from './components/PoolCard'
 import PoolTabButtons from './components/PoolTabButtons'
-import Divider from './components/Divider'
 
 const Farm: React.FC = () => {
   const { path } = useRouteMatch()
@@ -91,14 +89,15 @@ const Farm: React.FC = () => {
         </div>
       </Hero>
       <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
-      <Divider />
-
       <Route exact path={`${path}`}>
         <>
-          {stackedOnly
-            ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
-            : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
-          <Coming />
+
+            {stackedOnly
+              ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
+              : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
+            <Coming />
+        
+
         </>
       </Route>
       <Route path={`${path}/history`}>
@@ -139,5 +138,6 @@ const Hero = styled.div`
     max-width: none;
   }
 `
+
 
 export default Farm
