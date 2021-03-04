@@ -53,11 +53,7 @@ const StyledCardHeader = styled(CardHeader)<{ bg: string }>`
 `
 
 const TeamName = styled(Heading).attrs({ as: 'h2' })`
-  font-size: 24px;
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    font-size: 40px;
-  }
+  font-size: 16px;
 `
 
 const StatRow = styled.div`

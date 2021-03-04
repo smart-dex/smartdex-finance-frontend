@@ -7,7 +7,7 @@ const NoProfileCard = () => {
   const TranslateString = useI18n()
 
   return (
-    <Card mb="32px" isActive>
+    <Card mb="32px" isActive style={{border:'1px solid #FF6970',padding:'10px',boxShadow:'none'}}> 
       <CardBody>
         <Flex
           alignItems={['start', null, 'center']}
@@ -15,10 +15,10 @@ const NoProfileCard = () => {
           flexDirection={['column', null, 'row']}
         >
           <div>
-            <Heading size="lg" mb="8px">
+            <Heading size="md" mb="8px">
               {TranslateString(1052, "You haven't set up your profile yet!")}
             </Heading>
-            <Text>
+            <Text fontSize='14px'>
               {TranslateString(1054, 'You can do this at any time by clicking on your profile picture in the menu')}
             </Text>
           </div>

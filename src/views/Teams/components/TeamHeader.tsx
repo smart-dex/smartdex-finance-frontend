@@ -14,11 +14,12 @@ const TeamHeader = () => {
     <>
       {showProfileCallout && <NoProfileCard />}
       <HeaderWrapper>
-        <Heading as="h1" size="xxl" color="secondary">
+        <Heading as="h1" size="lg" color="secondary">
           {TranslateString(1082, 'Teams & Profiles')}
         </Heading>
-        <Text bold>
-          {TranslateString(
+        
+        <Text bold style={{  maxWidth: '464px'}}>
+          {TranslateString( 
             999,
             'Show off your stats and collectibles with your unique profile. Team features will be revealed soon!',
           )}
