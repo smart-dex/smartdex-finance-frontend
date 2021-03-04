@@ -19,7 +19,7 @@ interface StartPageProps extends InjectedModalProps {
   goToApprove: UseEditProfileResponse['goToApprove']
 }
 
-const DangerOutline = styled(Button).attrs({ variant: 'secondary', fullWidth: true })`
+const DangerOutline = styled(Button).attrs({ color: 'secondary', fullWidth: true })`
   border-color: ${({ theme }) => theme.colors.failure};
   color: ${({ theme }) => theme.colors.failure};
   margin-bottom: 24px;

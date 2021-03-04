@@ -11,48 +11,24 @@ import EarnAPYCard from 'views/Home/components/EarnAPYCard'
 import EarnAssetCard from 'views/Home/components/EarnAssetCard'
 import WinCard from 'views/Home/components/WinCard'
 
-const Hero = styled.div`
-  align-items: center;
-  background-image: url('/images/pan-bg-mobile.svg');
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: auto;
-  margin-bottom: 32px;
-  padding-top: 116px;
-  text-align: center;
+const PageHome = styled(Page)`
+  ${({ theme }) => theme.mediaQueries.sm} {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/pan-bg2.svg'), url('/images/pan-bg.svg');
-    background-position: left center, right center;
-    height: 165px;
-    padding-top: 0;
   }
 `
 
-const Cards = styled(BaseLayout)`
-  align-items: stretch;
-  justify-content: stretch;
+const Hero = styled.div`
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 25px;
+`
+
+const Cards = styled.div`
   margin-bottom: 32px;
-
-  & > div {
-    grid-column: span 6;
-    width: 100%;
-  }
-
-  ${({ theme }) => theme.mediaQueries.sm} {
-    & > div {
-      grid-column: span 8;
-    }
-  }
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    & > div {
-      grid-column: span 6;
-    }
-  }
 `
 
 const CTACards = styled(BaseLayout)`
@@ -76,16 +52,39 @@ const CTACards = styled(BaseLayout)`
   }
 `
 
+const STATCards = styled(BaseLayout)`
+  align-items: stretch;
+  justify-content: stretch;
+  margin-bottom: 32px;
+
+  & > div {
+    grid-column: span 6;
+    width: 100%;
+  }
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    & > div {
+      grid-column: span 8;
+    }
+  }
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    & > div {
+      grid-column: span 6;
+    }
+  }
+`
+
 const Home: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
-    <Page>
+    <PageHome>
       <Hero>
-        <Heading as="h1" size="xl" mb="24px" color="secondary">
+        <Heading as="h1" size="lg" color="#5F5E76">
           {TranslateString(576, 'PancakeSwap')}
         </Heading>
-        <Text>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</Text>
+        <Text color="#6F6C99">{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</Text>
       </Hero>
       <div>
         <Cards>
@@ -97,12 +96,12 @@ const Home: React.FC = () => {
           <EarnAssetCard />
           <WinCard />
         </CTACards>
-        <Cards>
+        <STATCards>
           <CakeStats />
           <TotalValueLockedCard />
-        </Cards>
+        </STATCards>
       </div>
-    </Page>
+    </PageHome>
   )
 }
 

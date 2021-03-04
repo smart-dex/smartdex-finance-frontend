@@ -10,27 +10,66 @@ import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/cake-bg.svg');
-  background-repeat: no-repeat;
-  background-position: top right;
-  min-height: 376px;
+  min-height: 169px;
+  border: 1px solid #e2e2e8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  margin-bottom: 32px;
+`
+
+const Actions = styled.div`
+  margin-bottom: 20px;
+  grid-area: c;
+  justify-self: end;
+  @media (max-width: 600px) {
+    justify-self: center;
+    margin-bottom: 0;
+  }
+`
+const BlockCakeHarvest = styled.div`
+  display: flex;
+  grid-area: a;
+  @media (max-width: 600px) {
+    padding-top: 39px;
+    padding-bottom: 25px;
+    justify-content: space-between;
+  }
+`
+
+const BlockCakeWallet = styled.div`
+  display: flex;
+  grid-area: b;
+  @media (max-width: 600px) {
+    padding-bottom: 35px;
+    justify-content: space-between;
+  }
 `
 
 const Block = styled.div`
-  margin-bottom: 16px;
+  margin-top: 8px;
+  display: grid;
+
+  grid-template-areas:
+    'c c c '
+    'a b d ';
+  @media (max-width: 600px) {
+    grid-template-areas:
+      'a'
+      'b'
+      'c';
+  }
 `
 
 const CardImage = styled.img`
   margin-bottom: 16px;
+  margin-left: 20px;
+  position: absolute;
+  top: 23px;
 `
 
 const Label = styled.div`
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: #17c267;
   font-size: 14px;
-`
-
-const Actions = styled.div`
-  margin-top: 24px;
+  padding-right: 50px;
 `
 
 const FarmedStakingCard = () => {
@@ -55,35 +94,39 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledFarmStakingCard>
-      <CardBody>
-        <Heading size="xl" mb="24px">
+      <CardBody style={{ padding: '32px' }}>
+        <Heading size="xl" style={{ fontSize: '24px' }} color="#5F5E76">
           {TranslateString(542, 'Farms & Staking')}
+          <CardImage src="/images/pan-cake.png" alt="cake logo" width={40} />
         </Heading>
-        <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(544, 'CAKE to Harvest')}:</Label>
-          <CakeHarvestBalance />
+          <Actions>
+            {account ? (
+              <Button
+                id="harvest-all"
+                disabled={balancesWithValue.length <= 0 || pendingTx}
+                onClick={harvestAllFarms}
+                style={{ width: '178px' }}
+              >
+                {pendingTx
+                  ? TranslateString(548, 'Collecting CAKE')
+                  : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
+              </Button>
+            ) : (
+              <UnlockButton style={{ width: '178px' }} />
+            )}
+          </Actions>
+
+          <BlockCakeHarvest>
+            <Label>{TranslateString(544, 'CAKE to Harvest')}:</Label>
+            <CakeHarvestBalance />
+          </BlockCakeHarvest>
+
+          <BlockCakeWallet>
+            <Label>{TranslateString(546, 'CAKE in Wallet')}:</Label>
+            <CakeWalletBalance />
+          </BlockCakeWallet>
         </Block>
-        <Block>
-          <Label>{TranslateString(546, 'CAKE in Wallet')}:</Label>
-          <CakeWalletBalance />
-        </Block>
-        <Actions>
-          {account ? (
-            <Button
-              id="harvest-all"
-              disabled={balancesWithValue.length <= 0 || pendingTx}
-              onClick={harvestAllFarms}
-              fullWidth
-            >
-              {pendingTx
-                ? TranslateString(548, 'Collecting CAKE')
-                : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
-            </Button>
-          ) : (
-            <UnlockButton fullWidth />
-          )}
-        </Actions>
       </CardBody>
     </StyledFarmStakingCard>
   )
