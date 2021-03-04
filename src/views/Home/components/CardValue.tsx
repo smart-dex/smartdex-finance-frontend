@@ -10,16 +10,18 @@ export interface CardValueProps {
   prefix?: string
   bold?: boolean
   color?: string
+  paddingRight?: string
 }
 
 const CardValue: React.FC<CardValueProps> = ({
   value,
   decimals,
-  fontSize = '40px',
+  fontSize = '32px',
   lineHeight = '1',
   prefix = '',
   bold = true,
-  color = 'text',
+  color = '#5F5E76',
+  paddingRight = '13px',
 }) => {
   const { countUp, update } = useCountUp({
     start: 0,
@@ -38,7 +40,7 @@ const CardValue: React.FC<CardValueProps> = ({
   }, [value, updateValue])
 
   return (
-    <Text bold={bold} fontSize={fontSize} style={{ lineHeight }} color={color}>
+    <Text bold={bold} fontSize={fontSize} style={{ lineHeight }} color={color} paddingRight={paddingRight}>
       {prefix}
       {countUp}
     </Text>

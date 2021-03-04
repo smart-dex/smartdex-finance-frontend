@@ -18,15 +18,15 @@ const CakeWalletBalance = () => {
 
   if (!account) {
     return (
-      <Text color="textDisabled" style={{ lineHeight: '54px' }}>
-        {TranslateString(298, 'Locked')}
+      <Text color="#5F5E76" lineHeight="0.8">
+        {TranslateString(298, 'LOCKED')}
       </Text>
     )
   }
 
   return (
     <>
-      <CardValue value={getBalanceNumber(cakeBalance)} decimals={4} fontSize="24px" lineHeight="36px" />
+      <CardValue value={getBalanceNumber(cakeBalance)} decimals={4} lineHeight="0.5" />
       <CardBusdValue value={busdBalance} />
     </>
   )
