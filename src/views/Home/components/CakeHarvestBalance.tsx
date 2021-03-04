@@ -11,6 +11,7 @@ import CardBusdValue from './CardBusdValue'
 
 const Block = styled.div`
   margin-bottom: 24px;
+  display: flex;
 }
 `
 
@@ -25,15 +26,15 @@ const CakeHarvestBalance = () => {
 
   if (!account) {
     return (
-      <Text color="textDisabled" style={{ lineHeight: '76px' }}>
-        {TranslateString(298, 'Locked')}
+      <Text color="#5F5E76" lineHeight="0.8">
+        {TranslateString(298, 'LOCKED')}
       </Text>
     )
   }
 
   return (
     <Block>
-      <CardValue value={earningsSum} lineHeight="1.5" />
+      <CardValue value={earningsSum} lineHeight="0.5" />
       <CardBusdValue value={earningsBusd} />
     </Block>
   )

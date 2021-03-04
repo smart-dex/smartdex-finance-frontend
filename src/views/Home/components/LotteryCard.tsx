@@ -16,30 +16,66 @@ import CakeWinnings from './CakeWinnings'
 import LotteryJackpot from './LotteryJackpot'
 
 const StyledLotteryCard = styled(Card)`
-  background-image: url('/images/ticket-bg.svg');
-  background-repeat: no-repeat;
-  background-position: top right;
-  min-height: 376px;
+  min-height: 169px;
+  border: 1px solid #e2e2e8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  margin-bottom: 32px;
+`
+
+const BlockCakeWinnings = styled.div`
+  display: flex;
+  grid-area: a;
+  @media (max-width: 600px) {
+    padding-top: 39px;
+    padding-bottom: 25px;
+    justify-content: space-between;
+  }
+`
+const BlockLotteryJackpot = styled.div`
+  display: flex;
+  grid-area: b;
+  @media (max-width: 600px) {
+    padding-bottom: 35px;
+    justify-content: space-between;
+  }
 `
 
 const Block = styled.div`
-  margin-bottom: 16px;
+  display: grid;
+
+  grid-template-areas:
+    'c c c '
+    'a b b ';
+  @media (max-width: 600px) {
+    grid-template-areas:
+      'a'
+      'b'
+      'c';
+  }
 `
 
 const CardImage = styled.img`
   margin-bottom: 16px;
+  margin-left: 20px;
+  position: absolute;
+  top: 23px;
 `
 
 const Label = styled.div`
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: #17c267;
   font-size: 14px;
+  line-height: 2.3;
+  padding-right: 50px;
 `
 
 const Actions = styled.div`
   display: flex;
-  margin-top: 24px;
-  button {
-    flex: 1 0 50%;
+  margin-bottom: 20px;
+  grid-area: c;
+  justify-self: end;
+  @media (max-width: 600px) {
+    justify-self: center;
+    margin-bottom: 0;
   }
 `
 
@@ -70,13 +106,19 @@ const FarmedStakingCard = () => {
   const renderLotteryTicketButtonBuyOrApprove = () => {
     if (!allowance.toNumber()) {
       return (
-        <Button fullWidth disabled={requestedApproval} onClick={handleApprove}>
+        <Button fullWidth disabled={requestedApproval} onClick={handleApprove} style={{ width: '50%' }}>
           {TranslateString(494, 'Approve CAKE')}
         </Button>
       )
     }
     return (
-      <Button id="dashboard-buy-tickets" variant="secondary" onClick={onPresentBuy} disabled={lotteryHasDrawn}>
+      <Button
+        id="dashboard-buy-tickets"
+        variant="secondary"
+        onClick={onPresentBuy}
+        disabled={lotteryHasDrawn}
+        style={{ width: '50%' }}
+      >
         {TranslateString(558, 'Buy Tickets')}
       </Button>
     )
@@ -86,30 +128,33 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledLotteryCard>
-      <CardBody>
-        <Heading size="xl" mb="24px">
+      <CardBody style={{ padding: '32px' }}>
+        <Heading size="xl" style={{ fontSize: '24px' }} color="#5F5E76">
           {TranslateString(550, 'Your Lottery Winnings')}
+          <CardImage src="/images/pan-cake.png" alt="cake logo" width={40} />
         </Heading>
-        <CardImage src="/images/ticket.svg" alt="cake logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
-          <CakeWinnings />
+          <Actions>
+            <Button
+              id="dashboard-collect-winnings"
+              disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
+              onClick={handleClaim}
+              style={{ marginRight: '8px', width: '50%' }}
+            >
+              {TranslateString(556, 'Collect Winnings')}
+            </Button>
+            {renderLotteryTicketButtonBuyOrApprove()}
+          </Actions>
+
+          <BlockCakeWinnings>
+            <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
+            <CakeWinnings />
+          </BlockCakeWinnings>
+          <BlockLotteryJackpot>
+            <Label>{TranslateString(554, 'Total jackpot this round')}:</Label>
+            <LotteryJackpot />
+          </BlockLotteryJackpot>
         </Block>
-        <Block>
-          <Label>{TranslateString(554, 'Total jackpot this round')}:</Label>
-          <LotteryJackpot />
-        </Block>
-        <Actions>
-          <Button
-            id="dashboard-collect-winnings"
-            disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
-            onClick={handleClaim}
-            style={{ marginRight: '8px' }}
-          >
-            {TranslateString(556, 'Collect Winnings')}
-          </Button>
-          {renderLotteryTicketButtonBuyOrApprove()}
-        </Actions>
       </CardBody>
     </StyledLotteryCard>
   )

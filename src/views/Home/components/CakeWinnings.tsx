@@ -8,7 +8,7 @@ import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
 
 const Block = styled.div`
-  margin-bottom: 24px;
+  display: flex;
  }
 `
 const CakeWinnings = () => {
@@ -18,8 +18,8 @@ const CakeWinnings = () => {
 
   return (
     <Block>
-      <CardValue value={cakeAmount} lineHeight="1.5" />
-      <CardBusdValue value={claimAmountBusd} decimals={2} />
+      <CardValue value={cakeAmount} />
+      <CardBusdValue value={claimAmountBusd} decimals={2} lineHeight="3" />
     </Block>
   )
 }
