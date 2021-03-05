@@ -8,16 +8,16 @@ import useI18n from 'hooks/useI18n'
 import { useLottery } from 'hooks/useContract'
 import Page from 'components/layout/Page'
 import Hero from './components/Hero'
-import Divider from './components/Divider'
 import NextDrawPage from './NextDrawPage'
 import PastDrawsPage from './PastDrawsPage'
 
 const Wrapper = styled.div`
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 32px;
+`
+
+const ButtonItemStyle = styled(ButtonMenuItem)`
+
 `
 
 const Lottery: React.FC = () => {
@@ -63,11 +63,10 @@ const Lottery: React.FC = () => {
       <Page>
         <Wrapper>
           <ButtonMenu activeIndex={activeIndex} onClick={handleClick} size="sm" variant="subtle">
-            <ButtonMenuItem>{TranslateString(716, 'Next draw')}</ButtonMenuItem>
-            <ButtonMenuItem>{TranslateString(718, 'Past draws')}</ButtonMenuItem>
+            <ButtonItemStyle>{TranslateString(716, 'Next draw')}</ButtonItemStyle>
+            <ButtonItemStyle>{TranslateString(718, 'Past draws')}</ButtonItemStyle>
           </ButtonMenu>
         </Wrapper>
-        <Divider />
         <PastLotteryDataContext.Provider
           value={{ historyError, historyData, mostRecentLotteryNumber, currentLotteryNumber }}
         >

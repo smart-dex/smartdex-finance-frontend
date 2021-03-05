@@ -16,8 +16,8 @@ const WinningNumbers: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
-    <CardWrapper>
-      <Card>
+    <CardWrapper style={{ position: 'relative', marginTop:'4em'}}>
+      <Card  style={{ background: '#E9F4FC'}}>
         <CardBody>
           <StyledCardContentInner>
             <StyledCardHeader>
@@ -27,8 +27,7 @@ const WinningNumbers: React.FC = () => {
                   : TranslateString(572, 'Latest Winning Numbers')}
               </Title>
               <br />
-            </StyledCardHeader>
-            <Row>
+              <Row>
               {winNumbers.map((number, index) => (
                 // eslint-disable-next-line react/no-array-index-key
                 <TicketNumberBox key={index}>
@@ -36,50 +35,12 @@ const WinningNumbers: React.FC = () => {
                 </TicketNumberBox>
               ))}
             </Row>
-            <RabbitRow>
-              <RabbitBox>
-                <CardImageFirst>
-                  <Image src="/images/sign bunny 1@2x.png" alt="Number 1" width={200} height={150} responsive />
-                </CardImageFirst>
-              </RabbitBox>
-              <RabbitBox>
-                <CardImage style={{ marginLeft: '-1.2em' }}>
-                  <Image src="/images/sign bunny 2@2x.png" alt="Number 2" width={200} height={150} responsive />
-                </CardImage>
-              </RabbitBox>
-              <RabbitBox>
-                <CardImage style={{ marginLeft: '-1.2em' }}>
-                  <Image src="/images/sign bunny 3@2x.png" alt="Number 3" width={200} height={150} responsive />
-                </CardImage>
-              </RabbitBox>
-              <RabbitBox>
-                <CardImage style={{ marginLeft: '-1.2em' }}>
-                  <Image src="/images/sign bunny 4@2x.png" alt="Number 4" width={200} height={150} responsive />
-                </CardImage>
-              </RabbitBox>
-            </RabbitRow>
-            <RabbitRowSmall>
-              <RabbitBoxSmall>
-                <CardImageFirst>
-                  <Image src="/images/sign bunny 1@2x.png" alt="Number 1" width={200} height={150} responsive />
-                </CardImageFirst>
-              </RabbitBoxSmall>
-              <RabbitBoxSmall>
-                <CardImage style={{ marginLeft: '-1.2em' }}>
-                  <Image src="/images/sign bunny 2@2x.png" alt="Number 2" width={200} height={150} responsive />
-                </CardImage>
-              </RabbitBoxSmall>
-              <RabbitBoxSmall>
-                <CardImage style={{ marginLeft: '-1.2em' }}>
-                  <Image src="/images/sign bunny 3@2x.png" alt="Number 3" width={200} height={150} responsive />
-                </CardImage>
-              </RabbitBoxSmall>
-              <RabbitBoxSmall>
-                <CardImage style={{ marginLeft: '-1.2em' }}>
-                  <Image src="/images/sign bunny 4@2x.png" alt="Number 4" width={200} height={150} responsive />
-                </CardImage>
-              </RabbitBoxSmall>
-            </RabbitRowSmall>
+
+            <Link href="https://api.pancakeswap.com/api/lottery?page=0&pageSize=25" target="_blank">
+              {TranslateString(448, 'Export recent winning numbers')}
+            </Link>
+            </StyledCardHeader>
+            
             <Column>
               <RowNoPadding>
                 <CenteredTextWithPadding>{TranslateString(442, 'Tickets matching 4 numbers:')}</CenteredTextWithPadding>
@@ -99,20 +60,30 @@ const WinningNumbers: React.FC = () => {
                   <strong>{MatchedNumber2}</strong>
                 </CenteredTextWithPadding>
               </RowNoPadding>
-            </Column>
-            <Link href="https://api.pancakeswap.com/api/lottery?page=0&pageSize=25" target="_blank">
-              {TranslateString(448, 'Export recent winning numbers')}
-            </Link>
+            </Column>    
           </StyledCardContentInner>
+          
         </CardBody>
+       
       </Card>
+      <ImgStyle>
+              <img src="/images/Saly-15.png" alt="" />
+     </ImgStyle>
     </CardWrapper>
   )
 }
+
+const ImgStyle = styled.a`
+  position: absolute;
+  right: 2px;
+  top: -106px;
+`
 const Link = styled.a`
   margin-top: 1em;
   text-decoration: none;
-  color: #25beca;
+  color: #0085FF;
+  font-size: 16px;
+  font-weight: bold;
 `
 
 const Row = styled.div`
@@ -122,50 +93,16 @@ const Row = styled.div`
   flex-direction: row;
 `
 
-const RabbitRow = styled.div`
-  margin-top: -2.3em;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`
-
-const RabbitRowSmall = styled.div`
-  margin-top: -2.3em;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-`
-
-const CardImage = styled.div`
-  text-align: center;
-`
-
-const CardImageFirst = styled.div`
-  text-align: center;
-  margin-left: -1.2em;
-
-  @media (max-width: 600) {
-    margin-left: -0.2em;
-  }
-`
-
 const RowNoPadding = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
+  padding: 8px;
 `
 
 const Column = styled.div`
-  margin-top: 1em;
-  align-items: center;
+  margin-top: 1.8em;
+  margin-left: 2.4em;
   display: flex;
   flex-direction: column;
 `
@@ -180,43 +117,29 @@ const CenteredTextWithPadding = styled.div`
   align-items: center;
   padding-left: 2px;
   padding-right: 2px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #5F5E76;
 `
 
 const TicketNumberBox = styled.div`
   padding: 10px;
   border-radius: 12px;
-  background: linear-gradient(180deg, #54dade 0%, #24c7d6 76.22%);
+  background: #FFA14E;
   color: white;
   font-size: 20px;
-  font-weight: 900;
-  margin: 10px;
+  font-weight: 600;
   margin-bottom: 7px;
   width: 40px;
 
   @media (min-width: 768px) {
     font-size: 40px;
-    margin: 20px;
+    margin-right: 20px;
     width: 60px;
   }
 `
 
-const RabbitBox = styled.div`
-  /* padding: 10px; */
-  border-radius: 12px;
-  margin: 16px 20px;
-  width: 60px;
-`
-
-const RabbitBoxSmall = styled.div`
-  padding-top: 10px;
-  padding-left: 10px;
-  border-radius: 12px;
-  margin: 20px;
-  width: 20px;
-`
-
 const StyledCardHeader = styled.div`
-  align-items: center;
   display: flex;
   flex-direction: column;
 `
@@ -224,19 +147,13 @@ const StyledCardHeader = styled.div`
 const CardWrapper = styled.div``
 
 const Title = styled.div`
-  color: ${(props) => props.theme.colors.secondary};
-  font-size: 24px;
-  width: 50vw;
-  text-align: center;
+  color: #5F5E76;
+  font-size: 16px;
   font-weight: 1000;
 `
 
 const StyledCardContentInner = styled.div`
-  align-items: center;
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
 `
 
 export default WinningNumbers
