@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { getAddress } from 'utils/addressHelpers'
+import { ChevronDown, ChevronUp } from 'react-feather'
 import { Button, Flex, Text } from '@pancakeswap-libs/uikit'
 import { Farm } from 'state/types'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
@@ -13,9 +14,17 @@ import { useApprove } from 'hooks/useApprove'
 import StakeAction from './StakeAction'
 import HarvestAction from './HarvestAction'
 
+
 const Action = styled.div`
   padding-top: 16px;
+  display: flex;
+  flex-grow:2;
+  justify-content: space-around;
 `
+const ButtonAction = styled(Flex)`
+  flex-grow:1;
+`
+
 export interface FarmWithStakedValue extends Farm {
   apy?: BigNumber
 }
@@ -25,9 +34,11 @@ interface FarmCardActionsProps {
   ethereum?: provider
   account?: string
   addLiquidityUrl?: string
+  changeOpenDetail: () => void
+  isOpenDetail: boolean
 }
 
-const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, addLiquidityUrl }) => {
+const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, addLiquidityUrl, changeOpenDetail, isOpenDetail }) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses } = useFarmFromSymbol(farm.lpSymbol)
@@ -35,6 +46,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
   const lpAddress = getAddress(lpAddresses)
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
+  const Icon = isOpenDetail ? ChevronUp : ChevronDown
 
   const lpContract = useMemo(() => {
     return getContract(ethereum as provider, lpAddress)
@@ -62,33 +74,27 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
         addLiquidityUrl={addLiquidityUrl}
       />
     ) : (
-      <Button mt="8px" fullWidth disabled={requestedApproval} onClick={handleApprove}>
-        {TranslateString(758, 'Approve Contract')}
-      </Button>
-    )
+        <Button mt="8px" fullWidth disabled={requestedApproval} onClick={handleApprove}>
+          {TranslateString(758, 'Approve Contract')}
+        </Button>
+      )
   }
 
   return (
     <Action>
-      <Flex>
-        <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
-          {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
-          CAKE
-        </Text>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
-          {TranslateString(1072, 'Earned')}
-        </Text>
-      </Flex>
       <HarvestAction earnings={earnings} pid={pid} />
-      <Flex>
-        <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
-          {lpName}
+      <ButtonAction flexDirection='column'>
+        <Text bold textTransform="uppercase" fontSize="16px">
+          {lpName}   {TranslateString(1074, 'Staked')}
         </Text>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
-          {TranslateString(1074, 'Staked')}
-        </Text>
-      </Flex>
-      {!account ? <UnlockButton mt="8px" fullWidth /> : renderApprovalOrStakeButton()}
+        <Flex flexWrap='wrap'>
+          {!account ? <UnlockButton mt="8px"/> : renderApprovalOrStakeButton()}
+          <Button variant='secondary' onClick={changeOpenDetail} margin='10px'>
+            {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
+          </Button>
+        </Flex>
+
+      </ButtonAction>
     </Action>
   )
 }

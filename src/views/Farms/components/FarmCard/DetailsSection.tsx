@@ -29,6 +29,10 @@ const StyledLinkExternal = styled(LinkExternal)`
     fill: ${({ theme }) => theme.colors.primary};
   }
 `
+const StyledDetailSection = styled.div`
+  border-top: 1px solid ${({ theme }) => (theme.isDark ? '#524B63' : '#E9EAEB')};
+  padding: 0 30px 24px 30px;
+`
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
   bscScanAddress,
@@ -40,23 +44,26 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const TranslateString = useI18n()
 
   return (
-    <Wrapper>
-      <Flex justifyContent="space-between">
-        <Text>{TranslateString(316, 'Stake')}:</Text>
-        <StyledLinkExternal href={addLiquidityUrl}>{lpLabel}</StyledLinkExternal>
-      </Flex>
-      {!removed && (
+    <StyledDetailSection>
+      <Wrapper>
         <Flex justifyContent="space-between">
-          <Text>{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text>{totalValueFormated}</Text>
+          <Text>{TranslateString(316, 'Stake')}:</Text>
+          <StyledLinkExternal href={addLiquidityUrl}>{lpLabel}</StyledLinkExternal>
         </Flex>
-      )}
-      <Flex justifyContent="flex-start">
-        <Link external href={bscScanAddress} bold={false}>
-          {TranslateString(356, 'View on BscScan')}
-        </Link>
-      </Flex>
-    </Wrapper>
+        {!removed && (
+          <Flex justifyContent="space-between">
+            <Text>{TranslateString(23, 'Total Liquidity')}:</Text>
+            <Text>{totalValueFormated}</Text>
+          </Flex>
+        )}
+        <Flex justifyContent="flex-start">
+          <Link external href={bscScanAddress} bold={false}>
+            {TranslateString(356, 'View on BscScan')}
+          </Link>
+        </Flex>
+      </Wrapper>
+    </StyledDetailSection>
+
   )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Tag, Flex, Heading, Image } from '@pancakeswap-libs/uikit'
+import { Tag, Flex, Heading } from '@pancakeswap-libs/uikit'
 import { CommunityTag, CoreTag } from 'components/Tags'
 
 export interface ExpandableSectionProps {
@@ -12,9 +12,16 @@ export interface ExpandableSectionProps {
 }
 
 const Wrapper = styled(Flex)`
+  flex-grow:1;
   svg {
     margin-right: 0.25rem;
   }
+  width: 200px;
+`
+const ImageFarm = styled.div`
+  width:55px;
+  height:55px;
+  margin-right: 10px;
 `
 
 const MultiplierTag = styled(Tag)`
@@ -29,11 +36,13 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   tokenSymbol,
 }) => {
   return (
-    <Wrapper justifyContent="space-between" alignItems="center" mb="12px">
-      <Image src={`/images/farms/${farmImage}.svg`} alt={tokenSymbol} width={64} height={64} />
-      <Flex flexDirection="column" alignItems="flex-end">
-        <Heading mb="4px">{lpLabel}</Heading>
-        <Flex justifyContent="center">
+    <Wrapper>
+      <ImageFarm>
+          <img src={`/images/farms/${farmImage}.svg`}  alt={tokenSymbol} style={{ width: "100%", height: "100%" }} />
+      </ImageFarm>
+      <Flex flexDirection="column">
+        <Heading mb="10px" size='lg'>{lpLabel}</Heading>
+        <Flex>
           {isCommunityFarm ? <CommunityTag /> : <CoreTag />}
           <MultiplierTag variant="secondary">{multiplier}</MultiplierTag>
         </Flex>
