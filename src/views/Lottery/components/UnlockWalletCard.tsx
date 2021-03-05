@@ -13,6 +13,8 @@ const StyledCardBody = styled(CardBody)`
 
 const StyledHeading = styled(Heading)`
   margin: 16px 0;
+  font-weight: 500;
+  font-size: 16px;
 `
 
 const IconWrapper = styled.div`
@@ -22,6 +24,11 @@ const IconWrapper = styled.div`
   }
 `
 
+const TicketImg = styled.img`
+  width: 110px;
+  height: 110px;
+`
+
 const UnlockWalletCard = () => {
   const TranslateString = useI18n()
 
@@ -29,7 +36,8 @@ const UnlockWalletCard = () => {
     <Card isActive>
       <StyledCardBody>
         <IconWrapper>
-          <Ticket />
+        {/* <Ticket /> */}
+          <TicketImg src="images/ticket-lottery.png"/>
         </IconWrapper>
         <StyledHeading size="md">{TranslateString(1080, 'Unlock wallet to access lottery')}</StyledHeading>
         <UnlockButton />
