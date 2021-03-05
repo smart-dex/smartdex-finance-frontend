@@ -69,6 +69,16 @@ const StyedTextName = styled(Flex)`
   flex-direction:  colum;
 `
 
+const ComingSoon = styled.div`
+  margin-top: 16px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.6);
+`
+
 const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
   const TranslateString = useI18n()
 
@@ -97,7 +107,9 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
             />
           </StatRow>
           <Heading as="h3">{TranslateString(1044, 'Team Achievements')}</Heading>
-          {/* <ComingSoon /> */}
+          <ComingSoon>
+            <span>{TranslateString(350, 'Coming Soon')}</span>
+          </ComingSoon>
         </CardBody>
       </StyledCard>
     </Wrapper>

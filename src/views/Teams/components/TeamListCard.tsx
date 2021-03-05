@@ -65,7 +65,7 @@ const Avatar = styled.img`
 `
 
 const TeamName = styled(Heading).attrs({ as: 'h3' })`
-  font-size: 16px;
+  font-size: 18px;
 
   // ${({ theme }) => theme.mediaQueries.md} {
   //   font-size: 18px;
