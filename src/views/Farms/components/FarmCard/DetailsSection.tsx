@@ -1,7 +1,7 @@
 import React from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
-import { Text, Flex, Link, LinkExternal } from '@pancakeswap-libs/uikit'
+import { Text, Flex, Link, LinkExternal } from 'uikit-sotatek'
 
 export interface ExpandableSectionProps {
   bscScanAddress?: string
@@ -13,6 +13,13 @@ export interface ExpandableSectionProps {
 
 const Wrapper = styled.div`
   margin-top: 24px;
+  float: right;
+  width: 25%;
+  @media (max-width: 968px) {
+    float: none;
+    width: 100%;
+  }
+  margin-bottom: 24px;
 `
 
 const StyledLinkExternal = styled(LinkExternal)`

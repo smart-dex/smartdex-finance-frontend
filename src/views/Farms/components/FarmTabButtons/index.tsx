@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
-import { ButtonMenu, ButtonMenuItem, Text, Toggle } from '@pancakeswap-libs/uikit'
+import { ButtonMenu, ButtonMenuItem, Text, Toggle } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 
 const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
@@ -14,7 +14,7 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
         <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="md"  />
         <Text> {TranslateString(1116, 'Staked only')}</Text>
       </ToggleWrapper>
-      <ButtonMenu activeIndex={isExact ? 0 : 1} size="sm" variant="subtle">
+      <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="subtle">
         <ButtonMenuItem as={Link} to={`${url}`}>
           {TranslateString(698, 'Active')}
         </ButtonMenuItem>

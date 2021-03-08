@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { Image, Heading } from '@pancakeswap-libs/uikit'
+import { Heading } from 'uikit-sotatek'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -100,7 +100,6 @@ const Farms: React.FC = () => {
         {TranslateString(696, 'Stake LP tokens to earn CAKE')}
       </Heading>
       <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
-      <div>
         <Divider />
         <FlexLayout>
           <Route exact path={`${path}`}>
@@ -110,8 +109,7 @@ const Farms: React.FC = () => {
             {farmsList(inactiveFarms, true)}
           </Route>
         </FlexLayout>
-      </div>
-      <Image src="/images/cakecat.png" alt="Pancake illustration" width={949} height={384} responsive />
+      {/* <Image src="/images/cakecat.png" alt="Pancake illustration" width={949} height={384} responsive /> */}
     </Page>
   )
 }

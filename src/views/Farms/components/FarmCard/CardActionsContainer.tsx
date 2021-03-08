@@ -5,7 +5,7 @@ import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { getAddress } from 'utils/addressHelpers'
 import { ChevronDown, ChevronUp } from 'react-feather'
-import { Button, Flex, Text } from '@pancakeswap-libs/uikit'
+import { Button, Flex, Text } from 'uikit-sotatek'
 import { Farm } from 'state/types'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
@@ -14,15 +14,31 @@ import { useApprove } from 'hooks/useApprove'
 import StakeAction from './StakeAction'
 import HarvestAction from './HarvestAction'
 
-
 const Action = styled.div`
-  padding-top: 16px;
   display: flex;
   flex-grow:2;
   justify-content: space-around;
+  margin-left:16px;
+  @media (max-width: 968px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left:0px;
+  }
 `
 const ButtonAction = styled(Flex)`
   flex-grow:1;
+  flex-direction: column;
+  @media (max-width: 968px) {
+    margin-top:16px;
+  }
+`
+const StyledGroupButton= styled(Flex)`
+  flex-wrap: wrap ;
+  justify-content: space-between;
+  @media (max-width: 968px) {
+    justify-content: space-around;
+  }
+ 
 `
 
 export interface FarmWithStakedValue extends Farm {
@@ -74,7 +90,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
         addLiquidityUrl={addLiquidityUrl}
       />
     ) : (
-        <Button mt="8px" fullWidth disabled={requestedApproval} onClick={handleApprove}>
+        <Button mt="10px" disabled={requestedApproval} onClick={handleApprove} style={{ maxWidth: '156px'}}>
           {TranslateString(758, 'Approve Contract')}
         </Button>
       )
@@ -83,16 +99,16 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
   return (
     <Action>
       <HarvestAction earnings={earnings} pid={pid} />
-      <ButtonAction flexDirection='column'>
+      <ButtonAction>
         <Text bold textTransform="uppercase" fontSize="16px">
           {lpName}   {TranslateString(1074, 'Staked')}
         </Text>
-        <Flex flexWrap='wrap'>
-          {!account ? <UnlockButton mt="8px"/> : renderApprovalOrStakeButton()}
-          <Button variant='secondary' onClick={changeOpenDetail} margin='10px'>
+        <StyledGroupButton>
+          {!account ? <UnlockButton mt='10px' style={{ maxWidth: '156px'}}/> : renderApprovalOrStakeButton()}
+          <Button variant='secondary' onClick={changeOpenDetail} mt='10px' style={{ minWidth: '156px'}}>
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </Button>
-        </Flex>
+        </StyledGroupButton>
 
       </ButtonAction>
     </Action>

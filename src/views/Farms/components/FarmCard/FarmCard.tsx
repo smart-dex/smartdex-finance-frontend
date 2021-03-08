@@ -1,7 +1,9 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-import { Flex, Text, Skeleton } from '@pancakeswap-libs/uikit'
+// import { Flex, Text, Skeleton } from 'uikit-sotatek'
+import { Flex, Text, Skeleton } from 'uikit-sotatek'
+
 import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
@@ -32,6 +34,9 @@ const FCard = styled.div`
     transition: 0.35s;
   }
   margin-bottom: 16px;
+  @media (max-width: 968px) {
+    max-width:450px;
+  }
 `
 
 
@@ -43,15 +48,18 @@ const CardContent = styled(Flex)`
   display: flex;
   flex-direction: row;
   padding: 0;
-  @media (max-width: 967px) {
+  // align-items:center;
+  padding:24px;
+  @media (max-width: 968px) {
+    flex-direction: column;
     flex-wrap: wrap;
   }
-  align-items:center;
 `
 
 const InfoFarm = styled(Flex)`
   flex-grow:1;
 `
+
 
 interface FarmCardProps {
   farm: FarmWithStakedValue
@@ -106,7 +114,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   }
   return (
     <FCard>
-      <CardContent margin='16px'>
+      <CardContent>
         <CardHeading
           lpLabel={lpLabel}
           multiplier={farm.multiplier}
@@ -114,8 +122,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           farmImage={farmImage}
           tokenSymbol={farm.tokenSymbol}
         />
-        {!removed && (
-          <InfoFarm flexDirection='column' justifyContent='center'>
+        <InfoFarm flexDirection='column' justifyContent='center' marginRight='16px'>
+          {!removed && (
+
             <Flex alignItems="center" justifyContent='center'>
               <Text style={{ flex: 1 }}>{TranslateString(736, 'APR')}: </Text>
               <Text bold style={{ display: 'flex', alignItems: 'center' }}>
@@ -129,14 +138,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                   )}
               </Text>
             </Flex>
-            <Flex justifyContent='center'>
-              <Text style={{ flex: 1 }}>{TranslateString(318, 'Earn')}:</Text>
-              <Text bold>{earnLabel}</Text>
-            </Flex>
-          </InfoFarm>
-        )}
-          <CardActionsContainer farm={farm} ethereum={ethereum} account={account} addLiquidityUrl={addLiquidityUrl} changeOpenDetail={handelOpenDetail} isOpenDetail={showExpandableSection} />
-          {/* <ExpandableSectionButton
+          )}
+          <Flex justifyContent='center'>
+            <Text style={{ flex: 1 }}>{TranslateString(318, 'Earn')}:</Text>
+            <Text bold>{earnLabel}</Text>
+          </Flex>
+        </InfoFarm>
+        <CardActionsContainer farm={farm} ethereum={ethereum} account={account} addLiquidityUrl={addLiquidityUrl} changeOpenDetail={handelOpenDetail} isOpenDetail={showExpandableSection} />
+        {/* <ExpandableSectionButton
             onClick={() => setShowExpandableSection(!showExpandableSection)}
             expanded={showExpandableSection}
           /> */}
