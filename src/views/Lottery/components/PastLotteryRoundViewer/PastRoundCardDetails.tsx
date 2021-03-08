@@ -19,6 +19,14 @@ const CardHeading = styled.div`
   justify-content: space-between;
 `
 
+const TopLotteryBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
 const TopLotteryCardHeading = styled(LotteryCardHeading)`
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
 `
@@ -48,18 +56,21 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
             <Heading size="md" mb="24px">
               Round #{lotteryNumber}
             </Heading>
-            <TopLotteryCardHeading
-              valueToDisplay={`${lotteryNumbers[0]}, ${lotteryNumbers[1]}, ${lotteryNumbers[2]}, ${lotteryNumbers[3]}`}
-              Icon={TicketRound}
-            >
-              {TranslateString(999, 'Winning numbers')}
-            </TopLotteryCardHeading>
-            <LotteryCardHeading
-              valueToDisplay={TranslateString(999, `${poolSize.toLocaleString()} CAKE`)}
-              Icon={PancakeRoundIcon}
-            >
-              {TranslateString(999, 'Total prizes')}
-            </LotteryCardHeading>
+            <TopLotteryBlock>
+              <TopLotteryCardHeading
+                valueToDisplay={`${lotteryNumbers[0]}, ${lotteryNumbers[1]}, ${lotteryNumbers[2]}, ${lotteryNumbers[3]}`}
+                Icon={TicketRound}
+              >
+                {TranslateString(999, 'Winning numbers')}
+              </TopLotteryCardHeading>
+              <LotteryCardHeading
+                valueToDisplay={TranslateString(999, `${poolSize.toLocaleString()} CAKE`)}
+                Icon={PancakeRoundIcon}
+              >
+                {TranslateString(999, 'Total prizes')}
+              </LotteryCardHeading>
+            </TopLotteryBlock>
+            
           </CardHeading>
         </CardBody>
         <CardFooter>
