@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
-import { Button, IconButton, useModal, AddIcon } from '@pancakeswap-libs/uikit'
+import { Button, IconButton, useModal, AddIcon } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -13,12 +13,12 @@ import { useSousUnstake } from 'hooks/useUnstake'
 import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useSousHarvest } from 'hooks/useHarvest'
-import Balance from 'components/Balance'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import { Pool } from 'state/types'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { CommunityTag, CoreTag, BinanceTag } from 'components/Tags'
-
+import { lightColors, darkColors } from 'style/Color'
+import BlancePool from './Styled/Balance_Pool'
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
 import CompoundModal from './CompoundModal'
@@ -155,10 +155,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
 
         <StyledCoinEarned>
-          <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} />
+          <Label isFinished={isFinished && sousId !== 0}   text={TranslateString(330, `${tokenName} earned`)} colorLabel='#FFA14E'/>
           {!isOldSyrup ? (
             <BalanceAndCompound>
-              <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
+              <BlancePool value={getBalanceNumber(earnings, tokenDecimals)} color='' isDisabled={isFinished} />
               {sousId === 0 && account && harvest && (
                 <HarvestButton
                   disabled={!earnings.toNumber() || pendingTx}
@@ -183,12 +183,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ? (
               '-'
             ) : (
-                <Balance fontSize="16px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
+                <BlancePool fontSize="16px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
               )}
           </StyledDetails>
           <StyledDetails>
             <StyleFlexDetail>{TranslateString(384, 'Your Stake')}:</StyleFlexDetail>
-            <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
+            <BlancePool fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
           </StyledDetails>
         </DetailPool>
 
@@ -339,6 +339,7 @@ const FlexFull = styled.div`
 `
 const StyleFlexDetail = styled.div`
   flex: 1;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
 `
 
 
