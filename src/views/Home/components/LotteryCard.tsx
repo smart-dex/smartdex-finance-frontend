@@ -14,6 +14,7 @@ import { useApproval } from 'hooks/useApproval'
 import PurchaseWarningModal from 'views/Lottery/components/TicketCard/PurchaseWarningModal'
 import CakeWinnings from './CakeWinnings'
 import LotteryJackpot from './LotteryJackpot'
+import { lightColors, darkColors, baseColors } from '../../../style/Color'
 
 const StyledLotteryCard = styled(Card)`
   min-height: 169px;
@@ -79,6 +80,18 @@ const Actions = styled.div`
   }
 `
 
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
+const ButtonStyle = styled(Button)`
+  background: ${baseColors.primary};
+  border-radius: 10px;
+  &:hover {
+    background: #5ba7ec !important;
+  }
+`
+
 const FarmedStakingCard = () => {
   const lotteryHasDrawn = useGetLotteryHasDrawn()
   const [requesteClaim, setRequestedClaim] = useState(false)
@@ -106,9 +119,9 @@ const FarmedStakingCard = () => {
   const renderLotteryTicketButtonBuyOrApprove = () => {
     if (!allowance.toNumber()) {
       return (
-        <Button fullWidth disabled={requestedApproval} onClick={handleApprove} style={{ width: '50%' }}>
+        <ButtonStyle fullWidth disabled={requestedApproval} onClick={handleApprove} style={{ width: '50%' }}>
           {TranslateString(494, 'Approve CAKE')}
-        </Button>
+        </ButtonStyle>
       )
     }
     return (
@@ -129,10 +142,10 @@ const FarmedStakingCard = () => {
   return (
     <StyledLotteryCard>
       <CardBody style={{ padding: '32px' }}>
-        <Heading size="xl" style={{ fontSize: '24px' }} color="#5F5E76">
+        <HeadingStyle size="xl" style={{ fontSize: '24px' }}>
           {TranslateString(550, 'Your Lottery Winnings')}
           <CardImage src="/images/pan-cake.png" alt="cake logo" width={40} />
-        </Heading>
+        </HeadingStyle>
         <Block>
           <Actions>
             <Button

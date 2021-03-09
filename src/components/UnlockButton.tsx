@@ -3,6 +3,15 @@ import styled from 'styled-components'
 import { Button, useWalletModal } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
+import { baseColors } from '../style/Color'
+
+const ButtonStyle = styled(Button)`
+  background: ${baseColors.primary};
+  border-radius: 10px;
+  &:hover {
+    background: #5ba7ec !important;
+  }
+`
 
 const ButtonStyle = styled(Button)`
   background: #0085ff;
