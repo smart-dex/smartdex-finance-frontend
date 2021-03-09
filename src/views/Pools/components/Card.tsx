@@ -14,8 +14,8 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   position: relative;
   margin-bottom: 20px;  
   margin: 20px auto;
-  min-width:920px;
-  @media (max-width: 967px) {
+  min-width:968px;
+  @media (max-width: 968px) {
     max-width:400px;
     min-width:0;
   }

@@ -12,7 +12,9 @@ import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useFarms, usePriceBnbBusd, usePools, usePriceEthBnb } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
+
 import Page from 'components/layout/Page'
+import Divider from './components/Divider'
 import Coming from './components/Coming'
 import PoolCard from './components/PoolCard'
 import PoolTabButtons from './components/PoolTabButtons'
@@ -89,6 +91,7 @@ const Farm: React.FC = () => {
         </div>
       </Hero>
       <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
+      <Divider/>
       <Route exact path={`${path}`}>
         <>
 

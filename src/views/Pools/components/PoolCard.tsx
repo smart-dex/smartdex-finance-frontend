@@ -214,19 +214,22 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                         }
                         : onPresentWithdraw
                     }
+                    margin='10px'
+                    style={{ maxWidth: '143px', minWidth: '120px' }}
                   >
                     {`Unstake ${stakingTokenName}`}
                   </Button>
-                  <StyledActionSpacer />
+
                   {!isOldSyrup && (
-                    <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
+                    <IconButton disabled={isFinished && sousId !== 0} margin='10px' onClick={onPresentDeposit}>
                       <AddIcon color="background" />
                     </IconButton>
                   )}
+
                 </>
               ))}
 
-          <Button variant='secondary' onClick={handleClick} margin='10px' style={{ maxWidth: '143px', minWidth: '120px' }}>
+          <Button variant='secondary' onClick={handleClick} margin='10px' style={{ minWidth: '143px' }}>
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </Button>
 
@@ -261,14 +264,14 @@ const PoolFinishedSash = styled.div`
 const BalanceAndCompound = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 `
 
-const StyledActionSpacer = styled.div`
-  height: ${(props) => props.theme.spacing[4]}px;
-  width: ${(props) => props.theme.spacing[4]}px;
-`
+// const StyledActionSpacer = styled.div`
+//   height: ${(props) => props.theme.spacing[4]}px;
+//   width: ${(props) => props.theme.spacing[4]}px;
+// `
 
 const StyledDetails = styled.div`
   display: flex;
@@ -323,7 +326,11 @@ const StyledCardActions = styled.div`
   align-items: center;
   padding: 24px;
   flex-grow: 1;
-  justify-content: space-around;
+  justify-content: space-between;
+  // @media (max-width: 968px) {
+  //   justify-content: space-around;
+  // }
+
   flex-wrap: wrap;
 `
 
