@@ -56,7 +56,11 @@
     "react-scripts": "^4.0.1",
     "styled-components": "^5.1.1",
     "typescript": "^4.1.5",
+<<<<<<< HEAD
     "uikit-sotatek": "^1.0.8",
+=======
+    "uikit-sotatek": "^1.2.5",
+>>>>>>> origin/master
     "web3": "^1.3.1"
   },
   "devDependencies": {
