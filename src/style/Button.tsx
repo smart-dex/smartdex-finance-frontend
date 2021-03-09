@@ -1,6 +1,8 @@
+import { baseColors, lightColors } from './Color'
+
 export const SelectButtonStyle = `
   & a {
-    color: #5F5E76;
+    color: ${lightColors.textMenuLeft};
     height: 45px;
     font-size: 13px;
     padding: 0 20px;
@@ -15,10 +17,10 @@ export const SelectButtonStyle = `
       box-shadow: 'none',
     }
     &.hyEFyZ {
-      background: #0085FF;
+      background: ${baseColors.primary};
       color: #fff;
       &:hover {
-        background: #0085FF !important;
+        background: ${baseColors.primary} !important;
       }
       &:focus: {
         boxShadow: none;
@@ -26,7 +28,7 @@ export const SelectButtonStyle = `
     }
   }  
   &>div {
-    background: #E9F4FC;
+    background: ${lightColors.activeBackgroundMenuLeft};
     border-radius: 50px;
   }
   @media(min-width: 768px) {
@@ -56,7 +58,7 @@ export const Button = `
 export const ButtonPrimary = `
   ${Button}
   box-shadow: 0px 4px 10px rgba(64, 170, 255, 0.24);
-  background-color: #0085FF;
+  background-color: ${baseColors.primary};
 `
 export const ButtonSecondary = `
   ${Button}
@@ -66,11 +68,11 @@ export const ButtonSecondary = `
 export const ButtonBorder = `
   ${Button}
   background-color: #fff;
-  color: #0085FF;
-  border: 1px solid #0085FF;
+  color: ${baseColors.primary};
+  border: 1px solid ${baseColors.primary};
   &:hover {
-    background: #0085FF !important;
-    border-color: #0085FF !important;
+    background: ${baseColors.primary} !important;
+    border-color: ${baseColors.primary} !important;
     text-decoration: none;
     color: #fff;
   }
