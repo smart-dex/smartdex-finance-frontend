@@ -10,6 +10,7 @@ import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import EarnAPYCard from 'views/Home/components/EarnAPYCard'
 import EarnAssetCard from 'views/Home/components/EarnAssetCard'
 import WinCard from 'views/Home/components/WinCard'
+import { lightColors, darkColors } from '../../style/Color'
 
 const PageHome = styled(Page)`
   ${({ theme }) => theme.mediaQueries.sm} {
@@ -75,16 +76,24 @@ const STATCards = styled(BaseLayout)`
   }
 `
 
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
 const Home: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
     <PageHome>
       <Hero>
-        <Heading as="h1" size="lg" color="#5F5E76">
+        <HeadingStyle as="h1" size="lg">
           {TranslateString(576, 'PancakeSwap')}
-        </Heading>
-        <Text color="#6F6C99">{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</Text>
+        </HeadingStyle>
+        <TextStyle>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</TextStyle>
       </Hero>
       <div>
         <Cards>
