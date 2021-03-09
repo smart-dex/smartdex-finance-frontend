@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import React, { useMemo, useState } from 'react'
-import { Button, Modal } from 'uikit-sotatek'
+import { Button, Modal } from '@pancakeswap-libs/uikit'
 import ModalActions from 'components/ModalActions'
 import Balance from 'components/Balance'
 import useI18n from 'hooks/useI18n'
@@ -30,11 +30,12 @@ const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, onDis
         <Balance value={Number(fullBalance)} />
       </BalanceRow>
       <ModalActions>
-        <Button variant="secondary" onClick={onDismiss}>
+        <Button fullWidth variant="secondary" onClick={onDismiss}>
           {TranslateString(462, 'Cancel')}
         </Button>
         <Button
           id="compound-cake"
+          fullWidth
           disabled={pendingTx}
           onClick={async () => {
             setPendingTx(true)

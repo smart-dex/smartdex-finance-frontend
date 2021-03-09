@@ -1,15 +1,8 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   background: ${(props) => props.theme.card.background};
-
-  border: 1px solid #E2E2E8;
-  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
-  ${props => props.theme.isDark && css`
-  border: 1px solid #2F344B;
-  box-shadow: 50px 38px 102px rgba(0, 0, 0, 0.14);
-  `}
-  
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05);
   border-radius: 32px;
   display: flex;
   color: ${({ isFinished, theme }) => theme.colors[isFinished ? 'textDisabled' : 'secondary']};
@@ -19,13 +12,6 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
       : '0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05)'};
   flex-direction: column;
   position: relative;
-  margin-bottom: 20px;  
-  margin: 20px auto;
-  min-width:968px;
-  @media (max-width: 968px) {
-    max-width:400px;
-    min-width:0;
-  }
 `
 
 export default Card

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Image, Button } from 'uikit-sotatek'
+import { Image, Button } from '@pancakeswap-libs/uikit'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
 import Card from './Card'
@@ -51,6 +51,7 @@ const Coming: React.FC = () => {
           as="a"
           href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform"
           external
+          fullWidth
           mb="16px"
         >
           {TranslateString(418, 'Apply Now')}

@@ -3,7 +3,7 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Heading } from 'uikit-sotatek'
+import { Heading } from '@pancakeswap-libs/uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
@@ -12,12 +12,12 @@ import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useFarms, usePriceBnbBusd, usePools, usePriceEthBnb } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
-import { lightColors, darkColors } from 'style/Color'
+import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import Divider from './components/Divider'
 import Coming from './components/Coming'
 import PoolCard from './components/PoolCard'
 import PoolTabButtons from './components/PoolTabButtons'
+import Divider from './components/Divider'
 
 const Farm: React.FC = () => {
   const { path } = useRouteMatch()
@@ -80,34 +80,34 @@ const Farm: React.FC = () => {
     <Page>
       <Hero>
         <div>
-          <HeadingPage as="h1" size="lg" mb="16px">
+          <Heading as="h1" size="xxl" mb="16px">
             {TranslateString(738, 'Syrup Pool')}
-          </HeadingPage>
-          <DescriptionHeading>
-            <span> {TranslateString(580, 'Stake CAKE to earn new tokens.')} </span>
-            <span> {TranslateString(486, 'You can unstake at any time.')}</span>
-            <span> {TranslateString(406, 'Rewards are calculated per block.')}</span>
-          </DescriptionHeading>
+          </Heading>
+          <ul>
+            <li>{TranslateString(580, 'Stake CAKE to earn new tokens.')}</li>
+            <li>{TranslateString(486, 'You can unstake at any time.')}</li>
+            <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
+          </ul>
         </div>
+        <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
       </Hero>
       <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <Divider />
-      <Route exact path={`${path}`}>
-        <>
-
-          {stackedOnly
-            ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
-            : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
-          <Coming />
-
-
-        </>
-      </Route>
-      <Route path={`${path}/history`}>
-        {orderBy(finishedPools, ['sortOrder']).map((pool) => (
-          <PoolCard key={pool.sousId} pool={pool} />
-        ))}
-      </Route>
+      <FlexLayout>
+        <Route exact path={`${path}`}>
+          <>
+            {stackedOnly
+              ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
+              : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
+            <Coming />
+          </>
+        </Route>
+        <Route path={`${path}/history`}>
+          {orderBy(finishedPools, ['sortOrder']).map((pool) => (
+            <PoolCard key={pool.sousId} pool={pool} />
+          ))}
+        </Route>
+      </FlexLayout>
     </Page>
   )
 }
@@ -141,13 +141,5 @@ const Hero = styled.div`
     max-width: none;
   }
 `
-const HeadingPage = styled(Heading)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
-`
-
-const DescriptionHeading = styled.div`
-  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
-`
-
 
 export default Farm

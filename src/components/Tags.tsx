@@ -1,8 +1,8 @@
 import React from 'react'
-import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'uikit-sotatek'
+import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from '@pancakeswap-libs/uikit'
 
 const CoreTag = () => (
-  <Tag variant="binance" outline startIcon={<VerifiedIcon />}>
+  <Tag variant="secondary" outline startIcon={<VerifiedIcon />}>
     Core
   </Tag>
 )
