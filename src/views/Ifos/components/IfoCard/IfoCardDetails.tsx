@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
-import { Text, LinkExternal, Link } from '@pancakeswap-libs/uikit'
+import { Link } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 
 export interface IfoCardDetailsProps {
@@ -23,6 +23,26 @@ const Item = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.colors.secondary};
   display: flex;
+  margin-bottom: 10px;
+`
+const Text = styled('div')`
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #5f5e76;
+  width: 140px;
+  text-align: left;
+  & > a {
+    color: #0085ff;
+    font-size: 13px;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 16px;
+    line-height: 20px;
+    & > a {
+      font-size: 16px;
+    }
+  }
 `
 
 const Display = styled(Text)`
@@ -35,7 +55,6 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
   saleAmount,
   raiseAmount,
   cakeToBurn,
-  projectSiteUrl,
   raisingAmount,
   totalAmount,
 }) => {
@@ -76,9 +95,6 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
           <Text>{`${totalAmount.div(raisingAmount).times(100).toFixed(2)}%`}</Text>
         </Item>
       </StyledIfoCardDetails>
-      <LinkExternal href={projectSiteUrl} style={{ margin: 'auto' }}>
-        {TranslateString(412, 'View project site')}
-      </LinkExternal>
     </>
   )
 }

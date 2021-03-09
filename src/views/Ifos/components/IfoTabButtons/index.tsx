@@ -2,12 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
 import { ButtonMenu, ButtonMenuItem } from '@pancakeswap-libs/uikit'
+import { SelectButtonStyle } from 'style/Button'
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 39px;
+  margin-bottom: 0px;
+  justify-content: flex-start;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    margin-bottom: 39px;
+  }
+  ${SelectButtonStyle}
 `
 
 const IfoTabButtons = () => {

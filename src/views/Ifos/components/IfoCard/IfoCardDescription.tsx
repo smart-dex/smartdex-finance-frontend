@@ -13,29 +13,32 @@ const StyledIfoCardDescription = styled.div`
   margin-bottom: 24px;
 `
 
-const Divider = styled.div`
-  background-color: ${({ theme }) => theme.colors.borderColor};
-  height: 1px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-`
-
 const ToggleButton = styled.button`
   background: transparent;
   border: none;
-  color: ${({ theme }) => theme.colors.primary};
+  color: #0085ff;
   cursor: pointer;
   display: block;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
   outline: 0;
-  padding: 24px 16px;
+  padding: 0;
+  margin-bottom: 10px;
   width: 100%;
+  text-align: left;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 16px;
+    line-height: 20px;
+  }
 `
 
 const Description = styled(Text)<{ isOpen: boolean }>`
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: rgba(95, 94, 118, 0.7);
   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
 `
 
 const IfoCardDescription: React.FC<IfoCardDescriptionProps> = ({ defaultIsOpen = true, description }) => {
@@ -46,7 +49,6 @@ const IfoCardDescription: React.FC<IfoCardDescriptionProps> = ({ defaultIsOpen =
 
   return (
     <StyledIfoCardDescription>
-      <Divider />
       <ToggleButton onClick={handleClick}>
         {isOpen ? TranslateString(1066, 'Hide') : TranslateString(1064, 'Show')}
       </ToggleButton>

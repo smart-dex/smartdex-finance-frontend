@@ -8,6 +8,9 @@ interface IfoCardProgressProps {
 
 const StyledProgress = styled.div`
   margin-bottom: 16px;
+  & > div > div {
+    background: #0085ff;
+  }
 `
 
 const IfoCardProgress: React.FC<IfoCardProgressProps> = ({ progress }) => {

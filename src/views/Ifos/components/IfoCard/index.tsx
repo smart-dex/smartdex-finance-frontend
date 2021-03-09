@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
-import { Card, CardBody, CardRibbon } from '@pancakeswap-libs/uikit'
+import { Card, CardRibbon, LinkExternal } from '@pancakeswap-libs/uikit'
 import { BSC_BLOCK_TIME } from 'config'
 import { Ifo, IfoStatus } from 'config/constants/types'
 import makeBatchRequest from 'utils/makeBatchRequest'
@@ -16,20 +16,75 @@ import IfoCardDescription from './IfoCardDescription'
 import IfoCardDetails from './IfoCardDetails'
 import IfoCardTime from './IfoCardTime'
 import IfoCardContribute from './IfoCardContribute'
+import { ButtonPrimary, ButtonGrey } from '../../../../style/Button'
 
 export interface IfoCardProps {
   ifo: Ifo
 }
 
 const StyledIfoCard = styled(Card)<{ ifoId: string }>`
-  background-image: ${({ ifoId }) => `url('/images/ifos/${ifoId}-bg.svg')`};
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-top: 112px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 437px;
   width: 100%;
+  border: 1px solid #e2e2e8;
+  border-radius: 40px;
+`
+const CardHeaderFlex = styled('div')`
+  display: flex;
+  flex-direction: column;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    flex-direction: row;
+  }
+  & > div {
+    flex: 1;
+    &:first-child {
+      padding-right: 20px;
+    }
+  }
+`
+const WrapProgress = styled('div')`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`
+const WrapButtonRow = styled('div')`
+  display: flex;
+  & > button,
+  & > a {
+    flex: inherit;
+    width: 100%;
+    margin: 0px;
+  }
+  & > button {
+    margin-bottom: 20px;
+  }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    flex-direction: row;
+    & > button {
+      flex: 1;
+      margin-right: 17px;
+      margin-bottom: 0;
+    }
+    & > a {
+      flex: 1;
+      margin-left: 17px;
+    }
+  }
+`
+const CardBody = styled('div')`
+  padding: 25px;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    padding: 50px 80px 50px 123px;
+  }
+`
+const LinkExternalStyle = styled(LinkExternal)`
+  ${ButtonGrey}
+`
+const UnlockButtonStyle = styled(UnlockButton)`
+  ${ButtonPrimary}
 `
 
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
@@ -143,16 +198,19 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
       <CardBody>
-        <IfoCardHeader ifoId={id} name={name} subTitle={subTitle} />
-        <IfoCardProgress progress={state.progress} />
-        <IfoCardTime
-          isLoading={state.isLoading}
-          status={state.status}
-          secondsUntilStart={state.secondsUntilStart}
-          secondsUntilEnd={state.secondsUntilEnd}
-          block={isActive || isFinished ? state.endBlockNum : state.startBlockNum}
-        />
-        {!account && <UnlockButton fullWidth />}
+        <CardHeaderFlex>
+          <IfoCardHeader ifoId={id} name={name} subTitle={subTitle} />
+          <WrapProgress>
+            <IfoCardProgress progress={state.progress} />
+            <IfoCardTime
+              isLoading={state.isLoading}
+              status={state.status}
+              secondsUntilStart={state.secondsUntilStart}
+              secondsUntilEnd={state.secondsUntilEnd}
+              block={isActive || isFinished ? state.endBlockNum : state.startBlockNum}
+            />
+          </WrapProgress>
+        </CardHeaderFlex>
         {(isActive || isFinished) && (
           <IfoCardContribute
             address={address}
@@ -175,6 +233,10 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           raisingAmount={state.raisingAmount}
           totalAmount={state.totalAmount}
         />
+        <WrapButtonRow>
+          {!account && <UnlockButtonStyle fullWidth />}
+          <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site')}</LinkExternalStyle>
+        </WrapButtonRow>
       </CardBody>
     </StyledIfoCard>
   )
