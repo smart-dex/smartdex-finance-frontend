@@ -8,6 +8,7 @@ import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
 import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
+import { lightColors, darkColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   min-height: 169px;
@@ -71,6 +72,10 @@ const Label = styled.div`
   font-size: 14px;
   padding-right: 50px;
 `
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 24px;
+`
 
 const FarmedStakingCard = () => {
   const [pendingTx, setPendingTx] = useState(false)
@@ -95,10 +100,10 @@ const FarmedStakingCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody style={{ padding: '32px' }}>
-        <Heading size="xl" style={{ fontSize: '24px' }} color="#5F5E76">
+        <HeadingStyle size="xl">
           {TranslateString(542, 'Farms & Staking')}
           <CardImage src="/images/pan-cake.png" alt="cake logo" width={40} />
-        </Heading>
+        </HeadingStyle>
         <Block>
           <Actions>
             {account ? (
