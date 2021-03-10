@@ -5,7 +5,7 @@ import { Button, Flex, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { useHarvest } from 'hooks/useHarvest'
 import { getBalanceNumber } from 'utils/formatBalance'
-// import { lightColors, darkColors } from 'style/Color'
+import { lightColors, darkColors } from 'style/Color'
 
 interface FarmCardActionsProps {
   earnings?: BigNumber
@@ -32,7 +32,7 @@ const CakeEarn = styled(Flex)`
   }
 `
 const CakeEarnText = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.6)' : 'rgba(95, 94, 118, 0.7)')};
+  color: ${({ theme }) => (theme.isDark ? darkColors.text: lightColors.text)};
 `
 
 const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {

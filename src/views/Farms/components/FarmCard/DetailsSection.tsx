@@ -38,7 +38,7 @@ const StyledLinkExternal = styled(LinkExternal)`
   }
 `
 const StyledDetailSection = styled.div`
-  border-top: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#F0F0F3')};
+  border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.dividerCard : lightColors.dividerCard)};
   padding: 0 30px 24px 30px;
 `
 const StyledText = styled(Text)`

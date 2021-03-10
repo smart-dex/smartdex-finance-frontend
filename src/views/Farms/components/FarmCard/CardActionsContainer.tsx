@@ -9,6 +9,7 @@ import { Button, Flex, Text } from 'uikit-sotatek'
 import { Farm } from 'state/types'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
+import { lightColors, darkColors } from 'style/Color'
 import UnlockButton from 'components/UnlockButton'
 import { useApprove } from 'hooks/useApprove'
 import StakeAction from './StakeAction'
@@ -41,7 +42,7 @@ const StyledGroupButton= styled(Flex)`
 `
 
 const FarmStakedText = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.6)' : 'rgba(95, 94, 118, 0.7)')};
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.text)};
 `
 
 export interface FarmWithStakedValue extends Farm {

@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-// import { Flex, Text, Skeleton } from 'uikit-sotatek'
 import { Flex, Text, Skeleton } from 'uikit-sotatek'
 
 import { communityFarms } from 'config/constants'
@@ -25,15 +24,14 @@ export interface FarmWithStakedValue extends Farm {
 const FCard = styled.div`
   background: ${(props) => props.theme.card.background};
   border-radius: 32px;
-  border: 1px solid  ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};;
+  border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};;
   box-shadow: 25px 14px 102px rgba(83, 185, 234, 0.14);
   display: flex;
   flex-direction: column;
   position: relative;
   &:hover {
     border: 1px solid #0085FF;
-    box-shadow: 25px 14px 102px rgba(83, 185, 234, 0.14);
-    transition: 0.35s;
+    transition: 0.25s;
   }
   position: relative;
   margin-bottom: 16px;
