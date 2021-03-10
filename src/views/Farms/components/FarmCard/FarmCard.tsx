@@ -12,6 +12,7 @@ import useI18n from 'hooks/useI18n'
 import { QuoteToken } from 'config/constants/types'
 import { BASE_ADD_LIQUIDITY_URL } from 'config'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
+import { lightColors, darkColors } from 'style/Color'
 import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
@@ -24,7 +25,8 @@ export interface FarmWithStakedValue extends Farm {
 const FCard = styled.div`
   background: ${(props) => props.theme.card.background};
   border-radius: 32px;
-  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05);
+  border: 1px solid  ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};;
+  box-shadow: 25px 14px 102px rgba(83, 185, 234, 0.14);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -33,6 +35,7 @@ const FCard = styled.div`
     box-shadow: 25px 14px 102px rgba(83, 185, 234, 0.14);
     transition: 0.35s;
   }
+  position: relative;
   margin-bottom: 16px;
   @media (max-width: 968px) {
     max-width:450px;
@@ -58,6 +61,9 @@ const CardContent = styled(Flex)`
 
 const InfoFarm = styled(Flex)`
   flex-grow:1;
+`
+const InfoTextFram = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
 `
 
 
@@ -127,7 +133,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
             <Flex alignItems="center" justifyContent='center'>
               <Text style={{ flex: 1 }}>{TranslateString(736, 'APR')}: </Text>
-              <Text bold style={{ display: 'flex', alignItems: 'center' }}>
+              <InfoTextFram bold style={{ display: 'flex', alignItems: 'center' }}>
                 {farm.apy ? (
                   <>
                     <ApyButton lpLabel={lpLabel} addLiquidityUrl={addLiquidityUrl} cakePrice={cakePrice} apy={farm.apy} />
@@ -136,12 +142,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                 ) : (
                     <Skeleton height={24} width={80} />
                   )}
-              </Text>
+              </InfoTextFram>
             </Flex>
           )}
           <Flex justifyContent='center'>
             <Text style={{ flex: 1 }}>{TranslateString(318, 'Earn')}:</Text>
-            <Text bold>{earnLabel}</Text>
+            <InfoTextFram bold>{earnLabel}</InfoTextFram>
           </Flex>
         </InfoFarm>
         <CardActionsContainer farm={farm} ethereum={ethereum} account={account} addLiquidityUrl={addLiquidityUrl} changeOpenDetail={handelOpenDetail} isOpenDetail={showExpandableSection} />

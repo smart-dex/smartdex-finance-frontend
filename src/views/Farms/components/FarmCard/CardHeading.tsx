@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tag, Flex, Heading } from 'uikit-sotatek'
+import { lightColors, darkColors } from 'style/Color'
 import { CommunityTag, CoreTag } from 'components/Tags'
 
 export interface ExpandableSectionProps {
@@ -32,6 +33,7 @@ const MultiplierTag = styled(Tag)`
   margin-left: 4px;
 `
 const HeadingCard = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   margin-bottom:10px;
   front-size: 24px;
   @media (max-width: 968px) {
@@ -55,7 +57,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
         <HeadingCard>{lpLabel}</HeadingCard>
         <Flex>
           {isCommunityFarm ? <CommunityTag /> : <CoreTag />}
-          <MultiplierTag variant="secondary">{multiplier}</MultiplierTag>
+          <MultiplierTag variant="binance">{multiplier}</MultiplierTag>
         </Flex>
       </Flex>
     </Wrapper>

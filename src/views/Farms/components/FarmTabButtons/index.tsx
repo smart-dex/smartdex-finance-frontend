@@ -14,7 +14,7 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
         <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="md"  />
         <Text> {TranslateString(1116, 'Staked only')}</Text>
       </ToggleWrapper>
-      <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="subtle">
+      <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="primary">
         <ButtonMenuItem as={Link} to={`${url}`}>
           {TranslateString(698, 'Active')}
         </ButtonMenuItem>
@@ -32,6 +32,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 32px;
+  justify-content: center;
 `
 
 const ToggleWrapper = styled.div`

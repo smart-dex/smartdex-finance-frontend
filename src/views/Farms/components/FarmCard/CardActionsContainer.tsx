@@ -38,7 +38,10 @@ const StyledGroupButton= styled(Flex)`
   @media (max-width: 968px) {
     justify-content: space-around;
   }
- 
+`
+
+const FarmStakedText = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.6)' : 'rgba(95, 94, 118, 0.7)')};
 `
 
 export interface FarmWithStakedValue extends Farm {
@@ -100,9 +103,9 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
     <Action>
       <HarvestAction earnings={earnings} pid={pid} />
       <ButtonAction>
-        <Text bold textTransform="uppercase" fontSize="16px">
+        <FarmStakedText bold textTransform="uppercase" fontSize="16px">
           {lpName}   {TranslateString(1074, 'Staked')}
-        </Text>
+        </FarmStakedText>
         <StyledGroupButton>
           {!account ? <UnlockButton mt='10px' style={{ maxWidth: '156px'}}/> : renderApprovalOrStakeButton()}
           <Button variant='secondary' onClick={changeOpenDetail} mt='10px' style={{ minWidth: '156px'}}>

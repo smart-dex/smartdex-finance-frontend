@@ -2,6 +2,7 @@ import React from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { Text, Flex, Link, LinkExternal } from 'uikit-sotatek'
+import { lightColors, darkColors } from 'style/Color'
 
 export interface ExpandableSectionProps {
   bscScanAddress?: string
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
 const StyledLinkExternal = styled(LinkExternal)`
   text-decoration: none;
   font-weight: normal;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.text)};
   display: flex;
   align-items: center;
 
@@ -37,8 +38,11 @@ const StyledLinkExternal = styled(LinkExternal)`
   }
 `
 const StyledDetailSection = styled.div`
-  border-top: 1px solid ${({ theme }) => (theme.isDark ? '#524B63' : '#E9EAEB')};
+  border-top: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#F0F0F3')};
   padding: 0 30px 24px 30px;
+`
+const StyledText = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.text)};
 `
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
@@ -54,13 +58,13 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     <StyledDetailSection>
       <Wrapper>
         <Flex justifyContent="space-between">
-          <Text>{TranslateString(316, 'Stake')}:</Text>
+          <StyledText>{TranslateString(316, 'Stake')}:</StyledText>
           <StyledLinkExternal href={addLiquidityUrl}>{lpLabel}</StyledLinkExternal>
         </Flex>
         {!removed && (
           <Flex justifyContent="space-between">
-            <Text>{TranslateString(23, 'Total Liquidity')}:</Text>
-            <Text>{totalValueFormated}</Text>
+            <StyledText>{TranslateString(23, 'Total Liquidity')}:</StyledText>
+            <StyledText>{totalValueFormated}</StyledText>
           </Flex>
         )}
         <Flex justifyContent="flex-start">

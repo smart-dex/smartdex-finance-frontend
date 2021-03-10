@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { Heading } from 'uikit-sotatek'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -16,6 +15,7 @@ import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
+import {FarmHeader,HeadingFarm } from './components/FarmHeader'
 
 const Farms: React.FC = () => {
   const { path } = useRouteMatch()
@@ -96,19 +96,22 @@ const Farms: React.FC = () => {
 
   return (
     <Page>
-      <Heading as="h1" size="lg" color="secondary" mb="25px" style={{}}>
-        {TranslateString(696, 'Stake LP tokens to earn CAKE')}
-      </Heading>
-      <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
-        <Divider />
-        <FlexLayout>
-          <Route exact path={`${path}`}>
-            {stackedOnly ? farmsList(stackedOnlyFarms, false) : farmsList(activeFarms, false)}
-          </Route>
-          <Route exact path={`${path}/history`}>
-            {farmsList(inactiveFarms, true)}
-          </Route>
-        </FlexLayout>
+      <FarmHeader>
+        <HeadingFarm as="h1" size="lg" color="secondary" mb="25px" style={{}}>
+          {TranslateString(696, 'Stake LP tokens to earn CAKE')}
+        </HeadingFarm>
+        <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
+      </FarmHeader>
+
+      <Divider />
+      <FlexLayout>
+        <Route exact path={`${path}`}>
+          {stackedOnly ? farmsList(stackedOnlyFarms, false) : farmsList(activeFarms, false)}
+        </Route>
+        <Route exact path={`${path}/history`}>
+          {farmsList(inactiveFarms, true)}
+        </Route>
+      </FlexLayout>
       {/* <Image src="/images/cakecat.png" alt="Pancake illustration" width={949} height={384} responsive /> */}
     </Page>
   )

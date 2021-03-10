@@ -5,6 +5,7 @@ import { Button, Flex, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { useHarvest } from 'hooks/useHarvest'
 import { getBalanceNumber } from 'utils/formatBalance'
+// import { lightColors, darkColors } from 'style/Color'
 
 interface FarmCardActionsProps {
   earnings?: BigNumber
@@ -30,6 +31,9 @@ const CakeEarn = styled(Flex)`
     flex-direction:column;
   }
 `
+const CakeEarnText = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.6)' : 'rgba(95, 94, 118, 0.7)')};
+`
 
 const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
   const TranslateString = useI18n()
@@ -42,10 +46,10 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
   return (
     <StyledHarvestAction >
       <CakeEarn>
-        <Text bold textTransform="uppercase" fontSize="16px" style={{ flex: 1 }}>
+        <CakeEarnText bold textTransform="uppercase" fontSize="16px" style={{ flex: 1 }}>
           {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
           CAKE {TranslateString(1072, 'Earned')}:
-        </Text>
+        </CakeEarnText>
         <Text color={rawEarningsBalance === 0 ? 'textDisabled' : 'text'} fontSize='16px'>{displayBalance}</Text>
       </CakeEarn>
 
