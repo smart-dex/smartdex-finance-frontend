@@ -101,6 +101,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   height: 30px;
   font-size: 14px;
   padding: 0px;
+  margin: 10px auto;
 `
 
 const StyledLink = styled(Link)`

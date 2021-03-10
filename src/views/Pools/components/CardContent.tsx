@@ -5,9 +5,11 @@ const CardContent: React.FC = ({ children }) => <StyledCardContent>{children}</S
 
 const StyledCardContent = styled.div`
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 0;
+  flex-direction: row;
+  @media (max-width: 968px) {
+    flex-wrap: wrap;
+  }
+  align-items:center;
 `
 
 export default CardContent

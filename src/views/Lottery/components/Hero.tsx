@@ -5,19 +5,20 @@ import useI18n from 'hooks/useI18n'
 import Container from 'components/layout/Container'
 import LotteryProgress from './LotteryProgress'
 
-const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`
-  color: ${({ theme }) => theme.colors.secondary};
+const Title = styled(Heading)`
+  color: #fff;
   margin-bottom: 24px;
+  font-size: 36px;
 `
 
 const Blurb = styled(Text)`
   color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
 `
 
 const StyledHero = styled.div`
-  background-image: linear-gradient(180deg, #53dee9 0%, #1fc7d4 100%);
+  background-image: linear-gradient(91.99deg, #0085ff 0%, #7e86ff 100%);
   padding-bottom: 40px;
   padding-top: 40px;
 `
