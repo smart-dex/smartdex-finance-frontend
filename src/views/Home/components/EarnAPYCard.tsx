@@ -7,11 +7,13 @@ import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
 import { useFarms, usePriceBnbBusd } from 'state/hooks'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
+import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  height: 100%;
   border: 1px solid #e2e2e8;
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
 
@@ -25,16 +27,22 @@ const NavLinkStyle = styled(NavLink)`
   width: 30px;
   height: 30px;
   border-radius: 12px;
-  margin-top: 28px;
+  margin-top: 65px;
+  @media (max-width: 600px) {
+    margin-top: 28px;
+  }
 `
-const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
+const CardMidContent = styled(Heading)`
   line-height: 44px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #17c267;
+  font-size: 22px;
 `
 
 const HeadingEarn = styled(Heading)`
-  color: #5f5e76;
-  font-weight: 500;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 600;
+  font-size: 18px;
 `
 
 const EarnAPYCard = () => {
@@ -93,20 +101,16 @@ const EarnAPYCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <HeadingEarn color="#5F5E76" size="lg">
-          Earn up to
-        </HeadingEarn>
-        <CardMidContent color="#0085FF">
+        <HeadingEarn>Earn up to</HeadingEarn>
+        <CardMidContent>
           {getHighestAPY() ? (
             `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
           ) : (
             <Skeleton animation="pulse" variant="rect" height="44px" />
           )}
         </CardMidContent>
-        <Flex justifyContent="space-between">
-          <HeadingEarn color="#5F5E76" size="lg">
-            in Farms
-          </HeadingEarn>
+        <Flex style={{flexDirection: 'column'}}>
+          <HeadingEarn >in Farms</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/farms" id="farm-apy-cta">
             <ArrowForwardIcon color="primary" style={{ margin: '5px' }} />
           </NavLinkStyle>

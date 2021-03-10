@@ -14,6 +14,15 @@ import { lightColors, darkColors } from '../../../style/Color'
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  padding-top: 8px;
+  @media (max-width: 600px) {
+    padding-top: 0px;
+  }
+`
+
+const Block = styled.div`
+  padding-top: 20px;
+  display: flex;
 `
 
 const CakeWalletBalance = () => {
@@ -27,10 +36,10 @@ const CakeWalletBalance = () => {
   }
 
   return (
-    <>
+    <Block>
       <CardValue value={getBalanceNumber(cakeBalance)} decimals={4} lineHeight="0.5" />
       <CardBusdValue value={busdBalance} />
-    </>
+    </Block>
   )
 }
 

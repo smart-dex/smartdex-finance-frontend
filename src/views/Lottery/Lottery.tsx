@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { baseColors, lightColors } from 'style/Color'
 import { ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
@@ -11,6 +10,7 @@ import Page from 'components/layout/Page'
 import Hero from './components/Hero'
 import NextDrawPage from './NextDrawPage'
 import PastDrawsPage from './PastDrawsPage'
+import { baseColors, lightColors } from '../../style/Color'
 
 const Wrapper = styled.div`
   position: relative;

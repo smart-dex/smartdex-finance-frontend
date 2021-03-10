@@ -8,7 +8,7 @@ import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
 
 const Block = styled.div`
-  display: flex;
+  
  }
 `
 const CakeWinnings = () => {

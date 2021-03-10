@@ -6,6 +6,7 @@ export const baseColors = {
   secondary: '#7645D9',
   success: '#17C267',
   warning: '#FFB237',
+  arrowColor: '#d8f7e4',
 }
 
 export const brandColors = {
@@ -44,7 +45,7 @@ export const lightColors = {
   shadowCardCollectibles: 'rgba(120, 118, 148, 0.14)',
   colorInfoBlock: 'rgba(95, 94, 118, 0.7)',
   fillSvg: '#8F8FA0',
-  backAvatar: 'rgba(255, 161, 78, 0.1)',
+  backAvatar: 'rgba(255, 161, 78, 0.1)'
 }
 
 export const darkColors = {
@@ -82,5 +83,5 @@ export const darkColors = {
   colorInfoBlock: 'rgba(255, 255, 255, 0.6)',
   fillSvg: '#8F8FA0',
   backAvatar: 'rgba(255, 161, 78, 0.1)',
-  backButtonTogger: '#2a3245',
+  backButtonTogger: '#2a3245'
 }

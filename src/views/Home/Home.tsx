@@ -25,11 +25,30 @@ const PageHome = styled(Page)`
 const Hero = styled.div`
   margin: auto;
   padding-top: 5px;
-  padding-bottom: 25px;
+  padding-bottom: 45px;
+  text-align: center;
+`
+
+const CardBlock = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const Cards = styled.div`
   margin-bottom: 32px;
+  flex: 40%;
+  padding-right: 24px;
+  @media (max-width: 600px) {
+    flex: 100%;
+    padding-right: 0px;
+  }
+`
+const CardRight = styled.div`
+  margin-bottom: 32px;
+  flex: 60%;
+  @media (max-width: 600px) {
+    flex: 100%;
+  }
 `
 
 const CTACards = styled(BaseLayout)`
@@ -59,7 +78,7 @@ const STATCards = styled(BaseLayout)`
   margin-bottom: 32px;
 
   & > div {
-    grid-column: span 6;
+    grid-column: span 13;
     width: 100%;
   }
 
@@ -71,13 +90,14 @@ const STATCards = styled(BaseLayout)`
 
   ${({ theme }) => theme.mediaQueries.lg} {
     & > div {
-      grid-column: span 6;
+      grid-column: span 13;
     }
   }
 `
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  padding-top: 12px;
 `
 
 const HeadingStyle = styled(Heading)`
@@ -95,21 +115,23 @@ const Home: React.FC = () => {
         </HeadingStyle>
         <TextStyle>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</TextStyle>
       </Hero>
-      <div>
+      <CardBlock>
         <Cards>
           <FarmStakingCard />
           <LotteryCard />
         </Cards>
-        <CTACards>
-          <EarnAPYCard />
-          <EarnAssetCard />
-          <WinCard />
-        </CTACards>
-        <STATCards>
-          <CakeStats />
-          <TotalValueLockedCard />
-        </STATCards>
-      </div>
+        <CardRight>
+          <CTACards>
+            <EarnAPYCard />
+            <EarnAssetCard />
+            <WinCard />
+          </CTACards>
+          <STATCards>
+            <CakeStats />
+            <TotalValueLockedCard />
+          </STATCards>
+        </CardRight>
+      </CardBlock>
     </PageHome>
   )
 }

@@ -5,12 +5,14 @@ import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from '@pancakeswap-li
 import { NavLink } from 'react-router-dom'
 import pools from 'config/constants/pools'
 import { Pool } from 'state/types'
+import { lightColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   background: linear-gradient(91.67deg, #0085ff 5.33%, #7e86ff 104.39%);
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  height: 100%; 
   border: 1px solid #e2e2e8;
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -20,12 +22,15 @@ const StyledFarmStakingCard = styled(Card)`
 `
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 22px;
+  color: ${lightColors.invertedContrast};
 `
 
 const HeadingEarn = styled(Heading)`
   color: rgba(255, 255, 255, 0.5);
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 18px;
 `
 
 const NavLinkStyle = styled(NavLink)`
@@ -45,12 +50,12 @@ const EarnAssetCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <HeadingEarn color="contrast" size="lg">
+        <HeadingEarn>
           Earn
         </HeadingEarn>
-        <CardMidContent color="invertedContrast">{assets}</CardMidContent>
-        <Flex justifyContent="space-between">
-          <HeadingEarn color="contrast" size="lg">
+        <CardMidContent>{assets}</CardMidContent>
+        <Flex style={{flexDirection: 'column'}}>
+          <HeadingEarn>
             in Pools
           </HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/syrup" id="pool-cta">
