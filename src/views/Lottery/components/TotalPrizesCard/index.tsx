@@ -8,6 +8,7 @@ import { useTotalRewards } from 'hooks/useTickets'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import ExpandableSectionButton from 'components/ExpandableSectionButton/ExpandableSectionButton'
 import PrizeGrid from '../PrizeGrid'
+import { darkColors, lightColors } from '../../../../style/Color'
 
 const CardHeading = styled.div`
   position: relative;
@@ -48,6 +49,18 @@ const ExpandingWrapper = styled.div<{ showFooter: boolean }>`
   }
 `
 
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
+const CardStyle = styled(Card)`
+  border: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};
+`
+
 const TotalPrizesCard = () => {
   const TranslateString = useI18n()
   const { account } = useWallet()
@@ -57,7 +70,7 @@ const TotalPrizesCard = () => {
   const { currentLotteryNumber } = useContext(PastLotteryDataContext)
 
   return (
-    <Card>
+    <CardStyle>
       <CardBody>
         {account && (
           <Flex mb="16px" alignItems="center" justifyContent="space-between" style={{ height: '20px' }}>
@@ -77,10 +90,8 @@ const TotalPrizesCard = () => {
               <PancakeRoundIcon />
             </IconWrapper>
             <PrizeCountWrapper>
-              <Text fontSize="14px" color="textSubtle">
-                {TranslateString(722, 'Total Pot:')}
-              </Text>
-              <Heading size="lg">{lotteryPrizeWithCommaSeparators} CAKE</Heading>
+              <TextStyle fontSize="14px">{TranslateString(722, 'Total Pot:')}</TextStyle>
+              <HeadingStyle size="lg">{lotteryPrizeWithCommaSeparators} CAKE</HeadingStyle>
             </PrizeCountWrapper>
           </Left>
           <Right>
@@ -93,7 +104,7 @@ const TotalPrizesCard = () => {
           <PrizeGrid lotteryPrizeAmount={lotteryPrizeAmount} />
         </CardFooter>
       </ExpandingWrapper>
-    </Card>
+    </CardStyle>
   )
 }
 

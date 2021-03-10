@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Heading, Card, CardBody, Ticket } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import UnlockButton from 'components/UnlockButton'
+import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledCardBody = styled(CardBody)`
   display: flex;
@@ -13,6 +14,9 @@ const StyledCardBody = styled(CardBody)`
 
 const StyledHeading = styled(Heading)`
   margin: 16px 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 
 const IconWrapper = styled.div`
@@ -22,19 +26,30 @@ const IconWrapper = styled.div`
   }
 `
 
+const TicketImg = styled.img`
+  width: 110px;
+  height: 110px;
+`
+
+const CardStyle = styled(Card)`
+  border: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};
+  box-shadow: none;
+`
+
 const UnlockWalletCard = () => {
   const TranslateString = useI18n()
 
   return (
-    <Card isActive>
+    <CardStyle isActive>
       <StyledCardBody>
         <IconWrapper>
-          <Ticket />
+          {/* <Ticket /> */}
+          <TicketImg src="images/ticket-lottery.png" />
         </IconWrapper>
         <StyledHeading size="md">{TranslateString(1080, 'Unlock wallet to access lottery')}</StyledHeading>
         <UnlockButton />
       </StyledCardBody>
-    </Card>
+    </CardStyle>
   )
 }
 

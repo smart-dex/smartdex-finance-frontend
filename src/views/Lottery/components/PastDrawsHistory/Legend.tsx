@@ -2,10 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
+import { darkColors, lightColors } from '../../../../style/Color'
 
 const Wrapper = styled.div`
   display: flex;
   margin: 36px 0 28px;
+  justify-content: flex-end;
 `
 
 const LegendItem = styled.div`
@@ -15,11 +17,15 @@ const LegendItem = styled.div`
 `
 
 const Circle = styled.div<{ isPoolSize?: boolean }>`
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 10px;
-  background-color: ${({ isPoolSize, theme }) => theme.colors[isPoolSize ? 'textSubtle' : 'primary']};
+  background-color: ${({ isPoolSize }) => (isPoolSize ? '#A6D997' : '#0085FF')};
   margin-right: 6px;
+`
+
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 
 const Legend = () => {
@@ -29,11 +35,11 @@ const Legend = () => {
     <Wrapper>
       <LegendItem>
         <Circle isPoolSize />
-        <Text>{TranslateString(748, 'Pool Size')}</Text>
+        <TextStyle>{TranslateString(748, 'Pool Size')}</TextStyle>
       </LegendItem>
       <LegendItem>
         <Circle />
-        <Text>{TranslateString(750, 'Burned')}</Text>
+        <TextStyle>{TranslateString(750, 'Burned')}</TextStyle>
       </LegendItem>
     </Wrapper>
   )

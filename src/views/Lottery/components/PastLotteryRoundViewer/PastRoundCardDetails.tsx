@@ -7,6 +7,7 @@ import LotteryCardHeading from '../LotteryCardHeading'
 import PastLotteryActions from './PastLotteryActions'
 import PrizeGrid from '../PrizeGrid'
 import Timestamp from '../Timestamp'
+import { darkColors, lightColors } from '../../../../style/Color'
 
 interface PastRoundCardDetailsProps {
   data: DataResponse
@@ -19,8 +20,20 @@ const CardHeading = styled.div`
   justify-content: space-between;
 `
 
+const TopLotteryBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
 const TopLotteryCardHeading = styled(LotteryCardHeading)`
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
+`
+
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 
 const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => {
@@ -45,21 +58,23 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
         <CardBody>
           <CardHeading>
             <Timestamp timeValue={lotteryDate} />
-            <Heading size="md" mb="24px">
+            <HeadingStyle size="md" mb="24px">
               Round #{lotteryNumber}
-            </Heading>
-            <TopLotteryCardHeading
-              valueToDisplay={`${lotteryNumbers[0]}, ${lotteryNumbers[1]}, ${lotteryNumbers[2]}, ${lotteryNumbers[3]}`}
-              Icon={TicketRound}
-            >
-              {TranslateString(999, 'Winning numbers')}
-            </TopLotteryCardHeading>
-            <LotteryCardHeading
-              valueToDisplay={TranslateString(999, `${poolSize.toLocaleString()} CAKE`)}
-              Icon={PancakeRoundIcon}
-            >
-              {TranslateString(999, 'Total prizes')}
-            </LotteryCardHeading>
+            </HeadingStyle>
+            <TopLotteryBlock>
+              <TopLotteryCardHeading
+                valueToDisplay={`${lotteryNumbers[0]}, ${lotteryNumbers[1]}, ${lotteryNumbers[2]}, ${lotteryNumbers[3]}`}
+                Icon={TicketRound}
+              >
+                {TranslateString(999, 'Winning numbers')}
+              </TopLotteryCardHeading>
+              <LotteryCardHeading
+                valueToDisplay={TranslateString(999, `${poolSize.toLocaleString()} CAKE`)}
+                Icon={PancakeRoundIcon}
+              >
+                {TranslateString(999, 'Total prizes')}
+              </LotteryCardHeading>
+            </TopLotteryBlock>
           </CardHeading>
         </CardBody>
         <CardFooter>
