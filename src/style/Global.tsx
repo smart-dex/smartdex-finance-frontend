@@ -12,8 +12,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', 'Kanit', sans-serif;
   }
   body {
-    background-color: ${({ theme }) => theme.colors.background};
-
+    background-color: ${({ theme }) => (theme.isDark ? '#151C31' : '#FFFFFF')};
     img {
       height: auto;
       max-width: 100%;

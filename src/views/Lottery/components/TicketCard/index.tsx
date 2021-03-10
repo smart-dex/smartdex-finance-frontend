@@ -7,6 +7,7 @@ import useTickets from 'hooks/useTickets'
 import { useCurrentTime } from 'hooks/useTimer'
 import TicketActions from './TicketActions'
 import { getTicketSaleTime } from '../../helpers/CountdownHelpers'
+import { darkColors, lightColors } from '../../../../style/Color'
 
 interface CardProps {
   isSecondCard?: boolean
@@ -47,6 +48,10 @@ const TicketCountWrapper = styled.div`
   flex-direction: column;
 `
 
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
 const TicketCard: React.FC<CardProps> = ({ isSecondCard = false }) => {
   const TranslateString = useI18n()
   const lotteryHasDrawn = useGetLotteryHasDrawn()
@@ -66,16 +71,12 @@ const TicketCard: React.FC<CardProps> = ({ isSecondCard = false }) => {
           </IconWrapper>
           {lotteryHasDrawn ? (
             <TicketCountWrapper>
-              <Text fontSize="14px" color="textSubtle">
-                {TranslateString(870, 'Until ticket sale:')}
-              </Text>
+              <TextStyle fontSize="14px">{TranslateString(870, 'Until ticket sale:')}</TextStyle>
               <Heading size="lg">{timeUntilTicketSale}</Heading>
             </TicketCountWrapper>
           ) : (
             <TicketCountWrapper>
-              <Text fontSize="14px" color="textSubtle">
-                {TranslateString(724, 'Your tickets for this round')}
-              </Text>
+              <TextStyle fontSize="14px">{TranslateString(724, 'Your tickets for this round')}</TextStyle>
               <Heading size="lg">{ticketsLength}</Heading>
             </TicketCountWrapper>
           )}
