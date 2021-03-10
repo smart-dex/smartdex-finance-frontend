@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from '@pancakeswap-libs/uikit'
 import { NavLink } from 'react-router-dom'
 import useLotteryTotalPrizesUsd from 'hooks/useLotteryTotalPrizesUsd'
+import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   margin-left: auto;
@@ -19,11 +20,12 @@ const StyledFarmStakingCard = styled(Card)`
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;
   font-weight: 500;
+  color: #17C267;
 `
 
 const HeadingEarn = styled(Heading)`
-  color: #5f5e76;
   font-weight: 500;
+  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
 `
 const NavLinkStyle = styled(NavLink)`
   background: #d8f7e4;
@@ -42,7 +44,7 @@ const WinCard = () => {
         <HeadingEarn color="contrast" size="lg">
           Lottery with
         </HeadingEarn>
-        <CardMidContent color="#0085FF">${lotteryPrize}</CardMidContent>
+        <CardMidContent>${lotteryPrize}</CardMidContent>
         <Flex justifyContent="space-between">
           <HeadingEarn color="contrast" size="lg">
             up for grabs

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Card, CardBody, Heading, Skeleton, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { useGetStats } from 'hooks/api'
+import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledTotalValueLockedCard = styled(Card)`
   align-items: center;
@@ -12,8 +13,16 @@ const StyledTotalValueLockedCard = styled(Card)`
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
 `
 const HeadingEarn = styled(Heading)`
-  color: #5f5e76;
+  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
   font-weight: 500;
+`
+
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
+`
+
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
 `
 
 const TotalValueLockedCard = () => {
@@ -29,8 +38,8 @@ const TotalValueLockedCard = () => {
         </HeadingEarn>
         {data ? (
           <>
-            <Heading size="xl" color="#5F5E76">{`$${tvl}`}</Heading>
-            <Text color="#5F5E76">{TranslateString(764, 'Across all LPs and Syrup Pools')}</Text>
+            <HeadingStyle size="xl" >{`$${tvl}`}</HeadingStyle>
+            <TextStyle>{TranslateString(764, 'Across all LPs and Syrup Pools')}</TextStyle>
           </>
         ) : (
           <>

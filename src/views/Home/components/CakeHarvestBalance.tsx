@@ -11,13 +11,17 @@ import CardBusdValue from './CardBusdValue'
 import { lightColors, darkColors } from '../../../style/Color'
 
 const Block = styled.div`
-  margin-bottom: 24px;
+  padding-top: 20px;
   display: flex;
 }
 `
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  padding-top: 8px;
+  @media (max-width: 600px) {
+    padding-top: 0px;
+  }
 `
 
 const CakeHarvestBalance = () => {

@@ -7,6 +7,7 @@ import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
 import { useFarms, usePriceBnbBusd } from 'state/hooks'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
+import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   margin-left: auto;
@@ -30,10 +31,11 @@ const NavLinkStyle = styled(NavLink)`
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   line-height: 44px;
   font-weight: 500;
+  color: #17C267;
 `
 
 const HeadingEarn = styled(Heading)`
-  color: #5f5e76;
+  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
   font-weight: 500;
 `
 
@@ -93,10 +95,10 @@ const EarnAPYCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <HeadingEarn color="#5F5E76" size="lg">
+        <HeadingEarn size="lg">
           Earn up to
         </HeadingEarn>
-        <CardMidContent color="#0085FF">
+        <CardMidContent>
           {getHighestAPY() ? (
             `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
           ) : (
@@ -104,7 +106,7 @@ const EarnAPYCard = () => {
           )}
         </CardMidContent>
         <Flex justifyContent="space-between">
-          <HeadingEarn color="#5F5E76" size="lg">
+          <HeadingEarn size="lg">
             in Farms
           </HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/farms" id="farm-apy-cta">

@@ -13,16 +13,6 @@ const ButtonStyle = styled(Button)`
   }
 `
 
-const ButtonStyle = styled(Button)`
-  background: #0085ff;
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
-  border-radius: 10px;
-  padding: 18px;
-  &:hover:not(:disabled):not(:active) {
-    background-color: #40aaff !important;
-  }
-`
-
 const UnlockButton = (props) => {
   const TranslateString = useI18n()
   const { connect, reset } = useWallet()

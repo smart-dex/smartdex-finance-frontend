@@ -6,6 +6,7 @@ import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
+import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
@@ -23,12 +24,12 @@ const Row = styled.div`
 `
 
 const HeadingEarn = styled(Heading)`
-  color: #5f5e76;
+  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
   font-weight: 500;
   font-size: 32px;
 `
 const TextStyle = styled(Text)`
-  color: #5f5e76;
+  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
   font-size: 14px;
 `
 

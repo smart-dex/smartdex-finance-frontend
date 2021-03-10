@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button, useModal } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Button, useModal } from 'uikit-sotatek'
 import { getCakeAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
@@ -24,46 +24,27 @@ const StyledLotteryCard = styled(Card)`
 `
 
 const BlockCakeWinnings = styled.div`
-  display: flex;
-  grid-area: a;
+  padding-top: 24px;
   @media (max-width: 600px) {
-    padding-top: 39px;
-    padding-bottom: 25px;
+    display: flex;
     justify-content: space-between;
   }
 `
 const BlockLotteryJackpot = styled.div`
-  display: flex;
-  grid-area: b;
+  padding-top: 8px;
+  padding-bottom: 35px;
   @media (max-width: 600px) {
-    padding-bottom: 35px;
+    display: flex;
     justify-content: space-between;
   }
 `
 
-const Block = styled.div`
-  display: grid;
-
-  grid-template-areas:
-    'c c c '
-    'a b b ';
-  @media (max-width: 600px) {
-    grid-template-areas:
-      'a'
-      'b'
-      'c';
-  }
-`
-
 const CardImage = styled.img`
-  margin-bottom: 16px;
-  margin-left: 20px;
-  position: absolute;
-  top: 23px;
+  margin-right: 16px;
 `
 
 const Label = styled.div`
-  color: #17c267;
+  color: #0085FF;
   font-size: 14px;
   line-height: 2.3;
   padding-right: 50px;
@@ -72,7 +53,6 @@ const Label = styled.div`
 const Actions = styled.div`
   display: flex;
   margin-bottom: 20px;
-  grid-area: c;
   justify-self: end;
   @media (max-width: 600px) {
     justify-self: center;
@@ -90,6 +70,11 @@ const ButtonStyle = styled(Button)`
   &:hover {
     background: #5ba7ec !important;
   }
+`
+const HeadingBlock = styled.div`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const FarmedStakingCard = () => {
@@ -142,32 +127,34 @@ const FarmedStakingCard = () => {
   return (
     <StyledLotteryCard>
       <CardBody style={{ padding: '32px' }}>
-        <HeadingStyle size="xl" style={{ fontSize: '24px' }}>
-          {TranslateString(550, 'Your Lottery Winnings')}
+        <HeadingBlock>
           <CardImage src="/images/pan-cake.png" alt="cake logo" width={40} />
-        </HeadingStyle>
-        <Block>
-          <Actions>
-            <Button
-              id="dashboard-collect-winnings"
-              disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
-              onClick={handleClaim}
-              style={{ marginRight: '8px', width: '50%' }}
-            >
-              {TranslateString(556, 'Collect Winnings')}
-            </Button>
-            {renderLotteryTicketButtonBuyOrApprove()}
-          </Actions>
+          <HeadingStyle size="xl" style={{ fontSize: '24px' }}>
+            {TranslateString(550, 'Your Lottery Winnings')}
+          </HeadingStyle>
+        </HeadingBlock>
 
-          <BlockCakeWinnings>
-            <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
-            <CakeWinnings />
-          </BlockCakeWinnings>
-          <BlockLotteryJackpot>
-            <Label>{TranslateString(554, 'Total jackpot this round')}:</Label>
-            <LotteryJackpot />
-          </BlockLotteryJackpot>
-        </Block>
+        <BlockCakeWinnings>
+          <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
+          <CakeWinnings />
+        </BlockCakeWinnings>
+        <BlockLotteryJackpot>
+          <Label>{TranslateString(554, 'Total jackpot this round')}:</Label>
+          <LotteryJackpot />
+        </BlockLotteryJackpot>
+
+        <Actions>
+          <Button
+            id="dashboard-collect-winnings"
+            disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
+            onClick={handleClaim}
+            style={{ marginRight: '8px', width: '50%' }}
+          >
+            {TranslateString(556, 'Collect Winnings')}
+          </Button>
+          {renderLotteryTicketButtonBuyOrApprove()}
+        </Actions>
+
       </CardBody>
     </StyledLotteryCard>
   )
