@@ -4,14 +4,13 @@ import { Button, useWalletModal } from '@pancakeswap-libs/uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 
-
 const ButtonStyle = styled(Button)`
-  background: #0085FF;
+  background: #0085ff;
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   border-radius: 10px;
   padding: 18px;
   &:hover:not(:disabled):not(:active) {
-    background-color: #40AAFF !important;
+    background-color: #40aaff !important;
   }
 `
 

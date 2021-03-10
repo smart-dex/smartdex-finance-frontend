@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Flex, Heading, Text } from '@pancakeswap-libs/uikit'
+import { darkColors, lightColors } from '../../../style/Color'
 
 interface HeadingProps {
   valueToDisplay?: string
@@ -16,6 +17,14 @@ const IconWrapper = styled.div`
   }
 `
 
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
 const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, Icon, ...props }) => {
   return (
     <Flex {...props}>
@@ -25,10 +34,8 @@ const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, 
         </IconWrapper>
       )}
       <Flex flexDirection="column">
-        <Text fontSize="14px" color="textSubtle">
-          {children}
-        </Text>
-        <Heading size="md">{valueToDisplay}</Heading>
+        <TextStyle fontSize="14px">{children}</TextStyle>
+        <HeadingStyle size="md">{valueToDisplay}</HeadingStyle>
       </Flex>
     </Flex>
   )

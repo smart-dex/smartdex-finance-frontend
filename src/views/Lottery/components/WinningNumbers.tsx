@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Image, Card, CardBody } from '@pancakeswap-libs/uikit'
+import { Card, CardBody } from '@pancakeswap-libs/uikit'
 import { useWinningNumbers, useMatchingRewardLength } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
+import { darkColors, lightColors } from '../../../style/Color'
 
 const WinningNumbers: React.FC = () => {
   const { account } = useWallet()
@@ -16,8 +17,8 @@ const WinningNumbers: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
-    <CardWrapper style={{ position: 'relative', marginTop:'4em'}}>
-      <Card  style={{ background: '#E9F4FC'}}>
+    <CardWrapper style={{ position: 'relative', marginTop: '4em' }}>
+      <CardStyle>
         <CardBody>
           <StyledCardContentInner>
             <StyledCardHeader>
@@ -28,19 +29,19 @@ const WinningNumbers: React.FC = () => {
               </Title>
               <br />
               <Row>
-              {winNumbers.map((number, index) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <TicketNumberBox key={index}>
-                  <CenteredText>{number}</CenteredText>
-                </TicketNumberBox>
-              ))}
-            </Row>
+                {winNumbers.map((number, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <TicketNumberBox key={index}>
+                    <CenteredText>{number}</CenteredText>
+                  </TicketNumberBox>
+                ))}
+              </Row>
 
-            <Link href="https://api.pancakeswap.com/api/lottery?page=0&pageSize=25" target="_blank">
-              {TranslateString(448, 'Export recent winning numbers')}
-            </Link>
+              <Link href="https://api.pancakeswap.com/api/lottery?page=0&pageSize=25" target="_blank">
+                {TranslateString(448, 'Export recent winning numbers')}
+              </Link>
             </StyledCardHeader>
-            
+
             <Column>
               <RowNoPadding>
                 <CenteredTextWithPadding>{TranslateString(442, 'Tickets matching 4 numbers:')}</CenteredTextWithPadding>
@@ -60,18 +61,20 @@ const WinningNumbers: React.FC = () => {
                   <strong>{MatchedNumber2}</strong>
                 </CenteredTextWithPadding>
               </RowNoPadding>
-            </Column>    
+            </Column>
           </StyledCardContentInner>
-          
         </CardBody>
-       
-      </Card>
+      </CardStyle>
       <ImgStyle>
-              <img src="/images/Saly-15.png" alt="" />
-     </ImgStyle>
+        <img src="/images/Saly-15.png" alt="" />
+      </ImgStyle>
     </CardWrapper>
   )
 }
+
+const CardStyle = styled(Card)`
+  background: ${({ theme }) => (theme.isDark ? '#e9f4fc1a' : '#FFF7E7')};
+`
 
 const ImgStyle = styled.a`
   position: absolute;
@@ -81,7 +84,7 @@ const ImgStyle = styled.a`
 const Link = styled.a`
   margin-top: 1em;
   text-decoration: none;
-  color: #0085FF;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : '#FFA14E')};
   font-size: 16px;
   font-weight: bold;
 `
@@ -119,13 +122,13 @@ const CenteredTextWithPadding = styled.div`
   padding-right: 2px;
   font-weight: 500;
   font-size: 16px;
-  color: #5F5E76;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 
 const TicketNumberBox = styled.div`
   padding: 10px;
   border-radius: 12px;
-  background: #FFA14E;
+  background: #ffa14e;
   color: white;
   font-size: 20px;
   font-weight: 600;
@@ -147,7 +150,7 @@ const StyledCardHeader = styled.div`
 const CardWrapper = styled.div``
 
 const Title = styled.div`
-  color: #5F5E76;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 16px;
   font-weight: 1000;
 `

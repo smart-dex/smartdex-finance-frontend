@@ -10,14 +10,25 @@ import Page from 'components/layout/Page'
 import Hero from './components/Hero'
 import NextDrawPage from './NextDrawPage'
 import PastDrawsPage from './PastDrawsPage'
+import { baseColors, lightColors, darkColors } from '../../style/Color'
 
 const Wrapper = styled.div`
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 42px;
+  display: flex;
+  justify-content: center;
 `
+const checkDarkBg = (theme) => (theme.isDark ? '#E9F4F' : '#E9F4FC')
 
 const ButtonItemStyle = styled(ButtonMenuItem)`
-
+  padding: 20px;
+  border-radius: 50px;
+  background-color: ${({ isActive, theme }) => (isActive ? baseColors.primary : checkDarkBg(theme))};
+  color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
+  font-weight: 400;
+  &:hover {
+    background-color: ${({ isActive, theme }) => (isActive ? '#5ba7ec' : checkDarkBg(theme))}!important;
+  }
 `
 
 const Lottery: React.FC = () => {
@@ -62,7 +73,7 @@ const Lottery: React.FC = () => {
       <Hero />
       <Page>
         <Wrapper>
-          <ButtonMenu activeIndex={activeIndex} onClick={handleClick} size="sm" variant="subtle">
+          <ButtonMenu activeIndex={activeIndex} onClick={handleClick} size="sm">
             <ButtonItemStyle>{TranslateString(716, 'Next draw')}</ButtonItemStyle>
             <ButtonItemStyle>{TranslateString(718, 'Past draws')}</ButtonItemStyle>
           </ButtonMenu>
