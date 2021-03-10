@@ -35,7 +35,8 @@ export const lightColors = {
   activeBackgroundMenuLeft: '#E9F4FC',
   textLogoMenuLeft: '#5F5E76',
   borderCard:'#E2E2E8',
-  dividerCard: '#F0F0F3'
+  dividerCard: '#F0F0F3',
+  balanceColor: '#5F5E76'
 }
 
 export const darkColors = {
@@ -63,5 +64,6 @@ export const darkColors = {
   activeBackgroundMenuLeft: '#1C2438',
   textLogoMenuLeft: '#FFFFFF',
   borderCard:'#2F344B',
-  dividerCard: '#2F344B'
+  dividerCard: '#2F344B',
+  balanceColor: 'rgba(255, 255, 255, 0.87)'
 }

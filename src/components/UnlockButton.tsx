@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, useWalletModal } from '@pancakeswap-libs/uikit'
+import { Button, useWalletModal } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 
