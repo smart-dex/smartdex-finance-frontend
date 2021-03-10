@@ -81,7 +81,7 @@ const Farm: React.FC = () => {
 
       <PoolHeader>
         <ContentHeader>
-          <HeadingPage as="h1" size="lg" mb="16px">
+          <HeadingPage as="h1" size="lg" mb="14px">
             {TranslateString(738, 'Syrup Pool')}
           </HeadingPage>
           <DescriptionHeading>
@@ -116,13 +116,21 @@ const Farm: React.FC = () => {
 
 const HeadingPage = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
 `
 
 const DescriptionHeading = styled.div`
-  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+font-family: Montserrat;
+font-size: 16px;
+line-height: 143%;
+text-align: center;
+letter-spacing: -0.03em;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
 `
 const ContentHeader = styled.div`
-  margin-bottom: 16px;
+  margin-bottom: 21px;
 `
 
 

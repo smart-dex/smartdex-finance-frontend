@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Button, IconButton, useModal, AddIcon } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
@@ -131,9 +131,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <CardTitle isFinished={isFinished && sousId !== 0}>
             {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}
           </CardTitle>
-          <FlexFull>
-            <Tag />
-          </FlexFull>
+          <Tag />
         </NamePool>
 
         <StyledImagePool>
@@ -155,10 +153,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
 
         <StyledCoinEarned>
-          <Label isFinished={isFinished && sousId !== 0}   text={TranslateString(330, `${tokenName} earned`)} colorLabel='#FFA14E'/>
+          <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} colorLabel='rgb(255,161,78)' />
           {!isOldSyrup ? (
             <BalanceAndCompound>
-              <Balance value={getBalanceNumber(earnings, tokenDecimals)} color='' isDisabled={isFinished} />
+              <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
               {sousId === 0 && account && harvest && (
                 <HarvestButton
                   disabled={!earnings.toNumber() || pendingTx}
@@ -173,11 +171,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </StyledCoinEarned>
 
         <DetailPool>
-          <StyledDetails>
-            <StyleFlexDetail>
-              <span role="img" aria-label={stakingTokenName}>
-                🥞{' '}
-              </span>
+          <StyledDetails style={{marginBottom:'26px'}}>
+            <StyleFlexDetail isFinished={isFinished}>
               {TranslateString(736, 'APR')}:
               </StyleFlexDetail>
             {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ? (
@@ -187,7 +182,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               )}
           </StyledDetails>
           <StyledDetails>
-            <StyleFlexDetail>{TranslateString(384, 'Your Stake')}:</StyleFlexDetail>
+            <StyleFlexDetail isFinished={isFinished}>{TranslateString(384, 'Your Stake')}:</StyleFlexDetail>
             <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
           </StyledDetails>
         </DetailPool>
@@ -220,7 +215,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                     {`Unstake ${stakingTokenName}`}
                   </Button>
 
-                  {!isOldSyrup && (
+                  {isOldSyrup && (
                     <IconButton disabled={isFinished && sousId !== 0} margin='10px' onClick={onPresentDeposit}>
                       <AddIcon color="background" />
                     </IconButton>
@@ -229,9 +224,9 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 </>
               ))}
 
-          <Button variant='secondary' onClick={handleClick} margin='10px' style={{ minWidth: '143px' }}>
+          <ButtonDetail onClick={handleClick} margin='10px' style={{ minWidth: '143px' }}>
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
-          </Button>
+          </ButtonDetail>
 
         </StyledCardActions>
       </CardContent>
@@ -262,6 +257,7 @@ const PoolFinishedSash = styled.div`
 `
 
 const BalanceAndCompound = styled.div`
+  margin-top: 17px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -277,6 +273,7 @@ const StyledDetails = styled.div`
   display: flex;
   font-size: 16px;
   align-items: center;
+  
 `
 
 const NamePool = styled.div`
@@ -308,14 +305,13 @@ const StyledCoinEarned = styled.div`
   padding: 24px;
   text-align: center;
   flex-grow: 1;
+  
 `
 const DetailPool = styled.div`
   order: 4;
-  align-self: center;
-  align-items: center;
-  padding: 24px;
   flex-grow: 1;
   min-width: 210px;
+  padding: 20px;
 `
 
 const StyledCardActions = styled.div`
@@ -334,13 +330,25 @@ const StyledCardActions = styled.div`
   flex-wrap: wrap;
 `
 
-const FlexFull = styled.div`
+const StyleFlexDetail = styled.div<{isFinished:boolean}>`
   flex: 1;
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  ${props => props.isFinished && css`
+  opacity: 0.5;
+  `
+}
 `
-const StyleFlexDetail = styled.div`
-  flex: 1;
-  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+
+const ButtonDetail = styled(Button)`
+  border: 1px solid #0085FF;
+  border-radius: 10px;
+  color: #0085FF;
+  background-color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
 `
+
 
 
 export default PoolCard

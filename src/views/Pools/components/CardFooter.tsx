@@ -1,6 +1,6 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
 import { Flex } from 'uikit-sotatek'
@@ -20,7 +20,10 @@ interface Props {
 
 const StyledFooter = styled.div<{ isFinished: boolean }>`
   border-top: 1px solid ${({ theme }) => (theme.isDark ? '#524B63' : '#E9EAEB')};
-  padding: 0 30px 24px 30px;
+  padding: 0 30px 24px 0px;
+  @media (max-width: 968px) {
+    padding: 0 30px 24px 30px;
+  }
 `
 
 const Details = styled.div`
@@ -43,8 +46,12 @@ const TokenLink = styled.a`
   text-decoration: none;
   color: #12aab5;
 `
-const LabelFooter = styled(Label)`
+const LabelFooter = styled(Label)<{isDisabled:boolean}>`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  ${props => props.isDisabled && css`
+    opacity: 0.5;
+  `
+}
 `
 
 const CardFooter: React.FC<Props> = ({
@@ -61,20 +68,20 @@ const CardFooter: React.FC<Props> = ({
       {isOpenDetail && (
         <Details>
           <Flex justifyContent='space-between'>
-            <LabelFooter>
+            <LabelFooter isDisabled={isFinished}>
               {TranslateString(408, 'Total')}:
               </LabelFooter>
             <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(totalStaked)} />
           </Flex>
           {blocksUntilStart > 0 && (
             <Flex justifyContent='space-between'>
-              <LabelFooter>{TranslateString(410, 'Start')}:</LabelFooter>
+              <LabelFooter isDisabled={isFinished}>{TranslateString(410, 'Start')}:</LabelFooter>
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
             </Flex>
           )}
           {blocksUntilStart === 0 && blocksRemaining > 0 && (
             <Flex justifyContent='space-between'>
-              <LabelFooter>{TranslateString(410, 'End')}:</LabelFooter>
+              <LabelFooter isDisabled={isFinished}>{TranslateString(410, 'End')}:</LabelFooter>
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
             </Flex>
           )}

@@ -1,10 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'uikit-sotatek'
 
 const CoreTag = () => (
-  <Tag variant="binance" outline startIcon={<VerifiedIcon />}>
+  <StyledCoreTag outline startIcon={<VerifiedIcon/>}>
     Core
-  </Tag>
+  </StyledCoreTag>
 )
 
 const CommunityTag = () => (
@@ -18,5 +19,13 @@ const BinanceTag = () => (
     Binance
   </Tag>
 )
+const StyledCoreTag = styled(Tag)`
+    border: 2px solid rgba(255, 161, 78, 0.5);
+    border-radius: 16px;
+    color: #FFA14E;
+    svg{
+      fill:#FFA14E;
+    }
 
+`
 export { CoreTag, CommunityTag, BinanceTag }

@@ -15,9 +15,11 @@ const Label: React.FC<LabelProps> = ({ text, isFinished = false, colorLabel }) =
 const StyledLabel = styled.div<{ isFinished: boolean, colorLabel }>`
   color: ${props => props.colorLabel};
   ${props => props.isFinished && css`
-    color: ${({ theme }) => (theme.isDark ? darkColors.textDisabled : lightColors.textDisabled)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.earnedCakeDisable : lightColors.earnedCakeDisable)};
   `}
   font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
 `
 
 export default Label

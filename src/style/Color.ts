@@ -32,11 +32,17 @@ export const lightColors = {
   },
   navThemeLeft: '#f9fcfe',
   textMenuLeft: '#5F5E76',
+  textDescriptionMenu: 'rgba(95, 94, 118, 0.7)',
   activeBackgroundMenuLeft: '#E9F4FC',
   textLogoMenuLeft: '#5F5E76',
   borderCard:'#E2E2E8',
   dividerCard: '#F0F0F3',
-  balanceColor: '#5F5E76'
+  cardShadow: 'rgba(120, 118, 148, 0.14)',
+  balanceColor: '#5F5E76',
+  earnedCake:"rgba(255,161,78)",
+  earnedCakeDisable:"rgba(255,161,78,0.5)",
+  detailPool: 'rgba(95, 94, 118, 0.7)',
+
 }
 
 export const darkColors = {
@@ -61,9 +67,14 @@ export const darkColors = {
   },
   navThemeLeft: '#030610',
   textMenuLeft: 'rgba(255, 255, 255, 0.77)',
+  textDescriptionMenu: 'rgba(255, 255, 255, 0.6)',
   activeBackgroundMenuLeft: '#1C2438',
   textLogoMenuLeft: '#FFFFFF',
   borderCard:'#2F344B',
   dividerCard: '#2F344B',
-  balanceColor: 'rgba(255, 255, 255, 0.87)'
+  earnedCake:"rgba(255,161,78)",
+  earnedCakeDisable:"rgba(255,161,78,0.5)",
+  cardShadow: 'rgba(0, 0, 0, 0.14)',
+  balanceColor: 'rgba(255, 255, 255, 0.87)',
+  detailPool: 'rgba(95, 94, 118, 0.7)'
 }
