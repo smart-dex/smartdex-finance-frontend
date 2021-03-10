@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Text, Input, Button } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
+import { darkColors, lightColors } from '../../../../style/Color'
 
 interface PastLotterySearcherProps {
   initialLotteryNumber: number
@@ -18,10 +19,32 @@ const SearchWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   position: absolute;
-  right: 8px;
+  right: 0px;
   top: 50%;
   transform: translate(0%, -50%);
   width: auto;
+`
+
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
+const InputStyle = styled(Input)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  background-color: ${({ theme }) => (theme.isDark ? '#2A3145' : '#FFFFFF')};
+  border: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};
+  border-radius: 50px;
+`
+const ButtonStyle = styled(Button)`
+  background: rgba(95, 94, 118, 0.5);
+  border-radius: 50px;
+  box-shadow: 0px 4px 10px rgba(197, 197, 197, 0.24);
+  width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  &: hover {
+    background-color: #0085ff !important;
+  }
 `
 
 const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotteryNumber, onSubmit }) => {
@@ -45,10 +68,10 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
 
   return (
     <Wrapper>
-      <Text>{TranslateString(742, 'Select lottery number:')}</Text>
+      <TextStyle>{TranslateString(742, 'Select lottery number:')}</TextStyle>
       <form onSubmit={handleSubmit}>
         <SearchWrapper>
-          <Input
+          <InputStyle
             value={lotteryNumber}
             type="number"
             isWarning={isError}
@@ -56,9 +79,9 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
             onChange={handleChange}
           />
           <ButtonWrapper>
-            <Button type="submit" size="sm" disabled={isError}>
-              {TranslateString(744, 'Search')}
-            </Button>
+            <ButtonStyle type="submit" size="sm" disabled={isError}>
+              <img src="/images/search.png" alt="" style={{ width: '20px' }} />
+            </ButtonStyle>
           </ButtonWrapper>
         </SearchWrapper>
       </form>

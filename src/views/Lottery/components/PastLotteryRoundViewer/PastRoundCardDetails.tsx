@@ -7,6 +7,7 @@ import LotteryCardHeading from '../LotteryCardHeading'
 import PastLotteryActions from './PastLotteryActions'
 import PrizeGrid from '../PrizeGrid'
 import Timestamp from '../Timestamp'
+import { darkColors, lightColors } from '../../../../style/Color'
 
 interface PastRoundCardDetailsProps {
   data: DataResponse
@@ -31,6 +32,10 @@ const TopLotteryCardHeading = styled(LotteryCardHeading)`
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
 `
 
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
 const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => {
   const TranslateString = useI18n()
 
@@ -53,9 +58,9 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
         <CardBody>
           <CardHeading>
             <Timestamp timeValue={lotteryDate} />
-            <Heading size="md" mb="24px">
+            <HeadingStyle size="md" mb="24px">
               Round #{lotteryNumber}
-            </Heading>
+            </HeadingStyle>
             <TopLotteryBlock>
               <TopLotteryCardHeading
                 valueToDisplay={`${lotteryNumbers[0]}, ${lotteryNumbers[1]}, ${lotteryNumbers[2]}, ${lotteryNumbers[3]}`}
@@ -70,7 +75,6 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
                 {TranslateString(999, 'Total prizes')}
               </LotteryCardHeading>
             </TopLotteryBlock>
-            
           </CardHeading>
         </CardBody>
         <CardFooter>
