@@ -5,7 +5,7 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
 import { Flex } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
-import BalancePool from './Styled/Balance_Pool'
+import Balance from 'components/Balance'
 
 
 
@@ -64,18 +64,18 @@ const CardFooter: React.FC<Props> = ({
             <LabelFooter>
               {TranslateString(408, 'Total')}:
               </LabelFooter>
-            <BalancePool fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(totalStaked)} />
+            <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(totalStaked)} />
           </Flex>
           {blocksUntilStart > 0 && (
             <Flex justifyContent='space-between'>
               <LabelFooter>{TranslateString(410, 'Start')}:</LabelFooter>
-              <BalancePool fontSize="16px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
+              <Balance fontSize="16px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
             </Flex>
           )}
           {blocksUntilStart === 0 && blocksRemaining > 0 && (
             <Flex justifyContent='space-between'>
               <LabelFooter>{TranslateString(410, 'End')}:</LabelFooter>
-              <BalancePool fontSize="16px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
+              <Balance fontSize="16px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
             </Flex>
           )}
           <Flex justifyContent='space-between'>

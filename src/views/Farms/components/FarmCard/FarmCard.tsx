@@ -24,7 +24,7 @@ export interface FarmWithStakedValue extends Farm {
 const FCard = styled.div`
   background: ${(props) => props.theme.card.background};
   border-radius: 32px;
-  border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};;
+  border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   box-shadow: 25px 14px 102px rgba(83, 185, 234, 0.14);
   display: flex;
   flex-direction: column;
