@@ -10,7 +10,6 @@ import {
   getTicketSaleTime,
   getTicketSaleStep,
 } from '../helpers/CountdownHelpers'
-import { darkColors, lightColors } from '../../../style/Color'
 
 const ProgressWrapper = styled.div`
   display: block;
@@ -37,7 +36,7 @@ const StyledPrimaryText = styled(Text)`
 `
 
 const TextStyle = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  color: #fff;
 `
 
 const LotteryProgress = () => {

@@ -7,7 +7,7 @@ import { darkColors, lightColors } from '../../../style/Color'
 const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2em;
+  margin-bottom: 24px;
 `
 
 const StyledHeading = styled(Heading)`

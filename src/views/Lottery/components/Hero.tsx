@@ -5,11 +5,6 @@ import useI18n from 'hooks/useI18n'
 import Container from 'components/layout/Container'
 import LotteryProgress from './LotteryProgress'
 
-// const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`
-//   color: ${({ theme }) => theme.colors.secondary};
-//   margin-bottom: 24px;
-// `
-
 const Title = styled(Heading)`
   color: #fff;
   margin-bottom: 24px;
