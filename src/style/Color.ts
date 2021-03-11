@@ -35,14 +35,16 @@ export const lightColors = {
   textDescriptionMenu: 'rgba(95, 94, 118, 0.7)',
   activeBackgroundMenuLeft: '#E9F4FC',
   textLogoMenuLeft: '#5F5E76',
-  borderCard:'#E2E2E8',
+  borderCard: '#E2E2E8',
   dividerCard: '#F0F0F3',
   cardShadow: 'rgba(120, 118, 148, 0.14)',
   balanceColor: '#5F5E76',
-  earnedCake:"rgba(255,161,78)",
-  earnedCakeDisable:"rgba(255,161,78,0.5)",
+  earnedCake: 'rgba(255,161,78)',
+  earnedCakeDisable: 'rgba(255,161,78,0.5)',
   detailPool: 'rgba(95, 94, 118, 0.7)',
-  buttonTabPool: '#E9F4FC'
+  buttonTabPool: '#E9F4FC',
+  textHeaderFarms: '#5F5E76',
+  stakedOnly: 'rgba(95, 94, 118, 0.7)',
 }
 
 export const darkColors = {
@@ -70,12 +72,14 @@ export const darkColors = {
   textDescriptionMenu: 'rgba(255, 255, 255, 0.6)',
   activeBackgroundMenuLeft: '#1C2438',
   textLogoMenuLeft: '#FFFFFF',
-  borderCard:'#2F344B',
+  borderCard: '#2F344B',
   dividerCard: '#2F344B',
-  earnedCake:"rgba(255,161,78)",
-  earnedCakeDisable:"rgba(255,161,78,0.5)",
+  earnedCake: 'rgba(255,161,78)',
+  earnedCakeDisable: 'rgba(255,161,78,0.5)',
   cardShadow: 'rgba(0, 0, 0, 0.14)',
   balanceColor: 'rgba(255, 255, 255, 0.87)',
   detailPool: 'rgba(255, 255, 255, 0.6)',
-  buttonTabPool: 'rgba(233, 244, 252, 0.1)'
+  buttonTabPool: 'rgba(233, 244, 252, 0.1)',
+  textHeaderFarms: 'rgba(255, 255, 255, 0.87);',
+  stakedOnly: ' rgba(255, 255, 255, 0.7)',
 }

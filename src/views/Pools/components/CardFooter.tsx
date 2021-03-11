@@ -7,8 +7,6 @@ import { Flex } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
 import Balance from 'components/Balance'
 
-
-
 interface Props {
   isOpenDetail: boolean
   projectLink: string
@@ -34,9 +32,8 @@ const Details = styled.div`
     float: none;
     width: 100%;
   }
- margin-bottom: 10px;
+  margin-bottom: 10px;
 `
-
 
 const Label = styled.div`
   font-size: 16px;
@@ -46,12 +43,13 @@ const TokenLink = styled.a`
   text-decoration: none;
   color: #12aab5;
 `
-const LabelFooter = styled(Label)<{isDisabled:boolean}>`
+const LabelFooter = styled(Label)<{ isDisabled: boolean }>`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
-  ${props => props.isDisabled && css`
-    opacity: 0.5;
-  `
-}
+  ${(props) =>
+    props.isDisabled &&
+    css`
+      opacity: 0.5;
+    `}
 `
 
 const CardFooter: React.FC<Props> = ({
@@ -67,25 +65,23 @@ const CardFooter: React.FC<Props> = ({
     <StyledFooter isFinished={isFinished}>
       {isOpenDetail && (
         <Details>
-          <Flex justifyContent='space-between'>
-            <LabelFooter isDisabled={isFinished}>
-              {TranslateString(408, 'Total')}:
-              </LabelFooter>
+          <Flex justifyContent="space-between">
+            <LabelFooter isDisabled={isFinished}>{TranslateString(408, 'Total')}:</LabelFooter>
             <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(totalStaked)} />
           </Flex>
           {blocksUntilStart > 0 && (
-            <Flex justifyContent='space-between'>
+            <Flex justifyContent="space-between">
               <LabelFooter isDisabled={isFinished}>{TranslateString(410, 'Start')}:</LabelFooter>
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
             </Flex>
           )}
           {blocksUntilStart === 0 && blocksRemaining > 0 && (
-            <Flex justifyContent='space-between'>
+            <Flex justifyContent="space-between">
               <LabelFooter isDisabled={isFinished}>{TranslateString(410, 'End')}:</LabelFooter>
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
             </Flex>
           )}
-          <Flex justifyContent='space-between'>
+          <Flex justifyContent="space-between">
             <TokenLink href={projectLink} target="_blank">
               {TranslateString(412, 'View project site')}
             </TokenLink>

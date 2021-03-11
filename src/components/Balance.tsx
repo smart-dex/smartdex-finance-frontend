@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import CountUp from 'react-countup'
-import styled, {css} from 'styled-components'
-import {  Text } from 'uikit-sotatek'
+import styled, { css } from 'styled-components'
+import { Text } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
 
 interface TextProps {
@@ -18,10 +18,12 @@ interface BalanceProps extends TextProps {
 
 const StyledText = styled(Text)<TextProps>`
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
-  ${props => props.isDisabled && css`
-    opacity: 0.5;
-  `}
-  color: ${({  color }) => (color)};
+  ${(props) =>
+    props.isDisabled &&
+    css`
+      opacity: 0.5;
+    `}
+  color: ${({ color }) => color};
   font-weight: 600;
   line-height: 29px;
 `

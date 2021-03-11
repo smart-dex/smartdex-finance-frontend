@@ -6,7 +6,7 @@ interface StyledTitleProps {
 }
 
 const CardTitle = styled.div<StyledTitleProps>`
-  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};  
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;

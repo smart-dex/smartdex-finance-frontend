@@ -78,7 +78,6 @@ const Farm: React.FC = () => {
 
   return (
     <Page>
-
       <PoolHeader>
         <ContentHeader>
           <HeadingPage as="h1" size="lg" mb="14px">
@@ -95,13 +94,10 @@ const Farm: React.FC = () => {
 
       <Route exact path={`${path}`}>
         <>
-
           {stackedOnly
             ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
             : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
           <Coming />
-
-
         </>
       </Route>
       <Route path={`${path}/history`}>
@@ -112,7 +108,6 @@ const Farm: React.FC = () => {
     </Page>
   )
 }
-
 
 const HeadingPage = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
@@ -125,19 +120,18 @@ const HeadingPage = styled(Heading)`
 `
 
 const DescriptionHeading = styled.div`
-font-family: Montserrat;
-font-size: 16px;
-@media (max-width: 968px) {
-  font-size: 13px;
-}
-line-height: 143%;
-text-align: center;
-letter-spacing: -0.03em;
+  font-family: Montserrat;
+  font-size: 16px;
+  @media (max-width: 968px) {
+    font-size: 13px;
+  }
+  line-height: 143%;
+  text-align: center;
+  letter-spacing: -0.03em;
   color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
 `
 const ContentHeader = styled.div`
   margin-bottom: 21px;
 `
-
 
 export default Farm

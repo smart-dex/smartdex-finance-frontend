@@ -25,11 +25,12 @@ const Wrapper = styled.div`
 
 const StyledLinkExternal = styled(LinkExternal)`
   text-decoration: none;
-  font-weight: normal;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.text)};
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
   display: flex;
   align-items: center;
-
   svg {
     padding-left: 4px;
     height: 18px;
@@ -42,7 +43,18 @@ const StyledDetailSection = styled.div`
   padding: 0 30px 24px 30px;
 `
 const StyledText = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.text)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+`
+const StyledLink = styled(Link)`
+  font-size: 16px;
+  text-decoration: revert;
+  color: rgb(31, 199, 212);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
 `
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
@@ -68,13 +80,12 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
           </Flex>
         )}
         <Flex justifyContent="flex-start">
-          <Link external href={bscScanAddress} bold={false}>
+          <StyledLink external href={bscScanAddress} bold={false}>
             {TranslateString(356, 'View on BscScan')}
-          </Link>
+          </StyledLink>
         </Flex>
       </Wrapper>
     </StyledDetailSection>
-
   )
 }
 

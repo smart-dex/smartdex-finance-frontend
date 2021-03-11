@@ -13,29 +13,35 @@ export interface ExpandableSectionProps {
 }
 
 const Wrapper = styled(Flex)`
-  flex-grow:1;
+  flex-grow: 1;
   svg {
     margin-right: 0.25rem;
   }
   width: 200px;
   @media (max-width: 968px) {
     margin-bottom: 16px;
+    min-width: 200px;
   }
-  margin:auto;
+  align-items: center;
 `
 const ImageFarm = styled.div`
-  width:55px;
-  height:55px;
+  width: 55px;
+  height: 55px;
   margin-right: 10px;
 `
 
 const MultiplierTag = styled(Tag)`
   margin-left: 4px;
+  background: #ffa14e;
+  color: #ffffff;
+  border: 2px solid rgba(255, 161, 78, 0.5);
 `
 const HeadingCard = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
-  margin-bottom:10px;
+  margin-bottom: 10px;
   front-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
   @media (max-width: 968px) {
     front-size: 20px;
   }
@@ -51,13 +57,13 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   return (
     <Wrapper>
       <ImageFarm>
-          <img src={`/images/farms/${farmImage}.svg`}  alt={tokenSymbol} style={{ width: "100%", height: "100%" }} />
+        <img src={`/images/farms/${farmImage}.svg`} alt={tokenSymbol} style={{ width: '100%', height: '100%' }} />
       </ImageFarm>
       <Flex flexDirection="column">
         <HeadingCard>{lpLabel}</HeadingCard>
         <Flex>
           {isCommunityFarm ? <CommunityTag /> : <CoreTag />}
-          <MultiplierTag variant="binance">{multiplier}</MultiplierTag>
+          <MultiplierTag>{multiplier}</MultiplierTag>
         </Flex>
       </Flex>
     </Wrapper>

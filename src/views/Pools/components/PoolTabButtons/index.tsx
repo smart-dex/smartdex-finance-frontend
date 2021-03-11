@@ -5,8 +5,6 @@ import { ButtonMenu, ButtonMenuItem, Toggle, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { baseColors, lightColors, darkColors } from 'style/Color'
 
-const checkDarkBg = (theme) => (theme.isDark ? darkColors.buttonTabPool : lightColors.buttonTabPool)
-
 const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
   const { url, isExact } = useRouteMatch()
   const TranslateString = useI18n()
@@ -14,17 +12,19 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
   return (
     <Wrapper>
       <ToggleWrapper>
-        <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale='sm' />
+        <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
         <Text> {TranslateString(999, 'Staked only')}</Text>
       </ToggleWrapper>
-      <ButtonMenu activeIndex={isExact ? 0 : 1}>
-        <ButtonItemStyle as={Link} to={`${url}`} >
-          {TranslateString(698, 'Active')}
-        </ButtonItemStyle>
-        <ButtonItemStyle as={Link} to={`${url}/history`}>
-          {TranslateString(700, 'Inactive')}
-        </ButtonItemStyle>
-      </ButtonMenu>
+      <ButtonMenuStyle>
+        <ButtonMenu activeIndex={isExact ? 0 : 1}>
+          <ButtonItemStyle as={Link} to={`${url}`}>
+            {TranslateString(698, 'Active')}
+          </ButtonItemStyle>
+          <ButtonItemStyle as={Link} to={`${url}/history`}>
+            {TranslateString(700, 'Inactive')}
+          </ButtonItemStyle>
+        </ButtonMenu>
+      </ButtonMenuStyle>
     </Wrapper>
   )
 }
@@ -51,6 +51,7 @@ const ToggleWrapper = styled.div`
     @media (max-width: 968px) {
       font-size: 13px;
     }
+    color: ${({ theme }) => (theme.isDark ? darkColors.stakedOnly : lightColors.stakedOnly)};
   }
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`
@@ -58,17 +59,18 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
-  &:hover {
-    background-color: ${({ isActive, theme }) => (isActive ? '#5ba7ec' : checkDarkBg(theme))}!important;
-  }
-  width:135px;
+  width: 135px;
   @media (max-width: 968px) {
-    width:100px;
+    width: 100px;
     font-size: 13px;
   }
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
 `
-
-
+const ButtonMenuStyle = styled.div`
+  border-radius: 50px;
+  > div {
+    border-radius: 50px;
+  }
+`

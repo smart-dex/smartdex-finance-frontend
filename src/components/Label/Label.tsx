@@ -9,14 +9,18 @@ interface LabelProps {
 }
 
 const Label: React.FC<LabelProps> = ({ text, isFinished = false, colorLabel }) => (
-  <StyledLabel isFinished={isFinished} colorLabel={colorLabel}>{text}</StyledLabel>
+  <StyledLabel isFinished={isFinished} colorLabel={colorLabel}>
+    {text}
+  </StyledLabel>
 )
 
-const StyledLabel = styled.div<{ isFinished: boolean, colorLabel }>`
-  color: ${props => props.colorLabel};
-  ${props => props.isFinished && css`
-    color: ${({ theme }) => (theme.isDark ? darkColors.earnedCakeDisable : lightColors.earnedCakeDisable)};
-  `}
+const StyledLabel = styled.div<{ isFinished: boolean; colorLabel }>`
+  color: ${(props) => props.colorLabel};
+  ${(props) =>
+    props.isFinished &&
+    css`
+      color: ${({ theme }) => (theme.isDark ? darkColors.earnedCakeDisable : lightColors.earnedCakeDisable)};
+    `}
   font-size: 14px;
   font-weight: 600;
   line-height: 17px;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'uikit-sotatek'
 
 const CoreTag = () => (
-  <StyledCoreTag outline startIcon={<VerifiedIcon/>}>
+  <StyledCoreTag outline startIcon={<VerifiedIcon />}>
     Core
   </StyledCoreTag>
 )
@@ -20,12 +20,11 @@ const BinanceTag = () => (
   </Tag>
 )
 const StyledCoreTag = styled(Tag)`
-    border: 2px solid rgba(255, 161, 78, 0.5);
-    border-radius: 16px;
-    color: #FFA14E;
-    svg{
-      fill:#FFA14E;
-    }
-
+  border: 2px solid rgba(255, 161, 78, 0.5);
+  border-radius: 16px;
+  color: #ffa14e;
+  svg {
+    fill: #ffa14e;
+  }
 `
 export { CoreTag, CommunityTag, BinanceTag }
