@@ -43,7 +43,7 @@ const UnlockWalletCard = () => {
     <CardStyle isActive>
       <StyledCardBody>
         <IconWrapper>
-          <TicketImg src="images/ticket-lottery.png" />
+          <TicketImg src="images/ticket-lottery.svg" />
         </IconWrapper>
         <StyledHeading size="md">{TranslateString(1080, 'Unlock wallet to access lottery')}</StyledHeading>
         <UnlockButton />

@@ -5,7 +5,7 @@ import { Card, CardBody } from '@pancakeswap-libs/uikit'
 import { useWinningNumbers, useMatchingRewardLength } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
-import { darkColors, lightColors } from '../../../style/Color'
+import { darkColors, lightColors, baseColors } from '../../../style/Color'
 
 const WinningNumbers: React.FC = () => {
   const { account } = useWallet()
@@ -73,20 +73,25 @@ const WinningNumbers: React.FC = () => {
 }
 
 const CardStyle = styled(Card)`
-  background: ${({ theme }) => (theme.isDark ? '#e9f4fc1a' : '#FFF7E7')};
+  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundLastest : lightColors.backgroundLastest)};
 `
 
 const ImgStyle = styled.a`
   position: absolute;
   right: 2px;
   top: -106px;
+  @media (max-width: 600px) {
+    display: none;
+  }
+  
 `
 const Link = styled.a`
   margin-top: 1em;
   text-decoration: none;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : '#FFA14E')};
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : baseColors.orange)};
   font-size: 16px;
   font-weight: bold;
+ 
 `
 
 const Row = styled.div`
@@ -108,6 +113,9 @@ const Column = styled.div`
   margin-left: 2.4em;
   display: flex;
   flex-direction: column;
+  @media (max-width: 600px) {
+    margin-left: 0px;
+  }
 `
 
 const CenteredText = styled.div`
@@ -128,7 +136,7 @@ const CenteredTextWithPadding = styled.div`
 const TicketNumberBox = styled.div`
   padding: 10px;
   border-radius: 12px;
-  background: #ffa14e;
+  background: ${ baseColors.orange};
   color: white;
   font-size: 20px;
   font-weight: 600;
@@ -140,11 +148,18 @@ const TicketNumberBox = styled.div`
     margin-right: 20px;
     width: 60px;
   }
+
+  @media (max-width: 600px) {
+    margin: 4px;
+  }
 `
 
 const StyledCardHeader = styled.div`
   display: flex;
   flex-direction: column;
+   @media (max-width: 600px) {
+    margin-left: 8px;
+  }
 `
 
 const CardWrapper = styled.div``
@@ -157,6 +172,9 @@ const Title = styled.div`
 
 const StyledCardContentInner = styled.div`
   display: flex;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 
 export default WinningNumbers

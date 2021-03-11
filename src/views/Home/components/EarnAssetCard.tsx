@@ -12,7 +12,7 @@ const StyledFarmStakingCard = styled(Card)`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   border: 1px solid #e2e2e8;
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -38,7 +38,7 @@ const NavLinkStyle = styled(NavLink)`
   width: 30px;
   height: 30px;
   border-radius: 12px;
-  margin-top: 28px;
+  margin-top: 8px;
 `
 
 const EarnAssetCard = () => {
@@ -50,14 +50,10 @@ const EarnAssetCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <HeadingEarn>
-          Earn
-        </HeadingEarn>
+        <HeadingEarn>Earn</HeadingEarn>
         <CardMidContent>{assets}</CardMidContent>
-        <Flex style={{flexDirection: 'column'}}>
-          <HeadingEarn>
-            in Pools
-          </HeadingEarn>
+        <Flex style={{ flexDirection: 'column' }}>
+          <HeadingEarn>in Pools</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/syrup" id="pool-cta">
             <ArrowForwardIcon mt={30} color="#fff" style={{ margin: '5px' }} />
           </NavLinkStyle>

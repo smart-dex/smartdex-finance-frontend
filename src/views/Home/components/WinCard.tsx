@@ -10,7 +10,7 @@ const StyledFarmStakingCard = styled(Card)`
   margin-right: auto;
   width: 100%;
   height: 100%;
-  border: 1px solid ${ lightColors.borderColor };
+  border: 1px solid ${lightColors.borderColor};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
 
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -21,7 +21,7 @@ const StyledFarmStakingCard = styled(Card)`
 const CardMidContent = styled(Heading)`
   line-height: 44px;
   font-weight: 600;
-  color: ${ baseColors.success };
+  color: ${baseColors.success};
   font-size: 22px;
 `
 
@@ -31,13 +31,13 @@ const HeadingEarn = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 const NavLinkStyle = styled(NavLink)`
-  background: ${ lightColors.arrowColor };
+  background: ${lightColors.arrowColor};
   width: 30px;
   height: 30px;
   border-radius: 12px;
-  margin-top: 65px;
+  margin-top: 52px;
   @media (max-width: 600px) {
-    margin-top: 28px;
+    margin-top: 8px;
   }
 `
 
@@ -47,14 +47,10 @@ const WinCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <HeadingEarn>
-          Lottery with
-        </HeadingEarn>
+        <HeadingEarn>Lottery with</HeadingEarn>
         <CardMidContent>${lotteryPrize}</CardMidContent>
-        <Flex style={{flexDirection: 'column'}}>
-          <HeadingEarn>
-            up for grabs
-          </HeadingEarn>
+        <Flex style={{ flexDirection: 'column' }}>
+          <HeadingEarn>up for grabs</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/lottery" id="lottery-pot-cta">
             <ArrowForwardIcon color="primary" style={{ margin: '5px' }} />
           </NavLinkStyle>

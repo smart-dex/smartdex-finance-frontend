@@ -12,13 +12,17 @@ import { darkColors, lightColors } from '../../../style/Color'
 const TextCake = styled(Text)`
   font-size: 24px;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  line-height: 1.4;
+  padding-bottom: 8px;
   padding-right: 13px;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `
 
 const Block = styled.div`
-  
- }
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `
 
 const LotteryJackpot = () => {
@@ -35,7 +39,7 @@ const LotteryJackpot = () => {
       <TextCake bold>
         {lotteryPrizeAmoutCake} {TranslateString(999, 'CAKE')}
       </TextCake>
-      <CardBusdValue value={lotteryPrizeAmountBusd} lineHeight="3" />
+      <CardBusdValue value={lotteryPrizeAmountBusd} />
     </Block>
   )
 }

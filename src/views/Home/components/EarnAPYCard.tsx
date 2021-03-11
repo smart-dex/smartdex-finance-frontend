@@ -27,9 +27,9 @@ const NavLinkStyle = styled(NavLink)`
   width: 30px;
   height: 30px;
   border-radius: 12px;
-  margin-top: 65px;
+  margin-top: 52px;
   @media (max-width: 600px) {
-    margin-top: 28px;
+    margin-top: 8px;
   }
 `
 const CardMidContent = styled(Heading)`
@@ -109,8 +109,8 @@ const EarnAPYCard = () => {
             <Skeleton animation="pulse" variant="rect" height="44px" />
           )}
         </CardMidContent>
-        <Flex style={{flexDirection: 'column'}}>
-          <HeadingEarn >in Farms</HeadingEarn>
+        <Flex style={{ flexDirection: 'column' }}>
+          <HeadingEarn>in Farms</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/farms" id="farm-apy-cta">
             <ArrowForwardIcon color="primary" style={{ margin: '5px' }} />
           </NavLinkStyle>

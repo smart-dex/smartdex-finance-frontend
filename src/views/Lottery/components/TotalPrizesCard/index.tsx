@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Heading, Card, CardBody, CardFooter, Text, PancakeRoundIcon, Flex, Skeleton } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, CardFooter, Text, Flex, Skeleton } from '@pancakeswap-libs/uikit'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
 import { useTotalRewards } from 'hooks/useTickets'
@@ -60,6 +60,10 @@ const HeadingStyle = styled(Heading)`
 const CardStyle = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};
 `
+const TicketImg = styled.img`
+  width: 57px;
+  height: 57px;
+`
 
 const TotalPrizesCard = () => {
   const TranslateString = useI18n()
@@ -87,7 +91,7 @@ const TotalPrizesCard = () => {
         <CardHeading>
           <Left>
             <IconWrapper>
-              <PancakeRoundIcon />
+              <TicketImg src="/images/pan-cake.png" />
             </IconWrapper>
             <PrizeCountWrapper>
               <TextStyle fontSize="14px">{TranslateString(722, 'Total Pot:')}</TextStyle>

@@ -28,16 +28,28 @@ const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 32px;
   font-weight: 600;
+  margin-top: -7px;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
 `
 
 const HeadingBlock = styled.div`
-  display: flex;
-  justify-content: space-between;
+  
+  @media (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 const CardBodyStyle = styled(CardBody)`
   width: 100%;
   padding: 60px 39px 59px 27px;
+  @media (max-width: 600px) {
+    padding: 30px 27px;
+  }
 `
 
 const TotalValueLockedCard = () => {
@@ -49,16 +61,12 @@ const TotalValueLockedCard = () => {
     <StyledTotalValueLockedCard>
       <CardBodyStyle>
         <HeadingBlock>
-          <HeadingEarn  mb="24px">
-            {TranslateString(762, 'Total Value Locked (TVL)')}
-          </HeadingEarn>
-          { data ? 
-          (<HeadingStyle>{`$${tvl}`}</HeadingStyle>) : (<> </>)
-          }
+          <HeadingEarn mb="24px">{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
+          {data ? <HeadingStyle>{`$${tvl}`}</HeadingStyle> : <> </>}
         </HeadingBlock>
-        
+
         {data ? (
-            <TextStyle>{TranslateString(764, 'Across all LPs and Syrup Pools')}</TextStyle>
+          <TextStyle>{TranslateString(764, 'Across all LPs and Syrup Pools')}</TextStyle>
         ) : (
           <>
             <Skeleton height={66} />

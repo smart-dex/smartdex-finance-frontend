@@ -28,6 +28,7 @@ import OldSyrupTitle from './OldSyrupTitle'
 import HarvestButton from './HarvestButton'
 import CardFooter from './CardFooter'
 import CardContent from './CardContent'
+import { baseColors } from '../../../style/Color'
 
 interface PoolWithApy extends Pool {
   apy: BigNumber
@@ -161,7 +162,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <Label
             isFinished={isFinished && sousId !== 0}
             text={TranslateString(330, `${tokenName} earned`)}
-            colorLabel="#FFA14E"
+            colorLabel={ baseColors.orange}
           />
           {!isOldSyrup ? (
             <BalanceAndCompound>
