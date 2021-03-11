@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 import { Link } from 'uikit-sotatek'
-import { darkColors, lightColors } from 'style/Color'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
 
 export interface IfoCardDetailsProps {
@@ -36,7 +36,7 @@ const Text = styled('div')`
     width: 120px;
   }
   & > a {
-    color: #0085ff;
+    color: ${baseColors.primary};
     font-size: 13px;
   }
   ${({ theme }) => theme.mediaQueries.sm} {

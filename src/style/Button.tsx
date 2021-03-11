@@ -1,7 +1,7 @@
-import { baseColors } from './Color'
+import { baseColors, darkColors, lightColors } from './Color'
 
 export const Button = `
-  color: #fff;
+  color: ${darkColors.contrast};
   height: 56px;
   font-size: 16px;
   text-align: center;
@@ -28,22 +28,22 @@ export const ButtonSecondary = `
 `
 export const ButtonBorder = `
   ${Button}
-  background-color: #fff;
+  background-color: ${darkColors.contrast};
   color: ${baseColors.primary};
   border: 1px solid ${baseColors.primary};
   &:hover {
     background: ${baseColors.primary} !important;
     border-color: ${baseColors.primary} !important;
     text-decoration: none;
-    color: #fff;
+    color: ${darkColors.contrast};
   }
 `
 export const ButtonGrey = `
   ${Button}
-  color: #8F8FA0;
-  background: #E8E8EB;
+  color: ${lightColors.fillSvg};
+  background: ${lightColors.buttonView};
   & svg {
-    fill: #8F8FA0;
+    fill: ${lightColors.fillSvg};
   }
 `
 

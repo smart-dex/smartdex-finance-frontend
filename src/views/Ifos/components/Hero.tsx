@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { darkColors } from 'style/Color'
 import { Heading, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 
 const Title = styled(Heading).attrs({ as: 'h1' })`
-  color: #ffffff;
+  color: ${darkColors.textLogoMenuLeft};
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -17,7 +18,7 @@ const Title = styled(Heading).attrs({ as: 'h1' })`
 `
 
 const Blurb = styled(Text)`
-  color: #ffffff;
+  color: ${darkColors.textLogoMenuLeft};
   font-size: 13px;
   font-weight: 500;
   ${({ theme }) => theme.mediaQueries.sm} {

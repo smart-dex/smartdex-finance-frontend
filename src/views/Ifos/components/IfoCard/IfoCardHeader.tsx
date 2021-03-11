@@ -19,7 +19,7 @@ const Avatar = styled(Flex)`
   position: static;
   left: -80px;
   top: 10px;
-  background: rgba(255, 161, 78, 0.1);
+  background: ${lightColors.backAvatar};
   width: 40px;
   height: 40px;
   border-radius: 50%;

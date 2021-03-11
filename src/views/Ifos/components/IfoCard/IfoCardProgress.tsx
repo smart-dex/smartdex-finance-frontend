@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Progress } from '@pancakeswap-libs/uikit'
+import { baseColors } from 'style/Color'
+import { Progress } from 'uikit-sotatek'
 
 interface IfoCardProgressProps {
   progress: number
@@ -9,7 +10,7 @@ interface IfoCardProgressProps {
 const StyledProgress = styled.div`
   margin-bottom: 16px;
   & > div > div {
-    background: #0085ff;
+    background: ${baseColors.primary};
   }
 `
 

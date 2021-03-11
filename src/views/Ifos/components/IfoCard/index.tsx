@@ -97,7 +97,7 @@ const LinkExternalStyle = styled(LinkExternal)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
   & svg {
-    fill: #8f8fa0;
+    fill: ${lightColors.fillSvg};
   }
 `
 const UnlockButtonStyle = styled(UnlockButton)`

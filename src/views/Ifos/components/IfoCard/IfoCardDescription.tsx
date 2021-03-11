@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Text } from 'uikit-sotatek'
-import { darkColors, lightColors } from 'style/Color'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
 
 export interface IfoCardDescriptionProps {
@@ -17,7 +17,7 @@ const StyledIfoCardDescription = styled.div`
 const ToggleButton = styled.button`
   background: transparent;
   border: none;
-  color: #0085ff;
+  color: ${baseColors.primary};
   cursor: pointer;
   display: block;
   font-weight: 700;

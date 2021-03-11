@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
 import { ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
-import { lightColors, baseColors } from 'style/Color'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 
 const Wrapper = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
     }
   }
   & > div {
-    background: ${({ theme }) => (theme.isDark ? '#2a3245' : lightColors.activeBackgroundMenuLeft)};
+    background: ${({ theme }) => (theme.isDark ? darkColors.backButtonTogger : lightColors.activeBackgroundMenuLeft)};
     border-radius: 50px;
   }
   @media (min-width: 768px) {

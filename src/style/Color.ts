@@ -43,6 +43,8 @@ export const lightColors = {
   bgCardCollectibles: '#FFFFFF',
   shadowCardCollectibles: 'rgba(120, 118, 148, 0.14)',
   colorInfoBlock: 'rgba(95, 94, 118, 0.7)',
+  fillSvg: '#8F8FA0',
+  backAvatar: 'rgba(255, 161, 78, 0.1)',
 }
 
 export const darkColors = {
@@ -78,4 +80,7 @@ export const darkColors = {
   bgCardCollectibles: '#00071C',
   shadowCardCollectibles: 'rgba(0, 0, 0, 0.14)',
   colorInfoBlock: 'rgba(255, 255, 255, 0.6)',
+  fillSvg: '#8F8FA0',
+  backAvatar: 'rgba(255, 161, 78, 0.1)',
+  backButtonTogger: '#2a3245',
 }
