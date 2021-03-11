@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
+import { Heading } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import NftList from './components/NftList'

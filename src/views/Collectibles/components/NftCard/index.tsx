@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
 import {
   Card,
@@ -13,7 +14,6 @@ import {
 } from 'uikit-sotatek'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
-import { lightColors, darkColors, baseColors } from 'style/Color'
 import { Nft } from 'config/constants/types'
 import InfoRow from '../InfoRow'
 import TransferNftModal from '../TransferNftModal'

@@ -3,6 +3,7 @@ import { lightColors, darkColors } from 'style/Color'
 
 const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   background: ${(props) => props.theme.card.background};
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   border-radius: 32px;
   display: flex;
