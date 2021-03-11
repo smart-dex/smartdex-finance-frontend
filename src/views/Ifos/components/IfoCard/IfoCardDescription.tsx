@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from 'uikit-sotatek'
+import { darkColors, lightColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
 
 export interface IfoCardDescriptionProps {
@@ -34,11 +35,14 @@ const ToggleButton = styled.button`
 `
 
 const Description = styled(Text)<{ isOpen: boolean }>`
-  color: rgba(95, 94, 118, 0.7);
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
 `
 
 const IfoCardDescription: React.FC<IfoCardDescriptionProps> = ({ defaultIsOpen = true, description }) => {

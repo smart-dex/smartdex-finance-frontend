@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
-import { Link } from '@pancakeswap-libs/uikit'
+import { Link } from 'uikit-sotatek'
+import { darkColors, lightColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
 
 export interface IfoCardDetailsProps {
@@ -21,7 +22,6 @@ const StyledIfoCardDetails = styled.div`
 
 const Item = styled.div`
   align-items: center;
-  color: ${({ theme }) => theme.colors.secondary};
   display: flex;
   margin-bottom: 10px;
 `
@@ -29,9 +29,12 @@ const Text = styled('div')`
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
-  color: #5f5e76;
-  width: 140px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  width: 160px;
   text-align: left;
+  @media (max-width: 767px) {
+    width: 120px;
+  }
   & > a {
     color: #0085ff;
     font-size: 13px;

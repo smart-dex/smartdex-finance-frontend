@@ -8,4 +8,3 @@ export const FarmHeader = styled.div`
 export const HeadingFarm = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
 `
-

@@ -1,19 +1,57 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
-import { ButtonMenu, ButtonMenuItem } from '@pancakeswap-libs/uikit'
-import { SelectButtonStyle } from 'style/Button'
+import { ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
+import { lightColors, baseColors } from 'style/Color'
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 0px;
-  justify-content: flex-start;
-  ${({ theme }) => theme.mediaQueries.sm} {
-    margin-bottom: 39px;
+  border-radius: 50px;
+  & a {
+    color: ${lightColors.textMenuLeft};
+    height: 45px;
+    font-size: 13px;
+    padding: 0 20px;
+
+    background: none;
+    line-height: 20px;
+    border-radius: 50px;
+    &:hover {
+      background: none;
+    }
+    &:focus {
+      box-shadow: 'none';
+    }
   }
-  ${SelectButtonStyle}
+  & > div {
+    background: ${({ theme }) => (theme.isDark ? '#2a3245' : lightColors.activeBackgroundMenuLeft)};
+    border-radius: 50px;
+  }
+  @media (min-width: 768px) {
+    & a {
+      height: 56px;
+      padding: 0 35px;
+      font-size: 16px;
+    }
+  }
+  .active {
+    background: ${baseColors.primary};
+    color: ${lightColors.card};
+    border-radius: 50px; 
+    box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+    &:hover {
+      opacity: 0.65;
+      background: ${baseColors.primary};
+    }
+  }
+  .not-active {
+    color: ${({ theme }) => (theme.isDark ? lightColors.background : lightColors.textMenuLeft)};
+    font-weight: normal;
+    line-height: 20px;
+  }
 `
 
 const IfoTabButtons = () => {
@@ -21,11 +59,11 @@ const IfoTabButtons = () => {
 
   return (
     <Wrapper>
-      <ButtonMenu activeIndex={!isExact ? 1 : 0} size="md" variant="subtle">
-        <ButtonMenuItem as={Link} to={`${url}`}>
+      <ButtonMenu activeIndex={!isExact ? 1 : 0} variant="subtle">
+        <ButtonMenuItem className={isExact ? 'active' : 'not-active'} as={Link} to={`${url}`}>
           Next IFO
         </ButtonMenuItem>
-        <ButtonMenuItem as={Link} to={`${url}/history`}>
+        <ButtonMenuItem className={!isExact ? 'active' : 'not-active'} as={Link} to={`${url}/history`}>
           Past IFOs
         </ButtonMenuItem>
       </ButtonMenu>

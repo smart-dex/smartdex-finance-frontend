@@ -1,44 +1,5 @@
-import { baseColors, lightColors } from './Color'
+import { baseColors } from './Color'
 
-export const SelectButtonStyle = `
-  & a {
-    color: ${lightColors.textMenuLeft};
-    height: 45px;
-    font-size: 13px;
-    padding: 0 20px;
-    
-    background: none;
-    line-height: 20px;
-    border-radius: 50px;
-    &:hover {
-      background: none;
-    }
-    &:focus {
-      box-shadow: 'none',
-    }
-    &.hyEFyZ {
-      background: ${baseColors.primary};
-      color: #fff;
-      &:hover {
-        background: ${baseColors.primary} !important;
-      }
-      &:focus: {
-        boxShadow: none;
-      }
-    }
-  }  
-  &>div {
-    background: ${lightColors.activeBackgroundMenuLeft};
-    border-radius: 50px;
-  }
-  @media(min-width: 768px) {
-    & a {
-      height: 56px;
-      padding: 0 35px;
-      font-size: 16px;
-    }
-  }
-`
 export const Button = `
   color: #fff;
   height: 56px;
@@ -86,4 +47,4 @@ export const ButtonGrey = `
   }
 `
 
-export default SelectButtonStyle
+export default Button

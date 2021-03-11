@@ -94,13 +94,10 @@ const Farm: React.FC = () => {
       <Divider />
       <Route exact path={`${path}`}>
         <>
-
           {stackedOnly
             ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
             : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
           <Coming />
-
-
         </>
       </Route>
       <Route path={`${path}/history`}>
@@ -148,6 +145,5 @@ const HeadingPage = styled(Heading)`
 const DescriptionHeading = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
 `
-
 
 export default Farm

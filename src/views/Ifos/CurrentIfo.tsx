@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Heading, BaseLayout, Link, Card } from '@pancakeswap-libs/uikit'
+import { Text, Heading, BaseLayout, Link, Card } from 'uikit-sotatek'
+import { baseColors, darkColors, lightColors } from 'style/Color'
 import { ifosConfig } from 'config/constants'
 import useI18n from 'hooks/useI18n'
 import IfoCard from './components/IfoCard'
 import Title from './components/Title'
 import IfoCards from './components/IfoCards'
-import { ButtonPrimary, ButtonSecondary, ButtonBorder } from '../../style/Button'
+import { ButtonPrimary, ButtonSecondary } from '../../style/Button'
 
 const LaunchIfoCallout = styled(BaseLayout)`
   display: grid;
@@ -29,7 +30,7 @@ const List = styled.ul`
     font-size: 13px;
     line-height: 16px;
     margin-bottom: 8px;
-    color: rgba(95, 94, 118, 0.7);
+    color: ${lightColors.colorWap};
     padding-left: 16px;
     list-style: none;
     position: relative;
@@ -38,7 +39,7 @@ const List = styled.ul`
       display: inline-block;
       width: 6px;
       height: 6px;
-      background: #5f5e76;
+      background: ${lightColors.textMenuLeft};
       position: absolute;
       left: 0px;
       top: 7px;
@@ -53,21 +54,28 @@ const List = styled.ul`
   }
 `
 const WrapCard = styled(Card)`
-  border: 1px solid #e2e2e8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 40px;
   padding: 25px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   ${({ theme }) => theme.mediaQueries.sm} {
     padding: 50px 36px 50px 50px;
   }
+  box-shadow: 50px 38px 102px rgba(0, 0, 0, 0.14);
 `
 const WrapHeading = styled(Heading)`
-  color: #5f5e76;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 18px;
     line-height: 22px;
+  }
+  @media (max-width: 767px) {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
   }
 `
 const WrapGridButton = styled('div')`
@@ -83,7 +91,7 @@ const WrapText = styled(Text)`
   font-weight: 500;
   font-size: 13px;
   line-height: 20px;
-  color: rgba(95, 94, 118, 0.7);
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 14px;
     line-height: 22px;
@@ -100,8 +108,65 @@ const LinkPrimaryPd30 = styled(Link)`
   padding: 0 30px;
 `
 const LinkButtonBorder = styled(Link)`
-  ${ButtonBorder}
+  color: #fff;
+  height: 56px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  &:hover {
+    text-decoration: none;
+  }
+  @media (max-width: 767px) {
+    height: 45px;
+    font-size: 13px;
+    font-weight: normal;
+  }
   padding: 0 30px;
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+  color: ${baseColors.primary};
+  border: 1px solid ${baseColors.primary};
+  &:hover {
+    background: ${baseColors.primary};
+    border-color: ${baseColors.primary};
+    text-decoration: none;
+    color: #fff;
+  }
+`
+
+const StyleTitle = styled(Text)`
+  h2 {
+    color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+    @media (max-width: 767px) {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+`
+
+const StyleList = styled(Text)`
+  li {
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+    &:before {
+      color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textMenuLeft)};
+    }
+    @media (max-width: 767px) {
+      font-weight: bold;
+      &:before {
+        background: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+      }
+    }
+  }
+`
+
+const TitleEnd = styled(Text)`
+  @media (max-width: 767px) {
+    h2 {
+      font-weight: bold;
+    }
+  }
 `
 
 /**
@@ -119,12 +184,16 @@ const Ifo = () => {
       </IfoCards>
       <LaunchIfoCallout>
         <WrapCard>
-          <Title as="h2">{TranslateString(592, 'How to take part')}</Title>
+          <StyleTitle>
+            <Title as="h2">{TranslateString(592, 'How to take part')}</Title>
+          </StyleTitle>
           <WrapHeading mb="16px">{TranslateString(594, 'Before Sale')}:</WrapHeading>
-          <List>
-            <li>{TranslateString(596, 'Buy CAKE and BNB tokens')}</li>
-            <li>{TranslateString(598, 'Get CAKE-BNB LP tokens by adding CAKE and BNB liquidity')}</li>
-          </List>
+          <StyleList>
+            <List>
+              <li>{TranslateString(596, 'Buy CAKE and BNB tokens')}</li>
+              <li>{TranslateString(598, 'Get CAKE-BNB LP tokens by adding CAKE and BNB liquidity')}</li>
+            </List>
+          </StyleList>
           <WrapGridButton>
             <LinkPrimary href="https://exchange.pancakeswap.finance/#/swap" mr="16px">
               {TranslateString(1060, 'Buy CAKE')}
@@ -134,14 +203,20 @@ const Ifo = () => {
             </LinkSecondary>
           </WrapGridButton>
           <WrapHeading mb="16px">{TranslateString(600, 'During Sale')}:</WrapHeading>
-          <List>
-            <li>{TranslateString(602, 'While the sale is live, commit your CAKE-LP tokens to buy the IFO tokens')}</li>
-          </List>
+          <StyleList>
+            <List>
+              <li>
+                {TranslateString(602, 'While the sale is live, commit your CAKE-LP tokens to buy the IFO tokens')}
+              </li>
+            </List>
+          </StyleList>
           <WrapHeading mb="16px">{TranslateString(604, 'After Sale')}:</WrapHeading>
-          <List>
-            <li>{TranslateString(606, 'Claim the tokens you bought, along with any unspent funds.')}</li>
-            <li>{TranslateString(608, 'Done!')}</li>
-          </List>
+          <StyleList>
+            <List>
+              <li>{TranslateString(606, 'Claim the tokens you bought, along with any unspent funds.')}</li>
+              <li>{TranslateString(608, 'Done!')}</li>
+            </List>
+          </StyleList>
           <Text as="div">
             <LinkButtonBorder href="https://docs.pancakeswap.finance/core-products/ifo-initial-farm-offering">
               {TranslateString(610, 'Read more')}
@@ -150,7 +225,11 @@ const Ifo = () => {
         </WrapCard>
         <WrapCard>
           <div>
-            <Title as="h2">{TranslateString(512, 'Want to launch your own IFO?')}</Title>
+            <StyleTitle>
+              <TitleEnd>
+                <Title as="h2">{TranslateString(512, 'Want to launch your own IFO?')}</Title>
+              </TitleEnd>
+            </StyleTitle>
             <WrapText mb={3}>
               {TranslateString(
                 514,

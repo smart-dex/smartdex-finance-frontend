@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Heading, Text, Flex } from '@pancakeswap-libs/uikit'
+import { darkColors, lightColors } from 'style/Color'
 
 interface IfoCardHeaderProps {
   ifoId: string
@@ -48,7 +49,7 @@ const Name = styled(Heading).attrs({ as: 'h3' })`
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #5f5e76;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 24px;
     line-height: 29px;
@@ -60,7 +61,7 @@ const Description = styled(Text)`
   font-weight: 500;
   font-size: 11px;
   line-height: 13px;
-  color: #5f5e76;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   margin-bottom: 30px;
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 14px;

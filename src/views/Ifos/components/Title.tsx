@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Heading } from '@pancakeswap-libs/uikit'
+import { Heading } from 'uikit-sotatek'
 
 const Title = styled(Heading).attrs({ size: 'lg' })`
   color: #5f5e76;

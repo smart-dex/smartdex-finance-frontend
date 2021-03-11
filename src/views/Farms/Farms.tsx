@@ -15,7 +15,7 @@ import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
-import {FarmHeader,HeadingFarm } from './components/FarmHeader'
+import { FarmHeader, HeadingFarm } from './components/FarmHeader'
 
 const Farms: React.FC = () => {
   const { path } = useRouteMatch()

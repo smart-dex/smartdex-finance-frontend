@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
-import { Card, CardRibbon, LinkExternal } from '@pancakeswap-libs/uikit'
+import { Card, CardRibbon, LinkExternal } from 'uikit-sotatek'
+import { darkColors, lightColors } from 'style/Color'
 import { BSC_BLOCK_TIME } from 'config'
 import { Ifo, IfoStatus } from 'config/constants/types'
 import makeBatchRequest from 'utils/makeBatchRequest'
@@ -16,7 +17,7 @@ import IfoCardDescription from './IfoCardDescription'
 import IfoCardDetails from './IfoCardDetails'
 import IfoCardTime from './IfoCardTime'
 import IfoCardContribute from './IfoCardContribute'
-import { ButtonPrimary, ButtonGrey } from '../../../../style/Button'
+import { ButtonPrimary } from '../../../../style/Button'
 
 export interface IfoCardProps {
   ifo: Ifo
@@ -26,8 +27,10 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  border: 1px solid #e2e2e8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 40px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+  box-shadow: 50px 38px 102px rgba(0, 0, 0, 0.14);
 `
 const CardHeaderFlex = styled('div')`
   display: flex;
@@ -37,9 +40,6 @@ const CardHeaderFlex = styled('div')`
   }
   & > div {
     flex: 1;
-    &:first-child {
-      padding-right: 20px;
-    }
   }
 `
 const WrapProgress = styled('div')`
@@ -81,7 +81,24 @@ const CardBody = styled('div')`
   }
 `
 const LinkExternalStyle = styled(LinkExternal)`
-  ${ButtonGrey}
+  height: 56px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  &:hover {
+    text-decoration: none;
+  }
+  @media (max-width: 767px) {
+    height: 45px;
+    font-size: 13px;
+  }
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  & svg {
+    fill: #8f8fa0;
+  }
 `
 const UnlockButtonStyle = styled(UnlockButton)`
   ${ButtonPrimary}

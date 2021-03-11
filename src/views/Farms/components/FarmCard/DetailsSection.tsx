@@ -74,7 +74,6 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         </Flex>
       </Wrapper>
     </StyledDetailSection>
-
   )
 }
 
