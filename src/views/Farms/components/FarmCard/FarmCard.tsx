@@ -31,7 +31,7 @@ const FCard = styled.div`
   flex-direction: column;
   position: relative;
   &:hover {
-    border: 1px solid ${ baseColors.primary};
+    border: 1px solid ${baseColors.primary};
     transition: 0.25s;
   }
   position: relative;

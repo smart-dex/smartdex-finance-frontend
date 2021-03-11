@@ -11,7 +11,7 @@ const Block = styled.div`
   @media (max-width: 600px) {
     display: flex;
     font-size: 28px;
-  } 
+  }
 `
 const CakeWinnings = () => {
   const { claimAmount } = useTotalClaim()

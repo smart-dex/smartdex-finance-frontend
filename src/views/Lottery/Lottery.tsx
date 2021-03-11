@@ -17,7 +17,6 @@ const Wrapper = styled.div`
   margin-bottom: 42px;
   display: flex;
   justify-content: center;
-
 `
 const checkDarkBg = (theme) => (theme.isDark ? '#E9F4F' : '#E9F4FC')
 

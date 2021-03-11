@@ -12,14 +12,14 @@ const LayoutWrapper = styled.div`
 
 const StyledHeading = styled(Heading)`
   margin: 16px 0;
-  color: ${ baseColors.primary};
+  color: ${baseColors.primary};
   font-size: 18px;
   font-weight: 600;
 `
 
 const StyledLink = styled(Link)`
   margin-top: 16px;
-  color: ${ baseColors.primary};
+  color: ${baseColors.primary};
   display: inline;
   padding-left: 12px;
 `

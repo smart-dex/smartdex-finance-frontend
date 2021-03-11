@@ -53,7 +53,7 @@ const HeadingBlock = styled.div`
 `
 
 const Label = styled.div`
-  color: ${ baseColors.primary};
+  color: ${baseColors.primary};
   font-size: 14px;
   padding-right: 50px;
   padding-bottom: 8px;

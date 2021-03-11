@@ -16,7 +16,6 @@ const PageHome = styled(Page)`
   ${({ theme }) => theme.mediaQueries.sm} {
     padding-top: 24px;
   }
-
 `
 
 const Hero = styled.div`

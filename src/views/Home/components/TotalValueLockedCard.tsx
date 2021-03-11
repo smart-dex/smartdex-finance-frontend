@@ -37,7 +37,6 @@ const HeadingStyle = styled(Heading)`
 `
 
 const HeadingBlock = styled.div`
-  
   @media (min-width: 600px) {
     display: flex;
     justify-content: space-between;

@@ -83,7 +83,6 @@ const ImgStyle = styled.a`
   @media (max-width: 600px) {
     display: none;
   }
-  
 `
 const Link = styled.a`
   margin-top: 1em;
@@ -91,7 +90,6 @@ const Link = styled.a`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : baseColors.orange)};
   font-size: 16px;
   font-weight: bold;
- 
 `
 
 const Row = styled.div`
@@ -136,7 +134,7 @@ const CenteredTextWithPadding = styled.div`
 const TicketNumberBox = styled.div`
   padding: 10px;
   border-radius: 12px;
-  background: ${ baseColors.orange};
+  background: ${baseColors.orange};
   color: white;
   font-size: 20px;
   font-weight: 600;
@@ -157,7 +155,8 @@ const TicketNumberBox = styled.div`
 const StyledCardHeader = styled.div`
   display: flex;
   flex-direction: column;
-   @media (max-width: 600px) {
+  margin-left: 24px;
+  @media (max-width: 600px) {
     margin-left: 8px;
   }
 `
@@ -167,7 +166,7 @@ const CardWrapper = styled.div``
 const Title = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 16px;
-  font-weight: 1000;
+  font-weight: 600;
 `
 
 const StyledCardContentInner = styled.div`

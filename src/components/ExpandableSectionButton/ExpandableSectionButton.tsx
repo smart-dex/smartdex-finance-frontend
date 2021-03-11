@@ -20,16 +20,14 @@ const Wrapper = styled.div`
 `
 
 const TextStyle = styled(Text)`
-  color: ${ baseColors.primary};
+  color: ${baseColors.primary};
   font-size: 12px;
 `
 
 const ExpandableSectionButton: React.FC<ExpandableSectionButtonProps> = ({ onClick, expanded }) => {
   return (
     <Wrapper aria-label="Hide or show expandable content" role="button" onClick={() => onClick()}>
-      <TextStyle  bold>
-        {expanded ? 'Hide' : 'Details'}
-      </TextStyle>
+      <TextStyle bold>{expanded ? 'Hide' : 'Details'}</TextStyle>
       {expanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
     </Wrapper>
   )

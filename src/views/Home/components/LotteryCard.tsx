@@ -44,7 +44,7 @@ const CardImage = styled.img`
 `
 
 const Label = styled.div`
-  color:${ baseColors.primary};
+  color: ${baseColors.primary};
   font-size: 14px;
   line-height: 2.3;
   padding-right: 50px;
@@ -118,7 +118,12 @@ const FarmedStakingCard = () => {
   const renderLotteryTicketButtonBuyOrApprove = () => {
     if (!allowance.toNumber()) {
       return (
-        <ButtonStyle fullWidth disabled={requestedApproval} onClick={handleApprove} style={{ width: '50%', marginLeft: '4px' }}>
+        <ButtonStyle
+          fullWidth
+          disabled={requestedApproval}
+          onClick={handleApprove}
+          style={{ width: '50%', marginLeft: '4px' }}
+        >
           {TranslateString(494, 'Approve CAKE')}
         </ButtonStyle>
       )
@@ -143,9 +148,7 @@ const FarmedStakingCard = () => {
       <CardBody style={{ padding: '18px 28px 28px' }}>
         <HeadingBlock>
           <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
-          <HeadingStyle>
-            {TranslateString(550, 'Your Lottery Winnings')}
-          </HeadingStyle>
+          <HeadingStyle>{TranslateString(550, 'Your Lottery Winnings')}</HeadingStyle>
         </HeadingBlock>
 
         <BlockCakeWinnings>

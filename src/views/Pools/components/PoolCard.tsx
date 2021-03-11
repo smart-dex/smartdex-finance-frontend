@@ -162,7 +162,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <Label
             isFinished={isFinished && sousId !== 0}
             text={TranslateString(330, `${tokenName} earned`)}
-            colorLabel={ baseColors.orange}
+            colorLabel={baseColors.orange}
           />
           {!isOldSyrup ? (
             <BalanceAndCompound>

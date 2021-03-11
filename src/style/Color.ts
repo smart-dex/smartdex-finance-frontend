@@ -7,7 +7,7 @@ export const baseColors = {
   success: '#17C267',
   warning: '#FFB237',
   arrowColor: '#d8f7e4',
-  orange: '#FFA14E'
+  orange: '#FFA14E',
 }
 
 export const brandColors = {
@@ -47,7 +47,7 @@ export const lightColors = {
   colorInfoBlock: 'rgba(95, 94, 118, 0.7)',
   fillSvg: '#8F8FA0',
   backAvatar: 'rgba(255, 161, 78, 0.1)',
-  backgroundLastest: '#FFF7E7'
+  backgroundLastest: '#FFF7E7',
 }
 
 export const darkColors = {
@@ -86,5 +86,5 @@ export const darkColors = {
   fillSvg: '#8F8FA0',
   backAvatar: 'rgba(255, 161, 78, 0.1)',
   backButtonTogger: '#2a3245',
-  backgroundLastest: 'rgba(233, 244, 252, 0.1)'
+  backgroundLastest: 'rgba(233, 244, 252, 0.1)',
 }
