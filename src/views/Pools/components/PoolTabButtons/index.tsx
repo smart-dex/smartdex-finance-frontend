@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
-import { ButtonMenu, ButtonMenuItem, Toggle, Text } from '@pancakeswap-libs/uikit'
+import { ButtonMenu, ButtonMenuItem, Toggle, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 
 const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
@@ -14,7 +14,7 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
         <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} />
         <Text> {TranslateString(999, 'Staked only')}</Text>
       </ToggleWrapper>
-      <ButtonMenu activeIndex={isExact ? 0 : 1} size="sm" variant="subtle">
+      <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="primary">
         <ButtonMenuItem as={Link} to={`${url}`}>
           {TranslateString(698, 'Active')}
         </ButtonMenuItem>
@@ -32,7 +32,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
+  padding: 0px 16px;
+  margin-top: 16px;
 `
 
 const ToggleWrapper = styled.div`

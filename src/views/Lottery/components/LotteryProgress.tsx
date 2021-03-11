@@ -34,6 +34,11 @@ const BottomTextWrapper = styled.div`
 const StyledPrimaryText = styled(Text)`
   margin-right: 16px;
 `
+
+const TextStyle = styled(Text)`
+  color: #fff;
+`
+
 const LotteryProgress = () => {
   const TranslateString = useI18n()
   const lotteryHasDrawn = useGetLotteryHasDrawn()
@@ -45,18 +50,18 @@ const LotteryProgress = () => {
     <ProgressWrapper>
       <Progress primaryStep={getLotteryDrawStep(currentMillis)} secondaryStep={getTicketSaleStep()} showProgressBunny />
       <TopTextWrapper>
-        <StyledPrimaryText fontSize="20px" bold color="contrast">
+        <StyledPrimaryText fontSize="24px" bold color="#fff">
           {lotteryHasDrawn ? timeUntilTicketSale : timeUntilLotteryDraw}
         </StyledPrimaryText>
-        <Text fontSize="20px" bold color="invertedContrast">
+        <TextStyle fontSize="20px" bold>
           {lotteryHasDrawn ? TranslateString(0, 'Until ticket sale') : TranslateString(0, 'Until lottery draw')}
-        </Text>
+        </TextStyle>
       </TopTextWrapper>
       {lotteryHasDrawn && (
         <BottomTextWrapper>
-          <Text color="invertedContrast">
+          <TextStyle>
             {timeUntilLotteryDraw} {TranslateString(0, 'Until lottery draw')}
-          </Text>
+          </TextStyle>
         </BottomTextWrapper>
       )}
     </ProgressWrapper>
