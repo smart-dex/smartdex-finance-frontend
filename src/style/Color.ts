@@ -42,7 +42,7 @@ export const lightColors = {
   earnedCake:"rgba(255,161,78)",
   earnedCakeDisable:"rgba(255,161,78,0.5)",
   detailPool: 'rgba(95, 94, 118, 0.7)',
-
+  buttonTabPool: '#E9F4FC'
 }
 
 export const darkColors = {
@@ -76,5 +76,6 @@ export const darkColors = {
   earnedCakeDisable:"rgba(255,161,78,0.5)",
   cardShadow: 'rgba(0, 0, 0, 0.14)',
   balanceColor: 'rgba(255, 255, 255, 0.87)',
-  detailPool: 'rgba(95, 94, 118, 0.7)'
+  detailPool: 'rgba(255, 255, 255, 0.6)',
+  buttonTabPool: 'rgba(233, 244, 252, 0.1)'
 }

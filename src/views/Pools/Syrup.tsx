@@ -119,11 +119,17 @@ const HeadingPage = styled(Heading)`
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
+  @media (max-width: 968px) {
+    font-size: 16px;
+  }
 `
 
 const DescriptionHeading = styled.div`
 font-family: Montserrat;
 font-size: 16px;
+@media (max-width: 968px) {
+  font-size: 13px;
+}
 line-height: 143%;
 text-align: center;
 letter-spacing: -0.03em;

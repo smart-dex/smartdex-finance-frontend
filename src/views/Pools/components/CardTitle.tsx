@@ -11,6 +11,9 @@ const CardTitle = styled.div<StyledTitleProps>`
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 18px;
+  @media (max-width: 968px) {
+    font-size: 20px;
+  }
 `
 
 export default CardTitle

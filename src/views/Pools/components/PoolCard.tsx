@@ -17,7 +17,7 @@ import { QuoteToken, PoolCategory } from 'config/constants/types'
 import { Pool } from 'state/types'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { CommunityTag, CoreTag, BinanceTag } from 'components/Tags'
-import { lightColors, darkColors } from 'style/Color'
+import { lightColors, darkColors,baseColors } from 'style/Color'
 import Balance from 'components/Balance'
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
@@ -153,10 +153,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
 
         <StyledCoinEarned>
-          <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} colorLabel='rgb(255,161,78)' />
+          <Label isFinished={isFinished && sousId !== 0}  text={TranslateString(330, `${tokenName} EARNED`)} colorLabel='rgb(255,161,78)' />
           {!isOldSyrup ? (
             <BalanceAndCompound>
-              <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
+              <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} fontSize='24px'/>
               {sousId === 0 && account && harvest && (
                 <HarvestButton
                   disabled={!earnings.toNumber() || pendingTx}
@@ -171,7 +171,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </StyledCoinEarned>
 
         <DetailPool>
-          <StyledDetails style={{marginBottom:'26px'}}>
+          <StyledDetails style={{ marginBottom: '26px' }}>
             <StyleFlexDetail isFinished={isFinished}>
               {TranslateString(736, 'APR')}:
               </StyleFlexDetail>
@@ -191,11 +191,9 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           {!account && <UnlockButton />}
           {account &&
             (needsApproval && !isOldSyrup ? (
-              <div style={{ flex: 1 }}>
-                <Button disabled={isFinished || requestedApproval} margin='10px' onClick={handleApprove} style={{ maxWidth: '143px', minWidth: '120px' }}>
-                  {`Approve ${stakingTokenName}`}
-                </Button>
-              </div>
+              <Button disabled={isFinished || requestedApproval} margin='10px' onClick={handleApprove} style={{ maxWidth: '143px', minWidth: '120px' }}>
+                {`Approve ${stakingTokenName}`}
+              </Button>
             ) : (
                 <>
                   <Button
@@ -245,15 +243,27 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   )
 }
 
+// const PoolFinishedSash = styled.div`
+//   background-image: url('/images/pool-finished-sash.svg');
+//   background-position: top right;
+//   background-repeat: not-repeat;
+//   height: 135px;
+//   position: absolute;
+//   right: -24px;
+//   top: -24px;
+//   width: 135px;
+// `
+
 const PoolFinishedSash = styled.div`
   background-image: url('/images/pool-finished-sash.svg');
   background-position: top right;
   background-repeat: not-repeat;
-  height: 135px;
+  
   position: absolute;
-  right: -24px;
-  top: -24px;
-  width: 135px;
+  width: 85px;
+  height: 83px;
+  right: -2px;
+  top: 0px;
 `
 
 const BalanceAndCompound = styled.div`
@@ -262,6 +272,9 @@ const BalanceAndCompound = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 968px) {
+    padding:10px;
+  }
 `
 
 // const StyledActionSpacer = styled.div`
@@ -305,7 +318,10 @@ const StyledCoinEarned = styled.div`
   padding: 24px;
   text-align: center;
   flex-grow: 1;
-  
+  @media (max-width: 968px) {
+    display:flex;
+    justify-content:space-between;
+  }
 `
 const DetailPool = styled.div`
   order: 4;
@@ -323,27 +339,30 @@ const StyledCardActions = styled.div`
   padding: 24px;
   flex-grow: 1;
   justify-content: space-between;
-  // @media (max-width: 968px) {
-  //   justify-content: space-around;
-  // }
+  @media (max-width: 968px) {
+    justify-content: space-around;
+  }
 
   flex-wrap: wrap;
 `
 
-const StyleFlexDetail = styled.div<{isFinished:boolean}>`
+const StyleFlexDetail = styled.div<{ isFinished: boolean }>`
   flex: 1;
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   ${props => props.isFinished && css`
   opacity: 0.5;
   `
-}
+  }
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 `
 
 const ButtonDetail = styled(Button)`
-  border: 1px solid #0085FF;
+  border: 1px solid ${baseColors.primary};  
   border-radius: 10px;
   color: #0085FF;
-  background-color: #FFFFFF;
+  background-color:  ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
