@@ -9,8 +9,9 @@ const StyledTotalValueLockedCard = styled(Card)`
   align-items: center;
   display: flex;
   flex: 1;
-  border: 1px solid #e2e2e8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 const HeadingEarn = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
@@ -20,19 +21,22 @@ const HeadingEarn = styled(Heading)`
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
 `
 
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 600;
   margin-top: -7px;
-
-  @media (max-width: 600px) {
-    font-size: 18px;
-    margin-bottom: 16px;
+  margin-bottom: 16px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 32px;
+    margin-bottom: 0px;
   }
 `
 
@@ -45,9 +49,10 @@ const HeadingBlock = styled.div`
 
 const CardBodyStyle = styled(CardBody)`
   width: 100%;
-  padding: 60px 39px 59px 27px;
-  @media (max-width: 600px) {
-    padding: 30px 27px;
+  padding: 30px 27px;
+
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding: 60px 39px 59px 27px;
   }
 `
 

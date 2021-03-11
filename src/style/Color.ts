@@ -48,6 +48,7 @@ export const lightColors = {
   fillSvg: '#8F8FA0',
   backAvatar: 'rgba(255, 161, 78, 0.1)',
   backgroundLastest: '#FFF7E7',
+  backgroundArrow: '#E2F5EA',
 }
 
 export const darkColors = {
@@ -87,4 +88,5 @@ export const darkColors = {
   backAvatar: 'rgba(255, 161, 78, 0.1)',
   backButtonTogger: '#2a3245',
   backgroundLastest: 'rgba(233, 244, 252, 0.1)',
+  backgroundArrow: 'rgba(226, 245, 234, 0.1)',
 }

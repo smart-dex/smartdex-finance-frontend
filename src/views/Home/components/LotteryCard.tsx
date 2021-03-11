@@ -18,24 +18,27 @@ import { lightColors, darkColors, baseColors } from '../../../style/Color'
 
 const StyledLotteryCard = styled(Card)`
   min-height: 169px;
-  border: 1px solid #e2e2e8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   margin-bottom: 32px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 
 const BlockCakeWinnings = styled.div`
-  padding-top: 20px;
-  @media (max-width: 600px) {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction:column;
+    padding-top: 20px;
   }
 `
 const BlockLotteryJackpot = styled.div`
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 16px;
-  padding-top: 8px;
-  @media (max-width: 600px) {
-    display: flex;
-    justify-content: space-between;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction:column; 
+     padding-top: 8px;
   }
 `
 
@@ -44,45 +47,46 @@ const CardImage = styled.img`
 `
 
 const Label = styled.div`
+  font-size: 10px;
+  padding-right: 20px;
   color: ${baseColors.primary};
-  font-size: 14px;
-  line-height: 2.3;
-  padding-right: 50px;
   font-weight: 600px;
-  @media (max-width: 600px) {
-    font-size: 10px;
-    padding-right: 20px;
+  line-height: 2.3;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+    padding-right: 50px;
   }
 `
 
 const Actions = styled.div`
   display: flex;
-  justify-self: end;
-  padding-top: 8px;
-  @media (max-width: 600px) {
-    justify-self: center;
-    margin-bottom: 0;
+  justify-self: center;
+  margin-bottom: 0;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    justify-self: end;
+    padding-top: 8px;
   }
 `
 
 const HeadingStyle = styled(Heading)`
+  font-size: 20px;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-size: 24px;
   font-weight: bold;
-  @media (max-width: 600px) {
-    font-size: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 26px;
   }
 `
 
 const ButtonStyle = styled(Button)`
-  background: ${baseColors.primary};
-  border-radius: 10px;
-  &:hover {
-    background: #5ba7ec !important;
-  }
-  @media (max-width: 600px) {
     font-size: 13px;
     padding: 8px;
+    background: ${baseColors.primary};
+    border-radius: 10px;
+    &:hover {
+      background: #5ba7ec !important;
+    }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
   }
 `
 const HeadingBlock = styled.div`

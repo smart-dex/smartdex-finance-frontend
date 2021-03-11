@@ -13,10 +13,13 @@ import CardBusdValue from './CardBusdValue'
 import { lightColors, darkColors } from '../../../style/Color'
 
 const TextStyle = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  padding-top: 8px;
-  @media (max-width: 600px) {
-    padding-top: 0px;
+  padding-top: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-top: 8px;
+    font-size: 18px;
   }
 `
 

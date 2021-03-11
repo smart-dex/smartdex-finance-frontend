@@ -13,7 +13,8 @@ import WinCard from 'views/Home/components/WinCard'
 import { lightColors, darkColors } from '../../style/Color'
 
 const PageHome = styled(Page)`
-  ${({ theme }) => theme.mediaQueries.sm} {
+
+  ${({ theme }) => theme.mediaQueries.nav} {
     padding-top: 24px;
   }
 `
@@ -31,19 +32,19 @@ const CardBlock = styled.div`
 `
 
 const Cards = styled.div`
-  margin-bottom: 24px;
-  flex: 40%;
-  padding-right: 24px;
-  @media (max-width: 600px) {
-    flex: 100%;
-    padding-right: 0px;
+  flex: 100%;
+  padding-right: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 24px;
+    flex: 40%;
+    padding-right: 24px;
   }
 `
 const CardRight = styled.div`
-  margin-bottom: 24px;
-  flex: 60%;
-  @media (max-width: 600px) {
-    flex: 100%;
+flex: 100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 24px;
+    flex: 60%;
   }
 `
 
@@ -52,16 +53,10 @@ const CTACards = styled(BaseLayout)`
   margin-bottom: 32px;
 
   & > div {
-    grid-column: span 6;
+    grid-column: span 12;
   }
 
-  ${({ theme }) => theme.mediaQueries.sm} {
-    & > div {
-      grid-column: span 8;
-    }
-  }
-
-  ${({ theme }) => theme.mediaQueries.lg} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     & > div {
       grid-column: span 4;
     }
@@ -74,17 +69,11 @@ const STATCards = styled(BaseLayout)`
   margin-bottom: 32px;
 
   & > div {
-    grid-column: span 13;
+    grid-column: span 12;
     width: 100%;
   }
 
-  ${({ theme }) => theme.mediaQueries.sm} {
-    & > div {
-      grid-column: span 8;
-    }
-  }
-
-  ${({ theme }) => theme.mediaQueries.lg} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     & > div {
       grid-column: span 13;
     }
@@ -94,10 +83,19 @@ const STATCards = styled(BaseLayout)`
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   padding-top: 12px;
+  font-size: 12px;
+
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
 `
 
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 18px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 24px;
+  }
 `
 
 const Home: React.FC = () => {
@@ -106,7 +104,7 @@ const Home: React.FC = () => {
   return (
     <PageHome>
       <Hero>
-        <HeadingStyle as="h1" size="lg">
+        <HeadingStyle>
           {TranslateString(576, 'PancakeSwap')}
         </HeadingStyle>
         <TextStyle>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</TextStyle>

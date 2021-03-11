@@ -21,11 +21,11 @@ export interface CardValueProps {
 const CardValue: React.FC<CardValueProps> = ({
   value,
   decimals,
-  fontSize = '32px',
+  fontSize = '28px',
   lineHeight = '1',
   prefix = '',
   bold = true,
-  paddingRight = '13px',
+  paddingRight = '',
 }) => {
   const { countUp, update } = useCountUp({
     start: 0,

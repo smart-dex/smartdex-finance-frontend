@@ -11,8 +11,9 @@ import { darkColors, lightColors } from '../../../style/Color'
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #e2e2e8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 
 const Row = styled.div`
@@ -24,11 +25,17 @@ const Row = styled.div`
 `
 
 const HeadingEarn = styled(Heading)`
+  font-size: 20px;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-weight: 600;
-  font-size: 32px;
-  @media (max-width: 600px) {
-    font-size: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 32px;
+  }
+`
+
+const CardBodyStyle = styled(CardBody)`
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding: 29px 47px 30px 38px;
   }
 `
 const TextStyle = styled(Text)`
@@ -44,7 +51,7 @@ const CakeStats = () => {
 
   return (
     <StyledCakeStats>
-      <CardBody>
+      <CardBodyStyle>
         <HeadingEarn mb="24px">{TranslateString(534, 'Cake Stats')}</HeadingEarn>
         <Row>
           <TextStyle>{TranslateString(536, 'Total CAKE Supply')}</TextStyle>
@@ -58,7 +65,7 @@ const CakeStats = () => {
           <TextStyle>{TranslateString(540, 'New CAKE/block')}</TextStyle>
           <CardValue fontSize="14px" decimals={0} bold={false} value={25} />
         </Row>
-      </CardBody>
+      </CardBodyStyle>
     </StyledCakeStats>
   )
 }

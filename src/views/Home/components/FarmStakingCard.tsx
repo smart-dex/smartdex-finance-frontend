@@ -12,33 +12,36 @@ import { lightColors, darkColors, baseColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   min-height: 169px;
-  border: 1px solid #e2e2e8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   margin-bottom: 32px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 
 const Actions = styled.div`
-  justify-self: end;
-  @media (max-width: 600px) {
-    justify-self: center;
-    margin-bottom: 0;
+  justify-self: center;
+  margin-bottom: 0;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    justify-self: end;
   }
 `
 const BlockCakeHarvest = styled.div`
-  padding-top: 24px;
-  @media (max-width: 600px) {
-    display: flex;
-    padding-bottom: 25px;
-    justify-content: space-between;
+  display: flex;
+  padding-bottom: 25px;
+  justify-content: space-between;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction:column;
+    padding-top: 24px;
   }
 `
 
 const BlockCakeWallet = styled.div`
-  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 35px;
-  @media (max-width: 600px) {
-    display: flex;
-    justify-content: space-between;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction:column;
+    padding-top: 24px;
   }
 `
 
@@ -53,20 +56,20 @@ const HeadingBlock = styled.div`
 `
 
 const Label = styled.div`
-  color: ${baseColors.primary};
-  font-size: 14px;
+  font-size: 10px;
   padding-right: 50px;
   padding-bottom: 8px;
-  @media (max-width: 600px) {
-    font-size: 10px;
+  color: ${baseColors.primary};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
   }
 `
 const HeadingStyle = styled(Heading)`
+  font-size: 20px;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-size: 24px;
   font-weight: bold;
-  @media (max-width: 600px) {
-    font-size: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 26px;
   }
 `
 

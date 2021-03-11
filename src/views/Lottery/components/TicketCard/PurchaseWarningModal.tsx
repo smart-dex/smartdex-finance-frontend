@@ -1,8 +1,23 @@
 import React from 'react'
-import { Button, Modal } from '@pancakeswap-libs/uikit'
+import { Button, Modal } from 'uikit-sotatek'
 import ModalActions from 'components/ModalActions'
 import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
+import { darkColors, lightColors, baseColors } from '../../../../style/Color'
+
+const ButtonStyle = styled(Button)`
+  font-size: 13px;
+  padding: 8px;
+  background: ${baseColors.primary};
+  border-radius: 10px;
+  width: 100%;
+  &:hover {
+    background: #5ba7ec !important;
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+  }
+`
 
 const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
   const TranslateString = useI18n()
@@ -22,9 +37,9 @@ const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
         )}
       </TicketsList>
       <ModalActions>
-        <Button fullWidth onClick={onDismiss}>
+        <ButtonStyle  onClick={onDismiss}>
           {TranslateString(476, 'I understand')}
-        </Button>
+        </ButtonStyle>
       </ModalActions>
     </Modal>
   )
@@ -32,9 +47,8 @@ const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
 
 const TicketsList = styled.div`
   text-align: left;
-  overflow-y: auto;
   max-height: 400px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
 `
 
 export default WarningModal

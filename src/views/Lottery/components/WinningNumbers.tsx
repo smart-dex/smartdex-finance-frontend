@@ -77,11 +77,12 @@ const CardStyle = styled(Card)`
 `
 
 const ImgStyle = styled.a`
-  position: absolute;
-  right: 2px;
-  top: -106px;
-  @media (max-width: 600px) {
-    display: none;
+  display: none;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    display: block;
+    position: absolute;
+    right: 2px;
+    top: -106px;
   }
 `
 const Link = styled.a`
@@ -108,11 +109,11 @@ const RowNoPadding = styled.div`
 
 const Column = styled.div`
   margin-top: 1.8em;
-  margin-left: 2.4em;
   display: flex;
   flex-direction: column;
-  @media (max-width: 600px) {
-    margin-left: 0px;
+  margin-left: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-left: 2.4em;
   }
 `
 
@@ -128,7 +129,7 @@ const CenteredTextWithPadding = styled.div`
   padding-right: 2px;
   font-weight: 500;
   font-size: 16px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
 `
 
 const TicketNumberBox = styled.div`
@@ -155,24 +156,26 @@ const TicketNumberBox = styled.div`
 const StyledCardHeader = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 24px;
-  @media (max-width: 600px) {
-    margin-left: 8px;
+  margin-left: 8px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-left: 24px;
   }
 `
 
 const CardWrapper = styled.div``
 
 const Title = styled.div`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   font-size: 16px;
   font-weight: 600;
 `
 
 const StyledCardContentInner = styled.div`
   display: flex;
-  @media (max-width: 600px) {
-    flex-direction: column;
+  flex-direction: column;
+  
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction: row;
   }
 `
 

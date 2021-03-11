@@ -5,7 +5,7 @@ import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from '@pancakeswap-li
 import { NavLink } from 'react-router-dom'
 import pools from 'config/constants/pools'
 import { Pool } from 'state/types'
-import { lightColors } from '../../../style/Color'
+import { lightColors, darkColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   background: linear-gradient(91.67deg, #0085ff 5.33%, #7e86ff 104.39%);
@@ -13,7 +13,7 @@ const StyledFarmStakingCard = styled(Card)`
   margin-right: auto;
   width: 100%;
   height: 100%;
-  border: 1px solid #e2e2e8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   ${({ theme }) => theme.mediaQueries.lg} {
     margin: 0;

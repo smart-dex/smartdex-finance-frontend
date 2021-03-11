@@ -58,7 +58,8 @@ const HeadingStyle = styled(Heading)`
 `
 
 const CardStyle = styled(Card)`
-  border: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 const TicketImg = styled.img`
   width: 57px;

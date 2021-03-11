@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled  from 'styled-components'
 import { Heading, Card, CardBody } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import UnlockButton from 'components/UnlockButton'
@@ -26,13 +26,15 @@ const IconWrapper = styled.div`
   }
 `
 
-const TicketImg = styled.img`
+const TicketImg = styled.div`
   width: 110px;
   height: 110px;
+  background-image: url('/images/ticket-lottery-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.svg');
 `
 
 const CardStyle = styled(Card)`
-  border: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   box-shadow: none;
 `
 
@@ -43,7 +45,7 @@ const UnlockWalletCard = () => {
     <CardStyle isActive>
       <StyledCardBody>
         <IconWrapper>
-          <TicketImg src="images/ticket-lottery.svg" />
+          <TicketImg />
         </IconWrapper>
         <StyledHeading size="md">{TranslateString(1080, 'Unlock wallet to access lottery')}</StyledHeading>
         <UnlockButton />

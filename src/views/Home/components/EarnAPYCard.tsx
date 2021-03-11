@@ -14,22 +14,20 @@ const StyledFarmStakingCard = styled(Card)`
   margin-right: auto;
   width: 100%;
   height: 100%;
-  border: 1px solid #e2e2e8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    margin: 0;
-    max-width: none;
-  }
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 const NavLinkStyle = styled(NavLink)`
-  background: #d8f7e4;
+  margin-top: 8px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
   width: 30px;
   height: 30px;
   border-radius: 12px;
-  margin-top: 52px;
-  @media (max-width: 600px) {
-    margin-top: 8px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 22%;
+    position: absolute;
+    bottom: 22px;
   }
 `
 const CardMidContent = styled(Heading)`
@@ -115,6 +113,7 @@ const EarnAPYCard = () => {
             <ArrowForwardIcon color="primary" style={{ margin: '5px' }} />
           </NavLinkStyle>
         </Flex>
+        
       </CardBody>
     </StyledFarmStakingCard>
   )

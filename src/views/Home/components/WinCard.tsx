@@ -10,13 +10,9 @@ const StyledFarmStakingCard = styled(Card)`
   margin-right: auto;
   width: 100%;
   height: 100%;
-  border: 1px solid ${lightColors.borderColor};
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    margin: 0;
-    max-width: none;
-  }
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 const CardMidContent = styled(Heading)`
   line-height: 44px;
@@ -31,13 +27,15 @@ const HeadingEarn = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 const NavLinkStyle = styled(NavLink)`
-  background: ${lightColors.arrowColor};
+  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
   width: 30px;
   height: 30px;
   border-radius: 12px;
-  margin-top: 52px;
-  @media (max-width: 600px) {
-    margin-top: 8px;
+  margin-top: 8px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 52px;
+    position: absolute;
+    bottom: 22px;
   }
 `
 
