@@ -31,7 +31,7 @@ export default FarmTabButtons
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 32px;
+  padding: 0px 16px;
   justify-content: center;
 `
 

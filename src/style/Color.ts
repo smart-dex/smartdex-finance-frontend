@@ -39,6 +39,10 @@ export const lightColors = {
   backIfo: '#FFFFFF',
   colorWap: 'rgba(95, 94, 118, 0.7)',
   buttonView: '#E8E8EB',
+  balanceColor: '#5F5E76',
+  bgCardCollectibles: '#FFFFFF',
+  shadowCardCollectibles: 'rgba(120, 118, 148, 0.14)',
+  colorInfoBlock: 'rgba(95, 94, 118, 0.7)',
 }
 
 export const darkColors = {
@@ -70,4 +74,8 @@ export const darkColors = {
   backIfo: '#00071C',
   colorWap: 'rgba(255, 255, 255, 0.6)',
   buttonView: '#2A3145',
+  balanceColor: 'rgba(255, 255, 255, 0.87)',
+  bgCardCollectibles: '#00071C',
+  shadowCardCollectibles: 'rgba(0, 0, 0, 0.14)',
+  colorInfoBlock: 'rgba(255, 255, 255, 0.6)',
 }
