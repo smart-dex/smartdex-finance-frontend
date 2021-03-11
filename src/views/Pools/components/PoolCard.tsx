@@ -138,7 +138,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
         <StyledImagePool>
           <ImageCoin>
-            <img src={`/images/tokens/${image || tokenName}.png`} alt={tokenName} style={{ width: "100%", height: "100%" }} />
+            <img
+              src={`/images/tokens/${image || tokenName}.png`}
+              alt={tokenName}
+              style={{ width: '100%', height: '100%' }}
+            />
           </ImageCoin>
           {account && harvest && !isOldSyrup && (
             <HarvestButton
@@ -153,12 +157,15 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           )}
         </StyledImagePool>
 
-
         <StyledCoinEarned>
-          <Label isFinished={isFinished && sousId !== 0}   text={TranslateString(330, `${tokenName} earned`)} colorLabel='#FFA14E'/>
+          <Label
+            isFinished={isFinished && sousId !== 0}
+            text={TranslateString(330, `${tokenName} earned`)}
+            colorLabel="#FFA14E"
+          />
           {!isOldSyrup ? (
             <BalanceAndCompound>
-              <Balance value={getBalanceNumber(earnings, tokenDecimals)} color='' isDisabled={isFinished} />
+              <Balance value={getBalanceNumber(earnings, tokenDecimals)} color="" isDisabled={isFinished} />
               {sousId === 0 && account && harvest && (
                 <HarvestButton
                   disabled={!earnings.toNumber() || pendingTx}
@@ -168,8 +175,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               )}
             </BalanceAndCompound>
           ) : (
-              <OldSyrupTitle hasBalance={accountHasStakedBalance} />
-            )}
+            <OldSyrupTitle hasBalance={accountHasStakedBalance} />
+          )}
         </StyledCoinEarned>
 
         <DetailPool>
@@ -179,12 +186,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 🥞{' '}
               </span>
               {TranslateString(736, 'APR')}:
-              </StyleFlexDetail>
+            </StyleFlexDetail>
             {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ? (
               '-'
             ) : (
-                <Balance fontSize="16px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
-              )}
+              <Balance fontSize="16px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
+            )}
           </StyledDetails>
           <StyledDetails>
             <StyleFlexDetail>{TranslateString(384, 'Your Stake')}:</StyleFlexDetail>
@@ -197,42 +204,45 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           {account &&
             (needsApproval && !isOldSyrup ? (
               <div style={{ flex: 1 }}>
-                <Button disabled={isFinished || requestedApproval} margin='10px' onClick={handleApprove} style={{ maxWidth: '143px', minWidth: '120px' }}>
+                <Button
+                  disabled={isFinished || requestedApproval}
+                  margin="10px"
+                  onClick={handleApprove}
+                  style={{ maxWidth: '143px', minWidth: '120px' }}
+                >
                   {`Approve ${stakingTokenName}`}
                 </Button>
               </div>
             ) : (
-                <>
-                  <Button
-                    disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                    onClick={
-                      isOldSyrup
-                        ? async () => {
+              <>
+                <Button
+                  disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
+                  onClick={
+                    isOldSyrup
+                      ? async () => {
                           setPendingTx(true)
                           await onUnstake('0')
                           setPendingTx(false)
                         }
-                        : onPresentWithdraw
-                    }
-                    margin='10px'
-                    style={{ maxWidth: '143px', minWidth: '120px' }}
-                  >
-                    {`Unstake ${stakingTokenName}`}
-                  </Button>
+                      : onPresentWithdraw
+                  }
+                  margin="10px"
+                  style={{ maxWidth: '143px', minWidth: '120px' }}
+                >
+                  {`Unstake ${stakingTokenName}`}
+                </Button>
 
-                  {!isOldSyrup && (
-                    <IconButton disabled={isFinished && sousId !== 0} margin='10px' onClick={onPresentDeposit}>
-                      <AddIcon color="background" />
-                    </IconButton>
-                  )}
+                {!isOldSyrup && (
+                  <IconButton disabled={isFinished && sousId !== 0} margin="10px" onClick={onPresentDeposit}>
+                    <AddIcon color="background" />
+                  </IconButton>
+                )}
+              </>
+            ))}
 
-                </>
-              ))}
-
-          <Button variant='secondary' onClick={handleClick} margin='10px' style={{ minWidth: '143px' }}>
+          <Button variant="secondary" onClick={handleClick} margin="10px" style={{ minWidth: '143px' }}>
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </Button>
-
         </StyledCardActions>
       </CardContent>
 
@@ -285,19 +295,19 @@ const NamePool = styled.div`
   align-self: center;
   align-items: center;
   flex-grow: 2;
-  width:150px;
+  width: 150px;
 `
 const ImageCoin = styled.div`
-  width:55px;
-  height:55px;
+  width: 55px;
+  height: 55px;
   margin: 0 auto;
 `
 const StyledImagePool = styled.div`
   flex-grow: 1;
-  order:2;
+  order: 2;
   align-self: center;
   align-items: center;
-  padding:20px;
+  padding: 20px;
 `
 
 const StyledCoinEarned = styled.div`
@@ -341,6 +351,5 @@ const StyleFlexDetail = styled.div`
   flex: 1;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
 `
-
 
 export default PoolCard

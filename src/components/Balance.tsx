@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import CountUp from 'react-countup'
 import styled from 'styled-components'
-import {  Text } from 'uikit-sotatek'
+import { Text } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
 
 interface TextProps {

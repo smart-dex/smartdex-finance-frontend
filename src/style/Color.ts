@@ -34,9 +34,12 @@ export const lightColors = {
   textMenuLeft: '#5F5E76',
   activeBackgroundMenuLeft: '#E9F4FC',
   textLogoMenuLeft: '#5F5E76',
-  borderCard:'#E2E2E8',
+  borderCard: '#E2E2E8',
   dividerCard: '#F0F0F3',
-  balanceColor: '#5F5E76'
+  balanceColor: '#5F5E76',
+  bgCardCollectibles: '#FFFFFF',
+  shadowCardCollectibles: 'rgba(120, 118, 148, 0.14)',
+  colorInfoBlock: 'rgba(95, 94, 118, 0.7)',
 }
 
 export const darkColors = {
@@ -63,7 +66,10 @@ export const darkColors = {
   textMenuLeft: 'rgba(255, 255, 255, 0.77)',
   activeBackgroundMenuLeft: '#1C2438',
   textLogoMenuLeft: '#FFFFFF',
-  borderCard:'#2F344B',
+  borderCard: '#2F344B',
   dividerCard: '#2F344B',
-  balanceColor: 'rgba(255, 255, 255, 0.87)'
+  balanceColor: 'rgba(255, 255, 255, 0.87)',
+  bgCardCollectibles: '#00071C',
+  shadowCardCollectibles: 'rgba(0, 0, 0, 0.14)',
+  colorInfoBlock: 'rgba(255, 255, 255, 0.6)',
 }

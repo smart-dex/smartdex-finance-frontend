@@ -9,7 +9,7 @@ const StyledCardContent = styled.div`
   @media (max-width: 968px) {
     flex-wrap: wrap;
   }
-  align-items:center;
+  align-items: center;
 `
 
 export default CardContent

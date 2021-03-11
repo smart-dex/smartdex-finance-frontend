@@ -21,7 +21,7 @@ const ActionLink = styled.a`
 const OldSyrupTitle: React.FC<Props> = ({ hasBalance = false }) => {
   if (hasBalance) {
     return (
-      <div style={{marginTop:'16px'}}>
+      <div style={{ marginTop: '16px' }}>
         <Title>Action Required</Title>
         <ActionLink
           href=" https://pancakeswap.medium.com/urgent-action-required-changes-to-syrup-pools-70b98d7b2541"

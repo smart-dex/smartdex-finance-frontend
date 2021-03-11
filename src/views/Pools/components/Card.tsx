@@ -3,7 +3,7 @@ import { lightColors, darkColors } from 'style/Color'
 
 const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   background: ${(props) => props.theme.card.background};
-  border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   border-radius: 32px;
   display: flex;
   color: ${({ isFinished, theme }) => theme.colors[isFinished ? 'textDisabled' : 'secondary']};
@@ -13,16 +13,16 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
       : '0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05)'};
   flex-direction: column;
   &:hover {
-    border: 1px solid #0085FF;
+    border: 1px solid #0085ff;
     transition: 0.25s;
   }
   position: relative;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
   margin: 20px auto;
-  min-width:968px;
+  min-width: 968px;
   @media (max-width: 968px) {
-    max-width:400px;
-    min-width:0;
+    max-width: 400px;
+    min-width: 0;
   }
 `
 

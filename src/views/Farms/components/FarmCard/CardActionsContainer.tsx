@@ -17,24 +17,24 @@ import HarvestAction from './HarvestAction'
 
 const Action = styled.div`
   display: flex;
-  flex-grow:2;
+  flex-grow: 2;
   justify-content: space-around;
-  margin-left:16px;
+  margin-left: 16px;
   @media (max-width: 968px) {
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left:0px;
+    margin-left: 0px;
   }
 `
 const ButtonAction = styled(Flex)`
-  flex-grow:1;
+  flex-grow: 1;
   flex-direction: column;
   @media (max-width: 968px) {
-    margin-top:16px;
+    margin-top: 16px;
   }
 `
-const StyledGroupButton= styled(Flex)`
-  flex-wrap: wrap ;
+const StyledGroupButton = styled(Flex)`
+  flex-wrap: wrap;
   justify-content: space-between;
   @media (max-width: 968px) {
     justify-content: space-around;
@@ -58,7 +58,14 @@ interface FarmCardActionsProps {
   isOpenDetail: boolean
 }
 
-const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, addLiquidityUrl, changeOpenDetail, isOpenDetail }) => {
+const CardActions: React.FC<FarmCardActionsProps> = ({
+  farm,
+  ethereum,
+  account,
+  addLiquidityUrl,
+  changeOpenDetail,
+  isOpenDetail,
+}) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses } = useFarmFromSymbol(farm.lpSymbol)
@@ -94,10 +101,10 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
         addLiquidityUrl={addLiquidityUrl}
       />
     ) : (
-        <Button mt="10px" disabled={requestedApproval} onClick={handleApprove} style={{ maxWidth: '156px'}}>
-          {TranslateString(758, 'Approve Contract')}
-        </Button>
-      )
+      <Button mt="10px" disabled={requestedApproval} onClick={handleApprove} style={{ maxWidth: '156px' }}>
+        {TranslateString(758, 'Approve Contract')}
+      </Button>
+    )
   }
 
   return (
@@ -105,15 +112,14 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
       <HarvestAction earnings={earnings} pid={pid} />
       <ButtonAction>
         <FarmStakedText bold textTransform="uppercase" fontSize="16px">
-          {lpName}   {TranslateString(1074, 'Staked')}
+          {lpName} {TranslateString(1074, 'Staked')}
         </FarmStakedText>
         <StyledGroupButton>
-          {!account ? <UnlockButton mt='10px' style={{ maxWidth: '156px'}}/> : renderApprovalOrStakeButton()}
-          <Button variant='secondary' onClick={changeOpenDetail} mt='10px' style={{ minWidth: '156px'}}>
+          {!account ? <UnlockButton mt="10px" style={{ maxWidth: '156px' }} /> : renderApprovalOrStakeButton()}
+          <Button variant="secondary" onClick={changeOpenDetail} mt="10px" style={{ minWidth: '156px' }}>
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </Button>
         </StyledGroupButton>
-
       </ButtonAction>
     </Action>
   )

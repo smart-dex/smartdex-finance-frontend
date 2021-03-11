@@ -30,12 +30,6 @@ const SecondCardColumnWrapper = styled.div<{ isAWin?: boolean }>`
   flex-direction: column;
 `
 
-const BunnyImageWrapper = styled.div`
-  display: flex;
-  margin-top: 32px;
-  justify-content: center;
-`
-
 const PastDrawsPage: React.FC = () => {
   return (
     <Cards>

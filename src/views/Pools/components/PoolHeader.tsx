@@ -7,4 +7,3 @@ const PoolHeader = styled.div`
   padding: 0 16px 0 16px;
 `
 export default PoolHeader
-
