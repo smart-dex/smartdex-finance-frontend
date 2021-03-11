@@ -12,10 +12,9 @@ interface FarmCardActionsProps {
   pid?: number
 }
 const StyledHarvestAction = styled(Flex)`
-  flex-grow: 2;
+  flex-grow: 1;
   flex-direction: column;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-right: 25px;
   @media (max-width: 968px) {
     margin-top: 16px;
     flex-direction: row;
@@ -26,13 +25,25 @@ const StyledHarvestAction = styled(Flex)`
   }
 `
 const CakeEarn = styled(Flex)`
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   @media (max-width: 968px) {
     flex-direction: column;
   }
 `
 const CakeEarnText = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.text)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  @media (max-width: 968px) {
+    margin-bottom: 21px;
+  }
+`
+const BalanceCake = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
 `
 
 const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
@@ -48,11 +59,9 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
       <CakeEarn>
         <CakeEarnText bold textTransform="uppercase" fontSize="16px" style={{ flex: 1 }}>
           {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
-          CAKE {TranslateString(1072, 'Earned')}:
+          CAKE {TranslateString(1072, 'Earned')}
         </CakeEarnText>
-        <Text color={rawEarningsBalance === 0 ? 'textDisabled' : 'text'} fontSize="16px">
-          {displayBalance}
-        </Text>
+        <BalanceCake>{displayBalance}</BalanceCake>
       </CakeEarn>
 
       <Button

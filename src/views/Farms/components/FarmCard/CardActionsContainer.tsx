@@ -9,7 +9,7 @@ import { Button, Flex, Text } from 'uikit-sotatek'
 import { Farm } from 'state/types'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
-import { lightColors, darkColors } from 'style/Color'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import UnlockButton from 'components/UnlockButton'
 import { useApprove } from 'hooks/useApprove'
 import StakeAction from './StakeAction'
@@ -18,19 +18,22 @@ import HarvestAction from './HarvestAction'
 const Action = styled.div`
   display: flex;
   flex-grow: 2;
-  justify-content: space-around;
+  align-items: center;
   margin-left: 16px;
   @media (max-width: 968px) {
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: normal;
     margin-left: 0px;
   }
 `
 const ButtonAction = styled(Flex)`
-  flex-grow: 1;
+  flex-grow: 2;
   flex-direction: column;
+  margin-left: 25px;
   @media (max-width: 968px) {
     margin-top: 16px;
+    margin-left: 0px;
   }
 `
 const StyledGroupButton = styled(Flex)`
@@ -42,7 +45,21 @@ const StyledGroupButton = styled(Flex)`
 `
 
 const FarmStakedText = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.text)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 17px;
+`
+const ButtonDetail = styled(Button)`
+  border: 1px solid ${baseColors.primary};
+  border-radius: 10px;
+  color: #0085ff;
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  $margin: 0.25rem;
 `
 
 export interface FarmWithStakedValue extends Farm {
@@ -101,7 +118,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
         addLiquidityUrl={addLiquidityUrl}
       />
     ) : (
-      <Button mt="10px" disabled={requestedApproval} onClick={handleApprove} style={{ maxWidth: '156px' }}>
+      <Button disabled={requestedApproval} onClick={handleApprove} style={{ maxWidth: '143px' }} mt="10px" mb="10px">
         {TranslateString(758, 'Approve Contract')}
       </Button>
     )
@@ -115,10 +132,10 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
           {lpName} {TranslateString(1074, 'Staked')}
         </FarmStakedText>
         <StyledGroupButton>
-          {!account ? <UnlockButton mt="10px" style={{ maxWidth: '156px' }} /> : renderApprovalOrStakeButton()}
-          <Button variant="secondary" onClick={changeOpenDetail} mt="10px" style={{ minWidth: '156px' }}>
+          {!account ? <UnlockButton style={{ maxWidth: '143px' }} /> : renderApprovalOrStakeButton()}
+          <ButtonDetail onClick={changeOpenDetail} style={{ minWidth: '143px' }} mt="10px" mb="10px">
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
-          </Button>
+          </ButtonDetail>
         </StyledGroupButton>
       </ButtonAction>
     </Action>

@@ -1,5 +1,5 @@
 import { lightColors, darkColors } from 'style/Color'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 interface StyledTitleProps {
   isFinished?: boolean
@@ -7,16 +7,13 @@ interface StyledTitleProps {
 
 const CardTitle = styled.div<StyledTitleProps>`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
-  ${(props) =>
-    props.isFinished &&
-    css`
-      color: ${({ theme }) => (theme.isDark ? darkColors.textDisabled : lightColors.textDisabled)};
-    `}
-
-  font-weight: 600;
+  font-weight: bold;
   font-size: 24px;
-  line-height: 1.1;
-  margin-bottom: 14px;
+  line-height: 29px;
+  margin-bottom: 18px;
+  @media (max-width: 968px) {
+    font-size: 20px;
+  }
 `
 
 export default CardTitle

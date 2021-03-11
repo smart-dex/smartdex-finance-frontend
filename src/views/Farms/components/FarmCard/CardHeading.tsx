@@ -20,8 +20,9 @@ const Wrapper = styled(Flex)`
   width: 200px;
   @media (max-width: 968px) {
     margin-bottom: 16px;
+    min-width: 200px;
   }
-  margin: auto;
+  align-items: center;
 `
 const ImageFarm = styled.div`
   width: 55px;
@@ -31,11 +32,16 @@ const ImageFarm = styled.div`
 
 const MultiplierTag = styled(Tag)`
   margin-left: 4px;
+  background: #ffa14e;
+  color: #ffffff;
+  border: 2px solid rgba(255, 161, 78, 0.5);
 `
 const HeadingCard = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   margin-bottom: 10px;
   front-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
   @media (max-width: 968px) {
     front-size: 20px;
   }
@@ -57,7 +63,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
         <HeadingCard>{lpLabel}</HeadingCard>
         <Flex>
           {isCommunityFarm ? <CommunityTag /> : <CoreTag />}
-          <MultiplierTag variant="binance">{multiplier}</MultiplierTag>
+          <MultiplierTag>{multiplier}</MultiplierTag>
         </Flex>
       </Flex>
     </Wrapper>
