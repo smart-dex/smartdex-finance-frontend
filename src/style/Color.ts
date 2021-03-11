@@ -45,6 +45,14 @@ export const lightColors = {
   buttonTabPool: '#E9F4FC',
   textHeaderFarms: '#5F5E76',
   stakedOnly: 'rgba(95, 94, 118, 0.7)',
+  backIfo: '#FFFFFF',
+  colorWap: 'rgba(95, 94, 118, 0.7)',
+  buttonView: '#E8E8EB',
+  bgCardCollectibles: '#FFFFFF',
+  shadowCardCollectibles: 'rgba(120, 118, 148, 0.14)',
+  colorInfoBlock: 'rgba(95, 94, 118, 0.7)',
+  fillSvg: '#8F8FA0',
+  backAvatar: 'rgba(255, 161, 78, 0.1)',
 }
 
 export const darkColors = {
@@ -82,4 +90,13 @@ export const darkColors = {
   buttonTabPool: 'rgba(233, 244, 252, 0.1)',
   textHeaderFarms: 'rgba(255, 255, 255, 0.87);',
   stakedOnly: ' rgba(255, 255, 255, 0.7)',
+  backIfo: '#00071C',
+  colorWap: 'rgba(255, 255, 255, 0.6)',
+  buttonView: '#2A3145',
+  bgCardCollectibles: '#00071C',
+  shadowCardCollectibles: 'rgba(0, 0, 0, 0.14)',
+  colorInfoBlock: 'rgba(255, 255, 255, 0.6)',
+  fillSvg: '#8F8FA0',
+  backAvatar: 'rgba(255, 161, 78, 0.1)',
+  backButtonTogger: '#2a3245',
 }

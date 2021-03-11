@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Ticket } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import UnlockButton from 'components/UnlockButton'
 import { darkColors, lightColors } from '../../../style/Color'
@@ -43,7 +43,6 @@ const UnlockWalletCard = () => {
     <CardStyle isActive>
       <StyledCardBody>
         <IconWrapper>
-          {/* <Ticket /> */}
           <TicketImg src="images/ticket-lottery.png" />
         </IconWrapper>
         <StyledHeading size="md">{TranslateString(1080, 'Unlock wallet to access lottery')}</StyledHeading>

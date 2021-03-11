@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { ButtonMenu, ButtonMenuItem } from '@pancakeswap-libs/uikit'
+import { baseColors, lightColors } from 'style/Color'
+import { ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import { getLotteryIssueIndex } from 'utils/lotteryUtils'
@@ -10,7 +11,6 @@ import Page from 'components/layout/Page'
 import Hero from './components/Hero'
 import NextDrawPage from './NextDrawPage'
 import PastDrawsPage from './PastDrawsPage'
-import { baseColors, lightColors, darkColors } from '../../style/Color'
 
 const Wrapper = styled.div`
   position: relative;
@@ -73,7 +73,7 @@ const Lottery: React.FC = () => {
       <Hero />
       <Page>
         <Wrapper>
-          <ButtonMenu activeIndex={activeIndex} onClick={handleClick} size="md">
+          <ButtonMenu activeIndex={activeIndex} onItemClick={handleClick} scale="sm">
             <ButtonItemStyle>{TranslateString(716, 'Next draw')}</ButtonItemStyle>
             <ButtonItemStyle>{TranslateString(718, 'Past draws')}</ButtonItemStyle>
           </ButtonMenu>

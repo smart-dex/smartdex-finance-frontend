@@ -9,7 +9,7 @@ declare module 'styled-components' {
 
 const GlobalStyle = createGlobalStyle`
   * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Kanit', sans-serif;
   }
   body {
     background-color: ${({ theme }) => (theme.isDark ? '#151C31' : '#FFFFFF')};
