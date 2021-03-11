@@ -32,6 +32,7 @@ const BlockCakeWinnings = styled.div`
 `
 const BlockLotteryJackpot = styled.div`
   padding-bottom: 16px;
+  padding-top: 8px;
   @media (max-width: 600px) {
     display: flex;
     justify-content: space-between;
@@ -43,16 +44,21 @@ const CardImage = styled.img`
 `
 
 const Label = styled.div`
-  color: #0085ff;
+  color:${ baseColors.primary};
   font-size: 14px;
   line-height: 2.3;
   padding-right: 50px;
   font-weight: 600px;
+  @media (max-width: 600px) {
+    font-size: 10px;
+    padding-right: 20px;
+  }
 `
 
 const Actions = styled.div`
   display: flex;
   justify-self: end;
+  padding-top: 8px;
   @media (max-width: 600px) {
     justify-self: center;
     margin-bottom: 0;
@@ -61,6 +67,11 @@ const Actions = styled.div`
 
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 24px;
+  font-weight: bold;
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `
 
 const ButtonStyle = styled(Button)`
@@ -68,6 +79,10 @@ const ButtonStyle = styled(Button)`
   border-radius: 10px;
   &:hover {
     background: #5ba7ec !important;
+  }
+  @media (max-width: 600px) {
+    font-size: 13px;
+    padding: 8px;
   }
 `
 const HeadingBlock = styled.div`
@@ -103,13 +118,13 @@ const FarmedStakingCard = () => {
   const renderLotteryTicketButtonBuyOrApprove = () => {
     if (!allowance.toNumber()) {
       return (
-        <ButtonStyle fullWidth disabled={requestedApproval} onClick={handleApprove} style={{ width: '50%' }}>
+        <ButtonStyle fullWidth disabled={requestedApproval} onClick={handleApprove} style={{ width: '50%', marginLeft: '4px' }}>
           {TranslateString(494, 'Approve CAKE')}
         </ButtonStyle>
       )
     }
     return (
-      <Button
+      <ButtonStyle
         id="dashboard-buy-tickets"
         variant="secondary"
         onClick={onPresentBuy}
@@ -117,7 +132,7 @@ const FarmedStakingCard = () => {
         style={{ width: '50%' }}
       >
         {TranslateString(558, 'Buy Tickets')}
-      </Button>
+      </ButtonStyle>
     )
   }
 
@@ -125,10 +140,10 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledLotteryCard>
-      <CardBody style={{ padding: '32px' }}>
+      <CardBody style={{ padding: '18px 28px 28px' }}>
         <HeadingBlock>
           <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
-          <HeadingStyle size="xl" style={{ fontSize: '24px' }}>
+          <HeadingStyle>
             {TranslateString(550, 'Your Lottery Winnings')}
           </HeadingStyle>
         </HeadingBlock>
@@ -143,14 +158,14 @@ const FarmedStakingCard = () => {
         </BlockLotteryJackpot>
 
         <Actions>
-          <Button
+          <ButtonStyle
             id="dashboard-collect-winnings"
             disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
             onClick={handleClaim}
             style={{ marginRight: '8px', width: '50%' }}
           >
             {TranslateString(556, 'Collect Winnings')}
-          </Button>
+          </ButtonStyle>
           {renderLotteryTicketButtonBuyOrApprove()}
         </Actions>
       </CardBody>

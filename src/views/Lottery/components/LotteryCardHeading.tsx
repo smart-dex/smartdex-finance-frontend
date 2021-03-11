@@ -26,6 +26,7 @@ const HeadingStyle = styled(Heading)`
 `
 
 const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, Icon, ...props }) => {
+  
   return (
     <Flex {...props}>
       {Icon && (

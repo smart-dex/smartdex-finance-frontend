@@ -8,7 +8,7 @@ import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
 import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
-import { lightColors, darkColors } from '../../../style/Color'
+import { lightColors, darkColors, baseColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   min-height: 169px;
@@ -53,13 +53,20 @@ const HeadingBlock = styled.div`
 `
 
 const Label = styled.div`
-  color: #0085ff;
+  color: ${ baseColors.primary};
   font-size: 14px;
   padding-right: 50px;
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 24px;
+  font-weight: bold;
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `
 
 const FarmedStakingCard = () => {
@@ -84,10 +91,10 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledFarmStakingCard>
-      <CardBody style={{ padding: '32px' }}>
+      <CardBody style={{ padding: '16px 28px 28px' }}>
         <HeadingBlock>
           <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
-          <HeadingStyle size="xl">{TranslateString(542, 'Farms & Staking')}</HeadingStyle>
+          <HeadingStyle>{TranslateString(542, 'Farms & Staking')}</HeadingStyle>
         </HeadingBlock>
 
         <BlockCakeHarvest>

@@ -8,8 +8,10 @@ import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
 
 const Block = styled.div`
-  
- }
+  @media (max-width: 600px) {
+    display: flex;
+    font-size: 28px;
+  } 
 `
 const CakeWinnings = () => {
   const { claimAmount } = useTotalClaim()
@@ -19,7 +21,7 @@ const CakeWinnings = () => {
   return (
     <Block>
       <CardValue value={cakeAmount} />
-      <CardBusdValue value={claimAmountBusd} decimals={2} lineHeight="3" />
+      <CardBusdValue value={claimAmountBusd} decimals={2} lineHeight="2" />
     </Block>
   )
 }

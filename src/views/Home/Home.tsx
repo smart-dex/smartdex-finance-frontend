@@ -15,11 +15,8 @@ import { lightColors, darkColors } from '../../style/Color'
 const PageHome = styled(Page)`
   ${({ theme }) => theme.mediaQueries.sm} {
     padding-top: 24px;
-    padding-bottom: 24px;
   }
 
-  ${({ theme }) => theme.mediaQueries.lg} {
-  }
 `
 
 const Hero = styled.div`
@@ -35,7 +32,7 @@ const CardBlock = styled.div`
 `
 
 const Cards = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   flex: 40%;
   padding-right: 24px;
   @media (max-width: 600px) {
@@ -44,7 +41,7 @@ const Cards = styled.div`
   }
 `
 const CardRight = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   flex: 60%;
   @media (max-width: 600px) {
     flex: 100%;

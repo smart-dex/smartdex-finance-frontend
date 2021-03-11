@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Text, Input, Button } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
-import { darkColors, lightColors } from '../../../../style/Color'
+import { darkColors, lightColors, baseColors } from '../../../../style/Color'
 
 interface PastLotterySearcherProps {
   initialLotteryNumber: number
@@ -43,7 +43,7 @@ const ButtonStyle = styled(Button)`
   height: 36px;
   padding: 0 10px;
   &: hover {
-    background-color: #0085ff !important;
+    background-color: ${baseColors.primary} !important;
   }
 `
 

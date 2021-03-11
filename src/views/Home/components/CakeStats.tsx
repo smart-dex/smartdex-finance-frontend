@@ -27,6 +27,9 @@ const HeadingEarn = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-weight: 600;
   font-size: 32px;
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
