@@ -9,10 +9,12 @@ const NftGrid = styled.div`
 
   ${({ theme }) => theme.mediaQueries.sm} {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 44px;
   }
 
   ${({ theme }) => theme.mediaQueries.md} {
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 44px;
   }
 `
 

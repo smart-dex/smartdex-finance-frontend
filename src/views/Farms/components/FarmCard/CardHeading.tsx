@@ -13,7 +13,7 @@ export interface ExpandableSectionProps {
 }
 
 const Wrapper = styled(Flex)`
-  flex-grow:1;
+  flex-grow: 1;
   svg {
     margin-right: 0.25rem;
   }
@@ -21,11 +21,11 @@ const Wrapper = styled(Flex)`
   @media (max-width: 968px) {
     margin-bottom: 16px;
   }
-  margin:auto;
+  margin: auto;
 `
 const ImageFarm = styled.div`
-  width:55px;
-  height:55px;
+  width: 55px;
+  height: 55px;
   margin-right: 10px;
 `
 
@@ -34,7 +34,7 @@ const MultiplierTag = styled(Tag)`
 `
 const HeadingCard = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
-  margin-bottom:10px;
+  margin-bottom: 10px;
   front-size: 24px;
   @media (max-width: 968px) {
     front-size: 20px;
@@ -51,7 +51,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   return (
     <Wrapper>
       <ImageFarm>
-          <img src={`/images/farms/${farmImage}.svg`}  alt={tokenSymbol} style={{ width: "100%", height: "100%" }} />
+        <img src={`/images/farms/${farmImage}.svg`} alt={tokenSymbol} style={{ width: '100%', height: '100%' }} />
       </ImageFarm>
       <Flex flexDirection="column">
         <HeadingCard>{lpLabel}</HeadingCard>

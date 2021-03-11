@@ -10,7 +10,7 @@ import Page from 'components/layout/Page'
 import Hero from './components/Hero'
 import NextDrawPage from './NextDrawPage'
 import PastDrawsPage from './PastDrawsPage'
-import { baseColors, lightColors, darkColors } from '../../style/Color'
+import { baseColors, lightColors } from '../../style/Color'
 
 const Wrapper = styled.div`
   position: relative;
