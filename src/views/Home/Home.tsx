@@ -13,7 +13,6 @@ import WinCard from 'views/Home/components/WinCard'
 import { lightColors, darkColors } from '../../style/Color'
 
 const PageHome = styled(Page)`
-
   ${({ theme }) => theme.mediaQueries.nav} {
     padding-top: 24px;
   }
@@ -41,7 +40,7 @@ const Cards = styled.div`
   }
 `
 const CardRight = styled.div`
-flex: 100%;
+  flex: 100%;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-bottom: 24px;
     flex: 60%;
@@ -104,9 +103,7 @@ const Home: React.FC = () => {
   return (
     <PageHome>
       <Hero>
-        <HeadingStyle>
-          {TranslateString(576, 'PancakeSwap')}
-        </HeadingStyle>
+        <HeadingStyle>{TranslateString(576, 'PancakeSwap')}</HeadingStyle>
         <TextStyle>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</TextStyle>
       </Hero>
       <CardBlock>

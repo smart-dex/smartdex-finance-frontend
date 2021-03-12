@@ -30,7 +30,7 @@ const BlockCakeHarvest = styled.div`
   padding-bottom: 25px;
   justify-content: space-between;
   ${({ theme }) => theme.mediaQueries.nav} {
-    flex-direction:column;
+    flex-direction: column;
     padding-top: 24px;
   }
 `
@@ -40,7 +40,7 @@ const BlockCakeWallet = styled.div`
   justify-content: space-between;
   padding-bottom: 35px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    flex-direction:column;
+    flex-direction: column;
     padding-top: 24px;
   }
 `

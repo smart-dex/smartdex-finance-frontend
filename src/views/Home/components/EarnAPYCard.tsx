@@ -113,7 +113,6 @@ const EarnAPYCard = () => {
             <ArrowForwardIcon color="primary" style={{ margin: '5px' }} />
           </NavLinkStyle>
         </Flex>
-        
       </CardBody>
     </StyledFarmStakingCard>
   )

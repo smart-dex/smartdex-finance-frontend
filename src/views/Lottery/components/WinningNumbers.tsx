@@ -173,7 +173,7 @@ const Title = styled.div`
 const StyledCardContentInner = styled.div`
   display: flex;
   flex-direction: column;
-  
+
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
   }

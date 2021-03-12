@@ -15,7 +15,7 @@ const ButtonStyle = styled(Button)`
     background: #5ba7ec !important;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
-  font-size: 16px;
+    font-size: 16px;
   }
 `
 
@@ -37,9 +37,7 @@ const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
         )}
       </TicketsList>
       <ModalActions>
-        <ButtonStyle  onClick={onDismiss}>
-          {TranslateString(476, 'I understand')}
-        </ButtonStyle>
+        <ButtonStyle onClick={onDismiss}>{TranslateString(476, 'I understand')}</ButtonStyle>
       </ModalActions>
     </Modal>
   )
@@ -48,7 +46,7 @@ const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
 const TicketsList = styled.div`
   text-align: left;
   max-height: 400px;
-  color: ${({ theme }) => theme.isDark ?  darkColors.text : lightColors.textMenuLeft };
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 
 export default WarningModal

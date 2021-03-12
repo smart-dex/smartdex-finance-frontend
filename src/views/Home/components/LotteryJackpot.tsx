@@ -20,7 +20,7 @@ const TextCake = styled(Text)`
 `
 
 const Block = styled.div`
-    display: flex;
+  display: flex;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 24px;
   }
@@ -40,7 +40,7 @@ const LotteryJackpot = () => {
       <TextCake bold>
         {lotteryPrizeAmoutCake} {TranslateString(999, 'CAKE')}
       </TextCake>
-      <CardBusdValue value={lotteryPrizeAmountBusd} lineHeight="2.6"/>
+      <CardBusdValue value={lotteryPrizeAmountBusd} lineHeight="2.6" />
     </Block>
   )
 }
