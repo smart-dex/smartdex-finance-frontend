@@ -28,7 +28,7 @@ const BlockCakeWinnings = styled.div`
   display: flex;
   justify-content: space-between;
   ${({ theme }) => theme.mediaQueries.nav} {
-    flex-direction:column;
+    flex-direction: column;
     padding-top: 20px;
   }
 `
@@ -37,8 +37,8 @@ const BlockLotteryJackpot = styled.div`
   justify-content: space-between;
   padding-bottom: 16px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    flex-direction:column; 
-     padding-top: 8px;
+    flex-direction: column;
+    padding-top: 8px;
   }
 `
 
@@ -78,13 +78,13 @@ const HeadingStyle = styled(Heading)`
 `
 
 const ButtonStyle = styled(Button)`
-    font-size: 13px;
-    padding: 8px;
-    background: ${baseColors.primary};
-    border-radius: 10px;
-    &:hover {
-      background: #5ba7ec !important;
-    }
+  font-size: 13px;
+  padding: 8px;
+  background: ${baseColors.primary};
+  border-radius: 10px;
+  &:hover {
+    background: #5ba7ec !important;
+  }
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
