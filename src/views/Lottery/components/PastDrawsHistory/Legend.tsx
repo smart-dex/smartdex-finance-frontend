@@ -26,6 +26,8 @@ const Circle = styled.div<{ isPoolSize?: boolean }>`
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 14px;
+
 `
 
 const Legend = () => {

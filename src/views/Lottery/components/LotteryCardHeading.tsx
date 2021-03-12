@@ -23,6 +23,12 @@ const TextStyle = styled(Text)`
 
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 16px;
+  font-weight: bold;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+  }
+
 `
 
 const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, Icon, ...props }) => {
@@ -35,7 +41,7 @@ const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, 
       )}
       <Flex flexDirection="column">
         <TextStyle fontSize="14px">{children}</TextStyle>
-        <HeadingStyle size="md">{valueToDisplay}</HeadingStyle>
+        <HeadingStyle>{valueToDisplay}</HeadingStyle>
       </Flex>
     </Flex>
   )

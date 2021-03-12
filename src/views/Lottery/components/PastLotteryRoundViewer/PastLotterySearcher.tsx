@@ -14,6 +14,8 @@ const Wrapper = styled.div`
   display: none;
   ${({ theme }) => theme.mediaQueries.nav} {
     display: block;
+    display: flex;
+    justify-content: space-between;
   }
 `
 
@@ -31,6 +33,9 @@ const ButtonWrapper = styled.div`
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 8px;
 `
 
 const InputStyle = styled(Input)`
@@ -73,7 +78,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
   return (
     <Wrapper>
       <TextStyle>{TranslateString(742, 'Select lottery number:')}</TextStyle>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ width: '70%'}}>
         <SearchWrapper>
           <InputStyle
             value={lotteryNumber}

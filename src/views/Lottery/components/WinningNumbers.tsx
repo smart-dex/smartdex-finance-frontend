@@ -17,7 +17,7 @@ const WinningNumbers: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
-    <CardWrapper style={{ position: 'relative', marginTop: '4em' }}>
+    <CardWrapper>
       <CardStyle>
         <CardBody>
           <StyledCardContentInner>
@@ -72,8 +72,18 @@ const WinningNumbers: React.FC = () => {
   )
 }
 
+const CardWrapper = styled.div`
+  position: relative;
+  margin-top: 30px;
+  
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 88px;
+  }
+`
+
 const CardStyle = styled(Card)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backgroundLastest : lightColors.backgroundLastest)};
+  padding: 12px;
 `
 
 const ImgStyle = styled.a`
@@ -83,7 +93,7 @@ const ImgStyle = styled.a`
     display: block;
     position: absolute;
     right: 2px;
-    top: -106px;
+    top: -80px;
   }
 `
 const Link = styled.a`
@@ -100,9 +110,10 @@ const Link = styled.a`
 
 const Row = styled.div`
   margin-top: 1em;
-  align-items: center;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `
 
 const RowNoPadding = styled.div`
@@ -117,14 +128,21 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 0px;
+  align-items: center;
+  justify-content: center;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-left: 2.4em;
+    align-items: left;
+    justify-content: left;
   }
 `
 
 const CenteredText = styled.div`
   text-align: center;
-  align-items: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-top: 8px;
+    font-size: 24px;
+  }
 `
 
 const CenteredTextWithPadding = styled.div`
@@ -148,15 +166,11 @@ const TicketNumberBox = styled.div`
   font-weight: 600;
   margin-bottom: 7px;
   width: 40px;
-
-  @media (min-width: 768px) {
-    font-size: 40px;
-    margin-right: 20px;
+  margin-right: 8px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-right: 16px;
     width: 60px;
-  }
-
-  @media (max-width: 600px) {
-    margin-right: 8px;
+    height: 60px;
   }
 `
 
@@ -165,11 +179,9 @@ const StyledCardHeader = styled.div`
   flex-direction: column;
   margin-left: 8px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: 24px;
+    margin-left: 0px;
   }
 `
-
-const CardWrapper = styled.div``
 
 const Title = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
@@ -180,9 +192,10 @@ const Title = styled.div`
 const StyledCardContentInner = styled.div`
   display: flex;
   flex-direction: column;
-
+  text-align: center;
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
+    text-align: left;
   }
 `
 

@@ -38,15 +38,12 @@ const HeadingStyle = styled(Heading)`
 `
 
 const CardBodyStyle = styled(CardBody)`
-  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 
 const CardFooterStyle = styled(CardFooter)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-  box-shadow: 10px 10px 30px rgba(120, 118, 148, 0.07);
 `
-
 const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => {
   const TranslateString = useI18n()
 

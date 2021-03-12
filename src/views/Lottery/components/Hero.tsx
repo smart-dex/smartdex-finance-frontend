@@ -4,9 +4,10 @@ import { Heading, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Container from 'components/layout/Container'
 import LotteryProgress from './LotteryProgress'
+import { lightColors } from '../../../style/Color'
 
 const Title = styled(Heading)`
-  color: #fff;
+  color: ${lightColors.invertedContrast};
   margin-bottom: 24px;
   font-size: 18px;
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -15,7 +16,7 @@ const Title = styled(Heading)`
 `
 
 const Blurb = styled(Text)`
-  color: #ffffff;
+  color: ${lightColors.invertedContrast};
   font-size: 12px;
   font-weight: 500;
   ${({ theme }) => theme.mediaQueries.nav} {

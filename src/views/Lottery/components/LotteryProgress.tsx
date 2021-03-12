@@ -10,10 +10,19 @@ import {
   getTicketSaleTime,
   getTicketSaleStep,
 } from '../helpers/CountdownHelpers'
+import { lightColors, baseColors } from '../../../style/Color'
 
 const ProgressWrapper = styled.div`
   display: block;
   width: 100%;
+  &>div:nth-child(1){
+    &>div:nth-child(2){
+      background: ${ baseColors.progress};
+    }
+    &>div:nth-child(3){
+      background: ${ baseColors.progressLottery};
+    }
+  }
 `
 
 const TopTextWrapper = styled.div`
@@ -42,6 +51,7 @@ const StyledPrimaryText = styled(Text)`
 
 const TextStyle = styled(Text)`
   font-size: 12px;
+  color: ${lightColors.invertedContrast};
   ${({ theme }) => theme.mediaQueries.nav} {
    font-size: 16px;
   }

@@ -8,7 +8,9 @@ export const baseColors = {
   warning: '#FFB237',
   arrowColor: '#d8f7e4',
   orange: '#FFA14E',
-  boxShadow: 'rgba(83, 185, 234, 0.24)'
+  boxShadow: 'rgba(83, 185, 234, 0.24)',
+  progress: 'background: rgba(166, 177, 255, 0.3)',
+  progressLottery: '#9897F0',
 }
 
 export const brandColors = {
