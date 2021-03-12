@@ -96,7 +96,7 @@ const Farms: React.FC = () => {
   return (
     <Page>
       <FarmHeader>
-        <HeadingFarm as="h1" size="lg" color="secondary" mb="25px" style={{}}>
+        <HeadingFarm as="h1" size="lg" color="secondary" mb="25px">
           {TranslateString(696, 'Stake LP tokens to earn CAKE')}
         </HeadingFarm>
         <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />

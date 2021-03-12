@@ -11,6 +11,8 @@ const ButtonStyle = styled(Button)`
   &:hover {
     background: #5ba7ec !important;
   }
+  margin-top: 10px;
+  margin-bottom: 10px;
 `
 
 const UnlockButton = (props) => {
