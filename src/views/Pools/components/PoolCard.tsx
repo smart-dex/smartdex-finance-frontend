@@ -28,7 +28,6 @@ import OldSyrupTitle from './OldSyrupTitle'
 import HarvestButton from './HarvestButton'
 import CardFooter from './CardFooter'
 import CardContent from './CardContent'
-import { baseColors } from '../../../style/Color'
 
 interface PoolWithApy extends Pool {
   apy: BigNumber
