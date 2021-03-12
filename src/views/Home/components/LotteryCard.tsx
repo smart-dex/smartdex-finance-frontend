@@ -83,7 +83,7 @@ const ButtonStyle = styled(Button)`
   background: ${baseColors.primary};
   border-radius: 10px;
   height: 45px;
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  box-shadow: 0px 4px 10px ${ baseColors.boxShadow};
   &:hover {
     background: #5ba7ec !important;
   }

@@ -15,7 +15,7 @@ const ButtonStyle = styled(Button)`
   margin-bottom: 10px;
   width: 147px;
   height: 45px;
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  box-shadow: 0px 4px 10px ${ baseColors.boxShadow};
   font-size: 13px;
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 170px;

@@ -8,6 +8,7 @@ export const baseColors = {
   warning: '#FFB237',
   arrowColor: '#d8f7e4',
   orange: '#FFA14E',
+  boxShadow: 'rgba(83, 185, 234, 0.24)'
 }
 
 export const brandColors = {
