@@ -41,7 +41,7 @@ const Header = styled(InfoRow)`
   }
 `
 
-const DetailsButton = styled(Button).attrs({ variant: 'text', fullWidth: true })`
+const DetailsButton = styled(Button)`
   height: auto;
   padding: 12px 0px;
   width: 100%;
