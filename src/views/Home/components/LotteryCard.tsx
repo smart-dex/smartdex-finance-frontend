@@ -82,11 +82,14 @@ const ButtonStyle = styled(Button)`
   padding: 8px;
   background: ${baseColors.primary};
   border-radius: 10px;
+  height: 45px;
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   &:hover {
     background: #5ba7ec !important;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
+    height: 56px;
   }
 `
 const HeadingBlock = styled.div`

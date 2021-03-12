@@ -15,8 +15,11 @@ const StyledCardBody = styled(CardBody)`
 const StyledHeading = styled(Heading)`
   margin: 16px 0;
   font-weight: 500;
-  font-size: 16px;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 14px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 
 const IconWrapper = styled.div`
@@ -47,7 +50,7 @@ const UnlockWalletCard = () => {
         <IconWrapper>
           <TicketImg />
         </IconWrapper>
-        <StyledHeading size="md">{TranslateString(1080, 'Unlock wallet to access lottery')}</StyledHeading>
+        <StyledHeading>{TranslateString(1080, 'Unlock wallet to access lottery')}</StyledHeading>
         <UnlockButton />
       </StyledCardBody>
     </CardStyle>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { useRouteMatch, Link, Route } from 'react-router-dom'
 import { ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
@@ -18,24 +19,39 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 `
-const checkDarkBg = (theme) => (theme.isDark ? '#E9F4F' : '#E9F4FC')
-
 const ButtonItemStyle = styled(ButtonMenuItem)`
-  padding: 20px;
+  padding: 14px;
   border-radius: 50px;
-  background-color: ${({ isActive, theme }) => (isActive ? baseColors.primary : checkDarkBg(theme))};
+  background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
-  font-weight: 400;
-  &:hover {
-    background-color: ${({ isActive, theme }) => (isActive ? '#5ba7ec' : checkDarkBg(theme))}!important;
+  width: 135px;
+  font-size: 13px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    width: 135px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 20px;
+  }
+
+`
+const ButtonMenuStyle = styled.div`
+  margin-bottom: 16px;
+  & > div {
+    ${({ theme }) => theme.mediaQueries.nav} {
+      width: 270px;
+    }
+    width: 200px;
+    border-radius: 50px;
   }
 `
+
 
 const Lottery: React.FC = () => {
   const lotteryContract = useLottery()
   const { account } = useWallet()
+  const { url, isExact } = useRouteMatch()
   const TranslateString = useI18n()
-  const [activeIndex, setActiveIndex] = useState(0)
   const [historyData, setHistoryData] = useState([])
   const [historyError, setHistoryError] = useState(false)
   const [currentLotteryNumber, setCurrentLotteryNumber] = useState(0)
@@ -64,24 +80,28 @@ const Lottery: React.FC = () => {
     }
   }, [account, lotteryContract])
 
-  const handleClick = (index) => {
-    setActiveIndex(index)
-  }
 
   return (
     <>
       <Hero />
       <Page>
         <Wrapper>
-          <ButtonMenu activeIndex={activeIndex} onItemClick={handleClick} scale="sm">
-            <ButtonItemStyle>{TranslateString(716, 'Next draw')}</ButtonItemStyle>
-            <ButtonItemStyle>{TranslateString(718, 'Past draws')}</ButtonItemStyle>
-          </ButtonMenu>
+        <ButtonMenuStyle> 
+          <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="primary">
+              <ButtonItemStyle as={Link} to={`${url}`}>{TranslateString(716, 'Next draw')}</ButtonItemStyle>
+              <ButtonItemStyle as={Link} to={`${url}/pastdraws`}>{TranslateString(718, 'Past draws')}</ButtonItemStyle>
+            </ButtonMenu>
+        </ButtonMenuStyle>
         </Wrapper>
         <PastLotteryDataContext.Provider
           value={{ historyError, historyData, mostRecentLotteryNumber, currentLotteryNumber }}
         >
-          {activeIndex === 0 ? <NextDrawPage /> : <PastDrawsPage />}
+            <Route exact path={`${url}`}>
+              <NextDrawPage />
+            </Route>
+            <Route path={`${url}/pastdraws`}>
+              <PastDrawsPage />
+            </Route>
         </PastLotteryDataContext.Provider>
       </Page>
     </>

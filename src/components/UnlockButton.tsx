@@ -13,6 +13,15 @@ const ButtonStyle = styled(Button)`
   }
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 147px;
+  height: 45px;
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  font-size: 13px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 170px;
+    height: 56px;
+    font-size: 16px;
+  }
 `
 
 const UnlockButton = (props) => {

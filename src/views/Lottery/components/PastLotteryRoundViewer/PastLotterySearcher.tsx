@@ -11,6 +11,10 @@ interface PastLotterySearcherProps {
 
 const Wrapper = styled.div`
   margin-bottom: 24px;
+  display: none;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    display: block;
+  }
 `
 
 const SearchWrapper = styled.div`
@@ -31,12 +35,12 @@ const TextStyle = styled(Text)`
 
 const InputStyle = styled(Input)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  background-color: ${({ theme }) => (theme.isDark ? '#2A3145' : '#FFFFFF')};
-  border: 1px solid ${({ theme }) => (theme.isDark ? '#2F344B' : '#E2E2E8')};
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.invertedContrast)};
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 50px;
 `
 const ButtonStyle = styled(Button)`
-  background: rgba(95, 94, 118, 0.5);
+  background: ${({ theme }) => (theme.isDark ? baseColors.primary : 'rgba(95, 94, 118, 0.5)')};
   border-radius: 50px;
   box-shadow: 0px 4px 10px rgba(197, 197, 197, 0.24);
   width: 36px;

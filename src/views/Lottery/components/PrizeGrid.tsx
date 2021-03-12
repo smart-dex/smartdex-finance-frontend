@@ -22,6 +22,10 @@ const Grid = styled.div<{ pastDraw?: boolean }>`
 const RightAlignedText = styled(Text)`
   text-align: right;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+   font-size: 14px;
+  }
 `
 
 const RightAlignedHeading = styled(Heading)`
@@ -39,6 +43,11 @@ const PastDrawGridItem = styled(GridItem)`
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 500;
+  font-size: 14px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
 `
 
 const HeadingStyle = styled(Heading)`
@@ -61,15 +70,15 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
   return (
     <Grid pastDraw={pastDraw}>
       <GridItem>
-        <TextStyle fontSize="14px">{TranslateString(756, 'No. Matched')}</TextStyle>
+        <TextStyle>{TranslateString(756, 'No. Matched')}</TextStyle>
       </GridItem>
       {pastDraw && (
         <PastDrawGridItem>
-          <RightAlignedText fontSize="14px">{TranslateString(754, 'Winners')}</RightAlignedText>
+          <RightAlignedText>{TranslateString(754, 'Winners')}</RightAlignedText>
         </PastDrawGridItem>
       )}
       <GridItem>
-        <RightAlignedText fontSize="14px">{TranslateString(752, 'Prize Pot')}</RightAlignedText>
+        <RightAlignedText>{TranslateString(752, 'Prize Pot')}</RightAlignedText>
       </GridItem>
       {/* 4 matches row */}
       <GridItem>

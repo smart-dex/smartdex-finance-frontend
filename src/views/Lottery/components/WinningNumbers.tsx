@@ -77,7 +77,8 @@ const CardStyle = styled(Card)`
 `
 
 const ImgStyle = styled.a`
-  display: none;
+  display: block;
+  text-align: center;
   ${({ theme }) => theme.mediaQueries.nav} {
     display: block;
     position: absolute;
@@ -88,9 +89,13 @@ const ImgStyle = styled.a`
 const Link = styled.a`
   margin-top: 1em;
   text-decoration: none;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : baseColors.orange)};
-  font-size: 16px;
+  color: ${baseColors.orange};
+  font-size: 14px;
   font-weight: bold;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+  
 `
 
 const Row = styled.div`
@@ -125,11 +130,13 @@ const CenteredText = styled.div`
 const CenteredTextWithPadding = styled.div`
   text-align: center;
   align-items: center;
-  padding-left: 2px;
   padding-right: 2px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 
 const TicketNumberBox = styled.div`
@@ -149,7 +156,7 @@ const TicketNumberBox = styled.div`
   }
 
   @media (max-width: 600px) {
-    margin: 4px;
+    margin-right: 8px;
   }
 `
 

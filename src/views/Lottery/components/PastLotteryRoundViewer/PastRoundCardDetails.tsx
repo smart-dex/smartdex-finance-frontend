@@ -34,11 +34,17 @@ const TopLotteryCardHeading = styled(LotteryCardHeading)`
 
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 18px;
 `
 
 const CardBodyStyle = styled(CardBody)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+`
+
+const CardFooterStyle = styled(CardFooter)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+  box-shadow: 10px 10px 30px rgba(120, 118, 148, 0.07);
 `
 
 const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => {
@@ -63,7 +69,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
         <CardBodyStyle>
           <CardHeading>
             <Timestamp timeValue={lotteryDate} />
-            <HeadingStyle size="md" mb="24px">
+            <HeadingStyle mb="24px">
               Round #{lotteryNumber}
             </HeadingStyle>
             <TopLotteryBlock>
@@ -82,7 +88,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
             </TopLotteryBlock>
           </CardHeading>
         </CardBodyStyle>
-        <CardFooter>
+        <CardFooterStyle>
           <PrizeGrid
             lotteryPrizeAmount={poolSize}
             jackpotMatches={jackpotTicket}
@@ -92,7 +98,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
             pastDraw
           />
           <PastLotteryActions contractLink={contractLink} lotteryNumber={lotteryNumber} />
-        </CardFooter>
+        </CardFooterStyle>
       </>
     )
   )

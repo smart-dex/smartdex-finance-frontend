@@ -43,7 +43,6 @@ const PrizeCountWrapper = styled.div`
 
 const ExpandingWrapper = styled.div<{ showFooter: boolean }>`
   height: ${(props) => (props.showFooter ? '100%' : '0px')};
-
   ${({ theme }) => theme.mediaQueries.sm} {
     height: 100%;
   }
@@ -51,10 +50,19 @@ const ExpandingWrapper = styled.div<{ showFooter: boolean }>`
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 400;
+  font-size: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+   font-size: 14px;
+  }
+
 `
 
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 4px;
 `
 
 const CardStyle = styled(Card)`
@@ -95,8 +103,8 @@ const TotalPrizesCard = () => {
               <TicketImg src="/images/pan-cake.png" />
             </IconWrapper>
             <PrizeCountWrapper>
-              <TextStyle fontSize="14px">{TranslateString(722, 'Total Pot:')}</TextStyle>
-              <HeadingStyle size="lg">{lotteryPrizeWithCommaSeparators} CAKE</HeadingStyle>
+              <TextStyle>{TranslateString(722, 'Total Pot:')}</TextStyle>
+              <HeadingStyle>{lotteryPrizeWithCommaSeparators} CAKE</HeadingStyle>
             </PrizeCountWrapper>
           </Left>
           <Right>
