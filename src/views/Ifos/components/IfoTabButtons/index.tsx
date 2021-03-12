@@ -40,7 +40,7 @@ const Wrapper = styled.div`
   .active {
     background: ${baseColors.primary};
     color: ${lightColors.card};
-    border-radius: 50px; 
+    border-radius: 50px;
     box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
     &:hover {
       opacity: 0.65;

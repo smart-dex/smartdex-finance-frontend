@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {lightColors} from 'style/Color'
+import { lightColors } from 'style/Color'
 import { Heading } from 'uikit-sotatek'
 
 const Title = styled(Heading).attrs({ size: 'lg' })`

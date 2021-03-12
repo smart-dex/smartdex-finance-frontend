@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Text } from '@pancakeswap-libs/uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useTokenBalance from 'hooks/useTokenBalance'
@@ -9,6 +10,23 @@ import { usePriceCakeBusd } from 'state/hooks'
 import { BigNumber } from 'bignumber.js'
 import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
+import { lightColors, darkColors } from '../../../style/Color'
+
+const TextStyle = styled(Text)`
+  padding-top: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-top: 8px;
+    font-size: 18px;
+  }
+`
+
+const Block = styled.div`
+  padding-top: 20px;
+  display: flex;
+`
 
 const CakeWalletBalance = () => {
   const TranslateString = useI18n()
@@ -17,18 +35,14 @@ const CakeWalletBalance = () => {
   const { account } = useWallet()
 
   if (!account) {
-    return (
-      <Text color="textDisabled" style={{ lineHeight: '54px' }}>
-        {TranslateString(298, 'Locked')}
-      </Text>
-    )
+    return <TextStyle lineHeight="0.8">{TranslateString(298, 'LOCKED')}</TextStyle>
   }
 
   return (
-    <>
-      <CardValue value={getBalanceNumber(cakeBalance)} decimals={4} fontSize="24px" lineHeight="36px" />
+    <Block>
+      <CardValue value={getBalanceNumber(cakeBalance)} decimals={4} lineHeight="0.5" />
       <CardBusdValue value={busdBalance} />
-    </>
+    </Block>
   )
 }
 

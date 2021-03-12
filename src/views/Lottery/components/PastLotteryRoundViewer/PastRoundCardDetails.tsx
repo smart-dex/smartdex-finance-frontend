@@ -36,6 +36,11 @@ const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 
+const CardBodyStyle = styled(CardBody)`
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+`
+
 const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => {
   const TranslateString = useI18n()
 
@@ -55,7 +60,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
     !data.error &&
     data && (
       <>
-        <CardBody>
+        <CardBodyStyle>
           <CardHeading>
             <Timestamp timeValue={lotteryDate} />
             <HeadingStyle size="md" mb="24px">
@@ -76,7 +81,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
               </LotteryCardHeading>
             </TopLotteryBlock>
           </CardHeading>
-        </CardBody>
+        </CardBodyStyle>
         <CardFooter>
           <PrizeGrid
             lotteryPrizeAmount={poolSize}

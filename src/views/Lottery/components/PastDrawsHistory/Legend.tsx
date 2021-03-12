@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
-import { darkColors, lightColors } from '../../../../style/Color'
+import { darkColors, lightColors, baseColors } from '../../../../style/Color'
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,7 +20,7 @@ const Circle = styled.div<{ isPoolSize?: boolean }>`
   width: 10px;
   height: 10px;
   border-radius: 10px;
-  background-color: ${({ isPoolSize }) => (isPoolSize ? '#A6D997' : '#0085FF')};
+  background-color: ${({ isPoolSize }) => (isPoolSize ? '#A6D997' : baseColors.primary)};
   margin-right: 6px;
 `
 

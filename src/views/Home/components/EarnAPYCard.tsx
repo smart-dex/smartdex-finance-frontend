@@ -7,20 +7,42 @@ import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
 import { useFarms, usePriceBnbBusd } from 'state/hooks'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
+import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    margin: 0;
-    max-width: none;
+  height: 100%;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+`
+const NavLinkStyle = styled(NavLink)`
+  margin-top: 8px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 22%;
+    position: absolute;
+    bottom: 22px;
   }
 `
-const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
+const CardMidContent = styled(Heading)`
   line-height: 44px;
+  font-weight: 600;
+  color: #17c267;
+  font-size: 22px;
 `
+
+const HeadingEarn = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 600;
+  font-size: 18px;
+`
+
 const EarnAPYCard = () => {
   const TranslateString = useI18n()
   const farmsLP = useFarms()
@@ -77,24 +99,21 @@ const EarnAPYCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <Heading color="contrast" size="lg">
-          Earn up to
-        </Heading>
-        <CardMidContent color="#7645d9">
+        <HeadingEarn>Earn up to</HeadingEarn>
+        <CardMidContent>
           {getHighestAPY() ? (
             `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
           ) : (
             <Skeleton animation="pulse" variant="rect" height="44px" />
           )}
         </CardMidContent>
-        <Flex justifyContent="space-between">
-          <Heading color="contrast" size="lg">
-            in Farms
-          </Heading>
-          <NavLink exact activeClassName="active" to="/farms" id="farm-apy-cta">
-            <ArrowForwardIcon mt={30} color="primary" />
-          </NavLink>
+        <Flex style={{ flexDirection: 'column' }}>
+          <HeadingEarn>in Farms</HeadingEarn>
+          <NavLinkStyle exact activeClassName="active" to="/farms" id="farm-apy-cta">
+            <ArrowForwardIcon color="primary" style={{ margin: '5px' }} />
+          </NavLinkStyle>
         </Flex>
+        
       </CardBody>
     </StyledFarmStakingCard>
   )

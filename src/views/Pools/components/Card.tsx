@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { lightColors, darkColors } from 'style/Color'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 
 const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   background: ${(props) => props.theme.card.background};
@@ -10,7 +10,7 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   border-radius: 20px;
   flex-direction: column;
   &:hover {
-    border: 1px solid #0085ff;
+    border: 1px solid ${baseColors.primary};
     transition: 0.25s;
   }
   position: relative;

@@ -1,7 +1,12 @@
 import React, { useEffect, useRef } from 'react'
+import styled from 'styled-components'
 import { useCountUp } from 'react-countup'
 import { Text } from '@pancakeswap-libs/uikit'
+import { darkColors, lightColors } from '../../../style/Color'
 
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
 export interface CardValueProps {
   value: number
   decimals?: number
@@ -10,16 +15,17 @@ export interface CardValueProps {
   prefix?: string
   bold?: boolean
   color?: string
+  paddingRight?: string
 }
 
 const CardValue: React.FC<CardValueProps> = ({
   value,
   decimals,
-  fontSize = '40px',
+  fontSize = '28px',
   lineHeight = '1',
   prefix = '',
   bold = true,
-  color = 'text',
+  paddingRight = '',
 }) => {
   const { countUp, update } = useCountUp({
     start: 0,
@@ -38,10 +44,10 @@ const CardValue: React.FC<CardValueProps> = ({
   }, [value, updateValue])
 
   return (
-    <Text bold={bold} fontSize={fontSize} style={{ lineHeight }} color={color}>
+    <TextStyle bold={bold} fontSize={fontSize} style={{ lineHeight }} paddingRight={paddingRight}>
       {prefix}
       {countUp}
-    </Text>
+    </TextStyle>
   )
 }
 

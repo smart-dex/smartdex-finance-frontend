@@ -16,6 +16,7 @@ import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
 import ApyButton from './ApyButton'
+import { baseColors } from '../../../../style/Color'
 
 export interface FarmWithStakedValue extends Farm {
   apy?: BigNumber
@@ -30,7 +31,7 @@ const FCard = styled.div`
   flex-direction: column;
   position: relative;
   &:hover {
-    border: 1px solid #0085ff;
+    border: 1px solid ${baseColors.primary};
     transition: 0.25s;
   }
   position: relative;

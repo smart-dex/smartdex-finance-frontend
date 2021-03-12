@@ -8,8 +8,17 @@ import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
 
 const Block = styled.div`
-  margin-bottom: 24px;
- }
+  display: flex;
+  ${({ theme }) => theme.mediaQueries.nav} {
+   
+  }
+`
+
+const CardValueStyle = styled(CardValue)`
+    ont-size: 28px !important;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 32px;
+  }
 `
 const CakeWinnings = () => {
   const { claimAmount } = useTotalClaim()
@@ -18,8 +27,8 @@ const CakeWinnings = () => {
 
   return (
     <Block>
-      <CardValue value={cakeAmount} lineHeight="1.5" />
-      <CardBusdValue value={claimAmountBusd} decimals={2} />
+      <CardValueStyle value={cakeAmount} />
+      <CardBusdValue value={claimAmountBusd} decimals={2} lineHeight="2.6" />
     </Block>
   )
 }
