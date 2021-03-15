@@ -1,13 +1,15 @@
 import React from 'react'
 import Page from 'components/layout/Page'
 import { Link, Redirect, useParams } from 'react-router-dom'
-import { ChevronLeftIcon, Flex, Text } from '@pancakeswap-libs/uikit'
+import { Flex, Text } from 'uikit-sotatek'
 import PageLoader from 'components/PageLoader'
 import teams from 'config/constants/teams'
 import useI18n from 'hooks/useI18n'
+import styled from 'styled-components'
 import { useTeam } from 'state/hooks'
 import TeamCard from './components/TeamCard'
 import TeamHeader from './components/TeamHeader'
+
 
 const Team = () => {
   const { id: idStr }: { id: string } = useParams()
@@ -30,8 +32,8 @@ const Team = () => {
       <Flex mb="24px">
         <Link to="/teams">
           <Flex alignItems="center">
-            <ChevronLeftIcon color="primary" />
-            <Text color="primary">{TranslateString(1038, 'Teams Overview')}</Text>
+            <img src="/images/teams/icon/back-card-team.svg" alt="back-icon"/>
+            <StyledTextBack>{TranslateString(1038, 'Teams Overview')}</StyledTextBack>
           </Flex>
         </Link>
       </Flex>
@@ -39,5 +41,14 @@ const Team = () => {
     </Page>
   )
 }
+const StyledTextBack = styled(Text)`
+font-weight: 600;
+line-height: 20px;
+color: #50B0FC;
+font-size: 12px;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+}
 
+`
 export default Team
