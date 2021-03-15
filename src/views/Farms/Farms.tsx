@@ -14,8 +14,7 @@ import { QuoteToken } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
-import Divider from './components/Divider'
-import {FarmHeader,HeadingFarm } from './components/FarmHeader'
+import { FarmHeader, HeadingFarm } from './components/FarmHeader'
 
 const Farms: React.FC = () => {
   const { path } = useRouteMatch()
@@ -97,13 +96,11 @@ const Farms: React.FC = () => {
   return (
     <Page>
       <FarmHeader>
-        <HeadingFarm as="h1" size="lg" color="secondary" mb="25px" style={{}}>
+        <HeadingFarm as="h1" size="lg" color="secondary" mb="25px">
           {TranslateString(696, 'Stake LP tokens to earn CAKE')}
         </HeadingFarm>
         <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       </FarmHeader>
-
-      <Divider />
       <FlexLayout>
         <Route exact path={`${path}`}>
           {stackedOnly ? farmsList(stackedOnlyFarms, false) : farmsList(activeFarms, false)}

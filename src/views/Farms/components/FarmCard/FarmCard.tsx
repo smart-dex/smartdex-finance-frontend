@@ -16,6 +16,7 @@ import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
 import ApyButton from './ApyButton'
+import { baseColors } from '../../../../style/Color'
 
 export interface FarmWithStakedValue extends Farm {
   apy?: BigNumber
@@ -23,23 +24,23 @@ export interface FarmWithStakedValue extends Farm {
 
 const FCard = styled.div`
   background: ${(props) => props.theme.card.background};
-  border-radius: 32px;
-  border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};;
-  box-shadow: 25px 14px 102px rgba(83, 185, 234, 0.14);
+  border-radius: 20px;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  box-shadow: 25px 14px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
   display: flex;
   flex-direction: column;
   position: relative;
   &:hover {
-    border: 1px solid #0085FF;
+    border: 1px solid ${baseColors.primary};
     transition: 0.25s;
   }
   position: relative;
-  margin-bottom: 16px;
-  @media (max-width: 968px) {
-    max-width:450px;
+  margin-bottom: 28px;
+  min-width: 280px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    min-width: 800px;
   }
 `
-
 
 const ExpandingWrapper = styled.div<{ expanded: boolean }>`
   height: ${(props) => (props.expanded ? '100%' : '0px')};
@@ -48,22 +49,40 @@ const ExpandingWrapper = styled.div<{ expanded: boolean }>`
 const CardContent = styled(Flex)`
   display: flex;
   flex-direction: row;
-  padding: 0;
   // align-items:center;
-  padding:24px;
-  @media (max-width: 968px) {
-    flex-direction: column;
-    flex-wrap: wrap;
+  padding: 50px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 30px;
   }
 `
 
 const InfoFarm = styled(Flex)`
-  flex-grow:1;
+  flex-grow: 1;
+  margin-left: 16px;
+  margin-right: 50px;
+  @media (max-width: 968px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 `
-const InfoTextFram = styled(Text)`
+const InfoTextFarm = styled(Text)`
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
 `
-
+const DetailInFo = styled.div`
+  flex: 1;
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+`
 
 interface FarmCardProps {
   farm: FarmWithStakedValue
@@ -126,48 +145,56 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           farmImage={farmImage}
           tokenSymbol={farm.tokenSymbol}
         />
-        <InfoFarm flexDirection='column' justifyContent='center' marginRight='16px'>
+        <InfoFarm justifyContent="center" flexDirection="column">
           {!removed && (
-
-            <Flex alignItems="center" justifyContent='center'>
-              <Text style={{ flex: 1 }}>{TranslateString(736, 'APR')}: </Text>
-              <InfoTextFram bold style={{ display: 'flex', alignItems: 'center' }}>
+            <Flex mb="28px" alignItems="center">
+              <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
+              <InfoTextFarm bold style={{ display: 'flex', alignItems: 'center' }}>
                 {farm.apy ? (
                   <>
-                    <ApyButton lpLabel={lpLabel} addLiquidityUrl={addLiquidityUrl} cakePrice={cakePrice} apy={farm.apy} />
+                    <ApyButton
+                      lpLabel={lpLabel}
+                      addLiquidityUrl={addLiquidityUrl}
+                      cakePrice={cakePrice}
+                      apy={farm.apy}
+                    />
                     {farmAPY}%
-              </>
+                  </>
                 ) : (
-                    <Skeleton height={24} width={80} />
-                  )}
-              </InfoTextFram>
+                  <Skeleton height={24} width={80} />
+                )}
+              </InfoTextFarm>
             </Flex>
           )}
-          <Flex justifyContent='center'>
-            <Text style={{ flex: 1 }}>{TranslateString(318, 'Earn')}:</Text>
-            <InfoTextFram bold>{earnLabel}</InfoTextFram>
+          <Flex>
+            <DetailInFo>{TranslateString(318, 'Earn')}:</DetailInFo>
+            <InfoTextFarm bold>{earnLabel}</InfoTextFarm>
           </Flex>
         </InfoFarm>
-        <CardActionsContainer farm={farm} ethereum={ethereum} account={account} addLiquidityUrl={addLiquidityUrl} changeOpenDetail={handelOpenDetail} isOpenDetail={showExpandableSection} />
+        <CardActionsContainer
+          farm={farm}
+          ethereum={ethereum}
+          account={account}
+          addLiquidityUrl={addLiquidityUrl}
+          changeOpenDetail={handelOpenDetail}
+          isOpenDetail={showExpandableSection}
+        />
         {/* <ExpandableSectionButton
             onClick={() => setShowExpandableSection(!showExpandableSection)}
             expanded={showExpandableSection}
           /> */}
       </CardContent>
-      {showExpandableSection &&
-        (
-          <ExpandingWrapper expanded={showExpandableSection}>
-            <DetailsSection
-              removed={removed}
-              bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
-              totalValueFormated={totalValueFormated}
-              lpLabel={lpLabel}
-              addLiquidityUrl={addLiquidityUrl}
-            />
-          </ExpandingWrapper>
-        )
-      }
-
+      {showExpandableSection && (
+        <ExpandingWrapper expanded={showExpandableSection}>
+          <DetailsSection
+            removed={removed}
+            bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
+            totalValueFormated={totalValueFormated}
+            lpLabel={lpLabel}
+            addLiquidityUrl={addLiquidityUrl}
+          />
+        </ExpandingWrapper>
+      )}
     </FCard>
   )
 }

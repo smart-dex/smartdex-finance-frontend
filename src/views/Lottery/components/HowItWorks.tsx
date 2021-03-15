@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Heading, Link, Image } from '@pancakeswap-libs/uikit'
+import { Text, Heading, Link } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
-import { darkColors, lightColors } from '../../../style/Color'
+import { darkColors, lightColors, baseColors } from '../../../style/Color'
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -12,14 +12,14 @@ const LayoutWrapper = styled.div`
 
 const StyledHeading = styled(Heading)`
   margin: 16px 0;
-  color: #0085ff;
+  color: ${baseColors.primary};
   font-size: 18px;
   font-weight: 600;
 `
 
 const StyledLink = styled(Link)`
   margin-top: 16px;
-  color: #0085ff;
+  color: ${baseColors.primary};
   display: inline;
   padding-left: 12px;
 `

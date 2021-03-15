@@ -8,10 +8,23 @@ import { usePriceCakeBusd } from 'state/hooks'
 import styled from 'styled-components'
 import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
+import { lightColors, darkColors } from '../../../style/Color'
 
 const Block = styled.div`
-  margin-bottom: 24px;
+  padding-top: 20px;
+  display: flex;
 }
+`
+
+const TextStyle = styled(Text)`
+  padding-top: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-top: 8px;
+    font-size: 18px;
+  }
 `
 
 const CakeHarvestBalance = () => {
@@ -24,16 +37,12 @@ const CakeHarvestBalance = () => {
   const earningsBusd = new BigNumber(earningsSum).multipliedBy(usePriceCakeBusd()).toNumber()
 
   if (!account) {
-    return (
-      <Text color="textDisabled" style={{ lineHeight: '76px' }}>
-        {TranslateString(298, 'Locked')}
-      </Text>
-    )
+    return <TextStyle lineHeight="0.8">{TranslateString(298, 'LOCKED')}</TextStyle>
   }
 
   return (
     <Block>
-      <CardValue value={earningsSum} lineHeight="1.5" />
+      <CardValue value={earningsSum} lineHeight="0.5" />
       <CardBusdValue value={earningsBusd} />
     </Block>
   )

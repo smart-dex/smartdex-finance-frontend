@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Text } from '@pancakeswap-libs/uikit'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import Loading from '../Loading'
+import { baseColors, lightColors } from '../../../../style/Color'
 
 const Line = lazy(() => import('./LineChartWrapper'))
 
@@ -47,7 +48,7 @@ const HistoryChart: React.FC = () => {
         label: 'Burned',
         data: getDataArray('burned'),
         yAxisID: 'y-axis-burned',
-        ...lineStyles({ color: '#0085FF' }),
+        ...lineStyles({ color: baseColors.primary }),
       },
     ],
   }
@@ -80,19 +81,19 @@ const HistoryChart: React.FC = () => {
           display: true,
           position: 'left',
           id: 'y-axis-pool',
-          ...axesStyles({ color: '#5F5E76', lineHeight: 1.6 }),
+          ...axesStyles({ color: lightColors.balanceColor, lineHeight: 1.6 }),
         },
         {
           type: 'linear',
           display: true,
           position: 'right',
           id: 'y-axis-burned',
-          ...axesStyles({ color: '#5F5E76', lineHeight: 1.5 }),
+          ...axesStyles({ color: lightColors.balanceColor, lineHeight: 1.5 }),
         },
       ],
       xAxes: [
         {
-          ...axesStyles({ color: '#452A7A', lineHeight: 1 }),
+          ...axesStyles({ color: lightColors.balanceColor, lineHeight: 1 }),
         },
       ],
     },

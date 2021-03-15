@@ -10,48 +10,40 @@ import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
 import EarnAPYCard from 'views/Home/components/EarnAPYCard'
 import EarnAssetCard from 'views/Home/components/EarnAssetCard'
 import WinCard from 'views/Home/components/WinCard'
+import { lightColors, darkColors } from '../../style/Color'
 
-const Hero = styled.div`
-  align-items: center;
-  background-image: url('/images/pan-bg-mobile.svg');
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: auto;
-  margin-bottom: 32px;
-  padding-top: 116px;
-  text-align: center;
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/pan-bg2.svg'), url('/images/pan-bg.svg');
-    background-position: left center, right center;
-    height: 165px;
-    padding-top: 0;
+const PageHome = styled(Page)`
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-top: 24px;
   }
 `
 
-const Cards = styled(BaseLayout)`
-  align-items: stretch;
-  justify-content: stretch;
-  margin-bottom: 32px;
+const Hero = styled.div`
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 45px;
+  text-align: center;
+`
 
-  & > div {
-    grid-column: span 6;
-    width: 100%;
+const CardBlock = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+const Cards = styled.div`
+  flex: 100%;
+  padding-right: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 24px;
+    flex: 40%;
+    padding-right: 24px;
   }
-
-  ${({ theme }) => theme.mediaQueries.sm} {
-    & > div {
-      grid-column: span 8;
-    }
-  }
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    & > div {
-      grid-column: span 6;
-    }
+`
+const CardRight = styled.div`
+  flex: 100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 24px;
+    flex: 60%;
   }
 `
 
@@ -60,19 +52,48 @@ const CTACards = styled(BaseLayout)`
   margin-bottom: 32px;
 
   & > div {
-    grid-column: span 6;
+    grid-column: span 12;
   }
 
-  ${({ theme }) => theme.mediaQueries.sm} {
-    & > div {
-      grid-column: span 8;
-    }
-  }
-
-  ${({ theme }) => theme.mediaQueries.lg} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     & > div {
       grid-column: span 4;
     }
+  }
+`
+
+const STATCards = styled(BaseLayout)`
+  align-items: stretch;
+  justify-content: stretch;
+  margin-bottom: 32px;
+
+  & > div {
+    grid-column: span 12;
+    width: 100%;
+  }
+
+  ${({ theme }) => theme.mediaQueries.nav} {
+    & > div {
+      grid-column: span 13;
+    }
+  }
+`
+
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  padding-top: 12px;
+  font-size: 12px;
+
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
+`
+
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 18px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 24px;
   }
 `
 
@@ -80,29 +101,29 @@ const Home: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
-    <Page>
+    <PageHome>
       <Hero>
-        <Heading as="h1" size="xl" mb="24px" color="secondary">
-          {TranslateString(576, 'PancakeSwap')}
-        </Heading>
-        <Text>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</Text>
+        <HeadingStyle>{TranslateString(576, 'PancakeSwap')}</HeadingStyle>
+        <TextStyle>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</TextStyle>
       </Hero>
-      <div>
+      <CardBlock>
         <Cards>
           <FarmStakingCard />
           <LotteryCard />
         </Cards>
-        <CTACards>
-          <EarnAPYCard />
-          <EarnAssetCard />
-          <WinCard />
-        </CTACards>
-        <Cards>
-          <CakeStats />
-          <TotalValueLockedCard />
-        </Cards>
-      </div>
-    </Page>
+        <CardRight>
+          <CTACards>
+            <EarnAPYCard />
+            <EarnAssetCard />
+            <WinCard />
+          </CTACards>
+          <STATCards>
+            <CakeStats />
+            <TotalValueLockedCard />
+          </STATCards>
+        </CardRight>
+      </CardBlock>
+    </PageHome>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button, useModal } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Button, useModal } from 'uikit-sotatek'
 import { getCakeAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
@@ -14,33 +14,85 @@ import { useApproval } from 'hooks/useApproval'
 import PurchaseWarningModal from 'views/Lottery/components/TicketCard/PurchaseWarningModal'
 import CakeWinnings from './CakeWinnings'
 import LotteryJackpot from './LotteryJackpot'
+import { lightColors, darkColors, baseColors } from '../../../style/Color'
 
 const StyledLotteryCard = styled(Card)`
-  background-image: url('/images/ticket-bg.svg');
-  background-repeat: no-repeat;
-  background-position: top right;
-  min-height: 376px;
+  min-height: 169px;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  margin-bottom: 32px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 
-const Block = styled.div`
-  margin-bottom: 16px;
+const BlockCakeWinnings = styled.div`
+  display: flex;
+  justify-content: space-between;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+`
+const BlockLotteryJackpot = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction: column;
+    padding-top: 8px;
+  }
 `
 
 const CardImage = styled.img`
-  margin-bottom: 16px;
+  margin-right: 16px;
 `
 
 const Label = styled.div`
-  color: ${({ theme }) => theme.colors.textSubtle};
-  font-size: 14px;
+  font-size: 10px;
+  padding-right: 20px;
+  color: ${baseColors.primary};
+  font-weight: 600px;
+  line-height: 2.3;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+    padding-right: 50px;
+  }
 `
 
 const Actions = styled.div`
   display: flex;
-  margin-top: 24px;
-  button {
-    flex: 1 0 50%;
+  justify-self: center;
+  margin-bottom: 0;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    justify-self: end;
+    padding-top: 8px;
   }
+`
+
+const HeadingStyle = styled(Heading)`
+  font-size: 20px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: bold;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 26px;
+  }
+`
+
+const ButtonStyle = styled(Button)`
+  font-size: 13px;
+  padding: 8px;
+  background: ${baseColors.primary};
+  border-radius: 10px;
+  &:hover {
+    background: #5ba7ec !important;
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
+const HeadingBlock = styled.div`
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const FarmedStakingCard = () => {
@@ -70,15 +122,26 @@ const FarmedStakingCard = () => {
   const renderLotteryTicketButtonBuyOrApprove = () => {
     if (!allowance.toNumber()) {
       return (
-        <Button fullWidth disabled={requestedApproval} onClick={handleApprove}>
+        <ButtonStyle
+          fullWidth
+          disabled={requestedApproval}
+          onClick={handleApprove}
+          style={{ width: '50%', marginLeft: '4px' }}
+        >
           {TranslateString(494, 'Approve CAKE')}
-        </Button>
+        </ButtonStyle>
       )
     }
     return (
-      <Button id="dashboard-buy-tickets" variant="secondary" onClick={onPresentBuy} disabled={lotteryHasDrawn}>
+      <ButtonStyle
+        id="dashboard-buy-tickets"
+        variant="secondary"
+        onClick={onPresentBuy}
+        disabled={lotteryHasDrawn}
+        style={{ width: '50%' }}
+      >
         {TranslateString(558, 'Buy Tickets')}
-      </Button>
+      </ButtonStyle>
     )
   }
 
@@ -86,28 +149,30 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledLotteryCard>
-      <CardBody>
-        <Heading size="xl" mb="24px">
-          {TranslateString(550, 'Your Lottery Winnings')}
-        </Heading>
-        <CardImage src="/images/ticket.svg" alt="cake logo" width={64} height={64} />
-        <Block>
+      <CardBody style={{ padding: '18px 28px 28px' }}>
+        <HeadingBlock>
+          <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
+          <HeadingStyle>{TranslateString(550, 'Your Lottery Winnings')}</HeadingStyle>
+        </HeadingBlock>
+
+        <BlockCakeWinnings>
           <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
           <CakeWinnings />
-        </Block>
-        <Block>
+        </BlockCakeWinnings>
+        <BlockLotteryJackpot>
           <Label>{TranslateString(554, 'Total jackpot this round')}:</Label>
           <LotteryJackpot />
-        </Block>
+        </BlockLotteryJackpot>
+
         <Actions>
-          <Button
+          <ButtonStyle
             id="dashboard-collect-winnings"
             disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
             onClick={handleClaim}
-            style={{ marginRight: '8px' }}
+            style={{ marginRight: '8px', width: '50%' }}
           >
             {TranslateString(556, 'Collect Winnings')}
-          </Button>
+          </ButtonStyle>
           {renderLotteryTicketButtonBuyOrApprove()}
         </Actions>
       </CardBody>

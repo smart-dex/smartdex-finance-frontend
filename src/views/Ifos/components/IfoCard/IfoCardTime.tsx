@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, Text } from '@pancakeswap-libs/uikit'
+import { Link } from 'uikit-sotatek'
 import { IfoStatus } from 'config/constants/types'
 import getTimePeriods from 'utils/getTimePeriods'
 import useI18n from 'hooks/useI18n'
+import { lightColors, darkColors } from 'style/Color'
 
 export interface IfoCardTimeProps {
   isLoading: boolean
@@ -18,14 +19,18 @@ const Details = styled.div`
   display: flex;
   height: 24px;
   justify-content: center;
-  margin-bottom: 24px;
 `
 
 const Countdown = styled.div`
-  color: ${({ theme }) => theme.colors.secondary};
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
   text-align: center;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 16px;
+    line-height: 20px;
+  }
 `
 
 const IfoCardTime: React.FC<IfoCardTimeProps> = ({ isLoading, status, secondsUntilStart, secondsUntilEnd, block }) => {
@@ -41,7 +46,7 @@ const IfoCardTime: React.FC<IfoCardTimeProps> = ({ isLoading, status, secondsUnt
   if (countdownToUse <= 0) {
     return (
       <Details>
-        <Text bold>{TranslateString(388, 'Finished!')}</Text>
+        <Countdown>{TranslateString(388, 'Finished!')}</Countdown>
       </Details>
     )
   }

@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading } from '@pancakeswap-libs/uikit'
+import { lightColors, darkColors } from 'style/Color'
+import { Heading } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import NftList from './components/NftList'
 
-const StyledHero = styled.div`
-  border-bottom: 2px solid ${({ theme }) => theme.colors.textSubtle};
-  margin-bottom: 24px;
-  padding-bottom: 32px;
+const StyledHero = styled(Heading)`
+  margin-bottom: 12px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
 `
 
 const Collectibles = () => {
@@ -16,10 +20,8 @@ const Collectibles = () => {
 
   return (
     <Page>
-      <StyledHero>
-        <Heading as="h1" size="xxl" color="secondary">
-          {TranslateString(999, 'Pancake Collectibles')}
-        </Heading>
+      <StyledHero as="h1" size="xxl" color="secondary">
+        {TranslateString(999, 'Pancake Collectibles')}
       </StyledHero>
       <NftList />
     </Page>
