@@ -8,11 +8,11 @@ interface StyledTitleProps {
 const CardTitle = styled.div<StyledTitleProps>`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   font-weight: bold;
-  font-size: 24px;
   line-height: 29px;
   margin-bottom: 18px;
-  @media (max-width: 968px) {
-    font-size: 20px;
+  font-size: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 24px;
   }
 `
 

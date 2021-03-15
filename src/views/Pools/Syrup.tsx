@@ -112,23 +112,23 @@ const Farm: React.FC = () => {
 const HeadingPage = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
   font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 29px;
-  @media (max-width: 968px) {
-    font-size: 16px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 24px;
   }
 `
 
 const DescriptionHeading = styled.div`
   font-family: Montserrat;
-  font-size: 16px;
-  @media (max-width: 968px) {
-    font-size: 13px;
-  }
+  font-size: 13px;
   line-height: 143%;
   text-align: center;
   letter-spacing: -0.03em;
   color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 const ContentHeader = styled.div`
   margin-bottom: 21px;

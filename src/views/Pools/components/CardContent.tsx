@@ -6,10 +6,12 @@ const CardContent: React.FC = ({ children }) => <StyledCardContent>{children}</S
 const StyledCardContent = styled.div`
   display: flex;
   flex-direction: row;
-  @media (max-width: 968px) {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
   align-items: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-wrap: nowrap;
+  }
+  
 `
 
 export default CardContent
