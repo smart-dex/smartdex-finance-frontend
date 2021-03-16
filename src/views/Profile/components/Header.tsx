@@ -27,9 +27,9 @@ const ProfileHeader = () => {
           <TextDescription>
             {TranslateString(999, 'Check your stats and collect achievements')}
           </TextDescription>
-          {!hasProfile && <ButtonEditProfile onClick={onEditProfileModal}>{TranslateString(999, 'Edit Profile')}</ButtonEditProfile>}
+          {hasProfile && <ButtonEditProfile onClick={onEditProfileModal}>{TranslateString(999, 'Edit Profile')}</ButtonEditProfile>}
         </StyledText>
-        {!canClaim && (
+        {canClaim && (
           <Button variant="tertiary" onClick={onPresentClaimGiftModal} startIcon={<Won />}>
             {TranslateString(999, "You've got a gift to claim!")}
           </Button>
