@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text, Flex } from 'uikit-sotatek'
 import { Team } from 'config/constants/types'
+import { darkColors, lightColors, brandColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
-import ComingSoon from 'views/Profile/components/ComingSoon'
+// import ComingSoon from 'views/Profile/components/ComingSoon'
 import StatBox from 'views/Profile/components/StatBox'
 
 interface TeamCardProps {
@@ -19,44 +20,56 @@ const Wrapper = styled.div`
 `
 
 const Avatar = styled.img`
+  border: 5px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  height: 64px;
-  margin-top: -12px;
-  width: 64px;
+  min-height: 64px;
+  min-width: 64px;
   border: solid 2px white;
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    height: 128px;
-    margin-top: -24px;
-    width: 128px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    height: 120px;
+    width: 120px;
   }
 `
 
 const AvatarWrap = styled.div`
-  margin-bottom: 8px;
-  text-align: center;
+  justify-items: center;
+  margin: auto 0;
 `
 
 const StyledCard = styled(Card)`
   overflow: visible;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  box-shadow: 50px 38px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
+  border-radius: 40px;
 `
 
-const StyledCardHeader = styled(CardHeader)<{ bg: string }>`
-  position: relative;
-  background: url(${({ bg }) => bg});
-  background-repeat: no-repeat;
-  background-position: center;
+const StyledCardHeader = styled(CardHeader)`
+  background: linear-gradient(91.67deg, #0085ff 5.33%, #7e86ff 104.39%);
   background-size: cover;
-  border-radius: 32px 32px 0 0;
-  padding-top: 0;
-  text-align: center;
+  border-radius: 40px 40px 0px 0px;
+  display: flex;
 `
 
 const TeamName = styled(Heading).attrs({ as: 'h2' })`
-  font-size: 24px;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
 
-  ${({ theme }) => theme.mediaQueries.md} {
-    font-size: 40px;
+  line-height: 39px;
+  color: ${brandColors.white};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 32px;
+  }
+`
+const TeamDescription = styled(Text)`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 143%;
+  letter-spacing: -0.03em;
+  color: ${({ theme }) => (theme.isDark ? brandColors.white : 'rgba(255, 255, 255, 0.8)')};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
   }
 `
 
@@ -72,6 +85,29 @@ const StatRow = styled.div`
     margin-bottom: 32px;
   }
 `
+const StyedTextName = styled(Flex)`
+  flex-direction: colum;
+`
+
+const ComingSoon = styled.div`
+  margin-top: 16px;
+  font-size: 10px;
+  line-height: 17px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
+`
+const TextAchievements = styled(Heading)`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+  }
+`
 
 const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
   const TranslateString = useI18n()
@@ -79,14 +115,16 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
   return (
     <Wrapper>
       <StyledCard>
-        <StyledCardHeader bg={`/images/teams/${team.background}`}>
+        <StyledCardHeader>
           <AvatarWrap>
             <Avatar src={`/images/teams/${team.images.md}`} alt="team avatar" />
           </AvatarWrap>
-          <TeamName color={team.textColor}>{team.name}</TeamName>
-          <Text as="p" color={team.textColor}>
-            {team.description}
-          </Text>
+          <StyedTextName ml="36px" flexDirection="column" justifyContent="center">
+            <TeamName color={team.textColor}>{team.name}</TeamName>
+            <TeamDescription fontSize="14px" as="p" color={team.textColor}>
+              {team.description}
+            </TeamDescription>
+          </StyedTextName>
         </StyledCardHeader>
         <CardBody>
           <StatRow>
@@ -98,8 +136,8 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
               isDisabled
             />
           </StatRow>
-          <Heading as="h3">{TranslateString(1044, 'Team Achievements')}</Heading>
-          <ComingSoon />
+          <TextAchievements as="h3">{TranslateString(1044, 'Team Achievements')}</TextAchievements>
+          <ComingSoon>{TranslateString(350, 'Coming Soon')}</ComingSoon>
         </CardBody>
       </StyledCard>
     </Wrapper>

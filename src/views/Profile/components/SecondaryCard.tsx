@@ -1,9 +1,10 @@
+import { lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from 'uikit-sotatek'
 
 const SecondaryCard = styled(Text)`
-  border: 2px solid ${({ theme }) => theme.colors.tertiary};
-  border-radius: 16px;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.secondaryCard : lightColors.secondaryCard)};
+  border-radius: 20px;
 `
 
 SecondaryCard.defaultProps = {

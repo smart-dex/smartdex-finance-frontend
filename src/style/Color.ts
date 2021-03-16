@@ -12,6 +12,7 @@ export const baseColors = {
 
 export const brandColors = {
   binance: '#F0B90B',
+  white: '#FFFFFF',
 }
 
 export const lightColors = {
@@ -57,6 +58,12 @@ export const lightColors = {
   backAvatar: 'rgba(255, 161, 78, 0.1)',
   backgroundLastest: '#FFF7E7',
   backgroundArrow: '#E2F5EA',
+  borderNoProfileCard: '#FF6970',
+  boxShadowNoProfileCard: 'rgba(255, 105, 112, 0.14)',
+  buttonSetup: 'rgba(255, 105, 112, 0.24)',
+  boxShadowActiveCard: 'rgba(83, 185, 234, 0.14)',
+  lineDriver: '#EFEFF1',
+  secondaryCard: '#E2E2E8',
 }
 
 export const darkColors = {
@@ -105,4 +112,10 @@ export const darkColors = {
   backButtonTogger: '#2a3245',
   backgroundLastest: 'rgba(233, 244, 252, 0.1)',
   backgroundArrow: 'rgba(226, 245, 234, 0.1)',
+  borderNoProfileCard: 'rgba(255, 105, 112, 0.5)',
+  boxShadowNoProfileCard: 'rgba(255, 105, 112, 0.14)',
+  buttonSetup: 'rgba(255, 105, 112, 0.24)',
+  boxShadowActiveCard: 'rgba(83, 185, 234, 0.14)',
+  lineDriver: 'rgba(239, 239, 241, 0.1)',
+  secondaryCard: '#41465A',
 }

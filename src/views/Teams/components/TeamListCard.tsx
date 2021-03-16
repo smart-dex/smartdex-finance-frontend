@@ -1,30 +1,45 @@
 import React from 'react'
-import styled, { DefaultTheme } from 'styled-components'
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Button, Card, CommunityIcon, Flex, Heading, PrizeIcon, Text } from '@pancakeswap-libs/uikit'
+import { Button, Flex, Heading, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
+import { darkColors, lightColors } from 'style/Color'
 import { Team } from 'config/constants/types'
+import StyedCard from './Card'
 
 interface TeamCardProps {
   rank: number
   team: Team
 }
 
-const getBackground = (theme: DefaultTheme) => {
-  if (theme.isDark) {
-    return 'linear-gradient(139.73deg, #142339 0%, #24243D 47.4%, #37273F 100%)'
+const getBackground = (rank) => {
+  switch (rank) {
+    case 1: {
+      return '/images/teams/rank/rank_1.svg'
+      break
+    }
+    case 2: {
+      return '/images/teams/rank/rank_2.svg'
+      break
+    }
+    case 3: {
+      return '/images/teams/rank/rank_3.svg'
+      break
+    }
+    default:
+      return '/images/teams/rank/rank_3.svg'
   }
-
-  return 'linear-gradient(139.73deg, #E6FDFF 0%, #EFF4F5 46.87%, #F3EFFF 100%)'
 }
 
 const TeamRank = styled.div`
-  align-self: stretch;
-  background: ${({ theme }) => getBackground(theme)};
-  flex: none;
   padding: 16px 0;
   text-align: center;
-  width: 56px;
+  min-width: 40px;
+  position: absolute;
+  left: 2rem;
+  top: 0px;
+  background-position: top left;
+  background-repeat: not-repeat;
 `
 
 const Body = styled.div`
@@ -33,12 +48,6 @@ const Body = styled.div`
   flex: 1;
   flex-direction: column;
   padding: 24px;
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    align-items: center;
-    flex-direction: row;
-    font-size: 40px;
-  }
 `
 
 const Info = styled.div`
@@ -47,47 +56,76 @@ const Info = styled.div`
 
 const Avatar = styled.img`
   border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 `
 
-const TeamName = styled(Heading).attrs({ as: 'h3' })`
+const TeamName = styled(Heading)`
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+  }
+`
+
+const TeamDescription = styled(Text)`
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 143%;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: rgba(95, 94, 118, 0.7);
+  margin-bottom: 29px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 12px;
+  }
+`
+const StyledTeamRankText = styled(Text)`
+  font-style: normal;
+  font-weight: 600;
   font-size: 24px;
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    font-size: 40px;
-  }
-`
-
-const MobileAvatar = styled.div`
-  flex: none;
-  margin-right: 8px;
-
-  ${Avatar} {
-    height: 64px;
-    width: 64px;
-  }
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    display: none;
-  }
+  color: #ffffff;
 `
 
 const DesktopAvatar = styled.div`
-  display: none;
-
-  ${({ theme }) => theme.mediaQueries.md} {
-    display: block;
-    margin-left: 24px;
-
-    ${Avatar} {
-      height: 128px;
-      width: 128px;
-    }
+  display: block;
+  height: 87px;
+  width: 87px;
+  margin: 16px auto;
+`
+const PrizeText = styled(Text)`
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 29px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 24px;
   }
 `
-
-const StyledTeamCard = styled(Card)`
+const StyledButtonSeeMore = styled(Button)`
+  width: 121px;
+  height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 150px;
+    height: 56px;
+  }
+  border: 1px solid #0085ff;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0085ff;
   display: flex;
-  margin-bottom: 16px;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: #0085ff;
+    border: 1px solid #0085ff;
+    color: #ffffff;
+  }
 `
 
 const TeamCard: React.FC<TeamCardProps> = ({ rank, team }) => {
@@ -95,44 +133,42 @@ const TeamCard: React.FC<TeamCardProps> = ({ rank, team }) => {
   const avatar = <Avatar src={`/images/teams/${team.images.md}`} alt="team avatar" />
 
   return (
-    <StyledTeamCard>
-      <TeamRank>
-        <Text bold fontSize="24px">
+    <StyedCard>
+      <TeamRank style={{ backgroundImage: `url(${getBackground(rank)})` }}>
+        <StyledTeamRankText bold fontSize="24px">
           {rank}
-        </Text>
+        </StyledTeamRankText>
       </TeamRank>
+      <DesktopAvatar>{avatar}</DesktopAvatar>
       <Body>
         <Info>
-          <Flex alignItems="center" mb="16px">
-            <MobileAvatar>{avatar}</MobileAvatar>
+          <Flex alignItems="center" mb="16px" justifyContent="center">
+            {/* <MobileAvatar>{avatar}</MobileAvatar> */}
             <TeamName>{team.name}</TeamName>
           </Flex>
-          <Text as="p" color="textSubtle" pr="24px" mb="16px">
-            {team.description}
-          </Text>
-          <Flex>
-            <Flex>
-              {/* alignSelf for Safari fix */}
-              <PrizeIcon width="24px" mr="8px" style={{ alignSelf: 'center' }} />
-              <Text fontSize="24px" bold>
+          <TeamDescription as="p">{team.description}</TeamDescription>
+          <Flex justifyContent="space-around" mb="32px">
+            <Flex flexDirection="column" alignItems="center">
+              <img src="/images/teams/icon/prize-icon.svg" alt="prize-icon" />
+              <PrizeText fontSize="16px" bold>
                 {team.points.toLocaleString()}
-              </Text>
+              </PrizeText>
             </Flex>
-            <Flex ml="24px">
-              {/* alignSelf for Safari fix */}
-              <CommunityIcon width="24px" mr="8px" style={{ alignSelf: 'center' }} />
-              <Text fontSize="24px" bold>
+            <Flex flexDirection="column" alignItems="center">
+              <img src="/images/teams/icon/community-icon.svg" alt="community-icon" />
+              <PrizeText fontSize="16px" bold>
                 {team.users.toLocaleString()}
-              </Text>
+              </PrizeText>
             </Flex>
           </Flex>
+          <Flex justifyContent="center">
+            <StyledButtonSeeMore as={Link} to={`/teams/${team?.id}`}>
+              {TranslateString(1042, 'See More')}
+            </StyledButtonSeeMore>
+          </Flex>
         </Info>
-        <Button as={Link} to={`/teams/${team?.id}`} variant="secondary" size="sm">
-          {TranslateString(1042, 'See More')}
-        </Button>
-        <DesktopAvatar>{avatar}</DesktopAvatar>
       </Body>
-    </StyledTeamCard>
+    </StyedCard>
   )
 }
 
