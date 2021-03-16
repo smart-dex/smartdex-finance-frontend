@@ -7,8 +7,6 @@ import { darkColors, lightColors } from 'style/Color'
 import HeaderWrapper from 'views/Profile/components/HeaderWrapper'
 import NoProfileCard from './NoProfileCard'
 
-
-
 const TeamHeader = () => {
   const TranslateString = useI18n()
   const { isInitialized, profile } = useProfile()
@@ -22,19 +20,19 @@ const TeamHeader = () => {
           {TranslateString(1082, 'Teams & Profiles')}
         </StyledHeading>
         <StyledDescription>
-          {TranslateString( 
+          {TranslateString(
             999,
             'Show off your stats and collectibles with your unique profile. Team features will be revealed soon!',
           )}
         </StyledDescription>
       </HeaderWrapper>
-      <Line/>
+      <Line />
     </>
   )
 }
 const Line = styled.div`
-  margin-top:20px;
-  border: 1px dashed ${({theme})=>(theme.isDark? darkColors.lineDriver:lightColors.lineDriver)};
+  margin-top: 20px;
+  border: 1px dashed ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
   margin-bottom: 29px;
 `
 
@@ -43,9 +41,9 @@ const StyledHeading = styled(Heading)`
   font-weight: bold;
   font-size: 18px;
   line-height: 29px;
-  color: ${({theme})=>(theme.isDark? darkColors.textMenuLeft:lightColors.textMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
   text-align: center;
-  margin-bottom:14px;
+  margin-bottom: 14px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 24px;
   }
@@ -57,11 +55,10 @@ const StyledDescription = styled(Text)`
   line-height: 143%;
   text-align: center;
   letter-spacing: -0.03em;
-  color:${({theme})=>(theme.isDark? darkColors.textDescriptionMenu:lightColors.textDescriptionMenu)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size:16px;
+    font-size: 16px;
   }
-
 `
 
 export default TeamHeader

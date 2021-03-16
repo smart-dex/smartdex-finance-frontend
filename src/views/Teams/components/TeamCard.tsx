@@ -2,12 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text, Flex } from 'uikit-sotatek'
 import { Team } from 'config/constants/types'
-import { darkColors,lightColors,brandColors } from 'style/Color'
+import { darkColors, lightColors, brandColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
 // import ComingSoon from 'views/Profile/components/ComingSoon'
 import StatBox from 'views/Profile/components/StatBox'
-
-
 
 interface TeamCardProps {
   team: Team
@@ -40,13 +38,13 @@ const AvatarWrap = styled.div`
 
 const StyledCard = styled(Card)`
   overflow: visible;
-  border: 1px solid ${({theme})=>(theme.isDark? darkColors.borderCard : lightColors.borderCard)};
-  box-shadow: 50px 38px 102px ${({theme})=>(theme.isDark? darkColors.cardShadow : lightColors.cardShadow)};
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  box-shadow: 50px 38px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
   border-radius: 40px;
 `
 
 const StyledCardHeader = styled(CardHeader)`
-  background: linear-gradient(91.67deg, #0085FF 5.33%, #7E86FF 104.39%);
+  background: linear-gradient(91.67deg, #0085ff 5.33%, #7e86ff 104.39%);
   background-size: cover;
   border-radius: 40px 40px 0px 0px;
   display: flex;
@@ -54,11 +52,11 @@ const StyledCardHeader = styled(CardHeader)`
 
 const TeamName = styled(Heading).attrs({ as: 'h2' })`
   font-size: 16px;
-  margin-bottom:8px;
+  margin-bottom: 8px;
   font-weight: bold;
 
   line-height: 39px;
-  color: ${ brandColors.white};
+  color: ${brandColors.white};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 32px;
   }
@@ -69,7 +67,7 @@ const TeamDescription = styled(Text)`
   font-size: 10px;
   line-height: 143%;
   letter-spacing: -0.03em;
-  color:  ${({theme})=>(theme.isDark? brandColors.white : 'rgba(255, 255, 255, 0.8)')};
+  color: ${({ theme }) => (theme.isDark ? brandColors.white : 'rgba(255, 255, 255, 0.8)')};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
   }
@@ -88,24 +86,24 @@ const StatRow = styled.div`
   }
 `
 const StyedTextName = styled(Flex)`
-  flex-direction:  colum;
+  flex-direction: colum;
 `
 
 const ComingSoon = styled.div`
   margin-top: 16px;
   font-size: 10px;
   line-height: 17px;
-  color:  ${({theme})=>(theme.isDark? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
   }
-  `
-const TextAchievements= styled(Heading)`
+`
+const TextAchievements = styled(Heading)`
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 22px;
-  color: ${({theme})=>(theme.isDark? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
   }
@@ -121,9 +119,9 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
           <AvatarWrap>
             <Avatar src={`/images/teams/${team.images.md}`} alt="team avatar" />
           </AvatarWrap>
-          <StyedTextName ml='36px' flexDirection='column' justifyContent='center'>
+          <StyedTextName ml="36px" flexDirection="column" justifyContent="center">
             <TeamName color={team.textColor}>{team.name}</TeamName>
-            <TeamDescription fontSize='14px' as="p" color={team.textColor}>
+            <TeamDescription fontSize="14px" as="p" color={team.textColor}>
               {team.description}
             </TeamDescription>
           </StyedTextName>
@@ -139,9 +137,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
             />
           </StatRow>
           <TextAchievements as="h3">{TranslateString(1044, 'Team Achievements')}</TextAchievements>
-          <ComingSoon>
-           {TranslateString(350, 'Coming Soon')}
-          </ComingSoon>
+          <ComingSoon>{TranslateString(350, 'Coming Soon')}</ComingSoon>
         </CardBody>
       </StyledCard>
     </Wrapper>

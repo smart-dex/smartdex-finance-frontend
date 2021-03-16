@@ -10,7 +10,6 @@ import { useTeam } from 'state/hooks'
 import TeamCard from './components/TeamCard'
 import TeamHeader from './components/TeamHeader'
 
-
 const Team = () => {
   const { id: idStr }: { id: string } = useParams()
   const id = Number(idStr)
@@ -32,7 +31,7 @@ const Team = () => {
       <Flex mb="24px">
         <Link to="/teams">
           <Flex alignItems="center">
-            <img src="/images/teams/icon/back-card-team.svg" alt="back-icon"/>
+            <img src="/images/teams/icon/back-card-team.svg" alt="back-icon" />
             <StyledTextBack>{TranslateString(1038, 'Teams Overview')}</StyledTextBack>
           </Flex>
         </Link>
@@ -42,13 +41,12 @@ const Team = () => {
   )
 }
 const StyledTextBack = styled(Text)`
-font-weight: 600;
-line-height: 20px;
-color: #50B0FC;
-font-size: 12px;
-${({ theme }) => theme.mediaQueries.nav} {
-  font-size: 16px;
-}
-
+  font-weight: 600;
+  line-height: 20px;
+  color: #50b0fc;
+  font-size: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 export default Team
