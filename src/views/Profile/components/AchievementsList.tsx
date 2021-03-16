@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Flex, Heading } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
+import { darkColors, lightColors } from 'style/Color'
 import { useAchievements } from 'state/hooks'
 import AchievementCard from './AchievementCard'
+
 
 const Grid = styled.div`
   display: grid;
@@ -28,13 +30,22 @@ const AchievementsList = () => {
       </Grid>
       {achievements.length === 0 && (
         <Flex alignItems="center" justifyContent="center" style={{ height: '64px' }}>
-          <Heading as="h5" size="md" color="textDisabled">
+          <StyledText>
             {TranslateString(999, 'No achievments yet!')}
-          </Heading>
+          </StyledText>
         </Flex>
       )}
     </>
   )
 }
+const StyledText= styled(Heading)`
+font-weight: bold;
+font-size: 10px;
+line-height: 22px;
+color: ${({ theme }) => (theme.isDark ? darkColors.textComingSoon : lightColors.textComingSoon)};
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 18px;
+}
+`
 
 export default AchievementsList
