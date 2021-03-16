@@ -17,10 +17,11 @@ const Wrapper = styled(Flex)`
   svg {
     margin-right: 0.25rem;
   }
-  width: 200px;
-  @media (max-width: 968px) {
-    margin-bottom: 16px;
-    min-width: 200px;
+  margin-bottom: 16px;
+  min-width: 200px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 200px;
+    margin-bottom: 0px;
   }
   align-items: center;
 `
@@ -39,11 +40,11 @@ const MultiplierTag = styled(Tag)`
 const HeadingCard = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   margin-bottom: 10px;
-  front-size: 24px;
   font-weight: bold;
   line-height: 29px;
-  @media (max-width: 968px) {
-    front-size: 20px;
+  front-size: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    front-size: 24px;
   }
 `
 

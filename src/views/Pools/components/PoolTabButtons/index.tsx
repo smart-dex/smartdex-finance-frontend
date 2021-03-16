@@ -35,6 +35,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `
 
 const ToggleWrapper = styled.div`
@@ -42,16 +43,16 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 32px;
-
+  margin-bottom: 16px;
   ${Text} {
     margin-left: 13px;
-    font-size: 16px;
     line-height: 143%;
     letter-spacing: -0.03em;
-    @media (max-width: 968px) {
-      font-size: 13px;
-    }
+    font-size: 13px;
     color: ${({ theme }) => (theme.isDark ? darkColors.stakedOnly : lightColors.stakedOnly)};
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
   }
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`
@@ -59,16 +60,18 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
-  width: 135px;
-  @media (max-width: 968px) {
-    width: 100px;
-    font-size: 13px;
-  }
-  font-size: 16px;
+  width: 100px;
+  font-size: 13px;
   line-height: 20px;
   font-weight: 400;
+  
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    width: 135px;
+  }
 `
 const ButtonMenuStyle = styled.div`
+  margin-bottom: 16px;
   border-radius: 50px;
   > div {
     border-radius: 50px;

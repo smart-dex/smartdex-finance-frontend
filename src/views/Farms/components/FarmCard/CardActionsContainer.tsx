@@ -19,28 +19,32 @@ const Action = styled.div`
   display: flex;
   flex-grow: 2;
   align-items: center;
-  margin-left: 16px;
-  @media (max-width: 968px) {
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: normal;
-    margin-left: 0px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: normal;
+  margin-left: 0px;
+   ${({ theme }) => theme.mediaQueries.nav} {
+    margin-left: 16px;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
+ 
 `
 const ButtonAction = styled(Flex)`
   flex-grow: 2;
   flex-direction: column;
-  margin-left: 25px;
-  @media (max-width: 968px) {
-    margin-top: 16px;
-    margin-left: 0px;
+  margin-top: 16px;
+  margin-left: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-left: 25px;
+    margin-top: 0px;
   }
 `
 const StyledGroupButton = styled(Flex)`
   flex-wrap: wrap;
-  justify-content: space-between;
-  @media (max-width: 968px) {
-    justify-content: space-around;
+  justify-content: space-around;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    justify-content: space-between;
   }
 `
 
@@ -49,7 +53,7 @@ const FarmStakedText = styled(Text)`
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 `
 const ButtonDetail = styled(Button)`
   border: 1px solid ${baseColors.primary};
@@ -109,7 +113,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   }, [onApprove])
 
   const renderApprovalOrStakeButton = () => {
-    return isApproved ? (
+    return !isApproved ? (
       <StakeAction
         stakedBalance={stakedBalance}
         tokenBalance={tokenBalance}
@@ -132,7 +136,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
           {lpName} {TranslateString(1074, 'Staked')}
         </FarmStakedText>
         <StyledGroupButton>
-          {!account ? <UnlockButton style={{ maxWidth: '143px' }} /> : renderApprovalOrStakeButton()}
+          {!account ? <UnlockButton style={{ maxWidth: '143px' }}  mt="10px" mb="10px"/> : renderApprovalOrStakeButton()}
           <ButtonDetail onClick={changeOpenDetail} style={{ minWidth: '143px' }} mt="10px" mb="10px">
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </ButtonDetail>

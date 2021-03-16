@@ -14,13 +14,13 @@ export interface ExpandableSectionProps {
 
 const Wrapper = styled.div`
   margin-top: 24px;
-  float: right;
-  width: 25%;
-  @media (max-width: 968px) {
-    float: none;
-    width: 100%;
-  }
   margin-bottom: 24px;
+  float: none;
+  width: 100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    float: right;
+    width: 25%;
+  }
 `
 
 const StyledLinkExternal = styled(LinkExternal)`
