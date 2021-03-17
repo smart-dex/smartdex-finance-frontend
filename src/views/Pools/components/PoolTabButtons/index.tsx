@@ -64,7 +64,7 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   font-size: 13px;
   line-height: 20px;
   font-weight: 400;
-  
+
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     width: 135px;

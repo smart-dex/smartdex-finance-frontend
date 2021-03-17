@@ -23,12 +23,11 @@ const Action = styled.div`
   flex-wrap: wrap;
   align-items: normal;
   margin-left: 0px;
-   ${({ theme }) => theme.mediaQueries.nav} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     margin-left: 16px;
     flex-direction: row;
     flex-wrap: nowrap;
   }
- 
 `
 const ButtonAction = styled(Flex)`
   flex-grow: 2;
@@ -136,7 +135,11 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
           {lpName} {TranslateString(1074, 'Staked')}
         </FarmStakedText>
         <StyledGroupButton>
-          {!account ? <UnlockButton style={{ maxWidth: '143px' }}  mt="10px" mb="10px"/> : renderApprovalOrStakeButton()}
+          {!account ? (
+            <UnlockButton style={{ maxWidth: '143px' }} mt="10px" mb="10px" />
+          ) : (
+            renderApprovalOrStakeButton()
+          )}
           <ButtonDetail onClick={changeOpenDetail} style={{ minWidth: '143px' }} mt="10px" mb="10px">
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </ButtonDetail>

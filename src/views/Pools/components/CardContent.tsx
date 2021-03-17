@@ -11,7 +11,6 @@ const StyledCardContent = styled.div`
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-wrap: nowrap;
   }
-  
 `
 
 export default CardContent
