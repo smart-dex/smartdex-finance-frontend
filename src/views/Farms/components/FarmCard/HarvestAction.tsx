@@ -47,7 +47,7 @@ const BalanceCake = styled(Text)`
   line-height: 20px;
 `
 const StyledButton = styled(Button)`
-margin-top: 0px;
+  margin-top: 0px;
   margin-bottom: 0px;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-top: 10px;

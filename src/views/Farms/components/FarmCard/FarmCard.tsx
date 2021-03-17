@@ -39,7 +39,7 @@ const FCard = styled.div`
   max-width: 450px;
   min-width: 280px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    max-width:none;
+    max-width: none;
     min-width: 800px;
   }
 `

@@ -19,7 +19,7 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   max-width: 400px;
   min-width: 200px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    max-width:none;
+    max-width: none;
     min-width: 968px;
   }
 `
