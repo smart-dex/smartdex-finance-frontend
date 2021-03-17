@@ -113,7 +113,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   }, [onApprove])
 
   const renderApprovalOrStakeButton = () => {
-    return !isApproved ? (
+    return isApproved ? (
       <StakeAction
         stakedBalance={stakedBalance}
         tokenBalance={tokenBalance}
