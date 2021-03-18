@@ -81,7 +81,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const accountHasStakedBalance = stakedBalance?.toNumber() > 0
   const needsApproval = !accountHasStakedBalance && !allowance.toNumber() && !isBnbPool
   const isCardActive = isFinished && accountHasStakedBalance
-
+  
   const tags = {
     [PoolCategory.BINANCE]: BinanceTag,
     [PoolCategory.CORE]: CoreTag,
@@ -154,7 +154,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             />
           )}
         </StyledImagePool>
-
+              
         <StyledCoinEarned>
           <Label
             isFinished={isFinished && sousId !== 0}
@@ -193,7 +193,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </DetailPool>
 
         <StyledCardActions>
-          {!account && <UnlockButton />}
+          {!account && <UnlockButton style={{ maxWidth: '143px' }} />}
           {account &&
             (needsApproval && !isOldSyrup ? (
               <Button
@@ -222,11 +222,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 >
                   {`Unstake ${stakingTokenName}`}
                 </Button>
-
-                {isOldSyrup && (
-                  <IconButton disabled={isFinished && sousId !== 0} margin="10px" onClick={onPresentDeposit}>
-                    <AddIcon color="background" />
-                  </IconButton>
+                {!isOldSyrup && (
+                   <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit} variant="tertiary">
+                   <AddIcon color="primary" />
+                 </IconButton>
                 )}
               </>
             ))}
@@ -275,14 +274,15 @@ const PoolFinishedSash = styled.div`
 `
 
 const BalanceAndCompound = styled.div`
-  margin-top: 17px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  @media (max-width: 968px) {
-    padding: 10px;
-    margin-top: 0px;
+  padding: 10px;
+  margin-top: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 17px;
+    padding: 0px;
   }
 `
 
@@ -326,10 +326,10 @@ const StyledCoinEarned = styled.div`
   padding: 24px;
   text-align: center;
   flex-grow: 1;
-  @media (max-width: 968px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction:column;
   }
 `
 const DetailPool = styled.div`
@@ -347,11 +347,10 @@ const StyledCardActions = styled.div`
   align-items: center;
   padding: 24px;
   flex-grow: 1;
-  justify-content: space-between;
-  @media (max-width: 968px) {
-    justify-content: space-around;
+  justify-content: space-around;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    justify-content: space-between;
   }
-
   flex-wrap: wrap;
 `
 

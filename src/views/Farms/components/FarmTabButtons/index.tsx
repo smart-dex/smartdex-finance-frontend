@@ -36,21 +36,21 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 0px 16px;
   justify-content: center;
-  flex-warp: wrap;
+  flex-wrap: wrap;
 `
 
 const ToggleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 32px;
   margin-bottom: 16px;
+  margin-right: 32px;
   ${Text} {
     ${({ theme }) => theme.mediaQueries.nav} {
       font-size: 16px;
     }
     margin-left: 13px;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 143%;
     letter-spacing: -0.03em;
     font-size: 13px;
@@ -64,13 +64,12 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
   width: 100px;
   font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     width: 135px;
   }
-
-  line-height: 20px;
-  font-weight: 400;
 `
 const ButtonMenuStyle = styled.div`
   margin-bottom: 16px;

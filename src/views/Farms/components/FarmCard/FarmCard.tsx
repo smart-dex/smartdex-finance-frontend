@@ -36,8 +36,10 @@ const FCard = styled.div`
   }
   position: relative;
   margin-bottom: 28px;
+  max-width: 450px;
   min-width: 280px;
   ${({ theme }) => theme.mediaQueries.nav} {
+    max-width: none;
     min-width: 800px;
   }
 `
@@ -48,8 +50,6 @@ const ExpandingWrapper = styled.div<{ expanded: boolean }>`
 `
 const CardContent = styled(Flex)`
   display: flex;
-  flex-direction: row;
-  // align-items:center;
   padding: 50px;
   flex-direction: column;
   flex-wrap: wrap;
@@ -62,11 +62,11 @@ const CardContent = styled(Flex)`
 
 const InfoFarm = styled(Flex)`
   flex-grow: 1;
-  margin-left: 16px;
-  margin-right: 50px;
-  @media (max-width: 968px) {
-    margin-left: 0px;
-    margin-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-left: 16px;
+    margin-right: 50px;
   }
 `
 const InfoTextFarm = styled(Text)`
@@ -147,7 +147,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         />
         <InfoFarm justifyContent="center" flexDirection="column">
           {!removed && (
-            <Flex mb="28px" alignItems="center">
+            <Flex mb="16px" alignItems="center">
               <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
               <InfoTextFarm bold style={{ display: 'flex', alignItems: 'center' }}>
                 {farm.apy ? (

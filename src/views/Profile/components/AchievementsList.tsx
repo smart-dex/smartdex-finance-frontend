@@ -6,7 +6,6 @@ import { darkColors, lightColors } from 'style/Color'
 import { useAchievements } from 'state/hooks'
 import AchievementCard from './AchievementCard'
 
-
 const Grid = styled.div`
   display: grid;
   grid-gap: 16px;
@@ -30,22 +29,20 @@ const AchievementsList = () => {
       </Grid>
       {achievements.length === 0 && (
         <Flex alignItems="center" justifyContent="center" style={{ height: '64px' }}>
-          <StyledText>
-            {TranslateString(999, 'No achievments yet!')}
-          </StyledText>
+          <StyledText>{TranslateString(999, 'No achievments yet!')}</StyledText>
         </Flex>
       )}
     </>
   )
 }
-const StyledText= styled(Heading)`
-font-weight: bold;
-font-size: 10px;
-line-height: 22px;
-color: ${({ theme }) => (theme.isDark ? darkColors.textComingSoon : lightColors.textComingSoon)};
-${({ theme }) => theme.mediaQueries.nav} {
-  font-size: 18px;
-}
+const StyledText = styled(Heading)`
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 22px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textComingSoon : lightColors.textComingSoon)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+  }
 `
 
 export default AchievementsList

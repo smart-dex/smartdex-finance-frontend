@@ -16,10 +16,11 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   position: relative;
   margin: 0px auto;
   margin-bottom: 28px;
-  min-width: 968px;
-  @media (max-width: 968px) {
-    max-width: 400px;
-    min-width: 0;
+  max-width: 400px;
+  min-width: 200px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    max-width: none;
+    min-width: 968px;
   }
 `
 

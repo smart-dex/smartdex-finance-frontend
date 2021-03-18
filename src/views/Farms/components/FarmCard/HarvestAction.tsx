@@ -12,10 +12,11 @@ interface FarmCardActionsProps {
   pid?: number
 }
 const StyledHarvestAction = styled(Flex)`
+  justify-content: center;
   flex-grow: 1;
   flex-direction: column;
   margin-right: 25px;
-  @media (max-width: 968px) {
+  @media (max-width: 967px) {
     margin-top: 16px;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +37,7 @@ const CakeEarnText = styled(Text)`
   font-size: 16px;
   line-height: 20px;
   @media (max-width: 968px) {
-    margin-bottom: 21px;
+    margin-bottom: 10px;
   }
 `
 const BalanceCake = styled(Text)`
@@ -44,6 +45,14 @@ const BalanceCake = styled(Text)`
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
+`
+const StyledButton = styled(Button)`
+  margin-top: 0px;
+  margin-bottom: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 `
 
 const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
@@ -64,7 +73,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
         <BalanceCake>{displayBalance}</BalanceCake>
       </CakeEarn>
 
-      <Button
+      <StyledButton
         disabled={rawEarningsBalance === 0 || pendingTx}
         onClick={async () => {
           setPendingTx(true)
@@ -74,7 +83,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
         style={{ maxWidth: '143px' }}
       >
         {TranslateString(562, 'Harvest')}
-      </Button>
+      </StyledButton>
     </StyledHarvestAction>
   )
 }

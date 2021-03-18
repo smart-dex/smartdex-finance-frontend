@@ -64,7 +64,7 @@ export const lightColors = {
   boxShadowActiveCard: 'rgba(83, 185, 234, 0.14)',
   lineDriver: '#EFEFF1',
   secondaryCard: '#E2E2E8',
-  textComingSoon:'rgba(111, 108, 153, 0.5)'
+  textComingSoon: 'rgba(111, 108, 153, 0.5)',
 }
 
 export const darkColors = {
@@ -119,5 +119,5 @@ export const darkColors = {
   boxShadowActiveCard: 'rgba(83, 185, 234, 0.14)',
   lineDriver: 'rgba(239, 239, 241, 0.1)',
   secondaryCard: '#41465A',
-  textComingSoon:'rgba(255, 255, 255, 0.5)'
+  textComingSoon: 'rgba(255, 255, 255, 0.5)',
 }

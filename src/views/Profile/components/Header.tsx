@@ -8,7 +8,6 @@ import ClaimNftAndCakeModal, { useCanClaim } from './ClaimGiftModal'
 import HeaderWrapper from './HeaderWrapper'
 import EditProfileModal from './EditProfileModal'
 
-
 const ProfileHeader = () => {
   const TranslateString = useI18n()
   const { canClaim, checkClaimStatus } = useCanClaim()
@@ -50,11 +49,11 @@ const StyledHeader = styled(Flex)`
   flex-direction: column;
 `
 
-const StyledText= styled(Flex)`
+const StyledText = styled(Flex)`
   flex-direction: column;
   align-items: center;
 `
-const TextHeading= styled(Heading)`
+const TextHeading = styled(Heading)`
   font-weight: bold;
   font-size: 18px;
   line-height: 29px;
@@ -76,7 +75,7 @@ const TextDescription = styled(Heading)`
   }
 `
 
-const ButtonEditProfile= styled(Button)`
+const ButtonEditProfile = styled(Button)`
   margin-top: 12px;
   margin-bottom: 12px;
   width: 150px;
