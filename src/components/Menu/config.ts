@@ -100,7 +100,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Docs',
-        href: 'https://smart-dex29.gitbook.io/smart-dex/lottery/lottery-faq',
+        href: 'https://smart-dex29.gitbook.io/smart-dex/',
       },
       {
         label: 'Blog',
