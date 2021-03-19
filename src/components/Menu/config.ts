@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: process.env.REACT_APP_EXCHANGE_URL, // 'https://exchange.pancakeswap.finance',
+        href: `${process.env.REACT_APP_EXCHANGE_URL}/swap` ,
       },
       {
         label: 'Liquidity',
-        href: process.env.REACT_APP_LIQUIDITY_URL,
+        href: `${process.env.REACT_APP_EXCHANGE_URL}/pool` ,
       },
     ],
   },
@@ -65,19 +65,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Overview',
-        href: process.env.REACT_APP_OVERVIEW_URL,
+        href: `${process.env.REACT_APP_INFO_URL}/home`,
       },
       {
         label: 'Tokens',
-        href: process.env.REACT_APP_TOKENS_URL,
+        href: `${process.env.REACT_APP_INFO_URL}/tokens`,
       },
       {
         label: 'Pairs',
-        href: process.env.REACT_APP_PAIRS_URL,
+        href: `${process.env.REACT_APP_INFO_URL}/pairs`,
       },
       {
         label: 'Accounts',
-        href: process.env.REACT_APP_ACCOUNTS_URL,
+        href: `${process.env.REACT_APP_INFO_URL}/accounts`,
       },
     ],
   },
@@ -100,7 +100,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Docs',
-        href: 'https://smart-dex29.gitbook.io/smart-dex/',
+        href: process.env.REACT_APP_DOCS_URL,
       },
       {
         label: 'Blog',
