@@ -81,7 +81,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const accountHasStakedBalance = stakedBalance?.toNumber() > 0
   const needsApproval = !accountHasStakedBalance && !allowance.toNumber() && !isBnbPool
   const isCardActive = isFinished && accountHasStakedBalance
-
+  
   const tags = {
     [PoolCategory.BINANCE]: BinanceTag,
     [PoolCategory.CORE]: CoreTag,
@@ -154,7 +154,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             />
           )}
         </StyledImagePool>
-
+              
         <StyledCoinEarned>
           <Label
             isFinished={isFinished && sousId !== 0}
@@ -222,11 +222,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 >
                   {`Unstake ${stakingTokenName}`}
                 </Button>
-
-                {isOldSyrup && (
-                  <IconButton disabled={isFinished && sousId !== 0} margin="10px" onClick={onPresentDeposit}>
-                    <AddIcon color="background" />
-                  </IconButton>
+                {!isOldSyrup && (
+                   <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit} variant="tertiary">
+                   <AddIcon color="primary" />
+                 </IconButton>
                 )}
               </>
             ))}
@@ -330,7 +329,7 @@ const StyledCoinEarned = styled.div`
   display: flex;
   justify-content: space-between;
   ${({ theme }) => theme.mediaQueries.nav} {
-    display: none;
+    flex-direction:column;
   }
 `
 const DetailPool = styled.div`
