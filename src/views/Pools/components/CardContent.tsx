@@ -5,7 +5,7 @@ const CardContent: React.FC = ({ children }) => <StyledCardContent>{children}</S
 
 const StyledCardContent = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   ${({ theme }) => theme.mediaQueries.nav} {
