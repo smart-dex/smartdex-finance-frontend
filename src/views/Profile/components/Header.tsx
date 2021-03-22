@@ -8,7 +8,6 @@ import ClaimNftAndCakeModal, { useCanClaim } from './ClaimGiftModal'
 import HeaderWrapper from './HeaderWrapper'
 import EditProfileModal from './EditProfileModal'
 
-
 const ProfileHeader = () => {
   const TranslateString = useI18n()
   const { canClaim, checkClaimStatus } = useCanClaim()
@@ -18,25 +17,23 @@ const ProfileHeader = () => {
 
   return (
     <div>
-    <HeaderWrapper>
-      <StyledHeader>
-        <StyledText>
-          <TextHeading>
-            {TranslateString(999, 'Your Profile')}
-          </TextHeading>
-          <TextDescription>
-            {TranslateString(999, 'Check your stats and collect achievements')}
-          </TextDescription>
-          {!hasProfile && <ButtonEditProfile onClick={onEditProfileModal}>{TranslateString(999, 'Edit Profile')}</ButtonEditProfile>}
-        </StyledText>
-        {!canClaim && (
-          <Button variant="tertiary" onClick={onPresentClaimGiftModal} startIcon={<Won />}>
-            {TranslateString(999, "You've got a gift to claim!")}
-          </Button>
-        )}
-      </StyledHeader>
-    </HeaderWrapper>
-    <Line/>
+      <HeaderWrapper>
+        <StyledHeader>
+          <StyledText>
+            <TextHeading>{TranslateString(999, 'Your Profile')}</TextHeading>
+            <TextDescription>{TranslateString(999, 'Check your stats and collect achievements')}</TextDescription>
+            {!hasProfile && (
+              <ButtonEditProfile onClick={onEditProfileModal}>{TranslateString(999, 'Edit Profile')}</ButtonEditProfile>
+            )}
+          </StyledText>
+          {!canClaim && (
+            <Button variant="tertiary" onClick={onPresentClaimGiftModal} startIcon={<Won />}>
+              {TranslateString(999, "You've got a gift to claim!")}
+            </Button>
+          )}
+        </StyledHeader>
+      </HeaderWrapper>
+      <Line />
     </div>
   )
 }
@@ -50,11 +47,11 @@ const StyledHeader = styled(Flex)`
   flex-direction: column;
 `
 
-const StyledText= styled(Flex)`
+const StyledText = styled(Flex)`
   flex-direction: column;
   align-items: center;
 `
-const TextHeading= styled(Heading)`
+const TextHeading = styled(Heading)`
   font-weight: bold;
   font-size: 18px;
   line-height: 29px;
@@ -76,7 +73,7 @@ const TextDescription = styled(Heading)`
   }
 `
 
-const ButtonEditProfile= styled(Button)`
+const ButtonEditProfile = styled(Button)`
   margin-top: 12px;
   margin-bottom: 12px;
   width: 150px;

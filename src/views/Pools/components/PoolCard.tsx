@@ -193,7 +193,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </DetailPool>
 
         <StyledCardActions>
-          {!account && <UnlockButton style={{ maxWidth: '143px' }}/>}
+          {!account && <UnlockButton style={{ maxWidth: '143px' }} />}
           {account &&
             (needsApproval && !isOldSyrup ? (
               <Button

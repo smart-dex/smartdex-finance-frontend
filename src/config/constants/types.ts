@@ -31,6 +31,7 @@ export enum QuoteToken {
   'UST' = 'UST',
   'ETH' = 'ETH',
   'COMP' = 'COMP',
+  'MUN' = 'MUN',
 }
 
 export enum PoolCategory {
@@ -65,6 +66,7 @@ export interface PoolConfig {
   sousId: number
   image?: string
   tokenName: string
+  tokenAddress: string
   stakingTokenName: QuoteToken
   stakingLimit?: number
   stakingTokenAddress?: string
