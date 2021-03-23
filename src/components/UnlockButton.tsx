@@ -21,7 +21,6 @@ const ButtonStyle = styled(Button)`
     padding-right: 36px;
   }
 `
-
 const UnlockButton = (props) => {
   const TranslateString = useI18n()
   const { connect, reset } = useWallet()
