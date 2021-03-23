@@ -14,7 +14,7 @@ const TicketsList = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textDescriptionMenu)};
 `
 const ButtonStyle = styled(Button)`
-  font-size:  ;
+  font-size: 13px;
   padding: 8px;
   background: ${baseColors.primary};
   border-radius: 10px;
