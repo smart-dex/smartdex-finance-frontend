@@ -17,6 +17,9 @@ interface Props {
 }
 
 const StyledFooter = styled.div<{ isFinished: boolean }>`
+  width:100%;
+  order: 6;
+  border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   padding: 24px 30px 24px 30px;
   // ${({ theme }) => theme.mediaQueries.nav} {

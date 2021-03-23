@@ -6,6 +6,7 @@ interface StyledTitleProps {
 }
 
 const CardTitle = styled.div<StyledTitleProps>`
+  background: ${({ isFinished }) => isFinished ? '#17C267' : ''};
   position: relative;
   height: 60px;
   width: 200px;
@@ -13,6 +14,7 @@ const CardTitle = styled.div<StyledTitleProps>`
   border-left: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
+    width: 200px;
   }
 `
 
