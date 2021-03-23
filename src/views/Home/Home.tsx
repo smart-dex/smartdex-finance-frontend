@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
+import { Heading, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
@@ -13,90 +13,58 @@ import WinCard from 'views/Home/components/WinCard'
 import { lightColors, darkColors } from '../../style/Color'
 
 const PageHome = styled(Page)`
+  padding-top: 0px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    padding-top: 24px;
+    padding-top: 30px;
   }
 `
-
 const Hero = styled.div`
   margin: auto;
-  padding-top: 5px;
-  padding-bottom: 45px;
+  padding-bottom: 35px;
   text-align: center;
 `
-
-const CardBlock = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const Cards = styled.div`
-  flex: 100%;
-  padding-right: 0px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-bottom: 24px;
-    flex: 40%;
-    padding-right: 24px;
-  }
-`
-const CardRight = styled.div`
-  flex: 100%;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-bottom: 24px;
-    flex: 60%;
-  }
-`
-
-const CTACards = styled(BaseLayout)`
-  align-items: start;
-  margin-bottom: 32px;
-
-  & > div {
-    grid-column: span 12;
-  }
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    & > div {
-      grid-column: span 4;
-    }
-  }
-`
-
-const STATCards = styled(BaseLayout)`
-  align-items: stretch;
-  justify-content: stretch;
-  margin-bottom: 32px;
-
-  & > div {
-    grid-column: span 12;
-    width: 100%;
-  }
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    & > div {
-      grid-column: span 13;
-    }
-  }
-`
-
-const TextStyle = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  padding-top: 12px;
-  font-size: 12px;
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 14px;
-  }
-`
-
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 24px;
+    line-height: 29px;
   }
 `
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 500;
 
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+`
+const CardBlock = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  ${({ theme }) => theme.mediaQueries.xl} {
+    grid-template-columns: repeat(12,1fr);
+    grid-gap: 20px;
+    align-items: start;
+  }
+`
+const Cards = styled.div`
+  flex: 100%;
+  ${({ theme }) => theme.mediaQueries.xl} {
+    flex: 38%;
+  }
+`
+const CardsMid = styled.div`
+  flex: 100%;
+  ${({ theme }) => theme.mediaQueries.xl} {
+    flex: 20%;
+  }
+`
 const Home: React.FC = () => {
   const TranslateString = useI18n()
 
@@ -111,17 +79,15 @@ const Home: React.FC = () => {
           <FarmStakingCard />
           <LotteryCard />
         </Cards>
-        <CardRight>
-          <CTACards>
-            <EarnAPYCard />
-            <EarnAssetCard />
-            <WinCard />
-          </CTACards>
-          <STATCards>
-            <CakeStats />
-            <TotalValueLockedCard />
-          </STATCards>
-        </CardRight>
+        <CardsMid>
+          <EarnAPYCard />
+          <EarnAssetCard />
+          <WinCard />
+        </CardsMid>
+        <Cards>
+          <CakeStats />
+          <TotalValueLockedCard />
+        </Cards>
       </CardBlock>
     </PageHome>
   )

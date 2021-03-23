@@ -13,9 +13,7 @@ import { lightColors, darkColors } from '../../../style/Color'
 const Block = styled.div`
   padding-top: 20px;
   display: flex;
-}
 `
-
 const TextStyle = styled(Text)`
   padding-top: 0px;
   font-size: 16px;
