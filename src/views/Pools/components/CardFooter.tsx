@@ -17,22 +17,22 @@ interface Props {
 }
 
 const StyledFooter = styled.div<{ isFinished: boolean }>`
-  border-top: 1px solid ${({ theme }) => (theme.isDark ? '#524B63' : '#E9EAEB')};
-  padding: 0 30px 24px 30px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    padding: 0 30px 24px 0px;
-  }
+  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
+  padding: 24px 30px 24px 30px;
+  // ${({ theme }) => theme.mediaQueries.nav} {
+  //   padding: 0 30px 24px 0px;
+  // }
 `
 
 const Details = styled.div`
-  margin-top: 24px;
-  float: none;
-  margin-bottom: 10px;
-  width: 100%;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    float: right;
-    width: 25%;
-  }
+  // margin-top: 24px;
+  // float: none;
+  // margin-bottom: 10px;
+  // width: 100%;
+  // ${({ theme }) => theme.mediaQueries.nav} {
+  //   float: right;
+  //   width: 25%;
+  // }
 `
 
 const Label = styled.div`
@@ -65,23 +65,23 @@ const CardFooter: React.FC<Props> = ({
     <StyledFooter isFinished={isFinished}>
       {isOpenDetail && (
         <Details>
-          <Flex justifyContent="space-between">
+          <Flex justifyContent="space-between" alignItems='center'>
             <LabelFooter isDisabled={isFinished}>{TranslateString(408, 'Total')}:</LabelFooter>
             <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(totalStaked)} />
           </Flex>
           {blocksUntilStart > 0 && (
-            <Flex justifyContent="space-between">
+            <Flex justifyContent="space-between" alignItems='center'>
               <LabelFooter isDisabled={isFinished}>{TranslateString(410, 'Start')}:</LabelFooter>
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
             </Flex>
           )}
           {blocksUntilStart === 0 && blocksRemaining > 0 && (
-            <Flex justifyContent="space-between">
+            <Flex justifyContent="space-between" alignItems='center'>
               <LabelFooter isDisabled={isFinished}>{TranslateString(410, 'End')}:</LabelFooter>
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
             </Flex>
           )}
-          <Flex justifyContent="space-between">
+          <Flex justifyContent="space-between" alignItems='center'>
             <TokenLink href={projectLink} target="_blank">
               {TranslateString(412, 'View project site')}
             </TokenLink>

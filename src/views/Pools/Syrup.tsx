@@ -13,6 +13,7 @@ import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useFarms, usePriceBnbBusd, usePools, usePriceEthBnb } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
+import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
 import PoolHeader from './components/PoolHeader'
 import Coming from './components/Coming'
@@ -91,7 +92,7 @@ const Farm: React.FC = () => {
         </ContentHeader>
         <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       </PoolHeader>
-
+      <FlexLayout>
       <Route exact path={`${path}`}>
         <>
           {stackedOnly
@@ -105,6 +106,7 @@ const Farm: React.FC = () => {
           <PoolCard key={pool.sousId} pool={pool} />
         ))}
       </Route>
+      </FlexLayout>
     </Page>
   )
 }

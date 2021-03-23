@@ -13,6 +13,9 @@ const ButtonStyle = styled(Button)`
   }
   margin-top: 10px;
   margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
 `
 
 const UnlockButton = (props) => {

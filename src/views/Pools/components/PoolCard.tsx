@@ -29,6 +29,7 @@ import HarvestButton from './HarvestButton'
 import CardFooter from './CardFooter'
 import CardContent from './CardContent'
 
+
 interface PoolWithApy extends Pool {
   apy: BigNumber
 }
@@ -125,25 +126,30 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
-        <CardContent>
-        {isFinished && sousId !== 0 && <PoolFinishedSash />}
-        {/* <StyledTag>
-          
-          </StyledTag> */}
+      <StyledCardName>
         <NamePool>
           <CardTitle isFinished={isFinished && sousId !== 0}>
-            <StyleNamePool> {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}</StyleNamePool>
-           
+            <StyleNamePool> {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}
+              <StyledTooltip>  {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}
+              </StyledTooltip>
+            </StyleNamePool>
             <StyledTriangle />
           </CardTitle>
           <StyledTag>
             <Tag />
           </StyledTag>
         </NamePool>
-
-      
-        <StyledCoinEarned>
-        <StyledImagePool>
+      </StyledCardName>
+      <CardContent>
+        {isFinished && sousId !== 0 && (
+          <>
+            <PoolFinishedSash />
+            <StyleNamePool> {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}</StyleNamePool>
+          </>
+        )
+        }
+        <StyleImgEared>
+          <StyledImagePool>
             <ImageCoin>
               <img
                 src={`/images/tokens/${image || tokenName}.png`}
@@ -163,26 +169,30 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               />
             )}
           </StyledImagePool>
-          <Label
-            isFinished={isFinished && sousId !== 0}
-            text={TranslateString(330, `${tokenName} EARNED`)}
-            colorLabel={baseColors.orange}
-          />
-          {!isOldSyrup ? (
-            <BalanceAndCompound>
-              <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} fontSize="24px" />
-              {sousId === 0 && account && harvest && (
-                <HarvestButton
-                  disabled={!earnings.toNumber() || pendingTx}
-                  text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
-                  onClick={onPresentCompound}
-                />
+          <StyledCoinEarned>
+
+            <Label
+              isFinished={isFinished && sousId !== 0}
+              text={TranslateString(330, `${tokenName} EARNED`)}
+              colorLabel={baseColors.orange}
+            />
+            {!isOldSyrup ? (
+              <BalanceAndCompound>
+                <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} fontSize="20px" />
+                {sousId === 0 && account && harvest && (
+                  <HarvestButton
+                    disabled={!earnings.toNumber() || pendingTx}
+                    text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
+                    onClick={onPresentCompound}
+                  />
+                )}
+              </BalanceAndCompound>
+            ) : (
+                <OldSyrupTitle hasBalance={accountHasStakedBalance} />
               )}
-            </BalanceAndCompound>
-          ) : (
-              <OldSyrupTitle hasBalance={accountHasStakedBalance} />
-            )}
-        </StyledCoinEarned>
+          </StyledCoinEarned>
+        </StyleImgEared>
+
 
         <DetailPool>
           <StyledDetails style={{ marginBottom: '26px' }}>
@@ -190,12 +200,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ? (
               '-'
             ) : (
-                <Balance fontSize="16px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
+                <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
               )}
           </StyledDetails>
           <StyledDetails>
             <StyleFlexDetail isFinished={isFinished}>{TranslateString(384, 'Your Stake')}:</StyleFlexDetail>
-            <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
+            <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
           </StyledDetails>
         </DetailPool>
 
@@ -205,7 +215,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             (needsApproval && !isOldSyrup ? (
               <Button
                 disabled={isFinished || requestedApproval}
-                margin="10px"
                 onClick={handleApprove}
                 style={{ maxWidth: '143px', minWidth: '120px' }}
               >
@@ -224,7 +233,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                         }
                         : onPresentWithdraw
                     }
-                    margin="10px"
+               
                     style={{ maxWidth: '143px', minWidth: '120px' }}
                   >
                     {`Unstake ${stakingTokenName}`}
@@ -237,7 +246,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 </>
               ))}
 
-          <ButtonDetail onClick={handleClick} margin="10px" style={{ minWidth: '143px' }}>
+          <ButtonDetail onClick={handleClick}  style={{ minWidth: '143px' }}>
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </ButtonDetail>
         </StyledCardActions>
@@ -254,6 +263,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         />
       )}
     </Card>
+
   )
 }
 
@@ -293,6 +303,10 @@ const StyledDetails = styled.div`
   align-items: center;
 `
 
+const StyledCardName = styled.div`
+
+`
+
 const NamePool = styled(Flex)`
   order: 1;
   height: 60px;
@@ -304,7 +318,6 @@ const ImageCoin = styled.div`
   margin: 0 auto;
 `
 const StyledImagePool = styled.div`
-  flex-grow: 1;
   order: 2;
   align-self: center;
   align-items: center;
@@ -315,21 +328,17 @@ const StyledCoinEarned = styled.div`
   order: 3;
   align-self: center;
   align-items: center;
-  min-width: 200px;
   padding: 24px;
   text-align: center;
-  flex-grow: 1;
   display: flex;
   justify-content: space-between;
+  flex-direction:column;
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction:column;
   }
 `
 const DetailPool = styled.div`
   order: 4;
-  flex-grow: 1;
-  min-width: 210px;
-  padding: 20px;
 `
 
 const StyledCardActions = styled.div`
@@ -339,10 +348,10 @@ const StyledCardActions = styled.div`
   align-self: center;
   align-items: center;
   padding: 24px;
-  flex-grow: 1;
+  width:100%;
   justify-content: space-around;
   ${({ theme }) => theme.mediaQueries.nav} {
-    justify-content: space-between;
+    // justify-content: space-between;
   }
   flex-wrap: wrap;
 `
@@ -356,7 +365,7 @@ const StyleFlexDetail = styled.div<{ isFinished: boolean }>`
       opacity: 0.5;
     `}
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
 `
 
@@ -399,20 +408,51 @@ const StyledTriangle = styled.div`
 const StyledTag = styled(Flex)`
   align-items: center;
   justify-content: flex-end;
-  background:  ${({ theme }) => (theme.isDark ? '#151C31' : '#E5E5E5' )};  
-  width: 199px;
+  background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : 'transparent')};  
+  width: 200px;
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
 `
 
-const StyleNamePool =styled.div`
+const StyleNamePool = styled.div`
+  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  overflow: hidden; 
   padding:24px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   font-weight: bold;
   line-height: 29px;
   font-size: 20px;
+  align-self: flex-start; 
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
   }
+  &:hover{
+    >div{
+      visibility: visible;
+    }
+  }
+ 
+`
+const StyledTooltip = styled.div`
+visibility: hidden;
+width: fit-content;
+top: -32px;
+background-color: black;
+color: #ffff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 18px;
+}
+`
+
+const StyleImgEared = styled(Flex)`
+  flex-wrap:wrap;
+  justify-content: center;
 `
 
 export default PoolCard

@@ -10,6 +10,7 @@ const CardTitle = styled.div<StyledTitleProps>`
   height: 60px;
   width: 200px;
   border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  border-left: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
   }
