@@ -144,17 +144,17 @@ const FarmedStakingCard = () => {
     <StyledFarmStakingCard>
       <CardBody>
         <HeadingBlock>
-          <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
+          <CardImage src="/images/pan-cake.png" alt="SDC logo" width={50} />
           <HeadingStyle>{TranslateString(542, 'Farms & Staking')}</HeadingStyle>
         </HeadingBlock>
 
         <BlockCakeHarvest>
-          <Label>{TranslateString(544, 'CAKE to Harvest')}:</Label>
+          <Label>{TranslateString(544, 'SDC to Harvest')}:</Label>
           <CakeHarvestBalance />
         </BlockCakeHarvest>
 
         <BlockCakeHarvest>
-          <Label>{TranslateString(546, 'CAKE in Wallet')}:</Label>
+          <Label>{TranslateString(546, 'SDC in Wallet')}:</Label>
           <CakeWalletBalance />
         </BlockCakeHarvest>
         <Actions>
@@ -167,7 +167,7 @@ const FarmedStakingCard = () => {
               style={{ width: '100%' }}
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting CAKE')
+                ? TranslateString(548, 'Collecting SDC')
                 : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
             </StyleButtonDisabled>
           ) : (

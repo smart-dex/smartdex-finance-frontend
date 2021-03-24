@@ -62,17 +62,17 @@ const CakeStats = () => {
   return (
     <StyledCakeStats>
       <CardBody>
-        <HeadingEarn mb="24px">{TranslateString(534, 'Cake Stats')}</HeadingEarn>
+        <HeadingEarn mb="24px">{TranslateString(534, 'SDC Stats')}</HeadingEarn>
         <Row>
-          <TextStyle>{TranslateString(536, 'Total CAKE Supply')}</TextStyle>
+          <TextStyle>{TranslateString(536, 'Total SDC Supply')}</TextStyle>
           {cakeSupply && <CardValue fontSize="24px" bold value={cakeSupply} />}
         </Row>
         <Row>
-          <TextStyle>{TranslateString(538, 'Total CAKE Burned')}</TextStyle>
+          <TextStyle>{TranslateString(538, 'Total SDC Burned')}</TextStyle>
           <CardValue fontSize="24px" decimals={0} bold value={getBalanceNumber(burnedBalance)} />
         </Row>
         <Row>
-          <TextStyle>{TranslateString(540, 'New CAKE/block')}</TextStyle>
+          <TextStyle>{TranslateString(540, 'New SDC/block')}</TextStyle>
           <CardValue fontSize="24px" decimals={0} bold value={25} />
         </Row>
       </CardBody>
