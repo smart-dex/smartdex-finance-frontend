@@ -31,14 +31,17 @@ const StyledHero = styled.div`
   margin-bottom: 32px;
 `
 const Container = styled.div`
-  margin-left: 120px;
+  
   margin-right: auto;
-  max-width: 1024px;
+  width: 100%;
+   
   padding-left: 16px;
   padding-right: 16px;
   ${({ theme }) => theme.mediaQueries.sm} {
     padding-left: 24px;
     padding-right: 24px;
+    max-width: 1024px;
+    margin-left: 120px;
   }
 `
 const Hero = () => {

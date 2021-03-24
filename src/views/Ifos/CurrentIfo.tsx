@@ -82,7 +82,7 @@ const WrapGridButton = styled('div')`
   display: flex;
   margin-bottom: 20px;
   & > a {
-    min-width: 120px;
+    min-width: 100px;
     max-width: 100%;
     margin-right: 5px;
   }
@@ -117,7 +117,6 @@ const LinkSecondary = styled(Link)`
   color: ${lightColors.buttonSecond};
   box-shadow:none;
   border: 1px solid ${lightColors.buttonSecond};
-
   padding:0 5px;
   &:hover{
     background-color:${lightColors.buttonSecond};

@@ -105,23 +105,38 @@ const UnlockButtonStyle = styled(UnlockButton)`
   ${ButtonPrimary}
 `
 const ButtonStyle = styled.div`
-button {
-  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
-  color: ${baseColors.primary};
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(239, 239, 239, 0.24);
-  height: 45px;
-  font-weight: 600;
-  font-size: 13px;
-  position: relative;
-  padding-right: 24px;
+  margin-bottom: 10px;
   width: 100%;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 16px;
-    height: 56px;
-    padding-right: 36px;
+  button {
+    background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+    color: ${baseColors.primary};
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(239, 239, 239, 0.24);
+    height: 45px;
+    font-weight: 600;
+    font-size: 13px;
+    position: relative;
+    padding-right: 24px;
+    
+    width: 100%;
+    
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+      height: 56px;
+      padding-right: 36px;
+      
+    }
+    ${({ theme }) => theme.mediaQueries.sm} {
+      font-size: 16px;
+      height: 56px;
+      padding-right: 36px;
+      margin-bottom: 0px;
+      
+    }
+    }
   }
-  }
+${({ theme }) => theme.mediaQueries.sm} {
+  width: 50%;
 }
 `
 const IconDirect = styled.img`
@@ -132,8 +147,8 @@ const IconDirect = styled.img`
 `
 const BoxIconDirect = styled.div`
   position: absolute;
-  left: 48%;
-  bottom: 50px;
+  left: 84%;
+  bottom: 11%;
   background: ${lightColors.buttonSecond};
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -143,6 +158,10 @@ const BoxIconDirect = styled.div`
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 36px;
     line-height: 56px;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    left: 48%;
+    bottom: 50px;
   }
 `
 
@@ -294,7 +313,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
         />
         <WrapButtonRow>
         {!account && 
-          <ButtonStyle style={{ width: '50%', marginLeft: '7px' }}>
+          <ButtonStyle style={{ marginLeft: '7px' }}>
             <UnlockButtonStyle fullWidth />
             <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
           </ButtonStyle>  }
