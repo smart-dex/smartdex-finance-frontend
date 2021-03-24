@@ -1,48 +1,61 @@
 import React, { useCallback, useRef } from 'react'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from 'uikit-sotatek'
 import { NavLink } from 'react-router-dom'
 import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
 import { useFarms, usePriceBnbBusd } from 'state/hooks'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
-import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 100%;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
-  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-`
-const NavLinkStyle = styled(NavLink)`
-  margin-top: 8px;
-  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
-  width: 30px;
-  height: 30px;
-  border-radius: 12px;
+  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
+  border-radius: 40px;
+  margin-bottom: 25px;
+  min-height: 203px;
+  padding-bottom: 30px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-top: 22%;
-    position: absolute;
-    bottom: 22px;
+    min-height: 255px;
+    margin-bottom: 20px;
+  }
+`
+const HeadingEarn = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+    line-height: 30px;
   }
 `
 const CardMidContent = styled(Heading)`
   line-height: 44px;
   font-weight: 600;
-  color: #17c267;
-  font-size: 22px;
+  color: ${baseColors.success};
+  font-size: 32px;
 `
-
-const HeadingEarn = styled(Heading)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-weight: 600;
-  font-size: 18px;
+const NavLinkStyle = styled(NavLink)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  position: relative;
+  margin-left: auto;
+  padding-top: 1px;
+  text-align: center;
+  position: absolute;
+  left: auto;
+  right: 24px;
+  bottom: 22px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    left: 24px;
+    right: auto;
+  }
 `
-
 const EarnAPYCard = () => {
   const TranslateString = useI18n()
   const farmsLP = useFarms()
@@ -110,7 +123,7 @@ const EarnAPYCard = () => {
         <Flex style={{ flexDirection: 'column' }}>
           <HeadingEarn>in Farms</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/farms" id="farm-apy-cta">
-            <ArrowForwardIcon color="primary" style={{ margin: '5px' }} />
+            <ArrowForwardIcon color="#17C267" width={18} style={{ margin: '5px' }} />
           </NavLinkStyle>
         </Flex>
       </CardBody>

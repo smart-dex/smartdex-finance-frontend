@@ -32,6 +32,111 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.MUN,
     quoteTokenAdresses: contracts.mun,
   },
+  {
+    pid: 2,
+    lpSymbol: 'WETH-BUSD LP',
+    lpAddresses: {
+      97: '0x31750f6cc548a7edcee6a980b21a7c2bf65275e5',
+      56: '',
+    },
+    tokenSymbol: 'BUSD',
+    tokenAddresses: {
+      97: '0xD1a4A72C351f9e51c4124040019Ba7266BBfE84A',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  {
+    pid: 3,
+    lpSymbol: 'BUSD-BNB2 LP',
+    lpAddresses: {
+      97: '0xddb7ab875Fc6AD980994DA33a36c5cc2Dc1FA666',
+      56: '',
+    },
+    tokenSymbol: 'BUSD',
+    tokenAddresses: {
+      97: '0xD1a4A72C351f9e51c4124040019Ba7266BBfE84A',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.bnb,
+  },
+  {
+    pid: 4,
+    lpSymbol: 'CAKE-BUSD LP',
+    lpAddresses: {
+      97: '0x29f7f2402b8946a6283543f920847384c28593ef',
+      56: '',
+    },
+    tokenSymbol: 'BUSD',
+    tokenAddresses: {
+      97: '0xD1a4A72C351f9e51c4124040019Ba7266BBfE84A',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  {
+    pid: 5,
+    lpSymbol: 'CAKE-BNB2 LP',
+    lpAddresses: {
+      97: '0xecfa56edadec8f6fc409a3a9ba90976e20648d48',
+      56: '',
+    },
+    tokenSymbol: 'CAKE',
+    tokenAddresses: {
+      97: '0x04e6407bf994D225Fd02a6f42e8C02ECD907033a',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.bnb,
+  },
+  {
+    pid: 6,
+    lpSymbol: 'ETH-BNB2 LP',
+    lpAddresses: {
+      97: '0x86bb00e9fb54c5226c765e427749603a20ab9ac7',
+      56: '',
+    },
+    tokenSymbol: 'ETH',
+    tokenAddresses: {
+      97: '0xbB3F4b50745c36C47A592dd78def97066C5E8EdC',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.bnb,
+  },
+  // {
+  //   pid: 0,
+  //   lpSymbol: 'CAKE',
+  //   lpAddresses: {
+  //     97: '0x9C21123D94b93361a29B2C2EFB3d5CD8B17e0A9e',
+  //     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+  //   },
+  //   tokenSymbol: 'SYRUP',
+  //   tokenAddresses: {
+  //     97: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+  //     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
+  // {
+  //   pid: 1,
+  //   lpSymbol: 'CAKE-BNB LP',
+  //   lpAddresses: {
+  //     97: '0xe70b7523f4bffa1f2e88d2ba709afd026030f412',
+  //     56: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6',
+  //   },
+  //   tokenSymbol: 'CAKE',
+  //   tokenAddresses: {
+  //     97: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+  //     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
   // {
   //   pid: 77,
   //   lpSymbol: 'DODO-BNB LP',

@@ -68,6 +68,7 @@ export const lightColors = {
   textIfolight:'#5F5E76',
   lightbt:'#E8E8EB',
   buttonSecond:'#0085FF',
+  btnDisabledBg: 'rgba(95, 94, 118, 0.1)',
 }
 
 export const darkColors = {
@@ -126,4 +127,5 @@ export const darkColors = {
   blackIfo:'rgba(255, 255, 255, 0.1)',
   txtTitledark:'rgba(255,255,255,0.87)',
   txtBlurbdark:'rgba(255,255,255,0.6)',
+  btnDisabledBg: 'rgba(232, 232, 235, 0.2)',
 }

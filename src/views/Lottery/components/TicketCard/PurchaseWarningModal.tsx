@@ -1,22 +1,34 @@
 import React from 'react'
+import { darkColors, lightColors, baseColors } from 'style/Color'
+import styled from 'styled-components'
 import { Button, Modal } from 'uikit-sotatek'
 import ModalActions from 'components/ModalActions'
-import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
-import { darkColors, lightColors, baseColors } from '../../../../style/Color'
 
+const TicketsList = styled.div`
+  text-align: left;
+  max-height: 400px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textDescriptionMenu)};
+`
 const ButtonStyle = styled(Button)`
   font-size: 13px;
   padding: 8px;
   background: ${baseColors.primary};
-  border-radius: 10px;
-  width: 100%;
+  width: 190px;
+  border-radius: 9px;
+  box-shadow: 0px 4px 10px rgba(64, 170, 255, 0.24);
   &:hover {
     background: #5ba7ec !important;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
+`
+const ModalActionsStyle = styled(ModalActions)`
+  text-align: center;
 `
 
 const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
@@ -36,17 +48,11 @@ const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
           'Buying tickets does not guarantee you will win anything. Please only participate once you understand the risks.',
         )}
       </TicketsList>
-      <ModalActions>
+      <ModalActionsStyle>
         <ButtonStyle onClick={onDismiss}>{TranslateString(476, 'I understand')}</ButtonStyle>
-      </ModalActions>
+      </ModalActionsStyle>
     </Modal>
   )
 }
-
-const TicketsList = styled.div`
-  text-align: left;
-  max-height: 400px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-`
 
 export default WarningModal

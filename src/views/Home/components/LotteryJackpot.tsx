@@ -1,18 +1,16 @@
 import React from 'react'
+import { darkColors, lightColors } from 'style/Color'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from 'uikit-sotatek'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalRewards } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'
 import { usePriceCakeBusd } from 'state/hooks'
 import { BigNumber } from 'bignumber.js'
 import CardBusdValue from './CardBusdValue'
-import { darkColors, lightColors } from '../../../style/Color'
 
 const TextCake = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  padding-bottom: 8px;
-  padding-right: 13px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   font-size: 16px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 24px;
@@ -21,9 +19,9 @@ const TextCake = styled(Text)`
 
 const Block = styled.div`
   display: flex;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 24px;
-  }
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: column;
 `
 
 const LotteryJackpot = () => {

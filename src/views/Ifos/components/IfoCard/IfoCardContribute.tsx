@@ -72,7 +72,6 @@ const IfoCardContribute: React.FC<Props> = ({
     return (
       <Button
         style={{width: '100%'}}
-        disabled={pendingTx || isFinished}
         onClick={async () => {
           try {
             setPendingTx(true)
