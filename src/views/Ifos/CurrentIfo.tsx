@@ -116,7 +116,8 @@ const LinkSecondary = styled(Link)`
   border-radius:28px;
   color: ${lightColors.buttonSecond};
   box-shadow:none;
-  border: 1px solid #0085FF;
+  border: 1px solid ${lightColors.buttonSecond};
+
   padding:0 5px;
   &:hover{
     background-color:${lightColors.buttonSecond};

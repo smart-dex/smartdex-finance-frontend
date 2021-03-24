@@ -9,6 +9,7 @@ export const baseColors = {
   arrowColor: '#d8f7e4',
   orange: '#FFA14E',
   colorbt:'#E8E8EB;'
+  
 }
 
 export const brandColors = {

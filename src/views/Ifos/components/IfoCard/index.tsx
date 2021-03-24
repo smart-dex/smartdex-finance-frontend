@@ -115,7 +115,7 @@ button {
   font-size: 13px;
   position: relative;
   padding-right: 24px;
-  width:100%;
+  width: 100%;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     height: 56px;
@@ -134,7 +134,7 @@ const BoxIconDirect = styled.div`
   position: absolute;
   left: 48%;
   bottom: 50px;
-  background: #0085FF;
+  background: ${lightColors.buttonSecond};
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 24px;
