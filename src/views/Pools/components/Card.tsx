@@ -6,8 +6,8 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   display: flex;
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   flex-direction: column;
-  // margin-bottom: 28px;
-  max-width: 400px;
+  min-height:413px;
+  max-width: 350px;
   min-width: 300px;
   ${({ theme }) => theme.mediaQueries.nav} {
     max-width: 400px;

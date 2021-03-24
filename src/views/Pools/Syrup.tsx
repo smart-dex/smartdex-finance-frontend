@@ -98,7 +98,6 @@ const Farm: React.FC = () => {
           {stackedOnly
             ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
             : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
-          <Coming />
         </>
       </Route>
       <Route path={`${path}/history`}>
@@ -107,6 +106,9 @@ const Farm: React.FC = () => {
         ))}
       </Route>
       </FlexLayout>
+      <Route exact path={`${path}`}>
+        <Coming />
+      </Route>
     </Page>
   )
 }
