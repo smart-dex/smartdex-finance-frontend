@@ -28,7 +28,7 @@ const UnlockButton = (props) => {
 
   return (
     <ButtonStyle onClick={onPresentConnectModal} {...props}>
-      {TranslateString(292, 'Unlock Wallet')}
+      {TranslateString(292, 'Unlock Wallet')} 
     </ButtonStyle>
   )
 }

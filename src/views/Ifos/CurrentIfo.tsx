@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Text, Heading, BaseLayout, Link, Card} from 'uikit-sotatek'
-import { baseColors, darkColors, lightColors } from 'style/Color'
+import { baseColors, brandColors, darkColors, lightColors } from 'style/Color'
 import { ChevronDown} from 'react-feather'
 import { ifosConfig } from 'config/constants'
 import useI18n from 'hooks/useI18n'
@@ -120,7 +120,7 @@ const LinkSecondary = styled(Link)`
   padding:0 5px;
   &:hover{
     background-color:${lightColors.buttonSecond};
-    color:#fff;
+    color:${brandColors.white};
   }
   ${({ theme }) => theme.mediaQueries.sm} {
     padding:0 20px;

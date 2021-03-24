@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { Card, CardRibbon, LinkExternal } from 'uikit-sotatek'
-import { darkColors, lightColors } from 'style/Color'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import { BSC_BLOCK_TIME } from 'config'
 import { Ifo, IfoStatus } from 'config/constants/types'
 import makeBatchRequest from 'utils/makeBatchRequest'
@@ -18,6 +18,7 @@ import IfoCardDetails from './IfoCardDetails'
 import IfoCardTime from './IfoCardTime'
 import IfoCardContribute from './IfoCardContribute'
 import { ButtonPrimary } from '../../../../style/Button'
+
 
 export interface IfoCardProps {
   ifo: Ifo
@@ -102,6 +103,47 @@ const LinkExternalStyle = styled(LinkExternal)`
 `
 const UnlockButtonStyle = styled(UnlockButton)`
   ${ButtonPrimary}
+`
+const ButtonStyle = styled.div`
+button {
+  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  color: ${baseColors.primary};
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(239, 239, 239, 0.24);
+  height: 45px;
+  font-weight: 600;
+  font-size: 13px;
+  position: relative;
+  padding-right: 24px;
+  width:100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    height: 56px;
+    padding-right: 36px;
+  }
+  }
+}
+`
+const IconDirect = styled.img`
+  width: 10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 16px;
+  }
+`
+const BoxIconDirect = styled.div`
+  position: absolute;
+  left: 48%;
+  bottom: 50px;
+  background: #0085FF;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 24px;
+  text-align: center;
+  line-height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 36px;
+    line-height: 56px;
+  }
 `
 
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
@@ -211,7 +253,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
 
   const isActive = state.status === 'live'
   const isFinished = state.status === 'finished'
-
+  
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
       <CardBody>
@@ -251,7 +293,11 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           totalAmount={state.totalAmount}
         />
         <WrapButtonRow>
-          {!account && <UnlockButtonStyle fullWidth />}
+        {!account && 
+          <ButtonStyle style={{ width: '50%', marginLeft: '7px' }}>
+            <UnlockButtonStyle fullWidth />
+            <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
+          </ButtonStyle>  }
           <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
         </WrapButtonRow>
       </CardBody>
