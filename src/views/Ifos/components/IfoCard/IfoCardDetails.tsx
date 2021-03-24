@@ -67,6 +67,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
     <>
       <StyledIfoCardDetails>
         <Item>
+        
           <Display>{TranslateString(582, 'Launch Time')}</Display>
           <Text>
             {launchDate},

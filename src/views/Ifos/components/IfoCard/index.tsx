@@ -26,11 +26,11 @@ export interface IfoCardProps {
 const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width:85%;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 40px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-  box-shadow: 50px 38px 102px rgba(0, 0, 0, 0.14);
+  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
 `
 const CardHeaderFlex = styled('div')`
   display: flex;
@@ -252,7 +252,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
         />
         <WrapButtonRow>
           {!account && <UnlockButtonStyle fullWidth />}
-          <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site')}</LinkExternalStyle>
+          <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
         </WrapButtonRow>
       </CardBody>
     </StyledIfoCard>

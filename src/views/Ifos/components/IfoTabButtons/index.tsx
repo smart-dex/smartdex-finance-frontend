@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     & a {
       height: 56px;
-      padding: 0 35px;
+      padding: 0 30px;
       font-size: 16px;
     }
   }

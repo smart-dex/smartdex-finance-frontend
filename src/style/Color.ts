@@ -8,6 +8,7 @@ export const baseColors = {
   warning: '#FFB237',
   arrowColor: '#d8f7e4',
   orange: '#FFA14E',
+  colorbt:'#E8E8EB;'
 }
 
 export const brandColors = {
@@ -65,6 +66,9 @@ export const lightColors = {
   lineDriver: '#EFEFF1',
   secondaryCard: '#E2E2E8',
   textComingSoon: 'rgba(111, 108, 153, 0.5)',
+  lighIfo: '#E9F4FC;',
+  textIfolight:'#5F5E76',
+  lightbt:'#E8E8EB',
 }
 
 export const darkColors = {
@@ -120,4 +124,7 @@ export const darkColors = {
   lineDriver: 'rgba(239, 239, 241, 0.1)',
   secondaryCard: '#41465A',
   textComingSoon: 'rgba(255, 255, 255, 0.5)',
+  blackIfo:'rgba(255, 255, 255, 0.1)',
+  txtTitledark:'rgba(255,255,255,0.87)',
+  txtBlurbdark:'rgba(255,255,255,0.6)',
 }

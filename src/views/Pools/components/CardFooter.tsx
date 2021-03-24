@@ -84,6 +84,7 @@ const CardFooter: React.FC<Props> = ({
           <Flex justifyContent="space-between">
             <TokenLink href={projectLink} target="_blank">
               {TranslateString(412, 'View project site')}
+              
             </TokenLink>
           </Flex>
         </Details>

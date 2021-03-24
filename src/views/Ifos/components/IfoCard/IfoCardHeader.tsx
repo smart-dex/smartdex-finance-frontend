@@ -18,7 +18,7 @@ const StyledIfoCardHeader = styled(Flex)`
 const Avatar = styled(Flex)`
   position: static;
   left: -80px;
-  top: 10px;
+  top: 0px;
   background: ${lightColors.backAvatar};
   width: 40px;
   height: 40px;

@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Heading, BaseLayout, Link, Card } from 'uikit-sotatek'
+import { Text, Heading, BaseLayout, Link, Card} from 'uikit-sotatek'
 import { baseColors, darkColors, lightColors } from 'style/Color'
+import { ChevronDown} from 'react-feather'
 import { ifosConfig } from 'config/constants'
 import useI18n from 'hooks/useI18n'
 import IfoCard from './components/IfoCard'
@@ -9,14 +10,15 @@ import Title from './components/Title'
 import IfoCards from './components/IfoCards'
 import { ButtonPrimary, ButtonSecondary } from '../../style/Button'
 
+
 const LaunchIfoCallout = styled(BaseLayout)`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 32px;
   margin: 0 auto;
   padding: 10px 0 50px;
-
-  ${({ theme }) => theme.mediaQueries.sm} {
+  width:85%;
+  ${({ theme }) => theme.mediaQueries.md} {
     grid-template-columns: 1fr 1fr;
   }
 `
@@ -61,7 +63,7 @@ const WrapCard = styled(Card)`
   ${({ theme }) => theme.mediaQueries.sm} {
     padding: 50px 36px 50px 50px;
   }
-  box-shadow: 50px 38px 102px rgba(0, 0, 0, 0.14);
+  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
 `
 const WrapHeading = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
@@ -82,15 +84,23 @@ const WrapGridButton = styled('div')`
   display: flex;
   margin-bottom: 20px;
   & > a {
-    width: 150px;
+    min-width: 120px;
     max-width: 100%;
-    margin-right: 20px;
+    margin-right: 5px;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    & > a {
+      min-width: 150px;
+      max-width: 100%;
+      margin-right: 20px;
+    }
   }
 `
 const WrapText = styled(Text)`
   font-weight: 500;
   font-size: 13px;
   line-height: 20px;
+  
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 14px;
@@ -99,13 +109,35 @@ const WrapText = styled(Text)`
 `
 const LinkPrimary = styled(Link)`
   ${ButtonPrimary}
+  border-radius:28px;
+  &:hover{
+    opacity:0.5;
+  }
 `
 const LinkSecondary = styled(Link)`
   ${ButtonSecondary}
+  border-radius:28px;
+  color: #0085FF;
+  box-shadow:none;
+  border: 1px solid #0085FF;
+  padding:0 5px;
+  &:hover{
+    background-color:#0085FF;
+    color:#fff;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    padding:0 20px;
+  }
 `
+
+
 const LinkPrimaryPd30 = styled(Link)`
   ${ButtonPrimary}
   padding: 0 30px;
+  border-radius:28px;
+  &:hover{
+    opacity:0.5;
+  }
 `
 const LinkButtonBorder = styled(Link)`
   color: #fff;
@@ -115,6 +147,7 @@ const LinkButtonBorder = styled(Link)`
   line-height: 20px;
   border-radius: 10px;
   justify-content: center;
+  margin-left:7px;
   &:hover {
     text-decoration: none;
   }
@@ -124,7 +157,6 @@ const LinkButtonBorder = styled(Link)`
     font-weight: normal;
   }
   padding: 0 30px;
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   color: ${baseColors.primary};
   border: 1px solid ${baseColors.primary};
   &:hover {
@@ -146,6 +178,7 @@ const StyleTitle = styled(Text)`
   }
 `
 
+
 const StyleList = styled(Text)`
   li {
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
@@ -161,14 +194,13 @@ const StyleList = styled(Text)`
   }
 `
 
-const TitleEnd = styled(Text)`
+  const TitleEnd = styled(Text)`
   @media (max-width: 767px) {
     h2 {
       font-weight: bold;
     }
   }
 `
-
 /**
  * Note: currently there should be only 1 active IFO at a time
  */
@@ -176,6 +208,7 @@ const activeIfo = ifosConfig.find((ifo) => ifo.isActive)
 
 const Ifo = () => {
   const TranslateString = useI18n()
+ 
 
   return (
     <div>
@@ -200,7 +233,9 @@ const Ifo = () => {
             </LinkPrimary>
             <LinkSecondary href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
               {TranslateString(1062, 'Get LP tokens')}
+              <ChevronDown />
             </LinkSecondary>
+            
           </WrapGridButton>
           <WrapHeading mb="16px">{TranslateString(600, 'During Sale')}:</WrapHeading>
           <StyleList>
@@ -219,7 +254,8 @@ const Ifo = () => {
           </StyleList>
           <Text as="div">
             <LinkButtonBorder href="https://docs.pancakeswap.finance/core-products/ifo-initial-farm-offering">
-              {TranslateString(610, 'Read more')}
+              {TranslateString(610, 'See more')}
+              
             </LinkButtonBorder>
           </Text>
         </WrapCard>
