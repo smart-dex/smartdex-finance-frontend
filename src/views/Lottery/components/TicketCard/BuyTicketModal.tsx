@@ -1,7 +1,8 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useMemo, useState } from 'react'
+import { lightColors, darkColors, baseColors, brandColors } from 'style/Color'
 import styled from 'styled-components'
-import { Button, Modal } from '@pancakeswap-libs/uikit'
+import { Button, Modal } from 'uikit-sotatek'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import TicketInput from 'components/TicketInput'
 import ModalActions from 'components/ModalActions'
@@ -74,27 +75,26 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         onChange={handleChange}
         max={fullBalance}
         symbol="TICKET"
-        availableSymbol="CAKE"
+        availableSymbol="SDC"
       />
       <div>
-        <Tips>{TranslateString(999, `1 Ticket = ${LOTTERY_TICKET_PRICE} CAKE`, { num: LOTTERY_TICKET_PRICE })}</Tips>
+        <Tips>{TranslateString(999, `1 Ticket = ${LOTTERY_TICKET_PRICE} SDC`, { num: LOTTERY_TICKET_PRICE })}</Tips>
       </div>
       <div>
         <Announce>
           {TranslateString(
             478,
-            'Ticket purchases are final. Your CAKE cannot be returned to you after buying tickets.',
+            'Ticket purchases are final. Your SDC cannot be returned to you after buying tickets.',
           )}
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} CAKE`)}</Final>
+        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} SDC`)}</Final>
       </div>
       <ModalActions>
-        <Button fullWidth variant="secondary" onClick={onDismiss}>
+        <StyleButtonCancel variant="secondary" onClick={onDismiss}>
           {TranslateString(462, 'Cancel')}
-        </Button>
-        <Button
+        </StyleButtonCancel>
+        <StyleButtonConfirm
           id="lottery-buy-complete"
-          fullWidth
           disabled={
             pendingTx ||
             parseInt(val) > Number(maxTickets) ||
@@ -109,7 +109,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
           }}
         >
           {pendingTx ? TranslateString(488, 'Pending Confirmation') : TranslateString(464, 'Confirm')}
-        </Button>
+        </StyleButtonConfirm>
       </ModalActions>
     </Modal>
   )
@@ -118,21 +118,45 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
 export default BuyTicketModal
 
 const Tips = styled.div`
-  margin-left: 0.4em;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  font-weight: 600;
   font-size: 14px;
-  font-weight: 600;
-  color: ${(props) => props.theme.colors.primary};
+  line-height: 17px;
+  margin-bottom: 9px;
 `
-
 const Final = styled.div`
-  margin-top: 1em;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  margin-top: 18px;
   text-align: center;
-  font-size: 20px;
   font-weight: 600;
-  color: ${(props) => props.theme.colors.primary};
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 10px;
 `
 const Announce = styled.div`
-  margin-top: 1em;
-  margin-left: 0.4em;
-  color: #ed4b9e;
+  color: ${lightColors.borderNoProfileCard};
+  font-size: 11px;
+  line-height: 13px;
+`
+const StyleButtonCancel = styled(Button)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorButtonCancel : lightColors.colorButtonCancel)};
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.bgButtonCancel : lightColors.bgButtonCancel)};
+  box-shadow:  ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(222, 222, 222, 0.24)')};
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 145px
+`
+const StyleButtonConfirm = styled(Button)`
+  color: ${brandColors.white};
+  background: ${baseColors.primary};
+  box-shadow:  0px 4px 10px rgba(222, 222, 222, 0.24);
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 145px
 `

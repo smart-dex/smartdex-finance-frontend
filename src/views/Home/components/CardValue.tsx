@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
+import { darkColors, lightColors } from 'style/Color'
 import styled from 'styled-components'
+import { Text } from 'uikit-sotatek'
 import { useCountUp } from 'react-countup'
-import { Text } from '@pancakeswap-libs/uikit'
-import { darkColors, lightColors } from '../../../style/Color'
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
