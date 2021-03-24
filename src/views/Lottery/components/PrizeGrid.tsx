@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
-import { Heading, Text } from '@pancakeswap-libs/uikit'
+import { Heading, Text } from 'uikit-sotatek'
 import { darkColors, lightColors } from '../../../style/Color'
 
 export interface PrizeGridProps {
@@ -12,39 +12,43 @@ export interface PrizeGridProps {
   twoTicketMatches?: number
   threeTicketMatches?: number
 }
-
 const Grid = styled.div<{ pastDraw?: boolean }>`
   display: grid;
   grid-template-columns: repeat(${(props) => (props.pastDraw ? 3 : 2)}, 1fr);
   grid-template-rows: repeat(4, auto);
 `
-
 const RightAlignedText = styled(Text)`
   text-align: right;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+   font-size: 14px;
+  }
 `
 
 const RightAlignedHeading = styled(Heading)`
   text-align: right;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
-
 const GridItem = styled.div<{ marginBottom?: string }>`
   margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : '10px')};
 `
-
 const PastDrawGridItem = styled(GridItem)`
   transform: translate(-40%, 0%);
 `
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 500;
+  font-size: 14px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
 `
 
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
-
 const PrizeGrid: React.FC<PrizeGridProps> = ({
   lotteryPrizeAmount = 0,
   pastDraw = false,
@@ -57,19 +61,18 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
   const twoMatchesAmount = +((lotteryPrizeAmount / 100) * 10).toFixed(0)
   const burnAmount = +((lotteryPrizeAmount / 100) * 20).toFixed(0)
   const TranslateString = useI18n()
-
   return (
     <Grid pastDraw={pastDraw}>
       <GridItem>
-        <TextStyle fontSize="14px">{TranslateString(756, 'No. Matched')}</TextStyle>
+        <TextStyle>{TranslateString(756, 'No. Matched')}</TextStyle>
       </GridItem>
       {pastDraw && (
         <PastDrawGridItem>
-          <RightAlignedText fontSize="14px">{TranslateString(754, 'Winners')}</RightAlignedText>
+          <RightAlignedText>{TranslateString(754, 'Winners')}</RightAlignedText>
         </PastDrawGridItem>
       )}
       <GridItem>
-        <RightAlignedText fontSize="14px">{TranslateString(752, 'Prize Pot')}</RightAlignedText>
+        <RightAlignedText>{TranslateString(752, 'Prize Pot')}</RightAlignedText>
       </GridItem>
       {/* 4 matches row */}
       <GridItem>
@@ -126,5 +129,4 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
     </Grid>
   )
 }
-
 export default PrizeGrid

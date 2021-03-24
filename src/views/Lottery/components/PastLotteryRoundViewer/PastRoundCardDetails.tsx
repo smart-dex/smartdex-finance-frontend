@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, CardBody, CardFooter, PancakeRoundIcon, TicketRound } from '@pancakeswap-libs/uikit'
+import { Heading, CardBody, CardFooter, PancakeRoundIcon, TicketRound } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { DataResponse } from 'utils/getLotteryRoundData'
 import LotteryCardHeading from '../LotteryCardHeading'
@@ -12,14 +12,12 @@ import { darkColors, lightColors } from '../../../../style/Color'
 interface PastRoundCardDetailsProps {
   data: DataResponse
 }
-
 const CardHeading = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `
-
 const TopLotteryBlock = styled.div`
   display: flex;
   justify-content: space-between;
@@ -27,20 +25,22 @@ const TopLotteryBlock = styled.div`
     flex-direction: column;
   }
 `
-
 const TopLotteryCardHeading = styled(LotteryCardHeading)`
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
 `
 
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 18px;
 `
 
 const CardBodyStyle = styled(CardBody)`
-  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 
+const CardFooterStyle = styled(CardFooter)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+`
 const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => {
   const TranslateString = useI18n()
 
@@ -55,7 +55,6 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
     match3Ticket,
     poolSize,
   } = data
-
   return (
     !data.error &&
     data && (
@@ -63,7 +62,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
         <CardBodyStyle>
           <CardHeading>
             <Timestamp timeValue={lotteryDate} />
-            <HeadingStyle size="md" mb="24px">
+            <HeadingStyle mb="24px">
               Round #{lotteryNumber}
             </HeadingStyle>
             <TopLotteryBlock>
@@ -82,7 +81,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
             </TopLotteryBlock>
           </CardHeading>
         </CardBodyStyle>
-        <CardFooter>
+        <CardFooterStyle>
           <PrizeGrid
             lotteryPrizeAmount={poolSize}
             jackpotMatches={jackpotTicket}
@@ -92,10 +91,9 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
             pastDraw
           />
           <PastLotteryActions contractLink={contractLink} lotteryNumber={lotteryNumber} />
-        </CardFooter>
+        </CardFooterStyle>
       </>
     )
   )
 }
-
 export default PastRoundCardDetails

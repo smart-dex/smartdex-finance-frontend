@@ -14,6 +14,7 @@ interface CardProps {
 }
 
 const StyledCard = styled(Card)<CardProps>`
+background: ${({ theme}) => theme.isDark ? darkColors.backIfo : lightColors.backIfo};
   ${(props) =>
     props.isSecondCard
       ? `  

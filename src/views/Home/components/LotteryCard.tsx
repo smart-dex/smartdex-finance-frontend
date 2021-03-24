@@ -130,7 +130,7 @@ const BoxIconDirect = styled.div`
   right: 0px;
   top: 0px;
   height: 100%;
-  background: #0085FF;
+  background: #0085ff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 24px;
@@ -141,6 +141,7 @@ const BoxIconDirect = styled.div`
     line-height: 60px;
   }
 `
+
 const FarmedStakingCard = () => {
   const lotteryHasDrawn = useGetLotteryHasDrawn()
   const [requesteClaim, setRequestedClaim] = useState(false)
@@ -171,7 +172,13 @@ const FarmedStakingCard = () => {
         <ButtonStyle
           fullWidth
           disabled={requestedApproval}
-          endIcon={!requestedApproval && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
+          endIcon={
+            !requestedApproval && (
+              <BoxIconDirect>
+                <IconDirect src="/images/home/icon-direct.svg" alt="" />
+              </BoxIconDirect>
+            )
+          }
           onClick={handleApprove}
           style={{ width: '50%', marginLeft: '7px' }}
         >
@@ -185,7 +192,13 @@ const FarmedStakingCard = () => {
         variant="secondary"
         onClick={onPresentBuy}
         disabled={lotteryHasDrawn}
-        endIcon={!lotteryHasDrawn && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
+        endIcon={
+          !lotteryHasDrawn && (
+            <BoxIconDirect>
+              <IconDirect src="/images/home/icon-direct.svg" alt="" />
+            </BoxIconDirect>
+          )
+        }
         style={{ width: '50%', marginLeft: '7px' }}
       >
         {TranslateString(558, 'Buy Tickets')}
@@ -217,7 +230,13 @@ const FarmedStakingCard = () => {
             id="dashboard-collect-winnings"
             disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
             onClick={handleClaim}
-            endIcon={!(getBalanceNumber(claimAmount) === 0 || requesteClaim) && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
+            endIcon={
+              !(getBalanceNumber(claimAmount) === 0 || requesteClaim) && (
+                <BoxIconDirect>
+                  <IconDirect src="/images/home/icon-direct.svg" alt="" />
+                </BoxIconDirect>
+              )
+            }
             style={{ marginRight: '7px', width: '50%' }}
           >
             {TranslateString(556, 'Collect Winnings')}
