@@ -77,7 +77,7 @@ const WrapButtonRow = styled('div')`
 const CardBody = styled('div')`
   padding: 25px;
   ${({ theme }) => theme.mediaQueries.sm} {
-    padding: 50px 80px 50px 123px;
+    padding: 50px 123px 50px 123px;
   }
 `
 const LinkExternalStyle = styled(LinkExternal)`

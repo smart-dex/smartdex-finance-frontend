@@ -10,7 +10,6 @@ import Title from './components/Title'
 import IfoCards from './components/IfoCards'
 import { ButtonPrimary, ButtonSecondary } from '../../style/Button'
 
-
 const LaunchIfoCallout = styled(BaseLayout)`
   display: grid;
   grid-template-columns: 1fr;
@@ -22,7 +21,6 @@ const LaunchIfoCallout = styled(BaseLayout)`
     grid-template-columns: 1fr 1fr;
   }
 `
-
 const List = styled.ul`
   color: ${({ theme }) => theme.colors.text};
   margin-bottom: 16px;
@@ -100,7 +98,6 @@ const WrapText = styled(Text)`
   font-weight: 500;
   font-size: 13px;
   line-height: 20px;
-  
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 14px;
@@ -117,20 +114,18 @@ const LinkPrimary = styled(Link)`
 const LinkSecondary = styled(Link)`
   ${ButtonSecondary}
   border-radius:28px;
-  color: #0085FF;
+  color: ${lightColors.buttonSecond};
   box-shadow:none;
   border: 1px solid #0085FF;
   padding:0 5px;
   &:hover{
-    background-color:#0085FF;
+    background-color:${lightColors.buttonSecond};
     color:#fff;
   }
   ${({ theme }) => theme.mediaQueries.sm} {
     padding:0 20px;
   }
 `
-
-
 const LinkPrimaryPd30 = styled(Link)`
   ${ButtonPrimary}
   padding: 0 30px;
@@ -151,11 +146,6 @@ const LinkButtonBorder = styled(Link)`
   &:hover {
     text-decoration: none;
   }
-  @media (max-width: 767px) {
-    height: 45px;
-    font-size: 13px;
-    font-weight: normal;
-  }
   padding: 0 30px;
   color: ${baseColors.primary};
   border: 1px solid ${baseColors.primary};
@@ -166,7 +156,6 @@ const LinkButtonBorder = styled(Link)`
     color: #fff;
   }
 `
-
 const StyleTitle = styled(Text)`
   h2 {
     color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
@@ -177,8 +166,6 @@ const StyleTitle = styled(Text)`
     }
   }
 `
-
-
 const StyleList = styled(Text)`
   li {
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
@@ -193,8 +180,7 @@ const StyleList = styled(Text)`
     }
   }
 `
-
-  const TitleEnd = styled(Text)`
+const TitleEnd = styled(Text)`
   @media (max-width: 767px) {
     h2 {
       font-weight: bold;
@@ -207,10 +193,9 @@ const StyleList = styled(Text)`
 const activeIfo = ifosConfig.find((ifo) => ifo.isActive)
 
 const Ifo = () => {
-  const TranslateString = useI18n()
- 
 
-  return (
+const TranslateString = useI18n()
+return (
     <div>
       <IfoCards isSingle>
         <IfoCard ifo={activeIfo} />
@@ -235,7 +220,6 @@ const Ifo = () => {
               {TranslateString(1062, 'Get LP tokens')}
               <ChevronDown />
             </LinkSecondary>
-            
           </WrapGridButton>
           <WrapHeading mb="16px">{TranslateString(600, 'During Sale')}:</WrapHeading>
           <StyleList>
@@ -255,7 +239,6 @@ const Ifo = () => {
           <Text as="div">
             <LinkButtonBorder href="https://docs.pancakeswap.finance/core-products/ifo-initial-farm-offering">
               {TranslateString(610, 'See more')}
-              
             </LinkButtonBorder>
           </Text>
         </WrapCard>
@@ -267,8 +250,7 @@ const Ifo = () => {
               </TitleEnd>
             </StyleTitle>
             <WrapText mb={3}>
-              {TranslateString(
-                514,
+              {TranslateString(514,
                 'Launch your project with PancakeSwap, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
               )}
             </WrapText>

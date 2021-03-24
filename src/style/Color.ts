@@ -31,9 +31,7 @@ export const lightColors = {
   textSubtle: '#6F6C99',
   borderColor: '#E2E2E8',
   card: '#FFFFFF',
-  gradients: {
-    bubblegum: 'linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)',
-  },
+  gradients: { bubblegum: 'linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)',} ,
   navThemeLeft: '#f9fcfe',
   textMenuLeft: '#5F5E76',
   textDescriptionMenu: 'rgba(95, 94, 118, 0.7)',
@@ -69,6 +67,7 @@ export const lightColors = {
   lighIfo: '#E9F4FC;',
   textIfolight:'#5F5E76',
   lightbt:'#E8E8EB',
+  buttonSecond:'#0085FF',
 }
 
 export const darkColors = {

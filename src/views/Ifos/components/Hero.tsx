@@ -5,7 +5,7 @@ import { Heading, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 
 const Title = styled(Heading).attrs({ as: 'h1' })`
-color: ${({ theme }) => (theme.isDark ? darkColors.txtTitledark: lightColors.textIfolight)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.txtTitledark: lightColors.textIfolight)};
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -14,22 +14,18 @@ color: ${({ theme }) => (theme.isDark ? darkColors.txtTitledark: lightColors.tex
     font-size: 36px;
     line-height: 44px;
     margin-bottom: 24px;
-   
   }
 `
-
 const Blurb = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark: lightColors.textIfolight)};
   font-size: 13px;
   font-weight: 500;
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 16px;
-   
-  }
+   }
 `
-
 const StyledHero = styled.div`
- background-color: ${({ theme }) => (theme.isDark ? darkColors.blackIfo : lightColors.lighIfo)};
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.blackIfo : lightColors.lighIfo)};
   padding-bottom: 40px;
   padding-top: 40px;
   margin-bottom: 32px;
@@ -45,9 +41,9 @@ const Container = styled.div`
     padding-right: 24px;
   }
 `
-
 const Hero = () => {
-  const TranslateString = useI18n()
+
+const TranslateString = useI18n()
 
   return (
     <StyledHero>
