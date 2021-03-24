@@ -66,6 +66,9 @@ export const lightColors = {
   secondaryCard: '#E2E2E8',
   textComingSoon: 'rgba(111, 108, 153, 0.5)',
   btnDisabledBg: 'rgba(95, 94, 118, 0.1)',
+  colorInput: 'rgba(95, 94, 118, 0.5)',
+  colorButtonCancel: '#616171',
+  bgButtonCancel: 'rgba(95, 94, 118, 0.2)',
 }
 
 export const darkColors = {
@@ -122,4 +125,7 @@ export const darkColors = {
   secondaryCard: '#41465A',
   textComingSoon: 'rgba(255, 255, 255, 0.5)',
   btnDisabledBg: 'rgba(232, 232, 235, 0.2)',
+  colorInput: 'rgba(255, 255, 255, 0.38)',
+  colorButtonCancel: 'rgba(255, 255, 255, 0.6)',
+  bgButtonCancel: '#2A3145',
 }
