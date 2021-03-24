@@ -418,6 +418,7 @@ const StyledTag = styled(Flex)`
 `
 
 const StyleNamePool = styled.div`
+  width:200px;
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   white-space: nowrap; 
   text-overflow: ellipsis;
