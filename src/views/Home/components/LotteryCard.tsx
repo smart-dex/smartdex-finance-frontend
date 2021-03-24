@@ -175,7 +175,7 @@ const FarmedStakingCard = () => {
           onClick={handleApprove}
           style={{ width: '50%', marginLeft: '7px' }}
         >
-          {TranslateString(494, 'Approve CAKE')}
+          {TranslateString(494, 'Approve SDC')}
         </ButtonStyle>
       )
     }
@@ -193,18 +193,18 @@ const FarmedStakingCard = () => {
     )
   }
 
-  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="CAKE" />)
+  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="SDC" />)
 
   return (
     <StyledLotteryCard>
       <CardBody>
         <HeadingBlock>
-          <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
+          <CardImage src="/images/pan-cake.png" alt="SDC logo" width={50} />
           <HeadingStyle>{TranslateString(550, 'Your Lottery Winnings')}</HeadingStyle>
         </HeadingBlock>
 
         <BlockCakeWinnings>
-          <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
+          <Label>{TranslateString(552, 'SDC to Collect')}:</Label>
           <CakeWinnings />
         </BlockCakeWinnings>
         <BlockLotteryJackpot>

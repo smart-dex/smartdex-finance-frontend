@@ -71,7 +71,7 @@ const Home: React.FC = () => {
   return (
     <PageHome>
       <Hero>
-        <HeadingStyle>{TranslateString(576, 'PancakeSwap')}</HeadingStyle>
+        <HeadingStyle>{TranslateString(576, 'SmartDEX')}</HeadingStyle>
         <TextStyle>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</TextStyle>
       </Hero>
       <CardBlock>
