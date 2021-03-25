@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Card, CardBody } from '@pancakeswap-libs/uikit'
+import { Card, CardBody } from 'uikit-sotatek'
 import { useWinningNumbers, useMatchingRewardLength } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
@@ -17,7 +17,7 @@ const WinningNumbers: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
-    <CardWrapper style={{ position: 'relative', marginTop: '4em' }}>
+    <CardWrapper>
       <CardStyle>
         <CardBody>
           <StyledCardContentInner>
@@ -36,12 +36,10 @@ const WinningNumbers: React.FC = () => {
                   </TicketNumberBox>
                 ))}
               </Row>
-
               <Link href="https://api.pancakeswap.com/api/lottery?page=0&pageSize=25" target="_blank">
                 {TranslateString(448, 'Export recent winning numbers')}
               </Link>
             </StyledCardHeader>
-
             <Column>
               <RowNoPadding>
                 <CenteredTextWithPadding>{TranslateString(442, 'Tickets matching 4 numbers:')}</CenteredTextWithPadding>
@@ -72,32 +70,48 @@ const WinningNumbers: React.FC = () => {
   )
 }
 
+const CardWrapper = styled.div`
+  position: relative;
+  margin-top: 30px;
+  
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 88px;
+  }
+`
+
 const CardStyle = styled(Card)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backgroundLastest : lightColors.backgroundLastest)};
+  padding: 12px;
 `
 
 const ImgStyle = styled.a`
-  display: none;
+  display: block;
+  text-align: center;
   ${({ theme }) => theme.mediaQueries.nav} {
     display: block;
     position: absolute;
     right: 2px;
-    top: -106px;
+    top: -80px;
   }
 `
 const Link = styled.a`
   margin-top: 1em;
   text-decoration: none;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : baseColors.orange)};
-  font-size: 16px;
+  color: ${baseColors.orange};
+  font-size: 14px;
   font-weight: bold;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+  
 `
 
 const Row = styled.div`
   margin-top: 1em;
-  align-items: center;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `
 
 const RowNoPadding = styled.div`
@@ -106,30 +120,38 @@ const RowNoPadding = styled.div`
   flex-direction: row;
   padding: 8px;
 `
-
 const Column = styled.div`
   margin-top: 1.8em;
   display: flex;
   flex-direction: column;
   margin-left: 0px;
+  align-items: center;
+  justify-content: center;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-left: 2.4em;
+    align-items: left;
+    justify-content: left;
   }
 `
 
 const CenteredText = styled.div`
   text-align: center;
-  align-items: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-top: 8px;
+    font-size: 24px;
+  }
 `
 
 const CenteredTextWithPadding = styled.div`
   text-align: center;
   align-items: center;
-  padding-left: 2px;
   padding-right: 2px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 
 const TicketNumberBox = styled.div`
@@ -141,15 +163,11 @@ const TicketNumberBox = styled.div`
   font-weight: 600;
   margin-bottom: 7px;
   width: 40px;
-
-  @media (min-width: 768px) {
-    font-size: 40px;
-    margin-right: 20px;
+  margin-right: 8px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-right: 16px;
     width: 60px;
-  }
-
-  @media (max-width: 600px) {
-    margin: 4px;
+    height: 60px;
   }
 `
 
@@ -158,24 +176,22 @@ const StyledCardHeader = styled.div`
   flex-direction: column;
   margin-left: 8px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: 24px;
+    margin-left: 0px;
   }
 `
-
-const CardWrapper = styled.div``
 
 const Title = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   font-size: 16px;
   font-weight: 600;
 `
-
 const StyledCardContentInner = styled.div`
   display: flex;
   flex-direction: column;
-
+  text-align: center;
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
+    text-align: left;
   }
 `
 
