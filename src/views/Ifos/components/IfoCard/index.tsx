@@ -27,15 +27,20 @@ export interface IfoCardProps {
 const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   margin-left: auto;
   margin-right: auto;
-  width:85%;
+  width: 100%;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 40px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
+  ${({ theme }) => theme.mediaQueries.sm} {
+    flex-direction: row;
+   /* width: 85%*/;
+  }
 `
 const CardHeaderFlex = styled('div')`
   display: flex;
   flex-direction: column;
+  positon: relative;
   ${({ theme }) => theme.mediaQueries.sm} {
     flex-direction: row;
   }
@@ -71,8 +76,23 @@ const WrapButtonRow = styled('div')`
     }
     & > a {
       flex: 1;
-      margin-left: 17px;
+      margin-left: 15px;
+      margin-right: 0x;
     }
+  }
+  ${({ theme }) => theme.mediaQueries.md} {
+    flex-direction: row;
+    & > button {
+      flex: 1;
+      margin-right: 17px;
+      margin-bottom: 0;
+    }
+    & > a {
+      flex: 1;
+      margin-left: 70px;
+      margin-right: 24px;
+    }
+   
   }
 `
 const CardBody = styled('div')`
@@ -105,7 +125,7 @@ const UnlockButtonStyle = styled(UnlockButton)`
   ${ButtonPrimary}
 `
 const ButtonStyle = styled.div`
- 
+  margin-bottom: 18px;
   width: 100%;
   button {
     background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
@@ -128,14 +148,19 @@ const ButtonStyle = styled.div`
     ${({ theme }) => theme.mediaQueries.sm} {
       font-size: 16px;
       height: 56px;
+      margin-bottom: 0px;     
+    }
+    ${({ theme }) => theme.mediaQueries.md} {
+      font-size: 16px;
+      height: 56px;
       padding-right: 36px;
-      margin-bottom: 0px;
-      
+      margin-bottom: 0px;     
     }
     }
   }
 ${({ theme }) => theme.mediaQueries.sm} {
-  width: 50%;
+  width: 48%;
+  margin-bottom: 0px;
 }
 `
 const IconDirect = styled.img`
@@ -146,22 +171,31 @@ const IconDirect = styled.img`
 `
 const BoxIconDirect = styled.div`
   position: absolute;
-  left: 84%;
-  bottom: 11%;
+  left: 86%;
+  bottom: 13%;
   background: ${lightColors.buttonSecond};
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 24px;
   text-align: center;
   line-height: 45px;
+  
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 36px;
     line-height: 56px;
   }
   ${({ theme }) => theme.mediaQueries.sm} {
-    left: 48%;
-    bottom: 50px;
+    left: 46%;
+    bottom: 8%;
+    line-height: 59px;
+
   }
+  ${({ theme }) => theme.mediaQueries.md} {
+    left: 46%;
+    bottom: 50px;
+    line-height: 56px;
+  }
+  
 `
 
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
@@ -312,7 +346,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
         />
         <WrapButtonRow>
         {!account && 
-          <ButtonStyle style={{ marginLeft: '7px' }}>
+          <ButtonStyle style={{ }}>
             <UnlockButtonStyle fullWidth />
             <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
           </ButtonStyle>  }

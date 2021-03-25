@@ -9,8 +9,12 @@ interface IfoCardProgressProps {
 
 const StyledProgress = styled.div`
   margin-bottom: 16px;
+  justify-content: flex-end;
   & > div > div {
     background: ${baseColors.primary};
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    margin-left: 35%;
   }
 `
 

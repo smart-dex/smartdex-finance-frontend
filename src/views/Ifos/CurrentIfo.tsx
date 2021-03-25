@@ -13,10 +13,10 @@ import { ButtonPrimary, ButtonSecondary } from '../../style/Button'
 const LaunchIfoCallout = styled(BaseLayout)`
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 32px;
+  grid-gap: 43px;
   margin: 0 auto;
-  padding: 10px 0 50px;
-  width:85%;
+  padding: 10px 0 103px;
+  /*width: 85%;*/
   ${({ theme }) => theme.mediaQueries.md} {
     grid-template-columns: 1fr 1fr;
   }
@@ -71,6 +71,7 @@ const WrapHeading = styled(Heading)`
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 18px;
     line-height: 22px;
+    margin-top:30px;
   }
   @media (max-width: 767px) {
     font-weight: normal;
@@ -133,6 +134,7 @@ const LinkPrimaryPd30 = styled(Link)`
   &:hover{
     opacity:0.5;
   }
+  margin-top: 40px;
 `
 const LinkButtonBorder = styled(Link)`
   color: #fff;
@@ -142,8 +144,8 @@ const LinkButtonBorder = styled(Link)`
   line-height: 20px;
   border-radius: 10px;
   justify-content: center;
-  margin-left:7px;
-  &:hover {
+  margin-top: 30px;
+  & : hover {
     text-decoration: none;
   }
   padding: 0 30px;
@@ -153,7 +155,7 @@ const LinkButtonBorder = styled(Link)`
     background: ${baseColors.primary};
     border-color: ${baseColors.primary};
     text-decoration: none;
-    color: #fff;
+    color: ${brandColors.white};
   }
 `
 const StyleTitle = styled(Text)`

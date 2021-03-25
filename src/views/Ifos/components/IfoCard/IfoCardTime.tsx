@@ -19,6 +19,11 @@ const Details = styled.div`
   display: flex;
   height: 24px;
   justify-content: center;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 16px;
+    margin-right: 25%;
+    justify-content: flex-end;
+  }
 `
 
 const Countdown = styled.div`
