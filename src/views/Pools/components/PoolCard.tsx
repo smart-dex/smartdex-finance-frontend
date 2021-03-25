@@ -469,7 +469,7 @@ text-align: center;
 border-radius: 6px;
 padding: 5px 0;
 position: absolute;
-z-index: 1;isFinished
+z-index: 1;
   font-size: 18px;
 }
 `
@@ -518,6 +518,7 @@ const StyledTextEarned = styled.div`
 
 const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
   background: ${({ isDisable }) => !isDisable && baseColors.primary};
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
