@@ -8,16 +8,27 @@ import { Pool } from 'state/types'
 import { lightColors, darkColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
-  background: linear-gradient(91.67deg, #0085ff 5.33%, #7e86ff 104.39%);
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 100%;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
-  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
-  ${({ theme }) => theme.mediaQueries.lg} {
-    margin: 0;
-    max-width: none;
+  background: linear-gradient(91.67deg, #0085ff 5.33%, #7e86ff 104.39%);
+  margin-bottom: 25px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 20px;
+  }
+`
+const CardBodyStyle = styled(CardBody)`
+  min-height: 203px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-top: 35px;
+    min-height: 255px;
+  }
+`
+const HeadingEarn = styled(Heading)`
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 29px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    line-height: 30px;
   }
 `
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
@@ -26,39 +37,43 @@ const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   font-size: 22px;
   color: ${lightColors.invertedContrast};
 `
-
-const HeadingEarn = styled(Heading)`
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 600;
-  font-size: 18px;
-`
-
 const NavLinkStyle = styled(NavLink)`
   background: rgba(255, 255, 255, 0.2);
   width: 30px;
   height: 30px;
   border-radius: 12px;
-  margin-top: 8px;
+  position: relative;
+  margin-left: auto;
+  padding-top: 1px;
+  text-align: center;
+  position: absolute;
+  left: auto;
+  right: 24px;
+  bottom: 22px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    left: 24px;
+    right: auto;
+  }
 `
 
 const EarnAssetCard = () => {
-  const activeNonCakePools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('CAKE'))
+  const activeNonCakePools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('SDC'))
   const latestPools: Pool[] = orderBy(activeNonCakePools, ['sortOrder', 'pid'], ['desc', 'desc']).slice(0, 3)
   // Always include CAKE
-  const assets = ['CAKE', ...latestPools.map((pool) => pool.tokenName)].join(', ')
+  const assets = ['SDC', ...latestPools.map((pool) => pool.tokenName)].join(', ')
 
   return (
     <StyledFarmStakingCard>
-      <CardBody>
+      <CardBodyStyle>
         <HeadingEarn>Earn</HeadingEarn>
         <CardMidContent>{assets}</CardMidContent>
         <Flex style={{ flexDirection: 'column' }}>
           <HeadingEarn>in Pools</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/syrup" id="pool-cta">
-            <ArrowForwardIcon mt={30} color="#fff" style={{ margin: '5px' }} />
+            <ArrowForwardIcon mt={30} color="#FFFFFF" style={{ margin: '5px' }} />
           </NavLinkStyle>
         </Flex>
-      </CardBody>
+      </CardBodyStyle>
     </StyledFarmStakingCard>
   )
 }
