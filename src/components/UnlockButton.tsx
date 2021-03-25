@@ -6,8 +6,8 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 
 const ButtonStyle = styled(Button)`
-  background: ${ baseColors.primary};
-  color: #FFFFFF;
+  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  color: ${baseColors.primary};
   border-radius: 10px;
   box-shadow: 0px 4px 10px ${({ theme }) => theme.isDark ? darkColors.boxShadow : lightColors.boxShadow};
   height: 45px;
