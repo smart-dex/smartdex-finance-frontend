@@ -105,19 +105,18 @@ const UnlockButtonStyle = styled(UnlockButton)`
   ${ButtonPrimary}
 `
 const ButtonStyle = styled.div`
-  margin-bottom: 10px;
+ 
   width: 100%;
   button {
     background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
     color: ${baseColors.primary};
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(239, 239, 239, 0.24);
+    box-shadow: 0px 2px 10px rgba(239, 239, 239, 0.24);
     height: 45px;
     font-weight: 600;
     font-size: 13px;
     position: relative;
     padding-right: 24px;
-    
     width: 100%;
     
     ${({ theme }) => theme.mediaQueries.nav} {
