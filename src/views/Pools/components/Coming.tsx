@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { Image, Button, Flex } from 'uikit-sotatek'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
-import { darkColors, lightColors } from 'style/Color'
+import { darkColors, lightColors,baseColors } from 'style/Color'
 import CardTitle from './CardTitle'
 import CardContent from './CardContent'
 
@@ -130,50 +130,62 @@ const StyleFlexDetail = styled.div`
   font-size: 14px;
   line-height: 17px;
 `
+const StyledButton = styled.div`
+   >a{
+    background: ${baseColors.primary};
+    box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    maxWidth:143px;
+   }
+   margin-bottom:10px;
+   
+`
 
 const Coming: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
-      <CardComing>
-        <StyledCardName>
-          <NamePool>
-            <CardTitle>
-              <StyleNamePool> {TranslateString(999, 'Your Project')}
-              </StyleNamePool>
-              <StyledTriangle />
-            </CardTitle>
-            <StyledTag />
-          </NamePool>
-        </StyledCardName>
-        <CardContentComing>
-          <Image src="/images/bunny-question.svg" width={64} height={64} alt="Your project here" />
-          <Balance>???</Balance>
-          <CommunityTag />
-          <Label>{TranslateString(416, 'Create a pool for your token')}</Label>
-          
+    <CardComing>
+      <StyledCardName>
+        <NamePool>
+          <CardTitle>
+            <StyleNamePool> {TranslateString(999, 'Your Project')}
+            </StyleNamePool>
+            <StyledTriangle />
+          </CardTitle>
+          <StyledTag />
+        </NamePool>
+      </StyledCardName>
+      <CardContentComing>
+        <Image src="/images/bunny-question.svg" width={64} height={64} alt="Your project here" />
+        <Balance>???</Balance>
+        <CommunityTag />
+        <Label>{TranslateString(416, 'Create a pool for your token')}</Label>
+        <StyledButton>
           <Button
-            variant="secondary"
+            target="_blank"
             as="a"
             href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform"
-            external
-            mb="16px"
           >
             {TranslateString(418, 'Apply Now')}
           </Button>
-          <DetailPlaceholder>
-            <StyleFlexDetail>{TranslateString(736, 'APR')}:</StyleFlexDetail>
-            <Value>??</Value>
-          </DetailPlaceholder>
-          <DetailPlaceholder>
+        </StyledButton>
+
+        <DetailPlaceholder>
+          <StyleFlexDetail>{TranslateString(736, 'APR')}:</StyleFlexDetail>
+          <Value>??</Value>
+        </DetailPlaceholder>
+        <DetailPlaceholder>
           <StyleFlexDetail>
             {TranslateString(384, 'Your Stake')}:
            </StyleFlexDetail>
-            <Value>???</Value>
-          </DetailPlaceholder>
+          <Value>???</Value>
+        </DetailPlaceholder>
 
-        </CardContentComing>
-      </CardComing>
+      </CardContentComing>
+    </CardComing>
   )
 }
 
