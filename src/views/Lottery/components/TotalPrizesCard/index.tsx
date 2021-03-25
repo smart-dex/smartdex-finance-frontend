@@ -7,13 +7,15 @@ import useI18n from 'hooks/useI18n'
 import { useTotalRewards } from 'hooks/useTickets'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import ExpandableSectionButton from 'components/ExpandableSectionButton/ExpandableSectionButton'
+import { darkColors, lightColors } from 'style/Color'
 import PrizeGrid from '../PrizeGrid'
-import { darkColors, lightColors } from '../../../../style/Color'
 
 const CardHeading = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
+  padding-left: 8px;
+  padding-top: 8px;
 `
 const Right = styled.div`
   display: flex;
@@ -62,6 +64,8 @@ const HeadingStyle = styled(Heading)`
 const CardStyle = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+  border-radius: 40px;
+  box-shadow: 10px 10px 30px ${ ({ theme}) => theme.isDark ? darkColors.boxShadowLottery : lightColors.boxShadowLottery} ;
 `
 const TicketImg = styled.img`
   width: 57px;
@@ -82,9 +86,9 @@ const TotalPrizesCard = () => {
             {currentLotteryNumber === 0 && <Skeleton height={20} width={56} />}
             {currentLotteryNumber > 0 && (
               <>
-                <Text fontSize="12px" style={{ fontWeight: 600 }}>
+                <TextStyle fontSize="12px" style={{ fontWeight: 600 }}>
                   {TranslateString(720, `Round #${currentLotteryNumber}`, { num: currentLotteryNumber })}
-                </Text>
+                </TextStyle>
               </>
             )}
           </Flex>

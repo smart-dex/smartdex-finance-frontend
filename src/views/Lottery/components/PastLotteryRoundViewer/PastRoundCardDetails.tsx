@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { Heading, CardBody, CardFooter, PancakeRoundIcon, TicketRound } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { DataResponse } from 'utils/getLotteryRoundData'
+import { darkColors, lightColors } from 'style/Color'
 import LotteryCardHeading from '../LotteryCardHeading'
 import PastLotteryActions from './PastLotteryActions'
 import PrizeGrid from '../PrizeGrid'
 import Timestamp from '../Timestamp'
-import { darkColors, lightColors } from '../../../../style/Color'
 
 interface PastRoundCardDetailsProps {
   data: DataResponse
@@ -26,7 +26,10 @@ const TopLotteryBlock = styled.div`
   }
 `
 const TopLotteryCardHeading = styled(LotteryCardHeading)`
-  margin-bottom: ${(props) => props.theme.spacing[4]}px;
+  margin-bottom: 16px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 0px;
+   }
 `
 
 const HeadingStyle = styled(Heading)`
@@ -41,6 +44,7 @@ const CardBodyStyle = styled(CardBody)`
 const CardFooterStyle = styled(CardFooter)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
+
 const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => {
   const TranslateString = useI18n()
 

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Heading, Card, CardBody } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import UnlockButton from 'components/UnlockButton'
-import { darkColors, lightColors, baseColors } from '../../../style/Color'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 
 const StyledCardBody = styled(CardBody)`
   display: flex;
@@ -12,7 +12,7 @@ const StyledCardBody = styled(CardBody)`
   justify-content: center;
 `
 const StyledHeading = styled(Heading)`
-  margin: 16px 0;
+  margin: 24px 0;
   font-weight: 500;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 14px;
@@ -36,9 +36,12 @@ const CardStyle = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   box-shadow: none;
+  border-radius: 40px;
+  padding: 24px;
 `
 
 const StyleButton = styled.div`
+  margin: 2px;
   button {
     background: ${baseColors.primary};
     color: #fff;

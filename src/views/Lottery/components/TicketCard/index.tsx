@@ -1,20 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardBody, TicketRound, Text, Heading } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Text, Heading } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
 import useTickets from 'hooks/useTickets'
 import { useCurrentTime } from 'hooks/useTimer'
+import { darkColors, lightColors } from 'style/Color'
 import TicketActions from './TicketActions'
 import { getTicketSaleTime } from '../../helpers/CountdownHelpers'
-import { darkColors, lightColors } from '../../../../style/Color'
 
 interface CardProps {
   isSecondCard?: boolean
 }
 
 const StyledCard = styled(Card)<CardProps>`
-background: ${({ theme}) => theme.isDark ? darkColors.backIfo : lightColors.backIfo};
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  box-shadow: 10px 10px 30px ${ ({ theme}) => theme.isDark ? darkColors.boxShadowLottery : lightColors.boxShadowLottery} ;
   ${(props) =>
     props.isSecondCard
       ? `  
@@ -34,6 +36,7 @@ background: ${({ theme}) => theme.isDark ? darkColors.backIfo : lightColors.back
 const CardHeader = styled.div`
   align-items: center;
   display: flex;
+  padding: 18px;
 `
 
 const IconWrapper = styled.div`
@@ -47,10 +50,18 @@ const IconWrapper = styled.div`
 const TicketCountWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0px 8px 0px 0px;
 `
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
+const TicketImg = styled.div`
+  width: 50px;
+  height: 50px;
+  background-image: url('/images/ticket-lottery-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.svg');
+  background-size: contain;
 `
 
 const TicketCard: React.FC<CardProps> = ({ isSecondCard = false }) => {
@@ -68,7 +79,7 @@ const TicketCard: React.FC<CardProps> = ({ isSecondCard = false }) => {
       <CardBody>
         <CardHeader>
           <IconWrapper>
-            <TicketRound />
+          <TicketImg />
           </IconWrapper>
           {lotteryHasDrawn ? (
             <TicketCountWrapper>

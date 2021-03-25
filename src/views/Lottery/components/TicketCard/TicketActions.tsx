@@ -7,7 +7,7 @@ import { useLotteryAllowance } from 'hooks/useAllowance'
 import useTickets from 'hooks/useTickets'
 import useTokenBalance from 'hooks/useTokenBalance'
 import { getCakeAddress } from 'utils/addressHelpers'
-import { baseColors } from 'style/Color'
+import { baseColors, darkColors, lightColors } from 'style/Color'
 import { useApproval } from 'hooks/useApproval'
 import BuyTicketModal from './BuyTicketModal'
 import MyTicketsModal from './UserTicketsModal'
@@ -17,6 +17,7 @@ const CardActions = styled.div`
   display: flex;
   justify-content: center;
   margin-top: ${(props) => props.theme.spacing[3]}px;
+  padding: 8px 18px;
 
   ${({ theme }) => theme.mediaQueries.lg} {
     justify-content: space-between;
@@ -28,6 +29,7 @@ const ButtonStyle = styled(Button)`
   height: 35px;
   padding: 18px;
   font-size: 13px;
+  margin-left: 8px !important;
   ${({ theme }) => theme.mediaQueries.nav} {
     height: 56px;
     font-size: 16px;
@@ -38,6 +40,8 @@ const ButtonDisableStyle = styled(Button)`
   height: 35px;
   padding: 18px;
   font-size: 13px;
+  margin-right: 8px !important;
+  background: ${ ({ theme}) => theme.isDark ? darkColors.buttonView : lightColors.buttonView} !important;
   ${({ theme }) => theme.mediaQueries.nav} {
     height: 56px;
     font-size: 16px;
@@ -89,7 +93,7 @@ const TicketCard: React.FC = () => {
   return (
     <CardActions>
       {lotteryHasDrawn ? (
-        <ButtonDisableStyle disabled> {TranslateString(874, 'On sale soon')}</ButtonDisableStyle>
+        <ButtonDisableStyle disabled style={{ width: '100%'}}> {TranslateString(874, 'On sale soon')}</ButtonDisableStyle>
       ) : (
         renderLotteryTicketButtons()
       )}

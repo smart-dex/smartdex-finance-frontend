@@ -94,7 +94,7 @@ const ButtonStyle = styled(Button)`
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
   color: ${baseColors.primary};
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(239, 239, 239, 0.24);
+  box-shadow: ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(222, 222, 222, 0.24)')};
   height: 45px;
   font-weight: 600;
   font-size: 13px;
@@ -182,7 +182,7 @@ const FarmedStakingCard = () => {
           onClick={handleApprove}
           style={{ width: '50%', marginLeft: '7px' }}
         >
-          {TranslateString(494, 'Approve CAKE')}
+          {TranslateString(494, 'Approve SDC')}
         </ButtonStyle>
       )
     }
@@ -206,18 +206,18 @@ const FarmedStakingCard = () => {
     )
   }
 
-  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="CAKE" />)
+  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="SDC" />)
 
   return (
     <StyledLotteryCard>
       <CardBody>
         <HeadingBlock>
-          <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
+          <CardImage src="/images/pan-cake.png" alt="SDC logo" width={50} />
           <HeadingStyle>{TranslateString(550, 'Your Lottery Winnings')}</HeadingStyle>
         </HeadingBlock>
 
         <BlockCakeWinnings>
-          <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
+          <Label>{TranslateString(552, 'SDC to Collect')}:</Label>
           <CakeWinnings />
         </BlockCakeWinnings>
         <BlockLotteryJackpot>

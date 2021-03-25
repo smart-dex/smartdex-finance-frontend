@@ -36,7 +36,11 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   }
 `
 const ButtonMenuStyle = styled.div`
-  margin-bottom: 16px;
+  margin-top: 24px;
+  margin-bottom: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 16px
+  }
   & > div {
     ${({ theme }) => theme.mediaQueries.nav} {
       width: 270px;

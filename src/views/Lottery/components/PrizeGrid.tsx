@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
 import { Heading, Text } from 'uikit-sotatek'
-import { darkColors, lightColors } from '../../../style/Color'
+import { darkColors, lightColors } from 'style/Color'
 
 export interface PrizeGridProps {
   lotteryPrizeAmount?: number
@@ -62,7 +62,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
   const burnAmount = +((lotteryPrizeAmount / 100) * 20).toFixed(0)
   const TranslateString = useI18n()
   return (
-    <Grid pastDraw={pastDraw}>
+    <Grid pastDraw={pastDraw} style={{ padding: '8px 24px'}}>
       <GridItem>
         <TextStyle>{TranslateString(756, 'No. Matched')}</TextStyle>
       </GridItem>
