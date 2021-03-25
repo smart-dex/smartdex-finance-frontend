@@ -21,7 +21,7 @@ const StyledLabel = styled.div<{ isFinished: boolean; colorLabel }>`
     css`
       color: ${({ theme }) => (theme.isDark ? darkColors.earnedCakeDisable : lightColors.earnedCakeDisable)};
     `}
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 17px;
 `

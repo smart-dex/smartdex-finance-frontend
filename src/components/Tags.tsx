@@ -9,9 +9,9 @@ const CoreTag = () => (
 )
 
 const CommunityTag = () => (
-  <Tag variant="textSubtle" outline startIcon={<CommunityIcon />}>
+  <StyledCoreCommunity variant="textSubtle" outline startIcon={<CommunityIcon />}>
     Community
-  </Tag>
+  </StyledCoreCommunity>
 )
 
 const BinanceTag = () => (
@@ -21,10 +21,18 @@ const BinanceTag = () => (
 )
 const StyledCoreTag = styled(Tag)`
   border: 2px solid rgba(255, 161, 78, 0.5);
-  border-radius: 16px;
+  border-radius: 20px;
   color: #ffa14e;
   svg {
     fill: #ffa14e;
   }
+`
+const StyledCoreCommunity =styled(Tag)`
+border: 1px solid #E2E2E8;
+border-radius: 20px;
+color: #5F5E76;
+svg {
+  fill: #5F5E76;
+}
 `
 export { CoreTag, CommunityTag, BinanceTag }
