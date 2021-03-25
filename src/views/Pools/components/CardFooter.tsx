@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
 import { Flex } from 'uikit-sotatek'
-import { lightColors, darkColors } from 'style/Color'
+import { lightColors, darkColors,baseColors } from 'style/Color'
 import Balance from 'components/Balance'
 
 interface Props {
@@ -35,7 +35,7 @@ const Label = styled.div`
 `
 const TokenLink = styled.a`
   font-size: 14px;
-  text-decoration: none;
+  text-decoration: revert;
   color: #12aab5;
 `
 const LabelFooter = styled(Label)<{ isDisabled: boolean }>`

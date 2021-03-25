@@ -135,9 +135,12 @@ const StyledButton = styled.div`
     background: ${baseColors.primary};
     box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 20px;
-    maxWidth:143px;
+    max-width:143px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
    }
    margin-bottom:10px;
    

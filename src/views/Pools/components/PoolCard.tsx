@@ -230,7 +230,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           )}
         </StyledAddButton>
         <StyledCardActions>
-          {!account && <UnlockButton style={{ maxWidth: '143px' }} />}
+          {!account && <UnlockButton style={ { width: 'calc(50% - 9px)'}} />}
           {account &&
             (needsApproval && !isOldSyrup ? (
               <ButtonApprove
@@ -238,7 +238,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 onClick={handleApprove}
                 marginBottom='10px'
                 marginTop='10px'
-                style={{ maxWidth: '143px' }}
                 isDisable={isFinished || requestedApproval}
               >
                 {`Approve ${stakingTokenName}`}
@@ -259,15 +258,13 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                         }
                         : onPresentWithdraw
                     }
-
-                    style={{ maxWidth: '143px', minWidth: '120px' }}
                   >
                     {`Unstake ${stakingTokenName}`}
                   </ButtonUnstake>
                 </>
               ))}
 
-          <ButtonDetail onClick={handleClick} style={{ minWidth: '143px' }} marginBottom='10px' marginTop='10px' isShow={isOpenDetail}>
+          <ButtonDetail onClick={handleClick} marginBottom='10px' marginTop='10px' isShow={isOpenDetail}>
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </ButtonDetail>
         </StyledCardActions>
@@ -288,7 +285,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 }
 
 const Line = styled.div`
-  width: calc(100% - 40px);
+  width: calc(100% - 50px);
   margin-top: 20px;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
   margin-bottom: 15px;
@@ -341,8 +338,8 @@ const StyledCoinEarned = styled(Flex)`
   }
 `
 const DetailPool = styled.div`
+  padding-left: 10px;
   flex:50%;
-  padding: 10px;
   ${({ theme }) => theme.mediaQueries.nav} {
   }
 `
@@ -388,12 +385,16 @@ const ButtonDetail = styled(Button) <{ isShow: boolean }>`
         `
       )
   }
-
+  width: calc(50% - 9px);
+  box-shadow:none;
   border-radius: 10px;
   background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
   font-weight: 600;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 const StyledTriangle = styled.div<{ isFinished: boolean }>`
     width: 0;
@@ -474,14 +475,16 @@ z-index: 1;isFinished
 
 const StyleImgEaredDetail = styled(Flex)`
   justify-content: center;
+  padding: 10px;
   margin-top:20px;
   margin-bottom:20px;
   width: 100%;
 `
 
 const StyledImageEarned = styled(Flex)`
+  border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
   flex:50%;
-  padding:8px;
+  padding-right:10px;
 `
 
 const StyleNameFinished = styled.div`
@@ -497,14 +500,10 @@ const StyledHarvestCompound = styled(Flex)`
   }
 `
 const StyledAddButton = styled(Flex)`
-  ${({ theme }) => theme.mediaQueries.nav} {
-    padding-right: 42px;
-  }
-  padding-right: 30px;
-
-  width: 100%;
+  width: calc(100% - 50px);
   justify-content: flex-end;
   > button{
+    box-shadow:none;
     width:56px;
     height:56px;
     background: #17C267;
@@ -518,18 +517,25 @@ const StyledTextEarned = styled.div`
 
 const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
   background: ${({ isDisable }) => !isDisable && baseColors.primary};
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 20px;
+  width: calc(50% - 9px);
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 
 const ButtonUnstake = styled(Button) <{ isDisable: boolean }>`
   background: ${({ isDisable }) => !isDisable && baseColors.primary};
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 20px;
+  width: calc(50% - 9px);
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 
 export default PoolCard

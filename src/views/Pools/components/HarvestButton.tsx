@@ -99,7 +99,10 @@ const StyledButton = styled.button<StyledButtonProps>`
   border: 2px solid ${(props) => (!props.disabled ? `#FFA14F` : `#eee`)};
   width: 100px;
   height: 30px;
-  font-size: 14px;
+  font-size: 10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
   padding: 0px;
   margin: 10px 12px;
 `
