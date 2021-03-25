@@ -5,6 +5,7 @@ import useI18n from 'hooks/useI18n'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useTickets from 'hooks/useTickets'
 import UnlockButton from 'components/UnlockButton'
+import { baseColors } from 'style/Color'
 import MyTicketsModal from '../TicketCard/UserTicketsModal'
 
 const Wrapper = styled.div`
@@ -26,6 +27,10 @@ const ExternalLinkWrap = styled(LinkExternal)`
   justify-content: center;
   text-decoration: none;
   width: 100%;
+  color: ${ baseColors.primary};
+  svg {
+    fill: ${ baseColors.primary};
+  }
 `
 
 const IconDirect = styled.img`

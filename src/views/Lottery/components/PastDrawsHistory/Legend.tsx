@@ -6,7 +6,7 @@ import { darkColors, lightColors, baseColors } from '../../../../style/Color'
 
 const Wrapper = styled.div`
   display: flex;
-  margin: 36px 0 28px;
+  margin: 34px 0 28px;
   justify-content: flex-end;
 `
 const LegendItem = styled.div`

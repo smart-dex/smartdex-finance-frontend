@@ -25,6 +25,7 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
+  box-shadow:  ${({ isActive }) => (isActive ? '0px 4px 10px rgba(83, 185, 234, 0.24)' : '')};
   width: 135px;
   font-size: 13px;
   ${({ theme }) => theme.mediaQueries.nav} {
