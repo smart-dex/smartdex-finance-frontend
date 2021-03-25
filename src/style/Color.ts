@@ -69,6 +69,8 @@ export const lightColors = {
   colorInput: 'rgba(95, 94, 118, 0.5)',
   colorButtonCancel: '#616171',
   bgButtonCancel: 'rgba(95, 94, 118, 0.2)',
+  borderButtonDetail: '#8F8FA0',
+
 }
 
 export const darkColors = {
@@ -128,4 +130,5 @@ export const darkColors = {
   colorInput: 'rgba(255, 255, 255, 0.38)',
   colorButtonCancel: 'rgba(255, 255, 255, 0.6)',
   bgButtonCancel: '#2A3145',
+  borderButtonDetail: '#8F8FA0',
 }

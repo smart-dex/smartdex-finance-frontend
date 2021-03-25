@@ -84,7 +84,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   background: ${(props) => (!props.disabled ? props.theme.card.background : `#ddd`)};
   border: 0;
   border-radius: 12px;
-  color: ${(props) => (!props.disabled ? `#32cad7` : `#acaaaf`)};
+  color: ${(props) => (!props.disabled ? `#FFA14F` : `#acaaaf`)};
   cursor: pointer;
   display: flex;
   font-size: ${(props) => props.fontSize}px;
@@ -96,12 +96,15 @@ const StyledButton = styled.button<StyledButtonProps>`
   padding-right: ${(props) => props.padding}px;
   pointer-events: ${(props) => (!props.disabled ? undefined : 'none')};
   width: 100%;
-  border: 2px solid ${(props) => (!props.disabled ? `#33cbd7` : `#eee`)};
+  border: 2px solid ${(props) => (!props.disabled ? `#FFA14F` : `#eee`)};
   width: 100px;
   height: 30px;
-  font-size: 14px;
+  font-size: 10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
   padding: 0px;
-  margin: 10px auto;
+  margin: 10px 12px;
 `
 
 const StyledLink = styled(Link)`
