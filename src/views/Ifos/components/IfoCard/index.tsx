@@ -127,6 +127,7 @@ const UnlockButtonStyle = styled(UnlockButton)`
 const ButtonStyle = styled.div`
   margin-bottom: 18px;
   width: 100%;
+  position: relative;
   button {
     background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
     color: ${baseColors.primary};
@@ -135,7 +136,7 @@ const ButtonStyle = styled.div`
     height: 45px;
     font-weight: 600;
     font-size: 13px;
-    position: relative;
+    
     padding-right: 24px;
     width: 100%;
     
@@ -171,8 +172,9 @@ const IconDirect = styled.img`
 `
 const BoxIconDirect = styled.div`
   position: absolute;
-  left: 86%;
-  bottom: 13%;
+  right: 0px;
+  top: 0px;
+  justify-content: flex-end;
   background: ${lightColors.buttonSecond};
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -185,17 +187,10 @@ const BoxIconDirect = styled.div`
     line-height: 56px;
   }
   ${({ theme }) => theme.mediaQueries.sm} {
-    left: 46%;
-    bottom: 8%;
-    line-height: 59px;
-
-  }
-  ${({ theme }) => theme.mediaQueries.md} {
-    left: 46%;
-    bottom: 50px;
     line-height: 56px;
   }
   
+    
 `
 
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
