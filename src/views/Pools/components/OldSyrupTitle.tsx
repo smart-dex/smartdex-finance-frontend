@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import CardTitle from './CardTitle'
 
 interface Props {
   hasBalance?: boolean
@@ -35,7 +34,7 @@ const OldSyrupTitle: React.FC<Props> = ({ hasBalance = false }) => {
 
   return (
     <div>
-      <CardTitle isFinished>FINISHED</CardTitle>
+      <Title>FINISHED</Title>
     </div>
   )
 }

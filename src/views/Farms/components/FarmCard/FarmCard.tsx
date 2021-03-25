@@ -23,7 +23,7 @@ export interface FarmWithStakedValue extends Farm {
 }
 
 const FCard = styled.div`
-  background: ${(props) => props.theme.card.background};
+  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   border-radius: 20px;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   box-shadow: 25px 14px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
@@ -65,7 +65,7 @@ const InfoFarm = styled(Flex)`
   margin-left: 0px;
   margin-right: 0px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: 16px;
+    margin-left: 16px;${({ theme }) => (theme.isDark ? '#151C31' : '#E5E5E5')};
     margin-right: 50px;
   }
 `

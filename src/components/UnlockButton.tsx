@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { baseColors, darkColors, lightColors } from 'style/Color'
+import { baseColors } from 'style/Color'
 import { Button, useWalletModal } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 
 const ButtonStyle = styled(Button)`
-  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
-  color: ${baseColors.primary};
+  background: ${ baseColors.primary};
+  color: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px ${({ theme }) => theme.isDark ? darkColors.boxShadow : lightColors.boxShadow};
+  box-shadow: 0px 4px 10px ${({ theme }) => theme.isDark ? darkColors.boxShadow : lightColors.boxShadow};r
   height: 45px;
   font-weight: 600;
   font-size: 13px;
@@ -18,7 +18,6 @@ const ButtonStyle = styled(Button)`
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     height: 56px;
-    padding-right: 36px;
   }
 `
 const UnlockButton = (props) => {
