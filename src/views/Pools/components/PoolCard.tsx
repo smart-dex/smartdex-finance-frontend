@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { Button, IconButton, useModal, Flex,AddIcon } from 'uikit-sotatek'
+import { Button, IconButton, useModal, Flex } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -287,7 +287,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 const Line = styled.div`
   width: calc(100% - 50px);
   margin-top: 20px;
-  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
+  border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
   margin-bottom: 15px;
 `
 
@@ -385,6 +385,7 @@ const ButtonDetail = styled(Button) <{ isShow: boolean }>`
         `
       )
   }
+  margin-left: auto;
   width: calc(50% - 9px);
   box-shadow:none;
   border-radius: 10px;

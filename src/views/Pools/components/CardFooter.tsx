@@ -20,10 +20,9 @@ const StyledFooter = styled.div<{ isFinished: boolean }>`
   width:100%;
   order: 6;
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
-  padding: 0px 30px 24px 30px;
+  padding: 0px 23px 22px 22px;
   ${({ theme }) => theme.mediaQueries.nav} {
-
-    padding: 0px 45px 24px 45px;
+    padding: 0px 23px 22px 22px;
   }
 `
 
@@ -36,7 +35,7 @@ const Label = styled.div`
 const TokenLink = styled.a`
   font-size: 14px;
   text-decoration: revert;
-  color: #12aab5;
+  color: #0085FF;
 `
 const LabelFooter = styled(Label)<{ isDisabled: boolean }>`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
