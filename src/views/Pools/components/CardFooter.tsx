@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
 import { Flex } from 'uikit-sotatek'
-import { lightColors, darkColors,baseColors } from 'style/Color'
+import { lightColors, darkColors } from 'style/Color'
 import Balance from 'components/Balance'
 
 interface Props {

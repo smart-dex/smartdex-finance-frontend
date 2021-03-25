@@ -9,6 +9,7 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   min-height:413px;
   max-width: 350px;
   min-width: 300px;
+  margin-right: 0px;
   ${({ theme }) => theme.mediaQueries.nav} {
     max-width: 400px;
     margin-right: 42px;
