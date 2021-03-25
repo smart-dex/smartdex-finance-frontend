@@ -41,7 +41,7 @@ const Wrapper = styled.div`
     background: ${baseColors.primary};
     color: ${lightColors.card};
     border-radius: 50px;
-    box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+    box-shadow: 0px 4px 10px ${ baseColors.boxShadow};
     &:hover {
       opacity: 0.65;
       background: ${baseColors.primary};

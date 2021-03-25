@@ -34,7 +34,6 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
   ${({ theme }) => theme.mediaQueries.sm} {
     flex-direction: row;
-   /* width: 85%*/;
   }
 `
 const CardHeaderFlex = styled('div')`

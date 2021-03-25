@@ -94,7 +94,7 @@ const ButtonStyle = styled(Button)`
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
   color: ${baseColors.primary};
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(239, 239, 239, 0.24);
+  box-shadow: ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(222, 222, 222, 0.24)')};
   height: 45px;
   font-weight: 600;
   font-size: 13px;
@@ -130,7 +130,7 @@ const BoxIconDirect = styled.div`
   right: 0px;
   top: 0px;
   height: 100%;
-  background: #0085FF;
+  background: #0085ff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 24px;
@@ -141,6 +141,7 @@ const BoxIconDirect = styled.div`
     line-height: 60px;
   }
 `
+
 const FarmedStakingCard = () => {
   const lotteryHasDrawn = useGetLotteryHasDrawn()
   const [requesteClaim, setRequestedClaim] = useState(false)
@@ -171,11 +172,17 @@ const FarmedStakingCard = () => {
         <ButtonStyle
           fullWidth
           disabled={requestedApproval}
-          endIcon={!requestedApproval && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
+          endIcon={
+            !requestedApproval && (
+              <BoxIconDirect>
+                <IconDirect src="/images/home/icon-direct.svg" alt="" />
+              </BoxIconDirect>
+            )
+          }
           onClick={handleApprove}
           style={{ width: '50%', marginLeft: '7px' }}
         >
-          {TranslateString(494, 'Approve CAKE')}
+          {TranslateString(494, 'Approve SDC')}
         </ButtonStyle>
       )
     }
@@ -185,7 +192,13 @@ const FarmedStakingCard = () => {
         variant="secondary"
         onClick={onPresentBuy}
         disabled={lotteryHasDrawn}
-        endIcon={!lotteryHasDrawn && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
+        endIcon={
+          !lotteryHasDrawn && (
+            <BoxIconDirect>
+              <IconDirect src="/images/home/icon-direct.svg" alt="" />
+            </BoxIconDirect>
+          )
+        }
         style={{ width: '50%', marginLeft: '7px' }}
       >
         {TranslateString(558, 'Buy Tickets')}
@@ -193,18 +206,18 @@ const FarmedStakingCard = () => {
     )
   }
 
-  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="CAKE" />)
+  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="SDC" />)
 
   return (
     <StyledLotteryCard>
       <CardBody>
         <HeadingBlock>
-          <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
+          <CardImage src="/images/pan-cake.png" alt="SDC logo" width={50} />
           <HeadingStyle>{TranslateString(550, 'Your Lottery Winnings')}</HeadingStyle>
         </HeadingBlock>
 
         <BlockCakeWinnings>
-          <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
+          <Label>{TranslateString(552, 'SDC to Collect')}:</Label>
           <CakeWinnings />
         </BlockCakeWinnings>
         <BlockLotteryJackpot>
@@ -217,7 +230,13 @@ const FarmedStakingCard = () => {
             id="dashboard-collect-winnings"
             disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
             onClick={handleClaim}
-            endIcon={!(getBalanceNumber(claimAmount) === 0 || requesteClaim) && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
+            endIcon={
+              !(getBalanceNumber(claimAmount) === 0 || requesteClaim) && (
+                <BoxIconDirect>
+                  <IconDirect src="/images/home/icon-direct.svg" alt="" />
+                </BoxIconDirect>
+              )
+            }
             style={{ marginRight: '7px', width: '50%' }}
           >
             {TranslateString(556, 'Collect Winnings')}
