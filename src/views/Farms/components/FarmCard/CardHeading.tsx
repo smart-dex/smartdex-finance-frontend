@@ -127,7 +127,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
           <StyledTriangle />
         </CardTitle>
         <StyledTag>
-          {!isCommunityFarm ? <CommunityTag /> : <CoreTag />}
+          {isCommunityFarm ? <CommunityTag /> : <CoreTag />}
           <MultiplierTag>{multiplier}</MultiplierTag>
         </StyledTag>
       </NamePool>
