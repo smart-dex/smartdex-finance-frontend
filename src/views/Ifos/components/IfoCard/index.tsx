@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
-import { Card, CardRibbon, LinkExternal } from 'uikit-sotatek'
+import { Card, CardRibbon, LinkExternal, useWalletModal } from 'uikit-sotatek'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import { BSC_BLOCK_TIME } from 'config'
 import { Ifo, IfoStatus } from 'config/constants/types'
@@ -300,6 +300,8 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
 
   const isActive = state.status === 'live'
   const isFinished = state.status === 'finished'
+  const { connect, reset } = useWallet()
+  const { onPresentConnectModal } = useWalletModal(connect, reset)
   
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
@@ -343,7 +345,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
         {!account && 
           <ButtonStyle style={{ }}>
             <UnlockButtonStyle fullWidth />
-            <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
+            <BoxIconDirect onClick={onPresentConnectModal}><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
           </ButtonStyle>  }
           <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
         </WrapButtonRow>
