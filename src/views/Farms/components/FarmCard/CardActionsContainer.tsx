@@ -92,6 +92,8 @@ const StyledButtonUnlock  = styled(UnlockButton)`
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
+  color: #FFFFFF;
+  background: ${baseColors.primary};
 `
 const StyledDivText = styled(Flex)`
 align-items: center;

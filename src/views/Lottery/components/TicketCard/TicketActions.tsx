@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, useModal } from '@pancakeswap-libs/uikit'
+import { Button, useModal } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
 import { useLotteryAllowance } from 'hooks/useAllowance'
 import useTickets from 'hooks/useTickets'
 import useTokenBalance from 'hooks/useTokenBalance'
 import { getCakeAddress } from 'utils/addressHelpers'
+import { baseColors, darkColors, lightColors } from 'style/Color'
 import { useApproval } from 'hooks/useApproval'
 import BuyTicketModal from './BuyTicketModal'
 import MyTicketsModal from './UserTicketsModal'
@@ -16,9 +17,34 @@ const CardActions = styled.div`
   display: flex;
   justify-content: center;
   margin-top: ${(props) => props.theme.spacing[3]}px;
+  padding: 8px 18px;
 
   ${({ theme }) => theme.mediaQueries.lg} {
     justify-content: space-between;
+  }
+`
+
+const ButtonStyle = styled(Button)`
+  background: ${baseColors.primary};
+  height: 35px;
+  padding: 18px;
+  font-size: 13px;
+  margin-left: 8px !important;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    height: 56px;
+    font-size: 16px;
+  }
+`
+
+const ButtonDisableStyle = styled(Button)`
+  height: 35px;
+  padding: 18px;
+  font-size: 13px;
+  margin-right: 8px !important;
+  background: ${ ({ theme}) => theme.isDark ? darkColors.buttonView : lightColors.buttonView} !important;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    height: 56px;
+    font-size: 16px;
   }
 `
 
@@ -38,29 +64,28 @@ const TicketCard: React.FC = () => {
     if (!allowance.toNumber()) {
       return (
         <>
-          <Button fullWidth disabled>
+          <ButtonDisableStyle disabled style={{ width: '100%' }}>
             {TranslateString(432, 'View your tickets')}
-          </Button>
-          <Button fullWidth disabled={requestedApproval} onClick={handleApprove}>
+          </ButtonDisableStyle>
+          <ButtonDisableStyle disabled={requestedApproval} onClick={handleApprove} style={{ width: '100%' }}>
             {TranslateString(494, 'Approve CAKE')}
-          </Button>
+          </ButtonDisableStyle>
         </>
       )
     }
     return (
       <>
-        <Button
-          style={{ marginRight: '8px' }}
-          fullWidth
+        <ButtonDisableStyle
+          style={{ marginRight: '8px', width: '100%' }}
           disabled={ticketsLength === 0}
           variant="secondary"
           onClick={onPresentMyTickets}
         >
           {TranslateString(432, 'View your tickets')}
-        </Button>
-        <Button id="lottery-buy-start" fullWidth onClick={onPresentBuy}>
+        </ButtonDisableStyle>
+        <ButtonStyle id="lottery-buy-start" onClick={onPresentBuy} style={{ width: '100%' }}>
           {TranslateString(430, 'Buy ticket')}
-        </Button>
+        </ButtonStyle>
       </>
     )
   }
@@ -68,7 +93,7 @@ const TicketCard: React.FC = () => {
   return (
     <CardActions>
       {lotteryHasDrawn ? (
-        <Button disabled> {TranslateString(874, 'On sale soon')}</Button>
+        <ButtonDisableStyle disabled style={{ width: '100%'}}> {TranslateString(874, 'On sale soon')}</ButtonDisableStyle>
       ) : (
         renderLotteryTicketButtons()
       )}

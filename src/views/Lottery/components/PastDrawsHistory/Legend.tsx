@@ -1,21 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { darkColors, lightColors, baseColors } from '../../../../style/Color'
 
 const Wrapper = styled.div`
   display: flex;
-  margin: 36px 0 28px;
+  margin: 34px 0 28px;
   justify-content: flex-end;
 `
-
 const LegendItem = styled.div`
   display: flex;
   margin-right: 18px;
   align-items: center;
 `
-
 const Circle = styled.div<{ isPoolSize?: boolean }>`
   width: 10px;
   height: 10px;
@@ -26,11 +24,11 @@ const Circle = styled.div<{ isPoolSize?: boolean }>`
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 14px;
 `
 
 const Legend = () => {
   const TranslateString = useI18n()
-
   return (
     <Wrapper>
       <LegendItem>
@@ -44,5 +42,4 @@ const Legend = () => {
     </Wrapper>
   )
 }
-
 export default Legend

@@ -8,6 +8,7 @@ export const baseColors = {
   warning: '#FFB237',
   arrowColor: '#d8f7e4',
   orange: '#FFA14E',
+  boxShadow: 'rgba(83, 185, 234, 0.24)',
 }
 
 export const brandColors = {
@@ -66,11 +67,18 @@ export const lightColors = {
   secondaryCard: '#E2E2E8',
   textComingSoon: 'rgba(111, 108, 153, 0.5)',
   btnDisabledBg: 'rgba(95, 94, 118, 0.1)',
+  backgroundCover: '#E9F4FC',
+  textLottery: '#5F5E76',
+  progress: '#9ED1FF',
+  progressLottery: '#C7E4FF',
+  progressBg: '#FFFFFF',
+  boxShadow: 'rgba(239, 239, 239, 0.24)',
   colorInput: 'rgba(95, 94, 118, 0.5)',
   colorButtonCancel: '#616171',
   bgButtonCancel: 'rgba(95, 94, 118, 0.2)',
+  colorTicket: 'rgba(95, 94, 118, 0.7)',
+  boxShadowLottery: 'rgba(120, 118, 148, 0.05)',
   borderButtonDetail: '#8F8FA0',
-
 }
 
 export const darkColors = {
@@ -127,8 +135,16 @@ export const darkColors = {
   secondaryCard: '#41465A',
   textComingSoon: 'rgba(255, 255, 255, 0.5)',
   btnDisabledBg: 'rgba(232, 232, 235, 0.2)',
+  backgroundCover: '#2A3145',
+  textLottery: '#FFFFFF',
+  progress: '#E3E4E7',
+  progressLottery: 'rgba(227, 228, 231, 0.5)',
+  progressBg: 'rgba(255, 255, 255, 0.1)',
+  boxShadow: 'rgba(46, 52, 69, 0.24)',
   colorInput: 'rgba(255, 255, 255, 0.38)',
   colorButtonCancel: 'rgba(255, 255, 255, 0.6)',
   bgButtonCancel: '#2A3145',
+  colorTicket: 'rgba(255, 255, 255, 0.6)',
+  boxShadowLottery: 'rgba(0, 0, 0, 0.05)',
   borderButtonDetail: '#8F8FA0',
 }
