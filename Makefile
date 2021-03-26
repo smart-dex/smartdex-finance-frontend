@@ -14,11 +14,9 @@ build-image:
 	docker push registry-server:5000/pancake-frontend:latest
 
 build-staging:
-	sudo npm install env-cmd --save 
 	npm run build:staging
 	
 build-development:
-	sudo npm install env-cmd --save 
 	npm run build:development
 
 build-production:
