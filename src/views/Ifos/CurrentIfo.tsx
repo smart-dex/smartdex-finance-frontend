@@ -100,7 +100,7 @@ const WrapText = styled(Text)`
   font-size: 13px;
   line-height: 20px;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
     line-height: 22px;
   }
