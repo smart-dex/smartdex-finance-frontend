@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
-import { Card, CardRibbon, LinkExternal, useWalletModal } from 'uikit-sotatek'
+import { Card, CardRibbon, LinkExternal, useWalletModal, Button } from 'uikit-sotatek'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import { BSC_BLOCK_TIME } from 'config'
 import { Ifo, IfoStatus } from 'config/constants/types'
@@ -11,13 +11,14 @@ import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
 import { useIfoContract } from 'hooks/useContract'
 import UnlockButton from 'components/UnlockButton'
+import { ButtonPrimary} from 'style/Button'
 import IfoCardHeader from './IfoCardHeader'
 import IfoCardProgress from './IfoCardProgress'
 import IfoCardDescription from './IfoCardDescription'
 import IfoCardDetails from './IfoCardDetails'
 import IfoCardTime from './IfoCardTime'
 import IfoCardContribute from './IfoCardContribute'
-import { ButtonPrimary } from '../../../../style/Button'
+
 
 
 export interface IfoCardProps {
@@ -65,8 +66,7 @@ const WrapButtonRow = styled('div')`
     margin-bottom: 20px;
   }
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ 
   ${({ theme }) => theme.mediaQueries.sm} {
     flex-direction: row;
     & > button {
@@ -89,10 +89,8 @@ const WrapButtonRow = styled('div')`
     }
     & > a {
       flex: 1;
-      margin-left: 70px;
-      margin-right: 24px;
+      margin-left: 40px;
     }
-   
   }
 `
 const CardBody = styled('div')`
@@ -124,45 +122,34 @@ const LinkExternalStyle = styled(LinkExternal)`
 const UnlockButtonStyle = styled(UnlockButton)`
   ${ButtonPrimary}
 `
-const ButtonStyle = styled.div`
-  margin-bottom: 18px;
-  width: 100%;
-  position: relative;
+const ButtonStyle = styled(Button)`
   button {
     background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
     color: ${baseColors.primary};
     border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(239, 239, 239, 0.24);
     height: 45px;
     font-weight: 600;
     font-size: 13px;
-    
-    padding-right: 24px;
     width: 100%;
-    
+    box-shadow: none !important;
     ${({ theme }) => theme.mediaQueries.nav} {
       font-size: 16px;
       height: 56px;
-      padding-right: 36px;
-      
-    }
-    ${({ theme }) => theme.mediaQueries.sm} {
-      font-size: 16px;
-      height: 56px;
-      margin-bottom: 0px;     
-    }
-    ${({ theme }) => theme.mediaQueries.md} {
-      font-size: 16px;
-      height: 56px;
-      padding-right: 36px;
-      margin-bottom: 0px;     
-    }
+      margin-bottom: 0px;
     }
   }
-${({ theme }) => theme.mediaQueries.sm} {
-  width: 48%;
-  margin-bottom: 0px;
-}
+  ${({ theme }) => theme.mediaQueries.sm} {
+    width: 48%;
+    margin-bottom: 0px;
+  }
+  position: relative;
+  & : hover{
+    opacity: 0.65;
+  }
+  justify-content: flex-end;
+  background: none !important;
+  box-shadow: none;
+  padding: 0px;
 `
 const IconDirect = styled.img`
   width: 10px;
@@ -173,7 +160,7 @@ const IconDirect = styled.img`
 const BoxIconDirect = styled.div`
   position: absolute;
   right: 0px;
-  top: 0px;
+  top: 6px;
   justify-content: flex-end;
   background: ${lightColors.buttonSecond};
   border-top-right-radius: 10px;
@@ -185,14 +172,9 @@ const BoxIconDirect = styled.div`
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 36px;
     line-height: 56px;
-  }
-  ${({ theme }) => theme.mediaQueries.sm} {
-    line-height: 56px;
-  }
-  
-    
+    top: 0px;
+  }    
 `
-
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
   if (currentBlock < startBlock) {
     return 'coming_soon'
@@ -343,8 +325,8 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
         />
         <WrapButtonRow>
         {!account && 
-          <ButtonStyle style={{ }}>
-            <UnlockButtonStyle fullWidth />
+          <ButtonStyle>
+            <UnlockButtonStyle fullWidth /> 
             <BoxIconDirect onClick={onPresentConnectModal}><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
           </ButtonStyle>  }
           <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>

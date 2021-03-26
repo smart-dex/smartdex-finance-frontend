@@ -5,7 +5,7 @@ import { Heading, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 
 const Title = styled(Heading).attrs({ as: 'h1' })`
-  color: ${({ theme }) => (theme.isDark ? darkColors.txtTitledark: lightColors.textIfolight)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.txtTitledark : lightColors.textIfolight)};
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -17,7 +17,7 @@ const Title = styled(Heading).attrs({ as: 'h1' })`
   }
 `
 const Blurb = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark: lightColors.textIfolight)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.textIfolight)};
   font-size: 13px;
   font-weight: 500;
   ${({ theme }) => theme.mediaQueries.sm} {
@@ -33,12 +33,12 @@ const StyledHero = styled.div`
 const Container = styled.div`
   margin-right: auto;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 5%;
   padding-right: 16px;
   ${({ theme }) => theme.mediaQueries.sm} {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+    padding-left: 9%;
+   }
+ 
 `
 const Hero = () => {
 

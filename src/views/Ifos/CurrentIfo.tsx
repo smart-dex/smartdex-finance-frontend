@@ -5,10 +5,11 @@ import { baseColors, brandColors, darkColors, lightColors } from 'style/Color'
 import { ChevronDown} from 'react-feather'
 import { ifosConfig } from 'config/constants'
 import useI18n from 'hooks/useI18n'
+import { ButtonPrimary, ButtonSecondary } from 'style/Button'
 import IfoCard from './components/IfoCard'
 import Title from './components/Title'
 import IfoCards from './components/IfoCards'
-import { ButtonPrimary, ButtonSecondary } from '../../style/Button'
+
 
 const LaunchIfoCallout = styled(BaseLayout)`
   display: grid;
@@ -16,15 +17,15 @@ const LaunchIfoCallout = styled(BaseLayout)`
   grid-gap: 43px;
   margin: 0 auto;
   padding: 10px 0 103px;
-  width: 85%;
+  width: 100%%;
   ${({ theme }) => theme.mediaQueries.md} {
     grid-template-columns: 1fr 1fr;
+    width: 85%;
   }
 `
 const List = styled.ul`
   color: ${({ theme }) => theme.colors.text};
   margin-bottom: 16px;
-
   & > li {
     font-weight: 500;
     font-size: 13px;
@@ -87,7 +88,7 @@ const WrapGridButton = styled('div')`
     max-width: 100%;
     margin-right: 5px;
   }
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     & > a {
       min-width: 150px;
       max-width: 100%;
