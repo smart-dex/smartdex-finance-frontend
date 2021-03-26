@@ -230,7 +230,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           )}
         </StyledAddButton>
         <StyledCardActions>
-          {!account && <UnlockButton style={ { width: 'calc(50% - 9px)'}} />}
+          {!account && (<StyledButtonUnlock>
+            <UnlockButton style={{ width: 'calc(50% - 9px)' }} />
+          </StyledButtonUnlock>
+          )}
           {account &&
             (needsApproval && !isOldSyrup ? (
               <ButtonApprove
@@ -469,9 +472,24 @@ text-align: center;
 border-radius: 6px;
 padding: 5px 0;
 position: absolute;
-z-index: 1;isFinished
+z-index: 1;
   font-size: 18px;
 }
+`
+const StyledButtonUnlock = styled(UnlockButton)`
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  width: calc(50% - 9px);
+  font-weight: 600;
+  font-size: 13px;
+  height:56px;
+  line-height: 20px;
+  margin-top:10px;
+  margin-bottom:10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+  color: #FFFFFF;
+  background: ${baseColors.primary};
 `
 
 const StyleImgEaredDetail = styled(Flex)`
@@ -518,6 +536,7 @@ const StyledTextEarned = styled.div`
 
 const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
   background: ${({ isDisable }) => !isDisable && baseColors.primary};
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
