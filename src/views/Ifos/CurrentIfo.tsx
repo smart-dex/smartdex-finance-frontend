@@ -17,7 +17,7 @@ const LaunchIfoCallout = styled(BaseLayout)`
   grid-gap: 43px;
   margin: 0 auto;
   padding: 10px 0 103px;
-  width: 100%%;
+  width: 100%;
   ${({ theme }) => theme.mediaQueries.md} {
     grid-template-columns: 1fr 1fr;
     width: 85%;
