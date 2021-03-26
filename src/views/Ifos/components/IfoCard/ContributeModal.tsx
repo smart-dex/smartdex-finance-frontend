@@ -14,12 +14,12 @@ interface Props {
 }
 
 const ContributeModal: React.FC<Props> = ({ currency, contract, currencyAddress, onDismiss }) => {
-  const [value, setValue] = useState('')
-  const [pendingTx, setPendingTx] = useState(false)
-  const { account } = useWallet()
-  const balance = getFullDisplayBalance(useTokenBalance(currencyAddress))
+const [value, setValue] = useState('')
+const [pendingTx, setPendingTx] = useState(false)
+const { account } = useWallet()
+const balance = getFullDisplayBalance(useTokenBalance(currencyAddress))
 
-  return (
+return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
       <BalanceInput
         value={value}
