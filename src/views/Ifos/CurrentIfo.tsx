@@ -59,7 +59,7 @@ const WrapCard = styled(Card)`
   border-radius: 40px;
   padding: 25px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     padding: 50px 36px 50px 50px;
   }
   box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
@@ -123,7 +123,7 @@ const LinkSecondary = styled(Link)`
     background-color:${lightColors.buttonSecond};
     color:${brandColors.white};
   }
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     padding:0 20px;
   }
 `
