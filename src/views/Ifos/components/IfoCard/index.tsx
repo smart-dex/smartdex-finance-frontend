@@ -32,7 +32,6 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 40px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
   ${({ theme }) => theme.mediaQueries.sm} {
     flex-direction: row;
     width: 85%;

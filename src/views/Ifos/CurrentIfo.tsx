@@ -62,7 +62,6 @@ const WrapCard = styled(Card)`
   ${({ theme }) => theme.mediaQueries.nav} {
     padding: 50px 36px 50px 50px;
   }
-  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
 `
 const WrapHeading = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
