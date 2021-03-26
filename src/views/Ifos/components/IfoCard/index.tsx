@@ -42,7 +42,7 @@ const CardHeaderFlex = styled('div')`
   display: flex;
   flex-direction: column;
   positon: relative;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
   }
   & > div {
@@ -66,21 +66,7 @@ const WrapButtonRow = styled('div')`
     margin-bottom: 20px;
   }
   flex-direction: column;
- 
-  ${({ theme }) => theme.mediaQueries.sm} {
-    flex-direction: row;
-    & > button {
-      flex: 1;
-      margin-right: 17px;
-      margin-bottom: 0;
-    }
-    & > a {
-      flex: 1;
-      margin-left: 15px;
-      margin-right: 0x;
-    }
-  }
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
     & > button {
       flex: 1;
@@ -95,7 +81,7 @@ const WrapButtonRow = styled('div')`
 `
 const CardBody = styled('div')`
   padding: 25px;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     padding: 50px 123px 50px 123px;
   }
 `
@@ -138,7 +124,7 @@ const ButtonStyle = styled(Button)`
       margin-bottom: 0px;
     }
   }
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     width: 48%;
     margin-bottom: 0px;
   }

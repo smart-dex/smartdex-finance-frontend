@@ -10,7 +10,7 @@ const Title = styled(Heading).attrs({ as: 'h1' })`
   line-height: 24px;
   font-weight: 700;
   margin-bottom: 15px;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 36px;
     line-height: 44px;
     margin-bottom: 24px;
@@ -20,7 +20,7 @@ const Blurb = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.textIfolight)};
   font-size: 13px;
   font-weight: 500;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
    }
 `
@@ -35,7 +35,7 @@ const Container = styled.div`
   width: 100%;
   padding-left: 5%;
   padding-right: 16px;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     padding-left: 9%;
    }
  

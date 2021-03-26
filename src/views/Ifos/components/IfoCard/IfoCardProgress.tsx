@@ -13,7 +13,7 @@ const StyledProgress = styled.div`
   & > div > div {
     background: ${baseColors.primary};
   }
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     margin-left: 35%;
   }
 `

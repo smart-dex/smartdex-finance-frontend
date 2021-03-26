@@ -47,7 +47,7 @@ const List = styled.ul`
       border-radius: 50%;
     }
   }
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     & > li {
       font-size: 14px;
       line-height: 20px;
@@ -69,7 +69,7 @@ const WrapHeading = styled(Heading)`
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
     line-height: 22px;
     margin-top:30px;
