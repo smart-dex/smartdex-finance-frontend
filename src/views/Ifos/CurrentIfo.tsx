@@ -18,7 +18,7 @@ const LaunchIfoCallout = styled(BaseLayout)`
   margin: 0 auto;
   padding: 10px 0 103px;
   width: 100%;
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     grid-template-columns: 1fr 1fr;
     width: 85%;
   }
@@ -91,7 +91,6 @@ const WrapGridButton = styled('div')`
   ${({ theme }) => theme.mediaQueries.nav} {
     & > a {
       min-width: 150px;
-      max-width: 100%;
       margin-right: 20px;
     }
   }
@@ -190,9 +189,7 @@ const TitleEnd = styled(Text)`
     }
   }
 `
-/**
- * Note: currently there should be only 1 active IFO at a time
- */
+
 const activeIfo = ifosConfig.find((ifo) => ifo.isActive)
 
 const Ifo = () => {
