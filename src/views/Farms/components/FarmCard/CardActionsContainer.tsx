@@ -1,11 +1,12 @@
 import React, { useMemo, useState, useCallback } from 'react'
 import BigNumber from 'bignumber.js'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { getAddress } from 'utils/addressHelpers'
+import { getBalanceNumber } from 'utils/formatBalance'
 import { ChevronDown, ChevronUp } from 'react-feather'
-import { Button, Flex, Text } from 'uikit-sotatek'
+import { Button, Flex, Heading, Text } from 'uikit-sotatek'
 import { Farm } from 'state/types'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
@@ -13,30 +14,16 @@ import { lightColors, darkColors, baseColors } from 'style/Color'
 import UnlockButton from 'components/UnlockButton'
 import { useApprove } from 'hooks/useApprove'
 import StakeAction from './StakeAction'
-import HarvestAction from './HarvestAction'
 
-const Action = styled.div`
-  display: flex;
-  flex-grow: 2;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: normal;
-  margin-left: 0px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: 16px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-`
+
+
 const ButtonAction = styled(Flex)`
-  flex-grow: 2;
+  padding: 0px 20px 0px 20px;
+  width:100%;
   flex-direction: column;
-  margin-top: 16px;
-  margin-left: 0px;
+  margin-bottom:10px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: 25px;
-    margin-top: 0px;
+    
   }
 `
 const StyledGroupButton = styled(Flex)`
@@ -50,19 +37,67 @@ const StyledGroupButton = styled(Flex)`
 const FarmStakedText = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 17px;
 `
-const ButtonDetail = styled(Button)`
-  border: 1px solid ${baseColors.primary};
-  border-radius: 10px;
-  color: #0085ff;
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
-  font-weight: 600;
+const ButtonDetail = styled(Button)<{isShow:boolean}>`
+${(props) =>
+  props.isShow ?
+    (
+      css`
+    border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderButtonDetail : lightColors.borderButtonDetail)};
+    color: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#5F5E76')};
+    `
+    ) :
+    (
+      css`
+      border: 1px solid  ${baseColors.primary};
+      color: ${baseColors.primary};
+      `
+    )
+}
+margin-left: auto;
+width: calc(50% - 9px);
+box-shadow:none;
+border-radius: 10px;
+background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
+font-weight: 600;
+font-size: 13px;
+line-height: 20px;
+${({ theme }) => theme.mediaQueries.nav} {
   font-size: 16px;
+}
+`
+
+const ButtonApprove = styled(Button)<{ isDisable: boolean }>`
+  background: ${({ isDisable }) => !isDisable && baseColors.primary};
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  font-weight: 600;
+  font-size: 13px;
   line-height: 20px;
-  $margin: 0.25rem;
+  width: calc(50% - 9px);
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
+const StyledButtonUnlock  = styled(UnlockButton)`
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  width: calc(50% - 9px);
+  font-weight: 600;
+  font-size: 13px;
+  height:56px;
+  line-height: 20px;
+  margin-top:10px;
+  margin-bottom:10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+  color: #FFFFFF;
+  background: ${baseColors.primary};
+`
+const StyledDivText = styled(Flex)`
+align-items: center;
+
 `
 
 export interface FarmWithStakedValue extends Farm {
@@ -89,12 +124,13 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses } = useFarmFromSymbol(farm.lpSymbol)
-  const { allowance, tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
+  const { allowance, tokenBalance, stakedBalance } = useFarmUser(pid)
   const lpAddress = getAddress(lpAddresses)
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
   const Icon = isOpenDetail ? ChevronUp : ChevronDown
-
+  const rawStakedBalance = getBalanceNumber(stakedBalance)
+  const displayBalance = rawStakedBalance.toLocaleString()
   const lpContract = useMemo(() => {
     return getContract(ethereum as provider, lpAddress)
   }, [ethereum, lpAddress])
@@ -121,31 +157,33 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
         addLiquidityUrl={addLiquidityUrl}
       />
     ) : (
-      <Button disabled={requestedApproval} onClick={handleApprove} style={{ maxWidth: '143px' }} mt="10px" mb="10px">
+      <ButtonApprove disabled={requestedApproval} isDisable={requestedApproval} onClick={handleApprove} style={{  width: 'calc(50% - 9px)' }} mt="10px" mb="10px">
         {TranslateString(758, 'Approve Contract')}
-      </Button>
+      </ButtonApprove>
     )
   }
 
   return (
-    <Action>
-      <HarvestAction earnings={earnings} pid={pid} />
       <ButtonAction>
-        <FarmStakedText bold textTransform="uppercase" fontSize="16px">
-          {lpName} {TranslateString(1074, 'Staked')}
-        </FarmStakedText>
+        <StyledDivText>
+          <FarmStakedText bold textTransform="uppercase" fontSize="16px" style={{flex:'1'}}>
+            {lpName} {TranslateString(1074, 'Staked')}
+          </FarmStakedText>
+          <Heading color={rawStakedBalance === 0 ? 'textDisabled' : 'text'}>{displayBalance}</Heading>
+        </StyledDivText>
+    
         <StyledGroupButton>
           {!account ? (
-            <UnlockButton style={{ maxWidth: '143px' }} mt="10px" mb="10px" />
+              <StyledButtonUnlock />
+           
           ) : (
             renderApprovalOrStakeButton()
           )}
-          <ButtonDetail onClick={changeOpenDetail} style={{ minWidth: '143px' }} mt="10px" mb="10px">
+          <ButtonDetail onClick={changeOpenDetail} isShow={isOpenDetail}  mt="10px" mb="10px">
             {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
           </ButtonDetail>
         </StyledGroupButton>
       </ButtonAction>
-    </Action>
   )
 }
 

@@ -16,7 +16,7 @@ const ApyButton: React.FC<ApyButtonProps> = ({ lpLabel, cakePrice, apy, addLiqui
   )
 
   return (
-    <IconButton onClick={onPresentApyModal} variant="text" size="sm" ml="4px">
+    <IconButton onClick={onPresentApyModal} variant="text" size="sm"  style={{alignItems:'baseline', height:'20px'}}>
       <CalculateIcon />
     </IconButton>
   )
