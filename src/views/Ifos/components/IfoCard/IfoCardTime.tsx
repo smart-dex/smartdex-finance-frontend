@@ -19,6 +19,11 @@ const Details = styled.div`
   display: flex;
   height: 24px;
   justify-content: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    margin-right: 25%;
+    justify-content: flex-end;
+  }
 `
 
 const Countdown = styled.div`
@@ -27,7 +32,7 @@ const Countdown = styled.div`
   font-weight: 500;
   text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     line-height: 20px;
   }

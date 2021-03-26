@@ -14,5 +14,5 @@ export const HeadingFarm = styled(Heading)`
   }
   font-weight: bold;
   font-size: 18px;
-  line-height: 29px;
+  line-height: 30px;
 `

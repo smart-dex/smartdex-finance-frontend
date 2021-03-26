@@ -9,7 +9,7 @@ const ButtonStyle = styled(Button)`
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
   color: ${baseColors.primary};
   border-radius: 10px;
-  box-shadow: ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(239, 239, 239, 0.24)')};
+]
   height: 45px;
   font-weight: 600;
   font-size: 13px;
@@ -18,7 +18,6 @@ const ButtonStyle = styled(Button)`
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     height: 56px;
-    padding-right: 36px;
   }
 `
 const UnlockButton = (props) => {
@@ -28,7 +27,7 @@ const UnlockButton = (props) => {
 
   return (
     <ButtonStyle onClick={onPresentConnectModal} {...props}>
-      {TranslateString(292, 'Unlock Wallet')}
+      {TranslateString(292, 'Unlock Wallet')} 
     </ButtonStyle>
   )
 }

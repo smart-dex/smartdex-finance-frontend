@@ -1,26 +1,18 @@
+import { darkColors, lightColors } from 'style/Color'
 import styled from 'styled-components'
-import { lightColors, darkColors, baseColors } from 'style/Color'
 
 const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
-  background: ${(props) => props.theme.card.background};
+  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   display: flex;
-  color: ${({ isFinished, theme }) => theme.colors[isFinished ? 'textDisabled' : 'secondary']};
-  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
-  box-shadow: 50px 38px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
-  border-radius: 20px;
+  border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   flex-direction: column;
-  &:hover {
-    border: 1px solid ${baseColors.primary};
-    transition: 0.25s;
-  }
-  position: relative;
-  margin: 0px auto;
-  margin-bottom: 28px;
-  max-width: 400px;
-  min-width: 200px;
+  min-height:413px;
+  max-width: 350px;
+  min-width: 300px;
+  margin-right: 0px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    max-width: none;
-    min-width: 968px;
+    max-width: 400px;
+    margin-right: 42px;
   }
 `
 

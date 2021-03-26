@@ -14,16 +14,15 @@ build-image:
 	docker push registry-server:5000/pancake-frontend:latest
 
 build-staging:
-	sudo npm install env-cmd --save 
 	npm run build:staging
 	
 build-development:
-	sudo npm install env-cmd --save 
 	npm run build:development
 
 build-production:
 	sudo npm install env-cmd --save 
 	npm run build:production
 
-deploy:
+deploy-development:
+	make build-development
 	rsync -a build  sotatek@192.168.1.206:/var/www/test/smartdex-finance
