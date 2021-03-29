@@ -74,7 +74,7 @@ const InfoBlock = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorInfoBlock : lightColors.colorInfoBlock)};
   min-height: 65px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    height: 65px;
+    height: 70px;
   }
 `
 const SubCard = styled.div`
@@ -112,7 +112,7 @@ const NftCard: React.FC<NftCardProps> = ({ nft, onSuccess, canClaim = false, tok
               </Tag>
             )}
             {profile?.nft?.bunnyId === bunnyId && (
-              <Tag outline variant="success">
+              <Tag outline variant="success">s
                 {TranslateString(999, 'Profile Pic')}
               </Tag>
             )}
