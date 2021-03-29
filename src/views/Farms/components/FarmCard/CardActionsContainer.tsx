@@ -165,12 +165,12 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
 
   return (
       <ButtonAction>
-        <StyledDivText>
+        {/* <StyledDivText>
           <FarmStakedText bold textTransform="uppercase" fontSize="16px" style={{flex:'1'}}>
             {lpName} {TranslateString(1074, 'Staked')}
           </FarmStakedText>
           <Heading color={rawStakedBalance === 0 ? 'textDisabled' : 'text'}>{displayBalance}</Heading>
-        </StyledDivText>
+        </StyledDivText> */}
     
         <StyledGroupButton>
           {!account ? (

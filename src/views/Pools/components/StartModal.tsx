@@ -79,7 +79,7 @@ const StartModal: React.FC<StartModalProps> = ({ onDismiss, harvest, tokenDecima
   )
 
   return (
-    <Modal title={`${TranslateString(999, 'Action')} `} onDismiss={onDismiss}>
+    <ModalStyle title={`${TranslateString(999, 'Action')} `} onDismiss={onDismiss}>
       <StyledModal>
         <ActionEarn>
           <StyledImg>
@@ -167,7 +167,7 @@ const StartModal: React.FC<StartModalProps> = ({ onDismiss, harvest, tokenDecima
           </StyledGroupButton>
         </ActionStake>
       </StyledModal>
-    </Modal >
+    </ModalStyle >
   )
 }
 const StyledModal = styled(Flex)`
@@ -176,6 +176,10 @@ const StyledModal = styled(Flex)`
       flex-direction:row;
     }
     flex-direction:column;
+`
+const ModalStyle = styled(Modal)`
+  border: 1px solid #E2E2E8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
 `
 const Action = styled.div`
     ${({ theme }) => theme.mediaQueries.nav} {

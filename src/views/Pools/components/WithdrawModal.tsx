@@ -38,7 +38,7 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   }, [fullBalance, setVal])
 
   return (
-    <Modal title={`Withdraw ${tokenName}`} onDismiss={onBack}>
+    <ModalStyle title={`Withdraw ${tokenName}`} onDismiss={onBack}>
       <StyledModal>
       <TokenInput
         onSelectMax={handleSelectMax}
@@ -65,7 +65,7 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
       </ModalActions>
       </StyledModal>
      
-    </Modal>
+    </ModalStyle>
   )
 }
 const ButtonConfirm = styled(Button)`
@@ -91,6 +91,10 @@ const StyledModal = styled.div`
 ${({ theme }) => theme.mediaQueries.nav} {
   width 551px;
 }
+`
+const ModalStyle = styled(Modal)`
+  border: 1px solid #E2E2E8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
 `
 
 export default WithdrawModal

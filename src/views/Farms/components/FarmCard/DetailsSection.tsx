@@ -1,7 +1,7 @@
 import React from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
-import { Text, Flex, Link, LinkExternal } from 'uikit-sotatek'
+import { Text, Flex, Link, LinkExternal, Button } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
 
 export interface ExpandableSectionProps {
@@ -48,6 +48,15 @@ const StyledLink = styled(Link)`
     font-size: 16px;
   }
 `
+const ButtonClaim = styled(Button)`
+  background: #17C267;
+  box-shadow: 0px 4px 10px rgba(23, 194, 103, 0.24);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+`
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
   bscScanAddress,
@@ -70,12 +79,31 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
           <StyledText>{totalValueFormated}</StyledText>
         </Flex>
       )}
+      <Flex flexDirection="column">
+        <Flex ><StyledText>{TranslateString(999, 'You Liquidity deposits')}:</StyledText> <ButtonClaim>{TranslateString(999, 'Claim')}</ButtonClaim>  </Flex>
+
+        <Flex >
+          <StyledText>{totalValueFormated}</StyledText>
+          <StyledText>1,111 SDC/WEEK</StyledText>
+        </Flex>
+
+      </Flex>
+      <Flex flexDirection="column">
+        <StyledText>{TranslateString(999, 'Your unclaimed SDC')}:</StyledText>
+        <StyledText>{totalValueFormated}</StyledText>
+      </Flex>
+      <Flex justifyContent="space-between">
+        <StyledText>{TranslateString(316, 'Stake')}:</StyledText>
+        <StyledLinkExternal href={addLiquidityUrl}>{lpLabel}</StyledLinkExternal>
+      </Flex>
+
+
       <Flex justifyContent="flex-start">
         <StyledLink external href={bscScanAddress} bold={false}>
           {TranslateString(356, 'View on BscScan')}
         </StyledLink>
       </Flex>
-   </>
+    </>
   )
 }
 

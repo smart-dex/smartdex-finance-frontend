@@ -37,11 +37,11 @@ const NamePool = styled(Flex)`
   align-self: flex-start;
 `
 
-const StyleNamePool = styled.div`
+const StyleNameFarm = styled(Flex)`
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
-  white-space: nowrap; 
-  text-overflow: ellipsis;
-  overflow: hidden; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
   padding:24px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   font-weight: bold;
@@ -110,20 +110,28 @@ const StyledTag = styled(Flex)`
   }
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
 `
+const StyledImg = styled.div`
+  width: 28px;
+  height: 28px;
+  margin: 0 auto;
+`
 
 const CardHeading: React.FC<ExpandableSectionProps> = ({
   lpLabel,
   multiplier,
   isCommunityFarm,
+  farmImage,
+  tokenSymbol
 }) => {
   return (
     <Flex flexDirection="column">
       <NamePool>
         <CardTitle>
-          <StyleNamePool>  {lpLabel}
+          <StyleNameFarm>
+            {lpLabel}
             <StyledTooltip>  {lpLabel}
             </StyledTooltip>
-          </StyleNamePool>
+          </StyleNameFarm>
           <StyledTriangle />
         </CardTitle>
         <StyledTag>

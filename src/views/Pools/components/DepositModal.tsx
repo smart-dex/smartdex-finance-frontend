@@ -37,7 +37,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
   }, [fullBalance, setVal])
 
   return (
-    <Modal title={`${TranslateString(316, 'Deposit')} ${tokenName} Tokens`} onDismiss={onBack}>
+    <ModalStyle title={`${TranslateString(316, 'Deposit')} ${tokenName} Tokens`} onDismiss={onBack}>
       <StyledModal>
         <TokenInput
           value={val}
@@ -64,7 +64,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
         </ModalActions>
       </StyledModal>
 
-    </Modal>
+    </ModalStyle>
   )
 }
 
@@ -91,5 +91,9 @@ const StyledModal = styled.div`
 ${({ theme }) => theme.mediaQueries.nav} {
   width 551px;
 }
+`
+const ModalStyle = styled(Modal)`
+  border: 1px solid #E2E2E8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
 `
 export default DepositModal

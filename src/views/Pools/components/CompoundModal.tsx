@@ -24,7 +24,7 @@ const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, token
   }, [earnings])
 
   return (
-    <Modal
+    <ModalStyle
       title={`${TranslateString(704, 'Compound')} ${TranslateString(330, `${tokenName} Earned`)}`}
       onDismiss={onBack}
     >
@@ -51,7 +51,7 @@ const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, token
       </ModalActions>
       </StyledModal>
       
-    </Modal>
+    </ModalStyle>
   )
 }
 
@@ -84,9 +84,12 @@ const ButtonCancel = styled(Button)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorButtonCancel : lightColors.colorButtonCancel)};;
   border:none;
 `
+const ModalStyle = styled(Modal)`
+  border: 1px solid #E2E2E8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+`
 const StyledModal = styled.div`
-
-${({ theme }) => theme.mediaQueries.nav} {
-  width 551px;
-}
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width 551px;
+  }
 `

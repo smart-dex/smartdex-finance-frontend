@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-import { Flex, Text, Skeleton } from 'uikit-sotatek'
+import { Flex, Text, Skeleton,Button } from 'uikit-sotatek'
 import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
@@ -17,6 +17,7 @@ import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
 import ApyButton from './ApyButton'
+
 
 
 export interface FarmWithStakedValue extends Farm {
@@ -69,7 +70,7 @@ width: 50%;
 `
 const InfoTextFarm = styled(Text)`
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
 `
@@ -78,14 +79,15 @@ const DetailInFo = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
 `
 const StyledInfoEarn = styled(Flex)`
-justify-content: center;
-padding:20px 20px 0px 20px;
-margin-top:20px;
-width: 100%;
+  flex-direction:column;
+  justify-content: center;
+  padding:20px 20px 0px 20px;
+  margin-top:20px;
+  width: 100%;
 `
 const Line = styled.div`
   width: calc(100% - 50px);
@@ -95,6 +97,33 @@ const Line = styled.div`
 `
 const Detail = styled(Flex)`
   flex-wrap:wrap;
+`
+
+const ButtonDeposit = styled(Button)`
+  background: #0085FF;
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  border-radius: 10px;
+  width:100%;
+`
+const ButtonApprove = styled(Button)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
+  background: ${({ isDisable }) => isDisable && ''};
+  color: #17C267;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  width: 100%;
+  border: 1px solid #17C267;
+  filter:  ${({ isDisable }) => isDisable ? '' : 'drop-shadow(0px 4px 10px rgba(111, 180, 143, 0.24))'} ;
+  border-radius: 10px;
+  box-shadow: none;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
+const  StyledGroupButton = styled.div`
+  width:100%; 
+  padding: 0 20px;
 `
 
 interface FarmCardProps {
@@ -160,7 +189,64 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       />
       <CardContent>
         <StyledInfoEarn>
-          <InfoFarm justifyContent="center" flexDirection="column">
+        {!removed && (
+              <Detail mb="37px" >
+                <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {farm.apy ? (
+                    <>
+                    <ApyButton
+                        lpLabel={lpLabel}
+                        addLiquidityUrl={addLiquidityUrl}
+                        cakePrice={cakePrice}
+                        apy={farm.apy}
+                      />
+                      {farmAPY}% 
+                  </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+            )}
+            <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'Total Deposits')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                      123456 AAA
+          
+                  </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+              <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'Pool Rate')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                      1120.4 SDC/WEEK
+                  </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+              <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'You Pool Rate')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                     {farmAPY}%
+                  </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+          {/* <InfoFarm justifyContent="center" flexDirection="column">
             {!removed && (
               <Detail mb="37px" >
                 <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
@@ -186,9 +272,17 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
               <InfoTextFarm bold>{earnLabel}</InfoTextFarm>
             </Detail>
           </InfoFarm>
-          <HarvestAction earnings={earnings} pid={pid} />
+          <HarvestAction earnings={earnings} pid={pid} /> */}
         </StyledInfoEarn>
-        <Line />
+        <StyledGroupButton>
+        <ButtonDeposit>
+          Deposit
+        </ButtonDeposit>
+        <ButtonApprove>
+          {TranslateString(736, 'Aprrove Contract')}
+          </ButtonApprove>
+        </StyledGroupButton>
+       
         <CardActionsContainer
           farm={farm}
           ethereum={ethereum}
