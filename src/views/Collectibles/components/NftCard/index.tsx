@@ -74,7 +74,7 @@ const InfoBlock = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorInfoBlock : lightColors.colorInfoBlock)};
   min-height: 65px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    height: 70px;
+    height: 65px;
   }
 `
 const SubCard = styled.div`
