@@ -9,12 +9,12 @@ const ButtonStyle = styled(Button)`
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
   color: ${baseColors.primary};
   border-radius: 10px;
-]
   height: 45px;
   font-weight: 600;
   font-size: 13px;
   position: relative;
   padding-right: 24px;
+  box-shadow: none;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     height: 56px;
