@@ -20,8 +20,7 @@ const PurchasedTickets: React.FC<PurchasedTicketsProps> = ({ myTicketNumbers }) 
 
 const TicketsList = styled.div`
   margin-top: 0.5em;
-  padding-left: 5em;
-  padding-right: 5em;
+  padding: 5em;
   overflow-y: auto;
   max-height: 400px;
   color: ${(props) => props.theme.colors.primary};
