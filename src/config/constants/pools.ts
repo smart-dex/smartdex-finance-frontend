@@ -3,12 +3,12 @@ import { PoolConfig, QuoteToken, PoolCategory } from './types'
 const pools: PoolConfig[] = [
   {
     sousId: 0,
-    tokenName: 'CAKE',
-    tokenAddress: '0x04e6407bf994D225Fd02a6f42e8C02ECD907033a',
-    stakingTokenName: QuoteToken.CAKE,
-    stakingTokenAddress: '0x04e6407bf994D225Fd02a6f42e8C02ECD907033a',
+    tokenName: 'SDC',
+    tokenAddress: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
+    stakingTokenName: QuoteToken.SDC,
+    stakingTokenAddress: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
     contractAddress: {
-      97: '0x04c53feA640c5D412f8F73a30733C2abD2070035',
+      97: '0x960D3228B497eAca929869AEE4418785177897d5',
       56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
     },
     poolCategory: PoolCategory.CORE,
