@@ -12,9 +12,10 @@ interface DepositModalProps {
   onConfirm: (amount: string) => void
   onDismiss?: () => void
   tokenName?: string
+  onBack?: () =>void
 }
 
-const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, onDismiss, tokenName = '' }) => {
+const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, tokenName = '' ,onBack,onDismiss}) => {
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
   const fullBalance = useMemo(() => {
@@ -24,13 +25,13 @@ const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, onDis
   return (
     <Modal
       title={`${TranslateString(704, 'Compound')} ${TranslateString(330, `${tokenName} Earned`)}`}
-      onDismiss={onDismiss}
+      onDismiss={onBack}
     >
       <BalanceRow>
         <Balance value={Number(fullBalance)} />
       </BalanceRow>
       <ModalActions>
-        <Button variant="secondary" onClick={onDismiss}>
+        <Button variant="secondary" onClick={onBack}>
           {TranslateString(462, 'Cancel')}
         </Button>
         <Button
