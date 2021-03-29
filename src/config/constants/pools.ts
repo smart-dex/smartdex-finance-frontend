@@ -44,7 +44,7 @@ const pools: PoolConfig[] = [
     stakingTokenName: QuoteToken.CAKE,
     stakingTokenAddress: '0x04e6407bf994D225Fd02a6f42e8C02ECD907033a',
     contractAddress: {
-      97: '0x8AC938DF1D0643a726A026BcBd624865905DcEa3',
+      97: '0xDEA2f643AC49DdB8Cd38d9230222112C98859790',
       56: '',
     },
     poolCategory: PoolCategory.CORE,

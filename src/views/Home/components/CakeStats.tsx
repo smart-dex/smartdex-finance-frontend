@@ -20,7 +20,7 @@ const StyledCakeStats = styled(Card)`
     margin-bottom: 20px;
   }
 `
-const HeadingEarn = styled(Heading)` 
+const HeadingEarn = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   font-weight: bold;
   font-size: 20px;
@@ -73,7 +73,7 @@ const CakeStats = () => {
         </Row>
         <Row>
           <TextStyle>{TranslateString(540, 'New SDC/block')}</TextStyle>
-          <CardValue fontSize="24px" decimals={0} bold value={25} />
+          <CardValue fontSize="24px" decimals={0} bold value={40} />
         </Row>
       </CardBody>
     </StyledCakeStats>
