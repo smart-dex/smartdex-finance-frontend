@@ -21,7 +21,7 @@ const Collectibles = () => {
   return (
     <Page>
       <StyledHero as="h1" size="xxl" color="secondary">
-        {TranslateString(999, 'Pancake Collectibles')}
+        {TranslateString(999, 'SmartDEX Collectibles')}
       </StyledHero>
       <NftList />
     </Page>

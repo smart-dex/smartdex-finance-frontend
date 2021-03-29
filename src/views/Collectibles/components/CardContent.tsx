@@ -5,16 +5,13 @@ const Image = styled.img`
   margin-right: 16px;
   width: 56px;
 `
-
 const Content = styled.div`
   flex: 1;
 `
-
 const StyledCardContent = styled.div`
   align-items: start;
   display: flex;
 `
-
 const CardContent = ({ imgSrc, children }) => {
   return (
     <StyledCardContent>
