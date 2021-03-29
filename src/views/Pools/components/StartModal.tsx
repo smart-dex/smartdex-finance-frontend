@@ -67,13 +67,14 @@ const StartModal: React.FC<StartModalProps> = ({ onDismiss, harvest, tokenDecima
   )
 
   const [onPresentWithdraw] = useModal(
-    <WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={stakingTokenName} onDismiss={onBack} />,
+    <WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={stakingTokenName} onBack={onBack} />,
   )
   const [onPresentDeposit] = useModal(
     <DepositModal
       max={stakingLimit && stakingTokenBalance.isGreaterThan(convertedLimit) ? convertedLimit : stakingTokenBalance}
       onConfirm={onStake}
       tokenName={stakingLimit ? `${stakingTokenName} (${stakingLimit} max)` : stakingTokenName}
+      onBack={onBack}
     />,
   )
 
