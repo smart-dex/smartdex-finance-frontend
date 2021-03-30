@@ -182,7 +182,7 @@ const FarmedStakingCard = () => {
           onClick={handleApprove}
           style={{ width: '50%', marginLeft: '7px' }}
         >
-          {TranslateString(494, 'Approve SDC')}
+          {TranslateString(494, 'Approve SDC')}&nbsp;&nbsp;
         </ButtonStyle>
       )
     }
