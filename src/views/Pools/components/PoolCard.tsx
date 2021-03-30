@@ -1,31 +1,25 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { Button, IconButton, useModal, Flex } from 'uikit-sotatek'
+import { Button, useModal, Flex } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
 import { useERC20 } from 'hooks/useContract'
 import { useSousApprove } from 'hooks/useApprove'
 import useI18n from 'hooks/useI18n'
-import { useSousStake } from 'hooks/useStake'
-import { useSousUnstake } from 'hooks/useUnstake'
 import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { useSousHarvest } from 'hooks/useHarvest'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import { Pool } from 'state/types'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { CommunityTag, CoreTag, BinanceTag } from 'components/Tags'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import Balance from 'components/Balance'
-import DepositModal from './DepositModal'
-import WithdrawModal from './WithdrawModal'
-import CompoundModal from './CompoundModal'
+import StartModal from './SelectModal'
 import CardTitle from './CardTitle'
 import Card from './Card'
 import OldSyrupTitle from './OldSyrupTitle'
-import HarvestButton from './HarvestButton'
 import CardFooter from './CardFooter'
 import CardContent from './CardContent'
 
@@ -63,18 +57,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const { account } = useWallet()
   const block = useBlock()
   const { onApprove } = useSousApprove(stakingTokenContract, sousId)
-  const { onStake } = useSousStake(sousId, isBnbPool)
-  const { onUnstake } = useSousUnstake(sousId)
-  const { onReward } = useSousHarvest(sousId, isBnbPool)
-
   const [requestedApproval, setRequestedApproval] = useState(false)
-  const [pendingTx, setPendingTx] = useState(false)
-
   const allowance = new BigNumber(userData?.allowance || 0)
   const stakingTokenBalance = new BigNumber(userData?.stakingTokenBalance || 0)
   const stakedBalance = new BigNumber(userData?.stakedBalance || 0)
   const earnings = new BigNumber(userData?.pendingReward || 0)
-
   const blocksUntilStart = Math.max(startBlock - block, 0)
   const blocksRemaining = Math.max(endBlock - block, 0)
   const isOldSyrup = stakingTokenName === QuoteToken.SYRUP
@@ -94,21 +81,27 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const handleClick = () => setIsOpenDetail(!isOpenDetail)
 
   const convertedLimit = new BigNumber(stakingLimit).multipliedBy(new BigNumber(10).pow(tokenDecimals))
-  const [onPresentDeposit] = useModal(
-    <DepositModal
-      max={stakingLimit && stakingTokenBalance.isGreaterThan(convertedLimit) ? convertedLimit : stakingTokenBalance}
-      onConfirm={onStake}
-      tokenName={stakingLimit ? `${stakingTokenName} (${stakingLimit} max)` : stakingTokenName}
-    />,
+  const [onStart] = useModal(
+    <StartModal
+      accountHasStakedBalance={accountHasStakedBalance}
+      tokenName={tokenName}
+      sousId={sousId}
+      isBnbPool={isBnbPool}
+      earnings={earnings}
+      stakingTokenName={stakingTokenName}
+      stakedBalance={stakedBalance}
+      isOldSyrup={isOldSyrup}
+      needsApproval={needsApproval}
+      account={account}
+      stakingLimit={stakingLimit}
+      stakingTokenBalance={stakingTokenBalance}
+      convertedLimit={convertedLimit}
+      isFinished={isFinished}
+      tokenDecimals={tokenDecimals}
+      harvest={harvest}
+    />
   )
 
-  const [onPresentCompound] = useModal(
-    <CompoundModal earnings={earnings} onConfirm={onStake} tokenName={stakingTokenName} />,
-  )
-
-  const [onPresentWithdraw] = useModal(
-    <WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={stakingTokenName} />,
-  )
 
   const handleApprove = useCallback(async () => {
     try {
@@ -200,76 +193,41 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             </StyledDetails>
           </DetailPool>
         </StyleImgEaredDetail>
-
-        <StyledHarvestCompound>
-          {account && harvest && !isOldSyrup && (
-            <HarvestButton
-              disabled={!earnings.toNumber() || pendingTx}
-              text={pendingTx ? 'Collecting' : 'Harvest'}
-              onClick={async () => {
-                setPendingTx(true)
-                await onReward()
-                setPendingTx(false)
-              }}
-            />
-          )}
-          {!isOldSyrup && sousId === 0 && account && harvest && (
-            <HarvestButton
-              disabled={!earnings.toNumber() || pendingTx}
-              text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
-              onClick={onPresentCompound}
-            />
-          )}
-        </StyledHarvestCompound>
         <Line />
-        <StyledAddButton>
-          {account && !isOldSyrup && !needsApproval && (
-            <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit} variant="danger">
-              <img src='/images/add-icon.svg' alt='add-icon' />
-            </IconButton>
-          )}
-        </StyledAddButton>
+      
         <StyledCardActions>
-          {!account && (<StyledButtonUnlock>
-            <UnlockButton style={{ width: 'calc(50% - 9px)' }} />
+          {!account && 
+          (<StyledButtonUnlock>
+            <UnlockButton />
           </StyledButtonUnlock>
           )}
           {account &&
             (needsApproval && !isOldSyrup ? (
               <ButtonApprove
                 disabled={isFinished || requestedApproval}
-                onClick={handleApprove}
                 marginBottom='10px'
                 marginTop='10px'
+                onClick={handleApprove}
                 isDisable={isFinished || requestedApproval}
               >
                 {`Approve ${stakingTokenName}`}
               </ButtonApprove>
             ) : (
                 <>
-                  <ButtonUnstake
-                    disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                    isDisable={stakedBalance.eq(new BigNumber(0)) || pendingTx}
+                  <ButtonSelect
                     marginBottom='10px'
                     marginTop='10px'
-                    onClick={
-                      isOldSyrup
-                        ? async () => {
-                          setPendingTx(true)
-                          await onUnstake('0')
-                          setPendingTx(false)
-                        }
-                        : onPresentWithdraw
-                    }
+                    onClick={onStart}
                   >
-                    {`Unstake ${stakingTokenName}`}
-                  </ButtonUnstake>
+                     {TranslateString(999, 'Select')}
+                </ButtonSelect>
                 </>
               ))}
-
-          <ButtonDetail onClick={handleClick} marginBottom='10px' marginTop='10px' isShow={isOpenDetail}>
-            {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
-          </ButtonDetail>
+          {account && !needsApproval &&
+            <ButtonDetail onClick={handleClick} marginBottom='10px' marginTop='10px' isShow={isOpenDetail}>
+              {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
+            </ButtonDetail>
+          }
         </StyledCardActions>
         {isOpenDetail && (
           <CardFooter
@@ -370,6 +328,7 @@ const StyleFlexDetail = styled.div<{ isFinished: boolean }>`
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+  margin-right:5px;
 `
 
 const ButtonDetail = styled(Button) <{ isShow: boolean }>`
@@ -464,10 +423,11 @@ const StyleNamePool = styled.div`
 `
 const StyledTooltip = styled.div`
 visibility: hidden;
-width: fit-content;
+width: calc( 100% + 20px);
 top: -32px;
+left: 1px;
 background-color: black;
-color: #fffff;
+color: #ffffff;
 text-align: center;
 border-radius: 6px;
 padding: 5px 0;
@@ -478,7 +438,7 @@ z-index: 1;
 `
 const StyledButtonUnlock = styled(UnlockButton)`
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
-  width: calc(50% - 9px);
+  width: 100%;
   font-weight: 600;
   font-size: 13px;
   height:56px;
@@ -513,49 +473,38 @@ const StyleNameFinished = styled.div`
   color: #DDFFED;
   padding:20px;
 `
-const StyledHarvestCompound = styled(Flex)`
-  flex-wrap:wrap;
-  ${({ theme }) => theme.mediaQueries.nav} {
-  }
-`
-const StyledAddButton = styled(Flex)`
-  width: calc(100% - 50px);
-  justify-content: flex-end;
-  > button{
-    box-shadow:none;
-    width:56px;
-    height:56px;
-    background: #17C267;
-    border: 1px solid #17C267;
-  }
-`
+
 
 const StyledTextEarned = styled.div`
   margin-bottom:25px;
 `
 
 const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
-  background: ${({ isDisable }) => !isDisable && baseColors.primary};
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
+  background: ${({ isDisable }) => isDisable && ''};
+  color: #17C267;
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
-  width: calc(50% - 9px);
+  width: 100%;
+  border: 1px solid #17C267;
+  filter:  ${({ isDisable }) => isDisable ? '' : 'drop-shadow(0px 4px 10px rgba(111, 180, 143, 0.24))'} ;
+  border-radius: 10px;
+  box-shadow: none;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
 `
 
-const ButtonUnstake = styled(Button) <{ isDisable: boolean }>`
-  background: ${({ isDisable }) => !isDisable && baseColors.primary};
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
-  width: calc(50% - 9px);
-  ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 16px;
-  }
+const ButtonSelect = styled(Button)`
+    background: #0085FF;
+    box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+    border-radius: 10px;
+    width: calc(50% - 9px);
+    font-size: 13px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
 `
 
 export default PoolCard

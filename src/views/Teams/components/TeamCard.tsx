@@ -4,7 +4,6 @@ import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text, Fl
 import { Team } from 'config/constants/types'
 import { darkColors, lightColors, brandColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
-// import ComingSoon from 'views/Profile/components/ComingSoon'
 import StatBox from 'views/Profile/components/StatBox'
 
 interface TeamCardProps {

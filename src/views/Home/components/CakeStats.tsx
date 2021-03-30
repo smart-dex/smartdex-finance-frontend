@@ -42,17 +42,28 @@ const Row = styled.div`
   }
 `
 const TextStyle = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
-  font-weight: 400;
-  font-size: 14px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  font-weight: 500;
+  font-size: 13px;
   line-height: 20px;
   margin-bottom: 5px;
   ${({ theme }) => theme.mediaQueries.nav} {
+    color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
     font-weight: 600;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 40px;
   }
 `
+
+const StyleNumber = styled(Text)`
+  div {
+    font-size: 16px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 24px;
+    }
+  }
+`
+
 const CakeStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
@@ -65,15 +76,15 @@ const CakeStats = () => {
         <HeadingEarn mb="24px">{TranslateString(534, 'SDC Stats')}</HeadingEarn>
         <Row>
           <TextStyle>{TranslateString(536, 'Total SDC Supply')}</TextStyle>
-          {cakeSupply && <CardValue fontSize="24px" bold value={cakeSupply} />}
+          {cakeSupply && <StyleNumber><CardValue bold value={cakeSupply} /></StyleNumber>}
         </Row>
         <Row>
           <TextStyle>{TranslateString(538, 'Total SDC Burned')}</TextStyle>
-          <CardValue fontSize="24px" decimals={0} bold value={getBalanceNumber(burnedBalance)} />
+          <StyleNumber><CardValue decimals={0} bold value={getBalanceNumber(burnedBalance)} /></StyleNumber>
         </Row>
         <Row>
           <TextStyle>{TranslateString(540, 'New SDC/block')}</TextStyle>
-          <CardValue fontSize="24px" decimals={0} bold value={40} />
+          <StyleNumber><CardValue decimals={0} bold value={40} /></StyleNumber>
         </Row>
       </CardBody>
     </StyledCakeStats>
