@@ -21,6 +21,14 @@ const Wrapper = styled.div`
 
 const SearchWrapper = styled.div`
   position: relative;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    input[type='number'] {
+      -moz-appearance: textfield;
+    }
+  }
 `
 const ButtonWrapper = styled.div`
   position: absolute;
@@ -72,7 +80,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
   return (
     <Wrapper>
       <TextStyle>{TranslateString(742, 'Select lottery number:')}</TextStyle>
-      <form onSubmit={handleSubmit} style={{ width: '70%'}}>
+      <form onSubmit={handleSubmit} style={{ width: '70%' }}>
         <SearchWrapper>
           <InputStyle
             value={lotteryNumber}

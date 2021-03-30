@@ -7,6 +7,7 @@ import useI18n from 'hooks/useI18n'
 
 const ButtonStyle = styled(Button)`
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  box-shadow: 0px 4px 10px ${ ({ theme}) => theme.isDark ? darkColors.boxShadow : lightColors.boxShadow}; 
   color: ${baseColors.primary};
   border-radius: 10px;
   height: 45px;
