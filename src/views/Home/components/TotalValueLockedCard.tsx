@@ -25,9 +25,11 @@ const HeadingEarn = styled(Heading)`
   font-weight: 600;
   font-size: 13px;
   line-height: 50px;
+  margin-bottom: 10px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
     line-height: 40px;
+    margin-bottom: 24px;
   }
 `
 const TextStyle = styled(Text)`
@@ -57,7 +59,7 @@ const TotalValueLockedCard = () => {
     <StyledTotalValueLockedCard>
       <CardBody>
         <HeadingBlock>
-          <HeadingEarn mb="24px">{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
+          <HeadingEarn>{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
           {data ? <HeadingStyle>{`$${tvl}`}</HeadingStyle> : <> </>}
         </HeadingBlock>
 

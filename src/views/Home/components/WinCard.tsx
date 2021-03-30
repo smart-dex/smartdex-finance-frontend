@@ -31,8 +31,11 @@ const HeadingEarn = styled(Heading)`
 const CardMidContent = styled(Heading)`
   line-height: 44px;
   font-weight: 600;
-  color: ${baseColors.success};
+  color: ${baseColors.primary};
   font-size: 32px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    color: ${baseColors.success};
+  }
 `
 const NavLinkStyle = styled(NavLink)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
