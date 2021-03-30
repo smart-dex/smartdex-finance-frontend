@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useContext } from 'react'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from 'uikit-sotatek'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import { baseColors, lightColors } from 'style/Color'
 import Loading from '../Loading'
