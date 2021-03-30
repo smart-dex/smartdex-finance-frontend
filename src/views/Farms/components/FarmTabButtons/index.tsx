@@ -13,7 +13,7 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
     <Wrapper>
       <ToggleWrapper>
         <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
-        <Text> {TranslateString(1116, 'Staked only')}</Text>
+        <Text> {TranslateString(1116, 'Staked Only')}</Text>
       </ToggleWrapper>
       <ButtonMenuStyle>
         <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="primary">

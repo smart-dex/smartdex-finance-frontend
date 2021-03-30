@@ -196,7 +196,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <Line />
       
         <StyledCardActions>
-          {!account && (<StyledButtonUnlock>
+          {!account && 
+          (<StyledButtonUnlock>
             <UnlockButton />
           </StyledButtonUnlock>
           )}
@@ -218,7 +219,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                     marginTop='10px'
                     onClick={onStart}
                   >
-                    Start
+                     {TranslateString(999, 'Start')}
                 </ButtonStart>
                 </>
               ))}
@@ -327,6 +328,7 @@ const StyleFlexDetail = styled.div<{ isFinished: boolean }>`
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+  margin-right:5px;
 `
 
 const ButtonDetail = styled(Button) <{ isShow: boolean }>`

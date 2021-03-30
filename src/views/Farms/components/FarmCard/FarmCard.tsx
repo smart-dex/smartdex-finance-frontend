@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-import { Flex, Text, Skeleton,Button } from 'uikit-sotatek'
+import { Flex, Text, Skeleton } from 'uikit-sotatek'
 import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
@@ -12,7 +12,6 @@ import { BASE_ADD_LIQUIDITY_URL } from 'config'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { lightColors, darkColors } from 'style/Color'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
-import HarvestAction from './HarvestAction'
 import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
@@ -58,29 +57,25 @@ const CardContent = styled(Flex)`
     flex-wrap: nowrap;
   }
 `
-
-const InfoFarm = styled(Flex)`
-padding-top: 10px;
-padding-right:17px;
-border-right: 1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-justify-content: flex-start;
-width: 50%;
-  ${({ theme }) => theme.mediaQueries.nav} {
-  }
-`
 const InfoTextFarm = styled(Text)`
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 const DetailInFo = styled.div`
   flex: 1;
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 const StyledInfoEarn = styled(Flex)`
   flex-direction:column;
@@ -89,42 +84,12 @@ const StyledInfoEarn = styled(Flex)`
   margin-top:20px;
   width: 100%;
 `
-const Line = styled.div`
-  width: calc(100% - 50px);
-  margin-top: 32px;
-  border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-  margin-bottom: 15px;
-`
+
 const Detail = styled(Flex)`
   flex-wrap:wrap;
 `
 
-const ButtonDeposit = styled(Button)`
-  background: #0085FF;
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
-  border-radius: 10px;
-  width:100%;
-`
-const ButtonApprove = styled(Button)`
-  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
-  background: ${({ isDisable }) => isDisable && ''};
-  color: #17C267;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
-  width: 100%;
-  border: 1px solid #17C267;
-  filter:  ${({ isDisable }) => isDisable ? '' : 'drop-shadow(0px 4px 10px rgba(111, 180, 143, 0.24))'} ;
-  border-radius: 10px;
-  box-shadow: none;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 16px;
-  }
-`
-const  StyledGroupButton = styled.div`
-  width:100%; 
-  padding: 0 20px;
-`
+
 
 interface FarmCardProps {
   farm: FarmWithStakedValue
@@ -173,6 +138,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
+  console.log(liquidityUrlPathParts);
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
 
   const handelOpenDetail = () => {
@@ -216,7 +182,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                     <>
                       123456 AAA
           
-                  </>
+                   </>
                   ) : (
                       <Skeleton height={24} width={80} />
                     )}
@@ -246,42 +212,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                     )}
                 </InfoTextFarm>
               </Detail>
-          {/* <InfoFarm justifyContent="center" flexDirection="column">
-            {!removed && (
-              <Detail mb="37px" >
-                <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
-                <InfoTextFarm bold style={{ display: 'flex' }}>
-                  {farm.apy ? (
-                    <>
-                      {farmAPY}%
-                      <ApyButton
-                        lpLabel={lpLabel}
-                        addLiquidityUrl={addLiquidityUrl}
-                        cakePrice={cakePrice}
-                        apy={farm.apy}
-                      />
-                  </>
-                  ) : (
-                      <Skeleton height={24} width={80} />
-                    )}
-                </InfoTextFarm>
-              </Detail>
-            )}
-            <Detail>
-              <DetailInFo>{TranslateString(318, 'Earn')}:</DetailInFo>
-              <InfoTextFarm bold>{earnLabel}</InfoTextFarm>
-            </Detail>
-          </InfoFarm>
-          <HarvestAction earnings={earnings} pid={pid} /> */}
+    
         </StyledInfoEarn>
-        <StyledGroupButton>
-        <ButtonDeposit>
-          Deposit
-        </ButtonDeposit>
-        <ButtonApprove>
-          {TranslateString(736, 'Aprrove Contract')}
-          </ButtonApprove>
-        </StyledGroupButton>
+      
        
         <CardActionsContainer
           farm={farm}
@@ -299,6 +232,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
               totalValueFormated={totalValueFormated}
               lpLabel={lpLabel}
               addLiquidityUrl={addLiquidityUrl}
+              earnings={earnings}
+              pid={pid}
             />
           </ExpandingWrapper>
         )}

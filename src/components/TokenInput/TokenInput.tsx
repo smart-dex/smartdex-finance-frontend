@@ -54,10 +54,10 @@ const StyledMaxText = styled.div`
   align-items: center;
   display: flex;
   height: 44px;
-  justify-content: flex-start
+  justify-content: flex-start;
   font-weight: 600;
   font-size: 14px;
-  line-height: 17px
+  line-height: 17px;
 `
 
 const StyledTokenSymbol = styled.span`
