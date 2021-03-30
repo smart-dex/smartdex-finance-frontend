@@ -199,7 +199,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                 </InfoTextFarm>
               </Detail>
               <Detail mb="37px" >
-                <DetailInFo>{TranslateString(999, 'You Pool Rate')}: </DetailInFo>
+                <DetailInFo>{TranslateString(999, 'Your Pool Rate')}: </DetailInFo>
                 <InfoTextFarm bold style={{ display: 'flex' }}>
                   {true ? (
                     <>
