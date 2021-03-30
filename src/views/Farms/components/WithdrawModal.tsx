@@ -45,14 +45,14 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
           value={val}
           max={fullBalance}
           symbol={tokenName}
-      
+
         />
         <ModalActions>
           <ButtonCancel variant="secondary" onClick={onBack}>
             {TranslateString(462, 'Cancel')}
           </ButtonCancel>
           <ButtonConfirm
-            disabled={pendingTx}
+            disabled={pendingTx || fullBalance === '0' || val === '0' || val===''}
             onClick={async () => {
               setPendingTx(true)
               await onConfirm(val)

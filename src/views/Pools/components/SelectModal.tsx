@@ -15,7 +15,7 @@ import CompoundModal from './CompoundModal'
 import WithdrawModal from './WithdrawModal'
 import DepositModal from './DepositModal'
 
-interface StartModalProps {
+interface SelectModalProps {
   onDismiss?: () => void
 
   accountHasStakedBalance: boolean
@@ -36,14 +36,14 @@ interface StartModalProps {
   harvest: boolean
 }
 
-const StartModal: React.FC<StartModalProps> = ({ onDismiss, harvest, tokenDecimals, accountHasStakedBalance, tokenName, sousId, isBnbPool, earnings, stakingTokenName, stakedBalance, isOldSyrup, needsApproval, account, stakingLimit, stakingTokenBalance, convertedLimit, isFinished }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDecimals, accountHasStakedBalance, tokenName, sousId, isBnbPool, earnings, stakingTokenName, stakedBalance, isOldSyrup, needsApproval, account, stakingLimit, stakingTokenBalance, convertedLimit, isFinished }) => {
   const TranslateString = useI18n()
   const { onReward } = useSousHarvest(sousId, isBnbPool)
   const [pendingTx, setPendingTx] = useState(false)
   const { onStake } = useSousStake(sousId, isBnbPool)
   const { onUnstake } = useSousUnstake(sousId)
   const [onBack] = useModal(
-    <StartModal
+    <SelectModal
       accountHasStakedBalance={accountHasStakedBalance}
       tokenName={tokenName}
       sousId={sousId}
@@ -106,6 +106,7 @@ const StartModal: React.FC<StartModalProps> = ({ onDismiss, harvest, tokenDecima
                   setPendingTx(true)
                   await onReward()
                   setPendingTx(false)
+                  onDismiss()
                 }}
               >
                 {pendingTx ? 'Collecting' : 'Harvest'}</HarvestButton>
@@ -293,4 +294,4 @@ const StyledImg = styled.div`
 }
 
 `
-export default StartModal
+export default SelectModal

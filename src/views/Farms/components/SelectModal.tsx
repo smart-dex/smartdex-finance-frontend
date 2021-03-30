@@ -11,7 +11,7 @@ import HarvestAction from './FarmCard/HarvestAction'
 import StakeAction from './FarmCard/StakeAction'
 
 
-interface StartModalProps {
+interface SelectModalProps {
   onDismiss?: () => void
   earnings: BigNumber
   pid: number
@@ -19,9 +19,10 @@ interface StartModalProps {
   lpName: string
   addLiquidityUrl: string
   tokenBalance: BigNumber
+  earnLabel:string
 }
 
-const SelectModal: React.FC<StartModalProps> = ({ onDismiss, earnings, pid, stakedBalance, lpName, tokenBalance, addLiquidityUrl }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, earnings, pid, stakedBalance, lpName ,earnLabel, tokenBalance, addLiquidityUrl }) => {
   const TranslateString = useI18n()
   const rawStakedBalance = getBalanceNumber(stakedBalance)
   const displayBalance = rawStakedBalance;
@@ -33,6 +34,7 @@ const SelectModal: React.FC<StartModalProps> = ({ onDismiss, earnings, pid, stak
       lpName={lpName}
       tokenBalance={tokenBalance}
       addLiquidityUrl={addLiquidityUrl}
+      earnLabel={earnLabel}
     />
   )
   return (
@@ -41,7 +43,7 @@ const SelectModal: React.FC<StartModalProps> = ({ onDismiss, earnings, pid, stak
         <ActionEarn>
           <StyledImg>
             <img src='/images/balance-icon.svg' alt='balance-icon' />
-            <HarvestAction earnings={earnings} pid={pid} />
+            <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss}/>
           </StyledImg>
 
         </ActionEarn>
@@ -63,6 +65,7 @@ const SelectModal: React.FC<StartModalProps> = ({ onDismiss, earnings, pid, stak
             tokenName={lpName}
             pid={pid}
             addLiquidityUrl={addLiquidityUrl}
+          
           />
         </ActionStake>
       </StyledModal>

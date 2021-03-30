@@ -5,13 +5,15 @@ import { Button, Flex, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { useHarvest } from 'hooks/useHarvest'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { lightColors, darkColors, baseColors } from 'style/Color'
+import {  baseColors } from 'style/Color'
 import Balance from 'components/Balance'
 import Label from 'components/Label/Label'
 
 interface FarmCardActionsProps {
   earnings?: BigNumber
   pid?: number
+  earnLabel:string
+  onBack:()=>void
 }
 const StyledHarvestAction = styled(Flex)`
   justify-content: center;
@@ -55,7 +57,7 @@ const BalanceAndCompound = styled.div`
   }
 `
 
-const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
+const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel, onBack }) => {
   const TranslateString = useI18n()
   const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useHarvest(pid)
@@ -66,7 +68,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
         <Balance fontSize="32px" value={rawEarningsBalance} />
       </BalanceAndCompound>
       <Label
-        text={`CAKE ${TranslateString(1072, 'Earned')}`}
+        text={`${earnLabel} ${TranslateString(1072, 'Earned')}`}
         colorLabel={baseColors.orange}
       />
       <StyledButton
@@ -76,6 +78,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
           setPendingTx(true)
           await onReward()
           setPendingTx(false)
+          onBack()
         }}
         style={{ maxWidth: '143px' }}
       >
