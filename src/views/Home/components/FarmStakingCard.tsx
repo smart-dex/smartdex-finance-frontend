@@ -38,12 +38,12 @@ const HeadingStyle = styled(Heading)`
   font-size: 20px;
   line-height: 24px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 26px;
+    font-size: 24px;
   }
 `
 const CardImage = styled.img`
   margin-right: 0px;
-  margin-left: 16px;
+  margin-left: 6px;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-right: 16px;
     margin-left: 0px;

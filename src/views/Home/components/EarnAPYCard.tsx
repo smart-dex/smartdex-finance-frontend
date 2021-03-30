@@ -39,6 +39,7 @@ const CardMidContent = styled(Heading)`
   font-size: 32px;
   ${({ theme }) => theme.mediaQueries.nav} {
     color: ${baseColors.success};
+    font-size: 22px;
   }
 `
 const NavLinkStyle = styled(NavLink)`
