@@ -18,7 +18,7 @@ interface BuyTicketModalProps {
 }
 
 const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
-  const [val, setVal] = useState('1')
+  const [val, setVal] = useState('0')
   const [pendingTx, setPendingTx] = useState(false)
   const [, setRequestedBuy] = useState(false)
   const TranslateString = useI18n()
