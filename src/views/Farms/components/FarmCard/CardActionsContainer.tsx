@@ -146,7 +146,7 @@ interface FarmCardActionsProps {
   addLiquidityUrl?: string
   changeOpenDetail: () => void
   isOpenDetail: boolean
-
+  earnLabel:string
 }
 
 const CardActions: React.FC<FarmCardActionsProps> = ({
@@ -156,6 +156,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   addLiquidityUrl,
   changeOpenDetail,
   isOpenDetail,
+  earnLabel
 }) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
@@ -177,6 +178,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
       lpName={lpName}
       tokenBalance={tokenBalance}
       addLiquidityUrl={addLiquidityUrl}
+      earnLabel={earnLabel}
     />
   )
   const { onApprove } = useApprove(lpContract)

@@ -16,7 +16,7 @@ import { ChevronDown, ChevronUp } from 'react-feather'
 import { CommunityTag, CoreTag, BinanceTag } from 'components/Tags'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import Balance from 'components/Balance'
-import StartModal from './StartModal'
+import StartModal from './SelectModal'
 import CardTitle from './CardTitle'
 import Card from './Card'
 import OldSyrupTitle from './OldSyrupTitle'
@@ -214,13 +214,13 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               </ButtonApprove>
             ) : (
                 <>
-                  <ButtonStart
+                  <ButtonSelect
                     marginBottom='10px'
                     marginTop='10px'
                     onClick={onStart}
                   >
-                     {TranslateString(999, 'Start')}
-                </ButtonStart>
+                     {TranslateString(999, 'Select')}
+                </ButtonSelect>
                 </>
               ))}
           {account && !needsApproval &&
@@ -423,10 +423,10 @@ const StyleNamePool = styled.div`
 `
 const StyledTooltip = styled.div`
 visibility: hidden;
-width: fit-content;
+width: calc( 100% - 40px);
 top: -32px;
 background-color: black;
-color: #fffff;
+color: #ffffff;
 text-align: center;
 border-radius: 6px;
 padding: 5px 0;
@@ -495,7 +495,7 @@ const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
   }
 `
 
-const ButtonStart = styled(Button)`
+const ButtonSelect = styled(Button)`
     background: #0085FF;
     box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
     border-radius: 10px;

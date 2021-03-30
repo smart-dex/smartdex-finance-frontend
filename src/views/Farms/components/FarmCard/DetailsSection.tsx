@@ -81,7 +81,6 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
   const rawEarningsBalance = getBalanceNumber(earnings)
-  const displayBalance = rawEarningsBalance.toLocaleString()
   const { onReward } = useHarvest(pid)
   return (
     <>

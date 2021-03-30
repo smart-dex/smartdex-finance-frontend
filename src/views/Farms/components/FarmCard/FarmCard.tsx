@@ -135,12 +135,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'CAKE'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
-
+  
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
-  console.log(liquidityUrlPathParts);
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
-
   const handelOpenDetail = () => {
     setShowExpandableSection(!showExpandableSection)
   }
@@ -223,6 +221,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           addLiquidityUrl={addLiquidityUrl}
           changeOpenDetail={handelOpenDetail}
           isOpenDetail={showExpandableSection}
+          earnLabel={earnLabel}
         />
         {showExpandableSection && (
           <ExpandingWrapper expanded={showExpandableSection}>

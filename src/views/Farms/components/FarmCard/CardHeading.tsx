@@ -62,10 +62,10 @@ const StyleNameFarm = styled(Flex)`
 `
 const StyledTooltip = styled.div`
   visibility: hidden;
-  width: fit-content;
+  width: calc( 100% - 40px);
   top: -32px;
   background-color: black;
-  color: #fffff;
+  color: #ffffff;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
