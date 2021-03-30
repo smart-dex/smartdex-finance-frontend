@@ -33,7 +33,23 @@ const RightAlignedText = styled(Text)`
 const RightAlignedHeading = styled(Heading)`
   text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 16px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+   }
 `
+
+const TextStyleThree = styled(Text)`
+color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
+
+`
+
 const GridItem = styled.div<{ marginBottom?: string }>`
   margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : '10px')};
 `
@@ -54,6 +70,10 @@ const TextStyle = styled(Text)`
 const HeadingStyle = styled(Heading)`
    text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 16px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+   }
 `
 const PrizeGrid: React.FC<PrizeGridProps> = ({
   lotteryPrizeAmount = 0,
@@ -82,19 +102,19 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {/* 4 matches row */}
       <GridItem>
-        <HeadingStyle size="md">4</HeadingStyle>
+        <HeadingStyle >4</HeadingStyle>
       </GridItem>
       {pastDraw ? (
         <PastDrawGridItem>
-          <RightAlignedHeading size="md">{jackpotMatches}</RightAlignedHeading>
+          <RightAlignedHeading >{jackpotMatches}</RightAlignedHeading>
         </PastDrawGridItem>
       ) : <PastDrawGridItem />}
       <GridItem>
-        <RightAlignedHeading size="md">{fourMatchesAmount.toLocaleString()}</RightAlignedHeading>
+        <RightAlignedHeading >{fourMatchesAmount.toLocaleString()}</RightAlignedHeading>
       </GridItem>
       {/* 3 matches row */}
       <GridItem>
-        <TextStyle bold>3</TextStyle>
+        <TextStyleThree bold>3</TextStyleThree>
       </GridItem>
       {pastDraw ? (
         <PastDrawGridItem>
@@ -102,7 +122,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
         </PastDrawGridItem>
       ) : <PastDrawGridItem />}
       <GridItem>
-        <RightAlignedText>{threeMatchesAmount.toLocaleString()}</RightAlignedText>
+        <TextStyleThree>{threeMatchesAmount.toLocaleString()}</TextStyleThree>
       </GridItem>
       {/* 2 matches row */}
       <GridItem>
