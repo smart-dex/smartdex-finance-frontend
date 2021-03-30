@@ -211,13 +211,13 @@ return (
           <WrapHeading mb="16px">{TranslateString(594, 'Before Sale')}:</WrapHeading>
           <StyleList>
             <List>
-              <li>{TranslateString(596, 'Buy CAKE and BNB tokens')}</li>
-              <li>{TranslateString(598, 'Get CAKE-BNB LP tokens by adding CAKE and BNB liquidity')}</li>
+              <li>{TranslateString(596, 'Buy SDC and BNB tokens')}</li>
+              <li>{TranslateString(598, 'Get SDC-BNB LP tokens by adding SDC and BNB liquidity')}</li>
             </List>
           </StyleList>
           <WrapGridButton>
             <LinkPrimary href="https://exchange.pancakeswap.finance/#/swap" mr="16px">
-              {TranslateString(1060, 'Buy CAKE')}
+              {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
             <LinkSecondary href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
               {TranslateString(1062, 'Get LP tokens')}
@@ -228,7 +228,7 @@ return (
           <StyleList>
             <List>
               <li>
-                {TranslateString(602, 'While the sale is live, commit your CAKE-LP tokens to buy the IFO tokens')}
+                {TranslateString(602, 'While the sale is live, commit your SDC-LP tokens to buy the IFO tokens')}
               </li>
             </List>
           </StyleList>

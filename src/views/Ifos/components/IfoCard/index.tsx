@@ -67,16 +67,14 @@ const WrapButtonRow = styled('div')`
   }
  
   ${({ theme }) => theme.mediaQueries.nav} {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 43px;
+    flex-direction: row;
     & > button {
       flex: 1;
       margin-bottom: 0;
     }
     & > a {
-      width: 90%;
-      margin-left: 15px;
+      flex: 1;
+      margin-left: 60px;
     }
   }
 `
@@ -102,12 +100,10 @@ const LinkExternalStyle = styled(LinkExternal)`
   }
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
-  position: relative;
   & svg {
     fill: ${lightColors.fillSvg};
-    position: absolute;
-    right: 30%;
-    
+    position: relative;
+    margin-left: 10px;
   }
 `
 const UnlockButtonStyle = styled(UnlockButton)`
