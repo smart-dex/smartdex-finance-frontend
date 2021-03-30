@@ -50,7 +50,7 @@ const HowItWorks = () => {
         <p>
           {TranslateString(
             999,
-            'Spend CAKE to buy tickets, contributing to the lottery pot. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their exact order!',
+            'Spend SDC to buy tickets, contributing to the lottery pot. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their exact order!',
           )}
           <StyledLink href="https://smart-dex29.gitbook.io/smart-dex/lottery/lottery">Read more</StyledLink>
         </p>
