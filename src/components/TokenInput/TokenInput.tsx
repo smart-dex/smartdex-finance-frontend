@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from '@pancakeswap-libs/uikit'
+import { darkColors, lightColors } from 'style/Color'
 import useI18n from '../../hooks/useI18n'
 import Input, { InputProps } from '../Input'
 
@@ -23,9 +24,9 @@ const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelect
             <StyledTokenSymbol>{symbol}</StyledTokenSymbol>
             <StyledSpacer />
             <div>
-              <Button size="sm" onClick={onSelectMax}>
-                {TranslateString(452, 'Max')}
-              </Button>
+              <ButtonMax size="sm" onClick={onSelectMax}>
+                {TranslateString(452, 'MAX')}
+              </ButtonMax>
             </div>
           </StyledTokenAdornmentWrapper>
         }
@@ -49,18 +50,29 @@ const StyledTokenAdornmentWrapper = styled.div`
 `
 
 const StyledMaxText = styled.div`
+  color:  ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
   align-items: center;
-  color: ${(props) => props.theme.colors.primary};
   display: flex;
-  font-size: 14px;
-  font-weight: 700;
   height: 44px;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 `
 
 const StyledTokenSymbol = styled.span`
-  color: ${(props) => props.theme.colors.primary};
+  color:  ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
   font-weight: 700;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+`
+const ButtonMax = styled(Button)`
+  background: #0085FF;
+  border-radius: 20px;
+  border:none;
+  box-shadow:none;
+  
 `
 
 export default TokenInput

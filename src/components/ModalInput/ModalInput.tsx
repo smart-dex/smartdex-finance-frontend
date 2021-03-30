@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { darkColors, lightColors } from 'style/Color'
 import { Text, Button, Input, InputProps, Flex, Link } from '@pancakeswap-libs/uikit'
 import useI18n from '../../hooks/useI18n'
+
 
 interface ModalInputProps {
   max: string
@@ -26,10 +28,10 @@ const StyledTokenInput = styled.div<InputProps>`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.input};
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: ${getBoxShadow};
   color: ${({ theme }) => theme.colors.text};
-  padding: 8px 16px 8px 0;
+  padding: 8px;
   width: 100%;
 `
 
@@ -55,6 +57,33 @@ const StyledErrorMessage = styled(Text)`
     display: inline;
   }
 `
+const ButtonMax = styled(Button)`
+  background: #0085FF;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow:none;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #FFFFFF;
+`
+const StyledMaxText = styled.div`
+  color:  ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  align-items: center;
+  display: flex;
+  height: 44px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+`
+
+const StyledTokenSymbol = styled.span`
+  color:  ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  font-weight: 700;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+`
 
 const ModalInput: React.FC<ModalInputProps> = ({
   max,
@@ -63,7 +92,6 @@ const ModalInput: React.FC<ModalInputProps> = ({
   onSelectMax,
   value,
   addLiquidityUrl,
-  inputTitle,
 }) => {
   const TranslateString = useI18n()
   const isBalanceZero = max === '0' || !max
@@ -72,19 +100,18 @@ const ModalInput: React.FC<ModalInputProps> = ({
 
   return (
     <div style={{ position: 'relative' }}>
+      <StyledMaxText>
+        {displayBalance.toLocaleString()} {symbol} {TranslateString(526, 'Available')}
+      </StyledMaxText>
       <StyledTokenInput isWarning={isBalanceZero}>
-        <Flex justifyContent="space-between" pl="16px">
-          <Text fontSize="14px">{inputTitle}</Text>
-          <Text fontSize="14px">
-            {TranslateString(1120, 'Balance')}: {displayBalance.toLocaleString()}
-          </Text>
-        </Flex>
-        <Flex alignItems="flex-end" justifyContent="space-around">
+        <Flex alignItems="center" justifyContent="space-around">
           <StyledInput onChange={onChange} placeholder="0" value={value} />
-          <Button size="sm" onClick={onSelectMax} mr="8px">
-            {TranslateString(452, 'Max')}
-          </Button>
-          <Text fontSize="16px">{symbol}</Text>
+          <Flex alignItems="center" >
+            <StyledTokenSymbol>{symbol}</StyledTokenSymbol>
+            <ButtonMax size="sm" onClick={onSelectMax} marginLeft="15px">
+              {TranslateString(452, 'MAX')}
+            </ButtonMax>
+          </Flex>
         </Flex>
       </StyledTokenInput>
       {isBalanceZero && (

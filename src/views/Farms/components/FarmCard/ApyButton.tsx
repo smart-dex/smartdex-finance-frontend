@@ -1,7 +1,9 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
 import { CalculateIcon, IconButton, useModal } from 'uikit-sotatek'
+import styled from 'styled-components'
 import ApyCalculatorModal from './ApyCalculatorModal'
+
 
 export interface ApyButtonProps {
   lpLabel?: string
@@ -17,9 +19,18 @@ const ApyButton: React.FC<ApyButtonProps> = ({ lpLabel, cakePrice, apy, addLiqui
 
   return (
     <IconButton onClick={onPresentApyModal} variant="text" size="sm"  style={{alignItems:'baseline', height:'20px'}}>
+      <StyledIcon>
       <CalculateIcon />
+      </StyledIcon>
+  
     </IconButton>
   )
 }
+const StyledIcon = styled.div`
+>svg>path{
+ 
+    fill: ${({ theme }) => (theme.isDark && '#FFFFFF')};
 
+}
+`
 export default ApyButton

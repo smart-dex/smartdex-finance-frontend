@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
-import { Button, Flex, IconButton, MinusIcon, useModal } from 'uikit-sotatek'
+import { Button, Flex, IconButton, useModal } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import useStake from 'hooks/useStake'
 import useUnstake from 'hooks/useUnstake'
@@ -17,37 +17,60 @@ interface FarmCardActionsProps {
   tokenName?: string
   pid?: number
   addLiquidityUrl?: string
+  onBack: () => void
 }
 
-const IconButtonWrapper = styled.div`
-  display: flex;
-  svg {
-    width: 20px;
-  }
-`
 const StyledAddButton = styled(Flex)`
-  justify-content: flex-end;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    width: calc(30% - 7px);
+    margin-bottom:10px;
+    margin-top:10px;
+    margin-left:auto;
+  }
+  justify-content:center;
   > button{
     box-shadow:none;
     width:56px;
     height:56px;
-    background: #17C267;
-    border: 1px solid #17C267;
+    background: #0085FF;
+    border: 1px solid #0085FF;
   }
 `
 const StakeButton = styled(Button)`
-  background: ${ baseColors.primary};
+  background: ${baseColors.primary};
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
 `
-const StyledAction= styled(Flex)`
-width: calc(50% - 9px);
+const StyledAction = styled(Flex)`
+  padding-left:20px;
+  padding-right:20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  flex-wrap:wrap;
+`
+const ButtonUnstake = styled(Button)`
+  padding: 0 20px;
+  background: ${({ isDisable }) => !isDisable && baseColors.primary};
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    width: calc(70% - 7px);
+  }
 `
 
 const StakeAction: React.FC<FarmCardActionsProps> = ({
@@ -56,6 +79,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   tokenName,
   pid,
   addLiquidityUrl,
+  onBack
 }) => {
   const TranslateString = useI18n()
   const { onStake } = useStake(pid)
@@ -64,10 +88,10 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   const rawStakedBalance = getBalanceNumber(stakedBalance)
 
   const [onPresentDeposit] = useModal(
-    <DepositModal max={tokenBalance} onConfirm={onStake} tokenName={tokenName} addLiquidityUrl={addLiquidityUrl} />,
+    <DepositModal max={tokenBalance} onConfirm={onStake} tokenName={tokenName} addLiquidityUrl={addLiquidityUrl} onBack={onBack} />,
   )
   const [onPresentWithdraw] = useModal(
-    <WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={tokenName} />,
+    <WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={tokenName} onBack={onBack} />,
   )
 
   const renderStakingButtons = () => {
@@ -76,21 +100,21 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
         {TranslateString(999, 'Stake LP')}
       </StakeButton>
     ) : (
-        <IconButtonWrapper>
+        <>
+          <ButtonUnstake onClick={onPresentWithdraw}>
+            {TranslateString(999, 'Unstake')}
+          </ButtonUnstake>
           <StyledAddButton>
-            <IconButton variant="tertiary" onClick={onPresentDeposit}  mr="6px">
+            <IconButton variant="tertiary" onClick={onPresentDeposit}>
               <img src='/images/add-icon.svg' alt='add-icon' />
             </IconButton>
           </StyledAddButton>
-          <IconButton variant="tertiary" onClick={onPresentWithdraw}>
-            <MinusIcon color="primary" />
-          </IconButton>
-        </IconButtonWrapper>
+        </>
       )
   }
 
   return (
-    <StyledAction justifyContent="space-between" alignItems="center">
+    <StyledAction justifyContent="center" alignItems="center">
       {renderStakingButtons()}
     </StyledAction>
   )

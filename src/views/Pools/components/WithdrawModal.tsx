@@ -2,18 +2,23 @@ import BigNumber from 'bignumber.js'
 import React, { useCallback, useMemo, useState } from 'react'
 import { Button, Modal } from 'uikit-sotatek'
 import ModalActions from 'components/ModalActions'
+import { baseColors, darkColors, lightColors } from 'style/Color'
+import styled from 'styled-components'
+import { getFullDisplayBalance } from '../../../utils/formatBalance'
 import TokenInput from '../../../components/TokenInput'
 import useI18n from '../../../hooks/useI18n'
-import { getFullDisplayBalance } from '../../../utils/formatBalance'
+
+
 
 interface WithdrawModalProps {
   max: BigNumber
   onConfirm: (amount: string) => void
   onDismiss?: () => void
-  tokenName?: string
+  tokenName?: string,
+  onBack?:()=>void
 }
 
-const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max, tokenName = '' }) => {
+const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max, tokenName = '',onBack }) => {
   const [val, setVal] = useState('')
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
@@ -33,7 +38,8 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   }, [fullBalance, setVal])
 
   return (
-    <Modal title={`Withdraw ${tokenName}`} onDismiss={onDismiss}>
+    <ModalStyle title={`Withdraw ${tokenName}`} onDismiss={onBack}>
+      <StyledModal>
       <TokenInput
         onSelectMax={handleSelectMax}
         onChange={handleChange}
@@ -42,10 +48,10 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
         symbol={tokenName}
       />
       <ModalActions>
-        <Button variant="secondary" onClick={onDismiss}>
+        <ButtonCancel variant="secondary" onClick={onBack}>
           {TranslateString(462, 'Cancel')}
-        </Button>
-        <Button
+        </ButtonCancel>
+        <ButtonConfirm
           disabled={pendingTx}
           onClick={async () => {
             setPendingTx(true)
@@ -55,10 +61,40 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
           }}
         >
           {pendingTx ? TranslateString(488, 'Pending Confirmation') : TranslateString(464, 'Confirm')}
-        </Button>
+        </ButtonConfirm>
       </ModalActions>
-    </Modal>
+      </StyledModal>
+     
+    </ModalStyle>
   )
 }
+const ButtonConfirm = styled(Button)`
+  background: ${ baseColors.primary};
+  box-shadow: 0px 4px 10px  ${({ theme }) => (theme.isDark ? '  0px 4px 10px rgba(0, 133, 255, 0.24)' : 'rgba(83, 185, 234, 0.24)')};
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+
+`
+const ButtonCancel = styled(Button)`
+  background:  ${({ theme }) => (theme.isDark ? '#2A3145' : '#D9D9DE')};
+  box-shadow: 0px 4px 10px  ${({ theme }) => (theme.isDark ? ' rgba(42, 49, 69, 0.24)' : 'rgba(217, 217, 222, 0.24)')};
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorButtonCancel : lightColors.colorButtonCancel)};;
+  border:none;
+`
+const StyledModal = styled.div`
+${({ theme }) => theme.mediaQueries.nav} {
+  width 551px;
+}
+`
+const ModalStyle = styled(Modal)`
+  border: 1px solid #E2E2E8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+`
 
 export default WithdrawModal
