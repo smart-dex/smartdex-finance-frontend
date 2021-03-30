@@ -35,11 +35,14 @@ const HeadingEarn = styled(Heading)`
 const CardMidContent = styled(Heading)`
   line-height: 44px;
   font-weight: 600;
-  color: ${baseColors.success};
+  color: ${baseColors.primary};
   font-size: 32px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    color: ${baseColors.success};
+  }
 `
 const NavLinkStyle = styled(NavLink)`
-  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrowMb : lightColors.backgroundArrowMb)};
   width: 30px;
   height: 30px;
   border-radius: 12px;
@@ -52,6 +55,7 @@ const NavLinkStyle = styled(NavLink)`
   right: 24px;
   bottom: 22px;
   ${({ theme }) => theme.mediaQueries.nav} {
+    background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
     left: 24px;
     right: auto;
   }

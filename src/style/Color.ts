@@ -83,6 +83,7 @@ export const lightColors = {
   boxShadowLottery: 'rgba(120, 118, 148, 0.05)',
   borderButtonDetail: '#8F8FA0',
   colorCol:'rgba(95, 94, 118, 0.7)',
+  backgroundArrowMb: '#D8F7E4',
 }
 
 export const darkColors = {
@@ -154,4 +155,5 @@ export const darkColors = {
   colorTicket: 'rgba(255, 255, 255, 0.6)',
   boxShadowLottery: 'rgba(0, 0, 0, 0.05)',
   borderButtonDetail: '#8F8FA0',
+  backgroundArrowMb: 'rgba(216, 247, 228, 0.1)',
 }
