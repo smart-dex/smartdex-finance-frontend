@@ -11,11 +11,15 @@ interface PastLotterySearcherProps {
 
 const Wrapper = styled.div`
   margin-bottom: 24px;
-  display: none;
   ${({ theme }) => theme.mediaQueries.nav} {
-    display: block;
     display: flex;
     justify-content: space-between;
+  }
+  form {
+    width: 100%;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      width: 70%;
+    }
   }
 `
 
@@ -80,7 +84,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
   return (
     <Wrapper>
       <TextStyle>{TranslateString(742, 'Select lottery number:')}</TextStyle>
-      <form onSubmit={handleSubmit} style={{ width: '70%' }}>
+      <form onSubmit={handleSubmit}>
         <SearchWrapper>
           <InputStyle
             value={lotteryNumber}

@@ -55,6 +55,7 @@ const WrapProgress = styled('div')`
 `
 const WrapButtonRow = styled('div')`
   display: flex;
+  flex-direction: column;
   & > button,
   & > a {
     flex: inherit;
@@ -62,19 +63,20 @@ const WrapButtonRow = styled('div')`
     margin: 0px;
   }
   & > button {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
-  flex-direction: column;
+ 
   ${({ theme }) => theme.mediaQueries.nav} {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 43px;
     & > button {
       flex: 1;
-      margin-right: 17px;
       margin-bottom: 0;
     }
     & > a {
-      flex: 1;
-      margin-left: 40px;
+      width: 90%;
+      margin-left: 15px;
     }
   }
 `
@@ -100,8 +102,12 @@ const LinkExternalStyle = styled(LinkExternal)`
   }
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  position: relative;
   & svg {
     fill: ${lightColors.fillSvg};
+    position: absolute;
+    right: 30%;
+    
   }
 `
 const UnlockButtonStyle = styled(UnlockButton)`
