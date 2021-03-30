@@ -34,6 +34,7 @@ const CardMidContent = styled(Heading)`
   color: ${baseColors.primary};
   font-size: 32px;
   ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 22px;
     color: ${baseColors.success};
   }
 `
