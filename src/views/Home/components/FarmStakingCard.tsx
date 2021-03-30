@@ -27,6 +27,10 @@ const HeadingBlock = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  flex-direction: row-reverse;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction: inherit;
+  }
 `
 const HeadingStyle = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
@@ -34,11 +38,16 @@ const HeadingStyle = styled(Heading)`
   font-size: 20px;
   line-height: 24px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 26px;
+    font-size: 24px;
   }
 `
 const CardImage = styled.img`
-  margin-right: 16px;
+  margin-right: 0px;
+  margin-left: 6px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-right: 16px;
+    margin-left: 0px;
+  }
 `
 const Actions = styled.div`
   justify-self: center;
@@ -59,11 +68,12 @@ const BlockCakeHarvest = styled.div`
   }
 `
 const Label = styled.div`
-  color: ${baseColors.primary};
+  color: ${baseColors.success};
   font-weight: 600;
   font-size: 10px;
   line-height: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
+    color: ${baseColors.primary};
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 7px;

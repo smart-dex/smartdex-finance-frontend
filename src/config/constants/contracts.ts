@@ -75,4 +75,8 @@ export default {
     97: '0x2f5131fd74c8De6802b845cA407AB352FfC3B7B2',
     56: '',
   },
+  che: {
+    97: '0xFb21Cfb0B6070486150f31EBa2CBE63C337BF755',
+    56: '',
+  },
 }

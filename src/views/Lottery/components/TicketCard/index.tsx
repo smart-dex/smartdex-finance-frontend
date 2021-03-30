@@ -57,6 +57,10 @@ const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
 const TicketImg = styled.div`
   width: 50px;
   height: 50px;
@@ -84,12 +88,12 @@ const TicketCard: React.FC<CardProps> = ({ isSecondCard = false }) => {
           {lotteryHasDrawn ? (
             <TicketCountWrapper>
               <TextStyle fontSize="14px">{TranslateString(870, 'Until ticket sale:')}</TextStyle>
-              <Heading size="lg">{timeUntilTicketSale}</Heading>
+              <HeadingStyle size="lg">{timeUntilTicketSale}</HeadingStyle>
             </TicketCountWrapper>
           ) : (
             <TicketCountWrapper>
               <TextStyle fontSize="14px">{TranslateString(724, 'Your tickets for this round')}</TextStyle>
-              <Heading size="lg">{ticketsLength}</Heading>
+              <HeadingStyle size="lg">{ticketsLength}</HeadingStyle>
             </TicketCountWrapper>
           )}
         </CardHeader>
