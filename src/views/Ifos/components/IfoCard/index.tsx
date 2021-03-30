@@ -104,7 +104,7 @@ const LinkExternalStyle = styled(LinkExternal)`
   & svg {
     fill: ${lightColors.fillSvg};
     position: relative;
-    margin-left: 10px;
+    margin-left: 7px;
   }
 `
 const UnlockButtonStyle = styled(UnlockButton)`
