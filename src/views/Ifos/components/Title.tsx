@@ -10,7 +10,7 @@ const Title = styled(Heading).attrs({ size: 'lg' })`
   margin-bottom: 16px;
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 24px;
-    line-height: 29px;
+    line-height: 32px;
   }
 `
 

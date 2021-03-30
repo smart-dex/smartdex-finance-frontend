@@ -13,7 +13,7 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
     <Wrapper>
       <ToggleWrapper>
         <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
-        <Text> {TranslateString(999, 'Staked only')}</Text>
+        <Text> {TranslateString(999, 'Staked Only')}</Text>
       </ToggleWrapper>
       <ButtonMenuStyle>
         <ButtonMenu activeIndex={isExact ? 0 : 1}>

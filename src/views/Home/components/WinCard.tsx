@@ -1,41 +1,59 @@
 import React from 'react'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from 'uikit-sotatek'
 import { NavLink } from 'react-router-dom'
 import useLotteryTotalPrizesUsd from 'hooks/useLotteryTotalPrizesUsd'
-import { darkColors, lightColors, baseColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 100%;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
-  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
+  border-radius: 40px;
+  margin-bottom: 25px;
+  min-height: 203px;
+  padding-bottom: 30px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    min-height: 255px;
+    margin-bottom: 20px;
+  }
+`
+const HeadingEarn = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+    line-height: 30px;
+  }
 `
 const CardMidContent = styled(Heading)`
   line-height: 44px;
   font-weight: 600;
-  color: ${baseColors.success};
-  font-size: 22px;
-`
-
-const HeadingEarn = styled(Heading)`
-  font-size: 18px;
-  font-weight: 600;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  color: ${baseColors.primary};
+  font-size: 32px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 22px;
+    color: ${baseColors.success};
+  }
 `
 const NavLinkStyle = styled(NavLink)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
   width: 30px;
   height: 30px;
   border-radius: 12px;
-  margin-top: 8px;
+  position: relative;
+  margin-left: auto;
+  padding-top: 1px;
+  text-align: center;
+  position: absolute;
+  left: auto;
+  right: 24px;
+  bottom: 22px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-top: 52px;
-    position: absolute;
-    bottom: 22px;
+    left: 24px;
+    right: auto;
   }
 `
 
@@ -50,7 +68,7 @@ const WinCard = () => {
         <Flex style={{ flexDirection: 'column' }}>
           <HeadingEarn>up for grabs</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/lottery" id="lottery-pot-cta">
-            <ArrowForwardIcon color="primary" style={{ margin: '5px' }} />
+            <ArrowForwardIcon color="#17C267" style={{ margin: '5px' }} />
           </NavLinkStyle>
         </Flex>
       </CardBody>

@@ -19,7 +19,6 @@ export interface IfoCardDetailsProps {
 const StyledIfoCardDetails = styled.div`
   margin-bottom: 24px;
 `
-
 const Item = styled.div`
   align-items: center;
   display: flex;
@@ -47,7 +46,6 @@ const Text = styled('div')`
     }
   }
 `
-
 const Display = styled(Text)`
   flex: 1;
 `
@@ -90,7 +88,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
           <Text>{raiseAmount}</Text>
         </Item>
         <Item>
-          <Display>{TranslateString(586, 'CAKE to burn (USD)')}</Display>
+          <Display>{TranslateString(586, 'SDC to burn (USD)')}</Display>
           <Text>{cakeToBurn}</Text>
         </Item>
         <Item>

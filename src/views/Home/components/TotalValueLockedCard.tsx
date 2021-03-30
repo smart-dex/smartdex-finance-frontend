@@ -6,56 +6,50 @@ import { useGetStats } from 'hooks/api'
 import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledTotalValueLockedCard = styled(Card)`
-  align-items: center;
-  display: flex;
-  flex: 1;
+  min-height: 212px;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
-  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
+  border-radius: 40px;
+  margin-bottom: 25px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    min-height: 393px;
+    margin-bottom: 20px;
+  }
+`
+const HeadingBlock = styled.div`
+  margin-bottom: 15px;
 `
 const HeadingEarn = styled(Heading)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
   font-weight: 600;
-  font-size: 18px;
-`
-
-const TextStyle = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 13px;
-  font-weight: 500;
+  line-height: 50px;
+  margin-bottom: 10px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
+    line-height: 40px;
+    margin-bottom: 24px;
   }
 `
-
-const HeadingStyle = styled(Heading)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-size: 18px;
+const TextStyle = styled(Text)`
+color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
   font-weight: 600;
-  margin-top: -7px;
-  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 50px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 32px;
-    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 40px;
   }
 `
-
-const HeadingBlock = styled.div`
-  @media (min-width: 600px) {
-    display: flex;
-    justify-content: space-between;
-  }
-`
-
-const CardBodyStyle = styled(CardBody)`
-  width: 100%;
-  padding: 30px 27px;
-
+const HeadingStyle = styled(Heading)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  font-size: 32px;
+  font-weight: 600;
   ${({ theme }) => theme.mediaQueries.nav} {
-    padding: 60px 39px 59px 27px;
+    font-size: 36px;
   }
 `
-
 const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
   const data = useGetStats()
@@ -63,9 +57,9 @@ const TotalValueLockedCard = () => {
 
   return (
     <StyledTotalValueLockedCard>
-      <CardBodyStyle>
+      <CardBody>
         <HeadingBlock>
-          <HeadingEarn mb="24px">{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
+          <HeadingEarn>{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
           {data ? <HeadingStyle>{`$${tvl}`}</HeadingStyle> : <> </>}
         </HeadingBlock>
 
@@ -76,7 +70,7 @@ const TotalValueLockedCard = () => {
             <Skeleton height={66} />
           </>
         )}
-      </CardBodyStyle>
+      </CardBody>
     </StyledTotalValueLockedCard>
   )
 }

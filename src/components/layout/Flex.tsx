@@ -4,6 +4,7 @@ const FlexLayout = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-content: stretch;
   & > * {
     // min-width: 280px;
     // max-width: 31.5%;

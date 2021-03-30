@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useModal, Button, Text } from '@pancakeswap-libs/uikit'
+import { useModal, Button, Text } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { Contract } from 'web3-eth-contract'
@@ -71,8 +71,7 @@ const IfoCardContribute: React.FC<Props> = ({
   if (allowance <= 0) {
     return (
       <Button
-        fullWidth
-        disabled={pendingTx || isFinished}
+        style={{width: '100%'}}
         onClick={async () => {
           try {
             setPendingTx(true)
@@ -105,6 +104,7 @@ const IfoCardContribute: React.FC<Props> = ({
         }
         onClick={isFinished ? claim : onPresentContributeModal}
       />
+    
       <Text fontSize="14px" color="textSubtle">
         {isFinished
           ? `You'll be refunded any excess tokens when you claim`

@@ -1,46 +1,67 @@
 import React from 'react'
-import { Card, CardBody, Heading, Text } from '@pancakeswap-libs/uikit'
+import { darkColors, lightColors } from 'style/Color'
 import styled from 'styled-components'
+import { Card, CardBody, Heading, Text } from 'uikit-sotatek'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
-import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledCakeStats = styled(Card)`
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 308px;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
-  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
+  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
+  border-radius: 40px;
+  margin-bottom: 25px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    min-height: 393px;
+    margin-bottom: 20px;
+  }
 `
-
+const HeadingEarn = styled(Heading)` 
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  margin-bottom: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+`
 const Row = styled.div`
-  align-items: center;
   display: flex;
   font-size: 14px;
   justify-content: space-between;
-  margin-bottom: 20px;
-`
-
-const HeadingEarn = styled(Heading)`
-  font-size: 20px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-weight: 600;
+  margin-bottom: 28px;
+  flex-direction: column;
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 32px;
-  }
-`
-
-const CardBodyStyle = styled(CardBody)`
-  ${({ theme }) => theme.mediaQueries.nav} {
-    padding: 29px 47px 30px 38px;
+    margin-bottom: 20px;
   }
 `
 const TextStyle = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-size: 14px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 40px;
+  }
+`
+
+const StyleNumber = styled(Text)`
+  div {
+    font-size: 16px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 24px;
+    }
+  }
 `
 
 const CakeStats = () => {
@@ -51,21 +72,21 @@ const CakeStats = () => {
 
   return (
     <StyledCakeStats>
-      <CardBodyStyle>
-        <HeadingEarn mb="24px">{TranslateString(534, 'Cake Stats')}</HeadingEarn>
+      <CardBody>
+        <HeadingEarn mb="24px">{TranslateString(534, 'SDC Stats')}</HeadingEarn>
         <Row>
-          <TextStyle>{TranslateString(536, 'Total CAKE Supply')}</TextStyle>
-          {cakeSupply && <CardValue fontSize="14px" bold={false} value={cakeSupply} />}
+          <TextStyle>{TranslateString(536, 'Total SDC Supply')}</TextStyle>
+          {cakeSupply && <StyleNumber><CardValue bold value={cakeSupply} /></StyleNumber>}
         </Row>
         <Row>
-          <TextStyle>{TranslateString(538, 'Total CAKE Burned')}</TextStyle>
-          <CardValue fontSize="14px" bold={false} value={getBalanceNumber(burnedBalance)} />
+          <TextStyle>{TranslateString(538, 'Total SDC Burned')}</TextStyle>
+          <StyleNumber><CardValue decimals={0} bold value={getBalanceNumber(burnedBalance)} /></StyleNumber>
         </Row>
         <Row>
-          <TextStyle>{TranslateString(540, 'New CAKE/block')}</TextStyle>
-          <CardValue fontSize="14px" decimals={0} bold={false} value={25} />
+          <TextStyle>{TranslateString(540, 'New SDC/block')}</TextStyle>
+          <StyleNumber><CardValue decimals={0} bold value={25} /></StyleNumber>
         </Row>
-      </CardBodyStyle>
+      </CardBody>
     </StyledCakeStats>
   )
 }

@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'http://192.168.1.206:8032', // 'https://exchange.pancakeswap.finance',
+        href: `${process.env.REACT_APP_EXCHANGE_URL}/swap` ,
       },
       {
         label: 'Liquidity',
-        href: 'http://192.168.1.206:8032/#/pool',
+        href: `${process.env.REACT_APP_EXCHANGE_URL}/pool` ,
       },
     ],
   },
@@ -65,19 +65,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Overview',
-        href: 'https://pancakeswap.info',
+        href: `${process.env.REACT_APP_INFO_URL}/home`,
       },
       {
         label: 'Tokens',
-        href: 'https://pancakeswap.info/tokens',
+        href: `${process.env.REACT_APP_INFO_URL}/tokens`,
       },
       {
         label: 'Pairs',
-        href: 'https://pancakeswap.info/pairs',
+        href: `${process.env.REACT_APP_INFO_URL}/pairs`,
       },
       {
         label: 'Accounts',
-        href: 'https://pancakeswap.info/accounts',
+        href: `${process.env.REACT_APP_INFO_URL}/accounts`,
       },
     ],
   },
@@ -100,7 +100,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Docs',
-        href: 'https://docs.pancakeswap.finance',
+        href: process.env.REACT_APP_DOCS_URL,
       },
       {
         label: 'Blog',

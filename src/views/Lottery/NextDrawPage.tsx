@@ -14,7 +14,6 @@ import HowItWorks from './components/HowItWorks'
 const Cards = styled(BaseLayout)`
   align-items: start;
   margin-bottom: 32px;
-
   & > div {
     grid-column: span 6;
   }

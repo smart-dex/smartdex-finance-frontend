@@ -12,12 +12,16 @@ export default {
     56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
   },
   sousChef: {
-    97: '0xa5c2B8a79A724ff1236bcDFFAF5f336CF966aBCd',
+    97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
     56: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
   },
   wbnb: {
     97: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
     56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+  },
+  bnb: {
+    97: '0x61161dAd9DEcb5467d2C57A192f9D7C119e884Bb',
+    56: '',
   },
   lottery: {
     97: '0x9F26805F8FFa2122E205Df1cFF42A7777D2a772D',
@@ -32,8 +36,8 @@ export default {
     97: '0x67ADCB4dF3931b0C5Da724058ADC2174a9844412',
   },
   busd: {
-    56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-    97: '',
+    56: '0xD1a4A72C351f9e51c4124040019Ba7266BBfE84A',
+    97: '0xD1a4A72C351f9e51c4124040019Ba7266BBfE84A',
   },
   ust: {
     56: '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
@@ -53,7 +57,7 @@ export default {
   },
   eth: {
     56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
-    97: '',
+    97: '0xbB3F4b50745c36C47A592dd78def97066C5E8EdC',
   },
   claimRefund: {
     56: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149',
@@ -67,9 +71,12 @@ export default {
     56: '0xFee8A195570a18461146F401d6033f5ab3380849',
     97: '0x7b7b1583De1DeB32Ce6605F6deEbF24A0671c17C',
   },
-  // Test
   mun: {
     97: '0x2f5131fd74c8De6802b845cA407AB352FfC3B7B2',
+    56: '',
+  },
+  che: {
+    97: '0xFb21Cfb0B6070486150f31EBa2CBE63C337BF755',
     56: '',
   },
 }

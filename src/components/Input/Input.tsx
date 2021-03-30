@@ -1,4 +1,5 @@
 import React from 'react'
+import { lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
 
 export interface InputProps {
@@ -21,10 +22,10 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
 
 const StyledInputWrapper = styled.div`
   align-items: center;
-  background-color: ${(props) => props.theme.colors.input};
-  border-radius: ${(props) => props.theme.radii.default};
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.activeBackgroundMenuLeft)};
+  border-radius: 20px;
   display: flex;
-  height: 72px;
+  height: 70px;
   padding: 0 ${(props) => props.theme.spacing[3]}px;
 `
 
@@ -32,13 +33,15 @@ const StyledInput = styled.input`
   width: 100%;
   background: none;
   border: 0;
-  color: ${(props) => props.theme.colors.primary};
-  font-size: 18px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
   flex: 1;
   height: 56px;
   margin: 0;
   padding: 0;
   outline: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 `
 
 export default Input

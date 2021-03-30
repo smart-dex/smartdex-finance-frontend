@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button } from '@pancakeswap-libs/uikit'
+import { Heading, Card, CardBody, Button } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 import { useAllHarvest } from 'hooks/useHarvest'
@@ -8,71 +9,127 @@ import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
 import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
-import { lightColors, darkColors, baseColors } from '../../../style/Color'
 
 const StyledFarmStakingCard = styled(Card)`
-  min-height: 169px;
+  min-height: 270px;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
-  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
-  margin-bottom: 32px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-`
-
-const Actions = styled.div`
-  justify-self: center;
-  margin-bottom: 0;
+  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
+  border-radius: 40px;
+  margin-bottom: 25px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    justify-self: end;
+    min-height: 393px;
+    margin-bottom: 20px;
   }
 `
-const BlockCakeHarvest = styled.div`
-  display: flex;
-  padding-bottom: 25px;
-  justify-content: space-between;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    flex-direction: column;
-    padding-top: 24px;
-  }
-`
-
-const BlockCakeWallet = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 35px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    flex-direction: column;
-    padding-top: 24px;
-  }
-`
-
-const CardImage = styled.img`
-  margin-right: 16px;
-`
-
 const HeadingBlock = styled.div`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-`
-
-const Label = styled.div`
-  font-size: 10px;
-  padding-right: 50px;
-  padding-bottom: 8px;
-  color: ${baseColors.primary};
+  margin-bottom: 40px;
+  flex-direction: row-reverse;
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 14px;
+    flex-direction: inherit;
   }
 `
 const HeadingStyle = styled(Heading)`
-  font-size: 20px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 26px;
+    font-size: 24px;
   }
 `
-
+const CardImage = styled.img`
+  margin-right: 0px;
+  margin-left: 6px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-right: 16px;
+    margin-left: 0px;
+  }
+`
+const Actions = styled.div`
+  justify-self: center;
+  margin-bottom: 0;
+  margin-top: 30px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    justify-self: end;
+    margin-top: 80px;
+  }
+`
+const BlockCakeHarvest = styled.div`
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+`
+const Label = styled.div`
+  color: ${baseColors.success};
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    color: ${baseColors.primary};
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 7px;
+  }
+`
+const StyleButtonDisabled = styled(Button)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  color: ${baseColors.primary};
+  border-radius: 10px;
+  box-shadow: ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(239, 239, 239, 0.24)')};
+  height: 45px;
+  font-weight: 600;
+  font-size: 13px;
+  position: relative;
+  padding-right: 24px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    height: 56px;
+    padding-right: 36px;
+  }
+  &:disabled {
+    background: ${({ theme }) => (theme.isDark ? darkColors.btnDisabledBg : lightColors.btnDisabledBg)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.fillSvg : lightColors.fillSvg)};
+    box-shadow: ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(222, 222, 222, 0.24)')};
+    border-radius: 10px;
+    height: 45px;
+    font-weight: 600;
+    font-size: 13px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+      height: 56px;
+    }
+  }
+`
+const IconDirect = styled.img`
+  width: 10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 16px;
+  }
+`
+const BoxIconDirect = styled.div`
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  background: #0085FF;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 24px;
+  text-align: center;
+  line-height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 36px;
+    line-height: 60px;
+  }
+`
 const FarmedStakingCard = () => {
   const [pendingTx, setPendingTx] = useState(false)
   const { account } = useWallet()
@@ -95,35 +152,39 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledFarmStakingCard>
-      <CardBody style={{ padding: '16px 28px 28px' }}>
+      <CardBody>
         <HeadingBlock>
-          <CardImage src="/images/pan-cake.png" alt="cake logo" width={50} />
+          <CardImage src="/images/pan-cake.png" alt="SDC logo" width={50} />
           <HeadingStyle>{TranslateString(542, 'Farms & Staking')}</HeadingStyle>
         </HeadingBlock>
 
         <BlockCakeHarvest>
-          <Label>{TranslateString(544, 'CAKE to Harvest')}:</Label>
+          <Label>{TranslateString(544, 'SDC to Harvest')}:</Label>
           <CakeHarvestBalance />
         </BlockCakeHarvest>
 
-        <BlockCakeWallet>
-          <Label>{TranslateString(546, 'CAKE in Wallet')}:</Label>
+        <BlockCakeHarvest>
+          <Label>{TranslateString(546, 'SDC in Wallet')}:</Label>
           <CakeWalletBalance />
-        </BlockCakeWallet>
+        </BlockCakeHarvest>
         <Actions>
           {account ? (
-            <Button
+            <StyleButtonDisabled
               id="harvest-all"
               disabled={balancesWithValue.length <= 0 || pendingTx}
+              endIcon={!(balancesWithValue.length <= 0 || pendingTx) && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
               onClick={harvestAllFarms}
               style={{ width: '100%' }}
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting CAKE')
+                ? TranslateString(548, 'Collecting SDC')
                 : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
-            </Button>
+            </StyleButtonDisabled>
           ) : (
-            <UnlockButton style={{ width: '100%' }} />
+            <UnlockButton 
+              endIcon={<BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
+              style={{ width: '100%' }} 
+            />
           )}
         </Actions>
       </CardBody>

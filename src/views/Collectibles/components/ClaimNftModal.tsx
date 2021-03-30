@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useBunnySpecialContract } from 'hooks/useContract'
 import { useToast } from 'state/hooks'
-import { Button, InjectedModalProps, Modal, Text, Flex } from '@pancakeswap-libs/uikit'
+import { Button, InjectedModalProps, Modal, Text, Flex } from 'uikit-sotatek'
 import { Nft } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 
@@ -15,13 +15,11 @@ interface ClaimNftModalProps extends InjectedModalProps {
 const ModalContent = styled.div`
   margin-bottom: 16px;
 `
-
 const Actions = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 8px;
 `
-
 const ClaimNftModal: React.FC<ClaimNftModalProps> = ({ nft, onSuccess, onDismiss }) => {
   const [isConfirming, setIsConfirming] = useState(false)
   const TranslateString = useI18n()
@@ -33,7 +31,7 @@ const ClaimNftModal: React.FC<ClaimNftModalProps> = ({ nft, onSuccess, onDismiss
     bunnySpecialContract.methods
       .mintNFT(nft.bunnyId)
       .send({ from: account })
-      .on('sending', () => {
+      .on('sending', () => {     
         setIsConfirming(true)
       })
       .on('receipt', () => {
@@ -57,10 +55,10 @@ const ClaimNftModal: React.FC<ClaimNftModalProps> = ({ nft, onSuccess, onDismiss
         </Flex>
       </ModalContent>
       <Actions>
-        <Button fullWidth variant="secondary" onClick={onDismiss}>
+        <Button variant="secondary" onClick={onDismiss}>
           {TranslateString(462, 'Cancel')}
         </Button>
-        <Button fullWidth onClick={handleConfirm} disabled={!account || isConfirming}>
+        <Button onClick={handleConfirm} disabled={!account || isConfirming}>
           {TranslateString(464, 'Confirm')}
         </Button>
       </Actions>

@@ -1,6 +1,7 @@
 import React from 'react'
+import { lightColors, darkColors, baseColors, brandColors } from 'style/Color'
 import styled from 'styled-components'
-import { Button } from '@pancakeswap-libs/uikit'
+import { Button } from 'uikit-sotatek'
 import useI18n from '../../hooks/useI18n'
 import Input, { InputProps } from '../Input'
 
@@ -22,9 +23,9 @@ const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, 
             <StyledTokenSymbol>{symbol}</StyledTokenSymbol>
             <StyledSpacer />
             <div>
-              <Button size="sm" onClick={onSelectMax}>
+              <StyledButton scale="md" onClick={onSelectMax}>
                 {TranslateString(452, 'Max')}
-              </Button>
+              </StyledButton>
             </div>
           </StyledTokenAdornmentWrapper>
         }
@@ -37,30 +38,42 @@ const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, 
   )
 }
 
-const StyledTokenInput = styled.div``
-
+const StyledTokenInput = styled.div`
+`
 const StyledSpacer = styled.div`
   width: ${(props) => props.theme.spacing[3]}px;
 `
-
+const StyledButton = styled(Button)`
+  color: ${brandColors.white};
+  background-color: ${baseColors.primary};
+  height: 38px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  box-shadow: none;
+  padding: 0px 20px;
+`
 const StyledTokenAdornmentWrapper = styled.div`
   align-items: center;
   display: flex;
 `
-
 const StyledMaxText = styled.div`
   align-items: center;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
   display: flex;
-  font-size: 14px;
-  font-weight: 700;
   height: 44px;
   justify-content: flex-end;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 `
-
 const StyledTokenSymbol = styled.span`
-  color: ${(props) => props.theme.colors.primary};
-  font-weight: 700;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 `
 
 export default TicketInput

@@ -19,6 +19,7 @@ const ModalActions: React.FC = ({ children }) => {
 
 const StyledModalActions = styled.div`
   align-items: center;
+  justify-content: center;
   background-color: ${(props) => props.theme.colors.primaryDark}00;
   display: flex;
   margin: 0;
@@ -26,7 +27,7 @@ const StyledModalActions = styled.div`
 `
 
 const StyledModalAction = styled.div`
-  flex: 1;
+  text-align: center;
 `
 
 export default ModalActions

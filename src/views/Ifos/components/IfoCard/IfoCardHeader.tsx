@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, Flex } from '@pancakeswap-libs/uikit'
+import { Heading, Text, Flex } from 'uikit-sotatek'
 import { darkColors, lightColors } from 'style/Color'
 
 interface IfoCardHeaderProps {
@@ -18,7 +18,7 @@ const StyledIfoCardHeader = styled(Flex)`
 const Avatar = styled(Flex)`
   position: static;
   left: -80px;
-  top: 10px;
+  top: 0px;
   background: ${lightColors.backAvatar};
   width: 40px;
   height: 40px;

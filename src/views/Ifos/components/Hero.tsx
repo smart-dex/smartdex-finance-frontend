@@ -1,51 +1,48 @@
 import React from 'react'
 import styled from 'styled-components'
-import { darkColors } from 'style/Color'
+import { darkColors, lightColors } from 'style/Color'
 import { Heading, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 
 const Title = styled(Heading).attrs({ as: 'h1' })`
-  color: ${darkColors.textLogoMenuLeft};
+  color: ${({ theme }) => (theme.isDark ? darkColors.txtTitledark : lightColors.textIfolight)};
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   margin-bottom: 15px;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 36px;
     line-height: 44px;
     margin-bottom: 24px;
   }
 `
-
 const Blurb = styled(Text)`
-  color: ${darkColors.textLogoMenuLeft};
+  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.textIfolight)};
   font-size: 13px;
   font-weight: 500;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-  }
+   }
 `
-
 const StyledHero = styled.div`
-  background-image: linear-gradient(91.67deg, #0085ff 5.33%, #7e86ff 104.39%);
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.blackIfo : lightColors.lighIfo)};
   padding-bottom: 40px;
   padding-top: 40px;
   margin-bottom: 32px;
 `
 const Container = styled.div`
-  margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
-  padding-left: 16px;
+  width: 100%;
+  padding-left: 5%;
   padding-right: 16px;
-  ${({ theme }) => theme.mediaQueries.sm} {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-left: 9%;
+   }
+ 
 `
-
 const Hero = () => {
-  const TranslateString = useI18n()
+
+const TranslateString = useI18n()
 
   return (
     <StyledHero>

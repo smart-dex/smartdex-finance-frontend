@@ -3,7 +3,7 @@ import { Nft } from './types'
 const Nfts: Nft[] = [
   {
     name: 'Bullish',
-    description: 'Happy Niu Year! This bunny’s excited for the year of the bull (market!)',
+    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.',
     images: {
       lg: 'bullish-lg.png',
       md: 'bullish-md.png',
@@ -119,45 +119,6 @@ const Nfts: Nft[] = [
     },
     sortOrder: 999,
     bunnyId: 1,
-  },
-  {
-    name: 'Blueberries',
-    description: "These bunnies like their pancakes with blueberries. What's your favorite topping?",
-    images: {
-      lg: 'blueberries-lg.png',
-      md: 'blueberries-md.png',
-      sm: 'blueberries-sm.png',
-      ipfs: 'https://gateway.pinata.cloud/ipfs/QmXdHqg3nywpNJWDevJQPtkz93vpfoHcZWQovFz2nmtPf5/blueberries.png',
-      blur: 'blueberries-blur.png',
-    },
-    sortOrder: 999,
-    bunnyId: 2,
-  },
-  {
-    name: 'Circular',
-    description: "Love makes the world go 'round... but so do pancakes. And these bunnies know it.",
-    images: {
-      lg: 'circular-lg.png',
-      md: 'circular-md.png',
-      sm: 'circular-sm.png',
-      ipfs: 'https://gateway.pinata.cloud/ipfs/QmXdHqg3nywpNJWDevJQPtkz93vpfoHcZWQovFz2nmtPf5/circular.png',
-      blur: 'circular-blur.png',
-    },
-    sortOrder: 999,
-    bunnyId: 3,
-  },
-  {
-    name: 'Sparkle',
-    description: 'It’s sparkling syrup, pancakes, and even lottery tickets! This bunny really loves it.',
-    images: {
-      lg: 'sparkle-lg.png',
-      md: 'sparkle-md.png',
-      sm: 'sparkle-sm.png',
-      ipfs: 'https://gateway.pinata.cloud/ipfs/QmXdHqg3nywpNJWDevJQPtkz93vpfoHcZWQovFz2nmtPf5/sparkle.png',
-      blur: 'sparkle-blur.png',
-    },
-    sortOrder: 999,
-    bunnyId: 4,
   },
 ]
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
-import { Heading, Text } from '@pancakeswap-libs/uikit'
-import { darkColors, lightColors } from '../../../style/Color'
+import { Heading, Text } from 'uikit-sotatek'
+import { darkColors, lightColors } from 'style/Color'
 
 export interface PrizeGridProps {
   lotteryPrizeAmount?: number
@@ -12,37 +12,77 @@ export interface PrizeGridProps {
   twoTicketMatches?: number
   threeTicketMatches?: number
 }
-
 const Grid = styled.div<{ pastDraw?: boolean }>`
   display: grid;
-  grid-template-columns: repeat(${(props) => (props.pastDraw ? 3 : 2)}, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
-`
+  ${({ theme }) => theme.mediaQueries.nav} {
+    grid-template-columns: 1fr 4fr 1fr;
+   }
 
+`
 const RightAlignedText = styled(Text)`
-  text-align: right;
+  text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+   font-size: 14px;
+  }
 `
 
 const RightAlignedHeading = styled(Heading)`
-  text-align: right;
+  text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 16px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+   }
+`
+
+const TextStyleThree = styled(Text)`
+color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
+
 `
 
 const GridItem = styled.div<{ marginBottom?: string }>`
   margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : '10px')};
 `
-
 const PastDrawGridItem = styled(GridItem)`
-  transform: translate(-40%, 0%);
+  
 `
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
 `
 
 const HeadingStyle = styled(Heading)`
+   text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 16px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+   }
+`
+
+const RightAlignedBurn = styled(Text)`
+text-align: center;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 14px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
 `
 
 const PrizeGrid: React.FC<PrizeGridProps> = ({
@@ -57,74 +97,75 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
   const twoMatchesAmount = +((lotteryPrizeAmount / 100) * 10).toFixed(0)
   const burnAmount = +((lotteryPrizeAmount / 100) * 20).toFixed(0)
   const TranslateString = useI18n()
-
   return (
-    <Grid pastDraw={pastDraw}>
-      <GridItem>
-        <TextStyle fontSize="14px">{TranslateString(756, 'No. Matched')}</TextStyle>
+    <Grid pastDraw={pastDraw} style={{ padding: '8px'}}>
+      <GridItem style={{ textAlign: 'center'}}>
+        <TextStyle>{TranslateString(756, 'No. Matched')}</TextStyle>
       </GridItem>
-      {pastDraw && (
+      {pastDraw ? (
         <PastDrawGridItem>
-          <RightAlignedText fontSize="14px">{TranslateString(754, 'Winners')}</RightAlignedText>
+          <RightAlignedText>{TranslateString(754, 'Winners')}</RightAlignedText>
         </PastDrawGridItem>
-      )}
+      ) :  <PastDrawGridItem />}
       <GridItem>
-        <RightAlignedText fontSize="14px">{TranslateString(752, 'Prize Pot')}</RightAlignedText>
+        <RightAlignedText>{TranslateString(752, 'Prize Pot')}</RightAlignedText>
       </GridItem>
       {/* 4 matches row */}
       <GridItem>
-        <HeadingStyle size="md">4</HeadingStyle>
+        <HeadingStyle >4</HeadingStyle>
       </GridItem>
-      {pastDraw && (
+      {pastDraw ? (
         <PastDrawGridItem>
-          <RightAlignedHeading size="md">{jackpotMatches}</RightAlignedHeading>
+          <RightAlignedHeading >{jackpotMatches}</RightAlignedHeading>
         </PastDrawGridItem>
-      )}
+      ) : <PastDrawGridItem />}
       <GridItem>
-        <RightAlignedHeading size="md">{fourMatchesAmount.toLocaleString()}</RightAlignedHeading>
+        <RightAlignedHeading >{fourMatchesAmount.toLocaleString()}</RightAlignedHeading>
       </GridItem>
       {/* 3 matches row */}
       <GridItem>
-        <TextStyle bold>3</TextStyle>
+        <TextStyleThree bold>3</TextStyleThree>
       </GridItem>
-      {pastDraw && (
+      {pastDraw ? (
         <PastDrawGridItem>
-          <RightAlignedText bold>{threeTicketMatches}</RightAlignedText>
+          <TextStyleThree bold>{threeTicketMatches}</TextStyleThree>
         </PastDrawGridItem>
-      )}
+      ) : <PastDrawGridItem />}
       <GridItem>
-        <RightAlignedText>{threeMatchesAmount.toLocaleString()}</RightAlignedText>
+        <TextStyleThree>{threeMatchesAmount.toLocaleString()}</TextStyleThree>
       </GridItem>
       {/* 2 matches row */}
       <GridItem>
         <TextStyle>2</TextStyle>
       </GridItem>
-      {pastDraw && (
+      {pastDraw ? (
         <PastDrawGridItem>
           <RightAlignedText>{twoTicketMatches}</RightAlignedText>
         </PastDrawGridItem>
-      )}
+      ) : <PastDrawGridItem />}
       <GridItem>
         <RightAlignedText>{twoMatchesAmount.toLocaleString()}</RightAlignedText>
       </GridItem>
       {/* Burn row */}
       <GridItem marginBottom="0">
-        <TextStyle>{TranslateString(999, `${pastDraw ? 'Burned' : 'To burn'}`)}:</TextStyle>
+        <TextStyle style={{textAlign: 'left' , paddingLeft: '8px'}}>{TranslateString(999, `${pastDraw ? 'Burned' : 'To burn'}`)}</TextStyle>
       </GridItem>
       {pastDraw ? (
         <>
           <GridItem marginBottom="0" />
           <GridItem marginBottom="0">
-            <RightAlignedText>{burnAmount.toLocaleString()}</RightAlignedText>
+            <RightAlignedBurn>{burnAmount.toLocaleString()}</RightAlignedBurn>
           </GridItem>
         </>
       ) : (
+        <>
+        <GridItem marginBottom="0" />
         <GridItem marginBottom="0">
-          <RightAlignedText>{burnAmount.toLocaleString()}</RightAlignedText>
+          <RightAlignedBurn>{burnAmount.toLocaleString()}</RightAlignedBurn>
         </GridItem>
+        </>
       )}
     </Grid>
   )
 }
-
 export default PrizeGrid

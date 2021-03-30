@@ -1,20 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
+import { baseColors, darkColors, lightColors } from 'style/Color'
 import { Button, useWalletModal } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
-import { baseColors } from '../style/Color'
 
 const ButtonStyle = styled(Button)`
-  background: ${baseColors.primary};
+  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  box-shadow: 0px 4px 10px ${ ({ theme}) => theme.isDark ? darkColors.boxShadow : lightColors.boxShadow}; 
+  color: ${baseColors.primary};
   border-radius: 10px;
-  &:hover {
-    background: #5ba7ec !important;
+  height: 45px;
+  font-weight: 600;
+  font-size: 13px;
+  position: relative;
+  padding-right: 24px;
+  box-shadow: none;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    height: 56px;
   }
-  margin-top: 10px;
-  margin-bottom: 10px;
 `
-
 const UnlockButton = (props) => {
   const TranslateString = useI18n()
   const { connect, reset } = useWallet()
@@ -22,7 +28,7 @@ const UnlockButton = (props) => {
 
   return (
     <ButtonStyle onClick={onPresentConnectModal} {...props}>
-      {TranslateString(292, 'Unlock Wallet')}
+      {TranslateString(292, 'Unlock Wallet')} 
     </ButtonStyle>
   )
 }

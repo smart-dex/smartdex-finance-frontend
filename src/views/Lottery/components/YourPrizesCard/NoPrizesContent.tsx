@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Button, useModal } from '@pancakeswap-libs/uikit'
+import { Text, Button, useModal } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import useTickets from 'hooks/useTickets'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 import MyTicketsModal from '../TicketCard/UserTicketsModal'
 
 const Wrapper = styled.div`
   display: flex;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.background)} !important;
+  box-shadow: none;
 `
 
 const TextWrapper = styled.div`
@@ -16,6 +19,7 @@ const TextWrapper = styled.div`
 
 const StyledText = styled(Text)`
   padding-left: 12px;
+  color: ${({ theme }) => theme.isDark ? darkColors.colorTicket : lightColors.colorTicket};
 `
 
 const Image = styled.img`
@@ -26,8 +30,13 @@ const Image = styled.img`
   }
 `
 const StyledButton = styled(Button)`
-  padding: 0 12px;
   height: unset;
+  background: none;
+  padding-left: 12px;
+  padding-top: 9px;
+  color: ${ baseColors.primary};
+  justify-content: flex-start;
+  box-shadow: none;
 `
 
 const NoPrizesContent: React.FC = () => {
@@ -39,8 +48,8 @@ const NoPrizesContent: React.FC = () => {
     <Wrapper>
       <Image src="/images/no-prize.svg" alt="no prizes won" />
       <TextWrapper>
-        <StyledText color="textDisabled">{TranslateString(726, 'Sorry, no prizes to collect')}</StyledText>
-        <StyledButton variant="text" onClick={onPresentMyTickets}>
+        <StyledText>{TranslateString(726, 'Sorry, no prizes to collect')}</StyledText>
+        <StyledButton  onClick={onPresentMyTickets}>
           {TranslateString(432, 'View your tickets')}
         </StyledButton>
       </TextWrapper>

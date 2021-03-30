@@ -1,9 +1,11 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
+import { darkColors, lightColors } from 'style/Color'
 import { Modal, Text, LinkExternal, Flex } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { calculateCakeEarnedPerThousandDollars, apyModalRoi } from 'utils/compoundApyHelpers'
+
 
 interface ApyCalculatorModalProps {
   onDismiss?: () => void
@@ -49,82 +51,115 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
     <Modal title="ROI" onDismiss={onDismiss}>
       <Grid>
         <GridItem>
-          <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
+          <TextStyled fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
             {TranslateString(860, 'Timeframe')}
-          </Text>
+          </TextStyled>
         </GridItem>
         <GridItem>
-          <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
+          <TextStyled fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
             {TranslateString(858, 'ROI')}
-          </Text>
+          </TextStyled>
         </GridItem>
         <GridItem>
-          <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
+          <TextStyled fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
             {TranslateString(864, 'CAKE per $1000')}
-          </Text>
+          </TextStyled>
         </GridItem>
         {/* 1 day row */}
         <GridItem>
-          <Text>1d</Text>
+          <TextStyled>1d</TextStyled>
         </GridItem>
         <GridItem>
-          <Text>
+          <TextStyled>
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand1D, amountInvested: oneThousandDollarsWorthOfCake })}%
-          </Text>
+          </TextStyled>
         </GridItem>
         <GridItem>
-          <Text>{cakeEarnedPerThousand1D}</Text>
+          <TextStyled>{cakeEarnedPerThousand1D}</TextStyled>
         </GridItem>
         {/* 7 day row */}
         <GridItem>
-          <Text>7d</Text>
+          <TextStyled>7d</TextStyled>
         </GridItem>
         <GridItem>
-          <Text>
+          <TextStyled>
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand7D, amountInvested: oneThousandDollarsWorthOfCake })}%
-          </Text>
+          </TextStyled>
         </GridItem>
         <GridItem>
-          <Text>{cakeEarnedPerThousand7D}</Text>
+          <TextStyled>{cakeEarnedPerThousand7D}</TextStyled>
         </GridItem>
         {/* 30 day row */}
         <GridItem>
-          <Text>30d</Text>
+          <TextStyled>30d</TextStyled>
         </GridItem>
         <GridItem>
-          <Text>
+          <TextStyled>
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand30D, amountInvested: oneThousandDollarsWorthOfCake })}%
-          </Text>
+          </TextStyled>
         </GridItem>
         <GridItem>
-          <Text>{cakeEarnedPerThousand30D}</Text>
+          <TextStyled>{cakeEarnedPerThousand30D}</TextStyled>
         </GridItem>
         {/* 365 day / APY row */}
         <GridItem>
-          <Text>365d(APY)</Text>
+          <TextStyled>365d(APY)</TextStyled>
         </GridItem>
         <GridItem>
-          <Text>
+          <TextStyled>
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand365D, amountInvested: oneThousandDollarsWorthOfCake })}%
-          </Text>
+          </TextStyled>
         </GridItem>
         <GridItem>
-          <Text>{cakeEarnedPerThousand365D}</Text>
+          <TextStyled>{cakeEarnedPerThousand365D}</TextStyled>
         </GridItem>
       </Grid>
-      <Description fontSize="12px" color="textSubtle">
+      <DescriptionStyled fontSize="12px" color="textSubtle">
         {TranslateString(
           866,
           'Calculated based on current rates. Compounding once daily. Rates are estimates provided for your convenience only, and by no means represent guaranteed returns.',
         )}
-      </Description>
+      </DescriptionStyled>
       <Flex justifyContent="center">
-        <LinkExternal href={addLiquidityUrl}>
+        <StyledLinkExternal href={addLiquidityUrl}>
           {TranslateString(999, 'Get')} {lpLabel}
-        </LinkExternal>
+        </StyledLinkExternal>
       </Flex>
     </Modal>
   )
 }
-
+const TextStyled = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
+const DescriptionStyled = styled(Description)`
+color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+}
+`
+const StyledLinkExternal = styled(LinkExternal)`
+    font-size: 13px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
+    color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
+    width: fit-content;
+    background:none;
+    svg {
+    padding-left: 4px;
+    width: auto;
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
 export default ApyCalculatorModal

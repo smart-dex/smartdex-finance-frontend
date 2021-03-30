@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Web3 from 'web3'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Button, Input, Modal, Text } from '@pancakeswap-libs/uikit'
+import { Button, Input, Modal, Text } from 'uikit-sotatek'
 import { useToast } from 'state/hooks'
 import { Nft } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
@@ -105,10 +105,10 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
         />
       </ModalContent>
       <Actions>
-        <Button fullWidth variant="secondary" onClick={onDismiss}>
+        <Button variant="secondary" onClick={onDismiss}>
           {TranslateString(462, 'Cancel')}
         </Button>
-        <Button fullWidth onClick={handleConfirm} disabled={!account || isLoading || !value}>
+        <Button onClick={handleConfirm} disabled={!account || isLoading || !value}>
           {TranslateString(464, 'Confirm')}
         </Button>
       </Actions>

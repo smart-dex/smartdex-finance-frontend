@@ -1,42 +1,29 @@
 import React, { useMemo, useState, useCallback } from 'react'
 import BigNumber from 'bignumber.js'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { getAddress } from 'utils/addressHelpers'
+import { getBalanceNumber } from 'utils/formatBalance'
 import { ChevronDown, ChevronUp } from 'react-feather'
-import { Button, Flex, Text } from 'uikit-sotatek'
+import { Button, Flex, useModal } from 'uikit-sotatek'
 import { Farm } from 'state/types'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import UnlockButton from 'components/UnlockButton'
 import { useApprove } from 'hooks/useApprove'
-import StakeAction from './StakeAction'
-import HarvestAction from './HarvestAction'
+import SelectModal from '../SelectModal'
 
-const Action = styled.div`
-  display: flex;
-  flex-grow: 2;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: normal;
-  margin-left: 0px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: 16px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-`
+
 const ButtonAction = styled(Flex)`
-  flex-grow: 2;
+  margin-bottom:10px;
+  padding: 0px 20px 0px 20px;
+  width:100%;
   flex-direction: column;
-  margin-top: 16px;
-  margin-left: 0px;
+  margin-bottom:20px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: 25px;
-    margin-top: 0px;
+    
   }
 `
 const StyledGroupButton = styled(Flex)`
@@ -47,22 +34,105 @@ const StyledGroupButton = styled(Flex)`
   }
 `
 
-const FarmStakedText = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
-  font-weight: 500;
+
+const ButtonDetail = styled(Button) <{ isShow: boolean }>`
+${(props) =>
+    props.isShow ?
+      (
+        css`
+    border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderButtonDetail : lightColors.borderButtonDetail)};
+    color: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#5F5E76')};
+    `
+      ) :
+      (
+        css`
+      border: 1px solid  ${baseColors.primary};
+      color: ${baseColors.primary};
+      `
+      )
+  }
+margin-left: auto;
+width: calc(50% - 9px);
+box-shadow:none;
+border-radius: 10px;
+background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
+font-weight: 600;
+font-size: 13px;
+line-height: 20px;
+${({ theme }) => theme.mediaQueries.nav} {
   font-size: 16px;
-  line-height: 20px;
-  margin-bottom: 18px;
+}
 `
-const ButtonDetail = styled(Button)`
-  border: 1px solid ${baseColors.primary};
-  border-radius: 10px;
-  color: #0085ff;
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
+
+const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
+  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
+  background: ${({ isDisable }) => isDisable && ''};
+  color: #17C267;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 20px;
-  $margin: 0.25rem;
+  width: 100%;
+  border: 1px solid #17C267;
+  filter:  ${({ isDisable }) => isDisable ? '' : 'drop-shadow(0px 4px 10px rgba(111, 180, 143, 0.24))'} ;
+  border-radius: 10px;
+  box-shadow: none;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
+const StyledButtonUnlock = styled(UnlockButton)`
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  width: 100%;
+  font-weight: 600;
+  font-size: 13px;
+  height:56px;
+  line-height: 20px;
+  margin-top:10px;
+  margin-bottom:10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+  color: #FFFFFF;
+  background: ${baseColors.primary};
+`
+
+
+
+const ButtonDeposit = styled(Button)`
+  text-align: center;
+  width:100%;
+  background: #0085FF;
+  box-shadow: none;
+  border-radius: 10px;
+  border:none;
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  background: #0085FF;
+  margin-top:10px;
+  margin-bottom:10px;
+  height:56px;
+  display: flex;
+    justify-content: center;
+    align-self: center;
+  >span{
+    margin:auto;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+`
+
+const SelectButton = styled(Button)`
+  background: #0085FF;
+  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  border-radius: 10px;
+  width: calc(50% - 9px);
+  font-size: 13px;
+  margin-bottom:10px;
+  margin-top:10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 
 export interface FarmWithStakedValue extends Farm {
@@ -76,6 +146,7 @@ interface FarmCardActionsProps {
   addLiquidityUrl?: string
   changeOpenDetail: () => void
   isOpenDetail: boolean
+  earnLabel:string
 }
 
 const CardActions: React.FC<FarmCardActionsProps> = ({
@@ -85,6 +156,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   addLiquidityUrl,
   changeOpenDetail,
   isOpenDetail,
+  earnLabel
 }) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
@@ -94,11 +166,21 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
   const Icon = isOpenDetail ? ChevronUp : ChevronDown
-
+  const rawStakedBalance = getBalanceNumber(stakedBalance)
   const lpContract = useMemo(() => {
     return getContract(ethereum as provider, lpAddress)
   }, [ethereum, lpAddress])
-
+  const [onSelect] = useModal(
+    <SelectModal
+      pid={pid}
+      earnings={earnings}
+      stakedBalance={stakedBalance}
+      lpName={lpName}
+      tokenBalance={tokenBalance}
+      addLiquidityUrl={addLiquidityUrl}
+      earnLabel={earnLabel}
+    />
+  )
   const { onApprove } = useApprove(lpContract)
 
   const handleApprove = useCallback(async () => {
@@ -113,39 +195,44 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
 
   const renderApprovalOrStakeButton = () => {
     return isApproved ? (
-      <StakeAction
-        stakedBalance={stakedBalance}
-        tokenBalance={tokenBalance}
-        tokenName={lpName}
-        pid={pid}
-        addLiquidityUrl={addLiquidityUrl}
-      />
+      <SelectButton onClick={onSelect}>   {TranslateString(999, 'Select')}</SelectButton>
     ) : (
-      <Button disabled={requestedApproval} onClick={handleApprove} style={{ maxWidth: '143px' }} mt="10px" mb="10px">
-        {TranslateString(758, 'Approve Contract')}
-      </Button>
-    )
+        <ButtonApprove disabled={requestedApproval} isDisable={requestedApproval} onClick={handleApprove} mt="10px" mb="10px">
+          {TranslateString(758, 'Approve Contract')}
+        </ButtonApprove>
+      )
   }
 
   return (
-    <Action>
-      <HarvestAction earnings={earnings} pid={pid} />
-      <ButtonAction>
-        <FarmStakedText bold textTransform="uppercase" fontSize="16px">
-          {lpName} {TranslateString(1074, 'Staked')}
-        </FarmStakedText>
-        <StyledGroupButton>
-          {!account ? (
-            <UnlockButton style={{ maxWidth: '143px' }} mt="10px" mb="10px" />
-          ) : (
-            renderApprovalOrStakeButton()
+    <ButtonAction>
+      <StyledGroupButton>
+        {!account ? (
+          <StyledButtonUnlock > <UnlockButton /></StyledButtonUnlock>
+        ) : (
+            <>
+              {
+                tokenBalance.eq(0) && rawStakedBalance === 0 ?
+                  (
+                    <ButtonDeposit as="a" href={addLiquidityUrl} target="_blank" >
+                      <span>  {TranslateString(999, 'Deposit')}</span>
+
+                    </ButtonDeposit>
+                  ) : (
+                    <>
+                      {renderApprovalOrStakeButton()}
+                      {
+                        isApproved &&
+                        <ButtonDetail onClick={changeOpenDetail} isShow={isOpenDetail} mt="10px" mb="10px">
+                          {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
+                        </ButtonDetail>
+                      }
+                    </>
+                  )
+              }
+            </>
           )}
-          <ButtonDetail onClick={changeOpenDetail} style={{ minWidth: '143px' }} mt="10px" mb="10px">
-            {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
-          </ButtonDetail>
-        </StyledGroupButton>
-      </ButtonAction>
-    </Action>
+      </StyledGroupButton>
+    </ButtonAction>
   )
 }
 

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
-import { Card, CardRibbon, LinkExternal } from 'uikit-sotatek'
-import { darkColors, lightColors } from 'style/Color'
+import { Card, CardRibbon, LinkExternal, useWalletModal, Button } from 'uikit-sotatek'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import { BSC_BLOCK_TIME } from 'config'
 import { Ifo, IfoStatus } from 'config/constants/types'
 import makeBatchRequest from 'utils/makeBatchRequest'
@@ -11,13 +11,15 @@ import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
 import { useIfoContract } from 'hooks/useContract'
 import UnlockButton from 'components/UnlockButton'
+import { ButtonPrimary} from 'style/Button'
 import IfoCardHeader from './IfoCardHeader'
 import IfoCardProgress from './IfoCardProgress'
 import IfoCardDescription from './IfoCardDescription'
 import IfoCardDetails from './IfoCardDetails'
 import IfoCardTime from './IfoCardTime'
 import IfoCardContribute from './IfoCardContribute'
-import { ButtonPrimary } from '../../../../style/Button'
+
+
 
 export interface IfoCardProps {
   ifo: Ifo
@@ -30,12 +32,16 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 40px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-  box-shadow: 50px 38px 102px rgba(0, 0, 0, 0.14);
+  ${({ theme }) => theme.mediaQueries.sm} {
+    flex-direction: row;
+    width: 85%;
+  }
 `
 const CardHeaderFlex = styled('div')`
   display: flex;
   flex-direction: column;
-  ${({ theme }) => theme.mediaQueries.sm} {
+  positon: relative;
+  ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
   }
   & > div {
@@ -49,6 +55,7 @@ const WrapProgress = styled('div')`
 `
 const WrapButtonRow = styled('div')`
   display: flex;
+  flex-direction: column;
   & > button,
   & > a {
     flex: inherit;
@@ -56,28 +63,25 @@ const WrapButtonRow = styled('div')`
     margin: 0px;
   }
   & > button {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  ${({ theme }) => theme.mediaQueries.sm} {
+ 
+  ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
     & > button {
       flex: 1;
-      margin-right: 17px;
       margin-bottom: 0;
     }
     & > a {
       flex: 1;
-      margin-left: 17px;
+      margin-left: 60px;
     }
   }
 `
 const CardBody = styled('div')`
   padding: 25px;
-  ${({ theme }) => theme.mediaQueries.sm} {
-    padding: 50px 80px 50px 123px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding: 50px 123px 50px 123px;
   }
 `
 const LinkExternalStyle = styled(LinkExternal)`
@@ -98,12 +102,66 @@ const LinkExternalStyle = styled(LinkExternal)`
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
   & svg {
     fill: ${lightColors.fillSvg};
+    position: relative;
+    margin-left: 7px;
   }
 `
 const UnlockButtonStyle = styled(UnlockButton)`
   ${ButtonPrimary}
 `
-
+const ButtonStyle = styled(Button)`
+  button {
+    background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+    color: ${baseColors.primary};
+    border-radius: 10px;
+    height: 45px;
+    font-weight: 600;
+    font-size: 13px;
+    width: 100%;
+    box-shadow: none !important;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+      height: 56px;
+      margin-bottom: 0px;
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 48%;
+    margin-bottom: 0px;
+  }
+  position: relative;
+  & : hover{
+    opacity: 0.65;
+  }
+  justify-content: flex-end;
+  background: none !important;
+  box-shadow: none;
+  padding: 0px;
+`
+const IconDirect = styled.img`
+  width: 10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 16px;
+  }
+`
+const BoxIconDirect = styled.div`
+  position: absolute;
+  right: 0px;
+  top: 6px;
+  justify-content: flex-end;
+  background: ${lightColors.buttonSecond};
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 24px;
+  text-align: center;
+  line-height: 45px;
+  
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 36px;
+    line-height: 56px;
+    top: 0px;
+  }    
+`
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
   if (currentBlock < startBlock) {
     return 'coming_soon'
@@ -211,7 +269,9 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
 
   const isActive = state.status === 'live'
   const isFinished = state.status === 'finished'
-
+  const { connect, reset } = useWallet()
+  const { onPresentConnectModal } = useWalletModal(connect, reset)
+  
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
       <CardBody>
@@ -251,8 +311,12 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           totalAmount={state.totalAmount}
         />
         <WrapButtonRow>
-          {!account && <UnlockButtonStyle fullWidth />}
-          <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site')}</LinkExternalStyle>
+        {!account && 
+          <ButtonStyle>
+            <UnlockButtonStyle fullWidth /> 
+            <BoxIconDirect onClick={onPresentConnectModal}><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
+          </ButtonStyle>  }
+          <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
         </WrapButtonRow>
       </CardBody>
     </StyledIfoCard>
