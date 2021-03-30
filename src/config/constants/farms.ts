@@ -24,9 +24,9 @@ const farms: FarmConfig[] = [
       97: '0xbbcc1a161ed7447bfccc2cfb43817785fd6c49fc',
       56: '',
     },
-    tokenSymbol: 'MUN',
+    tokenSymbol: 'LIV',
     tokenAddresses: {
-      97: '0x2f5131fd74c8De6802b845cA407AB352FfC3B7B2',
+      97: '0x126C3397a2449BE19F05e6801bB634e9ABD8bdcF',
       56: '',
     },
     quoteTokenSymbol: QuoteToken.MUN,
@@ -39,9 +39,9 @@ const farms: FarmConfig[] = [
       97: '0x31750f6cc548a7edcee6a980b21a7c2bf65275e5',
       56: '',
     },
-    tokenSymbol: 'BUSD',
+    tokenSymbol: 'WETH',
     tokenAddresses: {
-      97: '0xD1a4A72C351f9e51c4124040019Ba7266BBfE84A',
+      97: '0xbB3F4b50745c36C47A592dd78def97066C5E8EdC',
       56: '',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
@@ -69,9 +69,9 @@ const farms: FarmConfig[] = [
       97: '0x29f7f2402b8946a6283543f920847384c28593ef',
       56: '',
     },
-    tokenSymbol: 'BUSD',
+    tokenSymbol: 'CAKE',
     tokenAddresses: {
-      97: '0xD1a4A72C351f9e51c4124040019Ba7266BBfE84A',
+      97: '0x04e6407bf994D225Fd02a6f42e8C02ECD907033a',
       56: '',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
@@ -106,6 +106,21 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.bnb,
+  },
+  {
+    pid: 8,
+    lpSymbol: 'LIV-CHE LP',
+    lpAddresses: {
+      97: '0xaAbedf85a1b3eb9EAAFdc4120AE0F55879E1f8A3',
+      56: '',
+    },
+    tokenSymbol: 'LIV',
+    tokenAddresses: {
+      97: '0x126C3397a2449BE19F05e6801bB634e9ABD8bdcF',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.CHE,
+    quoteTokenAdresses: contracts.che,
   },
   // {
   //   pid: 0,

@@ -44,6 +44,8 @@ const LabelFooter = styled(Label)<{ isDisabled: boolean }>`
     css`
       opacity: 0.5;
     `}
+    font-weight: 500;
+    line-height: 25px;
 `
 const Detail = styled(Flex)`
     margin-top:10px;

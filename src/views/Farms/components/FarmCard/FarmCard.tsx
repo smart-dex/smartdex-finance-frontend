@@ -12,11 +12,11 @@ import { BASE_ADD_LIQUIDITY_URL } from 'config'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { lightColors, darkColors } from 'style/Color'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
-import HarvestAction from './HarvestAction'
 import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
 import ApyButton from './ApyButton'
+
 
 
 export interface FarmWithStakedValue extends Farm {
@@ -57,21 +57,14 @@ const CardContent = styled(Flex)`
     flex-wrap: nowrap;
   }
 `
-
-const InfoFarm = styled(Flex)`
-padding-top: 10px;
-padding-right:17px;
-border-right: 1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-justify-content: flex-start;
-width: 50%;
-  ${({ theme }) => theme.mediaQueries.nav} {
-  }
-`
 const InfoTextFarm = styled(Text)`
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 const DetailInFo = styled.div`
   flex: 1;
@@ -80,22 +73,23 @@ const DetailInFo = styled.div`
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 const StyledInfoEarn = styled(Flex)`
-justify-content: center;
-padding:20px 20px 0px 20px;
-margin-top:20px;
-width: 100%;
+  flex-direction:column;
+  justify-content: center;
+  padding:20px 20px 0px 20px;
+  margin-top:20px;
+  width: 100%;
 `
-const Line = styled.div`
-  width: calc(100% - 50px);
-  margin-top: 32px;
-  border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-  margin-bottom: 15px;
-`
+
 const Detail = styled(Flex)`
   flex-wrap:wrap;
 `
+
+
 
 interface FarmCardProps {
   farm: FarmWithStakedValue
@@ -141,11 +135,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'CAKE'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
-
+  
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
-
   const handelOpenDetail = () => {
     setShowExpandableSection(!showExpandableSection)
   }
@@ -160,20 +153,19 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       />
       <CardContent>
         <StyledInfoEarn>
-          <InfoFarm justifyContent="center" flexDirection="column">
-            {!removed && (
+        {!removed && (
               <Detail mb="37px" >
                 <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
                 <InfoTextFarm bold style={{ display: 'flex' }}>
                   {farm.apy ? (
                     <>
-                      {farmAPY}%
-                      <ApyButton
+                    <ApyButton
                         lpLabel={lpLabel}
                         addLiquidityUrl={addLiquidityUrl}
                         cakePrice={cakePrice}
                         apy={farm.apy}
                       />
+                      {farmAPY}% 
                   </>
                   ) : (
                       <Skeleton height={24} width={80} />
@@ -181,14 +173,47 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                 </InfoTextFarm>
               </Detail>
             )}
-            <Detail>
-              <DetailInFo>{TranslateString(318, 'Earn')}:</DetailInFo>
-              <InfoTextFarm bold>{earnLabel}</InfoTextFarm>
-            </Detail>
-          </InfoFarm>
-          <HarvestAction earnings={earnings} pid={pid} />
+            <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'Total Deposits')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                      123456 AAA
+          
+                   </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+              <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'Pool Rate')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                      1120.4 SDC/WEEK
+                  </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+              <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'Your Pool Rate')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                     {farmAPY}%
+                  </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+    
         </StyledInfoEarn>
-        <Line />
+      
+       
         <CardActionsContainer
           farm={farm}
           ethereum={ethereum}
@@ -196,6 +221,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           addLiquidityUrl={addLiquidityUrl}
           changeOpenDetail={handelOpenDetail}
           isOpenDetail={showExpandableSection}
+          earnLabel={earnLabel}
         />
         {showExpandableSection && (
           <ExpandingWrapper expanded={showExpandableSection}>
@@ -205,6 +231,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
               totalValueFormated={totalValueFormated}
               lpLabel={lpLabel}
               addLiquidityUrl={addLiquidityUrl}
+              earnings={earnings}
+              pid={pid}
             />
           </ExpandingWrapper>
         )}

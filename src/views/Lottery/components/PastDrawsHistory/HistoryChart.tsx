@@ -1,9 +1,9 @@
 import React, { lazy, Suspense, useContext } from 'react'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from 'uikit-sotatek'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
+import { baseColors, lightColors } from 'style/Color'
 import Loading from '../Loading'
-import { baseColors, lightColors } from '../../../../style/Color'
 
 const Line = lazy(() => import('./LineChartWrapper'))
 
@@ -108,7 +108,7 @@ const HistoryChart: React.FC = () => {
       )}
       {!historyError && historyData.length > 1 ? (
         <Suspense fallback={<div>Loading...</div>}>
-          <Line data={chartData} options={options} type="line" />
+          <Line data={chartData} options={options} type="chart-line" />
         </Suspense>
       ) : (
         <InnerWrapper>

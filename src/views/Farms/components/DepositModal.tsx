@@ -3,8 +3,11 @@ import React, { useCallback, useMemo, useState } from 'react'
 import { Button, Modal, LinkExternal } from 'uikit-sotatek'
 import ModalActions from 'components/ModalActions'
 import ModalInput from 'components/ModalInput'
+import styled from 'styled-components'
+import { baseColors, darkColors, lightColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
 import { getFullDisplayBalance } from 'utils/formatBalance'
+
 
 interface DepositModalProps {
   max: BigNumber
@@ -12,9 +15,10 @@ interface DepositModalProps {
   onDismiss?: () => void
   tokenName?: string
   addLiquidityUrl?: string
+  onBack?: () => void
 }
 
-const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, tokenName = '', addLiquidityUrl }) => {
+const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, tokenName = '', addLiquidityUrl, onBack }) => {
   const [val, setVal] = useState('')
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
@@ -34,37 +38,80 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
   }, [fullBalance, setVal])
 
   return (
-    <Modal title={TranslateString(1068, 'Stake LP tokens')} onDismiss={onDismiss}>
-      <ModalInput
-        value={val}
-        onSelectMax={handleSelectMax}
-        onChange={handleChange}
-        max={fullBalance}
-        symbol={tokenName}
-        addLiquidityUrl={addLiquidityUrl}
-        inputTitle={TranslateString(1070, 'Stake')}
-      />
-      <ModalActions>
-        <Button variant="secondary" onClick={onDismiss}>
-          {TranslateString(462, 'Cancel')}
-        </Button>
-        <Button
-          disabled={pendingTx || fullBalance === '0' || val === '0'}
-          onClick={async () => {
-            setPendingTx(true)
-            await onConfirm(val)
-            setPendingTx(false)
-            onDismiss()
-          }}
-        >
-          {pendingTx ? TranslateString(488, 'Pending Confirmation') : TranslateString(464, 'Confirm')}
-        </Button>
-      </ModalActions>
-      <LinkExternal href={addLiquidityUrl} style={{ alignSelf: 'center' }}>
-        {TranslateString(999, 'Get')} {tokenName}
-      </LinkExternal>
-    </Modal>
+    <ModalStyle title={TranslateString(1068, 'Stake LP tokens')} onDismiss={onBack}>
+      <StyledModal>
+        <ModalInput
+          value={val}
+          onSelectMax={handleSelectMax}
+          onChange={handleChange}
+          max={fullBalance}
+          symbol={tokenName}
+          addLiquidityUrl={addLiquidityUrl}
+        />
+        <ModalActions>
+          <ButtonCancel variant="secondary" onClick={onBack}>
+            {TranslateString(462, 'Cancel')}
+          </ButtonCancel>
+          <ButtonConfirm
+            disabled={pendingTx || fullBalance === '0' || val === '0' || val===''}
+            onClick={async () => {
+              setPendingTx(true)
+              await onConfirm(val)
+              setPendingTx(false)
+              onDismiss()
+            }}
+          >
+            {pendingTx ? TranslateString(488, 'Pending Confirmation') : TranslateString(464, 'Confirm')}
+          </ButtonConfirm>
+        </ModalActions>
+        <StyledLinkExternal href={addLiquidityUrl} style={{ alignSelf: 'center' }}>
+          {TranslateString(999, 'Get')} {tokenName}
+        </StyledLinkExternal>
+      </StyledModal>
+
+    </ModalStyle>
   )
 }
+const ButtonConfirm = styled(Button)`
+  background: ${baseColors.primary};
+  box-shadow: 0px 4px 10px  ${({ theme }) => (theme.isDark ? '  0px 4px 10px rgba(0, 133, 255, 0.24)' : 'rgba(83, 185, 234, 0.24)')};
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
 
+`
+const ButtonCancel = styled(Button)`
+  background:  ${({ theme }) => (theme.isDark ? '#2A3145' : '#D9D9DE')};
+  box-shadow: 0px 4px 10px  ${({ theme }) => (theme.isDark ? ' rgba(42, 49, 69, 0.24)' : 'rgba(217, 217, 222, 0.24)')};
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorButtonCancel : lightColors.colorButtonCancel)};;
+  border:none;
+`
+const StyledModal = styled.div`
+${({ theme }) => theme.mediaQueries.nav} {
+  width 551px;
+}
+`
+const ModalStyle = styled(Modal)`
+  border: 1px solid #E2E2E8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+`
+const StyledLinkExternal = styled(LinkExternal)`
+    font-size: 13px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
+    color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
+    width: fit-content;
+    background:none;
+    svg {
+    padding-left: 4px;
+    width: auto;
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
 export default DepositModal
