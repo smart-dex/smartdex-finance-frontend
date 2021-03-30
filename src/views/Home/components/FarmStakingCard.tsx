@@ -46,7 +46,7 @@ const CardImage = styled.img`
   margin-left: 16px;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-right: 16px;
-    margin-left: 0pc
+    margin-left: 0px;
   }
 `
 const Actions = styled.div`
