@@ -30,3 +30,5 @@ deploy-development:
 deploy-staging:
 	make build-staging
 	rsync -a build  ubuntu@35.73.146.166:/var/www/smart-dex/smartdex-finance
+locale:
+	cd craw_language && npm start
