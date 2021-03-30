@@ -83,11 +83,14 @@ const WrapGridButton = styled('div')`
   display: flex;
   margin-bottom: 20px;
   & > a {
-    min-width: 100px;
+    min-width: 130px;
     max-width: 100%;
+    padding: 0px 10px;
     margin-right: 5px;
   }
+  justify-content: space-between;
   ${({ theme }) => theme.mediaQueries.nav} {
+    justify-content: start;
     & > a {
       min-width: 150px;
       margin-right: 20px;
@@ -134,6 +137,7 @@ const LinkPrimaryPd30 = styled(Link)`
     opacity:0.5;
   }
   margin-top: 40px;
+  margin-bottom: 40px;
 `
 const LinkButtonBorder = styled(Link)`
   color: #fff;
