@@ -99,8 +99,8 @@ const TotalPrizesCard = () => {
               <TicketImg src="/images/pan-cake.png" />
             </IconWrapper>
             <PrizeCountWrapper>
-              <TextStyle>{TranslateString(722, 'Total Pot:')}</TextStyle>
-              <HeadingStyle>{lotteryPrizeWithCommaSeparators} CAKE</HeadingStyle>
+              <TextStyle>{TranslateString(722, 'Total Pot')}</TextStyle>
+              <HeadingStyle>{lotteryPrizeWithCommaSeparators} SDC</HeadingStyle>
             </PrizeCountWrapper>
           </Left>
           <Right>

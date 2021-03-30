@@ -14,11 +14,15 @@ export interface PrizeGridProps {
 }
 const Grid = styled.div<{ pastDraw?: boolean }>`
   display: grid;
-  grid-template-columns: repeat(${(props) => (props.pastDraw ? 3 : 2)}, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
+  ${({ theme }) => theme.mediaQueries.nav} {
+    grid-template-columns: 1fr 4fr 1fr;
+   }
+
 `
 const RightAlignedText = styled(Text)`
-  text-align: right;
+  text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -27,26 +31,28 @@ const RightAlignedText = styled(Text)`
 `
 
 const RightAlignedHeading = styled(Heading)`
-  text-align: right;
+  text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 const GridItem = styled.div<{ marginBottom?: string }>`
   margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : '10px')};
 `
 const PastDrawGridItem = styled(GridItem)`
-  transform: translate(-40%, 0%);
+  
 `
 
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-weight: 500;
   font-size: 14px;
+  text-align: center;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
    }
 `
 
 const HeadingStyle = styled(Heading)`
+   text-align: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 const PrizeGrid: React.FC<PrizeGridProps> = ({
@@ -62,15 +68,15 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
   const burnAmount = +((lotteryPrizeAmount / 100) * 20).toFixed(0)
   const TranslateString = useI18n()
   return (
-    <Grid pastDraw={pastDraw} style={{ padding: '8px 24px'}}>
-      <GridItem>
+    <Grid pastDraw={pastDraw} style={{ padding: '8px'}}>
+      <GridItem style={{ textAlign: 'center'}}>
         <TextStyle>{TranslateString(756, 'No. Matched')}</TextStyle>
       </GridItem>
-      {pastDraw && (
+      {pastDraw ? (
         <PastDrawGridItem>
           <RightAlignedText>{TranslateString(754, 'Winners')}</RightAlignedText>
         </PastDrawGridItem>
-      )}
+      ) :  <PastDrawGridItem />}
       <GridItem>
         <RightAlignedText>{TranslateString(752, 'Prize Pot')}</RightAlignedText>
       </GridItem>
@@ -78,11 +84,11 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       <GridItem>
         <HeadingStyle size="md">4</HeadingStyle>
       </GridItem>
-      {pastDraw && (
+      {pastDraw ? (
         <PastDrawGridItem>
           <RightAlignedHeading size="md">{jackpotMatches}</RightAlignedHeading>
         </PastDrawGridItem>
-      )}
+      ) : <PastDrawGridItem />}
       <GridItem>
         <RightAlignedHeading size="md">{fourMatchesAmount.toLocaleString()}</RightAlignedHeading>
       </GridItem>
@@ -90,11 +96,11 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       <GridItem>
         <TextStyle bold>3</TextStyle>
       </GridItem>
-      {pastDraw && (
+      {pastDraw ? (
         <PastDrawGridItem>
           <RightAlignedText bold>{threeTicketMatches}</RightAlignedText>
         </PastDrawGridItem>
-      )}
+      ) : <PastDrawGridItem />}
       <GridItem>
         <RightAlignedText>{threeMatchesAmount.toLocaleString()}</RightAlignedText>
       </GridItem>
@@ -102,17 +108,17 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       <GridItem>
         <TextStyle>2</TextStyle>
       </GridItem>
-      {pastDraw && (
+      {pastDraw ? (
         <PastDrawGridItem>
           <RightAlignedText>{twoTicketMatches}</RightAlignedText>
         </PastDrawGridItem>
-      )}
+      ) : <PastDrawGridItem />}
       <GridItem>
         <RightAlignedText>{twoMatchesAmount.toLocaleString()}</RightAlignedText>
       </GridItem>
       {/* Burn row */}
       <GridItem marginBottom="0">
-        <TextStyle>{TranslateString(999, `${pastDraw ? 'Burned' : 'To burn'}`)}</TextStyle>
+        <TextStyle style={{textAlign: 'left' , paddingLeft: '8px'}}>{TranslateString(999, `${pastDraw ? 'Burned' : 'To burn'}`)}</TextStyle>
       </GridItem>
       {pastDraw ? (
         <>
@@ -122,9 +128,12 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
           </GridItem>
         </>
       ) : (
+        <>
+        <GridItem marginBottom="0" />
         <GridItem marginBottom="0">
           <RightAlignedText>{burnAmount.toLocaleString()}</RightAlignedText>
         </GridItem>
+        </>
       )}
     </Grid>
   )
