@@ -52,7 +52,7 @@ const HowItWorks = () => {
             999,
             'Spend CAKE to buy tickets, contributing to the lottery pot. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their exact order!',
           )}
-          <StyledLink href="https://docs.pancakeswap.finance/lottery-1">Read more</StyledLink>
+          <StyledLink href="https://smart-dex29.gitbook.io/smart-dex/lottery/lottery">Read more</StyledLink>
         </p>
       </TextStyle>
     </LayoutWrapper>
