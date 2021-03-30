@@ -72,9 +72,11 @@ const InfoBlock = styled.div`
   letter-spacing: -0.03em;
   color: ${lightColors.colorCol};
   color: ${({ theme }) => (theme.isDark ? darkColors.colorInfoBlock : lightColors.colorInfoBlock)};
-  min-height: 65px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    height: 65px;
+  height: 65px;
+  overflow: hidden;
+  margin-bottom: 0px;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    margin-bottom: 7px;
   }
 `
 const SubCard = styled.div`
