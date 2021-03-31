@@ -47,6 +47,10 @@ const TextStyle = styled(Text)`
   font-size: 14px;
   font-weight: 500;
   padding-top: 8px;
+  margin-bottom: 6px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 0px;
+  }
 `
 
 const InputStyle = styled(Input)`
@@ -66,6 +70,7 @@ const ButtonStyle = styled(Button)`
     background-color: ${baseColors.primary} !important;
   }
 `
+
 const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotteryNumber, onSubmit }) => {
   const [lotteryNumber, setLotteryNumber] = useState(initialLotteryNumber)
   const [isError, setIsError] = useState(false)
