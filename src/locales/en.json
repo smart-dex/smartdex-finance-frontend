@@ -2269,7 +2269,7 @@
             "stringId": 430,
             "contentType": "text/plain",
             "translationId": 29292,
-            "text": "Buy ticket",
+            "text": "Buy Ticket",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -2284,7 +2284,7 @@
             "stringId": 432,
             "contentType": "text/plain",
             "translationId": 29294,
-            "text": "View your tickets",
+            "text": "View Your Tickets",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",

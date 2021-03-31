@@ -41,13 +41,23 @@ const ButtonDisableStyle = styled(Button)`
   padding: 18px;
   font-size: 13px;
   margin-right: 8px !important;
-  background: ${ ({ theme}) => theme.isDark ? darkColors.buttonView : lightColors.buttonView};
+  background-color: ${ ({ theme, disabled }) => disabled ? handleBg(theme) : baseColors.primary} !important;
+  color: ${ ({ theme, disabled }) => disabled ? handleColor(theme) : "#fff"} !important;
   border-color: transparent;
   ${({ theme }) => theme.mediaQueries.nav} {
     height: 56px;
     font-size: 16px;
   }
 `
+
+const handleBg = (theme) => (
+  theme.isDark ? darkColors.buttonView : lightColors.buttonView
+)
+
+const handleColor = (theme) => (
+  theme.isDark ? darkColors.colorWap : ' #8F8FA0'
+)
+
 
 const TicketCard: React.FC = () => {
   const TranslateString = useI18n()
@@ -68,7 +78,7 @@ const TicketCard: React.FC = () => {
           <ButtonDisableStyle disabled style={{ width: '100%' }}>
             {TranslateString(432, 'View your tickets')}
           </ButtonDisableStyle>
-          <ButtonDisableStyle disabled={requestedApproval} onClick={handleApprove} style={{ width: '100%', background: requestedApproval ? '' : baseColors.primary  }}>
+          <ButtonDisableStyle disabled={requestedApproval} onClick={handleApprove} style={{ width: '100%'  }}>
             {TranslateString(494, 'Approve SDC')}
           </ButtonDisableStyle>
         </>
@@ -77,15 +87,15 @@ const TicketCard: React.FC = () => {
     return (
       <>
         <ButtonDisableStyle
-          style={{ marginRight: '8px', width: '100%', backgroundColor: ticketsLength === 0 ? '#E8E8EB' : baseColors.primary, color: ticketsLength === 0 ? '' : '#fff' }}
+          style={{ marginRight: '8px', width: '100%', color: ticketsLength === 0 ? '' : '#fff' }}
           disabled={ticketsLength === 0}
           variant="secondary"
           onClick={onPresentMyTickets}
         >
-          {TranslateString(432, 'View your tickets')}
+          {TranslateString(432, 'View Your Tickets')}
         </ButtonDisableStyle>
         <ButtonStyle id="lottery-buy-start" onClick={onPresentBuy} style={{ width: '100%' }}>
-          {TranslateString(430, 'Buy ticket')}
+          {TranslateString(430, 'Buy Ticket')}
         </ButtonStyle>
       </>
     )
