@@ -31,8 +31,7 @@ export enum QuoteToken {
   'UST' = 'UST',
   'ETH' = 'ETH',
   'COMP' = 'COMP',
-  'MUN' = 'MUN',
-  'CHE' = 'CHE',
+  'JEL' = 'JEL',
 }
 
 export enum PoolCategory {

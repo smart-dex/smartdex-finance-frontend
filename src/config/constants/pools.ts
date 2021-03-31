@@ -4,11 +4,11 @@ const pools: PoolConfig[] = [
   {
     sousId: 0,
     tokenName: 'SDC',
-    tokenAddress: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
+    tokenAddress: '0x863d95004611E547c32c123D6F37f765474A3e9F',
     stakingTokenName: QuoteToken.SDC,
-    stakingTokenAddress: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
+    stakingTokenAddress: '0x863d95004611E547c32c123D6F37f765474A3e9F',
     contractAddress: {
-      97: '0x960D3228B497eAca929869AEE4418785177897d5',
+      97: '0xB98154B4f2257051AA8689823660717326A42284',
       56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
     },
     poolCategory: PoolCategory.CORE,

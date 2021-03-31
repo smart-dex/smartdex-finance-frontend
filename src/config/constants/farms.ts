@@ -6,12 +6,12 @@ const farms: FarmConfig[] = [
     pid: 0,
     lpSymbol: 'SDC',
     lpAddresses: {
-      97: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
+      97: '0x863d95004611E547c32c123D6F37f765474A3e9F',
       56: '',
     },
     tokenSymbol: 'SYRUP',
     tokenAddresses: {
-      97: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
+      97: '0x863d95004611E547c32c123D6F37f765474A3e9F',
       56: '',
     },
     quoteTokenSymbol: QuoteToken.BNB,
@@ -19,24 +19,24 @@ const farms: FarmConfig[] = [
   },
   {
     pid: 1,
-    lpSymbol: 'LIV-MUN LP',
+    lpSymbol: 'SDC-BNB LP',
     lpAddresses: {
-      97: '0x7ca66c8f45aca0c339ddc5b43d2af00485592c49',
+      97: '0x1accbdfc32c26935ecb5768d58c195cd238c3932',
       56: '',
     },
-    tokenSymbol: 'LIV',
+    tokenSymbol: 'SDC',
     tokenAddresses: {
-      97: '0x126C3397a2449BE19F05e6801bB634e9ABD8bdcF',
+      97: '0x863d95004611E547c32c123D6F37f765474A3e9F',
       56: '',
     },
-    quoteTokenSymbol: QuoteToken.MUN,
-    quoteTokenAdresses: contracts.mun,
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
   },
   {
     pid: 2,
     lpSymbol: 'BUSD-BNB LP',
     lpAddresses: {
-      97: '0xaED2f24EcdE19bAB90d4a13902e1c4e346F49219',
+      97: '0x2ebDFf0693787275065496e393f39C372b21d62B',
       56: '',
     },
     tokenSymbol: 'BUSD',
@@ -51,12 +51,12 @@ const farms: FarmConfig[] = [
     pid: 3,
     lpSymbol: 'SDC-BUSD LP',
     lpAddresses: {
-      97: '0x1D2721432C8a5e582e0B6fd1826C16a35479148f',
+      97: '0x4780f27a33819085144110fEbaf884E22c600910',
       56: '',
     },
     tokenSymbol: 'SDC',
     tokenAddresses: {
-      97: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
+      97: '0x863d95004611E547c32c123D6F37f765474A3e9F',
       56: '',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
@@ -64,24 +64,9 @@ const farms: FarmConfig[] = [
   },
   {
     pid: 4,
-    lpSymbol: 'SDC-BNB LP',
-    lpAddresses: {
-      97: '0x7518065bB096931746F5A1bd976fDCb7A44a625a',
-      56: '',
-    },
-    tokenSymbol: 'SDC',
-    tokenAddresses: {
-      97: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
-      56: '',
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
-  {
-    pid: 5,
     lpSymbol: 'ETH-BNB LP',
     lpAddresses: {
-      97: '0x5bE516Cf0B1cA524b55523D09A907B7549a4cE98',
+      97: '0xF71E5200Ade4D832942B7C2322484CDf5aB5C81C',
       56: '',
     },
     tokenSymbol: 'ETH',
@@ -91,6 +76,21 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 5,
+    lpSymbol: 'COO-JEL LP',
+    lpAddresses: {
+      97: '0xfF527Fb2bB1b70258BAbAe87b47FE7BC82C2a1E9',
+      56: '',
+    },
+    tokenSymbol: 'COO',
+    tokenAddresses: {
+      97: '0xAcB677819A1B53B67f4917442C723d45c24c23B3',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.JEL,
+    quoteTokenAdresses: contracts.jel,
   },
   // {
   //   pid: 0,
