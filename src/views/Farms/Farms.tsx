@@ -97,7 +97,7 @@ const Farms: React.FC = () => {
     <Page>
       <FarmHeader>
         <HeadingFarm as="h1" size="lg" color="secondary" mb="25px">
-          {TranslateString(696, 'Stake LP tokens to earn CAKE')}
+          {TranslateString(696, 'Stake LP tokens to earn SDC')}
         </HeadingFarm>
         <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       </FarmHeader>
@@ -109,7 +109,6 @@ const Farms: React.FC = () => {
           {farmsList(inactiveFarms, true)}
         </Route>
       </FlexLayout>
-      {/* <Image src="/images/cakecat.png" alt="Pancake illustration" width={949} height={384} responsive /> */}
     </Page>
   )
 }

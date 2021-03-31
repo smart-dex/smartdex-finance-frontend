@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 16782,
-            "text": "Δεν θα λάβετε ανταμοιβές CAKE για την κατοχή SYRUP που έχετε αγοράσει.",
+            "text": "Δεν θα λάβετε ανταμοιβές SDC για την κατοχή SYRUP που έχετε αγοράσει.",
             "user": {
                 "id": 14451796,
                 "username": "dparpalitis",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 16060,
-            "text": "Θα χρειαστεί να αγοράσετε ξανά την ίδια ποσότητα SYRUP για να μπορέσετε να μετατρέψετε ξανά σε CAKE.",
+            "text": "Θα χρειαστεί να αγοράσετε ξανά την ίδια ποσότητα SYRUP για να μπορέσετε να μετατρέψετε ξανά σε SDC.",
             "user": {
                 "id": 14451796,
                 "username": "dparpalitis",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 17600,
-            "text": "Για κάθε συναλλαγή καταβάλλεται τέλος 0,2%. 0,17% πηγαίνει στους παρόχους ρευστότητας και 0,03% πηγαίνει στο ταμείο του PancakeSwap.",
+            "text": "Για κάθε συναλλαγή καταβάλλεται τέλος 0,2%. 0,17% πηγαίνει στους παρόχους ρευστότητας και 0,03% πηγαίνει στο ταμείο του PanSDCSwap.",
             "user": {
                 "id": 14451796,
                 "username": "dparpalitis",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 17594,
-            "text": "Συνολικά CAKE που έχουν καεί από την ημέρα κυκλοφορίας",
+            "text": "Συνολικά SDC που έχουν καεί από την ημέρα κυκλοφορίας",
             "user": {
                 "id": 14451796,
                 "username": "dparpalitis",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 43120,
-            "text": "Κάντε stake νομίσματα LP για να συγκεντρώσετε CAKE",
+            "text": "Κάντε stake νομίσματα LP για να συγκεντρώσετε SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 43044,
-            "text": "Κάθε φορά που κάνετε ή σταματάτε να κάνετε stake νομίσματα CAKE, το συμβόλαιο κάνει μαγικά συγκομιδή ανταμοιβών CAKE για εσάς!",
+            "text": "Κάθε φορά που κάνετε ή σταματάτε να κάνετε stake νομίσματα SDC, το συμβόλαιο κάνει μαγικά συγκομιδή ανταμοιβών SDC για εσάς!",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 43140,
-            "text": "Τιμή Cake",
+            "text": "Τιμή SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 21364,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14451796,
                 "username": "dparpalitis",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 43162,
-            "text": "Ξοδέψτε CAKE για να αγοράσετε λαχεία, και συνεισφέρετε στο μέγεθος της λοταρίας. Η αγορά των λαχείων λήγει περίπου 30 λεπτά πριν τη λοταρία. Μπορείτε να κερδίσετε έπαθλα εάν 2, 3, ή 4 από τους αριθμούς των λαχείων σας ταιριάζουν με τους αριθμούς που κερδίζουν και τις αντίστοιχες θέσεις. Καλή επιτυχία!",
+            "text": "Ξοδέψτε SDC για να αγοράσετε λαχεία, και συνεισφέρετε στο μέγεθος της λοταρίας. Η αγορά των λαχείων λήγει περίπου 30 λεπτά πριν τη λοταρία. Μπορείτε να κερδίσετε έπαθλα εάν 2, 3, ή 4 από τους αριθμούς των λαχείων σας ταιριάζουν με τους αριθμούς που κερδίζουν και τις αντίστοιχες θέσεις. Καλή επιτυχία!",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 43940,
-            "text": "%num% CAKE διαθέσιμα",
+            "text": "%num% SDC διαθέσιμα",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 43378,
-            "text": "Η ποσότητά σας πρέπει να είναι πολλαπλάσιο 10 CAKE",
+            "text": "Η ποσότητά σας πρέπει να είναι πολλαπλάσιο 10 SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 43380,
-            "text": "1 Ticket = 10 CAKE",
+            "text": "1 Ticket = 10 SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 43382,
-            "text": "Θα ξοδέψετε: %num% CAKE",
+            "text": "Θα ξοδέψετε: %num% SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 43944,
-            "text": "Το CAKE σας δεν θα σας επιστραφεί όταν το ξοδέψετε για να αγοράσετε λαχεία.",
+            "text": "Το SDC σας δεν θα σας επιστραφεί όταν το ξοδέψετε για να αγοράσετε λαχεία.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 43750,
-            "text": "Οι αγορές λαχείων είναι μη αναστρέψιμες. Το CAKE δεν μπορεί να σας επιστραφεί μετά την αγορά λαχείων.",
+            "text": "Οι αγορές λαχείων είναι μη αναστρέψιμες. Το SDC δεν μπορεί να σας επιστραφεί μετά την αγορά λαχείων.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 43480,
-            "text": "Έπαθλα CAKE για διεκδίκηση",
+            "text": "Έπαθλα SDC για διεκδίκηση",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 43912,
-            "text": "Έγκριση CAKE",
+            "text": "Έγκριση SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 43988,
-            "text": "Θα πληρώσετε για τα νέα νομίσματα χρησιμοποιώντας CAKE-BNB LP, πράγμα που σημαίνει ότι πρέπει να κάνετε stake ίσα ποσά CAKE και BNB σε μια δεξαμενή ρευστότητας για να λάβετε μέρος.",
+            "text": "Θα πληρώσετε για τα νέα νομίσματα χρησιμοποιώντας SDC-BNB LP, πράγμα που σημαίνει ότι πρέπει να κάνετε stake ίσα ποσά SDC και BNB σε μια δεξαμενή ρευστότητας για να λάβετε μέρος.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 43962,
-            "text": "Αποκτήστε CAKE-BNB LP >",
+            "text": "Αποκτήστε SDC-BNB LP >",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 43964,
-            "text": "Το πρότζεκτ λαμβάνει BNB, το PancakeSwap καταστρέφει τα CAKE.",
+            "text": "Το πρότζεκτ λαμβάνει BNB, το PanSDCSwap καταστρέφει τα SDC.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 43970,
-            "text": "Ξεκινήστε το πρότζεκτ σας με το PancakeSwap, το πιο ευρέως χρησιμοποιημένο πρότζεκτ AMM και πάροχο ρευστότητας στο Binance Smart Chain, και μεταφέρετε τα νομίσματά σας απευθείας στην πιο ενεργή και ταχέως αναπτυσσόμενη κοινότητα BSC.",
+            "text": "Ξεκινήστε το πρότζεκτ σας με το PanSDCSwap, το πιο ευρέως χρησιμοποιημένο πρότζεκτ AMM και πάροχο ρευστότητας στο Binance Smart Chain, και μεταφέρετε τα νομίσματά σας απευθείας στην πιο ενεργή και ταχέως αναπτυσσόμενη κοινότητα BSC.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 43902,
-            "text": "Στατιστικά Cake",
+            "text": "Στατιστικά SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 43904,
-            "text": "Συνολικός αριθμός CAKE",
+            "text": "Συνολικός αριθμός SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 43906,
-            "text": "Σύνολο CAKE που έχουν καεί",
+            "text": "Σύνολο SDC που έχουν καεί",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 43908,
-            "text": "Νέος αριθμός CAKE/μπλοκ",
+            "text": "Νέος αριθμός SDC/μπλοκ",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 43790,
-            "text": "CAKE για Συγκομιδή",
+            "text": "SDC για Συγκομιδή",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 43172,
-            "text": "CAKE στο πορτοφόλι",
+            "text": "SDC στο πορτοφόλι",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 43174,
-            "text": "Συλλογή CAKE",
+            "text": "Συλλογή SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 43792,
-            "text": "CAKE για Συλλογή",
+            "text": "SDC για Συλλογή",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 43194,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 43800,
-            "text": "Κάντε stake CAKE για να κερδίσετε νέα νομίσματα.",
+            "text": "Κάντε stake SDC για να κερδίσετε νέα νομίσματα.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 43286,
-            "text": "CAKE που θα καούν (USD)",
+            "text": "SDC που θα καούν (USD)",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 43814,
-            "text": "⭐️ Κάθε φορά που κάνετε ή σταματάτε να κάνετε stake νομίσματα LP, το συμβόλαιο κάνει μαγικά συγκομιδή ανταμοιβών CAKE για εσάς!",
+            "text": "⭐️ Κάθε φορά που κάνετε ή σταματάτε να κάνετε stake νομίσματα LP, το συμβόλαιο κάνει μαγικά συγκομιδή ανταμοιβών SDC για εσάς!",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 43292,
-            "text": "Αγορά CAKE και νομισμάτων BNB",
+            "text": "Αγορά SDC και νομισμάτων BNB",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 43936,
-            "text": "Αποκτήστε νομίσματα CAKE-BNB LP προσθέτοντας ρευστότητα CAKE και BNB",
+            "text": "Αποκτήστε νομίσματα SDC-BNB LP προσθέτοντας ρευστότητα SDC και BNB",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 43956,
-            "text": "Όταν η πώληση είναι σε εξέλιξη, δεσμεύστε νομίσματα CAKE-LP για να αγοράσετε νομίσματα IFO",
+            "text": "Όταν η πώληση είναι σε εξέλιξη, δεσμεύστε νομίσματα SDC-LP για να αγοράσετε νομίσματα IFO",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 43960,
-            "text": "Ανταλλάξτε τα για CAKE, ή κρατήστε τα στη συλλογή σας!",
+            "text": "Ανταλλάξτε τα για SDC, ή κρατήστε τα στη συλλογή σας!",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 43784,
-            "text": "Όταν κάνετε ανταλλαγή αυτού του NFT για να λάβετε CAKE, θα χάσετε την πρόσβαση σε αυτό για πάντα!",
+            "text": "Όταν κάνετε ανταλλαγή αυτού του NFT για να λάβετε SDC, θα χάσετε την πρόσβαση σε αυτό για πάντα!",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 43510,
-            "text": "Οι νικητές μπορούν να ανταλλάξουν τα NFT τους για την αντίστοιχη αξία σε CAKE μέχρι την ημερομηνία λήξης που αναφέρεται παρακάτω. Εάν δεν ανταλλάξετε τα NFT σας έως τη συγκεκριμένη ημερομηνία, μην ανησυχείτε: θα μπορείτε να τα διατηρήσετε στο πορτοφόλι σας!",
+            "text": "Οι νικητές μπορούν να ανταλλάξουν τα NFT τους για την αντίστοιχη αξία σε SDC μέχρι την ημερομηνία λήξης που αναφέρεται παρακάτω. Εάν δεν ανταλλάξετε τα NFT σας έως τη συγκεκριμένη ημερομηνία, μην ανησυχείτε: θα μπορείτε να τα διατηρήσετε στο πορτοφόλι σας!",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 43578,
-            "text": "Ανταλλαγή με CAKE",
+            "text": "Ανταλλαγή με SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 43216,
-            "text": "Κάντε stake νομίσματα LP για να κερδίσετε CAKE",
+            "text": "Κάντε stake νομίσματα LP για να κερδίσετε SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 43692,
-            "text": "Η λοταρία CAKE",
+            "text": "Η λοταρία SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 43872,
-            "text": "Αγοράστε λαχεία με CAKE",
+            "text": "Αγοράστε λαχεία με SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 43842,
-            "text": "Συνολικό κόστος: 10 CAKE",
+            "text": "Συνολικό κόστος: 10 SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 43636,
-            "text": "Μπορείτε να αλλάξετε την εικόνα του προφίλ σας αργότερα εάν λάβετε άλλο εγκεκριμένο συλλεκτικό Pancake,",
+            "text": "Μπορείτε να αλλάξετε την εικόνα του προφίλ σας αργότερα εάν λάβετε άλλο εγκεκριμένο συλλεκτικό PanSDC,",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 43642,
-            "text": "Κόστος: 5 CAKE",
+            "text": "Κόστος: 5 SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 43224,
-            "text": "Ανεπαρκές υπόλοιπο CAKE",
+            "text": "Ανεπαρκές υπόλοιπο SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 43426,
-            "text": "Μπορούν να χρησιμοποιηθούν μόνο εγκεκριμένα συλλεκτικά Pancake.",
+            "text": "Μπορούν να χρησιμοποιηθούν μόνο εγκεκριμένα συλλεκτικά PanSDC.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 43266,
-            "text": "Δεν βρήκαμε συλλεκτικά Pancake στο πορτοφόλι σας.",
+            "text": "Δεν βρήκαμε συλλεκτικά PanSDC στο πορτοφόλι σας.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 43916,
-            "text": "Χρειάζεστε ένα Συλλεκτικό Pancake για να ολοκληρώσετε τη ρύθμιση του προφίλ σας. Εάν πουλήσατε ή μεταφέρατε το αρχικό σας συλλεκτικό σε άλλο πορτοφόλι, θα πρέπει να το επιστρέψετε ή να αποκτήσετε ένα νέο με κάποιο τρόπο. Δεν μπορείτε να δημιουργήσετε νέο αρχικό συλλεκτικό με αυτήν τη διεύθυνση πορτοφολιού.",
+            "text": "Χρειάζεστε ένα Συλλεκτικό PanSDC για να ολοκληρώσετε τη ρύθμιση του προφίλ σας. Εάν πουλήσατε ή μεταφέρατε το αρχικό σας συλλεκτικό σε άλλο πορτοφόλι, θα πρέπει να το επιστρέψετε ή να αποκτήσετε ένα νέο με κάποιο τρόπο. Δεν μπορείτε να δημιουργήσετε νέο αρχικό συλλεκτικό με αυτήν τη διεύθυνση πορτοφολιού.",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 43274,
-            "text": "CAKE ανά $1000",
+            "text": "SDC ανά $1000",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 43490,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 43388,
-            "text": "Μπλοκ CAKE",
+            "text": "Μπλοκ SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 43390,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 43394,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 43402,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 46706,
-            "text": "Αγορά CAKE",
+            "text": "Αγορά SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 46772,
-            "text": "Απαιτείται ελάχιστη ποσότητα %num% CAKE",
+            "text": "Απαιτείται ελάχιστη ποσότητα %num% SDC",
             "user": {
                 "id": 12705396,
                 "username": "tkredmond",

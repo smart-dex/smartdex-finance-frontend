@@ -67,8 +67,8 @@
             "text": "Votes",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-16T15:30:39+00:00"
@@ -187,8 +187,8 @@
             "text": "Paramètres de transaction",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-16T15:37:03+00:00"
@@ -502,8 +502,8 @@
             "text": "Avertissement lié au Syrup",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-16T15:31:00+00:00"
@@ -529,11 +529,11 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 19078,
-            "text": "Les SYRUP achetés ne donnent pas droit aux récompenses de CAKE.",
+            "text": "Les SYRUP achetés ne donnent pas droit aux récompenses de SDC.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-16T15:32:25+00:00"
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 12068,
-            "text": "Vous devrez racheter la même quantité de SYRUP pour pouvoir les reconvertir en CAKE.",
+            "text": "Vous devrez racheter la même quantité de SYRUP pour pouvoir les reconvertir en SDC.",
             "user": {
                 "id": 14439084,
                 "username": "OTTOOO7",
@@ -697,8 +697,8 @@
             "text": "Ajouter de la liquidité",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-16T15:37:48+00:00"
@@ -712,8 +712,8 @@
             "text": "Aucune liquidité trouvée.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-16T15:37:58+00:00"
@@ -1042,8 +1042,8 @@
             "text": "Chargement en cours",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-16T15:44:55+00:00"
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 38942,
-            "text": "Des frais de 0,2 % sont prélevés sur chaque transaction. 0,17 % sont redistribués aux fournisseurs de liquidités et 0,03 % revient à PancakeSwap.",
+            "text": "Des frais de 0,2 % sont prélevés sur chaque transaction. 0,17 % sont redistribués aux fournisseurs de liquidités et 0,03 % revient à PanSDCSwap.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -1162,8 +1162,8 @@
             "text": "Le meilleur prix possible pour votre transaction est obtenu avec ce routage.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-16T15:48:08+00:00"
@@ -1537,8 +1537,8 @@
             "text": "Documentation",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T18:49:42+00:00"
@@ -1552,8 +1552,8 @@
             "text": "Votes",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T18:50:44+00:00"
@@ -1597,8 +1597,8 @@
             "text": "Votre solde de %asset%",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T18:51:12+00:00"
@@ -1669,11 +1669,11 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 18724,
-            "text": "Quantité totale de CAKE détruits depuis le lancement",
+            "text": "Quantité totale de SDC détruits depuis le lancement",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T18:55:28+00:00"
@@ -1687,8 +1687,8 @@
             "text": "Aller en cuisine",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T18:56:00+00:00"
@@ -1762,8 +1762,8 @@
             "text": "Faire un dépôt",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T18:56:47+00:00"
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 47294,
-            "text": "Mettez vos jetons LP en staking pour gagner des CAKE",
+            "text": "Mettez vos jetons LP en staking pour gagner des SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -1822,8 +1822,8 @@
             "text": "%asset% gagnés",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T19:12:30+00:00"
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 46794,
-            "text": "Chaque fois que vous empilez et retirez (staking) des jetons CAKE, le contrat vous versera les CAKE accumulés automatiquement !",
+            "text": "Chaque fois que vous empilez et retirez (staking) des jetons SDC, le contrat vous versera les SDC accumulés automatiquement !",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -1882,8 +1882,8 @@
             "text": "Les récompenses seront calculées par bloc et le total sera distribué automatiquement à la fin de la période de farming de chaque projet.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T19:15:26+00:00"
@@ -1927,8 +1927,8 @@
             "text": "APY",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T19:15:48+00:00"
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 39000,
-            "text": "Prix du Cake",
+            "text": "Prix du SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -2002,8 +2002,8 @@
             "text": "%num% blocs avant la fin du farming",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T19:17:06+00:00"
@@ -2032,8 +2032,8 @@
             "text": "Votre part",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T19:19:04+00:00"
@@ -2047,8 +2047,8 @@
             "text": "Le farming commence dans %num% blocs",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T19:20:13+00:00"
@@ -2077,8 +2077,8 @@
             "text": "Le farming se termine dans %num% blocs",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-15T19:20:30+00:00"
@@ -2107,8 +2107,8 @@
             "text": "Les récompenses sont calculées à chaque bloc.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:10:47+00:00"
@@ -2122,8 +2122,8 @@
             "text": "Total",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:10:49+00:00"
@@ -2137,8 +2137,8 @@
             "text": "Fin",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:10:51+00:00"
@@ -2224,11 +2224,11 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 20232,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:12:07+00:00"
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 46716,
-            "text": "Dépensez des CAKE pour acheter des tickets, en augmentant ainsi la taille de la cagnotte. Les ventes de tickets se terminent environ 30 minutes avant le tirage au sort. Vous gagnez des prix si 2, 3, ou 4 chiffres de vos tickets coïncident avec les numéros gagnants et leurs positions ! Bonne chance !",
+            "text": "Dépensez des SDC pour acheter des tickets, en augmentant ainsi la taille de la cagnotte. Les ventes de tickets se terminent environ 30 minutes avant le tirage au sort. Vous gagnez des prix si 2, 3, ou 4 chiffres de vos tickets coïncident avec les numéros gagnants et leurs positions ! Bonne chance !",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -2257,8 +2257,8 @@
             "text": "Votre quantité totale de tickets pour le prochain tirage",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:45:51+00:00"
@@ -2272,8 +2272,8 @@
             "text": "Acheter un ticket",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:45:55+00:00"
@@ -2287,8 +2287,8 @@
             "text": "Voir vos tickets",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:45:58+00:00"
@@ -2302,8 +2302,8 @@
             "text": "Temps restant pour acheter des tickets",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:46:09+00:00"
@@ -2317,8 +2317,8 @@
             "text": "Fermer",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:50:27+00:00"
@@ -2332,8 +2332,8 @@
             "text": "Derniers numéros gagnants",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:51:12+00:00"
@@ -2377,8 +2377,8 @@
             "text": "Vous pouvez retirer vos fonds à tout moment.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:10:38+00:00"
@@ -3022,8 +3022,8 @@
             "text": "Exporter les numéros gagnants récents",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:50:23+00:00"
@@ -3037,8 +3037,8 @@
             "text": "Saisir le nombre de tickets à acheter",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:49:56+00:00"
@@ -3052,8 +3052,8 @@
             "text": "Max",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:49:31+00:00"
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 39036,
-            "text": "%num% CAKE disponible(s)",
+            "text": "%num% SDC disponible(s)",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 39038,
-            "text": "La quantité doit être un multiple de 10 CAKE",
+            "text": "La quantité doit être un multiple de 10 SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 39040,
-            "text": "1 ticket = 10 CAKE",
+            "text": "1 ticket = 10 SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3109,11 +3109,11 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 20268,
-            "text": "Vous allez dépenser %num% CAKE",
+            "text": "Vous allez dépenser %num% SDC",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:52:23+00:00"
@@ -3127,8 +3127,8 @@
             "text": "Annuler",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:49:14+00:00"
@@ -3142,8 +3142,8 @@
             "text": "Confirmer",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:49:19+00:00"
@@ -3157,8 +3157,8 @@
             "text": "Avertissement",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T16:49:24+00:00"
@@ -3172,8 +3172,8 @@
             "text": "Les achats de tickets sont définitifs.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-25T17:20:00+00:00"
@@ -3184,11 +3184,11 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 20282,
-            "text": "Le montant de CAKE dépensé ne sera pas remboursé une fois les tickets achetés.",
+            "text": "Le montant de SDC dépensé ne sera pas remboursé une fois les tickets achetés.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:46:53+00:00"
@@ -3202,8 +3202,8 @@
             "text": "Les tickets ne sont valides que pour un tirage au sort et seront détruits après celui-ci.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:47:10+00:00"
@@ -3217,8 +3217,8 @@
             "text": "Acheter un ticket ne garantit pas un gain. Veuillez ne participer que si vous comprenez les risques.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:47:31+00:00"
@@ -3232,8 +3232,8 @@
             "text": "Je comprends",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:47:35+00:00"
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 39042,
-            "text": "Les achats de tickets sont définitifs. Vos CAKE ne peuvent pas être remboursés suite à l'achat.",
+            "text": "Les achats de tickets sont définitifs. Vos SDC ne peuvent pas être remboursés suite à l'achat.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3274,11 +3274,11 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 20294,
-            "text": "Gain de CAKE à retirer",
+            "text": "Gain de SDC à retirer",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-22T19:48:15+00:00"
@@ -3307,8 +3307,8 @@
             "text": "En attente de confirmation",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-24T11:27:54+00:00"
@@ -3322,8 +3322,8 @@
             "text": "Temps restant avant la prochaine loterie",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-10-24T11:28:02+00:00"
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 39048,
-            "text": "Approuver les CAKE",
+            "text": "Approuver les SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 39054,
-            "text": "Vous achetez les nouveaux jetons à l'aide de jetons LP CAKE-BNB, ce qui signifie que vous devez ajouter des CAKE et des BNB dans un pool de liquidités pour pouvoir participer.",
+            "text": "Vous achetez les nouveaux jetons à l'aide de jetons LP SDC-BNB, ce qui signifie que vous devez ajouter des SDC et des BNB dans un pool de liquidités pour pouvoir participer.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3394,11 +3394,11 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 21966,
-            "text": "Obtenir des LP CAKE-BNB >",
+            "text": "Obtenir des LP SDC-BNB >",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:47:13+00:00"
@@ -3409,11 +3409,11 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 21968,
-            "text": "Le projet obtient les BNB, PancakeSwap détruit les CAKE.",
+            "text": "Le projet obtient les BNB, PanSDCSwap détruit les SDC.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:47:24+00:00"
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 39060,
-            "text": "Lancez votre projet avec PancakeSwap, le projet AMM et fournisseur de liquidités le plus utilisé de Binance Smart Chain, afin de proposer directement votre jeton à la communauté de BSC la plus active et en plein expansion.",
+            "text": "Lancez votre projet avec PanSDCSwap, le projet AMM et fournisseur de liquidités le plus utilisé de Binance Smart Chain, afin de proposer directement votre jeton à la communauté de BSC la plus active et en plein expansion.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3487,8 +3487,8 @@
             "text": "Communauté",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:49:57+00:00"
@@ -3502,8 +3502,8 @@
             "text": "Core",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:50:02+00:00"
@@ -3517,8 +3517,8 @@
             "text": "Disponible",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:50:04+00:00"
@@ -3547,8 +3547,8 @@
             "text": "Déconnexion",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:50:09+00:00"
@@ -3562,8 +3562,8 @@
             "text": "Tout récupérer (%count%)",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:51:37+00:00"
@@ -3574,11 +3574,11 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 21992,
-            "text": "Statistiques de Cake",
+            "text": "Statistiques de SDC",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:51:43+00:00"
@@ -3589,11 +3589,11 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 21994,
-            "text": "Quantité totale de CAKE",
+            "text": "Quantité totale de SDC",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:51:56+00:00"
@@ -3604,11 +3604,11 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 21996,
-            "text": "Quantité de CAKE détruite",
+            "text": "Quantité de SDC détruite",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:52:11+00:00"
@@ -3619,11 +3619,11 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 21998,
-            "text": "Quantité de CAKE/bloc",
+            "text": "Quantité de SDC/bloc",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:52:29+00:00"
@@ -3649,11 +3649,11 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 22002,
-            "text": "CAKE à récupérer",
+            "text": "SDC à récupérer",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:53:57+00:00"
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 39070,
-            "text": "CAKE dans votre portefeuille",
+            "text": "SDC dans votre portefeuille",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3679,11 +3679,11 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 22006,
-            "text": "Récupération des CAKE",
+            "text": "Récupération des SDC",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:54:11+00:00"
@@ -3697,8 +3697,8 @@
             "text": "Vos gains de la loterie",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:54:16+00:00"
@@ -3709,11 +3709,11 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 22010,
-            "text": "CAKE à récupérer",
+            "text": "SDC à récupérer",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:54:21+00:00"
@@ -3757,8 +3757,8 @@
             "text": "Acheter des tickets",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:54:44+00:00"
@@ -3772,8 +3772,8 @@
             "text": "Récupérer",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:54:47+00:00"
@@ -3787,8 +3787,8 @@
             "text": "Approuver",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:54:51+00:00"
@@ -3802,8 +3802,8 @@
             "text": "Sélectionner",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:54:58+00:00"
@@ -3817,8 +3817,8 @@
             "text": "Numéros gagnants du tirage actuel",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:55:37+00:00"
@@ -3832,8 +3832,8 @@
             "text": "Pool de staking",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:55:46+00:00"
@@ -3844,11 +3844,11 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 22032,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:55:50+00:00"
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 47322,
-            "text": "Mettez des CAKE en staking pour gagner de nouveaux jetons.",
+            "text": "Mettez des SDC en staking pour gagner de nouveaux jetons.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3919,11 +3919,11 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 22042,
-            "text": "CAKE à détruire (USD)",
+            "text": "SDC à détruire (USD)",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-17T17:56:49+00:00"
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 46796,
-            "text": "⭐️ Chaque fois que vous empilez et retirez (staking) des jetons LP, le contrat vous versera les CAKE accumulés automatiquement !",
+            "text": "⭐️ Chaque fois que vous empilez et retirez (staking) des jetons LP, le contrat vous versera les SDC accumulés automatiquement !",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3967,8 +3967,8 @@
             "text": "Comment participer",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-18T20:19:15+00:00"
@@ -3982,8 +3982,8 @@
             "text": "Avant la vente",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-18T20:19:20+00:00"
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 39088,
-            "text": "Achetez des jetons CAKE et BNB",
+            "text": "Achetez des jetons SDC et BNB",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -4009,11 +4009,11 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 22338,
-            "text": "Obtenez des LP CAKE-BNB en ajoutant de la liquidité en CAKE et en BNB",
+            "text": "Obtenez des LP SDC-BNB en ajoutant de la liquidité en SDC et en BNB",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-18T20:19:45+00:00"
@@ -4027,8 +4027,8 @@
             "text": "Pendant la vente",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-18T20:19:51+00:00"
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 39090,
-            "text": "Lorsque la vente est active, faites une demande d'achat pour les jetons de l'IFO avec vos CAKE-LP.",
+            "text": "Lorsque la vente est active, faites une demande d'achat pour les jetons de l'IFO avec vos SDC-LP.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -4057,8 +4057,8 @@
             "text": "Après la vente",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-18T20:20:31+00:00"
@@ -4102,8 +4102,8 @@
             "text": "En savoir plus",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-11-18T20:21:05+00:00"
@@ -4117,8 +4117,8 @@
             "text": "Connecter",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:45:32+00:00"
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 39096,
-            "text": "Échanger contre des CAKE ou conserver dans votre collection personnelle !",
+            "text": "Échanger contre des SDC ou conserver dans votre collection personnelle !",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -4177,8 +4177,8 @@
             "text": "En savoir plus",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:46:31+00:00"
@@ -4222,8 +4222,8 @@
             "text": "Vous recevrez",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:46:50+00:00"
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 39106,
-            "text": "Lorsque vous échangez ce NFT contre des CAKE, vous n’y aurez plus jamais accès !",
+            "text": "Lorsque vous échangez ce NFT contre des SDC, vous n’y aurez plus jamais accès !",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -4252,8 +4252,8 @@
             "text": "Récupérer votre NFT",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:48:31+00:00"
@@ -4282,8 +4282,8 @@
             "text": "Les gagnants pourront demander leur NFT sur cette page une fois que la période de distribution sera ouverte.",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:49:02+00:00"
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 39112,
-            "text": "Les gagnants peuvent échanger leurs NFT contre des CAKE jusqu'à la date renseignée ci-dessous. Si vous ne les échangez pas avant cette date, vous les conserverez dans votre portefeuille !",
+            "text": "Les gagnants peuvent échanger leurs NFT contre des SDC jusqu'à la date renseignée ci-dessous. Si vous ne les échangez pas avant cette date, vous les conserverez dans votre portefeuille !",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -4372,8 +4372,8 @@
             "text": "Quantité créée",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:52:23+00:00"
@@ -4387,8 +4387,8 @@
             "text": "Quantité détruite",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:52:28+00:00"
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 39122,
-            "text": "Échanger contre des CAKE",
+            "text": "Échanger contre des SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -4432,8 +4432,8 @@
             "text": "Chargement...",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:52:52+00:00"
@@ -4447,8 +4447,8 @@
             "text": "Détails",
             "user": {
                 "id": 14455720,
-                "username": "Asche_cake",
-                "fullName": "Asche_cake",
+                "username": "Asche_SDC",
+                "fullName": "Asche_SDC",
                 "avatarUrl": "https://www.gravatar.com/avatar/8b2ef8fca1bc9f3486d88af54d97c89f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
             },
             "createdAt": "2020-12-12T10:52:56+00:00"
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 47326,
-            "text": "Mettez vos jetons LP en staking pour gagner des CAKE",
+            "text": "Mettez vos jetons LP en staking pour gagner des SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 39170,
-            "text": "La loterie CAKE",
+            "text": "La loterie SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 39172,
-            "text": "Achetez des tickets avec des CAKE",
+            "text": "Achetez des tickets avec des SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 39232,
-            "text": "Coût total : 10 CAKE",
+            "text": "Coût total : 10 SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 39248,
-            "text": "Vous pouvez modifier votre photo de profil plus tard si vous obtenez un autre Pancake non interchangeable approuvé,",
+            "text": "Vous pouvez modifier votre photo de profil plus tard si vous obtenez un autre PanSDC non interchangeable approuvé,",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 39254,
-            "text": "Coût : 5 CAKE",
+            "text": "Coût : 5 SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 39266,
-            "text": "Solde CAKE insuffisant",
+            "text": "Solde SDC insuffisant",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 39274,
-            "text": "Seuls les jetons non interchangeables Pancake approuvés peuvent être utilisés.",
+            "text": "Seuls les jetons non interchangeables PanSDC approuvés peuvent être utilisés.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 39312,
-            "text": "Nous n'avons trouvé aucun jeton non interchangeable Pancake dans votre portefeuille.",
+            "text": "Nous n'avons trouvé aucun jeton non interchangeable PanSDC dans votre portefeuille.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 39314,
-            "text": "Vous avez besoin d'un jeton non interchangeable Pancake pour terminer la configuration de votre profil. Si vous avez vendu ou transféré votre jeton de départ dans un autre portefeuille, vous devrez le récupérer ou en acquérir un nouveau d'une manière ou d'une autre. Vous ne pouvez pas créer un nouveau starter avec cette adresse de portefeuille.",
+            "text": "Vous avez besoin d'un jeton non interchangeable PanSDC pour terminer la configuration de votre profil. Si vous avez vendu ou transféré votre jeton de départ dans un autre portefeuille, vous devrez le récupérer ou en acquérir un nouveau d'une manière ou d'une autre. Vous ne pouvez pas créer un nouveau starter avec cette adresse de portefeuille.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 39322,
-            "text": "CAKE par 1 000 $",
+            "text": "SDC par 1 000 $",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 39334,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 39428,
-            "text": "bloc CAKE",
+            "text": "bloc SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 39430,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 39440,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 39448,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 46774,
-            "text": "Acheter des CAKE",
+            "text": "Acheter des SDC",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 46842,
-            "text": "Un minimum de %num% CAKE est requis",
+            "text": "Un minimum de %num% SDC est requis",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",

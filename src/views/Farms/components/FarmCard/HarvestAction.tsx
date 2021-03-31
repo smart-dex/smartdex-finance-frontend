@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-import { Button, Flex, Text } from 'uikit-sotatek'
+import { Button, Flex } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { useHarvest } from 'hooks/useHarvest'
 import { getBalanceNumber } from 'utils/formatBalance'
@@ -35,9 +35,10 @@ const StyledButton = styled(Button) <{ isDisable: boolean }>`
   background: ${({ isDisable }) => !isDisable && baseColors.primary};
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
-  width: 100%;
+  max-width: 143px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
+    width: 143px;
   }
 `
 const BalanceAndCompound = styled.div`
@@ -80,7 +81,6 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel
           setPendingTx(false)
           onBack()
         }}
-        style={{ maxWidth: '143px' }}
       >
         {TranslateString(562, 'Harvest')}
       </StyledButton>

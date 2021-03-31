@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 12548,
-            "text": "Du kommer inte att få CAKE belöningar för att hålla köpt SYRUP.",
+            "text": "Du kommer inte att få SDC belöningar för att hålla köpt SYRUP.",
             "user": {
                 "id": 14439360,
                 "username": "gosubuster",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 12562,
-            "text": "Du måste köpa tillbaka samma mängd SYRUP för att kunna konvertera tillbaka till CAKE.",
+            "text": "Du måste köpa tillbaka samma mängd SYRUP för att kunna konvertera tillbaka till SDC.",
             "user": {
                 "id": 14439360,
                 "username": "gosubuster",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 12700,
-            "text": "För varje handel betalas en avgift på 0,2%. 0,17% går till likviditetsleverantörer och 0,03% går till PancakeSwap-kassan.",
+            "text": "För varje handel betalas en avgift på 0,2%. 0,17% går till likviditetsleverantörer och 0,03% går till PanSDCSwap-kassan.",
             "user": {
                 "id": 14439360,
                 "username": "gosubuster",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 9998,
-            "text": "Totalt antal Cake sedan starten",
+            "text": "Totalt antal SDC sedan starten",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 10414,
-            "text": "Sätt in FLIP tokens för att tjäna CAKE",
+            "text": "Sätt in FLIP tokens för att tjäna SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 13800,
-            "text": "Varje gång du sätter in eller tar ut CAKE tokens kommer kontraktet automatiskt skörda CAKE belöningar åt dig!",
+            "text": "Varje gång du sätter in eller tar ut SDC tokens kommer kontraktet automatiskt skörda SDC belöningar åt dig!",
             "user": {
                 "id": 14439360,
                 "username": "gosubuster",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 11392,
-            "text": "Cake pris",
+            "text": "SDC pris",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 41940,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 42112,
-            "text": "Spendera CAKE för att köpa biljetter och bidra till lotteripotten. Biljettköp fram till ca 30 minuter innan lotteriet. Vinn priser om 2, 3 eller 4 av dina biljettnummer överensstämmer med de vinnande numren och deras positioner. Lycka till!",
+            "text": "Spendera SDC för att köpa biljetter och bidra till lotteripotten. Biljettköp fram till ca 30 minuter innan lotteriet. Vinn priser om 2, 3 eller 4 av dina biljettnummer överensstämmer med de vinnande numren och deras positioner. Lycka till!",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 42712,
-            "text": "%num% tillgängliga CAKE",
+            "text": "%num% tillgängliga SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 42142,
-            "text": "Ditt belopp måste vara en multipel om 10 CAKE",
+            "text": "Ditt belopp måste vara en multipel om 10 SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 42144,
-            "text": "1 biljett = 10 CAKE",
+            "text": "1 biljett = 10 SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 42146,
-            "text": "Du kommer att spendera: %num% CAKE",
+            "text": "Du kommer att spendera: %num% SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 42156,
-            "text": "Din CAKE kommer inte att lämnas tillbaka till dig efter att du spenderat den på att köpa biljetter.",
+            "text": "Din SDC kommer inte att lämnas tillbaka till dig efter att du spenderat den på att köpa biljetter.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 42164,
-            "text": "Köp av biljetter är slutgiltigt. Din CAKE kommer inte att lämnas tillbaka till dig efter att du köpt biljetter.",
+            "text": "Köp av biljetter är slutgiltigt. Din SDC kommer inte att lämnas tillbaka till dig efter att du köpt biljetter.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 42168,
-            "text": "CAKE-priser att lösa in",
+            "text": "SDC-priser att lösa in",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 42176,
-            "text": "Godkänn CAKE",
+            "text": "Godkänn SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 42182,
-            "text": "Du betalar för nya tokens med CAKE-BNB LP-tokens, vilket innebär att du måste satsa samma belopp av CAKE och BNB i en likviditetspool för att delta.",
+            "text": "Du betalar för nya tokens med SDC-BNB LP-tokens, vilket innebär att du måste satsa samma belopp av SDC och BNB i en likviditetspool för att delta.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 42184,
-            "text": "Skaffa CAKE-BNB LP >",
+            "text": "Skaffa SDC-BNB LP >",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 42186,
-            "text": "Projektet får BNB, PancakeSwap bränner CAKE.",
+            "text": "Projektet får BNB, PanSDCSwap bränner SDC.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 42194,
-            "text": "Starta ditt projekt med PancakeSwap, Binance Smart Chains mest använda AMM-projekt och likviditetsleverantör för att ta din token direkt till den mest aktiva och snabbast växande communityn på BSC.",
+            "text": "Starta ditt projekt med PanSDCSwap, Binance Smart Chains mest använda AMM-projekt och likviditetsleverantör för att ta din token direkt till den mest aktiva och snabbast växande communityn på BSC.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 42610,
-            "text": "Cake-statistik",
+            "text": "SDC-statistik",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 42612,
-            "text": "Total CAKE-mängd",
+            "text": "Total SDC-mängd",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 42614,
-            "text": "Totalt brända CAKE",
+            "text": "Totalt brända SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 42616,
-            "text": "Ny CAKE/block",
+            "text": "Ny SDC/block",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 42620,
-            "text": "CAKE för att skörda",
+            "text": "SDC för att skörda",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 42622,
-            "text": "CAKE i plånbok",
+            "text": "SDC i plånbok",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 42624,
-            "text": "Samlar in CAKE",
+            "text": "Samlar in SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 42628,
-            "text": "CAKE att samla in",
+            "text": "SDC att samla in",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 42648,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 42652,
-            "text": "Satsa CAKE för att tjäna nya tokens.",
+            "text": "Satsa SDC för att tjäna nya tokens.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 42658,
-            "text": "CAKE att bränna (USD)",
+            "text": "SDC att bränna (USD)",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 42726,
-            "text": "⭐️ Varje gång du sätter in eller tar ut LP-tokens kommer kontraktet automatiskt skörda CAKE-belöningar åt dig!",
+            "text": "⭐️ Varje gång du sätter in eller tar ut LP-tokens kommer kontraktet automatiskt skörda SDC-belöningar åt dig!",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 42668,
-            "text": "Köp CAKE- och BNB-tokens",
+            "text": "Köp SDC- och BNB-tokens",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 42670,
-            "text": "Skaffa CAKE-BNB LP-tokens genom att lägga till CAKE- och BNB-likviditet",
+            "text": "Skaffa SDC-BNB LP-tokens genom att lägga till SDC- och BNB-likviditet",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 42674,
-            "text": "Medan försäljningen pågår kan du avsätta dina CAKE-LP-tokens för att köpa IFO-tokens",
+            "text": "Medan försäljningen pågår kan du avsätta dina SDC-LP-tokens för att köpa IFO-tokens",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 42728,
-            "text": "Växla in mot CAKE eller behåll i din samling.",
+            "text": "Växla in mot SDC eller behåll i din samling.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 42700,
-            "text": "När du växlar in denna NFT för att få CAKE förlorar du tillgången till den för alltid.",
+            "text": "När du växlar in denna NFT för att få SDC förlorar du tillgången till den för alltid.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 42716,
-            "text": "Vinnarna kan växla in sina NFT mot ett CAKE-värde fram tills förfallodatumet som anges nedan. Oroa dig inte om du vid det laget inte har växlat in din NFT, du kan fortfarande förvara den i din plånbok.",
+            "text": "Vinnarna kan växla in sina NFT mot ett SDC-värde fram tills förfallodatumet som anges nedan. Oroa dig inte om du vid det laget inte har växlat in din NFT, du kan fortfarande förvara den i din plånbok.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 42720,
-            "text": "Växla in mot CAKE",
+            "text": "Växla in mot SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 42268,
-            "text": "Sätt in LP tokens för att tjäna CAKE",
+            "text": "Sätt in LP tokens för att tjäna SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 42280,
-            "text": "CAKE-lotteriet",
+            "text": "SDC-lotteriet",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 42282,
-            "text": "Köp biljetter med CAKE",
+            "text": "Köp biljetter med SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 42540,
-            "text": "Totalkostnad: 10 CAKE",
+            "text": "Totalkostnad: 10 SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 42556,
-            "text": "Du kan ändra din profilbild senare om du får ett till godkänt Pancake-samlarobjekt,",
+            "text": "Du kan ändra din profilbild senare om du får ett till godkänt PanSDC-samlarobjekt,",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 42562,
-            "text": "Kostnad: 5 CAKE",
+            "text": "Kostnad: 5 SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 42574,
-            "text": "Otillräckligt CAKE-saldo",
+            "text": "Otillräckligt SDC-saldo",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 42582,
-            "text": "Endast godkända Pancake-samlarobjekt kan användas.",
+            "text": "Endast godkända PanSDC-samlarobjekt kan användas.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 42322,
-            "text": "Vi kunde inte hitta några Pancake-samlarobjekt i din plånbok.",
+            "text": "Vi kunde inte hitta några PanSDC-samlarobjekt i din plånbok.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 42324,
-            "text": "Du måste ha ett Pancake-samlarobjekt för att slutföra din profil. Om du har sålt eller överfört ditt startsamlarobjekt till en annan plånbok måste du ta tillbaka det eller skaffa ett nytt på något sätt. Du kan inte skapa ett nytt startobjekt med den här plånboksadressen.",
+            "text": "Du måste ha ett PanSDC-samlarobjekt för att slutföra din profil. Om du har sålt eller överfört ditt startsamlarobjekt till en annan plånbok måste du ta tillbaka det eller skaffa ett nytt på något sätt. Du kan inte skapa ett nytt startobjekt med den här plånboksadressen.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 42332,
-            "text": "CAKE per 1000 $",
+            "text": "SDC per 1000 $",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 42344,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 42440,
-            "text": "CAKE-block",
+            "text": "SDC-block",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 42442,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 42452,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 42460,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 47054,
-            "text": "Köp CAKE",
+            "text": "Köp SDC",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47092,
-            "text": "Minst %num% CAKE krävs",
+            "text": "Minst %num% SDC krävs",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",

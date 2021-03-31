@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 36832,
-            "text": "購入済みの保有しているSYRUPに対するCAKE報酬は受け取れません。",
+            "text": "購入済みの保有しているSYRUPに対するSDC報酬は受け取れません。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 36860,
-            "text": "CAKEに変換し直すには同じ量のSYRUPを買い戻す必要があります。",
+            "text": "SDCに変換し直すには同じ量のSYRUPを買い戻す必要があります。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 37262,
-            "text": "トレードごとに0.2%の手数料が支払われます。0.17%は流動性提供者に払われ、0.03%はPancakeSwapの資金になります。",
+            "text": "トレードごとに0.2%の手数料が支払われます。0.17%は流動性提供者に払われ、0.03%はPanSDCSwapの資金になります。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 37398,
-            "text": "ローンチ以来バーンされた合計CAKE数",
+            "text": "ローンチ以来バーンされた合計SDC数",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 37410,
-            "text": "LPトークンをステーキングしてCAKEを積み上げる",
+            "text": "LPトークンをステーキングしてSDCを積み上げる",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 37442,
-            "text": "CAKEトークンをステーキングしてステーキング解除するたびに、CAKE報酬はスマートコントラクトによって自動的に収穫されます！",
+            "text": "SDCトークンをステーキングしてステーキング解除するたびに、SDC報酬はスマートコントラクトによって自動的に収穫されます！",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 37552,
-            "text": "Cakeの価格",
+            "text": "SDCの価格",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 20612,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14451920,
                 "username": "cryptobluecat",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 38222,
-            "text": "CAKEで宝くじ券を購入しよう。このCAKEは賞金総額に追加されます。宝くじ券の販売は抽選の約30分前に終了します。宝くじ券に記載の番号が、当選番号の2つ、3つ、または4つの数字に一致すると、賞金を獲得できます。幸運を！",
+            "text": "SDCで宝くじ券を購入しよう。このSDCは賞金総額に追加されます。宝くじ券の販売は抽選の約30分前に終了します。宝くじ券に記載の番号が、当選番号の2つ、3つ、または4つの数字に一致すると、賞金を獲得できます。幸運を！",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 38306,
-            "text": "%num% CAKE利用可能",
+            "text": "%num% SDC利用可能",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 20774,
-            "text": "CAKE数は10の倍数である必要があります",
+            "text": "SDC数は10の倍数である必要があります",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 38312,
-            "text": "宝くじ券1枚 = 10 CAKE",
+            "text": "宝くじ券1枚 = 10 SDC",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 38318,
-            "text": "支払額: %num% CAKE",
+            "text": "支払額: %num% SDC",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 38336,
-            "text": "宝くじ券の購入に使用したCAKEは返却されません。",
+            "text": "宝くじ券の購入に使用したSDCは返却されません。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 38394,
-            "text": "宝くじ券の購入はキャンセルできません。宝くじ券の購入に使用したCAKEは返却されません。",
+            "text": "宝くじ券の購入はキャンセルできません。宝くじ券の購入に使用したSDCは返却されません。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 38408,
-            "text": "請求する賞金CAKE",
+            "text": "請求する賞金SDC",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 20764,
-            "text": "CAKEを承認",
+            "text": "SDCを承認",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 38430,
-            "text": "CAKE-BNBのLPトークンを使用して、新しいトークンの代金を支払うことになります。つまり、参加する流動性プールに同量のCAKEとBNBをステーキングする必要があります。",
+            "text": "SDC-BNBのLPトークンを使用して、新しいトークンの代金を支払うことになります。つまり、参加する流動性プールに同量のSDCとBNBをステーキングする必要があります。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 21372,
-            "text": "CAKE-BNBのLPを入手 >",
+            "text": "SDC-BNBのLPを入手 >",
             "user": {
                 "id": 14451920,
                 "username": "cryptobluecat",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 38442,
-            "text": "プロジェクトがBNBを取得すると、PancakeSwapがCAKEをバーン。",
+            "text": "プロジェクトがBNBを取得すると、PanSDCSwapがSDCをバーン。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 38462,
-            "text": "Binance Smart Chainで最も利用されているAMMプロジェクトで流動性供給者であるPancakeSwapを利用してプロジェクトをローンチし、BSCで最も活発で急速に成長しているコミュニティにあなたのトークンを直接届けることができます。",
+            "text": "Binance Smart Chainで最も利用されているAMMプロジェクトで流動性供給者であるPanSDCSwapを利用してプロジェクトをローンチし、BSCで最も活発で急速に成長しているコミュニティにあなたのトークンを直接届けることができます。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 38490,
-            "text": "Cakeスタッツ",
+            "text": "SDCスタッツ",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 38494,
-            "text": "CAKEの合計供給",
+            "text": "SDCの合計供給",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 38496,
-            "text": "CAKEの合計バーン",
+            "text": "SDCの合計バーン",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 38498,
-            "text": "新規CAKE/ブロック",
+            "text": "新規SDC/ブロック",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 23466,
-            "text": "収穫待ちCAKE",
+            "text": "収穫待ちSDC",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 21410,
-            "text": "ウォレットのCAKE",
+            "text": "ウォレットのSDC",
             "user": {
                 "id": 14451920,
                 "username": "cryptobluecat",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 21818,
-            "text": "CAKEを収集中",
+            "text": "SDCを収集中",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 23468,
-            "text": "収集待ちCAKE",
+            "text": "収集待ちSDC",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 38520,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 38532,
-            "text": "CAKEをステーキングして新しいトークンを獲得しよう。",
+            "text": "SDCをステーキングして新しいトークンを獲得しよう。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 38552,
-            "text": "CAKEバーン（USD）",
+            "text": "SDCバーン（USD）",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 38554,
-            "text": "⭐️ LPトークンをステーキングしてステーキング解除するたびに、CAKE報酬はスマートコントラクトによって自動的に収穫されます！",
+            "text": "⭐️ LPトークンをステーキングしてステーキング解除するたびに、SDC報酬はスマートコントラクトによって自動的に収穫されます！",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 38556,
-            "text": "CAKEとBNBトークンを購入しよう",
+            "text": "SDCとBNBトークンを購入しよう",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 38558,
-            "text": "CAKEとBNBの流動性を追加し、CAKE-BNB LPトークンを入手しよう",
+            "text": "SDCとBNBの流動性を追加し、SDC-BNB LPトークンを入手しよう",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 38560,
-            "text": "販売期間中、CAKE-LPトークンをコミットしてIFOトークンを購入しよう",
+            "text": "販売期間中、SDC-LPトークンをコミットしてIFOトークンを購入しよう",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 38574,
-            "text": "CAKEとトレード、またはコレクションに！",
+            "text": "SDCとトレード、またはコレクションに！",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 38614,
-            "text": "このNFTをトレードしてCAKEを受け取ると、以降そのNFTを使用できなくなります！",
+            "text": "このNFTをトレードしてSDCを受け取ると、以降そのNFTを使用できなくなります！",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 38622,
-            "text": "当選者は、以下に記載の期日までNFTをCAKEにトレードできます。NFTのトレード期間が終了しても大丈夫。トレードしなかったNFTは、そのままウォレットに残ります。",
+            "text": "当選者は、以下に記載の期日までNFTをSDCにトレードできます。NFTのトレード期間が終了しても大丈夫。トレードしなかったNFTは、そのままウォレットに残ります。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 38630,
-            "text": "CAKEにトレードする",
+            "text": "SDCにトレードする",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 31340,
-            "text": "LPトークンをステーキングしてCAKEを獲得",
+            "text": "LPトークンをステーキングしてSDCを獲得",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 31542,
-            "text": "CAKE宝くじ",
+            "text": "SDC宝くじ",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 31546,
-            "text": "CAKEで宝くじ券を買おう",
+            "text": "SDCで宝くじ券を買おう",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 33028,
-            "text": "合計コスト: 10 CAKE",
+            "text": "合計コスト: 10 SDC",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 33096,
-            "text": "承認されている別のPancakeコレクティブルを取得すれば、後からプロファイル写真を変更できます。",
+            "text": "承認されている別のPanSDCコレクティブルを取得すれば、後からプロファイル写真を変更できます。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 33118,
-            "text": "コスト: 5 CAKE",
+            "text": "コスト: 5 SDC",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 33156,
-            "text": "CAKE残高不足",
+            "text": "SDC残高不足",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 33298,
-            "text": "承認されているPancakeコレクティブルのみを使用できます。",
+            "text": "承認されているPanSDCコレクティブルのみを使用できます。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 33450,
-            "text": "ウォレットにPancakeコレクティブルがないようです。",
+            "text": "ウォレットにPanSDCコレクティブルがないようです。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 38648,
-            "text": "プロファイルの設定を完了するには、Pancakeコレクティブルが必要です。スターターコレクティブルを売却したり、別のウォレットに送金したりした場合は、取り戻すか、新しいコレクティブルを取得する必要があります。このウォレットのアドレスを使って新しいスターターを始めることはできません。",
+            "text": "プロファイルの設定を完了するには、PanSDCコレクティブルが必要です。スターターコレクティブルを売却したり、別のウォレットに送金したりした場合は、取り戻すか、新しいコレクティブルを取得する必要があります。このウォレットのアドレスを使って新しいスターターを始めることはできません。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 33490,
-            "text": "$1000当たりのCAKE",
+            "text": "$1000当たりのSDC",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 29650,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 30296,
-            "text": "CAKEブロック",
+            "text": "SDCブロック",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 30300,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 37384,
-            "text": "Pancake",
+            "text": "PanSDC",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 37386,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 47624,
-            "text": "CAKEを買う",
+            "text": "SDCを買う",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47662,
-            "text": "最低%num% CAKEが必要です",
+            "text": "最低%num% SDCが必要です",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",

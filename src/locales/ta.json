@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 26000,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 47022,
-            "text": "லாட்டரி பானைக்குப் பங்களித்து, டிக்கெட்டுகளை வாங்க CAKE செலவிடுங்கள். டிக்கெட் வாங்குதலானது, லாட்டரிக்கு முன் தோராயமாக 30 நிமிடங்களில் முடிவடைகிறது. உங்கள் டிக்கெட் எண்களில் 2, 3 அல்லது 4, வென்ற எண்களுக்கும் அவற்றின் நிலைகளுக்கும் பொருந்தினால் பரிசுகளை வெல்லுங்கள்! நல்வாழ்த்துகள்!",
+            "text": "லாட்டரி பானைக்குப் பங்களித்து, டிக்கெட்டுகளை வாங்க SDC செலவிடுங்கள். டிக்கெட் வாங்குதலானது, லாட்டரிக்கு முன் தோராயமாக 30 நிமிடங்களில் முடிவடைகிறது. உங்கள் டிக்கெட் எண்களில் 2, 3 அல்லது 4, வென்ற எண்களுக்கும் அவற்றின் நிலைகளுக்கும் பொருந்தினால் பரிசுகளை வெல்லுங்கள்! நல்வாழ்த்துகள்!",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 26076,
-            "text": "%num% CAKE உள்ளது",
+            "text": "%num% SDC உள்ளது",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 26080,
-            "text": "உங்கள் எண்ணிக்கை, 10 CAKEன் மடங்காக இருக்க வேண்டும்",
+            "text": "உங்கள் எண்ணிக்கை, 10 SDCன் மடங்காக இருக்க வேண்டும்",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 26084,
-            "text": "1 டிக்கெட் = 10 CAKE",
+            "text": "1 டிக்கெட் = 10 SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 26092,
-            "text": "நீங்கள் செலவழிப்பது: %num% CAKE",
+            "text": "நீங்கள் செலவழிப்பது: %num% SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 26118,
-            "text": "உங்கள் CAKE, நீங்கள் டிக்கெட்களை வாங்கச் செலவழித்த பிறகு உங்களுக்குத் திருப்பிக்கொடுக்கப்பட மாட்டாது.",
+            "text": "உங்கள் SDC, நீங்கள் டிக்கெட்களை வாங்கச் செலவழித்த பிறகு உங்களுக்குத் திருப்பிக்கொடுக்கப்பட மாட்டாது.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 26170,
-            "text": "டிக்கெட் வாங்குவதல்கள் இறுதியானவை. டிக்கெட்களை வாங்கிய பிறகு உங்கள் CAKE திருப்பிக்கொடுக்கப்பட மாட்டாது.",
+            "text": "டிக்கெட் வாங்குவதல்கள் இறுதியானவை. டிக்கெட்களை வாங்கிய பிறகு உங்கள் SDC திருப்பிக்கொடுக்கப்பட மாட்டாது.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 26174,
-            "text": "கிளைம் செய்யப்பட வேண்டிய CAKE பரிசுகள்",
+            "text": "கிளைம் செய்யப்பட வேண்டிய SDC பரிசுகள்",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 26200,
-            "text": "CAKE அங்கீகரி",
+            "text": "SDC அங்கீகரி",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 35578,
-            "text": "CAKE-BNB LP டோக்கன்களைப் பயன்படுத்தி புதிய டோக்கன்களுக்கு நீங்கள் பணம் செலுத்துவீர்கள், அதாவது லிக்யுடிட்டி குளத்தில் CAKE மற்றும் BNBன் சமமான தொகைகளை நீங்கள் ஸ்டேக் செய்ய வேண்டும்.",
+            "text": "SDC-BNB LP டோக்கன்களைப் பயன்படுத்தி புதிய டோக்கன்களுக்கு நீங்கள் பணம் செலுத்துவீர்கள், அதாவது லிக்யுடிட்டி குளத்தில் SDC மற்றும் BNBன் சமமான தொகைகளை நீங்கள் ஸ்டேக் செய்ய வேண்டும்.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 35580,
-            "text": "CAKE-BNB LP பெறுக >",
+            "text": "SDC-BNB LP பெறுக >",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 36966,
-            "text": "செயல்திட்டம் BNBஐப் பெறுகிறது, PancakeSwapஆனது CAKEஐ செலவழிக்கிறது.",
+            "text": "செயல்திட்டம் BNBஐப் பெறுகிறது, PanSDCSwapஆனது SDCஐ செலவழிக்கிறது.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 38650,
-            "text": "உங்கள் செயல்திட்டத்தை, Binance Smart Chainன் மிகவும் பயன்படுத்தப்படும் AMM செயல்திட்டம் மற்றும் லிக்விடிட்டி வழங்குநரான PancakeSwap மூலம் தொடங்கி, உங்கள் டோக்கனை நேரடியாக BSCயில் அதிக செயலிலுள்ள மற்றும் வேகமாக வளர்ந்துவருகிற சமூகத்திற்குக் கொண்டு வர வேண்டும்.",
+            "text": "உங்கள் செயல்திட்டத்தை, Binance Smart Chainன் மிகவும் பயன்படுத்தப்படும் AMM செயல்திட்டம் மற்றும் லிக்விடிட்டி வழங்குநரான PanSDCSwap மூலம் தொடங்கி, உங்கள் டோக்கனை நேரடியாக BSCயில் அதிக செயலிலுள்ள மற்றும் வேகமாக வளர்ந்துவருகிற சமூகத்திற்குக் கொண்டு வர வேண்டும்.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 35606,
-            "text": "Cake புள்ளிவிவரம்",
+            "text": "SDC புள்ளிவிவரம்",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 35608,
-            "text": "மொத்த CAKE வழங்கல்",
+            "text": "மொத்த SDC வழங்கல்",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 36984,
-            "text": "மொத்த CAKE செலவழிக்கப்பட்டது",
+            "text": "மொத்த SDC செலவழிக்கப்பட்டது",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 35612,
-            "text": "புதிய CAKE/ப்ளாக்",
+            "text": "புதிய SDC/ப்ளாக்",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 35616,
-            "text": "அறுவடைக்கான CAKE",
+            "text": "அறுவடைக்கான SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 35618,
-            "text": "வாலெட்டிலுள்ள CAKE",
+            "text": "வாலெட்டிலுள்ள SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 35620,
-            "text": "CAKE சேகரிப்பு",
+            "text": "SDC சேகரிப்பு",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 35624,
-            "text": "சேகரிப்பதற்கான CAKE",
+            "text": "சேகரிப்பதற்கான SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 35644,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 35648,
-            "text": "புதிய டோக்கன்களைப் பெற, CAKEஐ ஸ்டேக் செய்யவும்.",
+            "text": "புதிய டோக்கன்களைப் பெற, SDCஐ ஸ்டேக் செய்யவும்.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 36970,
-            "text": "செலவழிப்பதற்கான CAKE (USD)",
+            "text": "செலவழிப்பதற்கான SDC (USD)",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 35660,
-            "text": "⭐️ நீங்கள் LP டோக்கன்களை ஸ்டேக் செய்து அன்ஸ்டேக் செய்கிற ஒவ்வொரு முறையும், ஒப்பந்தம் உங்களுக்காக CAKE வெகுமதிகளை தானாகவே அறுவடை செய்யும்!",
+            "text": "⭐️ நீங்கள் LP டோக்கன்களை ஸ்டேக் செய்து அன்ஸ்டேக் செய்கிற ஒவ்வொரு முறையும், ஒப்பந்தம் உங்களுக்காக SDC வெகுமதிகளை தானாகவே அறுவடை செய்யும்!",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 35666,
-            "text": "CAKE மற்றும் BNB டோக்கன்களை வாங்கு",
+            "text": "SDC மற்றும் BNB டோக்கன்களை வாங்கு",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 35668,
-            "text": "CAKE மற்றும் BNB லிக்விடிட்டியைச் சேர்த்து CAKE-BNB LP டோக்கன்களை வாங்கவும்",
+            "text": "SDC மற்றும் BNB லிக்விடிட்டியைச் சேர்த்து SDC-BNB LP டோக்கன்களை வாங்கவும்",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 36132,
-            "text": "விற்பனை நேரலையில் இருக்கும்போது, IFO டோக்கன்களை வாங்க உங்கள் CAKE-LP டோக்கன்களை கமிட் செய்யவும்",
+            "text": "விற்பனை நேரலையில் இருக்கும்போது, IFO டோக்கன்களை வாங்க உங்கள் SDC-LP டோக்கன்களை கமிட் செய்யவும்",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 38642,
-            "text": "CAKEக்கு டிரேட் செய்க அல்லது உங்கள் சேகரிப்பிற்கு வைத்துக்கொள்க!",
+            "text": "SDCக்கு டிரேட் செய்க அல்லது உங்கள் சேகரிப்பிற்கு வைத்துக்கொள்க!",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 26268,
-            "text": "நீங்கள் CAKE பெற இந்த NFTஐ வணிகம் செய்யும்போது, அதற்கான அணுகலை முழுவதும் இழந்துவிடுவீர்கள்!",
+            "text": "நீங்கள் SDC பெற இந்த NFTஐ வணிகம் செய்யும்போது, அதற்கான அணுகலை முழுவதும் இழந்துவிடுவீர்கள்!",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 36220,
-            "text": "கீழே எழுதியுள்ள காலாவதித் தேதி வரை, வெற்றியாளர்கள் CAKEக்கான தங்களின் NFTகளை டிரேட் செய்யலாம். அதுவரை உங்கள் NFTஐ டிரேட் செய்யவில்லை என்றால் கவலை வேண்டாம்: அது தொடர்ந்து உங்கள் வாலெட்டில் இருக்கும்!",
+            "text": "கீழே எழுதியுள்ள காலாவதித் தேதி வரை, வெற்றியாளர்கள் SDCக்கான தங்களின் NFTகளை டிரேட் செய்யலாம். அதுவரை உங்கள் NFTஐ டிரேட் செய்யவில்லை என்றால் கவலை வேண்டாம்: அது தொடர்ந்து உங்கள் வாலெட்டில் இருக்கும்!",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 36252,
-            "text": "CAKEக்கு டிரேட் செய்க",
+            "text": "SDCக்கு டிரேட் செய்க",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 36314,
-            "text": "CAKE பெற, LP டோக்கன்களை ஸ்டேக் செய்க",
+            "text": "SDC பெற, LP டோக்கன்களை ஸ்டேக் செய்க",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 36326,
-            "text": "CAKE லாட்டரி",
+            "text": "SDC லாட்டரி",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 36328,
-            "text": "CAKE மூலம் டிக்கெட்களை வாங்குக",
+            "text": "SDC மூலம் டிக்கெட்களை வாங்குக",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 37064,
-            "text": "மொத்த செலவு: 10 CAKE",
+            "text": "மொத்த செலவு: 10 SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 37412,
-            "text": "அங்கீகரிக்கப்பட்ட மற்றொரு Pancake கலெக்டிபிளைப் பெற்றால், பின்னர் உங்கள் சுயவிவரப் படத்தை மாற்றிக்கொள்ளலாம்,",
+            "text": "அங்கீகரிக்கப்பட்ட மற்றொரு PanSDC கலெக்டிபிளைப் பெற்றால், பின்னர் உங்கள் சுயவிவரப் படத்தை மாற்றிக்கொள்ளலாம்,",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 37450,
-            "text": "செலவு: 5 CAKE",
+            "text": "செலவு: 5 SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 37474,
-            "text": "போதுமான CAKE பேலன்ஸ் இல்லை",
+            "text": "போதுமான SDC பேலன்ஸ் இல்லை",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 37504,
-            "text": "அங்கீகரிக்கப்பட்ட Pancake கலெக்டிபிள்களை மட்டுமே பயன்படுத்த முடியும்.",
+            "text": "அங்கீகரிக்கப்பட்ட PanSDC கலெக்டிபிள்களை மட்டுமே பயன்படுத்த முடியும்.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 36850,
-            "text": "உங்கள் வாலெட்டில் Pancake கலெக்டிபிள் எவற்றையும் எங்களால் கண்டுபிடிக்க முடியவில்லை.",
+            "text": "உங்கள் வாலெட்டில் PanSDC கலெக்டிபிள் எவற்றையும் எங்களால் கண்டுபிடிக்க முடியவில்லை.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 36882,
-            "text": "உங்கள் சுயவிவரத்தை அமைப்பதை முடிக்க, உங்களுக்கு ஒரு Pancake கலெக்டிபிள் வேண்டும். உங்கள் ஸ்டார்ட்டர் கலெக்டிபிளை வேறொரு வாலெட்டிற்கு நீங்கள் விற்றிருந்தால் அல்லது மாற்றியிருந்தால், அதை நீங்கள் திரும்பப் பெற வேண்டியிருக்கும் அல்லது எப்படியாவது புதிய ஒன்றைப் பெற வேண்டியிருக்கும். இந்த வாலெட் முகவரியுடன் புதிய ஸ்டார்ட்டரை உருவாக்க முடியாது.",
+            "text": "உங்கள் சுயவிவரத்தை அமைப்பதை முடிக்க, உங்களுக்கு ஒரு PanSDC கலெக்டிபிள் வேண்டும். உங்கள் ஸ்டார்ட்டர் கலெக்டிபிளை வேறொரு வாலெட்டிற்கு நீங்கள் விற்றிருந்தால் அல்லது மாற்றியிருந்தால், அதை நீங்கள் திரும்பப் பெற வேண்டியிருக்கும் அல்லது எப்படியாவது புதிய ஒன்றைப் பெற வேண்டியிருக்கும். இந்த வாலெட் முகவரியுடன் புதிய ஸ்டார்ட்டரை உருவாக்க முடியாது.",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 36898,
-            "text": "$1000க்கான CAKE",
+            "text": "$1000க்கான SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 37764,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 38052,
-            "text": "CAKE ப்ளாக்",
+            "text": "SDC ப்ளாக்",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 38056,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 37588,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 37606,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 46966,
-            "text": "CAKE வாங்கு",
+            "text": "SDC வாங்கு",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47004,
-            "text": "குறைந்தபட்சம் %num% CAKE தேவை",
+            "text": "குறைந்தபட்சம் %num% SDC தேவை",
             "user": {
                 "id": 14274202,
                 "username": "English2Tamil",

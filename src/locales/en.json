@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 28694,
-            "text": "You will not receive CAKE rewards for holding purchased SYRUP.",
+            "text": "You will not receive SDC rewards for holding purchased SYRUP.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 28702,
-            "text": "You will need to buy back the same amount of SYRUP to be able to convert back to CAKE.",
+            "text": "You will need to buy back the same amount of SYRUP to be able to convert back to SDC.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 28780,
-            "text": "For each trade a 0.2% fee is paid. 0.17% goes to liquidity providers and 0.03% goes to the PancakeSwap treasury.",
+            "text": "For each trade a 0.2% fee is paid. 0.17% goes to liquidity providers and 0.03% goes to the PanSDCSwap treasury.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 28896,
-            "text": "Total CAKE burned since launch",
+            "text": "Total SDC burned since launch",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 21442,
-            "text": "Stake LP tokens to earn CAKE",
+            "text": "Stake LP tokens to earn SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 29020,
-            "text": "Every time you stake and unstake CAKE tokens, the contract will automatically harvest CAKE rewards for you!",
+            "text": "Every time you stake and unstake SDC tokens, the contract will automatically harvest SDC rewards for you!",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 29042,
-            "text": "Cake price",
+            "text": "SDC price",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 20688,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 29078,
-            "text": "Spend CAKE to buy tickets, contributing to the lottery pot. Ticket purchases end approx. 30 minutes before lottery. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their positions! Good luck!",
+            "text": "Spend SDC to buy tickets, contributing to the lottery pot. Ticket purchases end approx. 30 minutes before lottery. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their positions! Good luck!",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -2269,7 +2269,7 @@
             "stringId": 430,
             "contentType": "text/plain",
             "translationId": 29292,
-            "text": "Buy ticket",
+            "text": "Buy Ticket",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -2284,7 +2284,7 @@
             "stringId": 432,
             "contentType": "text/plain",
             "translationId": 29294,
-            "text": "View your tickets",
+            "text": "View Your Tickets",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 29314,
-            "text": "%num% CAKE Available",
+            "text": "%num% SDC Available",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 29316,
-            "text": "Your amount must be a multiple of 10 CAKE",
+            "text": "Your amount must be a multiple of 10 SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 29318,
-            "text": "1 Ticket = 10 CAKE",
+            "text": "1 Ticket = 10 SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 47136,
-            "text": "You will spend: %num% CAKE",
+            "text": "You will spend: %num% SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 47138,
-            "text": "Your CAKE will not be returned to you after you spend it to buy tickets.",
+            "text": "Your SDC will not be returned to you after you spend it to buy tickets.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 29338,
-            "text": "Ticket purchases are final. Your CAKE cannot be returned to you after buying tickets.",
+            "text": "Ticket purchases are final. Your SDC cannot be returned to you after buying tickets.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 29342,
-            "text": "CAKE prizes to be claimed",
+            "text": "SDC prizes to be claimed",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 29348,
-            "text": "Approve CAKE",
+            "text": "Approve SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 29354,
-            "text": "You’ll pay for the new tokens using CAKE-BNB LP tokens, which means you need to stake equal amounts of CAKE and BNB in a liquidity pool to take part.",
+            "text": "You’ll pay for the new tokens using SDC-BNB LP tokens, which means you need to stake equal amounts of SDC and BNB in a liquidity pool to take part.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 29356,
-            "text": "Get CAKE-BNB LP >",
+            "text": "Get SDC-BNB LP >",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 29358,
-            "text": "The project gets the BNB, PancakeSwap burns the CAKE.",
+            "text": "The project gets the BNB, PanSDCSwap burns the SDC.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 29382,
-            "text": "Cake Stats",
+            "text": "SDC Stats",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 29384,
-            "text": "Total CAKE Supply",
+            "text": "Total SDC Supply",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 29386,
-            "text": "Total CAKE Burned",
+            "text": "Total SDC Burned",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 29388,
-            "text": "New CAKE/block",
+            "text": "New SDC/block",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 29082,
-            "text": "CAKE to Harvest",
+            "text": "SDC to Harvest",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 29084,
-            "text": "CAKE in Wallet",
+            "text": "SDC in Wallet",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 29086,
-            "text": "Collecting CAKE",
+            "text": "Collecting SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 29090,
-            "text": "CAKE to Collect",
+            "text": "SDC to Collect",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 29110,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 29114,
-            "text": "Stake CAKE to earn new tokens.",
+            "text": "Stake SDC to earn new tokens.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 29124,
-            "text": "⭐️ Every time you stake and unstake LP tokens, the contract will automatically harvest CAKE rewards for you!",
+            "text": "⭐️ Every time you stake and unstake LP tokens, the contract will automatically harvest SDC rewards for you!",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 29148,
-            "text": "Trade in for CAKE, or keep for your collection!",
+            "text": "Trade in for SDC, or keep for your collection!",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 29162,
-            "text": "When you trade in this NFT to receive CAKE, you will lose access to it forever!",
+            "text": "When you trade in this NFT to receive SDC, you will lose access to it forever!",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 29172,
-            "text": "Winners can trade in their NFTs for a CAKE value until the expiry date written below. If you don't trade in your NFT by then, don’t worry: you’ll still keep it in your wallet!",
+            "text": "Winners can trade in their NFTs for a SDC value until the expiry date written below. If you don't trade in your NFT by then, don’t worry: you’ll still keep it in your wallet!",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 29420,
-            "text": "Trade in for CAKE",
+            "text": "Trade in for SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 29462,
-            "text": "Stake LP tokens to earn CAKE",
+            "text": "Stake LP tokens to earn SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 29474,
-            "text": "The CAKE Lottery",
+            "text": "The SDC Lottery",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 29476,
-            "text": "Buy tickets with CAKE",
+            "text": "Buy tickets with SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 29202,
-            "text": "Total cost: 10 CAKE",
+            "text": "Total cost: 10 SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 29220,
-            "text": "You can change your profile pic later if you get another approved Pancake Collectible,",
+            "text": "You can change your profile pic later if you get another approved PanSDC Collectible,",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 29226,
-            "text": "Cost: 5 CAKE",
+            "text": "Cost: 5 SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 29240,
-            "text": "Insufficient CAKE balance",
+            "text": "Insufficient SDC balance",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 29248,
-            "text": "Only approved Pancake Collectibles can be used.",
+            "text": "Only approved PanSDC Collectibles can be used.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 29392,
-            "text": "We couldn't find any Pancake Collectibles in your wallet.",
+            "text": "We couldn't find any PanSDC Collectibles in your wallet.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 29394,
-            "text": "You need a Pancake Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you'll need to get it back or acquire a new one. You can't make a new starter with this wallet address.",
+            "text": "You need a PanSDC Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you'll need to get it back or acquire a new one. You can't make a new starter with this wallet address.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 29402,
-            "text": "CAKE per $1000",
+            "text": "SDC per $1000",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 33160,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 33302,
-            "text": "CAKE block",
+            "text": "SDC block",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 33304,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 33324,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 33334,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47200,
-            "text": "A minimum of %num% CAKE is required",
+            "text": "A minimum of %num% SDC is required",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",

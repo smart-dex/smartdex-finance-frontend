@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 44180,
-            "text": "खरीदे गए SYRUP को होल्ड करने के लिए आपको CAKE पुरस्कार नहीं मिलेंगे।",
+            "text": "खरीदे गए SYRUP को होल्ड करने के लिए आपको SDC पुरस्कार नहीं मिलेंगे।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 44186,
-            "text": "वापस CAKE में बदलने में सक्षम होने के लिए, आपको समान राशि में SYRUP को फिर से खरीदना होगा।",
+            "text": "वापस SDC में बदलने में सक्षम होने के लिए, आपको समान राशि में SYRUP को फिर से खरीदना होगा।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 44236,
-            "text": "हरेक ट्रेड के लिए 0.2% फीस का भुगतान किया जाता है। 0.17% लिक्विडिटी प्रोवाइडर के पास जाता है और 0.03% pancakeswap ट्रेजरी के पास जाता है।",
+            "text": "हरेक ट्रेड के लिए 0.2% फीस का भुगतान किया जाता है। 0.17% लिक्विडिटी प्रोवाइडर के पास जाता है और 0.03% panSDCswap ट्रेजरी के पास जाता है।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 44062,
-            "text": "CAKE स्टेक करने के लिए LP टोकन को स्टेक करें",
+            "text": "SDC स्टेक करने के लिए LP टोकन को स्टेक करें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 44070,
-            "text": "जब भी आप CAKE टोकन को स्टेक या अनस्टेक करेंगे तो कॉन्ट्रैक्ट द्वारा आपके लिए CAKE को अपने आप प्राप्त किया जाएगा!",
+            "text": "जब भी आप SDC टोकन को स्टेक या अनस्टेक करेंगे तो कॉन्ट्रैक्ट द्वारा आपके लिए SDC को अपने आप प्राप्त किया जाएगा!",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 44082,
-            "text": "Cake की कीमत",
+            "text": "SDC की कीमत",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 38360,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 47424,
-            "text": "लॉटरी पॉट में योगदान करते हुए, टिकट खरीदने के लिए CAKE खर्च करें। लॉटरी का नंबर निकलने से लगभग 30 मिनट पहले टिकट की खरीदारी खत्म हो जाती है। यदि जीतने वाले नंबर और इनकी पोजीशन से आपके टिकट के 1, 2, 3 या 4 नंबर मैच होते हैं तो पुरस्कार जीतें! शुभकामनाएं!",
+            "text": "लॉटरी पॉट में योगदान करते हुए, टिकट खरीदने के लिए SDC खर्च करें। लॉटरी का नंबर निकलने से लगभग 30 मिनट पहले टिकट की खरीदारी खत्म हो जाती है। यदि जीतने वाले नंबर और इनकी पोजीशन से आपके टिकट के 1, 2, 3 या 4 नंबर मैच होते हैं तो पुरस्कार जीतें! शुभकामनाएं!",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 38418,
-            "text": "%num% CAKE उपलब्ध",
+            "text": "%num% SDC उपलब्ध",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 38424,
-            "text": "आपकी राशि 10 CAKE के गुणा में होनी चाहिए",
+            "text": "आपकी राशि 10 SDC के गुणा में होनी चाहिए",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 38426,
-            "text": "1 टिकट = 10 CAKE",
+            "text": "1 टिकट = 10 SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 38428,
-            "text": "आप खर्च करेंगे: %num% CAKE",
+            "text": "आप खर्च करेंगे: %num% SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 38444,
-            "text": "जब आप टिकट खरीदने के लिए अपने CAKE खर्च कर लेते हैं, तो उसके बाद आपके CAKE वापस नहीं किए जाएँगे।",
+            "text": "जब आप टिकट खरीदने के लिए अपने SDC खर्च कर लेते हैं, तो उसके बाद आपके SDC वापस नहीं किए जाएँगे।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 38470,
-            "text": "टिकटों की खरीदारी अंतिम होती है। टिकट खरीदने के बाद आपके CAKE वापस नहीं किए जा सकते हैं।",
+            "text": "टिकटों की खरीदारी अंतिम होती है। टिकट खरीदने के बाद आपके SDC वापस नहीं किए जा सकते हैं।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 38476,
-            "text": "CAKE पुरस्कारों को क्लेम किया जाता है",
+            "text": "SDC पुरस्कारों को क्लेम किया जाता है",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 44038,
-            "text": "CAKE को मंज़ूरी दें",
+            "text": "SDC को मंज़ूरी दें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 38518,
-            "text": "आप CAKE-BNB LP टोकन का उपयोग करके नए टोकन के लिए भुगतान करेंगे जिसका मतलब है कि आपको इसमें शामिल होने के लिए लिक्विडिटी पूल में CAKE और BNB की समान राशि को स्टेक करना होता है।",
+            "text": "आप SDC-BNB LP टोकन का उपयोग करके नए टोकन के लिए भुगतान करेंगे जिसका मतलब है कि आपको इसमें शामिल होने के लिए लिक्विडिटी पूल में SDC और BNB की समान राशि को स्टेक करना होता है।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 44096,
-            "text": "CAKE-BNB LP पाएं >",
+            "text": "SDC-BNB LP पाएं >",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 44040,
-            "text": "प्रोजेक्ट को BNB मिलता है, PancakeSwap CAKE को बर्न करता है।",
+            "text": "प्रोजेक्ट को BNB मिलता है, PanSDCSwap SDC को बर्न करता है।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 44042,
-            "text": "PancakeSwap के साथ अपना प्रोजेक्ट लॉन्च करें, जो Binance Smart Chain का सबसे ज्यादा उपयोग किया जाने वाला AMM प्रोजेक्ट और लिक्विडिटी प्रोवाइडर है ताकि आपके टोकन BSC पर सर्वाधिक सक्रिय और तेजी से बढ़ती हुई कम्युनिटी पर सीधे लाए जा सकें।",
+            "text": "PanSDCSwap के साथ अपना प्रोजेक्ट लॉन्च करें, जो Binance Smart Chain का सबसे ज्यादा उपयोग किया जाने वाला AMM प्रोजेक्ट और लिक्विडिटी प्रोवाइडर है ताकि आपके टोकन BSC पर सर्वाधिक सक्रिय और तेजी से बढ़ती हुई कम्युनिटी पर सीधे लाए जा सकें।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 42786,
-            "text": "Cake के आंकड़ें",
+            "text": "SDC के आंकड़ें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 42788,
-            "text": "कुल CAKE सप्लाई",
+            "text": "कुल SDC सप्लाई",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 42798,
-            "text": "कुल CAKE बर्न किए गए",
+            "text": "कुल SDC बर्न किए गए",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 42802,
-            "text": "नया CAKE/ब्लॉक",
+            "text": "नया SDC/ब्लॉक",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 42806,
-            "text": "पाने के लिए CAKE",
+            "text": "पाने के लिए SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 42808,
-            "text": "वॉलेट में CAKE",
+            "text": "वॉलेट में SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 42810,
-            "text": "CAKE कलेक्ट करना",
+            "text": "SDC कलेक्ट करना",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 42818,
-            "text": "कलेक्ट करने के लिए CAKE",
+            "text": "कलेक्ट करने के लिए SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 42960,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 42966,
-            "text": "नए टोकन जीतने के लिए CAKE को स्टेक करें।",
+            "text": "नए टोकन जीतने के लिए SDC को स्टेक करें।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 42974,
-            "text": "बर्न करने के लिए CAKE (USD)",
+            "text": "बर्न करने के लिए SDC (USD)",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 44050,
-            "text": "⭐️ जब भी आप LP टोकन को स्टेक या अनस्टेक करेंगे तो कॉन्ट्रैक्ट आपके लिए CAKE पुरस्कार को अपने आप प्राप्त कर लेगा!",
+            "text": "⭐️ जब भी आप LP टोकन को स्टेक या अनस्टेक करेंगे तो कॉन्ट्रैक्ट आपके लिए SDC पुरस्कार को अपने आप प्राप्त कर लेगा!",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 42990,
-            "text": "CAKE और BNB टोकन खरीदें",
+            "text": "SDC और BNB टोकन खरीदें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 42992,
-            "text": "CAKE और BNB लिक्विडिटी जोड़कर CAKE-BNB LP टोकन पाएं",
+            "text": "SDC और BNB लिक्विडिटी जोड़कर SDC-BNB LP टोकन पाएं",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 42998,
-            "text": "सेल के लाइव होने के दौरान, अपने CAKE-LP टोकन से IFO टोकन खरीदने का वचन दें",
+            "text": "सेल के लाइव होने के दौरान, अपने SDC-LP टोकन से IFO टोकन खरीदने का वचन दें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 43012,
-            "text": "CAKE के लिए अदला-बदली यानी ट्रेड-इन करें या अपने कलेक्शन के लिए रखें!",
+            "text": "SDC के लिए अदला-बदली यानी ट्रेड-इन करें या अपने कलेक्शन के लिए रखें!",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 43026,
-            "text": "जब आप CAKE पाने के लिए इस NFT को ट्रेड इन करते हैं, तो आप इसे हमेशा के लिए खो देंगे!",
+            "text": "जब आप SDC पाने के लिए इस NFT को ट्रेड इन करते हैं, तो आप इसे हमेशा के लिए खो देंगे!",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 43036,
-            "text": "विजेता, नीचे लिखी हुई समय समाप्ति तिथि तक किसी CAKE वैल्यू के लिए अपने NFT को ट्रेड इन कर सकते हैं। यदि आप उस समय तक अपने NFT को ट्रेड इन नहीं करते हैं, तो चिंता न करें: आप इसे अभी भी अपने वॉलेट में रख पाएंगे!",
+            "text": "विजेता, नीचे लिखी हुई समय समाप्ति तिथि तक किसी SDC वैल्यू के लिए अपने NFT को ट्रेड इन कर सकते हैं। यदि आप उस समय तक अपने NFT को ट्रेड इन नहीं करते हैं, तो चिंता न करें: आप इसे अभी भी अपने वॉलेट में रख पाएंगे!",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 43054,
-            "text": "CAKE के लिए ट्रेड इन करें",
+            "text": "SDC के लिए ट्रेड इन करें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 43452,
-            "text": "CAKE जीतने के लिए LP टोकन को स्टेक करें",
+            "text": "SDC जीतने के लिए LP टोकन को स्टेक करें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 43466,
-            "text": "CAKE लॉटरी",
+            "text": "SDC लॉटरी",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 43518,
-            "text": "CAKE से टिकट खरीदें",
+            "text": "SDC से टिकट खरीदें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 43584,
-            "text": "कुल लागत: 10 CAKE",
+            "text": "कुल लागत: 10 SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 43890,
-            "text": "यदि आपको कोई दूसरे मंज़ूर किए गए Pancake कलेक्शन आइटम मिलते हैं तो आप बाद में अपनी प्रोफ़ाइल पिक्चर बदल भी सकते हैं।",
+            "text": "यदि आपको कोई दूसरे मंज़ूर किए गए PanSDC कलेक्शन आइटम मिलते हैं तो आप बाद में अपनी प्रोफ़ाइल पिक्चर बदल भी सकते हैं।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 43660,
-            "text": "लागत: 5 CAKE",
+            "text": "लागत: 5 SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 43682,
-            "text": "अपर्याप्त CAKE बैलेंस",
+            "text": "अपर्याप्त SDC बैलेंस",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 43700,
-            "text": "केवल मंज़ूर किए गए Pancake कलेक्शन आइटम का ही उपयोग किया जा सकता है।",
+            "text": "केवल मंज़ूर किए गए PanSDC कलेक्शन आइटम का ही उपयोग किया जा सकता है।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 43786,
-            "text": "हमें आपके वॉलेट में कोई Pancake कलेक्शन आइटम नहीं मिला।",
+            "text": "हमें आपके वॉलेट में कोई PanSDC कलेक्शन आइटम नहीं मिला।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 43880,
-            "text": "आपको अपनी प्रोफ़ाइल का सेटअप पूरा करने के लिए Pancake कलेक्शन आइटम की जरूरत होती है। यदि आपने अपने शुरुआती कलेक्शन आइटम को दूसरे वॉलेट में बेच दिया है या ट्रांसफ़र कर दिया है तो आपको इसे वापस लेना होगा या किसी तरह से नया हासिल करना होगा। आप इस वॉलेट पते के साथ नया शुरुआती आइटम या स्टार्टर नहीं बना सकते हैं।",
+            "text": "आपको अपनी प्रोफ़ाइल का सेटअप पूरा करने के लिए PanSDC कलेक्शन आइटम की जरूरत होती है। यदि आपने अपने शुरुआती कलेक्शन आइटम को दूसरे वॉलेट में बेच दिया है या ट्रांसफ़र कर दिया है तो आपको इसे वापस लेना होगा या किसी तरह से नया हासिल करना होगा। आप इस वॉलेट पते के साथ नया शुरुआती आइटम या स्टार्टर नहीं बना सकते हैं।",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 43810,
-            "text": "प्रति $1000 CAKE",
+            "text": "प्रति $1000 SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 42834,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 42936,
-            "text": "CAKE ब्लॉक",
+            "text": "SDC ब्लॉक",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 42938,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 37658,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 37754,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 44128,
-            "text": "CAKE खरीदें",
+            "text": "SDC खरीदें",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47324,
-            "text": "न्यूनतम %num% CAKE होना जरूरी है",
+            "text": "न्यूनतम %num% SDC होना जरूरी है",
             "user": {
                 "id": 13154427,
                 "username": "Kapilswami",

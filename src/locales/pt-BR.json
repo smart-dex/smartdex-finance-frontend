@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 45336,
-            "text": "Você não vai receber recompensas em CAKE por fazer holding da SYRUP comprada.",
+            "text": "Você não vai receber recompensas em SDC por fazer holding da SYRUP comprada.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 45340,
-            "text": "Você terá que comprar de volta a mesma quantidade de SYRUP para poder converter de volta em CAKE.",
+            "text": "Você terá que comprar de volta a mesma quantidade de SYRUP para poder converter de volta em SDC.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 25410,
-            "text": "Para cada negociação uma taxa de 0,2% é paga. 0,17% vai para os provedores de liquidez e 0,03% para o tesouro da PancakeSwap.",
+            "text": "Para cada negociação uma taxa de 0,2% é paga. 0,17% vai para os provedores de liquidez e 0,03% para o tesouro da PanSDCSwap.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 8000,
-            "text": "Total de CAKE queimado desde o lançamento",
+            "text": "Total de SDC queimado desde o lançamento",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 28572,
-            "text": "Faça stake de tokens de LP para acumular CAKE",
+            "text": "Faça stake de tokens de LP para acumular SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 28580,
-            "text": "Sempre que você coloca os tokens de CAKE em stake e os retina de stake, o contrato colherá automaticamente as recompensas do CAKE para você!",
+            "text": "Sempre que você coloca os tokens de SDC em stake e os retina de stake, o contrato colherá automaticamente as recompensas do SDC para você!",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 8076,
-            "text": "Preço do Cake",
+            "text": "Preço do SDC",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 20044,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 46670,
-            "text": "Use CAKE para comprar bilhetes, contribuindo para o fundo da loteria. A compra de bilhetes é encerrada aproximadamente 30 minutos antes da loteria. Ganhe prêmios se 1, 2, 3 ou 4 dos números do seu bilhete corresponderem aos números vencedores e suas posições! Boa sorte!",
+            "text": "Use SDC para comprar bilhetes, contribuindo para o fundo da loteria. A compra de bilhetes é encerrada aproximadamente 30 minutos antes da loteria. Ganhe prêmios se 1, 2, 3 ou 4 dos números do seu bilhete corresponderem aos números vencedores e suas posições! Boa sorte!",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 20076,
-            "text": "%num% CAKE disponível",
+            "text": "%num% SDC disponível",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 28586,
-            "text": "Seu montante deve ser um múltiplo de 10 CAKE",
+            "text": "Seu montante deve ser um múltiplo de 10 SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 20080,
-            "text": "1 Bilhete = 10 CAKE",
+            "text": "1 Bilhete = 10 SDC",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 28588,
-            "text": "Você ganhará: %num% CAKE",
+            "text": "Você ganhará: %num% SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 28590,
-            "text": "Seu CAKE não será devolvido depois de ser usado para comprar bilhetes.",
+            "text": "Seu SDC não será devolvido depois de ser usado para comprar bilhetes.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 28592,
-            "text": "As compras de bilhetes são definitivas. Seu CAKE não pode ser devolvido após a compra dos bilhetes.",
+            "text": "As compras de bilhetes são definitivas. Seu SDC não pode ser devolvido após a compra dos bilhetes.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 28594,
-            "text": "Prêmios de CAKE a serem reivindicados",
+            "text": "Prêmios de SDC a serem reivindicados",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 28596,
-            "text": "Aprovar CAKE",
+            "text": "Aprovar SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 28598,
-            "text": "Você pagará por novos tokens usando tokens de CAKE-BNB LP, o que significa que você terá que fazer o stake de montantes iguais de CAKE e BNB em uma reserva de liquidez para participar.",
+            "text": "Você pagará por novos tokens usando tokens de SDC-BNB LP, o que significa que você terá que fazer o stake de montantes iguais de SDC e BNB em uma reserva de liquidez para participar.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 21698,
-            "text": "Obtenha CAKE-BNB LP >",
+            "text": "Obtenha SDC-BNB LP >",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 28600,
-            "text": "O projeto obtém o BNB, PancakeSwap queima o CAKE.",
+            "text": "O projeto obtém o BNB, PanSDCSwap queima o SDC.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 27944,
-            "text": "Lance seu projeto com PancakeSwap, o provedor de liquidez e projeto AMM mais usado da Binance Smart Chain, para levar seu token diretamente para a comunidade mais ativa e de crescimento mais rápido na BSC.",
+            "text": "Lance seu projeto com PanSDCSwap, o provedor de liquidez e projeto AMM mais usado da Binance Smart Chain, para levar seu token diretamente para a comunidade mais ativa e de crescimento mais rápido na BSC.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 28602,
-            "text": "Estatísticas de Cake",
+            "text": "Estatísticas de SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 28604,
-            "text": "Fornecimento total de CAKE",
+            "text": "Fornecimento total de SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 21646,
-            "text": "Total de CAKE queimado",
+            "text": "Total de SDC queimado",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 21648,
-            "text": "Novo CAKE/bloco",
+            "text": "Novo SDC/bloco",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 28606,
-            "text": "CAKE a ser colhido",
+            "text": "SDC a ser colhido",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 28608,
-            "text": "CAKE na carteira",
+            "text": "SDC na carteira",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 21658,
-            "text": "Coletando CAKE",
+            "text": "Coletando SDC",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 28610,
-            "text": "CAKE a ser coletado",
+            "text": "SDC a ser coletado",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 21690,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 28612,
-            "text": "Faça stake de CAKE para ganhar novos tokens.",
+            "text": "Faça stake de SDC para ganhar novos tokens.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 28614,
-            "text": "CAKE a ser queimado (USD)",
+            "text": "SDC a ser queimado (USD)",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 28616,
-            "text": "⭐️ Sempre que você coloca os tokens de LP em stake e os retina de stake, o contrato colherá automaticamente as recompensas do CAKE para você!",
+            "text": "⭐️ Sempre que você coloca os tokens de LP em stake e os retina de stake, o contrato colherá automaticamente as recompensas do SDC para você!",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 28618,
-            "text": "Compre tokens de CAKE e BNB",
+            "text": "Compre tokens de SDC e BNB",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 28620,
-            "text": "Obtenha tokens de CAKE-BNB LP adicionando liquidez de CAKE e BNB",
+            "text": "Obtenha tokens de SDC-BNB LP adicionando liquidez de SDC e BNB",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 28622,
-            "text": "Enquanto a venda estiver ativa, comprometa seus tokens de CAKE-LP para a compra dos tokens de IFO",
+            "text": "Enquanto a venda estiver ativa, comprometa seus tokens de SDC-LP para a compra dos tokens de IFO",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 28624,
-            "text": "Negocie em troca de CAKE ou guarde em sua coleção!",
+            "text": "Negocie em troca de SDC ou guarde em sua coleção!",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 28626,
-            "text": "Ao negociar este NFT em troca de CAKE, você perderá o acesso a ele para sempre!",
+            "text": "Ao negociar este NFT em troca de SDC, você perderá o acesso a ele para sempre!",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 28628,
-            "text": "Os vencedores podem negociar seus NFTs em troca de CAKE até a data de validade apresentada abaixo. Se você não negociar seu NFT até lá, não se preocupe: ele permanecerá guardado em sua carteira!",
+            "text": "Os vencedores podem negociar seus NFTs em troca de SDC até a data de validade apresentada abaixo. Se você não negociar seu NFT até lá, não se preocupe: ele permanecerá guardado em sua carteira!",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 23022,
-            "text": "Negocie por CAKE",
+            "text": "Negocie por SDC",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 28630,
-            "text": "Faça stake de tokens de LP para ganhar CAKE",
+            "text": "Faça stake de tokens de LP para ganhar SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 28632,
-            "text": "A loteria de CAKE",
+            "text": "A loteria de SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 28634,
-            "text": "Use CAKE para comprar bilhetes",
+            "text": "Use SDC para comprar bilhetes",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 28636,
-            "text": "Valor total: 10 CAKE",
+            "text": "Valor total: 10 SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 28638,
-            "text": "Você pode alterar sua imagem de perfil posteriormente se receber outro Colecionável Pancake aprovado,",
+            "text": "Você pode alterar sua imagem de perfil posteriormente se receber outro Colecionável PanSDC aprovado,",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 28640,
-            "text": "Valor: 5 CAKE",
+            "text": "Valor: 5 SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 28642,
-            "text": "Saldo de CAKE insuficiente",
+            "text": "Saldo de SDC insuficiente",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 28644,
-            "text": "Apenas Colecionáveis Pancake aprovados podem ser utilizados.",
+            "text": "Apenas Colecionáveis PanSDC aprovados podem ser utilizados.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 28646,
-            "text": "Não encontramos nenhum Colecionável Pancake em sua carteira.",
+            "text": "Não encontramos nenhum Colecionável PanSDC em sua carteira.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 28668,
-            "text": "Você precisa de um Colecionável Pancake para concluir as configurações de seu perfil. Se você vender ou transferir seu colecionável inicial para outra carteira, você precisará recuperá-lo ou obter um novo de alguma forma. Você não pode criar mais um inicial com este endereço de carteira.",
+            "text": "Você precisa de um Colecionável PanSDC para concluir as configurações de seu perfil. Se você vender ou transferir seu colecionável inicial para outra carteira, você precisará recuperá-lo ou obter um novo de alguma forma. Você não pode criar mais um inicial com este endereço de carteira.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 28648,
-            "text": "CAKE por US$1000",
+            "text": "SDC por US$1000",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 28558,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 28564,
-            "text": "Bloco de CAKE",
+            "text": "Bloco de SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 28568,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 28562,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 25250,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 45976,
-            "text": "Comprar CAKE",
+            "text": "Comprar SDC",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 46148,
-            "text": "Uma quantia mínima de %num% CAKE é necessária",
+            "text": "Uma quantia mínima de %num% SDC é necessária",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
