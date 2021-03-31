@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text, Input, Button } from 'uikit-sotatek'
+import { Text, Input, Button } from 'uikit-sotatek' 
 import useI18n from 'hooks/useI18n'
 import { darkColors, lightColors, baseColors } from '../../../../style/Color'
 
@@ -58,6 +58,9 @@ const InputStyle = styled(Input)`
   background-color: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.invertedContrast)};
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 50px;
+  &:focus:not(:disabled) {
+    box-shadow: none !important;
+  }
 `
 const ButtonStyle = styled(Button)`
   background: ${({ theme }) => (theme.isDark ? baseColors.primary : 'rgba(95, 94, 118, 0.5)')};
