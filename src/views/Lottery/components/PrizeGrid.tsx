@@ -75,6 +75,16 @@ const HeadingStyle = styled(Heading)`
     font-size: 18px;
    }
 `
+
+const RightAlignedBurn = styled(Text)`
+text-align: center;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  font-size: 14px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
+`
+
 const PrizeGrid: React.FC<PrizeGridProps> = ({
   lotteryPrizeAmount = 0,
   pastDraw = false,
@@ -118,7 +128,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {pastDraw ? (
         <PastDrawGridItem>
-          <RightAlignedText bold>{threeTicketMatches}</RightAlignedText>
+          <TextStyleThree bold>{threeTicketMatches}</TextStyleThree>
         </PastDrawGridItem>
       ) : <PastDrawGridItem />}
       <GridItem>
@@ -144,14 +154,14 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
         <>
           <GridItem marginBottom="0" />
           <GridItem marginBottom="0">
-            <RightAlignedText>{burnAmount.toLocaleString()}</RightAlignedText>
+            <RightAlignedBurn>{burnAmount.toLocaleString()}</RightAlignedBurn>
           </GridItem>
         </>
       ) : (
         <>
         <GridItem marginBottom="0" />
         <GridItem marginBottom="0">
-          <RightAlignedText>{burnAmount.toLocaleString()}</RightAlignedText>
+          <RightAlignedBurn>{burnAmount.toLocaleString()}</RightAlignedBurn>
         </GridItem>
         </>
       )}
