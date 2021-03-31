@@ -101,7 +101,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
 
   const renderStakingButtons = () => {
     return rawStakedBalance === 0 ? (
-      <StakeButton onClick={onPresentDeposit}>
+      <StakeButton onClick={onPresentDeposit} disabled={removed}>
         {TranslateString(999, 'Stake LP')}
       </StakeButton>
     ) : (
