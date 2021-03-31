@@ -30,7 +30,7 @@ const List = styled.ul`
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     color: ${lightColors.colorWap};
     padding-left: 16px;
     list-style: none;
@@ -51,6 +51,7 @@ const List = styled.ul`
     & > li {
       font-size: 14px;
       line-height: 20px;
+      margin-bottom: 8px;
     }
   }
 `
