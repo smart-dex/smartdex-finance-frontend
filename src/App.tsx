@@ -40,7 +40,7 @@ const App: React.FC = () => {
   }, [])
 
   useEffect(() => {
-    if (!account && window.localStorage.getItem('accountStatus')) {
+    if (!account && window.localStorage.getItem('connectorId')) {
       connect('injected')
     }
   }, [account, connect])

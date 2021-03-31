@@ -79,7 +79,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
   )
 
   return (
-    <ModalStyle title={`${TranslateString(999, 'Action')} `} onDismiss={onDismiss}>
+    <ModalStyle title={` `} onDismiss={onDismiss}>
       <StyledModal>
         <ActionEarn>
           <StyledImg>
@@ -100,7 +100,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
           <StyledGroupButton>
             {account && harvest && !isOldSyrup && (
               <HarvestButton
-               disabled={!earnings.toNumber() || pendingTx}
+                disabled={!earnings.toNumber() || pendingTx}
                 isDisable={earnings.toNumber() || pendingTx}
                 onClick={async () => {
                   setPendingTx(true)
@@ -109,7 +109,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                   onDismiss()
                 }}
               >
-                {pendingTx ? 'Collecting' : 'Harvest'}</HarvestButton>
+                {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>
             )}
             {!isOldSyrup && sousId === 0 && account && harvest && (
               <CompoundButton
@@ -218,69 +218,76 @@ const BalanceAndCompound = styled.div`
   }
 `
 const ButtonUnstake = styled(Button) <{ isDisable: boolean }>`
-  padding: 0 20px;
-  background: ${({ isDisable }) => !isDisable && baseColors.primary};
+padding: 0 20px;
+background: ${({ isDisable }) => !isDisable && baseColors.primary};
+box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+font-weight: 600;
+font-size: 13px;
+line-height: 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+max-width: 143px;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+  width: 143px;
+}
+`
+const StyledAddButton = styled(Flex)`
+margin-left:0px;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+  margin-bottom:10px;
+  margin-top:10px;
+  margin-left:14px;
+}
+justify-content:center;
+> button{
+  box-shadow:none;
+  width:56px;
+  height:56px;
+  background: #0085FF;
+  border: 1px solid #0085FF;
+}
+`
+const HarvestButton = styled(Button) <{ isDisable: boolean }>`
+    background: ${baseColors.primary};
+    box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    width: 100%;
+    max-width:143px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right:0px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+      min-width:143px;
+      margin-right:7px;
+    }
+`
+const CompoundButton = styled(Button) <{ isDisable: boolean }>`
+  background: ${baseColors.primary};
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
-  width:100%;
+  width: 100%;
+  max-width:143px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:0px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-    width: calc(70% - 7px);
+    min-width:143px;
+    margin-left:7px;
   }
-`
-const StyledAddButton = styled(Flex)`
-  
-  ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 16px;
-    width: calc(30% - 7px);
-    margin-bottom:10px;
-    margin-top:10px;
-    margin-left:auto;
-}
-  justify-content:center;
-  > button{
-    box-shadow:none;
-    width:56px;
-    height:56px;
-    background: #0085FF;
-    border: 1px solid #0085FF;
-  }
-`
-const HarvestButton = styled(Button) <{ isDisable: boolean }>`
-    background: ${ baseColors.primary};
-    box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 20px;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    ${({ theme }) => theme.mediaQueries.nav} {
-      font-size: 16px;
-      width: calc(50% - 7px);
-    }
-`
-const CompoundButton = styled(Button) <{ isDisable: boolean }>`
-    background: ${ baseColors.primary};
-    box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 20px;
-    width: 100%;
-    margin-top: 10px;
-    margin-left:auto;
-    margin-bottom: 10px;
-    ${({ theme }) => theme.mediaQueries.nav} {
-      font-size: 16px;
-      width: calc(50% - 7px);
-    }
 `
 
 
 const StyledGroupButton = styled(Flex)`
   justify-content: center;
+  align-items: center;
   padding:0px 15px 23px 15px;
   margin-top:49px;
   flex-direction: column;

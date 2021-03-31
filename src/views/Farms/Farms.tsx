@@ -109,7 +109,6 @@ const Farms: React.FC = () => {
           {farmsList(inactiveFarms, true)}
         </Route>
       </FlexLayout>
-      {/* <Image src="/images/cakecat.png" alt="Pancake illustration" width={949} height={384} responsive /> */}
     </Page>
   )
 }

@@ -125,7 +125,8 @@ const HeadingPage = styled(Heading)`
 `
 
 const DescriptionHeading = styled.div`
-  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
   font-size: 13px;
   line-height: 143%;
   text-align: center;

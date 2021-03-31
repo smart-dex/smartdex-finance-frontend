@@ -155,7 +155,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               <ImageCoin>
                 <img
                   src={`/images/tokens/${image || tokenName}.png`}
-                  alt={tokenName}
+                  alt={" "}
                   style={{ width: '100%', height: '100%' }}
                 />
               </ImageCoin>
@@ -219,8 +219,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                     marginTop='10px'
                     onClick={onStart}
                   >
-                     {TranslateString(999, 'Select')}
-                </ButtonSelect>
+                    {TranslateString(999, 'Select')}
+                  </ButtonSelect>
                 </>
               ))}
           {account && !needsApproval &&
@@ -416,25 +416,63 @@ const StyleNamePool = styled.div`
   }
   &:hover{
     >div{
-      visibility: visible;
+      opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     }
   }
 
 `
 const StyledTooltip = styled.div`
-visibility: hidden;
-width: calc( 100% + 20px);
-top: -32px;
-left: 1px;
-background-color: black;
-color: #ffffff;
-text-align: center;
-border-radius: 6px;
-padding: 5px 0;
-position: absolute;
-z-index: 1;
-  font-size: 18px;
-}
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  opacity: 0;
+  z-index: 99;
+  color: #FFFFFF;
+  width: calc( 100% + 20px);
+  display: block;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #111;
+  background: rgba(51,51,51,0.9);
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  &:before {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(51,51,51,0.9);
+    position: absolute;
+    bottom: -10px;
+    left: 43%;
+
+  }
+  &:affter {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(51,51,51,0.9);
+    position: absolute;
+    bottom: -10px;
+    left: 43%;
+
+  }
+
 `
 const StyledButtonUnlock = styled(UnlockButton)`
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
@@ -488,7 +526,6 @@ const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
   line-height: 20px;
   width: 100%;
   border: 1px solid #17C267;
-  filter:  ${({ isDisable }) => isDisable ? '' : 'drop-shadow(0px 4px 10px rgba(111, 180, 143, 0.24))'} ;
   border-radius: 10px;
   box-shadow: none;
   ${({ theme }) => theme.mediaQueries.nav} {

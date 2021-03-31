@@ -26,10 +26,7 @@ margin-top: 10px;
   font-size: 14px;
   margin-bottom: 10px;
 `
-const Value = styled.div`
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 14px;
-`
+
 
 const StyledCardName = styled.div`
 
@@ -178,13 +175,13 @@ const Coming: React.FC = () => {
 
         <DetailPlaceholder>
           <StyleFlexDetail>{TranslateString(736, 'APR')}:</StyleFlexDetail>
-          <Value>??</Value>
+          <StyleFlexDetail style={{marginLeft:'5px'}}>??</StyleFlexDetail>
         </DetailPlaceholder>
         <DetailPlaceholder>
           <StyleFlexDetail>
             {TranslateString(384, 'Your Stake')}:
            </StyleFlexDetail>
-          <Value>???</Value>
+          <StyleFlexDetail style={{marginLeft:'5px'}}>???</StyleFlexDetail>
         </DetailPlaceholder>
 
       </CardContentComing>

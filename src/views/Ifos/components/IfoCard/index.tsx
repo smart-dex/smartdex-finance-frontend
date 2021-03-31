@@ -32,7 +32,8 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 40px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-  ${({ theme }) => theme.mediaQueries.sm} {
+  box-shadow: 10px 10px 20px rgba(120, 118, 148, 0.1);
+  ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
     width: 85%;
   }
@@ -57,7 +58,6 @@ const WrapButtonRow = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   justify-content: center;
   & > button,
   & > a {

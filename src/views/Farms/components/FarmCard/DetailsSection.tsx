@@ -18,20 +18,7 @@ interface ExpandableSectionProps {
 }
 
 
-// const StyledLinkExternal = styled(LinkExternal)`
-//     font-size: 13px;
-//     ${({ theme }) => theme.mediaQueries.nav} {
-//       font-size: 16px;
-//     }
-//     color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
-//     width: fit-content;
-//     background:none;
-//     svg {
-//     padding-left: 4px;
-//     width: auto;
-//     fill: ${({ theme }) => theme.colors.primary};
-//   }
-// `
+
 
 const StyledText = styled(Text)`
   align-self: center;
