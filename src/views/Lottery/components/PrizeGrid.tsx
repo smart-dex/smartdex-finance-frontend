@@ -100,7 +100,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
   return (
     <Grid pastDraw={pastDraw} style={{ padding: '8px'}}>
       <GridItem style={{ textAlign: 'center'}}>
-        <TextStyle>{TranslateString(756, 'No. Matched')}</TextStyle>
+        <RightAlignedText>{TranslateString(756, 'No. Matched')}</RightAlignedText>
       </GridItem>
       {pastDraw ? (
         <PastDrawGridItem>
@@ -136,7 +136,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {/* 2 matches row */}
       <GridItem>
-        <TextStyle>2</TextStyle>
+        <RightAlignedText>2</RightAlignedText>
       </GridItem>
       {pastDraw ? (
         <PastDrawGridItem>
