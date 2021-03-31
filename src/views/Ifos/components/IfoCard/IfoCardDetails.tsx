@@ -93,7 +93,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
         </Item>
         <Item>
           <Display>{TranslateString(999, 'Total raised (% of target)')}</Display>
-          <Text>{`${totalAmount.div(raisingAmount).times(100).toFixed(2)}%`}</Text>
+          <Text>{totalAmount.div(raisingAmount).times(100).toFixed(2) !== 'NaN' ? totalAmount.div(raisingAmount).times(100).toFixed(2) : '0'}%</Text>
         </Item>
       </StyledIfoCardDetails>
     </>
