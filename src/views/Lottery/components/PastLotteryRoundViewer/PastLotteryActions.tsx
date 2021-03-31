@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, LinkExternal, useModal } from '@pancakeswap-libs/uikit'
+import { Button, LinkExternal, useModal } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useTickets from 'hooks/useTickets'
@@ -27,9 +27,14 @@ const ExternalLinkWrap = styled(LinkExternal)`
   justify-content: center;
   text-decoration: none;
   width: 100%;
+  background: none;
+  font-size: 12px;
   color: ${ baseColors.primary};
   svg {
     fill: ${ baseColors.primary};
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
   }
 `
 
@@ -54,6 +59,17 @@ const BoxIconDirect = styled.div`
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 36px;
     line-height: 60px;
+  }
+`
+
+const ButtonStyle = styled(Button)`
+  font-size: 12px;
+  padding: 0 12px;
+  height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    padding: 0 24px;
+    height: 56px;
   }
 `
 
@@ -82,9 +98,9 @@ const TicketCard: React.FC<{ contractLink?: string; lotteryNumber?: number }> = 
   return (
     <Wrapper>
       <div>
-        <Button disabled={ticketsLength === 0} onClick={onPresentMyTickets} style={{ width: '100%' }}>
+        <ButtonStyle disabled={ticketsLength === 0} onClick={onPresentMyTickets} style={{ width: '100%', background: ticketsLength === 0 ? '' : baseColors.primary  }}>
           {TranslateString(432, 'View Your Tickets')}
-        </Button>
+        </ButtonStyle>
       </div>
       <div>
         <ExternalLinkWrap href={contractLink}>{TranslateString(356, 'View on BscScan')}</ExternalLinkWrap>
