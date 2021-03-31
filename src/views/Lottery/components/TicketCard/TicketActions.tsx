@@ -68,8 +68,8 @@ const TicketCard: React.FC = () => {
           <ButtonDisableStyle disabled style={{ width: '100%' }}>
             {TranslateString(432, 'View your tickets')}
           </ButtonDisableStyle>
-          <ButtonDisableStyle disabled={requestedApproval} onClick={handleApprove} style={{ width: '100%' }}>
-            {TranslateString(494, 'Approve CAKE')}
+          <ButtonDisableStyle disabled={requestedApproval} onClick={handleApprove} style={{ width: '100%', background: requestedApproval ? '' : baseColors.primary  }}>
+            {TranslateString(494, 'Approve SDC')}
           </ButtonDisableStyle>
         </>
       )
