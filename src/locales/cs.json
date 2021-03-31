@@ -1,0 +1,2102 @@
+[
+    {
+        "data": {
+            "stringId": 2,
+            "contentType": "text/plain",
+            "translationId": 18958,
+            "text": "Farmaření",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:53:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 4,
+            "contentType": "text/plain",
+            "translationId": 12698,
+            "text": "Staking",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T09:58:16+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 8,
+            "contentType": "text/plain",
+            "translationId": 12878,
+            "text": "Burza",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:05:05+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 10,
+            "contentType": "text/plain",
+            "translationId": 18960,
+            "text": "Dokumenty",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:53:39+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12,
+            "contentType": "text/plain",
+            "translationId": 18780,
+            "text": "Hlasování",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:20:35+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 14,
+            "contentType": "text/plain",
+            "translationId": 18782,
+            "text": "Loterie",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:20:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 34,
+            "contentType": "text/plain",
+            "translationId": 18850,
+            "text": "Telegram",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:38:39+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 76,
+            "contentType": "text/plain",
+            "translationId": 18890,
+            "text": "Od",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T12:58:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 78,
+            "contentType": "text/plain",
+            "translationId": 18804,
+            "text": "Bilance: %num%",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:36:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 80,
+            "contentType": "text/plain",
+            "translationId": 18892,
+            "text": "Do",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T12:58:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 82,
+            "contentType": "text/plain",
+            "translationId": 13898,
+            "text": "Vyberte token",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:29:41+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 84,
+            "contentType": "text/plain",
+            "translationId": 13908,
+            "text": "Zadejte částku",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:30:00+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 86,
+            "contentType": "text/plain",
+            "translationId": 13916,
+            "text": "Nastavení Transakce",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:30:15+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 88,
+            "contentType": "text/plain",
+            "translationId": 14282,
+            "text": "Tolerance odklonu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:41:36+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 90,
+            "contentType": "text/plain",
+            "translationId": 12760,
+            "text": "Uzávěrka transakce",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:01:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 92,
+            "contentType": "text/plain",
+            "translationId": 18806,
+            "text": "minut",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:37:16+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 94,
+            "contentType": "text/plain",
+            "translationId": 18894,
+            "text": "Nastavení Rozhraní",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T12:59:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 96,
+            "contentType": "text/plain",
+            "translationId": 14304,
+            "text": "Přepnout na Režim Zvuku",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:41:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 98,
+            "contentType": "text/plain",
+            "translationId": 14310,
+            "text": "Přepnout na Tmavý Režim",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:41:57+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 102,
+            "contentType": "text/plain",
+            "translationId": 13884,
+            "text": "Vaše Likvidita",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:29:14+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 106,
+            "contentType": "text/plain",
+            "translationId": 18882,
+            "text": "Nevidíte fond, do kterého jste se připojili?",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:52:16+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 108,
+            "contentType": "text/plain",
+            "translationId": 18884,
+            "text": "Importovat.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:52:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 110,
+            "contentType": "text/plain",
+            "translationId": 18886,
+            "text": "Již brzy",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:52:40+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 114,
+            "contentType": "text/plain",
+            "translationId": 12588,
+            "text": "Celková Likvidita",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T09:53:04+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 116,
+            "contentType": "text/plain",
+            "translationId": 18898,
+            "text": "Zobrazit na BscScanu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:03:04+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 126,
+            "contentType": "text/plain",
+            "translationId": 12814,
+            "text": "Název Tokenu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:03:38+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 128,
+            "contentType": "text/plain",
+            "translationId": 18800,
+            "text": "Vyhledejte token podle jeho názvu nebo symbolu nebo vložením jeho adresy níže.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:35:36+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 130,
+            "contentType": "text/plain",
+            "translationId": 18836,
+            "text": "Když přidáte likviditu, dostanete tokeny fondu, které představují váš podíl. Pokud nevidíte fond, ke kterému jste se v tomto seznamu připojili, zkuste importovat fond níže",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:29:04+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 132,
+            "contentType": "text/plain",
+            "translationId": 18896,
+            "text": "Vklad",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:02:39+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 136,
+            "contentType": "text/plain",
+            "translationId": 12798,
+            "text": "Nesprávná dvojice",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:03:06+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 138,
+            "contentType": "text/plain",
+            "translationId": 18776,
+            "text": "Připojte peněženku",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:19:21+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 140,
+            "contentType": "text/plain",
+            "translationId": 13938,
+            "text": "Připojte se k peněžence",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:30:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 142,
+            "contentType": "text/plain",
+            "translationId": 12720,
+            "text": "Syrup Upozornění",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T09:59:57+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 144,
+            "contentType": "text/plain",
+            "translationId": 12924,
+            "text": "Prosím, buďte opatrní při Nákupu SYRUPU.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:06:18+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 146,
+            "contentType": "text/plain",
+            "translationId": 18786,
+            "text": "Za držení zakoupeného SYRUPU nezískáte bonusové tokeny CAKE.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:24:13+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 148,
+            "contentType": "text/plain",
+            "translationId": 18788,
+            "text": "Rozumím",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:29:55+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 150,
+            "contentType": "text/plain",
+            "translationId": 18790,
+            "text": "Pokračovat",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:30:16+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 152,
+            "contentType": "text/plain",
+            "translationId": 13146,
+            "text": "Prosím, buďte opatrní při Prodeji SYRUPU.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:12:28+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 154,
+            "contentType": "text/plain",
+            "translationId": 18792,
+            "text": "Budete muset koupit stejné množství SYRUPU, abyste je poté mohli převést zpět na CAKE.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:31:57+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 156,
+            "contentType": "text/plain",
+            "translationId": 18794,
+            "text": "Připojte se k peněžence, abyste si mohli zobrazit svou likviditu.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:33:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 158,
+            "contentType": "text/plain",
+            "translationId": 14062,
+            "text": "Vyhledejte název nebo vložte adresu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:34:55+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 160,
+            "contentType": "text/plain",
+            "translationId": 18796,
+            "text": "Nesprávná Síť",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:33:38+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 162,
+            "contentType": "text/plain",
+            "translationId": 18798,
+            "text": "Připojte se prosím k příslušné síti Binance Smart Chain.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:34:29+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 164,
+            "contentType": "text/plain",
+            "translationId": 18954,
+            "text": "Když přidáte likviditu, dostanete tokeny fondu představující vaši pozici. Tyto tokeny automaticky získávají poplatky úměrné vašemu podílu na fondu a lze si je nechat kdykoli proplatit.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:51:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 166,
+            "contentType": "text/plain",
+            "translationId": 18802,
+            "text": "MAX",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:36:21+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 168,
+            "contentType": "text/plain",
+            "translationId": 18880,
+            "text": "Přidat Likviditu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:51:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 170,
+            "contentType": "text/plain",
+            "translationId": 9256,
+            "text": "Nebyla nalezena likvidita.",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:48+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 172,
+            "contentType": "text/plain",
+            "translationId": 18900,
+            "text": "Propojeno s MetaMask",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:03:13+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 174,
+            "contentType": "text/plain",
+            "translationId": 18902,
+            "text": "Účet",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:03:21+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 176,
+            "contentType": "text/plain",
+            "translationId": 14348,
+            "text": "Zkopírovat Adresu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:43:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 178,
+            "contentType": "text/plain",
+            "translationId": 18904,
+            "text": "Vaše transakce se zobrazí zde...",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:03:43+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 180,
+            "contentType": "text/plain",
+            "translationId": 18906,
+            "text": "Změnit",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:04:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 186,
+            "contentType": "text/plain",
+            "translationId": 18942,
+            "text": "Vaše transakce se navrátí, pokud se cena nepříznivě změní o více než toto procento.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:35:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 188,
+            "contentType": "text/plain",
+            "translationId": 18940,
+            "text": "Vaše transakce se navrátí, pokud čeká dlouho.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:35:28+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 190,
+            "contentType": "text/plain",
+            "translationId": 18860,
+            "text": "Jazyk",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:40:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 192,
+            "contentType": "text/plain",
+            "translationId": 18858,
+            "text": "Kód",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:39:47+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 194,
+            "contentType": "text/plain",
+            "translationId": 18856,
+            "text": "Od (odhadem)",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:39:38+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 196,
+            "contentType": "text/plain",
+            "translationId": 18854,
+            "text": "Do (odhadem)",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:39:24+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 198,
+            "contentType": "text/plain",
+            "translationId": 18852,
+            "text": "O nás",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:38:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 200,
+            "contentType": "text/plain",
+            "translationId": 18848,
+            "text": "Kód",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:38:34+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 202,
+            "contentType": "text/plain",
+            "translationId": 18862,
+            "text": "Vaše transakce se vrátí zpět, pokud dojde k velkému a nepříznivému pohybu ceny, ještě než bude potvrzena.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:42:47+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 204,
+            "contentType": "text/plain",
+            "translationId": 18864,
+            "text": "Schvalování",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:43:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 206,
+            "contentType": "text/plain",
+            "translationId": 15426,
+            "text": "Schváleno",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T11:35:35+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 208,
+            "contentType": "text/plain",
+            "translationId": 18866,
+            "text": "Vyberte token k zobrazení vaší likvidity.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:43:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 210,
+            "contentType": "text/plain",
+            "translationId": 18868,
+            "text": "Fond Nalezen!",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:44:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 212,
+            "contentType": "text/plain",
+            "translationId": 18956,
+            "text": "V tomto fondu ještě nemáte likviditu.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:52:47+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 214,
+            "contentType": "text/plain",
+            "translationId": 18870,
+            "text": "Fond nebyl nalezen",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:44:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 216,
+            "contentType": "text/plain",
+            "translationId": 18872,
+            "text": "Vytvořit fond.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:44:34+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 218,
+            "contentType": "text/plain",
+            "translationId": 18874,
+            "text": "Načítání",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:44:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 220,
+            "contentType": "text/plain",
+            "translationId": 18876,
+            "text": "Maximálně prodáno",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:45:20+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 222,
+            "contentType": "text/plain",
+            "translationId": 18878,
+            "text": "Maximálně obdrženo",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:45:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 224,
+            "contentType": "text/plain",
+            "translationId": 18938,
+            "text": "Rozdíl mezi tržní cenou a odhadovanou cenou v důsledku velikosti obchodu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:33:37+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 226,
+            "contentType": "text/plain",
+            "translationId": 18922,
+            "text": "Cenový Dopad",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:28:55+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 228,
+            "contentType": "text/plain",
+            "translationId": 18924,
+            "text": "Poplatek Poskytovatele Likvidity",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:29:16+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 230,
+            "contentType": "text/plain",
+            "translationId": 18926,
+            "text": "Za každý obchod se platí 0.2% poplatek. 0.17% je pro poskytovatele likvidity a 0.03% do PancakeSwap pokladny.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:30:24+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 232,
+            "contentType": "text/plain",
+            "translationId": 18928,
+            "text": "Trasa",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:31:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 234,
+            "contentType": "text/plain",
+            "translationId": 18930,
+            "text": "Směrování přes tyto tokeny vedlo k nejlepší ceně pro váš obchod.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 236,
+            "contentType": "text/plain",
+            "translationId": 18932,
+            "text": "Počáteční ceny",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:32:24+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 238,
+            "contentType": "text/plain",
+            "translationId": 18934,
+            "text": "Ceny",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:32:33+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 240,
+            "contentType": "text/plain",
+            "translationId": 18936,
+            "text": "a podíl na fondu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:32:49+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 242,
+            "contentType": "text/plain",
+            "translationId": 18920,
+            "text": "za",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:28:23+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 244,
+            "contentType": "text/plain",
+            "translationId": 18918,
+            "text": "Vloženo",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:27:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 246,
+            "contentType": "text/plain",
+            "translationId": 18916,
+            "text": "Kurz",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:27:30+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 248,
+            "contentType": "text/plain",
+            "translationId": 18914,
+            "text": "Podíl Fondu:",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:26:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 250,
+            "contentType": "text/plain",
+            "translationId": 18910,
+            "text": "Vytvořte Fond & Dodávku",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:26:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 252,
+            "contentType": "text/plain",
+            "translationId": 18908,
+            "text": "Potvrďte Dodávku",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:25:18+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 254,
+            "contentType": "text/plain",
+            "translationId": 18888,
+            "text": "Importovat Fond",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T12:55:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 256,
+            "contentType": "text/plain",
+            "translationId": 18912,
+            "text": "Pomocí tohoto nástroje můžete najít dvojice, které se v rozhraní automaticky neobjeví.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T13:26:39+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 258,
+            "contentType": "text/plain",
+            "translationId": 18838,
+            "text": "Přidat",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 260,
+            "contentType": "text/plain",
+            "translationId": 18840,
+            "text": "Odebrat",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:29:45+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 262,
+            "contentType": "text/plain",
+            "translationId": 18826,
+            "text": "Likvidita",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:25:01+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 264,
+            "contentType": "text/plain",
+            "translationId": 18842,
+            "text": "Když přidáte likviditu, dostanete tokeny fondu představující vaši pozici. Tyto tokeny automaticky získávají poplatky úměrné vašemu podílu na fondu a lze si je nechat kdykoli proplatit.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:32:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 266,
+            "contentType": "text/plain",
+            "translationId": 18844,
+            "text": "Odebráním tokenů z fondu převedete vaši pozici zpět na podkladové tokeny v aktuálním poměru, úměrně vašemu podílu na fondu. Získané poplatky jsou zahrnuty do obdržených částek.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:34:04+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 268,
+            "contentType": "text/plain",
+            "translationId": 18846,
+            "text": "Vloženo do fondu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:38:07+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 270,
+            "contentType": "text/plain",
+            "translationId": 18832,
+            "text": "Vaše tokeny fondu:",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:26:16+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 272,
+            "contentType": "text/plain",
+            "translationId": 18830,
+            "text": "Váš podíl na fondu:",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:26:00+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 274,
+            "contentType": "text/plain",
+            "translationId": 18828,
+            "text": "Nedostatečný",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:25:34+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 276,
+            "contentType": "text/plain",
+            "translationId": 18824,
+            "text": "bilance",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T11:23:15+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 278,
+            "contentType": "text/plain",
+            "translationId": 9300,
+            "text": "Farmaření",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 280,
+            "contentType": "text/plain",
+            "translationId": 13020,
+            "text": "Staking",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:08:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 284,
+            "contentType": "text/plain",
+            "translationId": 13028,
+            "text": "Burza",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:09:07+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 286,
+            "contentType": "text/plain",
+            "translationId": 9508,
+            "text": "Dokumenty",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 288,
+            "contentType": "text/plain",
+            "translationId": 9560,
+            "text": "Hlasování",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 290,
+            "contentType": "text/plain",
+            "translationId": 9612,
+            "text": "Loterie",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 292,
+            "contentType": "text/plain",
+            "translationId": 9664,
+            "text": "Odemknout Peněženku",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 294,
+            "contentType": "text/plain",
+            "translationId": 9716,
+            "text": "Váš Zůstatek %asset%",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 296,
+            "contentType": "text/plain",
+            "translationId": 9766,
+            "text": "Celková %asset% Částka",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 298,
+            "contentType": "text/plain",
+            "translationId": 14586,
+            "text": "UZAMČENO",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:50:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 300,
+            "contentType": "text/plain",
+            "translationId": 14676,
+            "text": "Zpracovávající se sklizeň",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:52:33+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 302,
+            "contentType": "text/plain",
+            "translationId": 14682,
+            "text": "Nové odměny za blok",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:52:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 304,
+            "contentType": "text/plain",
+            "translationId": 9974,
+            "text": "Celkové CAKE spálené od spuštění",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 306,
+            "contentType": "text/plain",
+            "translationId": 14744,
+            "text": "Podívejte se do Kuchyně",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:54:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 308,
+            "contentType": "text/plain",
+            "translationId": 10078,
+            "text": "Telegram",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 310,
+            "contentType": "text/plain",
+            "translationId": 10130,
+            "text": "Blog",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 312,
+            "contentType": "text/plain",
+            "translationId": 10182,
+            "text": "Github",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 314,
+            "contentType": "text/plain",
+            "translationId": 10234,
+            "text": "Twitter",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 316,
+            "contentType": "text/plain",
+            "translationId": 10286,
+            "text": "Vklad",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 318,
+            "contentType": "text/plain",
+            "translationId": 10338,
+            "text": "Vyděláno",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 320,
+            "contentType": "text/plain",
+            "translationId": 14806,
+            "text": "Zastakujte FLIP tokeny na hromadění CAKE",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:56:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 328,
+            "contentType": "text/plain",
+            "translationId": 10596,
+            "text": "Můžete je kdykoli vyměnit",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:55+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 330,
+            "contentType": "text/plain",
+            "translationId": 10648,
+            "text": "%asset% Vyděláno",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 332,
+            "contentType": "text/plain",
+            "translationId": 13054,
+            "text": "Zastakované Tokeny",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:10:06+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 334,
+            "contentType": "text/plain",
+            "translationId": 13110,
+            "text": "Pokaždé, když zastakujete a odstakujete CAKE tokeny, kontrakt za vás automaticky sklidí odměnu CAKE!",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:11:30+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 342,
+            "contentType": "text/plain",
+            "translationId": 13226,
+            "text": "Získané XVS Tokeny",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:14:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 346,
+            "contentType": "text/plain",
+            "translationId": 14860,
+            "text": "Odměny se počítají za blok a celkové odměny se automaticky rozdělí na konci období farmaření každého projektu.",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:59:43+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 348,
+            "contentType": "text/plain",
+            "translationId": 11114,
+            "text": "Pool",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 350,
+            "contentType": "text/plain",
+            "translationId": 11166,
+            "text": "Již brzy",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 352,
+            "contentType": "text/plain",
+            "translationId": 11218,
+            "text": "APY",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 354,
+            "contentType": "text/plain",
+            "translationId": 13290,
+            "text": "Celková Likvidita",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:16:17+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 356,
+            "contentType": "text/plain",
+            "translationId": 11318,
+            "text": "Zobrazit na BscScan",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 358,
+            "contentType": "text/plain",
+            "translationId": 11368,
+            "text": "Cena Cake",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 360,
+            "contentType": "text/plain",
+            "translationId": 14870,
+            "text": "%asset% Získáno Tokenů",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T11:00:15+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 362,
+            "contentType": "text/plain",
+            "translationId": 14884,
+            "text": "%num% počet bloků před koncem farmaření",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T11:00:57+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 382,
+            "contentType": "text/plain",
+            "translationId": 18810,
+            "text": "Již brzy...",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:38:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 384,
+            "contentType": "text/plain",
+            "translationId": 13440,
+            "text": "Váš Stake",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:19:20+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 386,
+            "contentType": "text/plain",
+            "translationId": 18812,
+            "text": "Farmaření začíná za %num% Bloků",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:40:09+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 388,
+            "contentType": "text/plain",
+            "translationId": 18814,
+            "text": "Ukončený",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:40:22+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 390,
+            "contentType": "text/plain",
+            "translationId": 18816,
+            "text": "Farmaření končí za %num% Bloků",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-16T10:40:43+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 392,
+            "contentType": "text/plain",
+            "translationId": 13408,
+            "text": "Stránka Projektu",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-11T10:18:46+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 452,
+            "contentType": "text/plain",
+            "translationId": 20930,
+            "text": "Max",
+            "user": {
+                "id": 14451620,
+                "username": "novotnyvo",
+                "fullName": "Vojta Novotny",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14451620/medium/5af876c29b99eb6f8350272b4e2973c4.jpeg"
+            },
+            "createdAt": "2020-10-24T19:37:16+00:00"
+        }
+    }
+]

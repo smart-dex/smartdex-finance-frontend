@@ -1,0 +1,992 @@
+[
+    {
+        "data": {
+            "stringId": 2,
+            "contentType": "text/plain",
+            "translationId": 6946,
+            "text": "Agricultura",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T17:40:55+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 4,
+            "contentType": "text/plain",
+            "translationId": 6704,
+            "text": "Apilament",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T13:10:34+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 8,
+            "contentType": "text/plain",
+            "translationId": 6716,
+            "text": "Intercanvi",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T13:11:27+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 10,
+            "contentType": "text/plain",
+            "translationId": 6720,
+            "text": "Documents",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T13:11:41+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12,
+            "contentType": "text/plain",
+            "translationId": 6722,
+            "text": "Votar",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T13:11:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 14,
+            "contentType": "text/plain",
+            "translationId": 6726,
+            "text": "Loteria",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T13:12:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 34,
+            "contentType": "text/plain",
+            "translationId": 6756,
+            "text": "Telegram",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T13:17:15+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 76,
+            "contentType": "text/plain",
+            "translationId": 7138,
+            "text": "Des de",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:50:45+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 78,
+            "contentType": "text/plain",
+            "translationId": 7140,
+            "text": "Note: %num%",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:53:00+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 80,
+            "contentType": "text/plain",
+            "translationId": 7142,
+            "text": "A",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:53:15+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 82,
+            "contentType": "text/plain",
+            "translationId": 7144,
+            "text": "Escull un fitxes",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:54:04+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 84,
+            "contentType": "text/plain",
+            "translationId": 7146,
+            "text": "Introduïu un import",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:54:19+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 86,
+            "contentType": "text/plain",
+            "translationId": 7148,
+            "text": "Paràmetres de Transacció",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:55:49+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 88,
+            "contentType": "text/plain",
+            "translationId": 7150,
+            "text": "Tolerància a la caiguda",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:56:26+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 90,
+            "contentType": "text/plain",
+            "translationId": 7152,
+            "text": "Transacció límit",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:57:08+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 92,
+            "contentType": "text/plain",
+            "translationId": 7154,
+            "text": "minuts",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:57:19+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 94,
+            "contentType": "text/plain",
+            "translationId": 6936,
+            "text": "Opcions d'interfície",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T16:38:35+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 96,
+            "contentType": "text/plain",
+            "translationId": 6938,
+            "text": "Eina d'àudio",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T16:38:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 98,
+            "contentType": "text/plain",
+            "translationId": 6940,
+            "text": "Manera fosc",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T16:39:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 102,
+            "contentType": "text/plain",
+            "translationId": 7156,
+            "text": "La seva liquiditat",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T18:58:22+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 106,
+            "contentType": "text/plain",
+            "translationId": 7160,
+            "text": "No veieu cap pool al qual us heu unit?",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T19:00:28+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 108,
+            "contentType": "text/plain",
+            "translationId": 7162,
+            "text": "Importeu-lo.",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T19:01:14+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 110,
+            "contentType": "text/plain",
+            "translationId": 7164,
+            "text": "Pròximament",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T19:01:45+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 114,
+            "contentType": "text/plain",
+            "translationId": 7168,
+            "text": "Liquiditat Total",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T19:02:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 116,
+            "contentType": "text/plain",
+            "translationId": 7170,
+            "text": "Veure a BscScan",
+            "user": {
+                "id": 14439692,
+                "username": "rbsn201",
+                "fullName": "Ryan Belam",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439692/medium/22cfc0655badc4d7b3f96afecb8f7b1e.jpg"
+            },
+            "createdAt": "2020-10-02T19:03:17+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 126,
+            "contentType": "text/plain",
+            "translationId": 6920,
+            "text": "Nom de l'token",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T14:32:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 128,
+            "contentType": "text/plain",
+            "translationId": 6926,
+            "text": "Cerqueu un token cercant el seu nom o símbol o enganxant la seva adreça a continuació.",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T14:47:20+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 130,
+            "contentType": "text/plain",
+            "translationId": 6924,
+            "text": "Quan afegiu liquiditat, se us proporcionen fitxes de pool que representen la vostra part. Si no veieu cap grup al qual us heu unit en aquesta llista, proveu d'importar un grup a continuació",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T14:43:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 132,
+            "contentType": "text/plain",
+            "translationId": 6922,
+            "text": "Entrada",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T14:33:10+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 136,
+            "contentType": "text/plain",
+            "translationId": 6916,
+            "text": "Parell no vàlid",
+            "user": {
+                "id": 14439118,
+                "username": "lanuti.franco",
+                "fullName": "Franco Lanuti",
+                "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14439118/medium/7f2a2d2d2c38fca79b9cadfd1ab7df60.jpg"
+            },
+            "createdAt": "2020-10-02T14:31:40+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 170,
+            "contentType": "text/plain",
+            "translationId": 9254,
+            "text": "No s'ha trobat cap liquiditat.",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:48+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 278,
+            "contentType": "text/plain",
+            "translationId": 9298,
+            "text": "Agricultura",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 280,
+            "contentType": "text/plain",
+            "translationId": 9350,
+            "text": "Apilament",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 284,
+            "contentType": "text/plain",
+            "translationId": 9454,
+            "text": "Intercanvi",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 286,
+            "contentType": "text/plain",
+            "translationId": 9506,
+            "text": "Documents",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 288,
+            "contentType": "text/plain",
+            "translationId": 9558,
+            "text": "Votar",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 290,
+            "contentType": "text/plain",
+            "translationId": 9610,
+            "text": "Loteria",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 292,
+            "contentType": "text/plain",
+            "translationId": 9662,
+            "text": "Desbloqueja la cartera",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 294,
+            "contentType": "text/plain",
+            "translationId": 9714,
+            "text": "El vostre %asset%",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 296,
+            "contentType": "text/plain",
+            "translationId": 9764,
+            "text": "Total %asset% subministrament",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 298,
+            "contentType": "text/plain",
+            "translationId": 9816,
+            "text": "Bloquejat",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 300,
+            "contentType": "text/plain",
+            "translationId": 9868,
+            "text": "Pendent de collita",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 302,
+            "contentType": "text/plain",
+            "translationId": 9920,
+            "text": "Noves recmpensas per bloc",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 304,
+            "contentType": "text/plain",
+            "translationId": 9972,
+            "text": "Total de cakes cremades des del llançament",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 306,
+            "contentType": "text/plain",
+            "translationId": 10024,
+            "text": "Veure la cuina",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 308,
+            "contentType": "text/plain",
+            "translationId": 10076,
+            "text": "Telegram",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 310,
+            "contentType": "text/plain",
+            "translationId": 10128,
+            "text": "Blog",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 312,
+            "contentType": "text/plain",
+            "translationId": 10180,
+            "text": "Github",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 314,
+            "contentType": "text/plain",
+            "translationId": 10232,
+            "text": "Twitter",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 316,
+            "contentType": "text/plain",
+            "translationId": 10284,
+            "text": "Dipositar",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 318,
+            "contentType": "text/plain",
+            "translationId": 10336,
+            "text": "Guany",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 320,
+            "contentType": "text/plain",
+            "translationId": 10388,
+            "text": "Aposta FLIP fitxes per apilar CAKE",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:55+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 328,
+            "contentType": "text/plain",
+            "translationId": 10594,
+            "text": "Tu pots tornar a intercanviar quan vulguis",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:55+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 330,
+            "contentType": "text/plain",
+            "translationId": 10646,
+            "text": "%asset% Guanyar",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 332,
+            "contentType": "text/plain",
+            "translationId": 10696,
+            "text": "Fitxes Staked",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 334,
+            "contentType": "text/plain",
+            "translationId": 10748,
+            "text": "Cada vegada que tu stake i unstake CAKE fitxes, el contracte passa automàgicament\nrecolliu recompenses per a vosaltres!",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 342,
+            "contentType": "text/plain",
+            "translationId": 10956,
+            "text": "XVS Fitxes Guanyades",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:57+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 346,
+            "contentType": "text/plain",
+            "translationId": 11060,
+            "text": "Les recompenses es calcularan per bloc i les recompenses totals es distribuiran automàticament al final del període de farming per a cada projecte.",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 348,
+            "contentType": "text/plain",
+            "translationId": 11112,
+            "text": "Pool",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 350,
+            "contentType": "text/plain",
+            "translationId": 11164,
+            "text": "Pròximament",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 352,
+            "contentType": "text/plain",
+            "translationId": 11216,
+            "text": "APY",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 354,
+            "contentType": "text/plain",
+            "translationId": 11266,
+            "text": "Liquiditat Total",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 356,
+            "contentType": "text/plain",
+            "translationId": 11316,
+            "text": "Veure a BscScan",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 358,
+            "contentType": "text/plain",
+            "translationId": 11366,
+            "text": "Preu del Cake",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 360,
+            "contentType": "text/plain",
+            "translationId": 11416,
+            "text": "%asset% Fitxes Guanyades",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 362,
+            "contentType": "text/plain",
+            "translationId": 11466,
+            "text": "%num% blocs fins al final del farming",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:59+00:00"
+        }
+    }
+]
