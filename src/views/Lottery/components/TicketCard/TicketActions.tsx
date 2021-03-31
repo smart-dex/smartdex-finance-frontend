@@ -92,10 +92,10 @@ const TicketCard: React.FC = () => {
           variant="secondary"
           onClick={onPresentMyTickets}
         >
-          {TranslateString(432, 'View your tickets')}
+          {TranslateString(432, 'View Your Tickets')}
         </ButtonDisableStyle>
         <ButtonStyle id="lottery-buy-start" onClick={onPresentBuy} style={{ width: '100%' }}>
-          {TranslateString(430, 'Buy ticket')}
+          {TranslateString(430, 'Buy Ticket')}
         </ButtonStyle>
       </>
     )
