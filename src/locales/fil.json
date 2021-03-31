@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 30424,
-            "text": "Hindi ka makakatanggap ng mga gantimpala sa CAKE sa pagkaroon ng biniling SYRUP.",
+            "text": "Hindi ka makakatanggap ng mga gantimpala sa SDC sa pagkaroon ng biniling SYRUP.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 8770,
-            "text": "Kakailanganin mong bilhin muli ang parehong halaga ng SYRUP upang ma-convert pabalik sa CAKE.",
+            "text": "Kakailanganin mong bilhin muli ang parehong halaga ng SYRUP upang ma-convert pabalik sa SDC.",
             "user": {
                 "id": 14439108,
                 "username": "vincent_crypto",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 30578,
-            "text": "Para sa bawat trade isang fee na 0.2% ang binabayaran. Ang 0.17% ay napupunta sa mga nagbibigay ng liquidity at ang 0.03% ay napupunta sa treasury ng PancakeSwap.",
+            "text": "Para sa bawat trade isang fee na 0.2% ang binabayaran. Ang 0.17% ay napupunta sa mga nagbibigay ng liquidity at ang 0.03% ay napupunta sa treasury ng PanSDCSwap.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 30948,
-            "text": "Kabuuang Cake na na-burn simula nung na-launch",
+            "text": "Kabuuang SDC na na-burn simula nung na-launch",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 31042,
-            "text": "Mag stake ng mga LP token para makapag-stack ng CAKE",
+            "text": "Mag stake ng mga LP token para makapag-stack ng SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 31196,
-            "text": "Sa bawat oras na ikaw ay mag-stake o un-stake ng iyong mga Cake token, ang kontrata ay awtomatikong mag-haharvest ng Cake na gantimpala para sa iyo!",
+            "text": "Sa bawat oras na ikaw ay mag-stake o un-stake ng iyong mga SDC token, ang kontrata ay awtomatikong mag-haharvest ng SDC na gantimpala para sa iyo!",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 11408,
-            "text": "Ang presyo ng cake",
+            "text": "Ang presyo ng SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 26732,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 26738,
-            "text": "Gumastos ng CAKE upang makabili ng mga ticket, na nag-aambag sa pot ng lottery. Magtatapos ang mga pagbili ng ticket sa tinatayang 30 minuto bago ang loterya. Manalo ng mga premyo kung ang 2, 3, o 4 ng iyong mga numero ng ticket ay tumutugma sa mga nanalong numero at kanilang mga posisyon! Good luck!",
+            "text": "Gumastos ng SDC upang makabili ng mga ticket, na nag-aambag sa pot ng lottery. Magtatapos ang mga pagbili ng ticket sa tinatayang 30 minuto bago ang loterya. Manalo ng mga premyo kung ang 2, 3, o 4 ng iyong mga numero ng ticket ay tumutugma sa mga nanalong numero at kanilang mga posisyon! Good luck!",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 26770,
-            "text": "%num% CAKE na Available",
+            "text": "%num% SDC na Available",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 26778,
-            "text": "Ang iyong kabuuang halaga ay dapat nasa dami ng 10 CAKE",
+            "text": "Ang iyong kabuuang halaga ay dapat nasa dami ng 10 SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 26782,
-            "text": "1 Ticket = 10 CAKE",
+            "text": "1 Ticket = 10 SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 26788,
-            "text": "Gagastos ka ng: %num% CAKE",
+            "text": "Gagastos ka ng: %num% SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 26800,
-            "text": "Ang iyong CAKE ay hindi na ibabalik sa iyo pagkatapos mong gastusin ito upang bumili ng mga ticket.",
+            "text": "Ang iyong SDC ay hindi na ibabalik sa iyo pagkatapos mong gastusin ito upang bumili ng mga ticket.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 31852,
-            "text": "Final ang mga pagbili ng ticket. Hindi maibabalik sa iyo ang iyong CAKE pagkatapos bumili ng mga ticket.",
+            "text": "Final ang mga pagbili ng ticket. Hindi maibabalik sa iyo ang iyong SDC pagkatapos bumili ng mga ticket.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 26850,
-            "text": "Ang mga premyo sa CAKE na mai-claim",
+            "text": "Ang mga premyo sa SDC na mai-claim",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 26874,
-            "text": "Aprubahan ang CAKE",
+            "text": "Aprubahan ang SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 26892,
-            "text": "Magbabayad ka para sa mga bagong token na gamit ang mga CAKE-BNB LP token, na nangangahulugang kailangan mong tumaya ng pantay na halaga ng CAKE at BNB sa isang liquidity pool upang makalahok.",
+            "text": "Magbabayad ka para sa mga bagong token na gamit ang mga SDC-BNB LP token, na nangangahulugang kailangan mong tumaya ng pantay na halaga ng SDC at BNB sa isang liquidity pool upang makalahok.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 26894,
-            "text": "Kumuha ng CAKE-BNB LP >",
+            "text": "Kumuha ng SDC-BNB LP >",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 28826,
-            "text": "Nakuha ng proyektong ito ang BNB, na-burn naman ng PancakeSwap ang CAKE.",
+            "text": "Nakuha ng proyektong ito ang BNB, na-burn naman ng PanSDCSwap ang SDC.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 31720,
-            "text": "I-launch ang iyong proyekto gamit ang PancakeSwap, ang Binance Smart Chain na pinaka-ginagamit na proyekto ng AMM at provider ng liquidity, upang direktang dalhin ang iyong token sa pinaka-aktibo at mabilis na lumalagong komunidad sa BSC.",
+            "text": "I-launch ang iyong proyekto gamit ang PanSDCSwap, ang Binance Smart Chain na pinaka-ginagamit na proyekto ng AMM at provider ng liquidity, upang direktang dalhin ang iyong token sa pinaka-aktibo at mabilis na lumalagong komunidad sa BSC.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 28850,
-            "text": "Stats ng Cake",
+            "text": "Stats ng SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 28852,
-            "text": "Kabuuang supply ng CAKE",
+            "text": "Kabuuang supply ng SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 28856,
-            "text": "Kabuuang CAKE na Na-burn",
+            "text": "Kabuuang SDC na Na-burn",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 28858,
-            "text": "Bagong CAKE/block",
+            "text": "Bagong SDC/block",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 28864,
-            "text": "CAKE na Ma-harvest",
+            "text": "SDC na Ma-harvest",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 28866,
-            "text": "CAKE sa Wallet",
+            "text": "SDC sa Wallet",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 28868,
-            "text": "Kinukulektang CAKE",
+            "text": "Kinukulektang SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 28876,
-            "text": "CAKE para Ma-Kolekta",
+            "text": "SDC para Ma-Kolekta",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 28918,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 28922,
-            "text": "Mag-stake ng CAKE upang kumita ng mga bagong token.",
+            "text": "Mag-stake ng SDC upang kumita ng mga bagong token.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 28928,
-            "text": "CAKE para i-burn (USD)",
+            "text": "SDC para i-burn (USD)",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 28932,
-            "text": "⭐️ Sa bawat oras na ikaw ay mag-stake o un-stake ng iyong mga LP token, ang kontrata ay awtomatikong mag-harvest ng Cake na iyong gantimpala para sa iyo!",
+            "text": "⭐️ Sa bawat oras na ikaw ay mag-stake o un-stake ng iyong mga LP token, ang kontrata ay awtomatikong mag-harvest ng SDC na iyong gantimpala para sa iyo!",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 28938,
-            "text": "Bumili ng CAKE at mga BNB na token",
+            "text": "Bumili ng SDC at mga BNB na token",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 28940,
-            "text": "Kumuha ng mga CAKE-BNB LP token sa pagdaragdag ng CAKE at BNB liquidity",
+            "text": "Kumuha ng mga SDC-BNB LP token sa pagdaragdag ng SDC at BNB liquidity",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 28944,
-            "text": "Habang live ang sale, mag-commit ng iyong mga CAKE-LP token sa pagbili ng mga IFO token",
+            "text": "Habang live ang sale, mag-commit ng iyong mga SDC-LP token sa pagbili ng mga IFO token",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 26896,
-            "text": "Mag-trade in para sa CAKE, o panatilihin para sa iyong koleksyon!",
+            "text": "Mag-trade in para sa SDC, o panatilihin para sa iyong koleksyon!",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 26926,
-            "text": "Kapag nag-trade ka sa NFT na ito upang makatanggap ng CAKE, mawawalan ka ng access dito magpakailanman!",
+            "text": "Kapag nag-trade ka sa NFT na ito upang makatanggap ng SDC, mawawalan ka ng access dito magpakailanman!",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 26956,
-            "text": "Ang mga nagwagi ay maaaring i-trade in ang kanilang mga NFT para sa isang CAKE value hanggang sa petsa ng pag-expire na nakasulat sa ibaba. Kung hindi mo i-trade in ang iyong NFT sa panahong iyon, huwag mag-alala: mananatili pa rin ito sa iyong wallet!",
+            "text": "Ang mga nagwagi ay maaaring i-trade in ang kanilang mga NFT para sa isang SDC value hanggang sa petsa ng pag-expire na nakasulat sa ibaba. Kung hindi mo i-trade in ang iyong NFT sa panahong iyon, huwag mag-alala: mananatili pa rin ito sa iyong wallet!",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 26970,
-            "text": "Mag-trade in para sa CAKE",
+            "text": "Mag-trade in para sa SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 29530,
-            "text": "Mag stake ng mga LP token para kumita ng CAKE",
+            "text": "Mag stake ng mga LP token para kumita ng SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 32014,
-            "text": "Ang loterya sa CAKE",
+            "text": "Ang loterya sa SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 29566,
-            "text": "Bumili ng mga ticket sa CAKE",
+            "text": "Bumili ng mga ticket sa SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 29682,
-            "text": "Kabuuang gastos: 10 CAKE",
+            "text": "Kabuuang gastos: 10 SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 29708,
-            "text": "Maaari mong baguhin ang iyong profile na larawan sa ibang pagkakataon kung nakakakuha ka ng isa pang naaprubahang Pancake Collectible,",
+            "text": "Maaari mong baguhin ang iyong profile na larawan sa ibang pagkakataon kung nakakakuha ka ng isa pang naaprubahang PanSDC Collectible,",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 28986,
-            "text": "Gastos: 5 CAKE",
+            "text": "Gastos: 5 SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 28998,
-            "text": "Hindi sapat na balanse ng CAKE",
+            "text": "Hindi sapat na balanse ng SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 29274,
-            "text": "Tanging mga naaprubahang Pancake Collectibles lamang ang maaaring magamit.",
+            "text": "Tanging mga naaprubahang PanSDC Collectibles lamang ang maaaring magamit.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 29868,
-            "text": "Wala kaming nahanap na mga Pancake Collectible sa iyong wallet.",
+            "text": "Wala kaming nahanap na mga PanSDC Collectible sa iyong wallet.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 29886,
-            "text": "Kailangan mo ng isang Pancake Collectible upang matapos ang pag-set up ng iyong profile. Kung naibenta o inilipat mo ang iyong starter collectible sa ibang wallet, kakailanganin mong ibalik ito o kumuha ng bago kahit papaano. Hindi ka makakagawa ng isang bagong starter sa address ng wallet na ito.",
+            "text": "Kailangan mo ng isang PanSDC Collectible upang matapos ang pag-set up ng iyong profile. Kung naibenta o inilipat mo ang iyong starter collectible sa ibang wallet, kakailanganin mong ibalik ito o kumuha ng bago kahit papaano. Hindi ka makakagawa ng isang bagong starter sa address ng wallet na ito.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 29896,
-            "text": "CAKE kada $1000",
+            "text": "SDC kada $1000",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 26350,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 26524,
-            "text": "CAKE block",
+            "text": "SDC block",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 26526,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 26538,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 26548,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 45690,
-            "text": "Bumili ng CAKE",
+            "text": "Bumili ng SDC",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 45820,
-            "text": "Isang minimum na %num% CAKE ay kinakailangan",
+            "text": "Isang minimum na %num% SDC ay kinakailangan",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",

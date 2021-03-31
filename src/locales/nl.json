@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 34576,
-            "text": "Je ontvangt geen CAKE-beloningen voor het staken van gekochte SYRUP.",
+            "text": "Je ontvangt geen SDC-beloningen voor het staken van gekochte SYRUP.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 14854,
-            "text": "Je moet hetzelfde bedrag aan SYRUP terugkopen om het om te kunnen zetten naar CAKE.",
+            "text": "Je moet hetzelfde bedrag aan SYRUP terugkopen om het om te kunnen zetten naar SDC.",
             "user": {
                 "id": 14451714,
                 "username": "Esen2",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 16958,
-            "text": "Voor elke transactie wordt een vergoeding van 0,2% betaald. 0,17% gaat naar liquiditeitsverschaffers en 0,03% gaat naar de schatkist van PancakeSwap.",
+            "text": "Voor elke transactie wordt een vergoeding van 0,2% betaald. 0,17% gaat naar liquiditeitsverschaffers en 0,03% gaat naar de schatkist van PanSDCSwap.",
             "user": {
                 "id": 14451714,
                 "username": "Esen2",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 35356,
-            "text": "Aantal verbrande CAKE sinds start",
+            "text": "Aantal verbrande SDC sinds start",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 35268,
-            "text": "Stake FLIP-tokens om CAKE te stapelen",
+            "text": "Stake FLIP-tokens om SDC te stapelen",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 35358,
-            "text": "Elke keer dat je CAKE-tokens staked en weer unstaked, oogst het contract automatisch je CAKE-beloning!",
+            "text": "Elke keer dat je SDC-tokens staked en weer unstaked, oogst het contract automatisch je SDC-beloning!",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 35284,
-            "text": "Cake-prijs",
+            "text": "SDC-prijs",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 34758,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 34796,
-            "text": "Geef CAKE uit om tickets te kopen en zo bij te dragen aan de loterijpot. De ticketverkoop eindigt ca. 30 minuten voor de loterij. Win prijzen als 2, 3, of 4 van je ticketnummers overeenkomen met de winnende nummers en hun posities! Veel geluk!",
+            "text": "Geef SDC uit om tickets te kopen en zo bij te dragen aan de loterijpot. De ticketverkoop eindigt ca. 30 minuten voor de loterij. Win prijzen als 2, 3, of 4 van je ticketnummers overeenkomen met de winnende nummers en hun posities! Veel geluk!",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 34712,
-            "text": "%num% CAKE beschikbaar",
+            "text": "%num% SDC beschikbaar",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 34728,
-            "text": "Je bedrag moet een veelvoud van 10 CAKE zijn",
+            "text": "Je bedrag moet een veelvoud van 10 SDC zijn",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 34788,
-            "text": "1 ticket = 10 CAKE",
+            "text": "1 ticket = 10 SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 34800,
-            "text": "Je geeft uit: %num% CAKE",
+            "text": "Je geeft uit: %num% SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 34798,
-            "text": "Je krijgt je CAKE niet terug nadat je het uitgegeven hebt om tickets te kopen.",
+            "text": "Je krijgt je SDC niet terug nadat je het uitgegeven hebt om tickets te kopen.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 34818,
-            "text": "Ticketaankopen zijn definitief. Je CAKE kan niet worden teruggegeven worden nadat je tickets hebt gekocht.",
+            "text": "Ticketaankopen zijn definitief. Je SDC kan niet worden teruggegeven worden nadat je tickets hebt gekocht.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 34822,
-            "text": "Te claimen CAKE-prijzen",
+            "text": "Te claimen SDC-prijzen",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 34830,
-            "text": "CAKE goedkeuren",
+            "text": "SDC goedkeuren",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 35344,
-            "text": "Je betaalt voor de nieuwe tokens met CAKE-BNB FLIP-tokens, wat betekent dat je gelijke hoeveelheden CAKE en BNB moet staken in een liquiditeitspool om deel te nemen.",
+            "text": "Je betaalt voor de nieuwe tokens met SDC-BNB FLIP-tokens, wat betekent dat je gelijke hoeveelheden SDC en BNB moet staken in een liquiditeitspool om deel te nemen.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 35346,
-            "text": "Ontvang CAKE-BNB FLIP >",
+            "text": "Ontvang SDC-BNB FLIP >",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 35084,
-            "text": "Het project ontvangt de BNB, PancakeSwap verbrandt de CAKE.",
+            "text": "Het project ontvangt de BNB, PanSDCSwap verbrandt de SDC.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 35326,
-            "text": "Start je project met PancakeSwap, Binance Smart Chain's meest gebruikte AMM-project en liquiditeitsverschaffer, om je token direct naar de meest actieve en snel groeiende gemeenschap op BSC te brengen.",
+            "text": "Start je project met PanSDCSwap, Binance Smart Chain's meest gebruikte AMM-project en liquiditeitsverschaffer, om je token direct naar de meest actieve en snel groeiende gemeenschap op BSC te brengen.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 34834,
-            "text": "Cake-statistieken",
+            "text": "SDC-statistieken",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 34836,
-            "text": "Totaal CAKE-aanbod",
+            "text": "Totaal SDC-aanbod",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 34838,
-            "text": "Totaal verbrande CAKE",
+            "text": "Totaal verbrande SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 34840,
-            "text": "Nieuwe CAKE/blok",
+            "text": "Nieuwe SDC/blok",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 34842,
-            "text": "Te oogsten CAKE",
+            "text": "Te oogsten SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 34844,
-            "text": "CAKE in wallet",
+            "text": "SDC in wallet",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 34862,
-            "text": "CAKE innen",
+            "text": "SDC innen",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 34864,
-            "text": "Te innen CAKE",
+            "text": "Te innen SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 34924,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 34604,
-            "text": "Stake CAKE om nieuwe tokens te verdienen.",
+            "text": "Stake SDC om nieuwe tokens te verdienen.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 34930,
-            "text": "Te verbranden CAKE (USD)",
+            "text": "Te verbranden SDC (USD)",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 35348,
-            "text": "⭐️Telkens wanneer je FLIP-tokens staked en weer unstaked, zal het contract automatisch CAKE-beloningen voor je oogsten!",
+            "text": "⭐️Telkens wanneer je FLIP-tokens staked en weer unstaked, zal het contract automatisch SDC-beloningen voor je oogsten!",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 35172,
-            "text": "CAKE en BNB-tokens kopen",
+            "text": "SDC en BNB-tokens kopen",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 35350,
-            "text": "Ontvang CAKE-BNB FLIP-tokens door CAKE en BNB-liquiditeit toe te voegen",
+            "text": "Ontvang SDC-BNB FLIP-tokens door SDC en BNB-liquiditeit toe te voegen",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 35318,
-            "text": "Terwijl de verkoop live is, zet je je CAKE-FLIP tokens in om de IFO-tokens te kopen",
+            "text": "Terwijl de verkoop live is, zet je je SDC-FLIP tokens in om de IFO-tokens te kopen",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 34868,
-            "text": "Ruil in voor CAKE of bewaar voor je verzameling!",
+            "text": "Ruil in voor SDC of bewaar voor je verzameling!",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 35166,
-            "text": "Als je deze NFT inruilt om CAKE te ontvangen, verlies je er voor altijd de toegang toe!",
+            "text": "Als je deze NFT inruilt om SDC te ontvangen, verlies je er voor altijd de toegang toe!",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 35168,
-            "text": "Winnaars kunnen hun NFT's inruilen voor een CAKE waarde tot de hieronder geschreven vervaldatum. Als je tegen die tijd je NFT niet inruilt, maak je geen zorgen: hij blijft in je wallet!",
+            "text": "Winnaars kunnen hun NFT's inruilen voor een SDC waarde tot de hieronder geschreven vervaldatum. Als je tegen die tijd je NFT niet inruilt, maak je geen zorgen: hij blijft in je wallet!",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 35158,
-            "text": "Ruil in voor CAKE",
+            "text": "Ruil in voor SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 35352,
-            "text": "Stake FLIP-tokens om CAKE te verdienen",
+            "text": "Stake FLIP-tokens om SDC te verdienen",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 34962,
-            "text": "De CAKE-loterij",
+            "text": "De SDC-loterij",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 34964,
-            "text": "Tickets kopen met CAKE",
+            "text": "Tickets kopen met SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 35014,
-            "text": "Totale kosten: 10 CAKE",
+            "text": "Totale kosten: 10 SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 35364,
-            "text": "Je kunt je profielfoto later wijzigen als je een andere goedgekeurde Pancake-collectible ontvangt.",
+            "text": "Je kunt je profielfoto later wijzigen als je een andere goedgekeurde PanSDC-collectible ontvangt.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 35024,
-            "text": "Kosten: 5 CAKE",
+            "text": "Kosten: 5 SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 35210,
-            "text": "Onvoldoende CAKE-saldo",
+            "text": "Onvoldoende SDC-saldo",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 34884,
-            "text": "Alleen goedgekeurde Pancake-collectibles kunnen gebruikt worden.",
+            "text": "Alleen goedgekeurde PanSDC-collectibles kunnen gebruikt worden.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 34890,
-            "text": "We konden geen Pancake-collectibles in je wallet vinden.",
+            "text": "We konden geen PanSDC-collectibles in je wallet vinden.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 35056,
-            "text": "CAKE per $1000",
+            "text": "SDC per $1000",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 28226,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 35108,
-            "text": "CAKE-blok",
+            "text": "SDC-blok",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 35110,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 28272,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 28284,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 48134,
-            "text": "CAKE kopen",
+            "text": "SDC kopen",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 48172,
-            "text": "Een minimum van %num% CAKE is vereist",
+            "text": "Een minimum van %num% SDC is vereist",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",

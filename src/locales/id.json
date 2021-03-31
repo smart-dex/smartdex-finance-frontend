@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 41012,
-            "text": "Anda tidak akan menerima hadiah CAKE karena memegang SYRUP yang dibeli.",
+            "text": "Anda tidak akan menerima hadiah SDC karena memegang SYRUP yang dibeli.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 41024,
-            "text": "Anda harus membeli kembali SYRUP dengan jumlah yang sama agar dapat mengubahnya kembali menjadi CAKE.",
+            "text": "Anda harus membeli kembali SYRUP dengan jumlah yang sama agar dapat mengubahnya kembali menjadi SDC.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 41158,
-            "text": "Untuk setiap perdagangan, senilai 0,2% dibayarkan untuk biaya. Senilai 0,17% diberikan kepada penyedia likuiditas, dan senilai 0,03% dimasukkan ke perbendaharaan PancakeSwap.",
+            "text": "Untuk setiap perdagangan, senilai 0,2% dibayarkan untuk biaya. Senilai 0,17% diberikan kepada penyedia likuiditas, dan senilai 0,03% dimasukkan ke perbendaharaan PanSDCSwap.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 41222,
-            "text": "Total CAKE yang hangus sejak peluncuran",
+            "text": "Total SDC yang hangus sejak peluncuran",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 41242,
-            "text": "Tumpuk token FLIP untuk menumpuk CAKE",
+            "text": "Tumpuk token FLIP untuk menumpuk SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 41352,
-            "text": "Setiap kali Anda menumpuk dan membongkar tumpukan token CAKE, kontrak akan secara otomatis memanen hadiah CAKE untuk Anda!",
+            "text": "Setiap kali Anda menumpuk dan membongkar tumpukan token SDC, kontrak akan secara otomatis memanen hadiah SDC untuk Anda!",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 11404,
-            "text": "Harga CAKE",
+            "text": "Harga SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 19554,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 41398,
-            "text": "Belanjakan CAKE untuk membeli tiket, berkontribusi untuk pot undian. Pembelian tiket berakhir sekitar. 30 menit sebelum pengundian lotre. Rebut hadiah jika 2, 3, atau 4 nomor tiket Anda cocok dengan angka kemenangan dan posisinya! Semoga beruntung!",
+            "text": "Belanjakan SDC untuk membeli tiket, berkontribusi untuk pot undian. Pembelian tiket berakhir sekitar. 30 menit sebelum pengundian lotre. Rebut hadiah jika 2, 3, atau 4 nomor tiket Anda cocok dengan angka kemenangan dan posisinya! Semoga beruntung!",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 19606,
-            "text": "%num% CAKE Tersedia",
+            "text": "%num% SDC Tersedia",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 19646,
-            "text": "Jumlah harus kelipatan 10 CAKE",
+            "text": "Jumlah harus kelipatan 10 SDC",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 19796,
-            "text": "1 Tiket = 10 CAKE",
+            "text": "1 Tiket = 10 SDC",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 41414,
-            "text": "Anda akan membelanjakan: %num% CAKE",
+            "text": "Anda akan membelanjakan: %num% SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 19622,
-            "text": "CAKE Anda tidak akan dikembalikan setelah Anda membelanjakannya untuk membeli tiket.",
+            "text": "SDC Anda tidak akan dikembalikan setelah Anda membelanjakannya untuk membeli tiket.",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 41430,
-            "text": "Pembelian tiket bersifat final. CAKE Anda tidak akan dikembalikan setelah Anda membeli tiket.",
+            "text": "Pembelian tiket bersifat final. SDC Anda tidak akan dikembalikan setelah Anda membeli tiket.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 41432,
-            "text": "Hadiah CAKE yang akan diklaim",
+            "text": "Hadiah SDC yang akan diklaim",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 20720,
-            "text": "Setujui CAKE",
+            "text": "Setujui SDC",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 41444,
-            "text": "Anda akan membayar token baru dengan menggunakan token CAKE-BNB LP, yang berarti Anda harus menumpuk jumlah CAKE dan BNB yang sama dalam pool likuiditas untuk ikut serta.",
+            "text": "Anda akan membayar token baru dengan menggunakan token SDC-BNB LP, yang berarti Anda harus menumpuk jumlah SDC dan BNB yang sama dalam pool likuiditas untuk ikut serta.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 21826,
-            "text": "\nDapatkan CAKE-BNB LP >",
+            "text": "\nDapatkan SDC-BNB LP >",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 41446,
-            "text": "Proyek mendapatkan BNB, PancakeSwap menghanguskan CAKE.",
+            "text": "Proyek mendapatkan BNB, PanSDCSwap menghanguskan SDC.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 41490,
-            "text": "Luncurkan proyek Anda dengan PancakeSwap, penyedia likuiditas \ndan proyek AMM yang paling banyak digunakan Binance Smart Chain, untuk membawa token Anda langsung ke komunitas yang paling aktif dan berkembang pesat di BSC.",
+            "text": "Luncurkan proyek Anda dengan PanSDCSwap, penyedia likuiditas \ndan proyek AMM yang paling banyak digunakan Binance Smart Chain, untuk membawa token Anda langsung ke komunitas yang paling aktif dan berkembang pesat di BSC.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 21852,
-            "text": "Statistik Cake",
+            "text": "Statistik SDC",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 41514,
-            "text": "Total Suplai CAKE",
+            "text": "Total Suplai SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 41518,
-            "text": "Jumlah CAKE Hangus",
+            "text": "Jumlah SDC Hangus",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 41522,
-            "text": "Blok/CAKE Baru",
+            "text": "Blok/SDC Baru",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 41526,
-            "text": "CAKE yang akan Dipanen",
+            "text": "SDC yang akan Dipanen",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 41528,
-            "text": "CAKE dalam Dompet",
+            "text": "SDC dalam Dompet",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 41530,
-            "text": "Mengambil CAKE",
+            "text": "Mengambil SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 41534,
-            "text": "CAKE yang akan Diambil",
+            "text": "SDC yang akan Diambil",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 21894,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 41560,
-            "text": "Tumpuk CAKE untuk menghasilkan token baru.",
+            "text": "Tumpuk SDC untuk menghasilkan token baru.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 41568,
-            "text": "CAKE yang akan hangus (USD)",
+            "text": "SDC yang akan hangus (USD)",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 41572,
-            "text": "⭐️ Setiap kali Anda menumpuk dan membongkar tumpukan token LP, kontrak akan secara otomatis memanen hadiah CAKE untuk Anda!",
+            "text": "⭐️ Setiap kali Anda menumpuk dan membongkar tumpukan token LP, kontrak akan secara otomatis memanen hadiah SDC untuk Anda!",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 22500,
-            "text": "Beli token CAKE dan BNB",
+            "text": "Beli token SDC dan BNB",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 22502,
-            "text": "Dapatkan token CAKE-BNB LP dengan menambahkan likuiditas CAKE dan BNB",
+            "text": "Dapatkan token SDC-BNB LP dengan menambahkan likuiditas SDC dan BNB",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 41576,
-            "text": "Saat penjualan berlangsung, serahkan token CAKE-LP Anda untuk membeli token IFO",
+            "text": "Saat penjualan berlangsung, serahkan token SDC-LP Anda untuk membeli token IFO",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 41614,
-            "text": "Tukarkan tambah dengan CAKE, atau simpan untuk koleksi Anda!",
+            "text": "Tukarkan tambah dengan SDC, atau simpan untuk koleksi Anda!",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 41604,
-            "text": "Saat Anda menukar tambah NFT ini untuk menerima CAKE, Anda akan kehilangan akses ke NFT ini selamanya!",
+            "text": "Saat Anda menukar tambah NFT ini untuk menerima SDC, Anda akan kehilangan akses ke NFT ini selamanya!",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 41620,
-            "text": "Pemenang dapat menukar tambah NFT mereka dengan nilai CAKE sampai tanggal kedaluwarsa yang tertulis di bawah ini. Jika Anda tidak menukar tambah NFT Anda saat itu, jangan khawatir: Anda masih akan memilikinya di dompet Anda!",
+            "text": "Pemenang dapat menukar tambah NFT mereka dengan nilai SDC sampai tanggal kedaluwarsa yang tertulis di bawah ini. Jika Anda tidak menukar tambah NFT Anda saat itu, jangan khawatir: Anda masih akan memilikinya di dompet Anda!",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 41612,
-            "text": "Tukar tambah dengan CAKE",
+            "text": "Tukar tambah dengan SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 39934,
-            "text": "Tumpuk token LP untuk menghasilkan CAKE",
+            "text": "Tumpuk token LP untuk menghasilkan SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 40116,
-            "text": "Lotre CAKE",
+            "text": "Lotre SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 39940,
-            "text": "Beli tiket dengan CAKE",
+            "text": "Beli tiket dengan SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 40010,
-            "text": "Total biaya: 10 CAKE",
+            "text": "Total biaya: 10 SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 40034,
-            "text": "Anda dapat mengganti gambar profil nanti jika mendapatkan Kolektibel Pancake yang disetujui lagi,",
+            "text": "Anda dapat mengganti gambar profil nanti jika mendapatkan Kolektibel PanSDC yang disetujui lagi,",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 40040,
-            "text": "Biaya: 5 CAKE",
+            "text": "Biaya: 5 SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 40052,
-            "text": "Saldo CAKE tidak cukup",
+            "text": "Saldo SDC tidak cukup",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 40060,
-            "text": "Hanya Kolektibel Pancake yang disetujui yang dapat digunakan.",
+            "text": "Hanya Kolektibel PanSDC yang disetujui yang dapat digunakan.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 40098,
-            "text": "Kami tidak dapat menemukan Kolektibel Pancake apa pun di dalam dompet Anda.",
+            "text": "Kami tidak dapat menemukan Kolektibel PanSDC apa pun di dalam dompet Anda.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 40100,
-            "text": "Anda memerlukan Kolektibel Pancake untuk menyelesaikan pengaturan profil Anda. Jika Anda telah menjual atau mentransfer kolektibel starter Anda ke dompet lain, Anda perlu mengambilnya kembali atau mendapatkan yang baru dengan suatu cara. Anda tidak dapat membuat starter baru dengan alamat dompet ini.",
+            "text": "Anda memerlukan Kolektibel PanSDC untuk menyelesaikan pengaturan profil Anda. Jika Anda telah menjual atau mentransfer kolektibel starter Anda ke dompet lain, Anda perlu mengambilnya kembali atau mendapatkan yang baru dengan suatu cara. Anda tidak dapat membuat starter baru dengan alamat dompet ini.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 40108,
-            "text": "CAKE per $1.000",
+            "text": "SDC per $1.000",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 39724,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 39820,
-            "text": "blok CAKE",
+            "text": "blok SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 39822,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 39834,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 39846,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 46894,
-            "text": "Beli CAKE",
+            "text": "Beli SDC",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 46932,
-            "text": "Minimum %num% CAKE diperlukan",
+            "text": "Minimum %num% SDC diperlukan",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",

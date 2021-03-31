@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 41780,
-            "text": "Вы не будете получать вознаграждение в виде CAKE за удержание купленных единиц SYRUP.",
+            "text": "Вы не будете получать вознаграждение в виде SDC за удержание купленных единиц SYRUP.",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 41786,
-            "text": "Вы должны будете выкупить то же количество SYRUP, чтобы конвертировать их обратно в CAKE.",
+            "text": "Вы должны будете выкупить то же количество SYRUP, чтобы конвертировать их обратно в SDC.",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 41822,
-            "text": "За каждую сделку взимается 0,2 % комиссии. Из низ 0,17 % получают поставщики ликвидности, а 0,03 % направляется в фонд PancakeSwap.",
+            "text": "За каждую сделку взимается 0,2 % комиссии. Из низ 0,17 % получают поставщики ликвидности, а 0,03 % направляется в фонд PanSDCSwap.",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 8226,
-            "text": "Всего CAKE сожжено с момента запуска",
+            "text": "Всего SDC сожжено с момента запуска",
             "user": {
                 "id": 14439528,
                 "username": "ildarman1",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 41906,
-            "text": "Вкладывайте токены пула ликвидности для накопления CAKE",
+            "text": "Вкладывайте токены пула ликвидности для накопления SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 41876,
-            "text": "Каждый раз, когда вы вкладываете или возвращаете токены CAKE, контракт автоматически собирает для вас награды CAKE!",
+            "text": "Каждый раз, когда вы вкладываете или возвращаете токены SDC, контракт автоматически собирает для вас награды SDC!",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 8238,
-            "text": "Цена Cake",
+            "text": "Цена SDC",
             "user": {
                 "id": 14439528,
                 "username": "ildarman1",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 19642,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 46458,
-            "text": "Потратьте CAKE на покупку билетов, одновременно увеличивая призовой фонд лотереи.\nПокупка билетов заканчивается примерно за 30 минут до розыгрыша.\nПобеждают билеты, у которых 1, 2, 3 или 4 цифры совпадают с выигрышными номерами и их позициями! Удачи!",
+            "text": "Потратьте SDC на покупку билетов, одновременно увеличивая призовой фонд лотереи.\nПокупка билетов заканчивается примерно за 30 минут до розыгрыша.\nПобеждают билеты, у которых 1, 2, 3 или 4 цифры совпадают с выигрышными номерами и их позициями! Удачи!",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 19728,
-            "text": "%num% CAKE в наличии",
+            "text": "%num% SDC в наличии",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 19732,
-            "text": "Ваша сумма должна быть кратной 10 CAKE",
+            "text": "Ваша сумма должна быть кратной 10 SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 19790,
-            "text": "1 Билет = 10 CAKE",
+            "text": "1 Билет = 10 SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 19772,
-            "text": "Вы потратите: %num% CAKE",
+            "text": "Вы потратите: %num% SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 19766,
-            "text": "Ваши CAKE не будут возвращены вам после того, как вы потратите их на покупку билетов.",
+            "text": "Ваши SDC не будут возвращены вам после того, как вы потратите их на покупку билетов.",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 19824,
-            "text": "Покупка билетов необратима. Ваши CAKE не могут быть возвращены после покупки билетов.",
+            "text": "Покупка билетов необратима. Ваши SDC не могут быть возвращены после покупки билетов.",
             "user": {
                 "id": 14439528,
                 "username": "ildarman1",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 19786,
-            "text": "Можно получить выигрыш CAKE",
+            "text": "Можно получить выигрыш SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 41858,
-            "text": "Подтвердить CAKE",
+            "text": "Подтвердить SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 21522,
-            "text": "Вы оплачиваете новые токены с помощью CAKE-BNB токен LP. Чтобы участвовать, вам необходимо иметь равные вложения CAKE и BNB в пул ликвидности.",
+            "text": "Вы оплачиваете новые токены с помощью SDC-BNB токен LP. Чтобы участвовать, вам необходимо иметь равные вложения SDC и BNB в пул ликвидности.",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 21524,
-            "text": "Получить CAKE-BNB LP",
+            "text": "Получить SDC-BNB LP",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 21526,
-            "text": "Проект получает BNB, PancakeSwap сжигает CAKE.",
+            "text": "Проект получает BNB, PanSDCSwap сжигает SDC.",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 21536,
-            "text": "Запустите свой проект с помощью Pancakeswap, самым популярным проектом AMM и поставщиком ликвидности в сети Binance Smart Chain, открывая путь Вашему токену непосредственно в самое активное и быстро развивающееся сообщество на BSC.",
+            "text": "Запустите свой проект с помощью PanSDCswap, самым популярным проектом AMM и поставщиком ликвидности в сети Binance Smart Chain, открывая путь Вашему токену непосредственно в самое активное и быстро развивающееся сообщество на BSC.",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 21600,
-            "text": "Статистика Cake",
+            "text": "Статистика SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 21596,
-            "text": "Общее предложение CAKE",
+            "text": "Общее предложение SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 21594,
-            "text": "Всего CAKE сожжено",
+            "text": "Всего SDC сожжено",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 41866,
-            "text": "Новые CAKE/блок",
+            "text": "Новые SDC/блок",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 21586,
-            "text": "Готовые к сбору CAKE",
+            "text": "Готовые к сбору SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 21582,
-            "text": "CAKE в кошельке",
+            "text": "SDC в кошельке",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 21580,
-            "text": "Собираем CAKE",
+            "text": "Собираем SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 21576,
-            "text": "CAKE готовые к сбору",
+            "text": "SDC готовые к сбору",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 21722,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 21692,
-            "text": "Вкладывайте CAKE для заработка новых токенов.",
+            "text": "Вкладывайте SDC для заработка новых токенов.",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 21926,
-            "text": "CAKE будет сожжено (USD)",
+            "text": "SDC будет сожжено (USD)",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 21930,
-            "text": "⭐️ Каждый раз, когда вы вкладываете или снимаете токен LP, контракт автоматически собирает для вас награды CAKE!",
+            "text": "⭐️ Каждый раз, когда вы вкладываете или снимаете токен LP, контракт автоматически собирает для вас награды SDC!",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 22108,
-            "text": "Купите CAKE и BNB токены",
+            "text": "Купите SDC и BNB токены",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 22110,
-            "text": "Получите CAKE-BNB LP токены путём добавления CAKE и BNB ликвидности",
+            "text": "Получите SDC-BNB LP токены путём добавления SDC и BNB ликвидности",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 22114,
-            "text": "Совершите обмен ваших CAKE-LP токенов на токены предложения",
+            "text": "Совершите обмен ваших SDC-LP токенов на токены предложения",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 23092,
-            "text": "Обменять на CAKE или сохраните для своей коллекции!",
+            "text": "Обменять на SDC или сохраните для своей коллекции!",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 23130,
-            "text": "Когда вы совершите обмен NFT, Вы получите CAKE, но потеряете доступ к нему навсегда!",
+            "text": "Когда вы совершите обмен NFT, Вы получите SDC, но потеряете доступ к нему навсегда!",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 23180,
-            "text": "Победители могут обменять свои NFT на CAKE до истечения срока, указанного ниже. Если к тому времени вы не обменяете свои NFT, не волнуйтесь: вы все равно будете хранить его в своем кошельке!",
+            "text": "Победители могут обменять свои NFT на SDC до истечения срока, указанного ниже. Если к тому времени вы не обменяете свои NFT, не волнуйтесь: вы все равно будете хранить его в своем кошельке!",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 23214,
-            "text": "Обменять на CAKE",
+            "text": "Обменять на SDC",
             "user": {
                 "id": 14439050,
                 "username": "Z86-tech",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 41904,
-            "text": "Вкладывайте токены пула ликвидности, чтобы заработать CAKE",
+            "text": "Вкладывайте токены пула ликвидности, чтобы заработать SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 41918,
-            "text": "Лотерея CAKE",
+            "text": "Лотерея SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 41920,
-            "text": "Покупайте билеты за CAKE",
+            "text": "Покупайте билеты за SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 41992,
-            "text": "Общая стоимость: 10 CAKE",
+            "text": "Общая стоимость: 10 SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 42020,
-            "text": "Позже вы сможете поменять изображение, если получите другой утвержденный коллекционный токен Pancake.",
+            "text": "Позже вы сможете поменять изображение, если получите другой утвержденный коллекционный токен PanSDC.",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 42026,
-            "text": "Цена: 5 CAKE",
+            "text": "Цена: 5 SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 42038,
-            "text": "Недостаточный запас CAKE",
+            "text": "Недостаточный запас SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 42046,
-            "text": "Можно использовать только утвержденные коллекционные токены Pancake.",
+            "text": "Можно использовать только утвержденные коллекционные токены PanSDC.",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 42084,
-            "text": "В вашем кошельке нет коллекционных токенов Pancake.",
+            "text": "В вашем кошельке нет коллекционных токенов PanSDC.",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 42110,
-            "text": "Чтобы завершить настройку профиля, вам нужен коллекционный токен Pancake. Если вы продали свой начальный коллекционный токен или передали его в другой кошелек, вам сначала нужно вернуть старый токен или приобрести новый. Учтите, что с помощью вашего текущего адреса кошелька создать новый начальный коллекционный токен уже нельзя.",
+            "text": "Чтобы завершить настройку профиля, вам нужен коллекционный токен PanSDC. Если вы продали свой начальный коллекционный токен или передали его в другой кошелек, вам сначала нужно вернуть старый токен или приобрести новый. Учтите, что с помощью вашего текущего адреса кошелька создать новый начальный коллекционный токен уже нельзя.",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 42094,
-            "text": "CAKE за $1000",
+            "text": "SDC за $1000",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 40610,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 41700,
-            "text": "блок CAKE",
+            "text": "блок SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 41702,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 41710,
-            "text": "Pancake",
+            "text": "PanSDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 41720,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 46402,
-            "text": "Купить CAKE",
+            "text": "Купить SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 46440,
-            "text": "Требуется не меньше %num% CAKE",
+            "text": "Требуется не меньше %num% SDC",
             "user": {
                 "id": 13473331,
                 "username": "Sergey_B",

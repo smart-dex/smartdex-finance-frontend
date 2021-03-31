@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 44346,
-            "text": "Nu vei primi recompense în CAKE pentru deținerea de monede SYRUP cumpărate.",
+            "text": "Nu vei primi recompense în SDC pentru deținerea de monede SYRUP cumpărate.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 44350,
-            "text": "Va trebui să răscumperi aceeași sumă în monede SYRUP pentru a putea converti înapoi în CAKE.",
+            "text": "Va trebui să răscumperi aceeași sumă în monede SYRUP pentru a putea converti înapoi în SDC.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 40754,
-            "text": "Pentru fiecare tranzacție, se va plati un comision de 0,2%, din care 0,17% se acordă furnizorilor de lichidități și 0,3% trezoreriei PancakeSwap.",
+            "text": "Pentru fiecare tranzacție, se va plati un comision de 0,2%, din care 0,17% se acordă furnizorilor de lichidități și 0,3% trezoreriei PanSDCSwap.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 44436,
-            "text": "Total monede CAKE consumate de la lansare",
+            "text": "Total monede SDC consumate de la lansare",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 44466,
-            "text": "Investește jetoane LP pentru a investi CAKE",
+            "text": "Investește jetoane LP pentru a investi SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 44302,
-            "text": "De fiecare dată când investești sau retragi jetoane CAKE, contractul va recupera automagic recompense CAKE pentru tine!",
+            "text": "De fiecare dată când investești sau retragi jetoane SDC, contractul va recupera automagic recompense SDC pentru tine!",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 11360,
-            "text": "Preț CAKE",
+            "text": "Preț SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 40932,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 44444,
-            "text": "Cheltuie monede CAKE pentru a cumpăra bilete, contribuind la premiul loteriei. Achizițiile de bilete se încheie aproximativ cu 30 de minute înainte de începerea extragerii loteriei. Câștigă premii dacă 2, 3 sau 4 dintre numerele de pe biletul tău se potrivesc cu numerele câștigătoare și pozițiile lor! Mult noroc!",
+            "text": "Cheltuie monede SDC pentru a cumpăra bilete, contribuind la premiul loteriei. Achizițiile de bilete se încheie aproximativ cu 30 de minute înainte de începerea extragerii loteriei. Câștigă premii dacă 2, 3 sau 4 dintre numerele de pe biletul tău se potrivesc cu numerele câștigătoare și pozițiile lor! Mult noroc!",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 40964,
-            "text": "%num% CAKE disponibile",
+            "text": "%num% SDC disponibile",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 44448,
-            "text": "Numărul tău trebuie să fie un multiplu de 10 CAKE",
+            "text": "Numărul tău trebuie să fie un multiplu de 10 SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 40970,
-            "text": "1 bilet = 10 CAKE",
+            "text": "1 bilet = 10 SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 40972,
-            "text": "Vei cheltui: %num% CAKE",
+            "text": "Vei cheltui: %num% SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 41088,
-            "text": "Monenele tale CAKE nu vor fi returnate după ce le-ai cheltuit pentru a cumpără bilete.",
+            "text": "Monenele tale SDC nu vor fi returnate după ce le-ai cheltuit pentru a cumpără bilete.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 41112,
-            "text": "Achizițiile de bilete sunt definitive. Monedele CAKE nu îți pot fi returnate după cumpărarea biletelor.",
+            "text": "Achizițiile de bilete sunt definitive. Monedele SDC nu îți pot fi returnate după cumpărarea biletelor.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 44454,
-            "text": "Premii CAKE de recuperat",
+            "text": "Premii SDC de recuperat",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 21312,
-            "text": "Aprobă CAKE",
+            "text": "Aprobă SDC",
             "user": {
                 "id": 14439014,
                 "username": "s1mer777",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 44458,
-            "text": "Vei plăti pentru jetoanele noi folosind jetoane CAKE-BNB LP, ceea ce înseamnă că trebuie să investești sume egale de CAKE și BNB în protofoliul de lichidități pentru a participa.",
+            "text": "Vei plăti pentru jetoanele noi folosind jetoane SDC-BNB LP, ceea ce înseamnă că trebuie să investești sume egale de SDC și BNB în protofoliul de lichidități pentru a participa.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 41068,
-            "text": "Obține CAKE-BNB LP >",
+            "text": "Obține SDC-BNB LP >",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 44478,
-            "text": "Proiectul obține BNB, PancakeSwap consumă CAKE.",
+            "text": "Proiectul obține BNB, PanSDCSwap consumă SDC.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 41040,
-            "text": "Lansează-ți proiectul în PancakeSwap, cel mai utilizat proiect AMM al Binance Smart Chain și furnizor de lichidități, pentru a-ți duce jetonul direct la comunitatea cea mai activă și cu cea mai rapidă creștere de pe BSC.",
+            "text": "Lansează-ți proiectul în PanSDCSwap, cel mai utilizat proiect AMM al Binance Smart Chain și furnizor de lichidități, pentru a-ți duce jetonul direct la comunitatea cea mai activă și cu cea mai rapidă creștere de pe BSC.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 36698,
-            "text": "Statistici despre Cake",
+            "text": "Statistici despre SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 44468,
-            "text": "Total aport de CAKE",
+            "text": "Total aport de SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 44470,
-            "text": "Total CAKE consumate",
+            "text": "Total SDC consumate",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 44280,
-            "text": "CAKE nou/bloc",
+            "text": "SDC nou/bloc",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 44474,
-            "text": "CAKE de colectat",
+            "text": "SDC de colectat",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 36708,
-            "text": "CAKE în portofel",
+            "text": "SDC în portofel",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 36710,
-            "text": "Adunarea CAKE",
+            "text": "Adunarea SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 36714,
-            "text": "CAKE de adunat",
+            "text": "SDC de adunat",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 36734,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 36738,
-            "text": "Inveștește CAKE pentru a câștiga jetoane noi.",
+            "text": "Inveștește SDC pentru a câștiga jetoane noi.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 44486,
-            "text": "CAKE de consumat (USD)",
+            "text": "SDC de consumat (USD)",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 44508,
-            "text": "⭐️ De fiecare dată când investești și retragi jetoanele LP, contractul va colecta automat recompense CAKE pentru tine!",
+            "text": "⭐️ De fiecare dată când investești și retragi jetoanele LP, contractul va colecta automat recompense SDC pentru tine!",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 41064,
-            "text": "Cumpără jetoane CAKE și BNB",
+            "text": "Cumpără jetoane SDC și BNB",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 36760,
-            "text": "Obține jetoane CAKE-BNB LP adăugând lichidități CAKE și BNB",
+            "text": "Obține jetoane SDC-BNB LP adăugând lichidități SDC și BNB",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 36938,
-            "text": "În perioada în care vânzarea este activă, depune jetoanele CAKE-LP pentru a cumpăra jetoate IFO",
+            "text": "În perioada în care vânzarea este activă, depune jetoanele SDC-LP pentru a cumpăra jetoate IFO",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 36950,
-            "text": "Tranzacționează CAKE sau păstrează-le pentru colecția ta!",
+            "text": "Tranzacționează SDC sau păstrează-le pentru colecția ta!",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 36998,
-            "text": "Când răscumperi acest NFT pentru a primi CAKE, vei pierde accesul la acesta definitiv!",
+            "text": "Când răscumperi acest NFT pentru a primi SDC, vei pierde accesul la acesta definitiv!",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 37044,
-            "text": "Câștigătorii își pot răscumpăra NFT-urile cu o valoare în CAKE până la data de expirare notată mai jos. Dacă nu îți răscumperi NFT în acel moment, nu-ți face griji: îl vei păstra totuși în portofel!",
+            "text": "Câștigătorii își pot răscumpăra NFT-urile cu o valoare în SDC până la data de expirare notată mai jos. Dacă nu îți răscumperi NFT în acel moment, nu-ți face griji: îl vei păstra totuși în portofel!",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 37092,
-            "text": "Răscumpără pentru CAKE",
+            "text": "Răscumpără pentru SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 37144,
-            "text": "Investește jetoane LP pentru a câștiga CAKE",
+            "text": "Investește jetoane LP pentru a câștiga SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 37204,
-            "text": "Loteria CAKE",
+            "text": "Loteria SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 41022,
-            "text": "Cumpără bilete cu CAKE",
+            "text": "Cumpără bilete cu SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 37290,
-            "text": "Cost total: 10 CAKE",
+            "text": "Cost total: 10 SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 44506,
-            "text": "Îți poți schimba fotografia de profil mai târziu dacă obții un alt colectibil Pancake aprobat.",
+            "text": "Îți poți schimba fotografia de profil mai târziu dacă obții un alt colectibil PanSDC aprobat.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 38112,
-            "text": "Cost: 5 CAKE",
+            "text": "Cost: 5 SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 38004,
-            "text": "Sold CAKE insuficient",
+            "text": "Sold SDC insuficient",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 44514,
-            "text": "Se pot utiliza doar colectibile Pancake aprobate.",
+            "text": "Se pot utiliza doar colectibile PanSDC aprobate.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 44488,
-            "text": "Nu am putut găsi niciun colectibil Pancake în portofelul tău.",
+            "text": "Nu am putut găsi niciun colectibil PanSDC în portofelul tău.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 44490,
-            "text": "Ai nevoie de un colectibilPancake pentru a finaliza configurarea profilului tău. Dacă ai vândut sau transferat colectibilul starter către un alt portofel, va trebui să îl recuperezi sau să achiziționezi altul într-un mod oarecare. Nu poți obține un colectibil starter nou cu această adresă de portofel.",
+            "text": "Ai nevoie de un colectibilPanSDC pentru a finaliza configurarea profilului tău. Dacă ai vândut sau transferat colectibilul starter către un alt portofel, va trebui să îl recuperezi sau să achiziționezi altul într-un mod oarecare. Nu poți obține un colectibil starter nou cu această adresă de portofel.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 37510,
-            "text": "CAKE la 1.000 $",
+            "text": "SDC la 1.000 $",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 27988,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 28086,
-            "text": "Bloc CAKE",
+            "text": "Bloc SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 28088,
-            "text": "BNB CAKE",
+            "text": "BNB SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 36638,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 36602,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 47706,
-            "text": "Cumpără CAKE",
+            "text": "Cumpără SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47766,
-            "text": "Este necesar un minim de %num% CAKE",
+            "text": "Este necesar un minim de %num% SDC",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",

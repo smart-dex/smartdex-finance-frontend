@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 30088,
-            "text": "Et saa CAKE-palkintoja omistamalla ostettuja SYRUPeja.",
+            "text": "Et saa SDC-palkintoja omistamalla ostettuja SYRUPeja.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 18980,
-            "text": "Vaihtaaksesi takaisin CAKEen sinun pitää ostaa takaisin sama määrä SYRUPia.",
+            "text": "Vaihtaaksesi takaisin SDCen sinun pitää ostaa takaisin sama määrä SYRUPia.",
             "user": {
                 "id": 14439316,
                 "username": "MattiS1",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 30180,
-            "text": "Jokaisesta vaihdosta maksetaan 0,2 %:n maksu. 0,17 % menee likviditeetin tarjoajille ja 0,03% menee PancakeSwap-rahastoon.",
+            "text": "Jokaisesta vaihdosta maksetaan 0,2 %:n maksu. 0,17 % menee likviditeetin tarjoajille ja 0,03% menee PanSDCSwap-rahastoon.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 30260,
-            "text": "Poltettujen CAKE-polettien kokonaismäärä julkaisusta lähtien",
+            "text": "Poltettujen SDC-polettien kokonaismäärä julkaisusta lähtien",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 30266,
-            "text": "Panosta LP-poletteja CAKE-polettejen pinoamiseksi",
+            "text": "Panosta LP-poletteja SDC-polettejen pinoamiseksi",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 30274,
-            "text": "Ainat kun panostat CAKE-poletteja tai perut niiden panostuksen, sopimus korjaa sinulle automaattisesti CAKE-palkkioita!",
+            "text": "Ainat kun panostat SDC-poletteja tai perut niiden panostuksen, sopimus korjaa sinulle automaattisesti SDC-palkkioita!",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 30322,
-            "text": "Cake-hinta",
+            "text": "SDC-hinta",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 25900,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 30366,
-            "text": "Käytä CAKEja lippujen ostamiseen, mikä kasvattaa arvontapottia. Lippuostot päättyvät noin 30 minuuttia ennen arvontaa. Voita palkintoja, jos 2, 3 tai 4 lippujesi numeroista vastaavat voittonumeroita ja niiden positioita! Onnea!",
+            "text": "Käytä SDCja lippujen ostamiseen, mikä kasvattaa arvontapottia. Lippuostot päättyvät noin 30 minuuttia ennen arvontaa. Voita palkintoja, jos 2, 3 tai 4 lippujesi numeroista vastaavat voittonumeroita ja niiden positioita! Onnea!",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 25944,
-            "text": "%num% CAKEa saatavilla",
+            "text": "%num% SDCa saatavilla",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 25946,
-            "text": "Määräsi täytyy olla 10 CAKEn monikerta",
+            "text": "Määräsi täytyy olla 10 SDCn monikerta",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 25948,
-            "text": "1 lippu = 10 CAKEa",
+            "text": "1 lippu = 10 SDCa",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 25950,
-            "text": "Käytät: %num% CAKEa",
+            "text": "Käytät: %num% SDCa",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 26006,
-            "text": "CAKEasi ei palauteta sinulle, kun käytät sen lippujen ostamiseen.",
+            "text": "SDCasi ei palauteta sinulle, kun käytät sen lippujen ostamiseen.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 26030,
-            "text": "Lippujen ostot ovat lopullisia. CAKEasi ei voida palauttaa sinulle lippujen ostamisen jälkeen.",
+            "text": "Lippujen ostot ovat lopullisia. SDCasi ei voida palauttaa sinulle lippujen ostamisen jälkeen.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 26036,
-            "text": "Lunastettavat CAKE-palkinnot",
+            "text": "Lunastettavat SDC-palkinnot",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 26050,
-            "text": "Hyväksy CAKE",
+            "text": "Hyväksy SDC",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 30378,
-            "text": "Maksat poletit käyttämällä CAKE-BNB LP -poletteja, mikä tarkoittaa, että sinun täytyy panostaa vastaavat summat CAKEa ja BNB:tä osallistuaksesi likviditeettipooliin.",
+            "text": "Maksat poletit käyttämällä SDC-BNB LP -poletteja, mikä tarkoittaa, että sinun täytyy panostaa vastaavat summat SDCa ja BNB:tä osallistuaksesi likviditeettipooliin.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 26058,
-            "text": "Hanki CAKE-BNB LP >",
+            "text": "Hanki SDC-BNB LP >",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 30384,
-            "text": "Projekti saa BNB:n, PancakeSwap polttaa CAKEn.",
+            "text": "Projekti saa BNB:n, PanSDCSwap polttaa SDCn.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 26074,
-            "text": "Aloita oma projektisi PancakeSwapilla, Binance Smart Chainin käytetyimmällä AMM-projektien ja likviditeetin tarjoajalla, tuodaksesi polettisi suoraan aktiviisimmalle ja nopeimmin kasvavalle yhteisölle BSC:ssä.",
+            "text": "Aloita oma projektisi PanSDCSwapilla, Binance Smart Chainin käytetyimmällä AMM-projektien ja likviditeetin tarjoajalla, tuodaksesi polettisi suoraan aktiviisimmalle ja nopeimmin kasvavalle yhteisölle BSC:ssä.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 26106,
-            "text": "Cake-tilastot",
+            "text": "SDC-tilastot",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 26110,
-            "text": "CAKE-varanto yhteensä",
+            "text": "SDC-varanto yhteensä",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 26112,
-            "text": "Poltetut CAKEt yhteensä",
+            "text": "Poltetut SDCt yhteensä",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 26114,
-            "text": "Uusi CAKE/lohko",
+            "text": "Uusi SDC/lohko",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 26120,
-            "text": "Korjattava CAKE",
+            "text": "Korjattava SDC",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 26122,
-            "text": "CAKE lompakossa",
+            "text": "SDC lompakossa",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 26124,
-            "text": "CAKEn kerääminen",
+            "text": "SDCn kerääminen",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 26130,
-            "text": "Kerättävä CAKE",
+            "text": "Kerättävä SDC",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 26150,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 26158,
-            "text": "Panosta CAKEa ansaitaksesi uusia poletteja.",
+            "text": "Panosta SDCa ansaitaksesi uusia poletteja.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 26166,
-            "text": "Poltettava CAKE (USD)",
+            "text": "Poltettava SDC (USD)",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 26176,
-            "text": "⭐️ Ainat kun panostat LP-poletteja tai perut niiden panostuksen, sopimus korjaa sinulle automaattisesti CAKE-palkkioita!",
+            "text": "⭐️ Ainat kun panostat LP-poletteja tai perut niiden panostuksen, sopimus korjaa sinulle automaattisesti SDC-palkkioita!",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 26184,
-            "text": "Osta CAKE- ja BNB-poletteja",
+            "text": "Osta SDC- ja BNB-poletteja",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 26186,
-            "text": "Saa CAKE-BNB LP -poletteja lisäämällä CAKE- ja BNB-likviditeettiä",
+            "text": "Saa SDC-BNB LP -poletteja lisäämällä SDC- ja BNB-likviditeettiä",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 26194,
-            "text": "Kun kauppa on aktiivinen, luovuta CAKE-LP-polettisi IFO-polettien ostamiseksi",
+            "text": "Kun kauppa on aktiivinen, luovuta SDC-LP-polettisi IFO-polettien ostamiseksi",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 26226,
-            "text": "Vaihda CAKEen tai säilytä kokoelmaasi varten!",
+            "text": "Vaihda SDCen tai säilytä kokoelmaasi varten!",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 30402,
-            "text": "Kun vaihdat tämän NFT:n saadaksesi CAKEa, menetät pääsyn siihen lopullisesti!",
+            "text": "Kun vaihdat tämän NFT:n saadaksesi SDCa, menetät pääsyn siihen lopullisesti!",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 27788,
-            "text": "Voittajat voivat vaihtaa NFT:nsä CAKE-arvoksi alla näkyvään määräaikaan mennessä. Jos et vaihda NFT:täsi siihen mennessä, ei huolta: säilytät sen edelleen lompakossasi!",
+            "text": "Voittajat voivat vaihtaa NFT:nsä SDC-arvoksi alla näkyvään määräaikaan mennessä. Jos et vaihda NFT:täsi siihen mennessä, ei huolta: säilytät sen edelleen lompakossasi!",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 27804,
-            "text": "Vaihda CAKEen",
+            "text": "Vaihda SDCen",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 29766,
-            "text": "Panosta LP-poletteja ansaitaksesi CAKE-poletteja",
+            "text": "Panosta LP-poletteja ansaitaksesi SDC-poletteja",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 29796,
-            "text": "CAKE-arvonta",
+            "text": "SDC-arvonta",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 29800,
-            "text": "Osta lippuja CAKElla",
+            "text": "Osta lippuja SDClla",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 29874,
-            "text": "Kokonaiskustannus: 10 CAKEa",
+            "text": "Kokonaiskustannus: 10 SDCa",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 29902,
-            "text": "Voit vaihtaa profiilikuvasi myöhemmin, jos saat toisen hyväksytyn Pancake-keräilykohteen.",
+            "text": "Voit vaihtaa profiilikuvasi myöhemmin, jos saat toisen hyväksytyn PanSDC-keräilykohteen.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 29910,
-            "text": "Kustannus: 5 CAKEa",
+            "text": "Kustannus: 5 SDCa",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 29924,
-            "text": "CAKE-saldo ei riitä",
+            "text": "SDC-saldo ei riitä",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 29940,
-            "text": "Vain hyväksyttyjä Pancake-keräilykohteita voi käyttää.",
+            "text": "Vain hyväksyttyjä PanSDC-keräilykohteita voi käyttää.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 29984,
-            "text": "Lompakostasi ei löydy Pancake-keräilykohteita.",
+            "text": "Lompakostasi ei löydy PanSDC-keräilykohteita.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 30458,
-            "text": "Tarvitset Pancake-keräilykohteen, jotta voit viimeistellä profiilisi määrittämisen. Jos myit tai siirsit aloituskeräilykohteesi toiseen lompakkoon, sinun täytyy saada se takaisin tai hankkia uusi jollakin tavalla. Et voit tehdä uutta aloituskohdetta tällä lompakon osoitteella.",
+            "text": "Tarvitset PanSDC-keräilykohteen, jotta voit viimeistellä profiilisi määrittämisen. Jos myit tai siirsit aloituskeräilykohteesi toiseen lompakkoon, sinun täytyy saada se takaisin tai hankkia uusi jollakin tavalla. Et voit tehdä uutta aloituskohdetta tällä lompakon osoitteella.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 29996,
-            "text": "CAKE per 1000 $",
+            "text": "SDC per 1000 $",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 25556,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 25706,
-            "text": "CAKE-lohko",
+            "text": "SDC-lohko",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 25710,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 25728,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 25736,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 47576,
-            "text": "Osta CAKEa",
+            "text": "Osta SDCa",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47544,
-            "text": "Vähintään %num% CAKEa vaaditaan",
+            "text": "Vähintään %num% SDCa vaaditaan",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",

@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 41596,
-            "text": "Ви не отримуватимете CAKE у винагороду за утримання придбаних одиниць SYRUP.",
+            "text": "Ви не отримуватимете SDC у винагороду за утримання придбаних одиниць SYRUP.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 40290,
-            "text": "Вам потрібно буде викупити стільки ж токенів SYRUP, щоб можна було обміняти їх назад на CAKE.",
+            "text": "Вам потрібно буде викупити стільки ж токенів SYRUP, щоб можна було обміняти їх назад на SDC.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 41636,
-            "text": "За кожну угоду сплачується комісія в розмірі 0,2%. 0,17% переходить постачальникам ліквідності, а 0,03% — у скарбницю PancakeSwap.",
+            "text": "За кожну угоду сплачується комісія в розмірі 0,2%. 0,17% переходить постачальникам ліквідності, а 0,03% — у скарбницю PanSDCSwap.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 40168,
-            "text": "Усього спалено CAKE з моменту запуску",
+            "text": "Усього спалено SDC з моменту запуску",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 40174,
-            "text": "Внесіть токени постачальника ліквідності, щоб накопичити CAKE",
+            "text": "Внесіть токени постачальника ліквідності, щоб накопичити SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 40186,
-            "text": "Щоразу, як ви вносите чи виводите токени CAKE, контракт автоматично збирає для вас нагороди CAKE!",
+            "text": "Щоразу, як ви вносите чи виводите токени SDC, контракт автоматично збирає для вас нагороди SDC!",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 11396,
-            "text": "Ціна Cake",
+            "text": "Ціна SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 40242,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 47230,
-            "text": "Витрачайте CAKE на квитки, щоб збільшувати банк лотереї. Продаж квитків завершується приблизно за 30 хвилин до початку лотереї. Вигравайте призи, якщо один, два, три або чотири номери на вашому квитку збігаються з виграшними номерами та їхніми позиціями! Удачі!",
+            "text": "Витрачайте SDC на квитки, щоб збільшувати банк лотереї. Продаж квитків завершується приблизно за 30 хвилин до початку лотереї. Вигравайте призи, якщо один, два, три або чотири номери на вашому квитку збігаються з виграшними номерами та їхніми позиціями! Удачі!",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 40274,
-            "text": "Доступно %num% CAKE",
+            "text": "Доступно %num% SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 40276,
-            "text": "Кількість має бути кратна 10 CAKE",
+            "text": "Кількість має бути кратна 10 SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 40278,
-            "text": "1 квиток = 10 CAKE",
+            "text": "1 квиток = 10 SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 40280,
-            "text": "Ви витратите: %num% CAKE",
+            "text": "Ви витратите: %num% SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 40292,
-            "text": "Ваші токени CAKE не можна буде повернути, якщо витратити їх на квитки.",
+            "text": "Ваші токени SDC не можна буде повернути, якщо витратити їх на квитки.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 40300,
-            "text": "Придбання квитків остаточне. Ваші токени CAKE не можна буде повернути після придбання квитків.",
+            "text": "Придбання квитків остаточне. Ваші токени SDC не можна буде повернути після придбання квитків.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 41456,
-            "text": "Призи CAKE, які можна отримати",
+            "text": "Призи SDC, які можна отримати",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 41338,
-            "text": "Схвалити CAKE",
+            "text": "Схвалити SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 40320,
-            "text": "Ви оплачуватимете нові токени токенами постачальника ліквідності CAKE-BNB. Це означає, що вам потрібно внести рівну кількість CAKE і BNB в пул ліквідності, щоб узяти участь.",
+            "text": "Ви оплачуватимете нові токени токенами постачальника ліквідності SDC-BNB. Це означає, що вам потрібно внести рівну кількість SDC і BNB в пул ліквідності, щоб узяти участь.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 41552,
-            "text": "Отримати CAKE-BNB ПЛ >",
+            "text": "Отримати SDC-BNB ПЛ >",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 40324,
-            "text": "Проєкт отримує BNB, PancakeSwap спалює CAKE.",
+            "text": "Проєкт отримує BNB, PanSDCSwap спалює SDC.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 41558,
-            "text": "Запустіть власний проєкт із PancakeSwap – найбільш використовуваного проєкту з автоматизованого маркет-мейкінгу та постачальника ліквідності Binance Smart Chain – і виведіть свій токен безпосередньо в найактивнішу та найдинамічнішу спільноту в BSC.",
+            "text": "Запустіть власний проєкт із PanSDCSwap – найбільш використовуваного проєкту з автоматизованого маркет-мейкінгу та постачальника ліквідності Binance Smart Chain – і виведіть свій токен безпосередньо в найактивнішу та найдинамічнішу спільноту в BSC.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 40348,
-            "text": "Статистика Cake",
+            "text": "Статистика SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 41366,
-            "text": "Загальний обсяг CAKE",
+            "text": "Загальний обсяг SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 40358,
-            "text": "Усього спалено CAKE",
+            "text": "Усього спалено SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 40360,
-            "text": "Нових CAKE/блок",
+            "text": "Нових SDC/блок",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 41658,
-            "text": "CAKE, що можна зібрати",
+            "text": "SDC, що можна зібрати",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 40366,
-            "text": "CAKE у гаманці",
+            "text": "SDC у гаманці",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 41480,
-            "text": "Забирання CAKE",
+            "text": "Забирання SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 41482,
-            "text": "CAKE, що можна забрати",
+            "text": "SDC, що можна забрати",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 40394,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 40398,
-            "text": "Внесіть CAKE, щоб заробити нові токени.",
+            "text": "Внесіть SDC, щоб заробити нові токени.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 40404,
-            "text": "CAKE на спалення (USD)",
+            "text": "SDC на спалення (USD)",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 40408,
-            "text": "⭐️ Щоразу, як ви вносите чи виводите токени постачальника ліквідності, контракт автоматично збирає для вас нагороди CAKE!",
+            "text": "⭐️ Щоразу, як ви вносите чи виводите токени постачальника ліквідності, контракт автоматично збирає для вас нагороди SDC!",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 40414,
-            "text": "Придбайте токени CAKE і BNB",
+            "text": "Придбайте токени SDC і BNB",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 40416,
-            "text": "Отримайте токени постачальника ліквідності CAKE-BNB, додавши ліквідність CAKE і BNB",
+            "text": "Отримайте токени постачальника ліквідності SDC-BNB, додавши ліквідність SDC і BNB",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 40422,
-            "text": "Поки продаж триває, зафіксуйте свої токени постачальника ліквідності CAKE, щоб придбати токени IFO",
+            "text": "Поки продаж триває, зафіксуйте свої токени постачальника ліквідності SDC, щоб придбати токени IFO",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 40434,
-            "text": "Обміняйте їх на CAKE або збережіть для колекції!",
+            "text": "Обміняйте їх на SDC або збережіть для колекції!",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 40448,
-            "text": "Обмінюючи цей невзаємозамінний токен на CAKE, ви втрачаєте його назавжди!",
+            "text": "Обмінюючи цей невзаємозамінний токен на SDC, ви втрачаєте його назавжди!",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 41566,
-            "text": "Переможці можуть обмінювати свої невзаємозамінні токени на CAKE до наведеної нижче дати завершення дії. Не хвилюйтеся: якщо вам не вдалось обміняти ці токени до того часу, вони залишатимуться у вашому гаманці!",
+            "text": "Переможці можуть обмінювати свої невзаємозамінні токени на SDC до наведеної нижче дати завершення дії. Не хвилюйтеся: якщо вам не вдалось обміняти ці токени до того часу, вони залишатимуться у вашому гаманці!",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 40474,
-            "text": "Обміняти на CAKE",
+            "text": "Обміняти на SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 40516,
-            "text": "Внесіть токени постачальника ліквідності, щоб заробити CAKE",
+            "text": "Внесіть токени постачальника ліквідності, щоб заробити SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 40528,
-            "text": "Лотерея CAKE",
+            "text": "Лотерея SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 40530,
-            "text": "Купляйте квитки за CAKE",
+            "text": "Купляйте квитки за SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 41190,
-            "text": "Загальна вартість: 10 CAKE",
+            "text": "Загальна вартість: 10 SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 41224,
-            "text": "Змінити аватар можна буде пізніше на інший схвалений колекційний токен Pancake.",
+            "text": "Змінити аватар можна буде пізніше на інший схвалений колекційний токен PanSDC.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 41234,
-            "text": "Вартість: 5 CAKE",
+            "text": "Вартість: 5 SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 41252,
-            "text": "Занизький баланс CAKE",
+            "text": "Занизький баланс SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 41306,
-            "text": "Можна використовувати лише схвалені колекційні токени Pancake.",
+            "text": "Можна використовувати лише схвалені колекційні токени PanSDC.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 41304,
-            "text": "У вашому гаманці немає колекційних токенів Pancake.",
+            "text": "У вашому гаманці немає колекційних токенів PanSDC.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 41732,
-            "text": "Щоб завершити налаштування профілю, потрібен колекційний токен Pancake. Якщо ви продали свій початковий колекційний токен або перевели його в інший гаманець, потрібно його повернути або в якийсь спосіб отримати новий. Створити новий початковий токен із цією адресою гаманця не можна.",
+            "text": "Щоб завершити налаштування профілю, потрібен колекційний токен PanSDC. Якщо ви продали свій початковий колекційний токен або перевели його в інший гаманець, потрібно його повернути або в якийсь спосіб отримати новий. Створити новий початковий токен із цією адресою гаманця не можна.",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 41314,
-            "text": "CAKE на $1000",
+            "text": "SDC на $1000",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 37574,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 38464,
-            "text": "блок CAKE",
+            "text": "блок SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 38466,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 41228,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 38512,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 47282,
-            "text": "Придбати CAKE",
+            "text": "Придбати SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47600,
-            "text": "Потрібно мінімум %num% CAKE",
+            "text": "Потрібно мінімум %num% SDC",
             "user": {
                 "id": 13569899,
                 "username": "andrey.a.kozhushko",
