@@ -13,7 +13,7 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
     <Wrapper>
       <ToggleWrapper>
         <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
-        <Text> {TranslateString(1116, 'Staked Only')}</Text>
+        <StyledText> {TranslateString(1116, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
         <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="primary">
@@ -31,6 +31,16 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
 
 export default FarmTabButtons
 
+const StyledText = styled(Text)`
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+}
+line-height: 143%;
+letter-spacing: -0.03em;
+`
 const Wrapper = styled.div`
   display: flex;
   align-items: center;

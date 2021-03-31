@@ -155,7 +155,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               <ImageCoin>
                 <img
                   src={`/images/tokens/${image || tokenName}.png`}
-                  alt={tokenName}
+                  alt={" "}
                   style={{ width: '100%', height: '100%' }}
                 />
               </ImageCoin>
