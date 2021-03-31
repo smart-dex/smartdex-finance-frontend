@@ -56,9 +56,11 @@ const WrapProgress = styled('div')`
 const WrapButtonRow = styled('div')`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  
+  justify-content: center;
   & > button,
   & > a {
-    flex: inherit;
     width: 100%;
     margin: 0px;
   }
@@ -67,14 +69,15 @@ const WrapButtonRow = styled('div')`
   }
 
   ${({ theme }) => theme.mediaQueries.nav} {
+    grid-gap: 30px;
     flex-direction: row;
     & > button {
       flex: 1;
       margin-bottom: 0;
+      margin-right: 33px;
     }
     & > a {
-      flex: 1;
-      margin-left: 60px;
+      width: 46%;
     }
   }
 `

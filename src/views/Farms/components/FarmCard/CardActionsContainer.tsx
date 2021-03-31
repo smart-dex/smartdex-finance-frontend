@@ -146,7 +146,7 @@ interface FarmCardActionsProps {
   addLiquidityUrl?: string
   changeOpenDetail: () => void
   isOpenDetail: boolean
-  earnLabel:string
+  earnLabel: string
 }
 
 const CardActions: React.FC<FarmCardActionsProps> = ({
@@ -195,13 +195,11 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   }, [onApprove])
 
   const renderApprovalOrStakeButton = () => {
-    return isApproved ? (
-      <SelectButton onClick={onSelect}>   {TranslateString(999, 'Select')}</SelectButton>
-    ) : (
-        <ButtonApprove disabled={requestedApproval} isDisable={requestedApproval} onClick={handleApprove} mt="10px" mb="10px">
-          {TranslateString(758, 'Approve Contract')}
-        </ButtonApprove>
-      )
+    return !isApproved && (
+      <ButtonApprove disabled={requestedApproval} isDisable={requestedApproval} onClick={handleApprove} mt="10px" mb="10px">
+        {TranslateString(758, 'Approve Contract')}
+      </ButtonApprove>
+    )
   }
 
   return (
@@ -211,24 +209,28 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
           <StyledButtonUnlock > <UnlockButton /></StyledButtonUnlock>
         ) : (
             <>
+              {renderApprovalOrStakeButton()}
               {
-                tokenBalance.eq(0) && rawStakedBalance === 0 ?
-                  (
-                    <ButtonDeposit as="a" href={addLiquidityUrl} target="_blank" >
-                      <span>  {TranslateString(999, 'Deposit')}</span>
+                isApproved && (
+                  <>
+                    {
+                      tokenBalance.eq(0) && rawStakedBalance === 0 ?
+                        (
+                          <ButtonDeposit as="a" href={addLiquidityUrl} target="_blank" >
+                            <span>  {TranslateString(999, 'Deposit')}</span>
 
-                    </ButtonDeposit>
-                  ) : (
-                    <>
-                      {renderApprovalOrStakeButton()}
-                      {
-                        isApproved &&
-                        <ButtonDetail onClick={changeOpenDetail} isShow={isOpenDetail} mt="10px" mb="10px">
-                          {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
-                        </ButtonDetail>
-                      }
-                    </>
-                  )
+                          </ButtonDeposit>
+                        ) : (
+                          <>
+                            <SelectButton onClick={onSelect}>   {TranslateString(999, 'Select')}</SelectButton>
+                            <ButtonDetail onClick={changeOpenDetail} isShow={isOpenDetail} mt="10px" mb="10px">
+                              {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
+                            </ButtonDetail>
+                          </>
+                        )
+                    }
+                  </>
+                )
               }
             </>
           )}
