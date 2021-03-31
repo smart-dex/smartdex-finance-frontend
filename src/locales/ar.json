@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 34190,
-            "text": "لن تتلقى مكافآت CAKE مقابل الاحتفاظ بـ Syrup الذي تم شراؤها.",
+            "text": "لن تتلقى مكافآت SDC مقابل الاحتفاظ بـ Syrup الذي تم شراؤها.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 35562,
-            "text": "ستحتاج إلى إعادة شراء نفس الكمية من SYRUP لتتمكن من التحويل مرة أخرى إلى CAKE.",
+            "text": "ستحتاج إلى إعادة شراء نفس الكمية من SYRUP لتتمكن من التحويل مرة أخرى إلى SDC.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 34386,
-            "text": "يتم دفع رسوم نسبتها 0.2% عن كل عملية تداول. يحصل موفِّري السيولة على نسبة 0.17% منها، وتدخل نسبة 0.03% إلى خزينة PancakeSwap.",
+            "text": "يتم دفع رسوم نسبتها 0.2% عن كل عملية تداول. يحصل موفِّري السيولة على نسبة 0.17% منها، وتدخل نسبة 0.03% إلى خزينة PanSDCSwap.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 9970,
-            "text": "إجمالي CAKE المحترقة منذ الإطلاق",
+            "text": "إجمالي SDC المحترقة منذ الإطلاق",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 35518,
-            "text": "رهن رموز LP المميزة لتكديس CAKE",
+            "text": "رهن رموز LP المميزة لتكديس SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 35526,
-            "text": "في كل مرة ترهن فيها رموز Cake المميزة أو تفك رهنها، سيحصد عقدك مكافآت CAKE تلقائيًا من أجلك!",
+            "text": "في كل مرة ترهن فيها رموز SDC المميزة أو تفك رهنها، سيحصد عقدك مكافآت SDC تلقائيًا من أجلك!",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 30760,
-            "text": "سعر Cake",
+            "text": "سعر SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 31138,
-            "text": "%num% من CAKE",
+            "text": "%num% من SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 31420,
-            "text": "أنفق CAKE لشراء التذاكر والمساهمة في جائزة اليانصيب. تنتهي مهلة شراء التذاكر قبل 30 دقيقة تقريبًا من سحب اليانصيب. اربح الجوائز إذا تطابقت 2 أو 3 أو 4 من أرقام تذاكرك مع الأرقام الفائزة وترتيبها! حظًا سعيدًا!",
+            "text": "أنفق SDC لشراء التذاكر والمساهمة في جائزة اليانصيب. تنتهي مهلة شراء التذاكر قبل 30 دقيقة تقريبًا من سحب اليانصيب. اربح الجوائز إذا تطابقت 2 أو 3 أو 4 من أرقام تذاكرك مع الأرقام الفائزة وترتيبها! حظًا سعيدًا!",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 31526,
-            "text": "%num% CAKE متوفرة",
+            "text": "%num% SDC متوفرة",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 35568,
-            "text": "لا بد أن تكون الكمية من مضاعفات 10 CAKE",
+            "text": "لا بد أن تكون الكمية من مضاعفات 10 SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 31530,
-            "text": "التذكرة الواحدة = 10 CAKE",
+            "text": "التذكرة الواحدة = 10 SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 31532,
-            "text": "ستنفق: %num% CAKE",
+            "text": "ستنفق: %num% SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 31568,
-            "text": "لن تستعيد CAKE بعد إنفاقها في شراء التذاكر.",
+            "text": "لن تستعيد SDC بعد إنفاقها في شراء التذاكر.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 31696,
-            "text": "تكون مشتريات التذاكر نهائية (لا رجعة فيها). لا يمكن إعادة CAKE إليك بعد شراء التذاكر.",
+            "text": "تكون مشتريات التذاكر نهائية (لا رجعة فيها). لا يمكن إعادة SDC إليك بعد شراء التذاكر.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 31584,
-            "text": "جوائز CAKE للمطالبة بها",
+            "text": "جوائز SDC للمطالبة بها",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 31600,
-            "text": "الموافقة على CAKE",
+            "text": "الموافقة على SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 35570,
-            "text": "ستدفع ثمن الرموز المميزة الجديدة باستخدام رموز CAKE-BNB LP المميزة، ما يعني أنك بحاجة إلى رهن كميات متساوية من CAKE وBNB في تجمُّعٍ للسيولة من أجل المشاركة.",
+            "text": "ستدفع ثمن الرموز المميزة الجديدة باستخدام رموز SDC-BNB LP المميزة، ما يعني أنك بحاجة إلى رهن كميات متساوية من SDC وBNB في تجمُّعٍ للسيولة من أجل المشاركة.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 31962,
-            "text": "الحصول على CAKE-BNB LP >",
+            "text": "الحصول على SDC-BNB LP >",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 31834,
-            "text": "يحصل المشروع على BNB ويقوم PancakeSwap بحرق CAKE.",
+            "text": "يحصل المشروع على BNB ويقوم PanSDCSwap بحرق SDC.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 31848,
-            "text": "أطلق مشروعك مع PancakeSwap، وهو مشروع AMM (صانع سوق آلي) وموفِّر السيولة الأكثر استخدامًا على Binance Smart Chain، لإحضار رمزك المميز مباشرةً إلى أكثر المجتمعات نشاطًا وسرعةً في النمو على BSC.",
+            "text": "أطلق مشروعك مع PanSDCSwap، وهو مشروع AMM (صانع سوق آلي) وموفِّر السيولة الأكثر استخدامًا على Binance Smart Chain، لإحضار رمزك المميز مباشرةً إلى أكثر المجتمعات نشاطًا وسرعةً في النمو على BSC.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 31808,
-            "text": "إحصائيات Cake",
+            "text": "إحصائيات SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 31810,
-            "text": "إجمالي المعروض من CAKE",
+            "text": "إجمالي المعروض من SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 31814,
-            "text": "إجمالي المحترق من CAKE",
+            "text": "إجمالي المحترق من SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 31818,
-            "text": "CAKE/كتلة جديدة",
+            "text": "SDC/كتلة جديدة",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 33984,
-            "text": "CAKE للحصاد",
+            "text": "SDC للحصاد",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 33980,
-            "text": "CAKE في المحفظة",
+            "text": "SDC في المحفظة",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 33976,
-            "text": "تحصيل CAKE",
+            "text": "تحصيل SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 33982,
-            "text": "CAKE للتحصيل",
+            "text": "SDC للتحصيل",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 34038,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 34062,
-            "text": "ارهن CAKE لكسب رموز مميزة جديدة.",
+            "text": "ارهن SDC لكسب رموز مميزة جديدة.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 34080,
-            "text": "CAKE التي ستحترق (USD)",
+            "text": "SDC التي ستحترق (USD)",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 35528,
-            "text": "⭐️ في كل مرة ترهن فيها رموز LP المميزة أو تفك رهنها، سيحصد عقدك مكافآت CAKE تلقائيًا من أجلك!",
+            "text": "⭐️ في كل مرة ترهن فيها رموز LP المميزة أو تفك رهنها، سيحصد عقدك مكافآت SDC تلقائيًا من أجلك!",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 34150,
-            "text": "قم بشراء رموز CAKE وBNB المميزة.",
+            "text": "قم بشراء رموز SDC وBNB المميزة.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 35530,
-            "text": "احصل على رموز CAKE-BNB LP المميزة عن طريق إضافة سيولة من CAKE وBNB.",
+            "text": "احصل على رموز SDC-BNB LP المميزة عن طريق إضافة سيولة من SDC وBNB.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 35532,
-            "text": "بينما يكون البيع جاريًا، استخدام رموز CAKE-LP المميزة لشراء رموز IFO (العرض الأولي للمزرعة) المميزة.",
+            "text": "بينما يكون البيع جاريًا، استخدام رموز SDC-LP المميزة لشراء رموز IFO (العرض الأولي للمزرعة) المميزة.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 31980,
-            "text": "استبدلها مقابل CAKE، أو احتفظ بها في مجموعتك!",
+            "text": "استبدلها مقابل SDC، أو احتفظ بها في مجموعتك!",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 32504,
-            "text": "عندما تستبدل NFT للحصول على CAKE، ستفقد إمكانية الوصول إلى NFT للأبد!",
+            "text": "عندما تستبدل NFT للحصول على SDC، ستفقد إمكانية الوصول إلى NFT للأبد!",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 32606,
-            "text": "يمكن للفائزين استبدال رموز NFT مقابل قيمتها من CAKE حتى تاريخ الانتهاء المذكور أدناه. إذا لم تستبدل NFT بحلول هذا التاريخ، فلا تقلق: ستظل تحتفظ بها في محفظتك!",
+            "text": "يمكن للفائزين استبدال رموز NFT مقابل قيمتها من SDC حتى تاريخ الانتهاء المذكور أدناه. إذا لم تستبدل NFT بحلول هذا التاريخ، فلا تقلق: ستظل تحتفظ بها في محفظتك!",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 32680,
-            "text": "الاستبدال مقابل CAKE",
+            "text": "الاستبدال مقابل SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 35534,
-            "text": "رهن رموز LP المميزة لكسب CAKE",
+            "text": "رهن رموز LP المميزة لكسب SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 32910,
-            "text": "يانصيب CAKE",
+            "text": "يانصيب SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 32914,
-            "text": "شراء التذاكر باستخدام CAKE",
+            "text": "شراء التذاكر باستخدام SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 33138,
-            "text": "إجمالي التكلفة: 10 CAKE",
+            "text": "إجمالي التكلفة: 10 SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 33730,
-            "text": "يمكنك تغيير صورة ملفك التعريفي لاحقًا إذا حصلت على عنصر Pancake قابل للتحصيل معتمد،",
+            "text": "يمكنك تغيير صورة ملفك التعريفي لاحقًا إذا حصلت على عنصر PanSDC قابل للتحصيل معتمد،",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 33652,
-            "text": "التكلفة: 5 CAKE",
+            "text": "التكلفة: 5 SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 33656,
-            "text": "رصيد CAKE غير كافٍ",
+            "text": "رصيد SDC غير كافٍ",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 33732,
-            "text": "وحدها عناصر Pancake القابلة للتحصيل المعتمدة يمكن استخدامها.",
+            "text": "وحدها عناصر PanSDC القابلة للتحصيل المعتمدة يمكن استخدامها.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 33834,
-            "text": "لم نتمكن من العثور على أي عناصر Pancake قابلة للتحصيل في محفظتك.",
+            "text": "لم نتمكن من العثور على أي عناصر PanSDC قابلة للتحصيل في محفظتك.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 35546,
-            "text": "أنت بحاجة إلى عنصر Pancake القابل للتحصيل للانتهاء من إعداد ملفك التعريفي. إذا بعت أو حوَّلت العنصر الأولي القابل للتحصيل إلى محفظة أخرى، فستحتاج إلى استعادته أو الحصول على واحد جديد بطريقة ما. لا يمكنك إنشاء عنصر أولي جديد باستخدام عنوان المحفظة هذا.",
+            "text": "أنت بحاجة إلى عنصر PanSDC القابل للتحصيل للانتهاء من إعداد ملفك التعريفي. إذا بعت أو حوَّلت العنصر الأولي القابل للتحصيل إلى محفظة أخرى، فستحتاج إلى استعادته أو الحصول على واحد جديد بطريقة ما. لا يمكنك إنشاء عنصر أولي جديد باستخدام عنوان المحفظة هذا.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 33856,
-            "text": "CAKE لكل 1000 دولار",
+            "text": "SDC لكل 1000 دولار",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 27554,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 31680,
-            "text": "كتلة CAKE",
+            "text": "كتلة SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 31682,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 31684,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 31662,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 46612,
-            "text": "شراء CAKE",
+            "text": "شراء SDC",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 46664,
-            "text": "يلزم توفير %num% من CAKE كحدٍ أدنى.",
+            "text": "يلزم توفير %num% من SDC كحدٍ أدنى.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",

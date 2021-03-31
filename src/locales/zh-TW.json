@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 35968,
-            "text": "如果您正持有著購得的 SYRUP，便無法接受 CAKE 獎勵。",
+            "text": "如果您正持有著購得的 SYRUP，便無法接受 SDC 獎勵。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 35972,
-            "text": "您將需要購買回等量的 SYRUP 才能轉換回 CAKE。",
+            "text": "您將需要購買回等量的 SYRUP 才能轉換回 SDC。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 36516,
-            "text": "每次交易都將收取 0.2% 的費用。其中 0.17% 會分配給流動性提供者，另外 0.03% 則會轉入 PancakeSwap 金庫中。",
+            "text": "每次交易都將收取 0.2% 的費用。其中 0.17% 會分配給流動性提供者，另外 0.03% 則會轉入 PanSDCSwap 金庫中。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 36654,
-            "text": "自發起迄今，CAKE 的總銷毀量",
+            "text": "自發起迄今，SDC 的總銷毀量",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 36770,
-            "text": "質押 LP 代幣以堆疊 CAKE",
+            "text": "質押 LP 代幣以堆疊 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 36824,
-            "text": "每當您質押與取回 CAKE 代幣時，合約都將自動為您收割 CAKE 獎勵！",
+            "text": "每當您質押與取回 SDC 代幣時，合約都將自動為您收割 SDC 獎勵！",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 36858,
-            "text": "CAKE 價格",
+            "text": "SDC 價格",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 20512,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 14439406,
                 "username": "Potaball",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 36920,
-            "text": "花費 CAKE 來購買票券，為彩券獎池做出貢獻。票券購買在開獎前約 30 分鐘結束。如果您的彩券出現 2、3 或 4 個中獎號碼且部位相符，就能贏取獎金！祝您好運！",
+            "text": "花費 SDC 來購買票券，為彩券獎池做出貢獻。票券購買在開獎前約 30 分鐘結束。如果您的彩券出現 2、3 或 4 個中獎號碼且部位相符，就能贏取獎金！祝您好運！",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 37500,
-            "text": "%num% CAKE 可用",
+            "text": "%num% SDC 可用",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 37506,
-            "text": "CAKE 的數量需為 10 的倍數",
+            "text": "SDC 的數量需為 10 的倍數",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 37508,
-            "text": "1 張票券 = 10 CAKE",
+            "text": "1 張票券 = 10 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 20560,
-            "text": "您將花費：%num% CAKE",
+            "text": "您將花費：%num% SDC",
             "user": {
                 "id": 14439406,
                 "username": "Potaball",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 37528,
-            "text": "CAKE 經您花費於購買票券後，即無法再退還給您。",
+            "text": "SDC 經您花費於購買票券後，即無法再退還給您。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 37638,
-            "text": "票券購買即最終狀態。CAKE 用於購買票券後，即無法再退還給您。",
+            "text": "票券購買即最終狀態。SDC 用於購買票券後，即無法再退還給您。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 37648,
-            "text": "待領取的 CAKE 獎金",
+            "text": "待領取的 SDC 獎金",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 37680,
-            "text": "批准 CAKE",
+            "text": "批准 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 37712,
-            "text": "您將使用 CAKE-BNB LP 代幣來支付新代幣，這表示您需要在流動性資金池中質押等量的 CAKE 和 BNB 才能參與。",
+            "text": "您將使用 SDC-BNB LP 代幣來支付新代幣，這表示您需要在流動性資金池中質押等量的 SDC 和 BNB 才能參與。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 37716,
-            "text": "取得 CAKE-BNB LP >",
+            "text": "取得 SDC-BNB LP >",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 37758,
-            "text": "專案取得 BNB 後，而 PancakeSwap 銷毀 CAKE。",
+            "text": "專案取得 BNB 後，而 PanSDCSwap 銷毀 SDC。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 37846,
-            "text": "透過幣安智能鏈上最常用的 AMM 專案和流動性提供商 PancakeSwap 來發起您的專案，將您的代幣直接引入 BSC 上最活躍且發展快速的社群。",
+            "text": "透過幣安智能鏈上最常用的 AMM 專案和流動性提供商 PanSDCSwap 來發起您的專案，將您的代幣直接引入 BSC 上最活躍且發展快速的社群。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 38018,
-            "text": "Cake 統計資料",
+            "text": "SDC 統計資料",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 38020,
-            "text": "CAKE 總供應量",
+            "text": "SDC 總供應量",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 38024,
-            "text": "CAKE 總銷毀量",
+            "text": "SDC 總銷毀量",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 38028,
-            "text": "新 CAKE/區塊",
+            "text": "新 SDC/區塊",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 38066,
-            "text": "待收割的 CAKE",
+            "text": "待收割的 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 38068,
-            "text": "錢包中的 CAKE",
+            "text": "錢包中的 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 38074,
-            "text": "正在收集 CAKE",
+            "text": "正在收集 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 38092,
-            "text": "待收集的 CAKE",
+            "text": "待收集的 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 22704,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 14439406,
                 "username": "Potaball",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 38128,
-            "text": "質押 CAKE 以賺取新代幣。",
+            "text": "質押 SDC 以賺取新代幣。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 38138,
-            "text": "將銷毀的 CAKE (USD)",
+            "text": "將銷毀的 SDC (USD)",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 38144,
-            "text": "⭐️ 每當您質押和取回 LP 代幣時，合約都會自動為您收割 CAKE 獎勵！",
+            "text": "⭐️ 每當您質押和取回 LP 代幣時，合約都會自動為您收割 SDC 獎勵！",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 38152,
-            "text": "購買 CAKE 和 BNB 代幣",
+            "text": "購買 SDC 和 BNB 代幣",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 38158,
-            "text": "增加 CAKE 和 BNB 流動性，從而取得 CAKE-BNB LP 代幣",
+            "text": "增加 SDC 和 BNB 流動性，從而取得 SDC-BNB LP 代幣",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 38162,
-            "text": "在銷售過程中，提交您的 CAKE-LP 代幣來購買 IFO 代幣",
+            "text": "在銷售過程中，提交您的 SDC-LP 代幣來購買 IFO 代幣",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 38198,
-            "text": "當場交易成 CAKE，或作為收藏品而保留！",
+            "text": "當場交易成 SDC，或作為收藏品而保留！",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 38204,
-            "text": "若您將 CAKE 當場交易成 NFT 來接收，您便永遠無法存取該 CAKE！",
+            "text": "若您將 SDC 當場交易成 NFT 來接收，您便永遠無法存取該 SDC！",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 38218,
-            "text": "獲勝者可以將其 NFT 當場交易成 CAKE 價值，直到下述的到期日為止。如果到那時您仍未兌換您的 NFT，請不要擔心，您仍可以將其儲存在錢包中！",
+            "text": "獲勝者可以將其 NFT 當場交易成 SDC 價值，直到下述的到期日為止。如果到那時您仍未兌換您的 NFT，請不要擔心，您仍可以將其儲存在錢包中！",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 38238,
-            "text": "當場交易成 CAKE",
+            "text": "當場交易成 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 38680,
-            "text": "質押 LP 代幣以賺取 CAKE",
+            "text": "質押 LP 代幣以賺取 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 38694,
-            "text": "CAKE 彩券",
+            "text": "SDC 彩券",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 38696,
-            "text": "使用 CAKE 購買票券",
+            "text": "使用 SDC 購買票券",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 38768,
-            "text": "總成本：10 CAKE",
+            "text": "總成本：10 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 38786,
-            "text": "如果您獲得另一個獲批准的 Pancake 收藏品，則可以稍後變更頭像。",
+            "text": "如果您獲得另一個獲批准的 PanSDC 收藏品，則可以稍後變更頭像。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 38792,
-            "text": "成本：5 CAKE",
+            "text": "成本：5 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 38804,
-            "text": "CAKE 餘額不足",
+            "text": "SDC 餘額不足",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 38812,
-            "text": "僅可使用獲得批准的 Pancake 收藏品。",
+            "text": "僅可使用獲得批准的 PanSDC 收藏品。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 38850,
-            "text": "我們無法在您的錢包中找到任何 Pancake 收藏品。",
+            "text": "我們無法在您的錢包中找到任何 PanSDC 收藏品。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 38862,
-            "text": "CAKE/1000 美元",
+            "text": "SDC/1000 美元",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 35796,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 35884,
-            "text": "CAKE 區塊",
+            "text": "SDC 區塊",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 35886,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 35896,
-            "text": "Pancake",
+            "text": "PanSDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 35904,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -7399,7 +7399,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 47382,
-            "text": "購買 CAKE",
+            "text": "購買 SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -7684,7 +7684,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 47422,
-            "text": "最低需要 %num% CAKE",
+            "text": "最低需要 %num% SDC",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",

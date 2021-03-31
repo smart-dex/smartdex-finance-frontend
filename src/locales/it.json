@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 27762,
-            "text": "Non riceverai ricompense in CAKE dal possesso dei SYRUP acquistati.",
+            "text": "Non riceverai ricompense in SDC dal possesso dei SYRUP acquistati.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 15944,
-            "text": "Dovrai riacquistare la stessa quantità di SYRUP per poterli riconvertire in CAKE.",
+            "text": "Dovrai riacquistare la stessa quantità di SYRUP per poterli riconvertire in SDC.",
             "user": {
                 "id": 14451668,
                 "username": "Gabrigabri",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 15794,
-            "text": "Per ogni scambio viene pagata una commissione dello 0,2%. Lo 0,17% va ai fornitori di liquidità e lo 0,03% va alla tesoreria di PancakeSwap.",
+            "text": "Per ogni scambio viene pagata una commissione dello 0,2%. Lo 0,17% va ai fornitori di liquidità e lo 0,03% va alla tesoreria di PanSDCSwap.",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 9986,
-            "text": "CAKE totali bruciati dal lancio",
+            "text": "SDC totali bruciati dal lancio",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 31830,
-            "text": "Metti in stake i token LP per accumulare CAKE",
+            "text": "Metti in stake i token LP per accumulare SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 29964,
-            "text": "Ogni volta che aggiungi o togli dallo stake dei token CAKE, il contratto raccoglierà automaticamente le ricompense CAKE per te!",
+            "text": "Ogni volta che aggiungi o togli dallo stake dei token SDC, il contratto raccoglierà automaticamente le ricompense SDC per te!",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 11380,
-            "text": "Prezzo Cake",
+            "text": "Prezzo SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 19954,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 46588,
-            "text": "Spendi CAKE per acquistare i biglietti, contribuendo al montepremi della lotteria. L'acquisto dei biglietti termina circa 30 minuti prima della lotteria. Vinci un premio se 1, 2, 3 o 4 dei tuoi numeri sul biglietto corrispondono ai numeri vincenti e alla loro posizione! Buona fortuna!",
+            "text": "Spendi SDC per acquistare i biglietti, contribuendo al montepremi della lotteria. L'acquisto dei biglietti termina circa 30 minuti prima della lotteria. Vinci un premio se 1, 2, 3 o 4 dei tuoi numeri sul biglietto corrispondono ai numeri vincenti e alla loro posizione! Buona fortuna!",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 19986,
-            "text": "%num% CAKE disponibili",
+            "text": "%num% SDC disponibili",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 19988,
-            "text": "Il tuo importo deve essere un multiplo di 10 CAKE",
+            "text": "Il tuo importo deve essere un multiplo di 10 SDC",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 30038,
-            "text": "1 biglietto = 10 CAKE",
+            "text": "1 biglietto = 10 SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 19992,
-            "text": "Spenderai: %num% CAKE",
+            "text": "Spenderai: %num% SDC",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 20002,
-            "text": "I tuoi CAKE non ti verranno restituiti dopo averli spesi per acquistare i biglietti.",
+            "text": "I tuoi SDC non ti verranno restituiti dopo averli spesi per acquistare i biglietti.",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 20010,
-            "text": "Gli acquisti dei biglietti sono definitivi. I tuoi CAKE non potranno essere restituiti dopo l'acquisto dei biglietti.",
+            "text": "Gli acquisti dei biglietti sono definitivi. I tuoi SDC non potranno essere restituiti dopo l'acquisto dei biglietti.",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 20016,
-            "text": "I premi CAKE da richiedere",
+            "text": "I premi SDC da richiedere",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 30052,
-            "text": "Approva CAKE",
+            "text": "Approva SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 30070,
-            "text": "Pagherai i nuovi token usando i token CAKE-BNB LP, per cui per partecipare dovrai mettere in stake lo stesso importo di CAKE e BNB in un pool di liquidità.",
+            "text": "Pagherai i nuovi token usando i token SDC-BNB LP, per cui per partecipare dovrai mettere in stake lo stesso importo di SDC e BNB in un pool di liquidità.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 30074,
-            "text": "Ricevi CAKE-BNB LP >",
+            "text": "Ricevi SDC-BNB LP >",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 30084,
-            "text": "Il progetto riceve i BNB, mentre PancakeSwap brucia i CAKE.",
+            "text": "Il progetto riceve i BNB, mentre PanSDCSwap brucia i SDC.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 31870,
-            "text": "Lancia il tuo progetto con PancakeSwap, il principale progetto AMM e fornitore di liquidità di Binance Smart Chain, in grado di portare direttamente i tuoi token alla comunità più attiva e in rapida crescita su BSC.",
+            "text": "Lancia il tuo progetto con PanSDCSwap, il principale progetto AMM e fornitore di liquidità di Binance Smart Chain, in grado di portare direttamente i tuoi token alla comunità più attiva e in rapida crescita su BSC.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 30346,
-            "text": "Statistiche Cake",
+            "text": "Statistiche SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 31876,
-            "text": "Fornitura totale CAKE",
+            "text": "Fornitura totale SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 30380,
-            "text": "CAKE totali bruciati",
+            "text": "SDC totali bruciati",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 30386,
-            "text": "Nuovo CAKE/blocco",
+            "text": "Nuovo SDC/blocco",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 30394,
-            "text": "CAKE da raccogliere",
+            "text": "SDC da raccogliere",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 30398,
-            "text": "CAKE in wallet",
+            "text": "SDC in wallet",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 30400,
-            "text": "Collezione CAKE",
+            "text": "Collezione SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 30430,
-            "text": "CAKE da collezionare",
+            "text": "SDC da collezionare",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 30510,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 30542,
-            "text": "Metti in stake CAKE per guadagnare nuovi token.",
+            "text": "Metti in stake SDC per guadagnare nuovi token.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 30562,
-            "text": "CAKE da bruciare (USD)",
+            "text": "SDC da bruciare (USD)",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 30588,
-            "text": "⭐️ Ogni volta che aggiungi o togli dallo stake dei token LP, il contratto raccoglierà automaticamente le ricompense CAKE per te!",
+            "text": "⭐️ Ogni volta che aggiungi o togli dallo stake dei token LP, il contratto raccoglierà automaticamente le ricompense SDC per te!",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 30612,
-            "text": "Acquista CAKE e token BNB",
+            "text": "Acquista SDC e token BNB",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 30624,
-            "text": "Ricevi token CAKE-BNB LP aggiungendo CAKE e liquidità BNB",
+            "text": "Ricevi token SDC-BNB LP aggiungendo SDC e liquidità BNB",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 30672,
-            "text": "Quando la vendita è in corso, utilizza i tuoi token CAKE-LP per acquistare token IFO",
+            "text": "Quando la vendita è in corso, utilizza i tuoi token SDC-LP per acquistare token IFO",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 30736,
-            "text": "Scambiali con CAKE, oppure conservali per la tua collezione!",
+            "text": "Scambiali con SDC, oppure conservali per la tua collezione!",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 30792,
-            "text": "Quando scambi questo NFT per ricevere CAKE, perderai l'accesso ad esso definitivamente!",
+            "text": "Quando scambi questo NFT per ricevere SDC, perderai l'accesso ad esso definitivamente!",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 30822,
-            "text": "I vincitori possono scambiare i loro NFT per il valore corrispondente in CAKE fino alla data di scadenza indicata sotto. Se non scambi in tempo il tuo NFT, non preoccuparti: esso rimarrà nel tuo wallet!",
+            "text": "I vincitori possono scambiare i loro NFT per il valore corrispondente in SDC fino alla data di scadenza indicata sotto. Se non scambi in tempo il tuo NFT, non preoccuparti: esso rimarrà nel tuo wallet!",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 30854,
-            "text": "Scambia con CAKE",
+            "text": "Scambia con SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 30950,
-            "text": "Metti in stake i token LP per guadagnare CAKE",
+            "text": "Metti in stake i token LP per guadagnare SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 31008,
-            "text": "La lotteria CAKE",
+            "text": "La lotteria SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 31014,
-            "text": "Acquista biglietti con CAKE",
+            "text": "Acquista biglietti con SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 31174,
-            "text": "Costo totale: 10 CAKE",
+            "text": "Costo totale: 10 SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 31258,
-            "text": "Potrai cambiare in seguito la tua foto profilo se ricevi un altro Pancake collezionabile approvato,",
+            "text": "Potrai cambiare in seguito la tua foto profilo se ricevi un altro PanSDC collezionabile approvato,",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 31308,
-            "text": "Costo: 5 CAKE",
+            "text": "Costo: 5 SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 31348,
-            "text": "Saldo CAKE insufficiente",
+            "text": "Saldo SDC insufficiente",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 31376,
-            "text": "Possono essere usati solo Pancake Collezionabili approvati.",
+            "text": "Possono essere usati solo PanSDC Collezionabili approvati.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 31524,
-            "text": "Non abbiamo trovato nessun Pancake Collezionabile nel tuo wallet.",
+            "text": "Non abbiamo trovato nessun PanSDC Collezionabile nel tuo wallet.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 31552,
-            "text": "Ti serve un Pancake Collezionabile per completare la configurazione del tuo profilo. Se hai venduto o trasferito il tuo oggetto collezionabile iniziale a un altro wallet, dovrai riportarlo indietro o acquisirne un altro. Non puoi creare un nuovo oggetto iniziale con l'indirizzo di questo wallet.",
+            "text": "Ti serve un PanSDC Collezionabile per completare la configurazione del tuo profilo. Se hai venduto o trasferito il tuo oggetto collezionabile iniziale a un altro wallet, dovrai riportarlo indietro o acquisirne un altro. Non puoi creare un nuovo oggetto iniziale con l'indirizzo di questo wallet.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 31564,
-            "text": "CAKE per $1000",
+            "text": "SDC per $1000",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 25508,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 25776,
-            "text": "Blocco CAKE",
+            "text": "Blocco SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 25782,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 25810,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 25818,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 45606,
-            "text": "Acquista CAKE",
+            "text": "Acquista SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 45644,
-            "text": "Occorre un minimo di %num% CAKE",
+            "text": "Occorre un minimo di %num% SDC",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",

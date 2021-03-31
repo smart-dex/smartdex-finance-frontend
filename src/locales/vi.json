@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 21046,
-            "text": "Bạn sẽ không đổi lại được CAKE thưởng từ SYRUP bạn đã mua.",
+            "text": "Bạn sẽ không đổi lại được SDC thưởng từ SYRUP bạn đã mua.",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 20942,
-            "text": "Bạn sẽ phải mua lại số lượng SYRUP bằng số lượng CAKE đã đặt cọc.",
+            "text": "Bạn sẽ phải mua lại số lượng SYRUP bằng số lượng SDC đã đặt cọc.",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 12992,
-            "text": "Với mỗi giao dịch một khoản phí 0.2% được trả. 0.17% trả cho nhà cung cấp thanh khoản và 0.03% trả cho kho lưu trữ PancakeSwap.",
+            "text": "Với mỗi giao dịch một khoản phí 0.2% được trả. 0.17% trả cho nhà cung cấp thanh khoản và 0.03% trả cho kho lưu trữ PanSDCSwap.",
             "user": {
                 "id": 14451626,
                 "username": "20dec",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 36110,
-            "text": "Tổng số CAKE đã đốt từ khi triển khai",
+            "text": "Tổng số SDC đã đốt từ khi triển khai",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 10424,
-            "text": "Đặt cọc đồng tiền FLIP để nhận CAKE",
+            "text": "Đặt cọc đồng tiền FLIP để nhận SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 10784,
-            "text": "Bất cứ khi nào bạn đặt cọc hoặc hủy đặt cọc CAKE, hợp đồng thông minh sẽ tự động thu hoạch phần thưởng CAKE cho bạn!",
+            "text": "Bất cứ khi nào bạn đặt cọc hoặc hủy đặt cọc SDC, hợp đồng thông minh sẽ tự động thu hoạch phần thưởng SDC cho bạn!",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 11402,
-            "text": "Giá Cake",
+            "text": "Giá SDC",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 21166,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 47114,
-            "text": "Dành CAKE để mua vé số, đóng góp vào giải thưởng. Thời gian mua vé kết thúc khoảng 30 phút trước khi quay thưởng. Người chơi giành giải thưởng nếu có 2, 3 hoặc 4 số trên vé khớp với các số trúng thưởng và ở đúng vị trí của chúng! Chúc may mắn!",
+            "text": "Dành SDC để mua vé số, đóng góp vào giải thưởng. Thời gian mua vé kết thúc khoảng 30 phút trước khi quay thưởng. Người chơi giành giải thưởng nếu có 2, 3 hoặc 4 số trên vé khớp với các số trúng thưởng và ở đúng vị trí của chúng! Chúc may mắn!",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 21196,
-            "text": "Có %num% CAKE",
+            "text": "Có %num% SDC",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 21198,
-            "text": "Số CAKE của bạn phải chia hết cho 10",
+            "text": "Số SDC của bạn phải chia hết cho 10",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 36114,
-            "text": "1 vé = 10 CAKE",
+            "text": "1 vé = 10 SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 21202,
-            "text": "Bạn sẽ trả: %num% CAKE",
+            "text": "Bạn sẽ trả: %num% SDC",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 21212,
-            "text": "CAKE bạn dùng mua vé số sẽ không được hoàn trả.",
+            "text": "SDC bạn dùng mua vé số sẽ không được hoàn trả.",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 21220,
-            "text": "CAKE dùng để mua vé số sẽ không được hoàn trả sau khi bạn mua vé.",
+            "text": "SDC dùng để mua vé số sẽ không được hoàn trả sau khi bạn mua vé.",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 21224,
-            "text": "Số CAKE nhận được",
+            "text": "Số SDC nhận được",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 21232,
-            "text": "Phê duyệt CAKE",
+            "text": "Phê duyệt SDC",
             "user": {
                 "id": 13424259,
                 "username": "dungmt",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 27620,
-            "text": "Bạn sẽ trả tiền cho token mới bằng cách dùng các token CAKE-BNB LP, nghĩa là bạn cần đặt cọc số lượng CAKE và BNB tương đương trong nhóm thanh khoản để tham gia vào.",
+            "text": "Bạn sẽ trả tiền cho token mới bằng cách dùng các token SDC-BNB LP, nghĩa là bạn cần đặt cọc số lượng SDC và BNB tương đương trong nhóm thanh khoản để tham gia vào.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 27622,
-            "text": "Nhận CAKE-BNB LP >",
+            "text": "Nhận SDC-BNB LP >",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 36118,
-            "text": "Dự án này nhận BNB, PancakeSwap đốt CAKE.",
+            "text": "Dự án này nhận BNB, PanSDCSwap đốt SDC.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 27634,
-            "text": "Triển khai dự án của bạn với PancakeSwap, dự án AMM và nhà cung cấp thanh khoản được dùng nhiều nhất của Binance Smart Chain, nhằm mang trực tiếp token của bạn đến với cộng đồng năng động nhất và đang phát triển mạnh trên BSC.",
+            "text": "Triển khai dự án của bạn với PanSDCSwap, dự án AMM và nhà cung cấp thanh khoản được dùng nhiều nhất của Binance Smart Chain, nhằm mang trực tiếp token của bạn đến với cộng đồng năng động nhất và đang phát triển mạnh trên BSC.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 30200,
-            "text": "Thống kê Cake",
+            "text": "Thống kê SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 30202,
-            "text": "Tổng cung ứng CAKE",
+            "text": "Tổng cung ứng SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 30886,
-            "text": "Tổng số CAKE đã đốt",
+            "text": "Tổng số SDC đã đốt",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 30890,
-            "text": "CAKE/khối mới",
+            "text": "SDC/khối mới",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 30960,
-            "text": "CAKE cần thu hoạch",
+            "text": "SDC cần thu hoạch",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 30966,
-            "text": "CAKE trong Ví",
+            "text": "SDC trong Ví",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 30968,
-            "text": "Thu thập CAKE",
+            "text": "Thu thập SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 30976,
-            "text": "CAKE cần thu thập",
+            "text": "SDC cần thu thập",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 31146,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 31194,
-            "text": "Đặt cọc CAKE để kiếm token mới.",
+            "text": "Đặt cọc SDC để kiếm token mới.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 31202,
-            "text": "CAKE cần đốt (USD)",
+            "text": "SDC cần đốt (USD)",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 31210,
-            "text": "⭐️ Mỗi lần bạn đặt cọc hoặc huỷ đặt cọc token LP, hợp đồng sẽ tự động thu hoạch phần thưởng CAKE cho bạn!",
+            "text": "⭐️ Mỗi lần bạn đặt cọc hoặc huỷ đặt cọc token LP, hợp đồng sẽ tự động thu hoạch phần thưởng SDC cho bạn!",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 31220,
-            "text": "Mua token CAKE và BNB",
+            "text": "Mua token SDC và BNB",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 31226,
-            "text": "Nhận token CAKE-BNB LP bằng cách thêm vào thanh khoản CAKE và BNB",
+            "text": "Nhận token SDC-BNB LP bằng cách thêm vào thanh khoản SDC và BNB",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 31900,
-            "text": "Trong lúc giai đoạn bán được lên sóng, hãy gán token CAKE-LP của bạn để mua token IFO",
+            "text": "Trong lúc giai đoạn bán được lên sóng, hãy gán token SDC-LP của bạn để mua token IFO",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 33654,
-            "text": "Giao dịch đổi lấy CAKE, hoặc giữ cho khoản thu thập của bạn!",
+            "text": "Giao dịch đổi lấy SDC, hoặc giữ cho khoản thu thập của bạn!",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 33812,
-            "text": "Khi bạn giao dịch NFT này để nhận lấy CAKE, bạn sẽ mất quyền truy cập nó vĩnh viễn!",
+            "text": "Khi bạn giao dịch NFT này để nhận lấy SDC, bạn sẽ mất quyền truy cập nó vĩnh viễn!",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 33836,
-            "text": "Người thắng có thể giao dịch NFT của họ đổi lấy một giá trị CAKE cho đến ngày hết hạn được ghi bên dưới. Nếu tới lúc đó bạn không giao dịch NFT của mình, đừng lo: bạn sẽ vẫn giữ được nó trong ví của mình!",
+            "text": "Người thắng có thể giao dịch NFT của họ đổi lấy một giá trị SDC cho đến ngày hết hạn được ghi bên dưới. Nếu tới lúc đó bạn không giao dịch NFT của mình, đừng lo: bạn sẽ vẫn giữ được nó trong ví của mình!",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 33892,
-            "text": "Giao dịch đổi lấy CAKE",
+            "text": "Giao dịch đổi lấy SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 33942,
-            "text": "Đặt cọc token LP để kiếm CAKE",
+            "text": "Đặt cọc token LP để kiếm SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 34184,
-            "text": "Xổ số CAKE",
+            "text": "Xổ số SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 34186,
-            "text": "Mua vé số với CAKE",
+            "text": "Mua vé số với SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 34652,
-            "text": "Tổng chi phí: 10 CAKE",
+            "text": "Tổng chi phí: 10 SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 34670,
-            "text": "Bạn có thể thay đổi ảnh hồ sơ sau đó nếu bạn có được Món thu thập Pancake khác được phê duyệt,",
+            "text": "Bạn có thể thay đổi ảnh hồ sơ sau đó nếu bạn có được Món thu thập PanSDC khác được phê duyệt,",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 34676,
-            "text": "Phí: 5 CAKE",
+            "text": "Phí: 5 SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 34696,
-            "text": "Số dư CAKE không đủ",
+            "text": "Số dư SDC không đủ",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 34714,
-            "text": "Chỉ sử dụng được Món thu thập Pancake đã được phê duyệt.",
+            "text": "Chỉ sử dụng được Món thu thập PanSDC đã được phê duyệt.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 34274,
-            "text": "Chúng tôi không thể tìm thấy trong ví bạn bất kì Pancake Thu thập.",
+            "text": "Chúng tôi không thể tìm thấy trong ví bạn bất kì PanSDC Thu thập.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 34332,
-            "text": "Bạn cần một món Pancake Thu thập để hoàn thành việc thiết lập hồ sơ. Nếu bạn đã bán hay chuyển nhượng món thu thập khởi điểm sang ví khác, bạn sẽ cần lấy nó lại hoặc mua cái mới bằng cách sao đó. Bạn không thể có mức khởi đầu mới với địa chỉ ví này.",
+            "text": "Bạn cần một món PanSDC Thu thập để hoàn thành việc thiết lập hồ sơ. Nếu bạn đã bán hay chuyển nhượng món thu thập khởi điểm sang ví khác, bạn sẽ cần lấy nó lại hoặc mua cái mới bằng cách sao đó. Bạn không thể có mức khởi đầu mới với địa chỉ ví này.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 34340,
-            "text": "CAKE cho mỗi 1000$",
+            "text": "SDC cho mỗi 1000$",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -6035,7 +6035,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 26748,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -6755,7 +6755,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 34768,
-            "text": "Khối CAKE",
+            "text": "Khối SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -6770,7 +6770,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 34770,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -6845,7 +6845,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 34780,
-            "text": "pancake",
+            "text": "panSDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -6905,7 +6905,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 35788,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -7400,7 +7400,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 45872,
-            "text": "Mua CAKE",
+            "text": "Mua SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -7685,7 +7685,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 45930,
-            "text": "Yêu cầu có tối thiểu %num% CAKE",
+            "text": "Yêu cầu có tối thiểu %num% SDC",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",

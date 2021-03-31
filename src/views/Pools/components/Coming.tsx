@@ -26,10 +26,7 @@ margin-top: 10px;
   font-size: 14px;
   margin-bottom: 10px;
 `
-const Value = styled.div`
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 14px;
-`
+
 
 const StyledCardName = styled.div`
 

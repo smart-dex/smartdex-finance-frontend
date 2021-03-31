@@ -142,6 +142,7 @@ const TextStyled = styled(Text)`
 const DescriptionStyled = styled.div`
   margin: auto;
   width: 100%;
+  max-width:500px;
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
   font-weight: 500;
@@ -149,7 +150,7 @@ const DescriptionStyled = styled.div`
   line-height: 20px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-    width:500px;
+   
   }
 `
 const StyledLinkExternal = styled(LinkExternal)`
@@ -161,9 +162,9 @@ const StyledLinkExternal = styled(LinkExternal)`
     width: fit-content;
     background:none;
     svg {
-    padding-left: 4px;
+    margin-left:6px;
     width: auto;
-    fill: ${({ theme }) => theme.colors.primary};
-  }
+    // fill: ${({ theme }) => theme.colors.primary};
+    }
 `
 export default ApyCalculatorModal

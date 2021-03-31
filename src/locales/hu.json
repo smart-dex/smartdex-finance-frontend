@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 19256,
-            "text": "Vásárolt SYRUP zseton tartása esetén nem jár CAKE jutalom.",
+            "text": "Vásárolt SYRUP zseton tartása esetén nem jár SDC jutalom.",
             "user": {
                 "id": 14451958,
                 "username": "archstanton11",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 33024,
-            "text": "Vissza kell vásárolnod ugyanannyi SYRUP-ot, hogy vissza tudd váltani CAKE-re.",
+            "text": "Vissza kell vásárolnod ugyanannyi SYRUP-ot, hogy vissza tudd váltani SDC-re.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 19338,
-            "text": "Minden egyes tranzakció után 0,2%-os jutalék fizetendő. 0,17% a likviditást biztosítókhoz 0,03% pedig a PancakeSwap kincstárba megy.",
+            "text": "Minden egyes tranzakció után 0,2%-os jutalék fizetendő. 0,17% a likviditást biztosítókhoz 0,03% pedig a PanSDCSwap kincstárba megy.",
             "user": {
                 "id": 14451958,
                 "username": "archstanton11",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 9984,
-            "text": "Az összes elégetett CAKE az indulás óta",
+            "text": "Az összes elégetett SDC az indulás óta",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 37418,
-            "text": "Tegyél fel LP zsetonokat, hogy CAKE-t halmozhass fel",
+            "text": "Tegyél fel LP zsetonokat, hogy SDC-t halmozhass fel",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 37448,
-            "text": "Minden alkalommal, amikor CAKE zsetonokat teszel fel és veszel vissza, az okos kontraktus automatikusan CAKE jutalmakat gyűjt be neked!",
+            "text": "Minden alkalommal, amikor SDC zsetonokat teszel fel és veszel vissza, az okos kontraktus automatikusan SDC jutalmakat gyűjt be neked!",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 11378,
-            "text": "Cake ára",
+            "text": "SDC ára",
             "user": {
                 "id": 14436190,
                 "username": "Chef_Chungus",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 30752,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 38114,
-            "text": "Költsd a CAKE-et arra, hogy szelvényeket vegyél, hozzájárulva a lottó nyereményalaphoz. A szelvényvásárlás a sorsolás előtt kb. 30 perccel bezár. Juss nyereményhez, ha szelvényeden 2, 3 vagy 4 szám megegyezik a nyerőszámokkal és azok pozícióival! Sok szerencsét!",
+            "text": "Költsd a SDC-et arra, hogy szelvényeket vegyél, hozzájárulva a lottó nyereményalaphoz. A szelvényvásárlás a sorsolás előtt kb. 30 perccel bezár. Juss nyereményhez, ha szelvényeden 2, 3 vagy 4 szám megegyezik a nyerőszámokkal és azok pozícióival! Sok szerencsét!",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 38202,
-            "text": "%num% CAKE elérhető",
+            "text": "%num% SDC elérhető",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 38208,
-            "text": "Az összegnek 10 CAKE többszörösének kell lennie",
+            "text": "Az összegnek 10 SDC többszörösének kell lennie",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 30944,
-            "text": "1 szelvény = 10 CAKE",
+            "text": "1 szelvény = 10 SDC",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 30946,
-            "text": "Ennyit költesz: %num% CAKE",
+            "text": "Ennyit költesz: %num% SDC",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 38216,
-            "text": "A CAKE-et nem térítjük vissza neked, miután azt szelvények vásárlására fordítottad.",
+            "text": "A SDC-et nem térítjük vissza neked, miután azt szelvények vásárlására fordítottad.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 38226,
-            "text": "A szelvények vásárlása végleges. A CAKE-et nem kapod vissza, miután szelvényeket vettél.",
+            "text": "A szelvények vásárlása végleges. A SDC-et nem kapod vissza, miután szelvényeket vettél.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 31144,
-            "text": "Begyűjthető CAKE nyeremények",
+            "text": "Begyűjthető SDC nyeremények",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 31236,
-            "text": "CAKE jóváhagyása",
+            "text": "SDC jóváhagyása",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 34388,
-            "text": "Az új zsetonokért a CAKE-BNB LP zsetonok felhasználásával kell fizetni, ami azt jelenti, hogy a részvételhez egyenlő mennyiségű CAKE és BNB összeget kell feltenni egy likviditási érdekszövetségben.",
+            "text": "Az új zsetonokért a SDC-BNB LP zsetonok felhasználásával kell fizetni, ami azt jelenti, hogy a részvételhez egyenlő mennyiségű SDC és BNB összeget kell feltenni egy likviditási érdekszövetségben.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 34390,
-            "text": "CAKE-BNB LP megszerzése >",
+            "text": "SDC-BNB LP megszerzése >",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 34392,
-            "text": "A projekt megkapja a BNB-t, a PancakeSwap elégeti a CAKE-et.",
+            "text": "A projekt megkapja a BNB-t, a PanSDCSwap elégeti a SDC-et.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 34414,
-            "text": "Indíts saját projektet a PancakeSwap, a Binance Smart Chain leggyakrabban használt AMM projekt- és likviditás-szolgáltatóval, hogy a saját zsetonod közvetlenül a BSC legaktívabb és leggyorsabban növekvő közösségéhez jusson el.",
+            "text": "Indíts saját projektet a PanSDCSwap, a Binance Smart Chain leggyakrabban használt AMM projekt- és likviditás-szolgáltatóval, hogy a saját zsetonod közvetlenül a BSC legaktívabb és leggyorsabban növekvő közösségéhez jusson el.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 36566,
-            "text": "Cake statisztika",
+            "text": "SDC statisztika",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 36586,
-            "text": "Teljes CAKE kínálat",
+            "text": "Teljes SDC kínálat",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 36590,
-            "text": "Elégett CAKE összesen",
+            "text": "Elégett SDC összesen",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 36594,
-            "text": "Új CAKE/blokk",
+            "text": "Új SDC/blokk",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 36612,
-            "text": "Aratásra kész CAKE",
+            "text": "Aratásra kész SDC",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 36620,
-            "text": "CAKE a tárcában",
+            "text": "SDC a tárcában",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 36630,
-            "text": "CAKE begyűjtése",
+            "text": "SDC begyűjtése",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 36646,
-            "text": "CAKE begyűjtésre",
+            "text": "SDC begyűjtésre",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 36796,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 38278,
-            "text": "Tedd fel a CAKE-et új zsetonok megszerzéséhez.",
+            "text": "Tedd fel a SDC-et új zsetonok megszerzéséhez.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 37156,
-            "text": "CAKE elégetésre (USD)",
+            "text": "SDC elégetésre (USD)",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 37166,
-            "text": "⭐️ Minden alkalommal, amikor LP zsetonokat teszel fel és veszel le tétként, az okos kontraktus automatikusan CAKE jutalmakat arat neked!",
+            "text": "⭐️ Minden alkalommal, amikor LP zsetonokat teszel fel és veszel le tétként, az okos kontraktus automatikusan SDC jutalmakat arat neked!",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 37178,
-            "text": "CAKE és BNB zsetonok vétele",
+            "text": "SDC és BNB zsetonok vétele",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 37180,
-            "text": "Szerezzen CAKE-BNB LP zsetonokat CAKE és BNB likviditás hozzáadásával",
+            "text": "Szerezzen SDC-BNB LP zsetonokat SDC és BNB likviditás hozzáadásával",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 37192,
-            "text": "Amíg az értékesítés folyamatban van, kössed le CAKE-LP zsetonjaid az IFO zsetonok megvásárlására",
+            "text": "Amíg az értékesítés folyamatban van, kössed le SDC-LP zsetonjaid az IFO zsetonok megvásárlására",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 31338,
-            "text": "Beváltod CAKE palacsintára, vagy megtartod a gyűjteményedben!",
+            "text": "Beváltod SDC palacsintára, vagy megtartod a gyűjteményedben!",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 31462,
-            "text": "Amikor ezt az NFT-t beváltod egy CAKE palacsintára, egyszer és mindenkorra elveszíted a hozzáférést ahhoz!",
+            "text": "Amikor ezt az NFT-t beváltod egy SDC palacsintára, egyszer és mindenkorra elveszíted a hozzáférést ahhoz!",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 31544,
-            "text": "A nyertesek az alább közölt lejárati időpontig válthatnak be NFT-t CAKE-re. Ha addig nem váltottad be az NFT-det, ne aggódj: az még mindíg a tárcádban van!",
+            "text": "A nyertesek az alább közölt lejárati időpontig válthatnak be NFT-t SDC-re. Ha addig nem váltottad be az NFT-det, ne aggódj: az még mindíg a tárcádban van!",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 31610,
-            "text": "Beváltod CAKE-re",
+            "text": "Beváltod SDC-re",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 38302,
-            "text": "Tegyél fel LP zsetonokat, hogy CAKE-et szerezz",
+            "text": "Tegyél fel LP zsetonokat, hogy SDC-et szerezz",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 31986,
-            "text": "A CAKE lottó",
+            "text": "A SDC lottó",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 37236,
-            "text": "Szelvények vásárlása CAKE-kel",
+            "text": "Szelvények vásárlása SDC-kel",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 34474,
-            "text": "Teljes költség: 10 CAKE",
+            "text": "Teljes költség: 10 SDC",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 37346,
-            "text": "Költség: 5 CAKE",
+            "text": "Költség: 5 SDC",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 37364,
-            "text": "Elégtelen CAKE egyenleg",
+            "text": "Elégtelen SDC egyenleg",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 32222,
-            "text": "CAKE 1000 dollárért",
+            "text": "SDC 1000 dollárért",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 27232,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 32786,
-            "text": "CAKE blokk",
+            "text": "SDC blokk",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 32788,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 34490,
-            "text": "pancakeswap",
+            "text": "panSDCswap",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 46292,
-            "text": "CAKE vétel",
+            "text": "SDC vétel",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 46360,
-            "text": "Legalább %num% CAKE kell",
+            "text": "Legalább %num% SDC kell",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",

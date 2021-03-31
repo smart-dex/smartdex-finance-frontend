@@ -529,7 +529,7 @@
             "stringId": 146,
             "contentType": "text/plain",
             "translationId": 24182,
-            "text": "Sie erhalten keine Belohnungen in Form von CAKE für das Halten von gekauften SYRUP.",
+            "text": "Sie erhalten keine Belohnungen in Form von SDC für das Halten von gekauften SYRUP.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -589,7 +589,7 @@
             "stringId": 154,
             "contentType": "text/plain",
             "translationId": 24186,
-            "text": "Sie müssen die gleiche Menge an SYRUP zurückkaufen, um sie wieder in CAKE umwandeln zu können.",
+            "text": "Sie müssen die gleiche Menge an SYRUP zurückkaufen, um sie wieder in SDC umwandeln zu können.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 24262,
-            "text": "Für jeden Handel wird eine Gebühr von 0,2 % gezahlt. Davon gehen 0,17 % an die Liquiditätsanbieter und 0,03 % gehen an die PancakeSwap-Finanzabteilung.",
+            "text": "Für jeden Handel wird eine Gebühr von 0,2 % gezahlt. Davon gehen 0,17 % an die Liquiditätsanbieter und 0,03 % gehen an die PanSDCSwap-Finanzabteilung.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -1669,7 +1669,7 @@
             "stringId": 304,
             "contentType": "text/plain",
             "translationId": 24312,
-            "text": "Gesamtanzahl an CAKE seit dem Start",
+            "text": "Gesamtanzahl an SDC seit dem Start",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -1789,7 +1789,7 @@
             "stringId": 320,
             "contentType": "text/plain",
             "translationId": 24316,
-            "text": "Setzen Sie LP-Token ein, um CAKE zu sammeln",
+            "text": "Setzen Sie LP-Token ein, um SDC zu sammeln",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -1849,7 +1849,7 @@
             "stringId": 334,
             "contentType": "text/plain",
             "translationId": 24328,
-            "text": "Jedes Mal, wenn Sie CAKE-Token einsetzen bzw. den Einsatz aufheben, bringt Ihnen der Contract automatisch CAKE-Belohnungen ein!",
+            "text": "Jedes Mal, wenn Sie SDC-Token einsetzen bzw. den Einsatz aufheben, bringt Ihnen der Contract automatisch SDC-Belohnungen ein!",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -1969,7 +1969,7 @@
             "stringId": 358,
             "contentType": "text/plain",
             "translationId": 24346,
-            "text": "Preis von Cake",
+            "text": "Preis von SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -2224,7 +2224,7 @@
             "stringId": 424,
             "contentType": "text/plain",
             "translationId": 24390,
-            "text": "%num% CAKE",
+            "text": "%num% SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -2239,7 +2239,7 @@
             "stringId": 426,
             "contentType": "text/plain",
             "translationId": 24392,
-            "text": "Kaufen Sie mit CAKE Tickets, und tragen Sie damit zum Pool der Verlosung bei. Der Loskauf endet ca. 30 Minuten vor der Verlosung. Gewinnen Sie Preise, wenn 2, 3 oder 4 Ihrer Ticketzahlen mit den Gewinnzahlen und deren Positionen übereinstimmen! Viel Glück!",
+            "text": "Kaufen Sie mit SDC Tickets, und tragen Sie damit zum Pool der Verlosung bei. Der Loskauf endet ca. 30 Minuten vor der Verlosung. Gewinnen Sie Preise, wenn 2, 3 oder 4 Ihrer Ticketzahlen mit den Gewinnzahlen und deren Positionen übereinstimmen! Viel Glück!",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3064,7 +3064,7 @@
             "stringId": 454,
             "contentType": "text/plain",
             "translationId": 24420,
-            "text": "%num% CAKE verfügbar",
+            "text": "%num% SDC verfügbar",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3079,7 +3079,7 @@
             "stringId": 456,
             "contentType": "text/plain",
             "translationId": 24422,
-            "text": "Ihr Betrag muss ein Vielfaches von 10 CAKE sein",
+            "text": "Ihr Betrag muss ein Vielfaches von 10 SDC sein",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3094,7 +3094,7 @@
             "stringId": 458,
             "contentType": "text/plain",
             "translationId": 24424,
-            "text": "1 Ticket = 10 CAKE",
+            "text": "1 Ticket = 10 SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 24426,
-            "text": "Sie geben folgende Menge aus: %num% CAKE",
+            "text": "Sie geben folgende Menge aus: %num% SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3184,7 +3184,7 @@
             "stringId": 470,
             "contentType": "text/plain",
             "translationId": 24436,
-            "text": "Ihre CAKE werden nicht zurückgegeben, nachdem Sie sie für den Kauf von Tickets ausgegeben haben.",
+            "text": "Ihre SDC werden nicht zurückgegeben, nachdem Sie sie für den Kauf von Tickets ausgegeben haben.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3244,7 +3244,7 @@
             "stringId": 478,
             "contentType": "text/plain",
             "translationId": 24444,
-            "text": "Ticketkäufe sind endgültig. Ihre CAKE können nach dem Kauf von Tickets nicht zurückgegeben werden.",
+            "text": "Ticketkäufe sind endgültig. Ihre SDC können nach dem Kauf von Tickets nicht zurückgegeben werden.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3274,7 +3274,7 @@
             "stringId": 482,
             "contentType": "text/plain",
             "translationId": 24448,
-            "text": "Verfügbare CAKE-Preise",
+            "text": "Verfügbare SDC-Preise",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3334,7 +3334,7 @@
             "stringId": 494,
             "contentType": "text/plain",
             "translationId": 24456,
-            "text": "CAKE genehmigen",
+            "text": "SDC genehmigen",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3379,7 +3379,7 @@
             "stringId": 504,
             "contentType": "text/plain",
             "translationId": 24462,
-            "text": "Sie werden für die neuen Tokens mit CAKE-BNB LP-Tokens bezahlen. Das bedeutet, dass Sie gleiche Mengen an CAKE und BNB in einem Liquiditätspool einsetzen müssen, um teilzunehmen.",
+            "text": "Sie werden für die neuen Tokens mit SDC-BNB LP-Tokens bezahlen. Das bedeutet, dass Sie gleiche Mengen an SDC und BNB in einem Liquiditätspool einsetzen müssen, um teilzunehmen.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3394,7 +3394,7 @@
             "stringId": 506,
             "contentType": "text/plain",
             "translationId": 24464,
-            "text": "CAKE-BNB LP kaufen >",
+            "text": "SDC-BNB LP kaufen >",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 24466,
-            "text": "Das Projekt erzielt BNB, PancakeSwap vernichtet CAKE.",
+            "text": "Das Projekt erzielt BNB, PanSDCSwap vernichtet SDC.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 24472,
-            "text": "Starten Sie Ihr Projekt mit PancakeSwap, dem meistgenutzten AMM-Projekt und Liquiditätsanbieter von Binance Smart Chain, um Ihren Token direkt in die aktivste und schnell wachsende Community in der BSC zu bringen.",
+            "text": "Starten Sie Ihr Projekt mit PanSDCSwap, dem meistgenutzten AMM-Projekt und Liquiditätsanbieter von Binance Smart Chain, um Ihren Token direkt in die aktivste und schnell wachsende Community in der BSC zu bringen.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3574,7 +3574,7 @@
             "stringId": 534,
             "contentType": "text/plain",
             "translationId": 24490,
-            "text": "Cake-Statistiken",
+            "text": "SDC-Statistiken",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3589,7 +3589,7 @@
             "stringId": 536,
             "contentType": "text/plain",
             "translationId": 24492,
-            "text": "Gesamtanzahl eingezahlter CAKE",
+            "text": "Gesamtanzahl eingezahlter SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3604,7 +3604,7 @@
             "stringId": 538,
             "contentType": "text/plain",
             "translationId": 24494,
-            "text": "Gesamtanzahl vernichteter CAKE",
+            "text": "Gesamtanzahl vernichteter SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3619,7 +3619,7 @@
             "stringId": 540,
             "contentType": "text/plain",
             "translationId": 24496,
-            "text": "Neuer CAKE/Block",
+            "text": "Neuer SDC/Block",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3649,7 +3649,7 @@
             "stringId": 544,
             "contentType": "text/plain",
             "translationId": 24500,
-            "text": "CAKE zum Auszahlen",
+            "text": "SDC zum Auszahlen",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3664,7 +3664,7 @@
             "stringId": 546,
             "contentType": "text/plain",
             "translationId": 24502,
-            "text": "CAKE im Wallet",
+            "text": "SDC im Wallet",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3679,7 +3679,7 @@
             "stringId": 548,
             "contentType": "text/plain",
             "translationId": 24504,
-            "text": "CAKE sammeln",
+            "text": "SDC sammeln",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3709,7 +3709,7 @@
             "stringId": 552,
             "contentType": "text/plain",
             "translationId": 24508,
-            "text": "CAKE zum Sammeln",
+            "text": "SDC zum Sammeln",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 24528,
-            "text": "PancakeSwap",
+            "text": "PanSDCSwap",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3874,7 +3874,7 @@
             "stringId": 580,
             "contentType": "text/plain",
             "translationId": 24532,
-            "text": "Setzen Sie CAKE ein, um neue Token zu verdienen.",
+            "text": "Setzen Sie SDC ein, um neue Token zu verdienen.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 24538,
-            "text": "CAKE zum Verbrennen (USD)",
+            "text": "SDC zum Verbrennen (USD)",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3949,7 +3949,7 @@
             "stringId": 590,
             "contentType": "text/plain",
             "translationId": 24542,
-            "text": "Jedes Mal, wenn Sie LP-Tokens einsetzen bzw. den Einsatz aufheben, bringt Ihnen der Contract automatisch CAKE-Belohnungen ein!",
+            "text": "Jedes Mal, wenn Sie LP-Tokens einsetzen bzw. den Einsatz aufheben, bringt Ihnen der Contract automatisch SDC-Belohnungen ein!",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3994,7 +3994,7 @@
             "stringId": 596,
             "contentType": "text/plain",
             "translationId": 24548,
-            "text": "CAKE- und BNB-Tokens kaufen",
+            "text": "SDC- und BNB-Tokens kaufen",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 24550,
-            "text": "Erhalten Sie CAKE-BNB LP-Token, indem Sie CAKE- und BNB-Liquidität hinzufügen",
+            "text": "Erhalten Sie SDC-BNB LP-Token, indem Sie SDC- und BNB-Liquidität hinzufügen",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 24554,
-            "text": "Während der Verkauf stattfindet, kaufen Sie mit Ihren CAKE-LP-Tokens IFO-Tokens",
+            "text": "Während der Verkauf stattfindet, kaufen Sie mit Ihren SDC-LP-Tokens IFO-Tokens",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4129,7 +4129,7 @@
             "stringId": 614,
             "contentType": "text/plain",
             "translationId": 24566,
-            "text": "Tauschen Sie sie gegen CAKE, oder behalten Sie sie für Ihre Sammlung!",
+            "text": "Tauschen Sie sie gegen SDC, oder behalten Sie sie für Ihre Sammlung!",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4234,7 +4234,7 @@
             "stringId": 628,
             "contentType": "text/plain",
             "translationId": 24580,
-            "text": "Wenn Sie diesen NFT eintauschen, um CAKE zu erhalten, verlieren Sie den Zugriff darauf - für immer!",
+            "text": "Wenn Sie diesen NFT eintauschen, um SDC zu erhalten, verlieren Sie den Zugriff darauf - für immer!",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4309,7 +4309,7 @@
             "stringId": 638,
             "contentType": "text/plain",
             "translationId": 24590,
-            "text": "Die Gewinner können ihre NFTs bis zu dem unten angegebenen Verfallsdatum gegen einen CAKE-Wert eintauschen. Wenn Sie Ihr NFT bis dahin nicht eintauschen, keine Sorge: Sie behalten es trotzdem in Ihrem Wallet!",
+            "text": "Die Gewinner können ihre NFTs bis zu dem unten angegebenen Verfallsdatum gegen einen SDC-Wert eintauschen. Wenn Sie Ihr NFT bis dahin nicht eintauschen, keine Sorge: Sie behalten es trotzdem in Ihrem Wallet!",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4414,7 +4414,7 @@
             "stringId": 654,
             "contentType": "text/plain",
             "translationId": 24604,
-            "text": "Umtausch gegen CAKE",
+            "text": "Umtausch gegen SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4729,7 +4729,7 @@
             "stringId": 696,
             "contentType": "text/plain",
             "translationId": 24646,
-            "text": "Setzen Sie LP-Token ein, um CAKE zu verdienen",
+            "text": "Setzen Sie LP-Token ein, um SDC zu verdienen",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4819,7 +4819,7 @@
             "stringId": 708,
             "contentType": "text/plain",
             "translationId": 24658,
-            "text": "Die CAKE-Verlosung",
+            "text": "Die SDC-Verlosung",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -4834,7 +4834,7 @@
             "stringId": 710,
             "contentType": "text/plain",
             "translationId": 24660,
-            "text": "Tickets kaufen mit CAKE",
+            "text": "Tickets kaufen mit SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5284,7 +5284,7 @@
             "stringId": 774,
             "contentType": "text/plain",
             "translationId": 24720,
-            "text": "Gesamtkosten: 10 CAKE",
+            "text": "Gesamtkosten: 10 SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 24736,
-            "text": "Sie können Ihr Profilbild später ändern, wenn Sie ein anderes genehmigtes Pancake-Collectible erhalten.",
+            "text": "Sie können Ihr Profilbild später ändern, wenn Sie ein anderes genehmigtes PanSDC-Collectible erhalten.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5449,7 +5449,7 @@
             "stringId": 796,
             "contentType": "text/plain",
             "translationId": 24742,
-            "text": "Kosten: 5 CAKE",
+            "text": "Kosten: 5 SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5539,7 +5539,7 @@
             "stringId": 808,
             "contentType": "text/plain",
             "translationId": 24754,
-            "text": "Unzureichendes CAKE-Guthaben",
+            "text": "Unzureichendes SDC-Guthaben",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 24762,
-            "text": "Es können nur genehmigte Pancake Collectibles verwendet werden.",
+            "text": "Es können nur genehmigte PanSDC Collectibles verwendet werden.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 24800,
-            "text": "Wir konnten keine Pancake-Collectibles in Ihrem Wallet finden.",
+            "text": "Wir konnten keine PanSDC-Collectibles in Ihrem Wallet finden.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5944,7 +5944,7 @@
             "stringId": 864,
             "contentType": "text/plain",
             "translationId": 24810,
-            "text": "CAKE pro 1.000 $",
+            "text": "SDC pro 1.000 $",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -6034,7 +6034,7 @@
             "stringId": 876,
             "contentType": "text/plain",
             "translationId": 24822,
-            "text": "CAKE",
+            "text": "SDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -6754,7 +6754,7 @@
             "stringId": 972,
             "contentType": "text/plain",
             "translationId": 24918,
-            "text": "CAKE-Block",
+            "text": "SDC-Block",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -6769,7 +6769,7 @@
             "stringId": 974,
             "contentType": "text/plain",
             "translationId": 24920,
-            "text": "CAKE BNB",
+            "text": "SDC BNB",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 24930,
-            "text": "Pancake",
+            "text": "PanSDC",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 24938,
-            "text": "Pancakeswap",
+            "text": "PanSDCswap",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -7414,7 +7414,7 @@
             "stringId": 1060,
             "contentType": "text/plain",
             "translationId": 46528,
-            "text": "CAKE kaufen",
+            "text": "SDC kaufen",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -7699,7 +7699,7 @@
             "stringId": 1098,
             "contentType": "text/plain",
             "translationId": 46564,
-            "text": "Ein Minimum von %num% CAKE ist erforderlich",
+            "text": "Ein Minimum von %num% SDC ist erforderlich",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
