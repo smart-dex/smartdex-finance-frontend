@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { StringTranslations } from '@crowdin/crowdin-api-client'
 import { TranslationsContext } from 'contexts/Localisation/translationsContext'
 import { allLanguages, EN } from 'config/localisation/languageCodes'
+import {listLanguage} from '../../locales/index'
 
 const CACHE_KEY = 'pancakeSwapLanguage'
 
@@ -38,13 +39,12 @@ const LanguageContextProvider = ({ children }) => {
   const [selectedLanguage, setSelectedLanguage] = useState<any>(EN)
   const [translatedLanguage, setTranslatedLanguage] = useState<any>(EN)
   const [translations, setTranslations] = useState<Array<any>>([])
-
   const getStoredLang = (storedLangCode: string) => {
     return allLanguages.filter((language) => {
+      console.log(storedLangCode)
       return language.code === storedLangCode
     })[0]
   }
-
   useEffect(() => {
     const storedLangCode = localStorage.getItem(CACHE_KEY)
     if (storedLangCode) {
@@ -55,21 +55,33 @@ const LanguageContextProvider = ({ children }) => {
     }
   }, [])
 
+  // useEffect(() => {
+  //   if (selectedLanguage) {
+      
+  //     fetchTranslationsForSelectedLanguage(selectedLanguage)
+  //       .then((translationApiResponse) => {
+  //         if (translationApiResponse.data.length < 1) {
+  //           setTranslations([])
+  //         } else {
+  //           setTranslations(translationApiResponse.data)
+  //         }
+  //       })
+  //       .then(() => setTranslatedLanguage(selectedLanguage))
+  //       .catch((e) => {
+  //         setTranslations([])
+  //         console.error('Error while loading translations', e)
+  //       })
+  //   }
+  // }, [selectedLanguage, setTranslations])
   useEffect(() => {
+    let translationData = []
     if (selectedLanguage) {
-      fetchTranslationsForSelectedLanguage(selectedLanguage)
-        .then((translationApiResponse) => {
-          if (translationApiResponse.data.length < 1) {
-            setTranslations([])
-          } else {
-            setTranslations(translationApiResponse.data)
-          }
-        })
-        .then(() => setTranslatedLanguage(selectedLanguage))
-        .catch((e) => {
-          setTranslations([])
-          console.error('Error while loading translations', e)
-        })
+      listLanguage.map((item)=>{
+        if (item.language === selectedLanguage.code){
+          translationData = item.data
+        }
+        return setTranslations(translationData)
+      })   
     }
   }, [selectedLanguage, setTranslations])
 
@@ -77,7 +89,6 @@ const LanguageContextProvider = ({ children }) => {
     setSelectedLanguage(langObject)
     localStorage.setItem(CACHE_KEY, langObject.code)
   }
-
   return (
     <LanguageContext.Provider
       value={{ selectedLanguage, setSelectedLanguage: handleLanguageSelect, translatedLanguage, setTranslatedLanguage }}
