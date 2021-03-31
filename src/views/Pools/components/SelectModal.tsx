@@ -220,7 +220,7 @@ const BalanceAndCompound = styled.div`
 const ButtonUnstake = styled(Button) <{ isDisable: boolean }>`
 padding: 0 20px;
 background: ${({ isDisable }) => !isDisable && baseColors.primary};
-box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+box-shadow: none;
 font-weight: 600;
 font-size: 13px;
 line-height: 20px;
@@ -251,7 +251,7 @@ justify-content:center;
 `
 const HarvestButton = styled(Button) <{ isDisable: boolean }>`
     background: ${baseColors.primary};
-    box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+    box-shadow: none;
     font-weight: 600;
     font-size: 13px;
     line-height: 20px;
@@ -268,7 +268,7 @@ const HarvestButton = styled(Button) <{ isDisable: boolean }>`
 `
 const CompoundButton = styled(Button) <{ isDisable: boolean }>`
   background: ${baseColors.primary};
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  box-shadow: none;
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
