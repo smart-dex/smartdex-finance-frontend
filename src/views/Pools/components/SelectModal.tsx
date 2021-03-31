@@ -109,7 +109,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                   onDismiss()
                 }}
               >
-                {pendingTx ? 'Collecting' : 'Harvest'}</HarvestButton>
+                {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>
             )}
             {!isOldSyrup && sousId === 0 && account && harvest && (
               <CompoundButton

@@ -20,9 +20,10 @@ interface SelectModalProps {
   addLiquidityUrl: string
   tokenBalance: BigNumber
   earnLabel:string
+  removed:boolean
 }
 
-const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, earnings, pid, stakedBalance, lpName ,earnLabel, tokenBalance, addLiquidityUrl }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss,removed, earnings, pid, stakedBalance, lpName ,earnLabel, tokenBalance, addLiquidityUrl }) => {
   const TranslateString = useI18n()
   const rawStakedBalance = getBalanceNumber(stakedBalance)
   const displayBalance = rawStakedBalance;
@@ -35,6 +36,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, earnings, pid, sta
       tokenBalance={tokenBalance}
       addLiquidityUrl={addLiquidityUrl}
       earnLabel={earnLabel}
+      removed={removed}
     />
   )
   return (
@@ -65,7 +67,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, earnings, pid, sta
             tokenName={lpName}
             pid={pid}
             addLiquidityUrl={addLiquidityUrl}
-          
+            removed={removed}
           />
         </ActionStake>
       </StyledModal>

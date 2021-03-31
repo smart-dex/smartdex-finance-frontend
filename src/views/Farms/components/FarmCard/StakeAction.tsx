@@ -18,6 +18,7 @@ interface FarmCardActionsProps {
   pid?: number
   addLiquidityUrl?: string
   onBack: () => void
+  removed: boolean
 }
 
 const StyledAddButton = styled(Flex)`
@@ -82,7 +83,8 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   tokenName,
   pid,
   addLiquidityUrl,
-  onBack
+  onBack,
+  removed
 }) => {
   const TranslateString = useI18n()
   const { onStake } = useStake(pid)
@@ -108,7 +110,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
             {TranslateString(999, 'Unstake')}
           </ButtonUnstake>
           <StyledAddButton>
-            <IconButton variant="tertiary" onClick={onPresentDeposit}>
+            <IconButton disabled={removed} variant="tertiary" onClick={onPresentDeposit}>
               <img src='/images/add-icon.svg' alt='add-icon' />
             </IconButton>
           </StyledAddButton>
