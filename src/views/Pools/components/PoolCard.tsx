@@ -194,9 +194,9 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           </DetailPool>
         </StyleImgEaredDetail>
         <Line />
-      
+
         <StyledCardActions>
-          {!account && 
+          {!account &&
           (<StyledButtonUnlock>
             <UnlockButton />
           </StyledButtonUnlock>
@@ -273,7 +273,7 @@ const StyledDetails = styled.div`
 `
 
 const StyledCardName = styled.div`
-  
+
 `
 
 const NamePool = styled(Flex)`
@@ -394,7 +394,7 @@ const StyledTriangle = styled.div<{ isFinished: boolean }>`
 const StyledTag = styled(Flex)`
   align-items: center;
   justify-content: flex-end;
-  background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : 'transparent')};  
+  background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : 'transparent')};
   width: 200px;
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
 `
@@ -402,15 +402,15 @@ const StyledTag = styled(Flex)`
 const StyleNamePool = styled.div`
   width:200px;
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
-  white-space: nowrap; 
+  white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   padding:24px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   font-weight: bold;
   line-height: 29px;
   font-size: 18px;
-  align-self: flex-start; 
+  align-self: flex-start;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
   }
@@ -419,7 +419,7 @@ const StyleNamePool = styled.div`
       visibility: visible;
     }
   }
- 
+
 `
 const StyledTooltip = styled.div`
 visibility: hidden;
