@@ -13,7 +13,7 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
     <Wrapper>
       <ToggleWrapper>
         <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
-        <Text> {TranslateString(999, 'Staked Only')}</Text>
+        <StyledText> {TranslateString(999, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
         <ButtonMenu activeIndex={isExact ? 0 : 1}>
@@ -30,7 +30,16 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
 }
 
 export default PoolTabButtons
-
+const StyledText = styled(Text)`
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+}
+line-height: 143%;
+letter-spacing: -0.03em;
+`
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -64,7 +73,6 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   font-size: 13px;
   line-height: 20px;
   font-weight: 400;
-
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     width: 135px;

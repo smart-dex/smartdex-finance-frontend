@@ -23,7 +23,8 @@ const Grid = styled.div`
 `
 
 const GridItem = styled.div`
-  margin-bottom: '10px';
+  margin-bottom: 10px;
+  margin-left: 20px;
 `
 
 const Description = styled(Text)`
@@ -62,7 +63,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         <GridItem>
           <TextStyled fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
-            {TranslateString(864, 'CAKE per $1000')}
+            {TranslateString(864, 'SDC per $1000')}
           </TextStyled>
         </GridItem>
         {/* 1 day row */}
@@ -114,7 +115,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
           <TextStyled>{cakeEarnedPerThousand365D}</TextStyled>
         </GridItem>
       </Grid>
-      <DescriptionStyled fontSize="12px" color="textSubtle">
+      <DescriptionStyled>
         {TranslateString(
           866,
           'Calculated based on current rates. Compounding once daily. Rates are estimates provided for your convenience only, and by no means represent guaranteed returns.',
@@ -132,21 +133,24 @@ const TextStyled = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
 `
-const DescriptionStyled = styled(Description)`
-color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-${({ theme }) => theme.mediaQueries.nav} {
-  font-size: 16px;
-}
+const DescriptionStyled = styled.div`
+  margin: auto;
+  width: 100%;
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    width:500px;
+  }
 `
 const StyledLinkExternal = styled(LinkExternal)`
     font-size: 13px;

@@ -21,12 +21,12 @@ interface FarmCardActionsProps {
 }
 
 const StyledAddButton = styled(Flex)`
+  margin-left:0px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-    width: calc(30% - 7px);
     margin-bottom:10px;
     margin-top:10px;
-    margin-left:auto;
+    margin-left:14px;
   }
   justify-content:center;
   > button{
@@ -43,7 +43,7 @@ const StakeButton = styled(Button)`
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
-  width: 100%;
+  width: 143px;
   margin-top: 10px;
   margin-bottom: 10px
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -55,7 +55,10 @@ const StyledAction = styled(Flex)`
   padding-right:20px;
   padding-bottom: 20px;
   margin-top: 50px;
-  flex-wrap:wrap;
+  flex-direction:column;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    flex-direction:row;
+  }
 `
 const ButtonUnstake = styled(Button)`
   padding: 0 20px;
@@ -66,10 +69,10 @@ const ButtonUnstake = styled(Button)`
   line-height: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  width:100%;
+  max-width: 143px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-    width: calc(70% - 7px);
+    width: 143px;
   }
 `
 
