@@ -4,10 +4,10 @@ import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
+import { BLOCKS_PER_YEAR, SDC_PER_BLOCK, SDC_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceEthBusd } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePriceSdcBusd, usePriceEthBusd } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
@@ -20,7 +20,7 @@ const Farms: React.FC = () => {
   const { path } = useRouteMatch()
   const TranslateString = useI18n()
   const farmsLP = useFarms()
-  const cakePrice = usePriceCakeBusd()
+  const sdcPrice = usePriceSdcBusd()
   const bnbPrice = usePriceBnbBusd()
   const { account, ethereum }: { account: string; ethereum: provider } = useWallet()
   const ethPriceUsd = usePriceEthBusd()
@@ -45,26 +45,26 @@ const Farms: React.FC = () => {
   // to retrieve assets prices against USD
   const farmsList = useCallback(
     (farmsToDisplay, removed: boolean) => {
-      const cakePriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === CAKE_POOL_PID)?.tokenPriceVsQuote || 0)
+      const sdcPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === SDC_POOL_PID)?.tokenPriceVsQuote || 0)
       const farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        const cakeRewardPerBlock = CAKE_PER_BLOCK.times(farm.poolWeight)
-        const cakeRewardPerYear = cakeRewardPerBlock.times(BLOCKS_PER_YEAR)
+        const sdcRewardPerBlock = SDC_PER_BLOCK.times(farm.poolWeight)
+        const sdcRewardPerYear = sdcRewardPerBlock.times(BLOCKS_PER_YEAR)
 
-        // cakePriceInQuote * cakeRewardPerYear / lpTotalInQuoteToken
-        let apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken)
+        // sdcPriceInQuote * sdcRewardPerYear / lpTotalInQuoteToken
+        let apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
 
         if (farm.quoteTokenSymbol === QuoteToken.BUSD || farm.quoteTokenSymbol === QuoteToken.UST) {
-          apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
+          apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
         } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
-          apy = cakePrice.div(ethPriceUsd).times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken)
-        } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-          apy = cakeRewardPerYear.div(farm.lpTotalInQuoteToken)
+          apy = sdcPrice.div(ethPriceUsd).times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
+        } else if (farm.quoteTokenSymbol === QuoteToken.SDC) {
+          apy = sdcRewardPerYear.div(farm.lpTotalInQuoteToken)
         } else if (farm.dual) {
-          const cakeApy =
-            farm && cakePriceVsBNB.times(cakeRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
+          const sdcApy =
+            farm && sdcPriceVsBNB.times(sdcRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
           const dualApy =
             farm.tokenPriceVsQuote &&
             new BigNumber(farm.tokenPriceVsQuote)
@@ -72,7 +72,7 @@ const Farms: React.FC = () => {
               .times(BLOCKS_PER_YEAR)
               .div(farm.lpTotalInQuoteToken)
 
-          apy = cakeApy && dualApy && cakeApy.plus(dualApy)
+          apy = sdcApy && dualApy && sdcApy.plus(dualApy)
         }
 
         return { ...farm, apy }
@@ -83,14 +83,14 @@ const Farms: React.FC = () => {
           farm={farm}
           removed={removed}
           bnbPrice={bnbPrice}
-          cakePrice={cakePrice}
+          sdcPrice={sdcPrice}
           ethPrice={ethPriceUsd}
           ethereum={ethereum}
           account={account}
         />
       ))
     },
-    [farmsLP, bnbPrice, ethPriceUsd, cakePrice, ethereum, account],
+    [farmsLP, bnbPrice, ethPriceUsd, sdcPrice, ethereum, account],
   )
 
   return (

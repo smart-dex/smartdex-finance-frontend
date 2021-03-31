@@ -100,8 +100,8 @@ export const useMatchingRewardLength = (numbers) => {
 
   useEffect(() => {
     const fetchBalance = async () => {
-      const matchedNumbaers = await getMatchingRewardLength(lotteryContract, numbers)
-      setMatchingNumbers(matchedNumbaers)
+      const matchedNumbers = await getMatchingRewardLength(lotteryContract, numbers)
+      setMatchingNumbers(matchedNumbers)
     }
 
     if (lotteryContract) {

@@ -94,22 +94,22 @@ const Detail = styled(Flex)`
 interface FarmCardProps {
   farm: FarmWithStakedValue
   removed: boolean
-  cakePrice?: BigNumber
+  sdcPrice?: BigNumber
   bnbPrice?: BigNumber
   ethPrice?: BigNumber
   ethereum?: provider
   account?: string
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethPrice, ethereum, account }) => {
+const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, ethPrice, ethereum, account }) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
   const { earnings } = useFarmUser(pid)
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
-  // We assume the token name is coin pair + lp e.g. CAKE-BNB LP, LINK-BNB LP,
-  // NAR-CAKE LP. The images should be cake-bnb.svg, link-bnb.svg, nar-cake.svg
+  // We assume the token name is coin pair + lp e.g. SDC-BNB LP, LINK-BNB LP,
+  // NAR-SDC LP. The images should be sdc-bnb.svg, link-bnb.svg, nar-sdc.svg
   const farmImage = farm.lpSymbol.split(' ')[0].toLocaleLowerCase()
 
   const totalValue: BigNumber = useMemo(() => {
@@ -119,23 +119,23 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     if (farm.quoteTokenSymbol === QuoteToken.BNB) {
       return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
-    if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-      return cakePrice.times(farm.lpTotalInQuoteToken)
+    if (farm.quoteTokenSymbol === QuoteToken.SDC) {
+      return sdcPrice.times(farm.lpTotalInQuoteToken)
     }
     if (farm.quoteTokenSymbol === QuoteToken.ETH) {
       return ethPrice.times(farm.lpTotalInQuoteToken)
     }
     return farm.lpTotalInQuoteToken
-  }, [bnbPrice, cakePrice, ethPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
+  }, [bnbPrice, sdcPrice, ethPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
-  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
+  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('SMARTDEXCHAIN', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'SDC'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
-  
+
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
@@ -162,10 +162,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                     <ApyButton
                         lpLabel={lpLabel}
                         addLiquidityUrl={addLiquidityUrl}
-                        cakePrice={cakePrice}
+                        sdcPrice={sdcPrice}
                         apy={farm.apy}
                       />
-                      {farmAPY}% 
+                      {farmAPY}%
                   </>
                   ) : (
                       <Skeleton height={24} width={80} />
@@ -179,7 +179,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                   {true ? (
                     <>
                       123456 AAA
-          
+
                    </>
                   ) : (
                       <Skeleton height={24} width={80} />
@@ -210,10 +210,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
                     )}
                 </InfoTextFarm>
               </Detail>
-    
+
         </StyledInfoEarn>
-      
-       
+
+
         <CardActionsContainer
           farm={farm}
           ethereum={ethereum}

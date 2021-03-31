@@ -13,7 +13,7 @@ export interface Ifo {
   launchTime: string
   saleAmount: string
   raiseAmount: string
-  cakeToBurn: string
+  sdcToBurn: string
   projectSiteUrl: string
   currency: string
   currencyAddress: string
@@ -24,7 +24,7 @@ export interface Ifo {
 
 export enum QuoteToken {
   'BNB' = 'BNB',
-  'CAKE' = 'CAKE',
+  'SDC' = 'SDC',
   'SYRUP' = 'SYRUP',
   'BUSD' = 'BUSD',
   'TWT' = 'TWT',

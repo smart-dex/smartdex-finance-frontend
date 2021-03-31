@@ -19,7 +19,7 @@ const StyledLabel = styled.div<{ isFinished: boolean; colorLabel }>`
   ${(props) =>
     props.isFinished &&
     css`
-      color: ${({ theme }) => (theme.isDark ? darkColors.earnedCakeDisable : lightColors.earnedCakeDisable)};
+      color: ${({ theme }) => (theme.isDark ? darkColors.earnedSdcDisable : lightColors.earnedSdcDisable)};
     `}
   font-size: 12px;
   font-weight: 600;

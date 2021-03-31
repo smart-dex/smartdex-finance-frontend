@@ -4,12 +4,12 @@ import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { Button, Flex, Text, InjectedModalProps } from '@pancakeswap-libs/uikit'
 import { getFullDisplayBalance } from 'utils/formatBalance'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
-import { useCake } from 'hooks/useContract'
+import { getSmartDEXChainProfileAddress } from 'utils/addressHelpers'
+import { useSdc } from 'hooks/useContract'
 import useI18n from 'hooks/useI18n'
 import { useProfile } from 'state/hooks'
 import useGetProfileCosts from 'views/Profile/hooks/useGetProfileCosts'
-import useHasCakeBalance from 'hooks/useHasCakeBalance'
+import useHasSdcBalance from 'hooks/useHasSdcBalance'
 import { UseEditProfileResponse } from './reducer'
 import ProfileAvatar from '../ProfileAvatar'
 
@@ -33,20 +33,20 @@ const DangerOutline = styled(Button).attrs({ color: 'secondary', fullWidth: true
 const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemove, onDismiss }) => {
   const [needsApproval, setNeedsApproval] = useState(null)
   const { profile } = useProfile()
-  const { numberCakeToUpdate, numberCakeToReactivate } = useGetProfileCosts()
-  const hasMinimumCakeRequired = useHasCakeBalance(profile.isActive ? numberCakeToUpdate : numberCakeToReactivate)
+  const { numberSdcToUpdate, numberSdcToReactivate } = useGetProfileCosts()
+  const hasMinimumSdcRequired = useHasSdcBalance(profile.isActive ? numberSdcToUpdate : numberSdcToReactivate)
   const TranslateString = useI18n()
   const { account } = useWallet()
-  const cakeContract = useCake()
-  const cost = profile.isActive ? numberCakeToUpdate : numberCakeToReactivate
+  const sdcContract = useSdc()
+  const cost = profile.isActive ? numberSdcToUpdate : numberSdcToReactivate
 
   /**
-   * Check if the wallet has the required CAKE allowance to change their profile pic or reactivate
+   * Check if the wallet has the required SDC allowance to change their profile pic or reactivate
    * If they don't, we send them to the approval screen first
    */
   useEffect(() => {
     const checkApprovalStatus = async () => {
-      const response = await cakeContract.methods.allowance(account, getPancakeProfileAddress()).call()
+      const response = await sdcContract.methods.allowance(account, getSmartDEXChainProfileAddress()).call()
       const currentAllowance = new BigNumber(response)
       setNeedsApproval(currentAllowance.lt(cost))
     }
@@ -54,7 +54,7 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
     if (account) {
       checkApprovalStatus()
     }
-  }, [account, cost, setNeedsApproval, cakeContract])
+  }, [account, cost, setNeedsApproval, sdcContract])
 
   if (!profile) {
     return null
@@ -65,8 +65,8 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
       <ProfileAvatar profile={profile} />
       <Flex alignItems="center" style={{ height: '48px' }} justifyContent="center">
         <Text as="p" color="failure">
-          {!hasMinimumCakeRequired &&
-            TranslateString(999, `${getFullDisplayBalance(numberCakeToUpdate)} CAKE required to change profile pic`)}
+          {!hasMinimumSdcRequired &&
+            TranslateString(999, `${getFullDisplayBalance(numberSdcToUpdate)} SDC required to change profile pic`)}
         </Text>
       </Flex>
       {profile.isActive ? (
@@ -75,7 +75,7 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
             fullWidth
             mb="8px"
             onClick={needsApproval === true ? goToApprove : goToChange}
-            disabled={!hasMinimumCakeRequired || needsApproval === null}
+            disabled={!hasMinimumSdcRequired || needsApproval === null}
           >
             {TranslateString(999, 'Change Profile Pic')}
           </Button>
@@ -86,7 +86,7 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
           fullWidth
           mb="8px"
           onClick={needsApproval === true ? goToApprove : goToChange}
-          disabled={!hasMinimumCakeRequired || needsApproval === null}
+          disabled={!hasMinimumSdcRequired || needsApproval === null}
         >
           {TranslateString(999, 'Reactivate Profile')}
         </Button>

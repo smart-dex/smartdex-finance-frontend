@@ -64,7 +64,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
     }
   }, [maxTickets])
 
-  const cakeCosts = (amount: string): number => {
+  const sdcCosts = (amount: string): number => {
     return +amount * LOTTERY_TICKET_PRICE
   }
   return (
@@ -87,7 +87,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
             'Ticket purchases are final. Your SDC cannot be returned to you after buying tickets.',
           )}
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} SDC`)}</Final>
+        <Final>{TranslateString(460, `You will spend: ${sdcCosts(val)} SDC`)}</Final>
       </div>
       <ModalActions>
         <StyleButtonCancel variant="secondary" onClick={onDismiss}>
