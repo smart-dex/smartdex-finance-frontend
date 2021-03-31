@@ -63,7 +63,7 @@ const WrapCard = styled(Card)`
   ${({ theme }) => theme.mediaQueries.nav} {
     padding: 50px 36px 50px 50px;
   }
-  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
+  box-shadow: 14px 14px 20px ${({ theme }) => (theme.isDark ? darkColors.shadowDark: lightColors.shadowLight)} ;
 `
 const WrapHeading = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
@@ -256,7 +256,7 @@ return (
             </StyleTitle>
             <WrapText mb={3}>
               {TranslateString(514,
-                'Launch your project with PancakeSwap, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
+                'Launch your project with SmartDEX, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
               )}
             </WrapText>
             <LinkPrimaryPd30 href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform">

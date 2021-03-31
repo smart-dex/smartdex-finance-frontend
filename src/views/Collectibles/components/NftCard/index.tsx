@@ -49,21 +49,19 @@ const DetailsButton = styled(Button)`
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-
+  background: none !important;
+  box-shadow: none !important;
   &:hover:not(:disabled):not(:active) {
     background-color: transparent;
   }
-
   &:focus:not(:active) {
     box-shadow: none;
   }
 `
-
 const StyleCard = styled(Card)`
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
-  box-shadow: 50px 38px 102px
-    ${({ theme }) => (theme.isDark ? darkColors.shadowCardCollectibles : lightColors.shadowCardCollectibles)};
+  box-shadow: 50px 38px 102px ${({ theme }) => (theme.isDark ? darkColors.shadowCardCollectibles : lightColors.shadowCardCollectibles)};
   border-radius: 40px;
 `
 
@@ -72,9 +70,12 @@ const InfoBlock = styled.div`
   line-height: 143%;
   text-align: center;
   letter-spacing: -0.03em;
-  color: rgba(95, 94, 118, 0.7);
+  color: ${lightColors.colorbt};
   color: ${({ theme }) => (theme.isDark ? darkColors.colorInfoBlock : lightColors.colorInfoBlock)};
   min-height: 65px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    height: 65px;
+  }
 `
 const SubCard = styled.div`
   padding: 0 30px;
@@ -111,7 +112,7 @@ const NftCard: React.FC<NftCardProps> = ({ nft, onSuccess, canClaim = false, tok
               </Tag>
             )}
             {profile?.nft?.bunnyId === bunnyId && (
-              <Tag outline variant="success">
+              <Tag outline variant="success">s
                 {TranslateString(999, 'Profile Pic')}
               </Tag>
             )}
