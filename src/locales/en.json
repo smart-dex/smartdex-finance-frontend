@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 29364,
-            "text": "Launch your project with PancakeSwap, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.",
+            "text": "Launch your project with SmartDEX, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3919,7 +3919,7 @@
             "stringId": 586,
             "contentType": "text/plain",
             "translationId": 29120,
-            "text": "CAKE to burn (USD)",
+            "text": "SDC to burn (USD)",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4009,7 +4009,7 @@
             "stringId": 598,
             "contentType": "text/plain",
             "translationId": 29132,
-            "text": "Get CAKE-BNB LP tokens by adding CAKE and BNB liquidity",
+            "text": "Get SDC-BNB LP tokens by adding SDC and BNB liquidity",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -4039,7 +4039,7 @@
             "stringId": 602,
             "contentType": "text/plain",
             "translationId": 29136,
-            "text": "While the sale is live, commit your CAKE-LP tokens to buy the IFO tokens",
+            "text": "While the sale is live, commit your SDC-LP tokens to buy the IFO tokens",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
