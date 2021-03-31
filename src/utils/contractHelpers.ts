@@ -1,21 +1,21 @@
 import {
-  getPancakeProfileAddress,
-  getPancakeRabbitsAddress,
+  getSmartDEXChainProfileAddress,
+  getSmartDEXChainRabbitsAddress,
   getBunnyFactoryAddress,
   getBunnySpecialAddress,
 } from 'utils/addressHelpers'
 import { getContract } from 'utils/web3'
-import profileABI from 'config/abi/pancakeProfile.json'
-import pancakeRabbitsAbi from 'config/abi/pancakeRabbits.json'
+import profileABI from 'config/abi/smartDEXChainProfile.json'
+import smartDEXChainRabbitsAbi from 'config/abi/smartDEXChainRabbits.json'
 import bunnyFactoryAbi from 'config/abi/bunnyFactory.json'
 import bunnySpecialAbi from 'config/abi/bunnySpecial.json'
 
 export const getProfileContract = () => {
-  return getContract(profileABI, getPancakeProfileAddress())
+  return getContract(profileABI, getSmartDEXChainProfileAddress())
 }
 
-export const getPancakeRabbitContract = () => {
-  return getContract(pancakeRabbitsAbi, getPancakeRabbitsAddress())
+export const getSmartDEXChainRabbitContract = () => {
+  return getContract(smartDEXChainRabbitsAbi, getSmartDEXChainRabbitsAddress())
 }
 
 export const getBunnyFactoryContract = () => {

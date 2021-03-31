@@ -1,5 +1,5 @@
 export default {
-  cake: {
+  sdc: {
     97: '0x9d79b478dE7043738107065cFcED953dC2e2c093',
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
   },
@@ -43,11 +43,11 @@ export default {
     56: '0x23396cF899Ca06c4472205fC903bDB4de249D6fC',
     97: '',
   },
-  pancakeProfile: {
+  smartDEXChainProfile: {
     56: '0xDf4dBf6536201370F95e06A0F8a7a70fE40E388a',
     97: '0x3564aF2c34e425Dc102e722AD8075812D6DdAceF',
   },
-  pancakeRabbits: {
+  smartDEXChainRabbits: {
     56: '0xDf7952B35f24aCF7fC0487D01c8d5690a60DBa07',
     97: '0x0805c5691a8cDeD05e8E01F55fE5384279a37eF2',
   },

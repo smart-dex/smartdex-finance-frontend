@@ -7,7 +7,7 @@ import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
 import { useFarms, usePriceBnbBusd } from 'state/hooks'
-import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
+import { BLOCKS_PER_YEAR, SDC_PER_BLOCK, SDC_POOL_PID } from 'config'
 
 const StyledFarmStakingCard = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
@@ -78,24 +78,24 @@ const EarnAPYCard = () => {
 
   const calculateAPY = useCallback(
     (farmsToDisplay) => {
-      const cakePriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === CAKE_POOL_PID)?.tokenPriceVsQuote || 0)
+      const sdcPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === SDC_POOL_PID)?.tokenPriceVsQuote || 0)
 
       farmsToDisplay.map((farm) => {
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        const cakeRewardPerBlock = CAKE_PER_BLOCK.times(farm.poolWeight)
-        const cakeRewardPerYear = cakeRewardPerBlock.times(BLOCKS_PER_YEAR)
+        const sdcRewardPerBlock = SDC_PER_BLOCK.times(farm.poolWeight)
+        const sdcRewardPerYear = sdcRewardPerBlock.times(BLOCKS_PER_YEAR)
 
-        let apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken)
+        let apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
 
         if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
-          apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
-        } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-          apy = cakeRewardPerYear.div(farm.lpTotalInQuoteToken)
+          apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
+        } else if (farm.quoteTokenSymbol === QuoteToken.SDC) {
+          apy = sdcRewardPerYear.div(farm.lpTotalInQuoteToken)
         } else if (farm.dual) {
-          const cakeApy =
-            farm && cakePriceVsBNB.times(cakeRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
+          const sdcApy =
+            farm && sdcPriceVsBNB.times(sdcRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
           const dualApy =
             farm.tokenPriceVsQuote &&
             new BigNumber(farm.tokenPriceVsQuote)
@@ -103,7 +103,7 @@ const EarnAPYCard = () => {
               .times(BLOCKS_PER_YEAR)
               .div(farm.lpTotalInQuoteToken)
 
-          apy = cakeApy && dualApy && cakeApy.plus(dualApy)
+          apy = sdcApy && dualApy && sdcApy.plus(dualApy)
         }
 
         if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()

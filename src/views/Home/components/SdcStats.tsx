@@ -5,10 +5,10 @@ import { Card, CardBody, Heading, Text } from 'uikit-sotatek'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
-import { getCakeAddress } from 'utils/addressHelpers'
+import { getSdcAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
 
-const StyledCakeStats = styled(Card)`
+const StyledSdcStats = styled(Card)`
   min-height: 308px;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
@@ -64,14 +64,14 @@ const StyleNumber = styled(Text)`
   }
 `
 
-const CakeStats = () => {
+const SdcStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
-  const burnedBalance = useBurnedBalance(getCakeAddress())
+  const burnedBalance = useBurnedBalance(getSdcAddress())
   const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - getBalanceNumber(burnedBalance) : 0
 
   return (
-    <StyledCakeStats>
+    <StyledSdcStats>
       <CardBody>
         <HeadingEarn mb="24px">{TranslateString(534, 'SDC Stats')}</HeadingEarn>
         <Row>
@@ -87,8 +87,8 @@ const CakeStats = () => {
           <StyleNumber><CardValue decimals={0} bold value={40} /></StyleNumber>
         </Row>
       </CardBody>
-    </StyledCakeStats>
+    </StyledSdcStats>
   )
 }
 
-export default CakeStats
+export default SdcStats

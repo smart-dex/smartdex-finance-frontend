@@ -7,8 +7,8 @@ import useI18n from 'hooks/useI18n'
 import { useAllHarvest } from 'hooks/useHarvest'
 import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
-import CakeHarvestBalance from './CakeHarvestBalance'
-import CakeWalletBalance from './CakeWalletBalance'
+import SdcHarvestBalance from './SdcHarvestBalance'
+import SdcWalletBalance from './SdcWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
   min-height: 270px;
@@ -58,7 +58,7 @@ const Actions = styled.div`
     margin-top: 80px;
   }
 `
-const BlockCakeHarvest = styled.div`
+const BlockSdcHarvest = styled.div`
   display: flex;
   margin-bottom: 30px;
   justify-content: space-between;
@@ -158,21 +158,21 @@ const FarmedStakingCard = () => {
           <HeadingStyle>{TranslateString(542, 'Farms & Staking')}</HeadingStyle>
         </HeadingBlock>
 
-        <BlockCakeHarvest>
+        <BlockSdcHarvest>
           <Label>{TranslateString(544, 'SDC to Harvest')}:</Label>
-          <CakeHarvestBalance />
-        </BlockCakeHarvest>
+          <SdcHarvestBalance />
+        </BlockSdcHarvest>
 
-        <BlockCakeHarvest>
+        <BlockSdcHarvest>
           <Label>{TranslateString(546, 'SDC in Wallet')}:</Label>
-          <CakeWalletBalance />
-        </BlockCakeHarvest>
+          <SdcWalletBalance />
+        </BlockSdcHarvest>
         <Actions>
           {account ? (
             <StyleButtonDisabled
               id="harvest-all"
               disabled={balancesWithValue.length <= 0 || pendingTx}
-              endIcon={!(balancesWithValue.length <= 0 || pendingTx) && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
+              endIcon={!(balancesWithValue.length <= 0 || pendingTx) && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>}
               onClick={harvestAllFarms}
               style={{ width: '100%' }}
             >
@@ -181,9 +181,9 @@ const FarmedStakingCard = () => {
                 : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
             </StyleButtonDisabled>
           ) : (
-            <UnlockButton 
-              endIcon={<BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>} 
-              style={{ width: '100%' }} 
+            <UnlockButton
+              endIcon={<BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>}
+              style={{ width: '100%' }}
             />
           )}
         </Actions>
