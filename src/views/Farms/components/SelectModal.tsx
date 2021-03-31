@@ -38,7 +38,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, earnings, pid, sta
     />
   )
   return (
-    <ModalStyle title={`${TranslateString(999, 'Action')} `} onDismiss={onDismiss}>
+    <ModalStyle title={` `} onDismiss={onDismiss}>
       <StyledModal>
         <ActionEarn>
           <StyledImg>

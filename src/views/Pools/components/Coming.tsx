@@ -178,13 +178,13 @@ const Coming: React.FC = () => {
 
         <DetailPlaceholder>
           <StyleFlexDetail>{TranslateString(736, 'APR')}:</StyleFlexDetail>
-          <Value>??</Value>
+          <StyleFlexDetail style={{marginLeft:'5px'}}>??</StyleFlexDetail>
         </DetailPlaceholder>
         <DetailPlaceholder>
           <StyleFlexDetail>
             {TranslateString(384, 'Your Stake')}:
            </StyleFlexDetail>
-          <Value>???</Value>
+          <StyleFlexDetail style={{marginLeft:'5px'}}>???</StyleFlexDetail>
         </DetailPlaceholder>
 
       </CardContentComing>

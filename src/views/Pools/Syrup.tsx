@@ -85,7 +85,7 @@ const Farm: React.FC = () => {
             {TranslateString(738, 'Syrup Pool')}
           </HeadingPage>
           <DescriptionHeading>
-            <span> {TranslateString(580, 'Stake CAKE to earn new tokens.')} </span>
+            <span> {TranslateString(580, 'Stake SDC to earn new tokens.')} </span>
             <span> {TranslateString(486, 'You can unstake at any time.')}</span>
             <span> {TranslateString(406, 'Rewards are calculated per block.')}</span>
           </DescriptionHeading>
@@ -124,7 +124,8 @@ const HeadingPage = styled(Heading)`
 `
 
 const DescriptionHeading = styled.div`
-  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
   font-size: 13px;
   line-height: 143%;
   text-align: center;
