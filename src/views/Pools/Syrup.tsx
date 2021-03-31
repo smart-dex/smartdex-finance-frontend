@@ -4,7 +4,7 @@ import BigNumber from 'bignumber.js'
 import { lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Heading } from 'uikit-sotatek'
+import { Flex, Heading } from 'uikit-sotatek'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
@@ -106,9 +106,14 @@ const Farm: React.FC = () => {
         ))}
       </Route>
       </FlexLayout>
+
       <Route exact path={`${path}`}>
         <Coming />
       </Route>
+     
+ 
+    
+     
     </Page>
   )
 }

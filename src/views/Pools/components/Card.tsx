@@ -13,6 +13,7 @@ const Card = styled.div<{ isActive?: boolean; isFinished?: boolean }>`
   ${({ theme }) => theme.mediaQueries.nav} {
     max-width: 400px;
     margin-right: 42px;
+    margin-left: 42px;
   }
 `
 

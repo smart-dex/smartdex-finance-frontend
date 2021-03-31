@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { Image, Button, Flex } from 'uikit-sotatek'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
-import { darkColors, lightColors,baseColors } from 'style/Color'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 import CardTitle from './CardTitle'
 import CardContent from './CardContent'
 
@@ -112,9 +112,9 @@ const CardContentComing = styled(CardContent)`
   }
 `
 const CardComing = styled.div`
+  margin:auto;
    background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
    border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
-   margin: auto;
    max-width: 350px;
    min-width: 300px;
    ${({ theme }) => theme.mediaQueries.nav} {
@@ -175,13 +175,13 @@ const Coming: React.FC = () => {
 
         <DetailPlaceholder>
           <StyleFlexDetail>{TranslateString(736, 'APR')}:</StyleFlexDetail>
-          <StyleFlexDetail style={{marginLeft:'5px'}}>??</StyleFlexDetail>
+          <StyleFlexDetail style={{ marginLeft: '5px' }}>??</StyleFlexDetail>
         </DetailPlaceholder>
         <DetailPlaceholder>
           <StyleFlexDetail>
             {TranslateString(384, 'Your Stake')}:
            </StyleFlexDetail>
-          <StyleFlexDetail style={{marginLeft:'5px'}}>???</StyleFlexDetail>
+          <StyleFlexDetail style={{ marginLeft: '5px' }}>???</StyleFlexDetail>
         </DetailPlaceholder>
 
       </CardContentComing>
