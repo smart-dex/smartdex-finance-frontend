@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react'
-import { Button, Modal } from '@pancakeswap-libs/uikit'
+import { Button, Modal } from 'uikit-sotatek'
 import styled from 'styled-components'
 import { useWinningNumbers } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'
+import { baseColors } from 'style/Color'
 
 interface UserTicketsModalProps {
   myTicketNumbers: Array<any>
@@ -62,13 +63,20 @@ const RewardP = styled.div`
 
 const TicketsList = styled.div`
   text-align: center;
-  overflow-y: auto;
-  max-height: 400px;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${baseColors.primary};
+  margin-bottom: 8px;
+  h2 {
+    p {
+      padding: 8px;
+    }
+  }
 `
 
 const StyledButton = styled(Button)`
   margin-top: ${(props) => props.theme.spacing[2]}px;
+  background: ${ baseColors.primary};
+  border-color: transparent;
+  color: #fff;
 `
 
 export default UserTicketsModal

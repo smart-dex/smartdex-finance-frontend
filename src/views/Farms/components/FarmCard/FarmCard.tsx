@@ -11,77 +11,85 @@ import { QuoteToken } from 'config/constants/types'
 import { BASE_ADD_LIQUIDITY_URL } from 'config'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { lightColors, darkColors } from 'style/Color'
+import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
 import ApyButton from './ApyButton'
-import { baseColors } from '../../../../style/Color'
+
+
 
 export interface FarmWithStakedValue extends Farm {
   apy?: BigNumber
 }
 
 const FCard = styled.div`
-  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
-  border-radius: 20px;
-  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
-  box-shadow: 25px 14px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  &:hover {
-    border: 1px solid ${baseColors.primary};
-    transition: 0.25s;
-  }
-  position: relative;
-  margin-bottom: 28px;
-  max-width: 450px;
-  min-width: 280px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    max-width: none;
-    min-width: 800px;
-  }
+display: flex;
+border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+flex-direction: column;
+min-height:400px;
+max-width: 350px;
+min-width: 300px;
+margin-right: 0px;
+${({ theme }) => theme.mediaQueries.nav} {
+  max-width: 400px;
+  margin-right: 42px;
+}
 `
 
 const ExpandingWrapper = styled.div<{ expanded: boolean }>`
-  height: ${(props) => (props.expanded ? '100%' : '0px')};
+  // height: ${(props) => (props.expanded ? '100%' : '0px')};
   overflow: hidden;
+  width:100%;
+  padding: 0px 23px 22px 22px;
 `
 const CardContent = styled(Flex)`
+  height:100%;
+  border-left: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  border-right: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  box-shadow: 25px 14px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   display: flex;
-  padding: 50px;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   ${({ theme }) => theme.mediaQueries.nav} {
-    flex-direction: row;
     flex-wrap: nowrap;
-    padding: 30px;
-  }
-`
-
-const InfoFarm = styled(Flex)`
-  flex-grow: 1;
-  margin-left: 0px;
-  margin-right: 0px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: 16px;${({ theme }) => (theme.isDark ? '#151C31' : '#E5E5E5')};
-    margin-right: 50px;
   }
 `
 const InfoTextFarm = styled(Text)`
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 const DetailInFo = styled.div`
   flex: 1;
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
+const StyledInfoEarn = styled(Flex)`
+  flex-direction:column;
+  justify-content: center;
+  padding:20px 20px 0px 20px;
+  margin-top:20px;
+  width: 100%;
+`
+
+const Detail = styled(Flex)`
+  flex-wrap:wrap;
+`
+
+
 
 interface FarmCardProps {
   farm: FarmWithStakedValue
@@ -97,7 +105,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
-
+  const { pid, } = useFarmFromSymbol(farm.lpSymbol)
+  const { earnings } = useFarmUser(pid)
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. CAKE-BNB LP, LINK-BNB LP,
   // NAR-CAKE LP. The images should be cake-bnb.svg, link-bnb.svg, nar-cake.svg
@@ -126,50 +135,85 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'CAKE'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
-
+  
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
-
   const handelOpenDetail = () => {
     setShowExpandableSection(!showExpandableSection)
   }
   return (
     <FCard>
+      <CardHeading
+        lpLabel={lpLabel}
+        multiplier={farm.multiplier}
+        isCommunityFarm={isCommunityFarm}
+        farmImage={farmImage}
+        tokenSymbol={farm.tokenSymbol}
+      />
       <CardContent>
-        <CardHeading
-          lpLabel={lpLabel}
-          multiplier={farm.multiplier}
-          isCommunityFarm={isCommunityFarm}
-          farmImage={farmImage}
-          tokenSymbol={farm.tokenSymbol}
-        />
-        <InfoFarm justifyContent="center" flexDirection="column">
-          {!removed && (
-            <Flex mb="16px" alignItems="center">
-              <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
-              <InfoTextFarm bold style={{ display: 'flex', alignItems: 'center' }}>
-                {farm.apy ? (
-                  <>
+        <StyledInfoEarn>
+        {!removed && (
+              <Detail mb="37px" >
+                <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {farm.apy ? (
+                    <>
                     <ApyButton
-                      lpLabel={lpLabel}
-                      addLiquidityUrl={addLiquidityUrl}
-                      cakePrice={cakePrice}
-                      apy={farm.apy}
-                    />
-                    {farmAPY}%
+                        lpLabel={lpLabel}
+                        addLiquidityUrl={addLiquidityUrl}
+                        cakePrice={cakePrice}
+                        apy={farm.apy}
+                      />
+                      {farmAPY}% 
                   </>
-                ) : (
-                  <Skeleton height={24} width={80} />
-                )}
-              </InfoTextFarm>
-            </Flex>
-          )}
-          <Flex>
-            <DetailInFo>{TranslateString(318, 'Earn')}:</DetailInFo>
-            <InfoTextFarm bold>{earnLabel}</InfoTextFarm>
-          </Flex>
-        </InfoFarm>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+            )}
+            <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'Total Deposits')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                      123456 AAA
+          
+                   </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+              <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'Pool Rate')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                      1120.4 SDC/WEEK
+                  </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+              <Detail mb="37px" >
+                <DetailInFo>{TranslateString(999, 'Your Pool Rate')}: </DetailInFo>
+                <InfoTextFarm bold style={{ display: 'flex' }}>
+                  {true ? (
+                    <>
+                     {farmAPY}%
+                  </>
+                  ) : (
+                      <Skeleton height={24} width={80} />
+                    )}
+                </InfoTextFarm>
+              </Detail>
+    
+        </StyledInfoEarn>
+      
+       
         <CardActionsContainer
           farm={farm}
           ethereum={ethereum}
@@ -177,23 +221,23 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           addLiquidityUrl={addLiquidityUrl}
           changeOpenDetail={handelOpenDetail}
           isOpenDetail={showExpandableSection}
+          earnLabel={earnLabel}
         />
-        {/* <ExpandableSectionButton
-            onClick={() => setShowExpandableSection(!showExpandableSection)}
-            expanded={showExpandableSection}
-          /> */}
+        {showExpandableSection && (
+          <ExpandingWrapper expanded={showExpandableSection}>
+            <DetailsSection
+              removed={removed}
+              bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
+              totalValueFormated={totalValueFormated}
+              lpLabel={lpLabel}
+              addLiquidityUrl={addLiquidityUrl}
+              earnings={earnings}
+              pid={pid}
+            />
+          </ExpandingWrapper>
+        )}
       </CardContent>
-      {showExpandableSection && (
-        <ExpandingWrapper expanded={showExpandableSection}>
-          <DetailsSection
-            removed={removed}
-            bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
-            totalValueFormated={totalValueFormated}
-            lpLabel={lpLabel}
-            addLiquidityUrl={addLiquidityUrl}
-          />
-        </ExpandingWrapper>
-      )}
+
     </FCard>
   )
 }

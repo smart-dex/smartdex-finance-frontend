@@ -1,0 +1,2087 @@
+[
+    {
+        "data": {
+            "stringId": 2,
+            "contentType": "text/plain",
+            "translationId": 6948,
+            "text": "Фарма",
+            "user": {
+                "id": 14441122,
+                "username": "Plutonus",
+                "fullName": "Plutonus",
+                "avatarUrl": "https://www.gravatar.com/avatar/f21d6e816b25feabe10c195764c35b38?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-02T17:43:24+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 4,
+            "contentType": "text/plain",
+            "translationId": 7498,
+            "text": "Ulaganje",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 8,
+            "contentType": "text/plain",
+            "translationId": 7500,
+            "text": "Menjačnica",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 10,
+            "contentType": "text/plain",
+            "translationId": 17254,
+            "text": "Документи",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:59:08+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12,
+            "contentType": "text/plain",
+            "translationId": 7504,
+            "text": "Glasanje",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 14,
+            "contentType": "text/plain",
+            "translationId": 7506,
+            "text": "Lutrija",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 34,
+            "contentType": "text/plain",
+            "translationId": 6976,
+            "text": "Телеграм",
+            "user": {
+                "id": 14441122,
+                "username": "Plutonus",
+                "fullName": "Plutonus",
+                "avatarUrl": "https://www.gravatar.com/avatar/f21d6e816b25feabe10c195764c35b38?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-02T17:45:08+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 76,
+            "contentType": "text/plain",
+            "translationId": 7554,
+            "text": "od",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 78,
+            "contentType": "text/plain",
+            "translationId": 7556,
+            "text": "Balans%",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 80,
+            "contentType": "text/plain",
+            "translationId": 7558,
+            "text": "Do",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 82,
+            "contentType": "text/plain",
+            "translationId": 7560,
+            "text": "Izaberi token",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 84,
+            "contentType": "text/plain",
+            "translationId": 7562,
+            "text": "Unesi iznos",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 86,
+            "contentType": "text/plain",
+            "translationId": 7564,
+            "text": "Transakcija Podešavanje",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 88,
+            "contentType": "text/plain",
+            "translationId": 7566,
+            "text": "tolerancija u odsupanju",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 90,
+            "contentType": "text/plain",
+            "translationId": 7568,
+            "text": "Krajni rok transakcije",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 92,
+            "contentType": "text/plain",
+            "translationId": 7570,
+            "text": "Minuti",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 94,
+            "contentType": "text/plain",
+            "translationId": 7572,
+            "text": "Podešavanje interfejsa",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 96,
+            "contentType": "text/plain",
+            "translationId": 7574,
+            "text": "Isključu audio mod",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 98,
+            "contentType": "text/plain",
+            "translationId": 7576,
+            "text": "Isključi tamni mod",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 102,
+            "contentType": "text/plain",
+            "translationId": 7580,
+            "text": "Tvoja likvidnost",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 106,
+            "contentType": "text/plain",
+            "translationId": 7584,
+            "text": "Ne vidiš pool koje si se priključio?",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 108,
+            "contentType": "text/plain",
+            "translationId": 7586,
+            "text": "Uvezi",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 110,
+            "contentType": "text/plain",
+            "translationId": 7588,
+            "text": "Uskoro dolazi",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 114,
+            "contentType": "text/plain",
+            "translationId": 7590,
+            "text": "Totalna likvidnost",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 116,
+            "contentType": "text/plain",
+            "translationId": 7592,
+            "text": "Pogledaj na BscScanu",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 126,
+            "contentType": "text/plain",
+            "translationId": 7602,
+            "text": "Ime tokena",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 128,
+            "contentType": "text/plain",
+            "translationId": 7604,
+            "text": "Pronađi token po imenu ili simbolu ili nalepi adresu ispod",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 130,
+            "contentType": "text/plain",
+            "translationId": 7606,
+            "text": "Kada dodaš likvidnost dobijaš tokene iz pool-a koji predstavljaju tvoj udeo. Ako ne vidiš pool kojem si se priključio na listi, pokuša da uvezeš pool ispod.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 132,
+            "contentType": "text/plain",
+            "translationId": 7608,
+            "text": "Ulaz/unos",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 136,
+            "contentType": "text/plain",
+            "translationId": 7612,
+            "text": "Neispravan par",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-03T11:29:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 138,
+            "contentType": "text/plain",
+            "translationId": 16566,
+            "text": "Повезати новчаник",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:17:17+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 140,
+            "contentType": "text/plain",
+            "translationId": 16568,
+            "text": "Повезати се са новчаником",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:17:37+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 142,
+            "contentType": "text/plain",
+            "translationId": 17252,
+            "text": "Упозорење за сируп",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:58:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 144,
+            "contentType": "text/plain",
+            "translationId": 16576,
+            "text": "Молим будите опрезни када купујете сируп.",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:18:47+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 146,
+            "contentType": "text/plain",
+            "translationId": 16580,
+            "text": "Нећете добити КОЛАЧ као награду ако чувате купљени СИРУП.",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:20:28+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 148,
+            "contentType": "text/plain",
+            "translationId": 16584,
+            "text": "Разумем",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:20:43+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 150,
+            "contentType": "text/plain",
+            "translationId": 16586,
+            "text": "Настави",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:20:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 152,
+            "contentType": "text/plain",
+            "translationId": 16590,
+            "text": "Молим будите опрезни када продајете СИРУП.",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:21:15+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 154,
+            "contentType": "text/plain",
+            "translationId": 16594,
+            "text": "Биће неопходно да поново купите једнак износ СИРУПА да би било могуће да пребаците у КОЛАЧ.",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:22:24+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 156,
+            "contentType": "text/plain",
+            "translationId": 16606,
+            "text": "Повежите се са новчаником да проверите своју ликвидност.",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:24:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 158,
+            "contentType": "text/plain",
+            "translationId": 16608,
+            "text": "Пронађите име или налепите адресу",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:25:21+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 160,
+            "contentType": "text/plain",
+            "translationId": 16612,
+            "text": "Погрешна мрежа",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:25:36+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 162,
+            "contentType": "text/plain",
+            "translationId": 16628,
+            "text": "Молим повежите се са адекватном мрежом унутар Бинанс Паметног Ланца.",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:27:28+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 164,
+            "contentType": "text/plain",
+            "translationId": 16644,
+            "text": "Када додате ликвидност, дати су вам токени из базена који представљају вашу позицију. Ови токени аутоматски зарађују надокнаду сразмерно вашем уделу у базену, и могу бити откупљени у сваком тренутку.",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T14:32:17+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 166,
+            "contentType": "text/plain",
+            "translationId": 17232,
+            "text": "МАКСИМУМ",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:24:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 168,
+            "contentType": "text/plain",
+            "translationId": 17236,
+            "text": "Додајте ликвидност",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:25:29+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 170,
+            "contentType": "text/plain",
+            "translationId": 9278,
+            "text": "Nije pronađena likvidnost.",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:48+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 172,
+            "contentType": "text/plain",
+            "translationId": 17238,
+            "text": "Повезан са МетаМаском",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:25:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 174,
+            "contentType": "text/plain",
+            "translationId": 17240,
+            "text": "Налог",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:26:13+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 176,
+            "contentType": "text/plain",
+            "translationId": 17242,
+            "text": "Kопирајте адресу",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:26:26+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 178,
+            "contentType": "text/plain",
+            "translationId": 17244,
+            "text": "Ваше трансакције појавиће се овде...",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:27:00+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 180,
+            "contentType": "text/plain",
+            "translationId": 17246,
+            "text": "Промените",
+            "user": {
+                "id": 14439398,
+                "username": "ivanaobozavamte10",
+                "fullName": "ivanaobozavamte10",
+                "avatarUrl": "https://www.gravatar.com/avatar/6beaef46d901c745644e619b840a56a4?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T18:27:10+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 186,
+            "contentType": "text/plain",
+            "translationId": 17084,
+            "text": "Ваша трансакција ће се вратити ако се цена неповољно промени за више од овог процента.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:06:26+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 188,
+            "contentType": "text/plain",
+            "translationId": 16928,
+            "text": "Ваша трансакција ће се вратити ако је на чекању дуже од овог времена.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:31:17+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 190,
+            "contentType": "text/plain",
+            "translationId": 16930,
+            "text": "Језик",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:31:30+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 192,
+            "contentType": "text/plain",
+            "translationId": 16938,
+            "text": "Шифра",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:32:16+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 194,
+            "contentType": "text/plain",
+            "translationId": 16942,
+            "text": "Од (процењено)",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:32:47+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 196,
+            "contentType": "text/plain",
+            "translationId": 16944,
+            "text": "До (процењено)",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:33:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 198,
+            "contentType": "text/plain",
+            "translationId": 16948,
+            "text": "О томе",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:33:20+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 200,
+            "contentType": "text/plain",
+            "translationId": 16952,
+            "text": "Шифра",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:33:34+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 202,
+            "contentType": "text/plain",
+            "translationId": 16964,
+            "text": "Ваша трансакција ће се вратити ако дође до великог, неповољног кретања цена пре него што буде потврђена.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:35:21+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 204,
+            "contentType": "text/plain",
+            "translationId": 16968,
+            "text": "Одобравање",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:35:47+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 206,
+            "contentType": "text/plain",
+            "translationId": 16974,
+            "text": "Одобрено",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:36:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 208,
+            "contentType": "text/plain",
+            "translationId": 16980,
+            "text": "Изаберите жетон да бисте пронашли своју ликвидност.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:37:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 210,
+            "contentType": "text/plain",
+            "translationId": 16982,
+            "text": "Базен пронађен!",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:37:41+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 212,
+            "contentType": "text/plain",
+            "translationId": 16988,
+            "text": "Још увек немате ликвидност у овом базену.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:38:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 214,
+            "contentType": "text/plain",
+            "translationId": 16994,
+            "text": "Није пронађен базен",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:39:34+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 216,
+            "contentType": "text/plain",
+            "translationId": 16996,
+            "text": "Направите базен.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:39:57+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 218,
+            "contentType": "text/plain",
+            "translationId": 16998,
+            "text": "Учитавање",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:40:36+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 220,
+            "contentType": "text/plain",
+            "translationId": 17000,
+            "text": "Максимално продато",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:40:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 222,
+            "contentType": "text/plain",
+            "translationId": 17002,
+            "text": "Максимално примљено",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:41:17+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 224,
+            "contentType": "text/plain",
+            "translationId": 17004,
+            "text": "Разлика између тржишне цене и процењене цене због величине трговине",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:42:27+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 226,
+            "contentType": "text/plain",
+            "translationId": 17006,
+            "text": "Утицај на цену",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:42:50+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 228,
+            "contentType": "text/plain",
+            "translationId": 17010,
+            "text": "Накнада за даваоца ликвидности",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:43:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 230,
+            "contentType": "text/plain",
+            "translationId": 17026,
+            "text": "За сваку трговину плаћа се 0,2%. 0,17% одлази на даваоце ликвидности, а 0,03% иде у ПанцакеСвап трезор.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:47:20+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 232,
+            "contentType": "text/plain",
+            "translationId": 17028,
+            "text": "Рута",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:47:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 234,
+            "contentType": "text/plain",
+            "translationId": 17034,
+            "text": "Усмеравање кроз ове жетоне резултирало је по најбољој цени за вашу трговину.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:50:19+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 236,
+            "contentType": "text/plain",
+            "translationId": 17038,
+            "text": "Почетне цене",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:51:16+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 238,
+            "contentType": "text/plain",
+            "translationId": 17042,
+            "text": "Цене",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:51:26+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 240,
+            "contentType": "text/plain",
+            "translationId": 17046,
+            "text": "и удео у базену",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:52:33+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 242,
+            "contentType": "text/plain",
+            "translationId": 17050,
+            "text": "По",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:53:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 244,
+            "contentType": "text/plain",
+            "translationId": 17052,
+            "text": "Депоновано",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:53:35+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 246,
+            "contentType": "text/plain",
+            "translationId": 17054,
+            "text": "Стопа",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:55:13+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 248,
+            "contentType": "text/plain",
+            "translationId": 17056,
+            "text": "Удео базена:",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:55:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 250,
+            "contentType": "text/plain",
+            "translationId": 17058,
+            "text": "Створите базен и снабдевање",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:56:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 252,
+            "contentType": "text/plain",
+            "translationId": 17060,
+            "text": "Потврдите снабдевање",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:56:57+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 254,
+            "contentType": "text/plain",
+            "translationId": 17062,
+            "text": "Увези базен",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:57:28+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 256,
+            "contentType": "text/plain",
+            "translationId": 17064,
+            "text": "Користите овај базен да бисте пронашли парове који се аутоматски не појављују у интерфејсу.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:58:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 258,
+            "contentType": "text/plain",
+            "translationId": 17066,
+            "text": "Додај",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:58:42+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 260,
+            "contentType": "text/plain",
+            "translationId": 17068,
+            "text": "Уклони",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:58:48+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 262,
+            "contentType": "text/plain",
+            "translationId": 17070,
+            "text": "Ликвидност",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T16:58:55+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 264,
+            "contentType": "text/plain",
+            "translationId": 17086,
+            "text": "Када додате ликвидност, дати су вам токени из базена који представљају вашу позицију. Ови токени аутоматски зарађују надокнаду сразмерно вашем уделу у базену, и могу бити откупљени у сваком тренутку.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:07:09+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 266,
+            "contentType": "text/plain",
+            "translationId": 17088,
+            "text": "Уклањање токена базена претвара вашу позицију назад у основне токене по тренутној стопи, пропорционалној вашем уделу у фонду. Наплаћене накнаде су укључене у износе које примите.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:08:20+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 268,
+            "contentType": "text/plain",
+            "translationId": 17080,
+            "text": "Удружени",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:04:07+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 270,
+            "contentType": "text/plain",
+            "translationId": 17078,
+            "text": "Токени вашег базена:",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:03:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 272,
+            "contentType": "text/plain",
+            "translationId": 17076,
+            "text": "Ваш удео у базену:",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:03:30+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 274,
+            "contentType": "text/plain",
+            "translationId": 17074,
+            "text": "Недовољан",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:02:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 276,
+            "contentType": "text/plain",
+            "translationId": 17072,
+            "text": "баланс",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:02:30+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 278,
+            "contentType": "text/plain",
+            "translationId": 17126,
+            "text": "Farm/Узгој",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:19:20+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 280,
+            "contentType": "text/plain",
+            "translationId": 17128,
+            "text": "Улагање",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:19:38+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 284,
+            "contentType": "text/plain",
+            "translationId": 17132,
+            "text": "Мењачница",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:20:23+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 286,
+            "contentType": "text/plain",
+            "translationId": 17134,
+            "text": "Документи",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:20:40+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 288,
+            "contentType": "text/plain",
+            "translationId": 17136,
+            "text": "Гласање",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:20:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 290,
+            "contentType": "text/plain",
+            "translationId": 17138,
+            "text": "Лутрија",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:21:09+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 292,
+            "contentType": "text/plain",
+            "translationId": 17140,
+            "text": "Откључајте новчаник",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:21:36+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 294,
+            "contentType": "text/plain",
+            "translationId": 17142,
+            "text": "Tvoja %sredstva% Balans",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:22:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 296,
+            "contentType": "text/plain",
+            "translationId": 17144,
+            "text": "Ваша% имовина% понуде",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:23:05+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 298,
+            "contentType": "text/plain",
+            "translationId": 17146,
+            "text": "Закључано",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:23:21+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 300,
+            "contentType": "text/plain",
+            "translationId": 17148,
+            "text": "До бербе",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:23:39+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 302,
+            "contentType": "text/plain",
+            "translationId": 17150,
+            "text": "Нове награде по блоку",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:24:10+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 304,
+            "contentType": "text/plain",
+            "translationId": 17152,
+            "text": "Укупно ЦАКЕ спаљено од лансирања",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:24:34+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 306,
+            "contentType": "text/plain",
+            "translationId": 17154,
+            "text": "Погледај кухињу",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:24:52+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 308,
+            "contentType": "text/plain",
+            "translationId": 10100,
+            "text": "Телеграм",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 310,
+            "contentType": "text/plain",
+            "translationId": 10152,
+            "text": "Блог",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 312,
+            "contentType": "text/plain",
+            "translationId": 10204,
+            "text": "Github",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 314,
+            "contentType": "text/plain",
+            "translationId": 10256,
+            "text": "Twitter",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 316,
+            "contentType": "text/plain",
+            "translationId": 10308,
+            "text": "Depozit",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:54+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 318,
+            "contentType": "text/plain",
+            "translationId": 17156,
+            "text": "Зарадите",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:25:29+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 320,
+            "contentType": "text/plain",
+            "translationId": 17158,
+            "text": "Уложите FLIP токене да бисте нагомилали CAKE",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:27:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 328,
+            "contentType": "text/plain",
+            "translationId": 10618,
+            "text": "možete zameniti nazad bilo kada",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:56+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 330,
+            "contentType": "text/plain",
+            "translationId": 17178,
+            "text": "Средства% Зарађено%",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:31:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 332,
+            "contentType": "text/plain",
+            "translationId": 17182,
+            "text": "Уложени жетони",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:32:10+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 334,
+            "contentType": "text/plain",
+            "translationId": 17186,
+            "text": "Сваки пут кад уложиш / извадиш ЦАКЕ токен уговор ауто-магично жање ЦАКЕ награде за тебе!",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:32:36+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 342,
+            "contentType": "text/plain",
+            "translationId": 17208,
+            "text": "XVS зарађени токени",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:39:20+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 346,
+            "contentType": "text/plain",
+            "translationId": 17214,
+            "text": "Награде ће бити израчунате по блоку и све награде ће бити дистрибуиране аутоматски на крају фарминг периода сваког пројекта.",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:40:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 348,
+            "contentType": "text/plain",
+            "translationId": 17216,
+            "text": "Базен",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:41:14+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 350,
+            "contentType": "text/plain",
+            "translationId": 17218,
+            "text": "Ускоро",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:41:34+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 352,
+            "contentType": "text/plain",
+            "translationId": 11240,
+            "text": "АПИ",
+            "user": {
+                "id": 14436190,
+                "username": "Chef_Chungus",
+                "fullName": "Chef_Chungus",
+                "avatarUrl": "https://www.gravatar.com/avatar/245d6aeed05309314c484069a58d9729?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-10T13:31:58+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 354,
+            "contentType": "text/plain",
+            "translationId": 17220,
+            "text": "Укупна ликвидност",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:42:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 356,
+            "contentType": "text/plain",
+            "translationId": 17222,
+            "text": "Поглед на BscScanu",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:43:13+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 358,
+            "contentType": "text/plain",
+            "translationId": 17224,
+            "text": "Cake цена",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:43:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 360,
+            "contentType": "text/plain",
+            "translationId": 17226,
+            "text": "% средства% зарађени жетони",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:44:12+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 362,
+            "contentType": "text/plain",
+            "translationId": 17228,
+            "text": "% број% блокова до завршетка фарминга / узгоја",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:44:59+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 382,
+            "contentType": "text/plain",
+            "translationId": 17092,
+            "text": "Долази ускоро...",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:11:11+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 384,
+            "contentType": "text/plain",
+            "translationId": 17094,
+            "text": "Ваш улог",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:11:33+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 386,
+            "contentType": "text/plain",
+            "translationId": 17110,
+            "text": "Farming/узгој почиње у %број% блокова",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:15:13+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 388,
+            "contentType": "text/plain",
+            "translationId": 17106,
+            "text": "Готов",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:14:51+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 390,
+            "contentType": "text/plain",
+            "translationId": 17116,
+            "text": "Farming/узгој се завршава у %број% блокова",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:15:30+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 392,
+            "contentType": "text/plain",
+            "translationId": 17120,
+            "text": "Место пројекта",
+            "user": {
+                "id": 14441862,
+                "username": "rolandthomas375",
+                "fullName": "rolandthomas375",
+                "avatarUrl": "https://www.gravatar.com/avatar/d217e20fc822e273330265701ffdfe9f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2020-10-11T17:15:53+00:00"
+        }
+    }
+]

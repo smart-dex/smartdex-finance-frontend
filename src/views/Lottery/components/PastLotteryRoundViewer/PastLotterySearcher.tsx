@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text, Input, Button } from 'uikit-sotatek'
+import { Text, Input, Button } from 'uikit-sotatek' 
 import useI18n from 'hooks/useI18n'
 import { darkColors, lightColors, baseColors } from '../../../../style/Color'
 
@@ -11,16 +11,28 @@ interface PastLotterySearcherProps {
 
 const Wrapper = styled.div`
   margin-bottom: 24px;
-  display: none;
   ${({ theme }) => theme.mediaQueries.nav} {
-    display: block;
     display: flex;
     justify-content: space-between;
+  }
+  form {
+    width: 100%;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      width: 70%;
+    }
   }
 `
 
 const SearchWrapper = styled.div`
   position: relative;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    input[type='number'] {
+      -moz-appearance: textfield;
+    }
+  }
 `
 const ButtonWrapper = styled.div`
   position: absolute;
@@ -35,6 +47,10 @@ const TextStyle = styled(Text)`
   font-size: 14px;
   font-weight: 500;
   padding-top: 8px;
+  margin-bottom: 6px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 0px;
+  }
 `
 
 const InputStyle = styled(Input)`
@@ -54,6 +70,7 @@ const ButtonStyle = styled(Button)`
     background-color: ${baseColors.primary} !important;
   }
 `
+
 const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotteryNumber, onSubmit }) => {
   const [lotteryNumber, setLotteryNumber] = useState(initialLotteryNumber)
   const [isError, setIsError] = useState(false)
@@ -72,7 +89,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
   return (
     <Wrapper>
       <TextStyle>{TranslateString(742, 'Select lottery number:')}</TextStyle>
-      <form onSubmit={handleSubmit} style={{ width: '70%'}}>
+      <form onSubmit={handleSubmit}>
         <SearchWrapper>
           <InputStyle
             value={lotteryNumber}

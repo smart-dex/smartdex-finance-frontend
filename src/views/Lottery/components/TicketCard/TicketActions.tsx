@@ -41,7 +41,8 @@ const ButtonDisableStyle = styled(Button)`
   padding: 18px;
   font-size: 13px;
   margin-right: 8px !important;
-  background: ${ ({ theme}) => theme.isDark ? darkColors.buttonView : lightColors.buttonView} !important;
+  background: ${ ({ theme}) => theme.isDark ? darkColors.buttonView : lightColors.buttonView};
+  border-color: transparent;
   ${({ theme }) => theme.mediaQueries.nav} {
     height: 56px;
     font-size: 16px;
@@ -76,7 +77,7 @@ const TicketCard: React.FC = () => {
     return (
       <>
         <ButtonDisableStyle
-          style={{ marginRight: '8px', width: '100%' }}
+          style={{ marginRight: '8px', width: '100%', backgroundColor: ticketsLength === 0 ? '#E8E8EB' : baseColors.primary, color: ticketsLength === 0 ? '' : '#fff' }}
           disabled={ticketsLength === 0}
           variant="secondary"
           onClick={onPresentMyTickets}

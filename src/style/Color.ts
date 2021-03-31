@@ -44,7 +44,7 @@ export const lightColors = {
   balanceColor: '#5F5E76',
   earnedCake: 'rgba(255,161,78)',
   earnedCakeDisable: 'rgba(255,161,78,0.5)',
-  detailPool: 'rgba(95, 94, 118, 0.7)',
+  detailPool: '#5F5E76',
   buttonTabPool: '#E9F4FC',
   textHeaderFarms: '#5F5E76',
   stakedOnly: 'rgba(95, 94, 118, 0.7)',
@@ -83,6 +83,9 @@ export const lightColors = {
   boxShadowLottery: 'rgba(120, 118, 148, 0.05)',
   borderButtonDetail: '#8F8FA0',
   shadowLight:'rgba(120, 118, 148, 0.1)',
+  colorCol:'rgba(95, 94, 118, 0.7)',
+  backgroundArrowMb: '#D8F7E4',
+
 }
 
 export const darkColors = {
@@ -116,7 +119,7 @@ export const darkColors = {
   earnedCakeDisable: 'rgba(255,161,78,0.5)',
   cardShadow: 'rgba(0, 0, 0, 0.14)',
   balanceColor: 'rgba(255, 255, 255, 0.87)',
-  detailPool: 'rgba(255, 255, 255, 0.6)',
+  detailPool: ' rgba(255, 255, 255, 0.87)',
   buttonTabPool: 'rgba(233, 244, 252, 0.1)',
   textHeaderFarms: 'rgba(255, 255, 255, 0.87);',
   stakedOnly: ' rgba(255, 255, 255, 0.7)',
@@ -155,4 +158,5 @@ export const darkColors = {
   boxShadowLottery: 'rgba(0, 0, 0, 0.05)',
   borderButtonDetail: '#8F8FA0',
   shadowDark:'rgba(0, 0, 0, 0.14)',
+  backgroundArrowMb: 'rgba(216, 247, 228, 0.1)',
 }

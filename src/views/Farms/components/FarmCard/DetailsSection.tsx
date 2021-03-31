@@ -1,91 +1,150 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
-import { Text, Flex, Link, LinkExternal } from 'uikit-sotatek'
-import { lightColors, darkColors } from 'style/Color'
+import { getBalanceNumber } from 'utils/formatBalance'
+import { useHarvest } from 'hooks/useHarvest'
+import { Text, Flex, Button, Link } from 'uikit-sotatek'
+import { lightColors, darkColors, baseColors } from 'style/Color'
+import BigNumber from 'bignumber.js'
 
-export interface ExpandableSectionProps {
+interface ExpandableSectionProps {
   bscScanAddress?: string
   removed?: boolean
   totalValueFormated?: string
   lpLabel?: string
   addLiquidityUrl?: string
+  earnings?: BigNumber
+  pid: number
 }
 
-const Wrapper = styled.div`
-  margin-top: 24px;
-  margin-bottom: 24px;
-  float: none;
-  width: 100%;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    float: right;
-    width: 25%;
-  }
-`
 
-const StyledLinkExternal = styled(LinkExternal)`
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
+// const StyledLinkExternal = styled(LinkExternal)`
+//     font-size: 13px;
+//     ${({ theme }) => theme.mediaQueries.nav} {
+//       font-size: 16px;
+//     }
+//     color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
+//     width: fit-content;
+//     background:none;
+//     svg {
+//     padding-left: 4px;
+//     width: auto;
+//     fill: ${({ theme }) => theme.colors.primary};
+//   }
+// `
+
+const StyledText = styled(Text)`
+  align-self: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
-  display: flex;
-  align-items: center;
-  svg {
-    padding-left: 4px;
-    height: 18px;
-    width: auto;
-    fill: ${({ theme }) => theme.colors.primary};
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 30px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
   }
 `
-const StyledDetailSection = styled.div`
-  border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.dividerCard : lightColors.dividerCard)};
-  padding: 0 30px 24px 30px;
-`
-const StyledText = styled(Text)`
+const StyledTextInfo = styled(Text)`
+  font-weight: 500;
+  line-height: 25px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
+  font-size: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
+`
+// const StyledLink = styled(Link)`
+//   font-size: 13px;
+//   text-decoration: revert;
+//   color: #0085FF;
+//   font-weight: 600;
+//   line-height: 30px;
+//   ${({ theme }) => theme.mediaQueries.nav} {
+//     font-size: 16px;
+//   }
+// `
+const ButtonClaim = styled(Button)`
+  background: #17C267;
+  box-shadow: 0px 4px 10px rgba(23, 194, 103, 0.24);
+  border-radius: 5px;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
 `
 const StyledLink = styled(Link)`
-  font-size: 16px;
-  text-decoration: revert;
-  color: rgb(31, 199, 212);
+  margin-top: 16px;
+  color: ${baseColors.primary};
+  display: inline;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
 `
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
-  bscScanAddress,
-  removed,
   totalValueFormated,
   lpLabel,
-  addLiquidityUrl,
+  earnings,
+  pid,
+  bscScanAddress
 }) => {
+  const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
-
+  const rawEarningsBalance = getBalanceNumber(earnings)
+  const { onReward } = useHarvest(pid)
   return (
-    <StyledDetailSection>
-      <Wrapper>
-        <Flex justifyContent="space-between">
-          <StyledText>{TranslateString(316, 'Stake')}:</StyledText>
-          <StyledLinkExternal href={addLiquidityUrl}>{lpLabel}</StyledLinkExternal>
+    <>
+      <Flex flexDirection="column">
+        <StyledText style={{ alignSelf: 'start' }}>{TranslateString(999, 'Your Liquidity deposits')}:</StyledText>
+        <Flex>
+          <StyledText style={{ flex: '1' }}>{totalValueFormated}</StyledText>
+          <StyledTextInfo>{lpLabel}</StyledTextInfo>
         </Flex>
-        {!removed && (
-          <Flex justifyContent="space-between">
-            <StyledText>{TranslateString(23, 'Total Liquidity')}:</StyledText>
-            <StyledText>{totalValueFormated}</StyledText>
-          </Flex>
-        )}
-        <Flex justifyContent="flex-start">
-          <StyledLink external href={bscScanAddress} bold={false}>
-            {TranslateString(356, 'View on BscScan')}
-          </StyledLink>
+      </Flex>
+      <Flex>
+        <Flex flexDirection="column" style={{ flex: '1' }}>
+          <StyledText style={{ alignSelf: 'start' }} marginBottom='16px'>{TranslateString(999, 'Your unclaimed SDC')}:</StyledText>
+          <StyledText style={{ alignSelf: 'start' }}>{totalValueFormated}</StyledText>
         </Flex>
-      </Wrapper>
-    </StyledDetailSection>
+        <Flex flexDirection="column">
+          <ButtonClaim
+            disabled={rawEarningsBalance === 0 || pendingTx}
+            isDisable={rawEarningsBalance === 0 || pendingTx}
+            onClick={async () => {
+              setPendingTx(true)
+              await onReward()
+              setPendingTx(false)
+            }}
+          >{TranslateString(999, 'Claim')}</ButtonClaim>
+          <StyledTextInfo>1,111 SDC/WEEK</StyledTextInfo>
+        </Flex>
+      </Flex>
+
+      <Flex>
+        <StyledTextInfo>{TranslateString(999, 'Your total pool token')}: 345,0000</StyledTextInfo>
+      </Flex>
+      <Flex>
+        <StyledTextInfo>{TranslateString(999, 'Pool token in rewards')}: 345,0000</StyledTextInfo>
+      </Flex>
+      <Flex>
+        <StyledTextInfo>{TranslateString(999, 'Pooled SDC')}: 12,50000</StyledTextInfo>
+      </Flex>
+      <Flex>
+        <StyledTextInfo>{TranslateString(999, 'Pooled DDD')}: 90,0000</StyledTextInfo>
+      </Flex>
+      <Flex>
+        <StyledTextInfo>{TranslateString(999, 'Your pool share')}: 15,432%</StyledTextInfo>
+      </Flex>
+      <Flex>
+        <StyledTextInfo>{TranslateString(999, 'Total USD')}: {totalValueFormated}</StyledTextInfo>
+      </Flex>
+      <Flex justifyContent="flex-start">
+        <StyledLink external href={bscScanAddress} bold={false}>
+          {TranslateString(356, 'View on BscScan')}
+        </StyledLink>
+      </Flex>
+    </>
   )
 }
 

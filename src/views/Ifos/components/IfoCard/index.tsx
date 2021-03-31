@@ -33,7 +33,7 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   border-radius: 40px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   box-shadow: 10px 10px 20px rgba(120, 118, 148, 0.1);
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
     width: 85%;
   }
@@ -321,7 +321,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
         </WrapButtonRow>
       </CardBody>
-    </StyledIfoCard>
+    </StyledIfoCard> 
   )
 }
 

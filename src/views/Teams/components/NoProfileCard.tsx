@@ -23,7 +23,10 @@ const NoProfileCard = () => {
             </TextDescription>
           </TextHeader>
           <StyledButton as={Link} to="/profile">
-            {TranslateString(1050, 'Set up now')}
+            {TranslateString(1050, 'Set Up Now')}&nbsp;&nbsp;
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.891 0.109956L0.897922 6.10683C-0.601141 6.80652 -0.101453 9.00527 1.49761 9.00527H6.9948V14.5025C6.9948 16.1015 9.19355 16.6015 9.89323 15.1021L15.8901 2.10902C16.3898 0.909331 15.0904 -0.390044 13.891 0.109956Z"/>
+            </svg>
           </StyledButton>
         </Flex>
       </CardBody>
@@ -32,8 +35,7 @@ const NoProfileCard = () => {
 }
 const PageHeader = styled(Card)`
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
-  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderNoProfileCard : lightColors.borderNoProfileCard)};
-  box-shadow: 25px 14px 50px ${lightColors.boxShadowNoProfileCard};
+  box-shadow: 25px 14px 50px ${({ theme }) => (theme.isDark ? darkColors.shadowCardCollectibles : lightColors.shadowCardCollectibles)};
   border-radius: 20px;
 `
 const TextHeader = styled.div`
@@ -80,12 +82,28 @@ const StyledButton = styled(Button)`
   justify-content: center;
   color: ${lightColors.background};
   margin-top: 16px;
+  svg {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 0px;
+    path {
+      fill: ${lightColors.background};
+    }
+  }
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-top: 0px;
     width: 150px;
     height: 56px;
     font-size: 16px;
     margin-top: 0px;
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-bottom: 4px;
+      path {
+        fill: ${lightColors.background};
+      }
+    }
   }
 `
 

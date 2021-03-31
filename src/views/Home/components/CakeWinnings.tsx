@@ -18,8 +18,14 @@ const CardValueStyle = styled(CardValue)`
 const Block = styled.div`
   display: flex;
   justify-content: space-between;
+  div:nth-child(1) {
+    margin-right: 10px;
+  }
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: column;
+    div:nth-child(1) {
+      margin-right: 0px;
+    }
   }
 `
 const CakeWinnings = () => {

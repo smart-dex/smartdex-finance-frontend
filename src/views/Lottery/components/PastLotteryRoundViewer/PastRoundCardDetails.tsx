@@ -59,6 +59,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
     match3Ticket,
     poolSize,
   } = data
+
   return (
     !data.error &&
     data && (
@@ -77,7 +78,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
                 {TranslateString(999, 'Winning numbers')}
               </TopLotteryCardHeading>
               <LotteryCardHeading
-                valueToDisplay={TranslateString(999, `${poolSize.toLocaleString()} CAKE`)}
+                valueToDisplay={TranslateString(999, `${poolSize.toLocaleString()} SDC`)}
                 Icon={PancakeRoundIcon}
               >
                 {TranslateString(999, 'Total prizes')}
