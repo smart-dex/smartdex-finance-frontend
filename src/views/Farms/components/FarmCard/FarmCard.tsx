@@ -103,7 +103,8 @@ interface FarmCardProps {
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethPrice, ethereum, account }) => {
   const TranslateString = useI18n()
-
+  const isTest = process.env.REACT_APP_CHAIN_ID ==='97'
+  const linkScan= isTest ? `https://testnet.bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
   const { earnings } = useFarmUser(pid)
@@ -229,7 +230,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           <ExpandingWrapper expanded={showExpandableSection}>
             <DetailsSection
               removed={removed}
-              bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
+              bscScanAddress={linkScan}
               totalValueFormated={totalValueFormated}
               lpLabel={lpLabel}
               addLiquidityUrl={addLiquidityUrl}
