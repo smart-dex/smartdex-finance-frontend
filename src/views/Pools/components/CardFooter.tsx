@@ -53,7 +53,6 @@ const Detail = styled(Flex)`
 `
 
 const CardFooter: React.FC<Props> = ({
-  projectLink,
   totalStaked,
   blocksRemaining,
   isFinished,
@@ -82,7 +81,7 @@ const CardFooter: React.FC<Props> = ({
             </Detail>
           )}
           <Flex justifyContent="space-between" alignItems='center'>
-            <TokenLink href={projectLink} target="_blank">
+            <TokenLink href='/' target="_blank">
               {TranslateString(412, 'View project site')}
             </TokenLink>
           </Flex>
