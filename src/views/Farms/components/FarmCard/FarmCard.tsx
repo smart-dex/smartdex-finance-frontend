@@ -103,7 +103,8 @@ interface FarmCardProps {
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethPrice, ethereum, account }) => {
   const TranslateString = useI18n()
-
+  const isTest = process.env.REACT_APP_CHAIN_ID ==='97'
+  const linkScan= isTest ? `https://testnet.bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
   const { earnings } = useFarmUser(pid)
@@ -135,6 +136,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'SDC'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
+  console.log(removed);
   
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
@@ -218,6 +220,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           farm={farm}
           ethereum={ethereum}
           account={account}
+          removed={removed}
           addLiquidityUrl={addLiquidityUrl}
           changeOpenDetail={handelOpenDetail}
           isOpenDetail={showExpandableSection}
@@ -227,7 +230,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           <ExpandingWrapper expanded={showExpandableSection}>
             <DetailsSection
               removed={removed}
-              bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
+              bscScanAddress={linkScan}
               totalValueFormated={totalValueFormated}
               lpLabel={lpLabel}
               addLiquidityUrl={addLiquidityUrl}

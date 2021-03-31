@@ -82,7 +82,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel
           onBack()
         }}
       >
-        {TranslateString(562, 'Harvest')}
+        {TranslateString(999, 'Claim')}
       </StyledButton>
     </StyledHarvestAction>
   )
