@@ -64,14 +64,20 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
             {pendingTx ? TranslateString(488, 'Pending Confirmation') : TranslateString(464, 'Confirm')}
           </ButtonConfirm>
         </ModalActions>
-        <StyledLinkExternal href={addLiquidityUrl} style={{ alignSelf: 'center' }}>
-          {TranslateString(999, 'Get')} {tokenName}
-        </StyledLinkExternal>
+        <Stylelink>
+          <StyledLinkExternal href={addLiquidityUrl} style={{ alignSelf: 'center' }}>
+            {TranslateString(999, 'Get')} {tokenName}
+          </StyledLinkExternal>
+        </Stylelink>
       </StyledModal>
 
     </ModalStyle>
   )
 }
+const Stylelink = styled.div`
+  text-align: -webkit-center;
+`
+
 const ButtonConfirm = styled(Button)`
   background: ${baseColors.primary};
   box-shadow: 0px 4px 10px  ${({ theme }) => (theme.isDark ? '  0px 4px 10px rgba(0, 133, 255, 0.24)' : 'rgba(83, 185, 234, 0.24)')};
