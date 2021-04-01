@@ -90,7 +90,7 @@ const BlockLotteryJackpot = styled.div`
 const Label = styled.div`
   color: ${baseColors.success};
   font-weight: 600;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
     color: ${baseColors.primary};
