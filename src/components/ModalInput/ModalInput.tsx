@@ -64,8 +64,11 @@ const ButtonMax = styled(Button)`
   box-shadow:none;
   font-size: 14px;
   line-height: 17px;
-
   color: #FFFFFF;
+  &:hover:not(:disabled):not(.button--disabled):not(:active) {
+    background: #0085FF;
+    opacity: 0.7;
+  }
 `
 const StyledMaxText = styled.div`
   color:  ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
