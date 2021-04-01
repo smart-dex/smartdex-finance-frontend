@@ -58,6 +58,7 @@ const InputStyle = styled(Input)`
   background-color: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.invertedContrast)};
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 50px;
+  box-shadow: none;
   &:focus:not(:disabled) {
     box-shadow: none !important;
   }
@@ -95,7 +96,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
       <form onSubmit={handleSubmit}>
         <SearchWrapper>
           <InputStyle
-            value={lotteryNumber}
+            value={lotteryNumber < 0 ? 1 : lotteryNumber}
             type="number"
             isWarning={isError}
             max={initialLotteryNumber}
