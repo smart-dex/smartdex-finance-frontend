@@ -219,10 +219,10 @@ return (
             </List>
           </StyleList>
           <WrapGridButton>
-            <LinkPrimary href="https://exchange.pancakeswap.finance/#/swap" mr="16px">
+            <LinkPrimary href="http://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
-            <LinkSecondary href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
+            <LinkSecondary href="http://smartdex-exchange.sotatek.works/swap#/pool">
               {TranslateString(1062, 'Get LP tokens')}
               <ChevronDown />
             </LinkSecondary>
