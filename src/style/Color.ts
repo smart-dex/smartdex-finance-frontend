@@ -51,6 +51,7 @@ export const lightColors = {
   backIfo: '#FFFFFF',
   colorWap: 'rgba(95, 94, 118, 0.7)',
   buttonView: '#E8E8EB',
+  buttonViewSite: 'rgba(95, 94, 118, 0.1)',
   bgCardCollectibles: '#FFFFFF',
   shadowCardCollectibles: 'rgba(120, 118, 148, 0.14)',
   colorInfoBlock: 'rgba(95, 94, 118, 0.7)',

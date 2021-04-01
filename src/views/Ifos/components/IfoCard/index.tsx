@@ -102,7 +102,7 @@ const LinkExternalStyle = styled(LinkExternal)`
     font-size: 13px;
   }
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
-  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonViewSite)};
   & svg {
     fill: ${lightColors.fillSvg};
     position: relative;

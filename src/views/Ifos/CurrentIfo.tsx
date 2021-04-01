@@ -244,7 +244,7 @@ return (
           </StyleList>
           <Text as="div">
             <LinkButtonBorder href="https://docs.pancakeswap.finance/core-products/ifo-initial-farm-offering">
-              {TranslateString(610, 'See more')}
+              {TranslateString(610, 'See More')}
             </LinkButtonBorder>
           </Text>
         </WrapCard>
