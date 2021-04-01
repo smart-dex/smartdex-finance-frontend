@@ -9,9 +9,9 @@ endif
 OS:=$(shell uname)
 
 build-image:
-	docker build -t pancake-frontend .
-	docker tag pancake-frontend registry-server:5000/pancake-frontend:latest
-	docker push registry-server:5000/pancake-frontend:latest
+	docker build -t SmartDEX-frontend .
+	docker tag SmartDEX-frontend registry-server:5000/smartdex-frontend:latest
+	docker push registry-server:5000/smartdex-frontend:latest
 
 build-staging:
 	npm run build:staging
