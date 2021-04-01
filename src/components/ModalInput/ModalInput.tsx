@@ -69,6 +69,7 @@ const ButtonMax = styled(Button)`
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
+  height: 38px;
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background: #0085FF;
     opacity: 0.7;
