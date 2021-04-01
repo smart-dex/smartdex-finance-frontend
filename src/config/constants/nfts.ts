@@ -31,7 +31,7 @@ const Nfts: Nft[] = [
   },
   {
     name: 'Sleepy',
-    description: 'Aww, looks like eating pancakes all day is tough work. Sweet dreams!',
+    description: 'Aww, looks like eating SmartDEX all day is tough work. Sweet dreams!',
     images: {
       lg: 'sleepy-lg.png',
       md: 'sleepy-md.png',
@@ -44,7 +44,7 @@ const Nfts: Nft[] = [
   },
   {
     name: 'Sunny',
-    description: 'Sunny is always cheerful when there are pancakes around. Smile!',
+    description: 'Sunny is always cheerful when there are SmartDEX around. Smile!',
     images: {
       lg: 'sunny-lg.png',
       md: 'sunny-md.png',
@@ -57,7 +57,7 @@ const Nfts: Nft[] = [
   },
   {
     name: 'Churro',
-    description: "Don't let that dopey smile deceive you... Churro's a master CAKE chef!",
+    description: "Don't let that dopey smile deceive you... Churro's a master SDC chef!",
     images: {
       lg: 'churro-lg.png',
       md: 'churro-md.png',
@@ -70,7 +70,7 @@ const Nfts: Nft[] = [
   },
   {
     name: 'Dollop',
-    description: "Nommm... Oh hi, I'm just meditating on the meaning of CAKE.",
+    description: "Nommm... Oh hi, I'm just meditating on the meaning of SDC.",
     images: {
       lg: 'dollop-lg.png',
       md: 'dollop-md.png',
@@ -83,7 +83,7 @@ const Nfts: Nft[] = [
   },
   {
     name: 'Twinkle',
-    description: "Three guesses what's put that twinkle in those eyes! (Hint: it's CAKE)",
+    description: "Three guesses what's put that twinkle in those eyes! (Hint: it's SDC)",
     images: {
       lg: 'twinkle-lg.png',
       md: 'twinkle-md.png',
@@ -96,7 +96,7 @@ const Nfts: Nft[] = [
   },
   {
     name: 'Swapsies',
-    description: 'These bunnies love nothing more than swapping pancakes. Especially on BSC.',
+    description: 'These bunnies love nothing more than swapping SmartDEX. Especially on BSC.',
     images: {
       lg: 'swapsies-lg.png',
       md: 'swapsies-md.png',
