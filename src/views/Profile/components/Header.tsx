@@ -39,9 +39,13 @@ const ProfileHeader = () => {
 }
 
 const Line = styled.div`
-  margin-top: 20px;
+  margin-top: 5px;
   border: 1px dashed ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-  margin-bottom: 29px;
+  margin-bottom: 30px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
 `
 const StyledHeader = styled(Flex)`
   flex-direction: column;
@@ -56,7 +60,7 @@ const TextHeading = styled(Heading)`
   font-size: 18px;
   line-height: 29px;
   text-align: center;
-  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   margin-bottom: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 24px;
