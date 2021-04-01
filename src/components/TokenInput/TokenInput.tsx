@@ -72,7 +72,7 @@ const ButtonMax = styled(Button)`
   border-radius: 20px;
   border:none;
   box-shadow:none;
-  
+  height: 38px;
 `
 
 export default TokenInput
