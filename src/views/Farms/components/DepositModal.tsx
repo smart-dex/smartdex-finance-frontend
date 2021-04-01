@@ -111,7 +111,7 @@ const StyledLinkExternal = styled(LinkExternal)`
     svg {
     padding-left: 4px;
     width: auto;
-    fill: ${({ theme }) => theme.colors.primary};
+    fill: ${baseColors.primary};
   }
 `
 export default DepositModal
