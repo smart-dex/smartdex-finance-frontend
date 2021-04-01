@@ -48,6 +48,9 @@ const StyledInput = styled(Input)`
   ${({ theme }) => theme.mediaQueries.sm} {
     width: auto;
   }
+  &:focus {
+    box-shadow: none !important;
+  }
 `
 
 const StyledErrorMessage = styled(Text)`
