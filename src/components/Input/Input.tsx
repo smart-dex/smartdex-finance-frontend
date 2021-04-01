@@ -42,6 +42,10 @@ const StyledInput = styled.input`
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  ::placeholder {
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
+  }
+  
 `
 
 export default Input
