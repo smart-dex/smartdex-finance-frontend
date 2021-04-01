@@ -90,6 +90,12 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
     setIsError(value > initialLotteryNumber)
     setLotteryNumber(value)
   }
+  const eventKeyPress = (event) => {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault();
+    }
+  }
   return (
     <Wrapper>
       <TextStyle>{TranslateString(742, 'Select lottery number:')}</TextStyle>
@@ -101,6 +107,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
             isWarning={isError}
             max={initialLotteryNumber}
             onChange={handleChange}
+            onKeyPress={eventKeyPress}
           />
           <ButtonWrapper>
             <ButtonStyle type="submit" size="sm" disabled={isError}>
