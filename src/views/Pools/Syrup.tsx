@@ -44,10 +44,11 @@ const Farm: React.FC = () => {
 
   const poolsWithApy = pools.map((pool) => {
     const isBnbPool = pool.poolCategory === PoolCategory.BINANCE
+    // TO-DO: SDC-BNB must hame farmID = 1 !!!
     const rewardTokenFarm = farms.find((f) => f.tokenSymbol === pool.tokenName)
     const stakingTokenFarm = farms.find((s) => s.tokenSymbol === pool.stakingTokenName)
 
-    // tmp mulitplier to support ETH farms
+    // temp multiplier to support ETH farms
     // Will be removed after the price api
     const tempMultiplier = stakingTokenFarm?.quoteTokenSymbol === 'ETH' ? ethPriceBnb : 1
 

@@ -4,14 +4,14 @@ import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
-import ClaimNftAndCakeModal, { useCanClaim } from './ClaimGiftModal'
+import ClaimNftAndSdcModal, { useCanClaim } from './ClaimGiftModal'
 import HeaderWrapper from './HeaderWrapper'
 import EditProfileModal from './EditProfileModal'
 
 const ProfileHeader = () => {
   const TranslateString = useI18n()
   const { canClaim, checkClaimStatus } = useCanClaim()
-  const [onPresentClaimGiftModal] = useModal(<ClaimNftAndCakeModal onSuccess={checkClaimStatus} />)
+  const [onPresentClaimGiftModal] = useModal(<ClaimNftAndSdcModal onSuccess={checkClaimStatus} />)
   const [onEditProfileModal] = useModal(<EditProfileModal />, false)
   const { hasProfile } = useProfile()
 

@@ -7,14 +7,14 @@ import ApyCalculatorModal from './ApyCalculatorModal'
 
 export interface ApyButtonProps {
   lpLabel?: string
-  cakePrice?: BigNumber
+  sdcPrice?: BigNumber
   apy?: BigNumber
   addLiquidityUrl?: string
 }
 
-const ApyButton: React.FC<ApyButtonProps> = ({ lpLabel, cakePrice, apy, addLiquidityUrl }) => {
+const ApyButton: React.FC<ApyButtonProps> = ({ lpLabel, sdcPrice, apy, addLiquidityUrl }) => {
   const [onPresentApyModal] = useModal(
-    <ApyCalculatorModal lpLabel={lpLabel} cakePrice={cakePrice} apy={apy} addLiquidityUrl={addLiquidityUrl} />,
+    <ApyCalculatorModal lpLabel={lpLabel} sdcPrice={sdcPrice} apy={apy} addLiquidityUrl={addLiquidityUrl} />,
   )
 
   return (
@@ -22,13 +22,13 @@ const ApyButton: React.FC<ApyButtonProps> = ({ lpLabel, cakePrice, apy, addLiqui
       <StyledIcon>
       <CalculateIcon />
       </StyledIcon>
-  
+
     </IconButton>
   )
 }
 const StyledIcon = styled.div`
 >svg>path{
- 
+
     fill: ${({ theme }) => (theme.isDark && '#FFFFFF')};
 
 }

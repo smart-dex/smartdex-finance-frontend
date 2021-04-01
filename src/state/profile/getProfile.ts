@@ -1,6 +1,6 @@
-import { getPancakeProfileAddress, getPancakeRabbitsAddress } from 'utils/addressHelpers'
-import pancakeProfileAbi from 'config/abi/pancakeProfile.json'
-import pancakeRabbitsAbi from 'config/abi/pancakeRabbits.json'
+import { getSmartDEXChainProfileAddress, getSmartDEXChainRabbitsAddress } from 'utils/addressHelpers'
+import smartDEXChainProfileAbi from 'config/abi/smartDEXChainProfile.json'
+import smartDEXChainRabbitsAbi from 'config/abi/smartDEXChainRabbits.json'
 import { Nft } from 'config/constants/types'
 import { getContract } from 'utils/web3'
 import { Profile } from 'state/types'
@@ -8,8 +8,8 @@ import { getTeam } from 'state/teams/helpers'
 import nfts from 'config/constants/nfts'
 import { transformProfileResponse } from './helpers'
 
-const profileContract = getContract(pancakeProfileAbi, getPancakeProfileAddress())
-const rabbitContract = getContract(pancakeRabbitsAbi, getPancakeRabbitsAddress())
+const profileContract = getContract(smartDEXChainProfileAbi, getSmartDEXChainProfileAddress())
+const rabbitContract = getContract(smartDEXChainRabbitsAbi, getSmartDEXChainRabbitsAddress())
 const profileApi = process.env.REACT_APP_API_PROFILE
 
 export interface GetProfileResponse {

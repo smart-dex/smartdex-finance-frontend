@@ -23,7 +23,7 @@ const ButtonAction = styled(Flex)`
   flex-direction: column;
   margin-bottom:20px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    
+
   }
 `
 const StyledGroupButton = styled(Flex)`
@@ -163,6 +163,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses } = useFarmFromSymbol(farm.lpSymbol)
   const { allowance, tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
+  console.log("pid", pid, tokenBalance.toString())
   const lpAddress = getAddress(lpAddresses)
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
