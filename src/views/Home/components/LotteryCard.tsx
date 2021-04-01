@@ -110,6 +110,7 @@ const ButtonStyle = styled(Button)`
   font-size: 13px;
   position: relative;
   padding-right: 24px;
+  border: none;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     height: 56px;
