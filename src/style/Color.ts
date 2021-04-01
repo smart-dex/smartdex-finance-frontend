@@ -50,6 +50,7 @@ export const lightColors = {
   stakedOnly: 'rgba(95, 94, 118, 0.7)',
   backIfo: '#FFFFFF',
   colorWap: 'rgba(95, 94, 118, 0.7)',
+  colorViewSite:'#8F8FA0',
   buttonView: '#E8E8EB',
   buttonViewSite: 'rgba(95, 94, 118, 0.1)',
   bgCardCollectibles: '#FFFFFF',

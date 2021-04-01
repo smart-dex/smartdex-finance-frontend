@@ -223,7 +223,7 @@ return (
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
             <LinkSecondary href="http://smartdex-exchange.sotatek.works/swap#/pool">
-              {TranslateString(1062, 'Get LP tokens')}
+              {TranslateString(1062, 'Get LP Tokens')}
               <ChevronDown />
             </LinkSecondary>
           </WrapGridButton>
