@@ -61,9 +61,11 @@ const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-weight: 500;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
+  padding-left: 8px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
+    padding-left: 18px;
    }
 `
 
@@ -148,7 +150,7 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {/* Burn row */}
       <GridItem marginBottom="0">
-        <TextStyle style={{textAlign: 'left' , paddingLeft: '8px'}}>{TranslateString(999, `${pastDraw ? 'Burned' : 'To burn'}`)}</TextStyle>
+        <TextStyle >{TranslateString(999, `${pastDraw ? 'Burned' : 'To burn'}`)}</TextStyle>
       </GridItem>
       {pastDraw ? (
         <>
