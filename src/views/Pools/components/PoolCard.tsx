@@ -336,8 +336,8 @@ const ButtonDetail = styled(Button) <{ isShow: boolean }>`
     props.isShow ?
       (
         css`
-      border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderButtonDetail : lightColors.borderButtonDetail)};
-      color: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#5F5E76')};
+        border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderButtonDetail : lightColors.borderButtonDetail)};
+        color: ${({ theme }) => (theme.isDark ?  darkColors.textLogoMenuLeft :  lightColors.textLogoMenuLeft)};
       `
       ) :
       (
@@ -351,7 +351,7 @@ const ButtonDetail = styled(Button) <{ isShow: boolean }>`
   width: calc(50% - 9px);
   box-shadow:none;
   border-radius: 10px;
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
