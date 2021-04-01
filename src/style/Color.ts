@@ -87,7 +87,7 @@ export const lightColors = {
   shadowLight:'rgba(120, 118, 148, 0.1)',
   colorCol:'rgba(95, 94, 118, 0.7)',
   backgroundArrowMb: '#D8F7E4',
-
+  backgroundInput: '#E9F4FC',
 }
 
 export const darkColors = {
@@ -161,4 +161,5 @@ export const darkColors = {
   borderButtonDetail: '#8F8FA0',
   shadowDark:'rgba(0, 0, 0, 0.14)',
   backgroundArrowMb: 'rgba(216, 247, 228, 0.1)',
+  backgroundInput: '#151C31',
 }

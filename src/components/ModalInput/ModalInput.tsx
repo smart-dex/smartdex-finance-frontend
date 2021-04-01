@@ -27,7 +27,7 @@ const getBoxShadow = ({ isWarning = false, theme }) => {
 const StyledTokenInput = styled.div<InputProps>`
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.input};
+  background-color: ${({ theme }) => theme.isDark ? darkColors.backgroundInput : lightColors.backgroundInput};
   border-radius: 20px;
   box-shadow: ${getBoxShadow};
   color: ${({ theme }) => theme.colors.text};
@@ -36,10 +36,11 @@ const StyledTokenInput = styled.div<InputProps>`
 `
 
 const StyledInput = styled(Input)`
+  background-color: ${({ theme }) => theme.isDark ? darkColors.backgroundInput : lightColors.backgroundInput};
   box-shadow: none;
   width: 60px;
   margin: 0 8px;
-  padding: 0 8px;
+  padding: 0;
 
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 80px;
