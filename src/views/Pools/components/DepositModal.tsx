@@ -51,7 +51,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
             {TranslateString(462, 'Cancel')}
           </ButtonCancel>
           <ButtonConfirm
-            disabled={pendingTx || fullBalance === '0' || val === '0' || val===''}
+            disabled={pendingTx || fullBalance === '0' || Number(val) < 0 || val > fullBalance || Number.isNaN(Number(val))}
             onClick={async () => {
               setPendingTx(true)
               await onConfirm(val)
