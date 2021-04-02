@@ -110,7 +110,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
             onKeyPress={eventKeyPress}
           />
           <ButtonWrapper>
-            <ButtonStyle type="submit" size="sm" disabled={isError}>
+            <ButtonStyle type="submit" size="sm">
               <img src="/images/search.png" alt="" style={{ width: '20px' }} />
             </ButtonStyle>
           </ButtonWrapper>
