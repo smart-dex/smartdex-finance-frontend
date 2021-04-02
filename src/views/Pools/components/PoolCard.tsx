@@ -36,12 +36,13 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     sousId,
     image,
     tokenName,
+    tokenAddress,
+    tokenDecimals,
     stakingTokenName,
     stakingTokenAddress,
     projectLink,
     harvest,
     apy,
-    tokenDecimals,
     poolCategory,
     totalStaked,
     startBlock,
@@ -237,6 +238,9 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             isFinished={isFinished}
             blocksUntilStart={blocksUntilStart}
             isOpenDetail={isOpenDetail}
+            tokenName={tokenName}
+            tokenAddress={tokenAddress}
+            tokenDecimals={tokenDecimals}
           />
         )}
       </CardContent>
