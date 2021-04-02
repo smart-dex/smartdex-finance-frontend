@@ -22,12 +22,15 @@ const ButtonWrapper = styled.div`
 `
 const Textlbl = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textIfolight)} !important;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   margin-bottom: 7px;
 `
 const TextInput = styled(Text)`
-  color: 
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textIfolight)} !important;
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 
 `
 const LabelButton: React.FC<Props> = ({ value, label, buttonLabel, onClick, disabled = false }) => {
