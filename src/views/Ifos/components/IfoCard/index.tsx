@@ -102,13 +102,14 @@ const LinkExternalStyle = styled(LinkExternal)`
     font-size: 13px;
   }
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorViewSite)};
-  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonViewSite)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
   & svg {
     fill: ${lightColors.fillSvg};
     position: relative;
     margin-left: 7px;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
+    background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonViewSite)};
   }
 `
 const UnlockButtonStyle = styled(UnlockButton)`

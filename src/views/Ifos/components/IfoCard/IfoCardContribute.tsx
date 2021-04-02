@@ -9,9 +9,10 @@ import { useIfoApprove } from 'hooks/useApprove'
 import { IfoStatus } from 'config/constants/types'
 import { getBalanceNumber } from 'utils/formatBalance'
 import styled from 'styled-components'
-import { baseColors} from 'style/Color'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import LabelButton from './LabelButton'
 import ContributeModal from './ContributeModal'
+
 
 
 
@@ -53,6 +54,14 @@ const ButtonApp = styled(Button)`
   background: ${baseColors.primary};
   padding: 0px 20px;
   margin-top: 15px;
+`
+const TextNote = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  margin-top: 10px;
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
 `
 
 const IfoCardContribute: React.FC<Props> = ({
@@ -141,11 +150,11 @@ const IfoCardContribute: React.FC<Props> = ({
           onClick={isFinished ? claim : onPresentContributeModal}
         />
     
-        <Text fontSize="14px" color="rgb(95, 94, 118)">
+        <TextNote>
           {isFinished
             ? `You'll be refunded any excess tokens when you claim`
             : `${percentOfUserContribution.toFixed(5)}% of total`}
-        </Text>
+        </TextNote>
       </CardLabel>
   )
 }
