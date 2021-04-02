@@ -59,6 +59,7 @@ const InputStyle = styled(Input)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 50px;
   box-shadow: none;
+  padding: 0 42px 0 16px;
   &:focus:not(:disabled) {
     box-shadow: none !important;
   }
@@ -105,12 +106,11 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
             value={lotteryNumber < 0 ? 1 : lotteryNumber}
             type="number"
             isWarning={isError}
-            max={initialLotteryNumber}
             onChange={handleChange}
             onKeyPress={eventKeyPress}
           />
           <ButtonWrapper>
-            <ButtonStyle type="submit" size="sm" disabled={isError}>
+            <ButtonStyle type="submit" size="sm">
               <img src="/images/search.png" alt="" style={{ width: '20px' }} />
             </ButtonStyle>
           </ButtonWrapper>
