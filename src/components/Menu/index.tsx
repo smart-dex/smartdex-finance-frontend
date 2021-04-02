@@ -24,7 +24,7 @@ const Menu = (props) => {
       currentLang={selectedLanguage && selectedLanguage.code}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      sdcPriceUsd={sdcPriceUsd.toNumber()}
+      cakePriceUsd={sdcPriceUsd.toNumber()}
       links={config}
       profile={{
         username: profile?.username,
