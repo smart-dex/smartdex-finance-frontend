@@ -8,17 +8,15 @@ import CardTitle from './CardTitle'
 import CardContent from './CardContent'
 
 const Balance = styled.div`
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 40px;
-  font-weight: 600;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 29px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 24px;
+  }
 `
 
-const Label = styled.div`
-  color: ${({ theme }) => theme.colors.textSubtle};
-  font-size: 14px;
-  margin-top: 10px;
-  margin-bottom: 16px;
-`
 
 const DetailPlaceholder = styled.div`
 margin-top: 10px;

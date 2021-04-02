@@ -6,6 +6,7 @@ import { useHarvest } from 'hooks/useHarvest'
 import { Text, Flex, Button, Link } from 'uikit-sotatek'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import BigNumber from 'bignumber.js'
+import { useFarmUser } from 'state/hooks'
 
 interface ExpandableSectionProps {
   bscScanAddress?: string
@@ -83,19 +84,21 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const TranslateString = useI18n()
   const rawEarningsBalance = getBalanceNumber(earnings)
   const { onReward } = useHarvest(pid)
+  const {  stakedBalance } = useFarmUser(pid)
+  const rawStakedBalance = getBalanceNumber(stakedBalance)
   return (
     <>
       <Flex flexDirection="column">
         <StyledText style={{ alignSelf: 'start',marginBottom:'14px' }}>{TranslateString(999, 'Your Liquidity deposits')}:</StyledText>
         <Flex>
-          <StyledText style={{ flex: '1' }}>{totalValueFormated}</StyledText>
+          <StyledText style={{ flex: '1' }}>{rawStakedBalance}</StyledText>
           <StyledTextInfo style={{alignSelf: 'center'}}>{lpLabel}</StyledTextInfo>
         </Flex>
       </Flex>
       <Flex mt="21px" mb="22px">
         <Flex flexDirection="column" style={{ flex: '1' }} >
           <StyledText style={{ alignSelf: 'start' }} marginBottom='20px' marginTop='-4px'>{TranslateString(999, 'Your unclaimed SDC')}:</StyledText>
-          <StyledText style={{ alignSelf: 'start' }}>{totalValueFormated}</StyledText>
+          <StyledText style={{ alignSelf: 'start' }}>{rawEarningsBalance}</StyledText>
         </Flex>
         <Flex flexDirection="column">
           <ButtonClaim
