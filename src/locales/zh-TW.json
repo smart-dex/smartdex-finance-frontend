@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 36516,
-            "text": "每次交易都將收取 0.2% 的費用。其中 0.17% 會分配給流動性提供者，另外 0.03% 則會轉入 PanSDCSwap 金庫中。",
+            "text": "每次交易都將收取 0.2% 的費用。其中 0.17% 會分配給流動性提供者，另外 0.03% 則會轉入 SmartDEX 金庫中。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 37758,
-            "text": "專案取得 BNB 後，而 PanSDCSwap 銷毀 SDC。",
+            "text": "專案取得 BNB 後，而 SmartDEX 銷毀 SDC。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 37846,
-            "text": "透過幣安智能鏈上最常用的 AMM 專案和流動性提供商 PanSDCSwap 來發起您的專案，將您的代幣直接引入 BSC 上最活躍且發展快速的社群。",
+            "text": "透過幣安智能鏈上最常用的 AMM 專案和流動性提供商 SmartDEX 來發起您的專案，將您的代幣直接引入 BSC 上最活躍且發展快速的社群。",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
