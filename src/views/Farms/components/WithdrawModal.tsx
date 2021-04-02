@@ -45,7 +45,6 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
           value={val}
           max={fullBalance}
           symbol={tokenName}
-
         />
         <ModalActions>
           <ButtonCancel variant="secondary" onClick={onBack}>
