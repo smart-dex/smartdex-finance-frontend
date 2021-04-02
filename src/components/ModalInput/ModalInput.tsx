@@ -27,7 +27,7 @@ const getBoxShadow = ({ isWarning = false, theme }) => {
 const StyledTokenInput = styled.div<InputProps>`
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.input};
+  background-color: ${({ theme }) => theme.isDark ? darkColors.backgroundInput : lightColors.backgroundInput};
   border-radius: 20px;
   box-shadow: ${getBoxShadow};
   color: ${({ theme }) => theme.colors.text};
@@ -36,10 +36,11 @@ const StyledTokenInput = styled.div<InputProps>`
 `
 
 const StyledInput = styled(Input)`
+  background-color: ${({ theme }) => theme.isDark ? darkColors.backgroundInput : lightColors.backgroundInput};
   box-shadow: none;
   width: 60px;
   margin: 0 8px;
-  padding: 0 8px;
+  padding: 0;
 
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 80px;
@@ -47,6 +48,9 @@ const StyledInput = styled(Input)`
 
   ${({ theme }) => theme.mediaQueries.sm} {
     width: auto;
+  }
+  &:focus {
+    box-shadow: none !important;
   }
 `
 
@@ -64,8 +68,12 @@ const ButtonMax = styled(Button)`
   box-shadow:none;
   font-size: 14px;
   line-height: 17px;
-
   color: #FFFFFF;
+  height: 38px;
+  &:hover:not(:disabled):not(.button--disabled):not(:active) {
+    background: #0085FF;
+    opacity: 0.7;
+  }
 `
 const StyledMaxText = styled.div`
   color:  ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};

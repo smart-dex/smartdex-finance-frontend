@@ -6,7 +6,7 @@ import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
 import { useLotteryAllowance } from 'hooks/useAllowance'
 import useTickets from 'hooks/useTickets'
 import useTokenBalance from 'hooks/useTokenBalance'
-import { getCakeAddress } from 'utils/addressHelpers'
+import { getSdcAddress } from 'utils/addressHelpers'
 import { baseColors, darkColors, lightColors } from 'style/Color'
 import { useApproval } from 'hooks/useApproval'
 import BuyTicketModal from './BuyTicketModal'
@@ -63,12 +63,12 @@ const TicketCard: React.FC = () => {
   const TranslateString = useI18n()
   const allowance = useLotteryAllowance()
   const lotteryHasDrawn = useGetLotteryHasDrawn()
-  const cakeBalance = useTokenBalance(getCakeAddress())
+  const sdcBalance = useTokenBalance(getSdcAddress())
   const tickets = useTickets()
   const ticketsLength = tickets.length
   const [onPresentMyTickets] = useModal(<MyTicketsModal myTicketNumbers={tickets} from="buy" />)
   const [onPresentApprove] = useModal(<PurchaseWarningModal />)
-  const [onPresentBuy] = useModal(<BuyTicketModal max={cakeBalance} tokenName="CAKE" />)
+  const [onPresentBuy] = useModal(<BuyTicketModal max={sdcBalance} tokenName="SDC" />)
   const { handleApprove, requestedApproval } = useApproval(onPresentApprove)
 
   const renderLotteryTicketButtons = () => {
@@ -78,7 +78,7 @@ const TicketCard: React.FC = () => {
           <ButtonDisableStyle disabled style={{ width: '100%' }}>
             {TranslateString(432, 'View your tickets')}
           </ButtonDisableStyle>
-          <ButtonDisableStyle disabled={requestedApproval} onClick={handleApprove} style={{ width: '100%'  }}>
+          <ButtonDisableStyle disabled={requestedApproval} onClick={handleApprove} style={{ width: '100%' }}>
             {TranslateString(494, 'Approve SDC')}
           </ButtonDisableStyle>
         </>

@@ -58,6 +58,9 @@ const InputStyle = styled(Input)`
   background-color: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.invertedContrast)};
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 50px;
+  box-shadow: none;
+  padding: 0 42px 0 16px;
+  appearance: none;
   &:focus:not(:disabled) {
     box-shadow: none !important;
   }
@@ -89,20 +92,26 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
     setIsError(value > initialLotteryNumber)
     setLotteryNumber(value)
   }
+  const eventKeyPress = (event) => {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault();
+    }
+  }
   return (
     <Wrapper>
       <TextStyle>{TranslateString(742, 'Select lottery number:')}</TextStyle>
       <form onSubmit={handleSubmit}>
         <SearchWrapper>
           <InputStyle
-            value={lotteryNumber}
+            value={lotteryNumber < 0 ? 1 : lotteryNumber}
             type="number"
             isWarning={isError}
-            max={initialLotteryNumber}
             onChange={handleChange}
+            onKeyPress={eventKeyPress}
           />
           <ButtonWrapper>
-            <ButtonStyle type="submit" size="sm" disabled={isError}>
+            <ButtonStyle type="submit" size="sm">
               <img src="/images/search.png" alt="" style={{ width: '20px' }} />
             </ButtonStyle>
           </ButtonWrapper>

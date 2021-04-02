@@ -5,11 +5,11 @@ import { Text } from 'uikit-sotatek'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalRewards } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'
-import { usePriceCakeBusd } from 'state/hooks'
+import { usePriceSdcBusd } from 'state/hooks'
 import { BigNumber } from 'bignumber.js'
 import CardBusdValue from './CardBusdValue'
 
-const TextCake = styled(Text)`
+const TextSdc = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   font-size: 16px;
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -28,16 +28,16 @@ const LotteryJackpot = () => {
   const TranslateString = useI18n()
   const lotteryPrizeAmount = useTotalRewards()
   const balance = getBalanceNumber(lotteryPrizeAmount)
-  const lotteryPrizeAmoutCake = balance.toLocaleString(undefined, {
+  const lotteryPrizeAmountSdc = balance.toLocaleString(undefined, {
     maximumFractionDigits: 2,
   })
-  const lotteryPrizeAmountBusd = new BigNumber(balance).multipliedBy(usePriceCakeBusd()).toNumber()
+  const lotteryPrizeAmountBusd = new BigNumber(balance).multipliedBy(usePriceSdcBusd()).toNumber()
 
   return (
     <Block>
-      <TextCake bold>
-        {lotteryPrizeAmoutCake} {TranslateString(999, 'CAKE')}
-      </TextCake>
+      <TextSdc bold>
+        {lotteryPrizeAmountSdc} {TranslateString(999, 'SDC')}
+      </TextSdc>
       <CardBusdValue value={lotteryPrizeAmountBusd} lineHeight="2.6" />
     </Block>
   )

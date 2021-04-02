@@ -23,7 +23,7 @@ const ButtonAction = styled(Flex)`
   flex-direction: column;
   margin-bottom:20px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    
+
   }
 `
 const StyledGroupButton = styled(Flex)`

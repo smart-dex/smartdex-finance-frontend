@@ -4,14 +4,14 @@ import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
-import ClaimNftAndCakeModal, { useCanClaim } from './ClaimGiftModal'
+import ClaimNftAndSdcModal, { useCanClaim } from './ClaimGiftModal'
 import HeaderWrapper from './HeaderWrapper'
 import EditProfileModal from './EditProfileModal'
 
 const ProfileHeader = () => {
   const TranslateString = useI18n()
   const { canClaim, checkClaimStatus } = useCanClaim()
-  const [onPresentClaimGiftModal] = useModal(<ClaimNftAndCakeModal onSuccess={checkClaimStatus} />)
+  const [onPresentClaimGiftModal] = useModal(<ClaimNftAndSdcModal onSuccess={checkClaimStatus} />)
   const [onEditProfileModal] = useModal(<EditProfileModal />, false)
   const { hasProfile } = useProfile()
 
@@ -39,9 +39,13 @@ const ProfileHeader = () => {
 }
 
 const Line = styled.div`
-  margin-top: 20px;
+  margin-top: 5px;
   border: 1px dashed ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-  margin-bottom: 29px;
+  margin-bottom: 30px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
 `
 const StyledHeader = styled(Flex)`
   flex-direction: column;
@@ -56,7 +60,7 @@ const TextHeading = styled(Heading)`
   font-size: 18px;
   line-height: 29px;
   text-align: center;
-  color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   margin-bottom: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 24px;

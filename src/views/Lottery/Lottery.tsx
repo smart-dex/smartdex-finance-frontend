@@ -21,7 +21,8 @@ const Wrapper = styled.div`
 `
 
 const ButtonItemStyle = styled(ButtonMenuItem)`
-  padding: 14px;
+  padding: 14px 8px;
+  text-align: center;
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};

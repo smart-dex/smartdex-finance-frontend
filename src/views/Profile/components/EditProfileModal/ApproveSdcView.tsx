@@ -2,30 +2,30 @@ import React, { useState } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { AutoRenewIcon, Button, Flex, InjectedModalProps, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
-import { useCake } from 'hooks/useContract'
+import { useSdc } from 'hooks/useContract'
 import { useProfile, useToast } from 'state/hooks'
-import { getPancakeProfileAddress } from 'utils/addressHelpers'
+import { getSmartDEXChainProfileAddress } from 'utils/addressHelpers'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import useGetProfileCosts from '../../hooks/useGetProfileCosts'
 import { UseEditProfileResponse } from './reducer'
 
-interface ApproveCakePageProps extends InjectedModalProps {
+interface ApproveSdcPageProps extends InjectedModalProps {
   goToChange: UseEditProfileResponse['goToChange']
 }
 
-const ApproveCakePage: React.FC<ApproveCakePageProps> = ({ goToChange, onDismiss }) => {
+const ApproveSdcPage: React.FC<ApproveSdcPageProps> = ({ goToChange, onDismiss }) => {
   const [isApproving, setIsApproving] = useState(false)
   const { profile } = useProfile()
   const TranslateString = useI18n()
   const { account } = useWallet()
-  const { numberCakeToUpdate, numberCakeToReactivate } = useGetProfileCosts()
-  const cakeContract = useCake()
+  const { numberSdcToUpdate, numberSdcToReactivate } = useGetProfileCosts()
+  const sdcContract = useSdc()
   const { toastError } = useToast()
-  const cost = profile.isActive ? numberCakeToUpdate : numberCakeToReactivate
+  const cost = profile.isActive ? numberSdcToUpdate : numberSdcToReactivate
 
   const handleApprove = () => {
-    cakeContract.methods
-      .approve(getPancakeProfileAddress(), cost.times(2).toJSON())
+    sdcContract.methods
+      .approve(getSmartDEXChainProfileAddress(), cost.times(2).toJSON())
       .send({ from: account })
       .on('sending', () => {
         setIsApproving(true)
@@ -49,7 +49,7 @@ const ApproveCakePage: React.FC<ApproveCakePageProps> = ({ goToChange, onDismiss
         <Text>
           {profile.isActive ? TranslateString(999, 'Cost to update:') : TranslateString(999, 'Cost to reactivate:')}
         </Text>
-        <Text>{TranslateString(999, `${getFullDisplayBalance(cost)} CAKE`)}</Text>
+        <Text>{TranslateString(999, `${getFullDisplayBalance(cost)} SDC`)}</Text>
       </Flex>
       <Button
         disabled={isApproving}
@@ -68,4 +68,4 @@ const ApproveCakePage: React.FC<ApproveCakePageProps> = ({ goToChange, onDismiss
   )
 }
 
-export default ApproveCakePage
+export default ApproveSdcPage

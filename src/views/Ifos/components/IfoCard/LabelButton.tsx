@@ -1,6 +1,7 @@
 import React, { ButtonHTMLAttributes } from 'react'
 import styled from 'styled-components'
-import { Button, Text } from '@pancakeswap-libs/uikit'
+import { Button, Text } from 'uikit-sotatek'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   value: string
@@ -17,20 +18,33 @@ const ButtonWrapper = styled.div`
   border-radius: ${({ theme }) => theme.radii.default};
   border-color: ${({ theme }) => theme.colors.borderColor};
   padding-left: 16px;
+  color: #5F5E76 !important;
 `
+const Textlbl = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textIfolight)} !important;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 7px;
+`
+const TextInput = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textIfolight)} !important;
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 
+`
 const LabelButton: React.FC<Props> = ({ value, label, buttonLabel, onClick, disabled = false }) => {
   return (
     <div>
       {label && (
-        <Text fontSize="14px" color="textSubtle">
+        <Textlbl fontSize="14px" color="textSubtle">
           {label}
-        </Text>
+        </Textlbl>
       )}
       <ButtonWrapper>
-        <Text bold fontSize="20px">
+        <TextInput bold fontSize="20px">
           {value}
-        </Text>
+        </TextInput>
         <Button onClick={onClick} disabled={disabled}>
           {buttonLabel}
         </Button>

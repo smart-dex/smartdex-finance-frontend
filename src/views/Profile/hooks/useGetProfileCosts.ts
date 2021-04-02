@@ -6,9 +6,9 @@ import { useToast } from 'state/hooks'
 
 const useGetProfileCosts = () => {
   const [costs, setCosts] = useState({
-    numberCakeToReactivate: new BigNumber(0),
-    numberCakeToRegister: new BigNumber(0),
-    numberCakeToUpdate: new BigNumber(0),
+    numberSdcToReactivate: new BigNumber(0),
+    numberSdcToRegister: new BigNumber(0),
+    numberSdcToUpdate: new BigNumber(0),
   })
   const { toastError } = useToast()
 
@@ -16,19 +16,19 @@ const useGetProfileCosts = () => {
     const fetchCosts = async () => {
       try {
         const profileContract = getProfileContract()
-        const [numberCakeToReactivate, numberCakeToRegister, numberCakeToUpdate] = await makeBatchRequest([
-          profileContract.methods.numberCakeToReactivate().call,
-          profileContract.methods.numberCakeToRegister().call,
-          profileContract.methods.numberCakeToUpdate().call,
+        const [numberSdcToReactivate, numberSdcToRegister, numberSdcToUpdate] = await makeBatchRequest([
+          profileContract.methods.numberSdcToReactivate().call,
+          profileContract.methods.numberSdcToRegister().call,
+          profileContract.methods.numberSdcToUpdate().call,
         ])
 
         setCosts({
-          numberCakeToReactivate: new BigNumber(numberCakeToReactivate as string),
-          numberCakeToRegister: new BigNumber(numberCakeToRegister as string),
-          numberCakeToUpdate: new BigNumber(numberCakeToUpdate as string),
+          numberSdcToReactivate: new BigNumber(numberSdcToReactivate as string),
+          numberSdcToRegister: new BigNumber(numberSdcToRegister as string),
+          numberSdcToUpdate: new BigNumber(numberSdcToUpdate as string),
         })
       } catch (error) {
-        toastError('Error', 'Could not retrieve CAKE costs for profile')
+        toastError('Error', 'Could not retrieve SDC costs for profile')
       }
     }
 

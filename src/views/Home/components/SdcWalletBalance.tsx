@@ -4,15 +4,16 @@ import { Text } from '@pancakeswap-libs/uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useTokenBalance from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
-import { getCakeAddress } from 'utils/addressHelpers'
+import { getSdcAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { usePriceCakeBusd } from 'state/hooks'
+import { usePriceSdcBusd } from 'state/hooks'
 import { BigNumber } from 'bignumber.js'
+import { lightColors, darkColors } from 'style/Color'
 import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
-import { lightColors, darkColors } from '../../../style/Color'
 
-const TextStyle = styled(Text)`
+
+const TextStyle = styled(Text)` 
   padding-top: 0px;
   font-size: 16px;
   font-weight: 600;
@@ -28,10 +29,10 @@ const Block = styled.div`
   display: flex;
 `
 
-const CakeWalletBalance = () => {
+const SdcWalletBalance = () => {
   const TranslateString = useI18n()
-  const cakeBalance = useTokenBalance(getCakeAddress())
-  const busdBalance = new BigNumber(getBalanceNumber(cakeBalance)).multipliedBy(usePriceCakeBusd()).toNumber()
+  const cakeBalance = useTokenBalance(getSdcAddress())
+  const busdBalance = new BigNumber(getBalanceNumber(cakeBalance)).multipliedBy(usePriceSdcBusd()).toNumber()
   const { account } = useWallet()
 
   if (!account) {
@@ -46,4 +47,4 @@ const CakeWalletBalance = () => {
   )
 }
 
-export default CakeWalletBalance
+export default SdcWalletBalance

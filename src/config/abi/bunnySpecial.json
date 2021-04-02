@@ -8,12 +8,12 @@
       },
       {
         "internalType": "contract IBEP20",
-        "name": "_cakeToken",
+        "name": "_sdcToken",
         "type": "address"
       },
       {
-        "internalType": "contract IPancakeProfile",
-        "name": "_pancakeProfile",
+        "internalType": "contract SmartDEXProfile",
+        "name": "_smartDEXProfile",
         "type": "address"
       },
       {
@@ -208,32 +208,6 @@
   {
     "inputs": [
       {
-        "internalType": "bytes32",
-        "name": "c__0xf318aee2",
-        "type": "bytes32"
-      }
-    ],
-    "name": "c_0xf318aee2",
-    "outputs": [],
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "cakeToken",
-    "outputs": [
-      {
-        "internalType": "contract IBEP20",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "address",
         "name": "_userAddress",
         "type": "address"
@@ -370,10 +344,17 @@
   },
   {
     "inputs": [],
-    "name": "pancakeProfile",
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "sdcToken",
     "outputs": [
       {
-        "internalType": "contract IPancakeProfile",
+        "internalType": "contract IBEP20",
         "name": "",
         "type": "address"
       }
@@ -383,9 +364,15 @@
   },
   {
     "inputs": [],
-    "name": "renounceOwnership",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "name": "smartDEXProfile",
+    "outputs": [
+      {
+        "internalType": "contract SmartDEXProfile",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {

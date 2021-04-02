@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
 import { Heading, Card, CardBody, Button, useModal } from 'uikit-sotatek'
-import { getCakeAddress } from 'utils/addressHelpers'
+import { getSdcAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
@@ -13,7 +13,7 @@ import BuyModal from 'views/Lottery/components/TicketCard/BuyTicketModal'
 import { useLotteryAllowance } from 'hooks/useAllowance'
 import { useApproval } from 'hooks/useApproval'
 import PurchaseWarningModal from 'views/Lottery/components/TicketCard/PurchaseWarningModal'
-import CakeWinnings from './CakeWinnings'
+import SdcWinnings from './SdcWinnings'
 import LotteryJackpot from './LotteryJackpot'
 
 const StyledLotteryCard = styled(Card)`
@@ -65,7 +65,7 @@ const Actions = styled.div`
     margin-top: 15px;
   }
 `
-const BlockCakeWinnings = styled.div`
+const BlockSdcWinnings = styled.div`
   display: flex;
   margin-bottom: 30px;
   justify-content: space-between;
@@ -90,7 +90,7 @@ const BlockLotteryJackpot = styled.div`
 const Label = styled.div`
   color: ${baseColors.success};
   font-weight: 600;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
     color: ${baseColors.primary};
@@ -110,6 +110,7 @@ const ButtonStyle = styled(Button)`
   font-size: 13px;
   position: relative;
   padding-right: 24px;
+  border: none;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     height: 56px;
@@ -160,7 +161,7 @@ const FarmedStakingCard = () => {
   const [onPresentApprove] = useModal(<PurchaseWarningModal />)
   const { claimAmount } = useTotalClaim()
   const { onMultiClaim } = useMultiClaimLottery()
-  const cakeBalance = useTokenBalance(getCakeAddress())
+  const sdcBalance = useTokenBalance(getSdcAddress())
   const { handleApprove, requestedApproval } = useApproval(onPresentApprove)
 
   const handleClaim = useCallback(async () => {
@@ -216,7 +217,7 @@ const FarmedStakingCard = () => {
     )
   }
 
-  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="SDC" />)
+  const [onPresentBuy] = useModal(<BuyModal max={sdcBalance} tokenName="SDC" />)
 
   return (
     <StyledLotteryCard>
@@ -226,10 +227,10 @@ const FarmedStakingCard = () => {
           <HeadingStyle>{TranslateString(550, 'Your Lottery Winnings')}</HeadingStyle>
         </HeadingBlock>
 
-        <BlockCakeWinnings>
+        <BlockSdcWinnings>
           <Label>{TranslateString(552, 'SDC to Collect')}:</Label>
-          <CakeWinnings />
-        </BlockCakeWinnings>
+          <SdcWinnings />
+        </BlockSdcWinnings>
         <BlockLotteryJackpot>
           <Label>{TranslateString(554, 'Total jackpot this round')}:</Label>
           <LotteryJackpot />

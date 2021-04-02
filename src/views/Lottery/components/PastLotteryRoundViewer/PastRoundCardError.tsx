@@ -1,5 +1,7 @@
 import React from 'react'
-import { Text } from '@pancakeswap-libs/uikit'
+import styled from 'styled-components'
+import { Text } from 'uikit-sotatek'
+import { darkColors, lightColors } from 'style/Color'
 
 interface PastRoundCardErrorProps {
   error: {
@@ -7,8 +9,17 @@ interface PastRoundCardErrorProps {
   }
 }
 
+const TextStyle = styled(Text)`
+color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textMenuLeft)};
+font-size: 14px;
+padding: 24px;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+}
+
+`
 const PastRoundCardError: React.FC<PastRoundCardErrorProps> = ({ error }) => {
-  return <Text p="24px">{error.message}</Text>
+  return <TextStyle>{error.message}</TextStyle>
 }
 
 export default PastRoundCardError

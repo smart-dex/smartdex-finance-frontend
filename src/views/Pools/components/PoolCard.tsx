@@ -200,10 +200,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
         <StyledCardActions>
           {!account &&
-            (<StyledButtonUnlock>
-              <UnlockButton />
-            </StyledButtonUnlock>
-            )}
+          (<StyledButtonUnlock>
+            <UnlockButton />
+          </StyledButtonUnlock>
+          )}
           {account &&
             (needsApproval && !isOldSyrup ? (
               <ButtonApprove
@@ -279,7 +279,7 @@ const StyledDetails = styled.div`
 `
 
 const StyledCardName = styled.div`
-  
+
 `
 
 const NamePool = styled(Flex)`
@@ -342,8 +342,8 @@ const ButtonDetail = styled(Button) <{ isShow: boolean }>`
     props.isShow ?
       (
         css`
-      border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderButtonDetail : lightColors.borderButtonDetail)};
-      color: ${({ theme }) => (theme.isDark ? '#FFFFFF' : '#5F5E76')};
+        border: 1px solid  ${({ theme }) => (theme.isDark ? darkColors.borderButtonDetail : lightColors.borderButtonDetail)};
+        color: ${({ theme }) => (theme.isDark ?  darkColors.textLogoMenuLeft :  lightColors.textLogoMenuLeft)};
       `
       ) :
       (
@@ -357,7 +357,7 @@ const ButtonDetail = styled(Button) <{ isShow: boolean }>`
   width: calc(50% - 9px);
   box-shadow:none;
   border-radius: 10px;
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.background)};
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
@@ -400,7 +400,7 @@ const StyledTriangle = styled.div<{ isFinished: boolean }>`
 const StyledTag = styled(Flex)`
   align-items: center;
   justify-content: flex-end;
-  background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : 'transparent')};  
+  background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : 'transparent')};
   width: 200px;
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
 `
@@ -408,15 +408,15 @@ const StyledTag = styled(Flex)`
 const StyleNamePool = styled.div`
   width:200px;
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
-  white-space: nowrap; 
+  white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   padding:24px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   font-weight: bold;
   line-height: 29px;
   font-size: 18px;
-  align-self: flex-start; 
+  align-self: flex-start;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
   }
@@ -430,7 +430,7 @@ const StyleNamePool = styled.div`
     transform: scale(1);
     }
   }
- 
+
 `
 const StyledTooltip = styled.div`
   position: absolute;
@@ -478,7 +478,7 @@ const StyledTooltip = styled.div`
     left: 43%;
 
   }
-  
+
 `
 const StyledButtonUnlock = styled(UnlockButton)`
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
