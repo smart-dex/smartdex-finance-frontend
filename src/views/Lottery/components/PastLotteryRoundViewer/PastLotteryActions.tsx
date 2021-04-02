@@ -5,7 +5,7 @@ import useI18n from 'hooks/useI18n'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useTickets from 'hooks/useTickets'
 import UnlockButton from 'components/UnlockButton'
-import { baseColors } from 'style/Color'
+import { baseColors, darkColors, lightColors } from 'style/Color'
 import MyTicketsModal from '../TicketCard/UserTicketsModal'
 
 const Wrapper = styled.div`
@@ -62,10 +62,21 @@ const BoxIconDirect = styled.div`
   }
 `
 
+const handleBgDarkMode = (theme)=>(
+  theme.isDark ? darkColors.buttonView : lightColors.buttonView
+)
+
+const handleColorDarkMode = (theme)=>(
+  theme.isDark ? 'rgba(255, 255, 255, 0.6)' : '#8F8FA0'
+)
+
+
 const ButtonStyle = styled(Button)`
   font-size: 12px;
   padding: 0 12px;
   height: 45px;
+  background: ${({disabled, theme }) => disabled ? handleBgDarkMode(theme) : baseColors.primary} !important;
+color: ${({disabled, theme }) => disabled ? handleColorDarkMode(theme) : lightColors.invertedContrast} !important;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     padding: 0 24px;
@@ -98,7 +109,7 @@ const TicketCard: React.FC<{ contractLink?: string; lotteryNumber?: number }> = 
   return (
     <Wrapper>
       <div>
-        <ButtonStyle disabled={ticketsLength === 0} onClick={onPresentMyTickets} style={{ width: '100%', background: ticketsLength === 0 ? '' : baseColors.primary  }}>
+        <ButtonStyle disabled={ticketsLength === 0} onClick={onPresentMyTickets} style={{ width: '100%' }}>
           {TranslateString(432, 'View Your Tickets')}
         </ButtonStyle>
       </div>
