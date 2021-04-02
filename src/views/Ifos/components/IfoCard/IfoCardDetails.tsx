@@ -99,5 +99,4 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
     </>
   )
 }
-
 export default IfoCardDetails

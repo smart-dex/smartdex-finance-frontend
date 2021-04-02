@@ -32,7 +32,7 @@ const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, token
       <BalanceRow>
         <Balance value={Number(fullBalance)} />
       </BalanceRow>
-      <ModalActions>
+      <ModalActions> 
         <ButtonCancel variant="secondary" onClick={onBack}>
           {TranslateString(462, 'Cancel')}
         </ButtonCancel>

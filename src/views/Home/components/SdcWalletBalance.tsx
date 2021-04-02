@@ -8,11 +8,12 @@ import { getSdcAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { usePriceSdcBusd } from 'state/hooks'
 import { BigNumber } from 'bignumber.js'
+import { lightColors, darkColors } from 'style/Color'
 import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
-import { lightColors, darkColors } from '../../../style/Color'
 
-const TextStyle = styled(Text)`
+
+const TextStyle = styled(Text)` 
   padding-top: 0px;
   font-size: 16px;
   font-weight: 600;

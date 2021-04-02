@@ -8,8 +8,12 @@ import { useIfoAllowance } from 'hooks/useAllowance'
 import { useIfoApprove } from 'hooks/useApprove'
 import { IfoStatus } from 'config/constants/types'
 import { getBalanceNumber } from 'utils/formatBalance'
+import styled from 'styled-components'
+import { baseColors} from 'style/Color'
 import LabelButton from './LabelButton'
 import ContributeModal from './ContributeModal'
+
+
 
 export interface Props {
   address: string
@@ -20,6 +24,36 @@ export interface Props {
   raisingAmount: BigNumber
   tokenDecimals: number
 }
+const CardLabel = styled.div`
+  width: 50%;
+  color: ${baseColors.colorbt};
+  padding-top: 15px;
+  label{
+    color: ${baseColors.colorbt} !important;
+  }
+  & button{
+    background: ${baseColors.primary};
+    : hover{
+      opacity: 0.65 !important;
+      background: ${baseColors.primary} !important;
+  }
+`
+
+const CardButton= styled('div')`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & > button{
+    width: 20%;
+  }
+`
+
+const ButtonApp = styled(Button)`
+  background: ${baseColors.primary};
+  padding: 0px 20px;
+  margin-top: 15px;
+`
 
 const IfoCardContribute: React.FC<Props> = ({
   address,
@@ -70,47 +104,49 @@ const IfoCardContribute: React.FC<Props> = ({
 
   if (allowance <= 0) {
     return (
-      <Button
-        style={{width: '100%'}}
-        onClick={async () => {
-          try {
-            setPendingTx(true)
-            await onApprove()
-            setPendingTx(false)
-          } catch (e) {
-            setPendingTx(false)
-            console.error(e)
-          }
-        }}
-      >
-        Approve
-      </Button>
+      <CardButton>
+          <ButtonApp
+          onClick={async () => {
+            try {
+              setPendingTx(true)
+              await onApprove()
+              setPendingTx(false)
+            } catch (e) {
+              setPendingTx(false)
+              console.error(e)
+            }
+          }}
+        >
+          Approve
+        </ButtonApp>
+      </CardButton>
+      
     )
   }
 
   return (
-    <>
-      <LabelButton
-        disabled={pendingTx || userInfo.claimed}
-        buttonLabel={isFinished ? 'Claim' : 'Contribute'}
-        label={isFinished ? 'Your tokens to claim' : `Your contribution (${currency})`}
-        value={
-          // eslint-disable-next-line no-nested-ternary
-          isFinished
-            ? userInfo.claimed
-              ? 'Claimed'
-              : getBalanceNumber(offeringTokenBalance, tokenDecimals).toFixed(4)
-            : getBalanceNumber(new BigNumber(userInfo.amount)).toFixed(4)
-        }
-        onClick={isFinished ? claim : onPresentContributeModal}
-      />
+    <CardLabel>
+        <LabelButton
+          disabled={pendingTx || userInfo.claimed}
+          buttonLabel={isFinished ? 'Claim' : 'Contribute'}
+          label={isFinished ? 'Your tokens to claim' : `Your contribution (${currency})`}
+          value={
+            // eslint-disable-next-line no-nested-ternary
+            isFinished
+              ? userInfo.claimed
+                ? 'Claimed'
+                : getBalanceNumber(offeringTokenBalance, tokenDecimals).toFixed(4)
+              : getBalanceNumber(new BigNumber(userInfo.amount)).toFixed(4)
+          }
+          onClick={isFinished ? claim : onPresentContributeModal}
+        />
     
-      <Text fontSize="14px" color="textSubtle">
-        {isFinished
-          ? `You'll be refunded any excess tokens when you claim`
-          : `${percentOfUserContribution.toFixed(5)}% of total`}
-      </Text>
-    </>
+        <Text fontSize="14px" color="rgb(95, 94, 118)">
+          {isFinished
+            ? `You'll be refunded any excess tokens when you claim`
+            : `${percentOfUserContribution.toFixed(5)}% of total`}
+        </Text>
+      </CardLabel>
   )
 }
 

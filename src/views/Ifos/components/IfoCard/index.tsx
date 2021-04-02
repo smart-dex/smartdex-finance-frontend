@@ -108,6 +108,8 @@ const LinkExternalStyle = styled(LinkExternal)`
     position: relative;
     margin-left: 7px;
   }
+  ${({ theme }) => theme.mediaQueries.nav} {
+  }
 `
 const UnlockButtonStyle = styled(UnlockButton)`
   ${ButtonPrimary}

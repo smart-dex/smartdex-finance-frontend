@@ -87,7 +87,10 @@ export const lightColors = {
   shadowLight:'rgba(120, 118, 148, 0.1)',
   colorCol:'rgba(95, 94, 118, 0.7)',
   backgroundArrowMb: '#D8F7E4',
+  btnViewMobile:'#E8E8EB',
+  btnCancle:'#D9D9DE',
   backgroundInput: '#E9F4FC',
+
 }
 
 export const darkColors = {

@@ -142,7 +142,6 @@ const StyledButton = styled.div`
    margin-bottom:10px;
    
 `
-
 const Coming: React.FC = () => {
   const TranslateString = useI18n()
 
