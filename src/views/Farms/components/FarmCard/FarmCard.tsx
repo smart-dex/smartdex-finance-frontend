@@ -6,9 +6,10 @@ import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
 import useI18n from 'hooks/useI18n'
+import { getBalanceNumber } from 'utils/formatBalance'
 // import ExpandableSectionButton from 'components/ExpandableSectionButton'
 import { QuoteToken } from 'config/constants/types'
-import { BASE_ADD_LIQUIDITY_URL } from 'config'
+import { BASE_ADD_LIQUIDITY_URL, BLOCKS_PER_WEEK, SDC_PER_BLOCK } from 'config'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { lightColors, darkColors } from 'style/Color'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
@@ -16,6 +17,7 @@ import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
 import ApyButton from './ApyButton'
+
 
 
 
@@ -103,11 +105,13 @@ interface FarmCardProps {
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, ethPrice, ethereum, account }) => {
   const TranslateString = useI18n()
-  const isTest = process.env.REACT_APP_CHAIN_ID ==='97'
-  const linkScan= isTest ? `https://testnet.bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
+  const isTest = process.env.REACT_APP_CHAIN_ID === '97'
+  const linkScan = isTest ? `https://testnet.bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
-  const { earnings } = useFarmUser(pid)
+  const { earnings,stakedBalance} = useFarmUser(pid)
+  const rawStakedBalance = getBalanceNumber(stakedBalance)
+
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. SDC-BNB LP, LINK-BNB LP,
   // NAR-SDC LP. The images should be sdc-bnb.svg, link-bnb.svg, nar-sdc.svg
@@ -136,9 +140,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('SMARTDEXCHAIN', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'SDC'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
-  const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
+  const { quoteTokenAdresses, quoteTokenSymbol, lpTokenBalanceMC,lpTotalSupply, tokenAddresses, poolWeight } = farm
+  const poolRate = (BLOCKS_PER_WEEK.times(SDC_PER_BLOCK.times(new BigNumber(poolWeight))))
+  const displayPoolRate = poolRate.toFixed(2).toString()
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
+  const userPoolRate = (new BigNumber(rawStakedBalance).div(lpTokenBalanceMC)).times(100).toFixed(2).toString()
   const handelOpenDetail = () => {
     setShowExpandableSection(!showExpandableSection)
   }
@@ -153,63 +160,62 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
       />
       <CardContent>
         <StyledInfoEarn>
-        {!removed && (
-              <Detail mb="37px" >
-                <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
-                <InfoTextFarm bold style={{ display: 'flex' }}>
-                  {farm.apy ? (
-                    <>
-                    <ApyButton
-                        lpLabel={lpLabel}
-                        addLiquidityUrl={addLiquidityUrl}
-                        sdcPrice={sdcPrice}
-                        apy={farm.apy}
-                      />
-                      {farmAPY}%
-                  </>
-                  ) : (
-                      <Skeleton height={24} width={80} />
-                    )}
-                </InfoTextFarm>
-              </Detail>
-            )}
+          {!removed && (
             <Detail mb="37px" >
-                <DetailInFo>{TranslateString(999, 'Total Deposits')}: </DetailInFo>
-                <InfoTextFarm bold style={{ display: 'flex' }}>
-                  {true ? (
-                    <>
-                      123456 AAA
-
-                   </>
-                  ) : (
-                      <Skeleton height={24} width={80} />
-                    )}
-                </InfoTextFarm>
-              </Detail>
-              <Detail mb="37px" >
-                <DetailInFo>{TranslateString(999, 'Pool Rate')}: </DetailInFo>
-                <InfoTextFarm bold style={{ display: 'flex' }}>
-                  {true ? (
-                    <>
-                      1120.4 SDC/WEEK
+              <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
+              <InfoTextFarm bold style={{ display: 'flex' }}>
+                {farm.apy ? (
+                  <>
+                    <ApyButton
+                      lpLabel={lpLabel}
+                      addLiquidityUrl={addLiquidityUrl}
+                      sdcPrice={sdcPrice}
+                      apy={farm.apy}
+                    />
+                    {farmAPY}%
                   </>
-                  ) : (
-                      <Skeleton height={24} width={80} />
-                    )}
-                </InfoTextFarm>
-              </Detail>
-              <Detail mb="37px" >
-                <DetailInFo>{TranslateString(999, 'Your Pool Rate')}: </DetailInFo>
-                <InfoTextFarm bold style={{ display: 'flex' }}>
-                  {true ? (
-                    <>
-                     {farmAPY}%
+                ) : (
+                    <Skeleton height={24} width={80} />
+                  )}
+              </InfoTextFarm>
+            </Detail>
+          )}
+          <Detail mb="37px" >
+            <DetailInFo>{TranslateString(999, 'Total Deposits')}: </DetailInFo>
+            <InfoTextFarm bold style={{ display: 'flex' }}>
+              {lpTokenBalanceMC ? (
+                <>
+                  {lpTokenBalanceMC} {lpLabel}
+                </>
+              ) : (
+                  <Skeleton height={24} width={80} />
+                )}
+            </InfoTextFarm>
+          </Detail>
+          <Detail mb="37px" >
+            <DetailInFo>{TranslateString(999, 'Pool Rate')}: </DetailInFo>
+            <InfoTextFarm bold style={{ display: 'flex' }}>
+              {displayPoolRate ? (
+                <>
+                  {`${displayPoolRate} SDC/WEEK`}
+                </>
+              ) : (
+                  <Skeleton height={24} width={80} />
+                )}
+            </InfoTextFarm>
+          </Detail>
+          <Detail mb="37px" >
+            <DetailInFo>{TranslateString(999, 'Your Pool Rate')}: </DetailInFo>
+            <InfoTextFarm bold style={{ display: 'flex' }}>
+              {userPoolRate ? (
+                <>
+                  {userPoolRate}%
                   </>
-                  ) : (
-                      <Skeleton height={24} width={80} />
-                    )}
-                </InfoTextFarm>
-              </Detail>
+              ) : (
+                  <Skeleton height={24} width={80} />
+                )}
+            </InfoTextFarm>
+          </Detail>
 
         </StyledInfoEarn>
 
