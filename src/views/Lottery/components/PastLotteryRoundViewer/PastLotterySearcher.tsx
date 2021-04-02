@@ -60,6 +60,7 @@ const InputStyle = styled(Input)`
   border-radius: 50px;
   box-shadow: none;
   padding: 0 42px 0 16px;
+  appearance: none;
   &:focus:not(:disabled) {
     box-shadow: none !important;
   }
