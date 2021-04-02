@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 37262,
-            "text": "トレードごとに0.2%の手数料が支払われます。0.17%は流動性提供者に払われ、0.03%はPanSDCSwapの資金になります。",
+            "text": "トレードごとに0.2%の手数料が支払われます。0.17%は流動性提供者に払われ、0.03%はSmartDEXの資金になります。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 38442,
-            "text": "プロジェクトがBNBを取得すると、PanSDCSwapがSDCをバーン。",
+            "text": "プロジェクトがBNBを取得すると、SmartDEXがSDCをバーン。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 38462,
-            "text": "Binance Smart Chainで最も利用されているAMMプロジェクトで流動性供給者であるPanSDCSwapを利用してプロジェクトをローンチし、BSCで最も活発で急速に成長しているコミュニティにあなたのトークンを直接届けることができます。",
+            "text": "Binance Smart Chainで最も利用されているAMMプロジェクトで流動性供給者であるSmartDEXを利用してプロジェクトをローンチし、BSCで最も活発で急速に成長しているコミュニティにあなたのトークンを直接届けることができます。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
