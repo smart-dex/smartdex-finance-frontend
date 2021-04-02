@@ -14,7 +14,7 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
   return (
     <StyledInputWrapper>
       {!!startAdornment && startAdornment}
-      <StyledInput placeholder={placeholder} value={value} onChange={onChange} />
+      <StyledInput placeholder={placeholder} value={value} onChange={onChange}/>
       {!!endAdornment && endAdornment}
     </StyledInputWrapper>
   )
@@ -37,11 +37,15 @@ const StyledInput = styled.input`
   flex: 1;
   height: 56px;
   margin: 0;
-  padding: 0;
+  padding: 0 15px 0 10px;
   outline: none;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  ::placeholder {
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
+  }
+  
 `
 
 export default Input

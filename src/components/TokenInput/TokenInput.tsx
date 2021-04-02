@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '@pancakeswap-libs/uikit'
+import { Button } from 'uikit-sotatek'
 import { darkColors, lightColors } from 'style/Color'
 import useI18n from '../../hooks/useI18n'
 import Input, { InputProps } from '../Input'
@@ -72,7 +72,7 @@ const ButtonMax = styled(Button)`
   border-radius: 20px;
   border:none;
   box-shadow:none;
-  
+  height: 38px;
 `
 
 export default TokenInput

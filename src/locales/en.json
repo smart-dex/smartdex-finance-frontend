@@ -3049,7 +3049,7 @@
             "stringId": 452,
             "contentType": "text/plain",
             "translationId": 29312,
-            "text": "Max",
+            "text": "MAX",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 29364,
-            "text": "Launch your project with PanSDCSwap, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.",
+            "text": "Launch your project with SmartDEX, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -7339,7 +7339,7 @@
             "stringId": 1050,
             "contentType": "text/plain",
             "translationId": 47152,
-            "text": "Set up now",
+            "text": "Set Up Now",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -7429,7 +7429,7 @@
             "stringId": 1062,
             "contentType": "text/plain",
             "translationId": 47164,
-            "text": "Get LP tokens",
+            "text": "Get LP Tokens",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",

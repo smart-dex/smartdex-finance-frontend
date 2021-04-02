@@ -18,6 +18,7 @@ interface FarmCardActionsProps {
   pid?: number
   addLiquidityUrl?: string
   onBack: () => void
+  removed: boolean
 }
 
 const StyledAddButton = styled(Flex)`
@@ -39,7 +40,7 @@ const StyledAddButton = styled(Flex)`
 `
 const StakeButton = styled(Button)`
   background: ${baseColors.primary};
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  box-shadow: none;
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
@@ -63,7 +64,7 @@ const StyledAction = styled(Flex)`
 const ButtonUnstake = styled(Button)`
   padding: 0 20px;
   background: ${({ isDisable }) => !isDisable && baseColors.primary};
-  box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
+  box-shadow: none;
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
@@ -82,7 +83,8 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   tokenName,
   pid,
   addLiquidityUrl,
-  onBack
+  onBack,
+  removed
 }) => {
   const TranslateString = useI18n()
   const { onStake } = useStake(pid)
@@ -99,7 +101,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
 
   const renderStakingButtons = () => {
     return rawStakedBalance === 0 ? (
-      <StakeButton onClick={onPresentDeposit}>
+      <StakeButton onClick={onPresentDeposit} disabled={removed}>
         {TranslateString(999, 'Stake LP')}
       </StakeButton>
     ) : (
@@ -108,7 +110,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
             {TranslateString(999, 'Unstake')}
           </ButtonUnstake>
           <StyledAddButton>
-            <IconButton variant="tertiary" onClick={onPresentDeposit}>
+            <IconButton disabled={removed} variant="tertiary" onClick={onPresentDeposit}>
               <img src='/images/add-icon.svg' alt='add-icon' />
             </IconButton>
           </StyledAddButton>

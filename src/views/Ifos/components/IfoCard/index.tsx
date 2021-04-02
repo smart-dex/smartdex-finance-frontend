@@ -32,7 +32,8 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   border-radius: 40px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
-  ${({ theme }) => theme.mediaQueries.sm} {
+  box-shadow: 10px 10px 20px rgba(120, 118, 148, 0.1);
+  ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction: row;
     width: 85%;
   }
@@ -57,7 +58,6 @@ const WrapButtonRow = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   justify-content: center;
   & > button,
   & > a {
@@ -67,7 +67,7 @@ const WrapButtonRow = styled('div')`
   & > button {
     margin-bottom: 15px;
   }
- 
+
   ${({ theme }) => theme.mediaQueries.nav} {
     grid-gap: 30px;
     flex-direction: row;
@@ -101,8 +101,8 @@ const LinkExternalStyle = styled(LinkExternal)`
     height: 45px;
     font-size: 13px;
   }
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
-  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorViewSite)};
+  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonViewSite)};
   & svg {
     fill: ${lightColors.fillSvg};
     position: relative;
@@ -160,12 +160,12 @@ const BoxIconDirect = styled.div`
   width: 24px;
   text-align: center;
   line-height: 45px;
-  
+
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 36px;
     line-height: 56px;
     top: 0px;
-  }    
+  }
 `
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
   if (currentBlock < startBlock) {
@@ -206,7 +206,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
     launchTime,
     saleAmount,
     raiseAmount,
-    cakeToBurn,
+    sdcToBurn,
     projectSiteUrl,
     currency,
     currencyAddress,
@@ -276,7 +276,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
   const isFinished = state.status === 'finished'
   const { connect, reset } = useWallet()
   const { onPresentConnectModal } = useWalletModal(connect, reset)
-  
+
   return (
     <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
       <CardBody>
@@ -310,15 +310,15 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           launchTime={launchTime}
           saleAmount={saleAmount}
           raiseAmount={raiseAmount}
-          cakeToBurn={cakeToBurn}
+          sdcToBurn={sdcToBurn}
           projectSiteUrl={projectSiteUrl}
           raisingAmount={state.raisingAmount}
           totalAmount={state.totalAmount}
         />
         <WrapButtonRow>
-        {!account && 
+        {!account &&
           <ButtonStyle>
-            <UnlockButtonStyle fullWidth /> 
+            <UnlockButtonStyle fullWidth />
             <BoxIconDirect onClick={onPresentConnectModal}><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
           </ButtonStyle>  }
           <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>

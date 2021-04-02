@@ -11,7 +11,7 @@ const IfoCardWrapper = styled.div<IfoCardWrapperProps>`
   padding-bottom: 30px;
   padding-top: 30px;
 
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     grid-template-columns: ${({ isSingle }) => `repeat(${isSingle ? 1 : 1}, 1fr)`};
   }
 

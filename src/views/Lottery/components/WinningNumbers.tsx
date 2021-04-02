@@ -97,7 +97,7 @@ const ImgStyle = styled.a`
 const Link = styled.a`
   margin-top: 1em;
   text-decoration: none;
-  color: ${baseColors.orange};
+  color: ${baseColors.primary};
   font-size: 14px;
   font-weight: bold;
   ${({ theme }) => theme.mediaQueries.nav} {

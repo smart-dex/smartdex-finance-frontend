@@ -142,7 +142,6 @@ const StyledButton = styled.div`
    margin-bottom:10px;
    
 `
-
 const Coming: React.FC = () => {
   const TranslateString = useI18n()
 
@@ -162,7 +161,10 @@ const Coming: React.FC = () => {
         <Image src="/images/bunny-question.svg" width={64} height={64} alt="Your project here" />
         <Balance>???</Balance>
         <CommunityTag />
-        <Label>{TranslateString(416, 'Create a pool for your token')}</Label>
+        <DetailPlaceholder>
+        <StyleFlexDetail>{TranslateString(416, 'Create a pool for your token')}</StyleFlexDetail>
+        </DetailPlaceholder>
+       
         <StyledButton>
           <Button
             target="_blank"

@@ -2,18 +2,13 @@
   {
     "inputs": [
       {
-        "internalType": "contract BunnyFactoryV2",
-        "name": "_bunnyFactoryV2",
-        "type": "address"
-      },
-      {
         "internalType": "contract BunnyMintingStation",
         "name": "_bunnyMintingStation",
         "type": "address"
       },
       {
         "internalType": "contract IBEP20",
-        "name": "_cakeToken",
+        "name": "_sdcToken",
         "type": "address"
       },
       {
@@ -81,36 +76,10 @@
   },
   {
     "inputs": [],
-    "name": "bunnyFactoryV2",
-    "outputs": [
-      {
-        "internalType": "contract BunnyFactoryV2",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "bunnyMintingStation",
     "outputs": [
       {
         "internalType": "contract BunnyMintingStation",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "cakeToken",
-    "outputs": [
-      {
-        "internalType": "contract IBEP20",
         "name": "",
         "type": "address"
       }
@@ -200,6 +169,19 @@
     "name": "renounceOwnership",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "sdcToken",
+    "outputs": [
+      {
+        "internalType": "contract IBEP20",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {

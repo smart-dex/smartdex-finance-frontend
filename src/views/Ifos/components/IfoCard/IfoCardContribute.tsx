@@ -90,9 +90,9 @@ const IfoCardContribute: React.FC<Props> = ({
     }
   }, [account, contract.methods, pendingTx])
 
-  // if (allowance === null) {
-  //   return null
-  // }
+  if (allowance === null) {
+    return null
+  }
 
   const claim = async () => {
     setPendingTx(true)

@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 34386,
-            "text": "يتم دفع رسوم نسبتها 0.2% عن كل عملية تداول. يحصل موفِّري السيولة على نسبة 0.17% منها، وتدخل نسبة 0.03% إلى خزينة PanSDCSwap.",
+            "text": "يتم دفع رسوم نسبتها 0.2% عن كل عملية تداول. يحصل موفِّري السيولة على نسبة 0.17% منها، وتدخل نسبة 0.03% إلى خزينة SmartDEX.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 31834,
-            "text": "يحصل المشروع على BNB ويقوم PanSDCSwap بحرق SDC.",
+            "text": "يحصل المشروع على BNB ويقوم SmartDEX بحرق SDC.",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3454,7 +3454,8 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 31848,
-            "text": "أطلق مشروعك مع PanSDCSwap، وهو مشروع AMM (صانع سوق آلي) وموفِّر السيولة الأكثر استخدامًا على Binance Smart Chain، لإحضار رمزك المميز مباشرةً إلى أكثر المجتمعات نشاطًا وسرعةً في النمو على BSC.",
+            "text": "أطلق مشروعك مع SmartDEX، وهو مشروع AMM (صانع سوق آلي) وموفِّر السيولة الأكثر استخدامًا على Binance Smart Chain، لإحضار رمزك المميز مباشرةً إلى أكثر المجتمعات نشاطًا وسرعةً في النمو على BSC.",
+
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -3844,7 +3845,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 34038,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5599,7 +5600,8 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 33732,
-            "text": "وحدها عناصر PanSDC القابلة للتحصيل المعتمدة يمكن استخدامها.",
+            "text": "وحدها عناصر SmartDEX القابلة للتحصيل المعتمدة يمكن استخدامها.",
+
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5884,7 +5886,8 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 33834,
-            "text": "لم نتمكن من العثور على أي عناصر PanSDC قابلة للتحصيل في محفظتك.",
+            "text": "لم نتمكن من العثور على أي عناصر SmartDEX قابلة للتحصيل في محفظتك.",
+
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -5899,7 +5902,8 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 35546,
-            "text": "أنت بحاجة إلى عنصر PanSDC القابل للتحصيل للانتهاء من إعداد ملفك التعريفي. إذا بعت أو حوَّلت العنصر الأولي القابل للتحصيل إلى محفظة أخرى، فستحتاج إلى استعادته أو الحصول على واحد جديد بطريقة ما. لا يمكنك إنشاء عنصر أولي جديد باستخدام عنوان المحفظة هذا.",
+            "text": "أنت بحاجة إلى عنصر SmartDEX القابل للتحصيل للانتهاء من إعداد ملفك التعريفي. إذا بعت أو حوَّلت العنصر الأولي القابل للتحصيل إلى محفظة أخرى، فستحتاج إلى استعادته أو الحصول على واحد جديد بطريقة ما. لا يمكنك إنشاء عنصر أولي جديد باستخدام عنوان المحفظة هذا.",
+
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -6844,7 +6848,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 31684,
-            "text": "panSDC",
+            "text": "SmartDEX",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",
@@ -6904,7 +6908,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 31662,
-            "text": "panSDCswap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14177699,
                 "username": "BahaaMohsen",

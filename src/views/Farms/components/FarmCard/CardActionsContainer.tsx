@@ -23,7 +23,7 @@ const ButtonAction = styled(Flex)`
   flex-direction: column;
   margin-bottom:20px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    
+
   }
 `
 const StyledGroupButton = styled(Flex)`
@@ -146,6 +146,7 @@ interface FarmCardActionsProps {
   changeOpenDetail: () => void
   isOpenDetail: boolean
   earnLabel: string
+  removed:boolean
 }
 
 const CardActions: React.FC<FarmCardActionsProps> = ({
@@ -155,7 +156,8 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   addLiquidityUrl,
   changeOpenDetail,
   isOpenDetail,
-  earnLabel
+  earnLabel,
+  removed
 }) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
@@ -178,6 +180,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
       tokenBalance={tokenBalance}
       addLiquidityUrl={addLiquidityUrl}
       earnLabel={earnLabel}
+      removed={removed}
     />
   )
   const { onApprove } = useApprove(lpContract)
@@ -194,7 +197,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
 
   const renderApprovalOrStakeButton = () => {
     return !isApproved && (
-      <ButtonApprove disabled={requestedApproval} isDisable={requestedApproval} onClick={handleApprove} mt="10px" mb="10px">
+      <ButtonApprove disabled={requestedApproval || removed} isDisable={requestedApproval || removed} onClick={handleApprove} mt="10px" mb="10px">
         {TranslateString(758, 'Approve Contract')}
       </ButtonApprove>
     )

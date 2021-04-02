@@ -63,6 +63,8 @@ const WrapCard = styled(Card)`
   ${({ theme }) => theme.mediaQueries.nav} {
     padding: 50px 36px 50px 50px;
   }
+  box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1); ;
+
 `
 const WrapHeading = styled(Heading)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
@@ -217,11 +219,11 @@ return (
             </List>
           </StyleList>
           <WrapGridButton>
-            <LinkPrimary href="https://exchange.pancakeswap.finance/#/swap" mr="16px">
+            <LinkPrimary href="http://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
-            <LinkSecondary href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
-              {TranslateString(1062, 'Get LP tokens')}
+            <LinkSecondary href="http://smartdex-exchange.sotatek.works/swap#/pool">
+              {TranslateString(1062, 'Get LP Tokens')}
               <ChevronDown />
             </LinkSecondary>
           </WrapGridButton>
@@ -242,7 +244,7 @@ return (
           </StyleList>
           <Text as="div">
             <LinkButtonBorder href="https://docs.pancakeswap.finance/core-products/ifo-initial-farm-offering">
-              {TranslateString(610, 'See more')}
+              {TranslateString(610, 'See More')}
             </LinkButtonBorder>
           </Text>
         </WrapCard>
@@ -255,7 +257,7 @@ return (
             </StyleTitle>
             <WrapText mb={3}>
               {TranslateString(514,
-                'Launch your project with PancakeSwap, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
+                'Launch your project with SmartDEX, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
               )}
             </WrapText>
             <LinkPrimaryPd30 href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform">

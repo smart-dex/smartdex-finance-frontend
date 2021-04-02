@@ -18,20 +18,7 @@ interface ExpandableSectionProps {
 }
 
 
-// const StyledLinkExternal = styled(LinkExternal)`
-//     font-size: 13px;
-//     ${({ theme }) => theme.mediaQueries.nav} {
-//       font-size: 16px;
-//     }
-//     color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
-//     width: fit-content;
-//     background:none;
-//     svg {
-//     padding-left: 4px;
-//     width: auto;
-//     fill: ${({ theme }) => theme.colors.primary};
-//   }
-// `
+
 
 const StyledText = styled(Text)`
   align-self: center;
@@ -49,7 +36,7 @@ const StyledTextInfo = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
   font-size: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 14px;
+    font-size: 12px;
   }
 `
 // const StyledLink = styled(Link)`
@@ -70,6 +57,9 @@ const ButtonClaim = styled(Button)`
   font-size: 14px;
   line-height: 17px;
   color: #FFFFFF;
+  height:40px;
+  width:96px;
+  margin-bottom:8px;
 `
 const StyledLink = styled(Link)`
   margin-top: 16px;
@@ -96,15 +86,15 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   return (
     <>
       <Flex flexDirection="column">
-        <StyledText style={{ alignSelf: 'start' }}>{TranslateString(999, 'Your Liquidity deposits')}:</StyledText>
+        <StyledText style={{ alignSelf: 'start',marginBottom:'14px' }}>{TranslateString(999, 'Your Liquidity deposits')}:</StyledText>
         <Flex>
           <StyledText style={{ flex: '1' }}>{totalValueFormated}</StyledText>
-          <StyledTextInfo>{lpLabel}</StyledTextInfo>
+          <StyledTextInfo style={{alignSelf: 'center'}}>{lpLabel}</StyledTextInfo>
         </Flex>
       </Flex>
-      <Flex>
-        <Flex flexDirection="column" style={{ flex: '1' }}>
-          <StyledText style={{ alignSelf: 'start' }} marginBottom='16px'>{TranslateString(999, 'Your unclaimed SDC')}:</StyledText>
+      <Flex mt="21px" mb="22px">
+        <Flex flexDirection="column" style={{ flex: '1' }} >
+          <StyledText style={{ alignSelf: 'start' }} marginBottom='20px' marginTop='-4px'>{TranslateString(999, 'Your unclaimed SDC')}:</StyledText>
           <StyledText style={{ alignSelf: 'start' }}>{totalValueFormated}</StyledText>
         </Flex>
         <Flex flexDirection="column">

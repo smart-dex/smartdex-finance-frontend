@@ -70,13 +70,11 @@ const InfoBlock = styled.div`
   line-height: 143%;
   text-align: center;
   letter-spacing: -0.03em;
-  color: ${lightColors.colorCol};
+  color: ${lightColors.colorbt};
   color: ${({ theme }) => (theme.isDark ? darkColors.colorInfoBlock : lightColors.colorInfoBlock)};
-  height: 65px;
-  overflow: hidden;
-  margin-bottom: 0px;
-  ${({ theme }) => theme.mediaQueries.sm} {
-    margin-bottom: 7px;
+  min-height: 65px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    height: 65px;
   }
 `
 const SubCard = styled.div`

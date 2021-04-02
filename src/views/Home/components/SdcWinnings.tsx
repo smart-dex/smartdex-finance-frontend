@@ -3,7 +3,7 @@ import { darkColors, lightColors } from 'style/Color'
 import styled from 'styled-components'
 import { useTotalClaim } from 'hooks/useTickets'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { usePriceCakeBusd } from 'state/hooks'
+import { usePriceSdcBusd } from 'state/hooks'
 import { BigNumber } from 'bignumber.js'
 import CardValue from './CardValue'
 import CardBusdValue from './CardBusdValue'
@@ -28,10 +28,10 @@ const Block = styled.div`
     }
   }
 `
-const CakeWinnings = () => {
+const SdcWinnings = () => {
   const { claimAmount } = useTotalClaim()
   const cakeAmount = getBalanceNumber(claimAmount)
-  const claimAmountBusd = new BigNumber(cakeAmount).multipliedBy(usePriceCakeBusd()).toNumber()
+  const claimAmountBusd = new BigNumber(cakeAmount).multipliedBy(usePriceSdcBusd()).toNumber()
 
   return (
     <Block>
@@ -41,4 +41,4 @@ const CakeWinnings = () => {
   )
 }
 
-export default CakeWinnings
+export default SdcWinnings
