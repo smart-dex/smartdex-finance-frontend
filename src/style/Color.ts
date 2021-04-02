@@ -84,6 +84,8 @@ export const lightColors = {
   borderButtonDetail: '#8F8FA0',
   colorCol:'rgba(95, 94, 118, 0.7)',
   backgroundArrowMb: '#D8F7E4',
+  btnViewMobile:'#E8E8EB',
+  btnCancle:'#D9D9DE',
 }
 
 export const darkColors = {

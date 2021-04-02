@@ -64,7 +64,7 @@ const ComingSoon = () => {
             </Text>
             <Text mb={3}>
               <LiquidityLink href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
-                {TranslateString(506, 'Get CAKE-BNB LP >')}
+                {TranslateString(506, 'Get SDC-BNB LP >')}
               </LiquidityLink>
             </Text>
             <Text mb={3}>
