@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js'
 import styled, { css } from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
-import { Flex } from 'uikit-sotatek'
+import { Flex, Link } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
 import Balance from 'components/Balance'
 import {registerToken} from 'utils/wallet'
@@ -37,11 +37,14 @@ const Details = styled.div`
 const Label = styled.div`
   font-size: 16px;
 `
-const TokenLink = styled.a`
+const TokenLink = styled(Link)`
   font-size: 14px;
   text-decoration: revert;
   color: #0085FF;
-  cursor: pointer;
+  text-decoration: none !important;
+  : hover{
+    text-decoration: underline !important;
+  }
 `
 const LabelFooter = styled(Label)<{ isDisabled: boolean }>`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};

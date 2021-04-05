@@ -117,7 +117,7 @@ const ModalInput: React.FC<ModalInputProps> = ({
   return (
     <div style={{ position: 'relative' }}>
       <StyledMaxText>
-        {displayBalance.toLocaleString()} {symbol} {TranslateString(526, 'Available')}1111111
+        {displayBalance.toLocaleString()} {symbol} {TranslateString(526, 'Available')}
       </StyledMaxText>
       <StyledTokenInput isWarning={isBalanceZero}>
         <FlexText>
