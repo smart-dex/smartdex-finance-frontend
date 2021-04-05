@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
 import { Text, Button, Input, InputProps, Flex, Link } from 'uikit-sotatek'
+import NumberFormat from 'react-number-format';
 import useI18n from '../../hooks/useI18n'
 
 
@@ -34,14 +35,7 @@ const StyledTokenInput = styled.div<InputProps>`
   height: 70px;
 `
 
-const StyledInput = styled(Input)`
-  background-color: ${({ theme }) => theme.isDark ? darkColors.backgroundInput : lightColors.backgroundInput};
-  box-shadow: none;
-  margin: 0px 2px 0px 8px;
-  padding: 0;
-  font-size: 14px;
-  height: 56px;
-  color:  ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
+const StyledInput = styled.div`
   ${({ theme }) => theme.mediaQueries.xs} {
     width: 33%;
   }
@@ -51,8 +45,22 @@ const StyledInput = styled(Input)`
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 62%;
   }
-  &:focus {
-    box-shadow: none !important;
+  input {
+    width: 100%;
+    background: none;
+    border: 0;
+    background-color: ${({ theme }) => theme.isDark ? darkColors.backgroundInput : lightColors.backgroundInput};
+    box-shadow: none;
+    margin: 0px 2px 0px 8px;
+    padding: 0;
+    font-size: 14px;
+    height: 56px;
+    font-weight: 600;
+    color:  ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
+    &:focus {
+      box-shadow: none !important;
+      outline: none;
+    }
   }
 `
 const FlexText = styled(Flex)`
@@ -80,6 +88,9 @@ const ButtonMax = styled(Button)`
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background: #0085FF;
     opacity: 0.7;
+  }
+  ${({ theme }) => theme.mediaQueries.xs} {
+    margin-left: 3px;
   }
 `
 const StyledMaxText = styled.div`
@@ -121,10 +132,26 @@ const ModalInput: React.FC<ModalInputProps> = ({
       </StyledMaxText>
       <StyledTokenInput isWarning={isBalanceZero}>
         <FlexText>
-          <StyledInput onChange={onChange} placeholder="0" value={value} />
+          <StyledInput>
+            <NumberFormat
+              value={value}
+              placeholder="0"
+              onChange={onChange}
+              thousandSeparator=","
+              allowNegative={false}
+              decimalScale={8}
+              isAllowed={(values) => {
+                const {floatValue} = values;
+                if (floatValue >= 10000000000000000) {
+                  return false;
+                }
+                return true;
+              }}
+            />
+          </StyledInput>
           <Flex alignItems="center" >
             <StyledTokenSymbol>{symbol}</StyledTokenSymbol>
-            <ButtonMax size="sm" onClick={onSelectMax} marginLeft="15px">
+            <ButtonMax size="sm" onClick={onSelectMax}>
               {TranslateString(452, 'MAX')}
             </ButtonMax>
           </Flex>

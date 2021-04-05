@@ -77,6 +77,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         max={fullBalance}
         symbol="TICKET"
         availableSymbol="SDC"
+        thousandSeparator=""
       />
       <div>
         <Tips>{TranslateString(999, `1 Ticket = ${LOTTERY_TICKET_PRICE} SDC`, { num: LOTTERY_TICKET_PRICE })}</Tips>
