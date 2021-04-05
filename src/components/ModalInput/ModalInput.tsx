@@ -47,7 +47,6 @@ const StyledInput = styled(Input)`
   }
   ${({ theme }) => theme.mediaQueries.sm} {
     width: 51%;
-    height: 60px;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 63%;
@@ -97,7 +96,7 @@ const StyledTokenSymbol = styled.span`
   font-weight: 700;
   font-weight: 600;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 18px;
   display: flex;
 `
 

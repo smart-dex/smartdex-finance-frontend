@@ -46,8 +46,9 @@ const LinkFooter = styled(LinkExternal)`
   justify-content: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
   width: 100%;
-  margin: 10px 0px 0px 0px !important;
+  margin: 10px 5px 0px 0px !important;
   background: none !important;
+  grid-gap: 10px;
 `
 return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>

@@ -24,6 +24,8 @@ const TicketsList = styled.div`
   overflow-y: auto;
   max-height: 400px;
   color: ${(props) => props.theme.colors.primary};
+  max-height: 320px;
+  overflow-y: auto;
 `
 const Title = styled.div`
   color: ${(props) => props.theme.colors.secondary};
