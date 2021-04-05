@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
 import NumberFormat from 'react-number-format';
@@ -30,6 +30,14 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
           thousandSeparator={thousandSeparator}
           allowNegative={false}
           onKeyPress={eventKeyPress}
+          decimalScale={8}
+          isAllowed={(values) => {
+            const {floatValue} = values;
+            if (floatValue >= 10000000000000000) {
+              return false;
+            }
+            return true;
+          }}
         />
       </StyledInput>
       {!!endAdornment && endAdornment}

@@ -28,7 +28,14 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       if (e.currentTarget.value) {
-        setVal((e.currentTarget.value.replaceAll(',','')))
+        const data = String(Number(e.currentTarget.value.replaceAll(',','')))
+        if (data.indexOf("e-7") !== -1) { 
+          setVal(String(Number(e.currentTarget.value.replaceAll(',','')).toFixed(7)))
+        } else if (data.indexOf("e-8") !== -1) {
+          setVal(String(Number(e.currentTarget.value.replaceAll(',','')).toFixed(8)))
+        } else {
+          setVal(data)
+        }
       } else {
         setVal('')
       }
