@@ -109,7 +109,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const linkScan = isTest ? `https://testnet.bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
-  const { earnings,stakedBalance} = useFarmUser(pid)
+  const { earnings, stakedBalance } = useFarmUser(pid)
   const rawStakedBalance = getBalanceNumber(stakedBalance)
 
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
@@ -140,12 +140,15 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('SMARTDEXCHAIN', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'SDC'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
-  const { quoteTokenAdresses, quoteTokenSymbol, lpTokenBalanceMC,lpTotalSupply, tokenAddresses, poolWeight } = farm
+  const { quoteTokenAdresses, quoteTokenSymbol, lpTokenBalanceMC, tokenAddresses, poolWeight, tokenSymbol, lpTotalSupply, tokenBalanceLP, quoteTokenBlanceLP } = farm
   const poolRate = (BLOCKS_PER_WEEK.times(SDC_PER_BLOCK.times(new BigNumber(poolWeight))))
   const displayPoolRate = poolRate.toFixed(2).toString()
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
-  const userPoolRate = (new BigNumber(rawStakedBalance).div(lpTokenBalanceMC)).times(100).toFixed(2).toString()
+  const userPoolRate = (new BigNumber(rawStakedBalance).div(lpTokenBalanceMC)).times(100)
+  const displayUserPoolRate = userPoolRate.toFixed(2)
+
+
   const handelOpenDetail = () => {
     setShowExpandableSection(!showExpandableSection)
   }
@@ -195,9 +198,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           <Detail mb="37px" >
             <DetailInFo>{TranslateString(999, 'Pool Rate')}: </DetailInFo>
             <InfoTextFarm bold style={{ display: 'flex' }}>
-              {displayPoolRate ? (
+              {!poolRate.isNaN() ? (
                 <>
-                  {`${displayPoolRate} SDC/WEEK`}
+                  {`${displayPoolRate} SDC/${TranslateString(999, 'WEEK')}`}
                 </>
               ) : (
                   <Skeleton height={24} width={80} />
@@ -207,9 +210,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           <Detail mb="37px" >
             <DetailInFo>{TranslateString(999, 'Your Pool Rate')}: </DetailInFo>
             <InfoTextFarm bold style={{ display: 'flex' }}>
-              {userPoolRate ? (
+              {!userPoolRate.isNaN() ? (
                 <>
-                  {userPoolRate}%
+                  {displayUserPoolRate}%
                   </>
               ) : (
                   <Skeleton height={24} width={80} />
@@ -234,12 +237,19 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           <ExpandingWrapper expanded={showExpandableSection}>
             <DetailsSection
               removed={removed}
+              poolRate={poolRate}
               bscScanAddress={linkScan}
               totalValueFormated={totalValueFormated}
               lpLabel={lpLabel}
               addLiquidityUrl={addLiquidityUrl}
               earnings={earnings}
               pid={pid}
+              quoteTokenSymbol={quoteTokenSymbol}
+              tokenSymbol={tokenSymbol}
+              lpTokenBalanceMC={lpTokenBalanceMC}
+              lpTotalSupply={lpTotalSupply}
+              tokenBalanceLP={tokenBalanceLP}
+              quoteTokenBlanceLP={quoteTokenBlanceLP}
             />
           </ExpandingWrapper>
         )}

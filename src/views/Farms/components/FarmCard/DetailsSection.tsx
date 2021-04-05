@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
-import { getBalanceNumber } from 'utils/formatBalance'
+import { getBalanceNumber, getFullDisplayBalance } from 'utils/formatBalance'
 import { useHarvest } from 'hooks/useHarvest'
 import { Text, Flex, Button, Link } from 'uikit-sotatek'
 import { lightColors, darkColors, baseColors } from 'style/Color'
@@ -16,6 +16,13 @@ interface ExpandableSectionProps {
   addLiquidityUrl?: string
   earnings?: BigNumber
   pid: number
+  poolRate:BigNumber,
+  quoteTokenSymbol:string
+  tokenSymbol:string
+  lpTokenBalanceMC:BigNumber,
+  lpTotalSupply:BigNumber,
+  tokenBalanceLP:BigNumber
+  quoteTokenBlanceLP:BigNumber
 }
 
 
@@ -40,16 +47,7 @@ const StyledTextInfo = styled(Text)`
     font-size: 12px;
   }
 `
-// const StyledLink = styled(Link)`
-//   font-size: 13px;
-//   text-decoration: revert;
-//   color: #0085FF;
-//   font-weight: 600;
-//   line-height: 30px;
-//   ${({ theme }) => theme.mediaQueries.nav} {
-//     font-size: 16px;
-//   }
-// `
+
 const ButtonClaim = styled(Button)`
   background: #17C267;
   box-shadow: 0px 4px 10px rgba(23, 194, 103, 0.24);
@@ -61,6 +59,7 @@ const ButtonClaim = styled(Button)`
   height:40px;
   width:96px;
   margin-bottom:8px;
+  align-self: flex-end;
 `
 const StyledLink = styled(Link)`
   margin-top: 16px;
@@ -78,14 +77,28 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   lpLabel,
   earnings,
   pid,
-  bscScanAddress
+  bscScanAddress,
+  poolRate,
+  quoteTokenSymbol,
+  tokenSymbol,
+  lpTokenBalanceMC,
+  lpTotalSupply,
+  tokenBalanceLP,
+  quoteTokenBlanceLP
 }) => {
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
   const rawEarningsBalance = getBalanceNumber(earnings)
   const { onReward } = useHarvest(pid)
-  const {  stakedBalance } = useFarmUser(pid)
+  const {  stakedBalance,tokenBalance } = useFarmUser(pid)
+  const totalYourPoolToken = stakedBalance.plus(tokenBalance)
+  const rawTotalYourPoolToken= getFullDisplayBalance(totalYourPoolToken)
   const rawStakedBalance = getBalanceNumber(stakedBalance)
+  const displayPoolRate = poolRate.toFixed(2).toString()
+  const yourPoolShare = totalYourPoolToken.div(lpTotalSupply)
+  const displayYourPoolShare =  yourPoolShare.times(100).toFixed(2)
+  const displayTokenBalanceLp = (getBalanceNumber(tokenBalanceLP)*yourPoolShare.toNumber()).toFixed(2)
+  const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP)*yourPoolShare.toNumber()).toFixed(2)
   return (
     <>
       <Flex flexDirection="column">
@@ -110,24 +123,24 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
               setPendingTx(false)
             }}
           >{TranslateString(999, 'Claim')}</ButtonClaim>
-          <StyledTextInfo>1,111 SDC/WEEK</StyledTextInfo>
+          <StyledTextInfo>{displayPoolRate} SDC/ {TranslateString(999, 'WEEK')}</StyledTextInfo>
         </Flex>
       </Flex>
 
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Your total pool token')}: 345,0000</StyledTextInfo>
+          <StyledTextInfo>{TranslateString(999, 'Your total pool token')}: {rawTotalYourPoolToken}</StyledTextInfo>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pool token in rewards')}: 345,0000</StyledTextInfo>
+          <StyledTextInfo>{TranslateString(999, 'Pool token in rewards')}: {lpTokenBalanceMC}</StyledTextInfo>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pooled SDC')}: 12,50000</StyledTextInfo>
+          <StyledTextInfo>{TranslateString(999, 'Pooled')} {tokenSymbol}: {displayTokenBalanceLp}</StyledTextInfo>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pooled DDD')}: 90,0000</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Pooled')} {quoteTokenSymbol}: {displayQuoteTokenBlanceLP}</StyledTextInfo>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Your pool share')}: 15,432%</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Your pool share')}: {displayYourPoolShare} %</StyledTextInfo>
       </Flex>
       <Flex>
         <StyledTextInfo>{TranslateString(999, 'Total USD')}: {totalValueFormated}</StyledTextInfo>

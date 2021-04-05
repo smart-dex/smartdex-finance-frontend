@@ -26,7 +26,6 @@ interface SelectModalProps {
 const SelectModal: React.FC<SelectModalProps> = ({ onDismiss,removed, earnings, pid, stakedBalance, lpName ,earnLabel, tokenBalance, addLiquidityUrl }) => {
   const TranslateString = useI18n()
   const rawStakedBalance = getBalanceNumber(stakedBalance)
-  const displayBalance = rawStakedBalance;
   const [onBack] = useModal(
     <SelectModal
       pid={pid}
@@ -54,7 +53,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss,removed, earnings, 
             <img src='/images/balance-icon.svg' alt='balance-icon' />
           </StyledImg>
           <BalanceAndCompound>
-            <Balance fontSize="32px" value={displayBalance} />
+            <Balance fontSize="32px" value={rawStakedBalance} />
           </BalanceAndCompound>
           <Label
             text={`${lpName} ${TranslateString(1074, 'Staked')}`}
