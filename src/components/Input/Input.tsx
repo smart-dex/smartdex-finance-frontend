@@ -33,7 +33,7 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
           decimalScale={8}
           isAllowed={(values) => {
             const {floatValue} = values;
-            if (floatValue >= 10000000000000000) {
+            if (floatValue >= 10000000000000000 && thousandSeparator) {
               return false;
             }
             return true;
