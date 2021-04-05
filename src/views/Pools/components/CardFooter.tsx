@@ -45,7 +45,6 @@ const TokenLink = styled(Link)`
   : hover{
     text-decoration: underline !important;
   }
-  cursor: pointer;
 `
 const LabelFooter = styled(Label)<{ isDisabled: boolean }>`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
