@@ -116,6 +116,7 @@ const LinkPrimary = styled(Link)`
   &:hover{
     opacity:0.5;
   }
+  outline: 0;
 `
 const LinkSecondary = styled(Link)`
   ${ButtonSecondary}
@@ -124,6 +125,7 @@ const LinkSecondary = styled(Link)`
   box-shadow:none;
   border: 1px solid ${lightColors.buttonSecond};
   padding:0 5px;
+  outline: 0;
   &:hover{
     background-color:${lightColors.buttonSecond};
     color:${brandColors.white};
@@ -141,6 +143,7 @@ const LinkPrimaryPd30 = styled(Link)`
   }
   margin-top: 40px;
   margin-bottom: 40px;
+  outline: 0;
 `
 const LinkButtonBorder = styled(Link)`
   color: #fff;
