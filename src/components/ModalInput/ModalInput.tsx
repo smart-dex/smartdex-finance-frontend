@@ -49,7 +49,7 @@ const StyledInput = styled(Input)`
     width: 51%;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 63%;
+    width: 62%;
   }
   &:focus {
     box-shadow: none !important;
@@ -76,6 +76,7 @@ const ButtonMax = styled(Button)`
   line-height: 38px;
   color: #FFFFFF;
   height: 38px;
+  margin-left: 8px !important;
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background: #0085FF;
     opacity: 0.7;
@@ -116,7 +117,7 @@ const ModalInput: React.FC<ModalInputProps> = ({
   return (
     <div style={{ position: 'relative' }}>
       <StyledMaxText>
-        {displayBalance.toLocaleString()} {symbol} {TranslateString(526, 'Available')}
+        {displayBalance.toLocaleString()} {symbol} {TranslateString(526, 'Available')}1111111
       </StyledMaxText>
       <StyledTokenInput isWarning={isBalanceZero}>
         <FlexText>
