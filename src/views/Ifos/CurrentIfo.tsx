@@ -116,6 +116,7 @@ const LinkPrimary = styled(Link)`
   &:hover{
     opacity:0.5;
   }
+  outline: 0;
 `
 const LinkSecondary = styled(Link)`
   ${ButtonSecondary}
@@ -124,6 +125,7 @@ const LinkSecondary = styled(Link)`
   box-shadow:none;
   border: 1px solid ${lightColors.buttonSecond};
   padding:0 5px;
+  outline: 0;
   &:hover{
     background-color:${lightColors.buttonSecond};
     color:${brandColors.white};
@@ -141,6 +143,7 @@ const LinkPrimaryPd30 = styled(Link)`
   }
   margin-top: 40px;
   margin-bottom: 40px;
+  outline: 0;
 `
 const LinkButtonBorder = styled(Link)`
   color: #fff;
@@ -219,10 +222,10 @@ return (
             </List>
           </StyleList>
           <WrapGridButton>
-            <LinkPrimary href="http://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
+            <LinkPrimary href="https://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
-            <LinkSecondary href="http://smartdex-exchange.sotatek.works/swap#/pool">
+            <LinkSecondary href="https://smartdex-exchange.sotatek.works/swap#/pool">
               {TranslateString(1062, 'Get LP Tokens')}
               <ChevronDown />
             </LinkSecondary>

@@ -79,7 +79,7 @@ return (
         </ButtonConfirm>
       </FlexBtn>
       <LinkFooter
-        href="http://smartdex-exchange.sotatek.works/pool#/pools" style={{ margin: 'auto' }}
+        href="https://smartdex-exchange.sotatek.works/pool#/pools" style={{ margin: 'auto' }}
       >
         {`Get ${currency}`}
       </LinkFooter>
