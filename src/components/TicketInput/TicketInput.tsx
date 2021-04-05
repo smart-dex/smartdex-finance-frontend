@@ -10,9 +10,10 @@ interface TokenInputProps extends InputProps {
   symbol: string
   availableSymbol: string
   onSelectMax?: () => void
+  thousandSeparator: string
 }
 
-const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, onChange, onSelectMax, value }) => {
+const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, onChange, onSelectMax, value, thousandSeparator }) => {
   const TranslateString = useI18n()
 
   return (
@@ -32,6 +33,7 @@ const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, 
         onChange={onChange}
         placeholder="0"
         value={value}
+        thousandSeparator={thousandSeparator}
       />
       <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${availableSymbol} Available`)}</StyledMaxText>
     </StyledTokenInput>

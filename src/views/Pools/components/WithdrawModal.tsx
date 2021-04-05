@@ -8,8 +8,6 @@ import { getFullDisplayBalance } from '../../../utils/formatBalance'
 import TokenInput from '../../../components/TokenInput'
 import useI18n from '../../../hooks/useI18n'
 
-
-
 interface WithdrawModalProps {
   max: BigNumber
   onConfirm: (amount: string) => void
@@ -28,7 +26,11 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
 
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
-      setVal(e.currentTarget.value)
+      if (e.currentTarget.value) {
+        setVal(String(Number(e.currentTarget.value.replaceAll(',',''))))
+      } else {
+        setVal('')
+      }
     },
     [setVal],
   )
@@ -46,13 +48,14 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
         value={val}
         max={fullBalance}
         symbol={tokenName}
+        thousandSeparator=","
       />
       <ModalActions>
         <ButtonCancel variant="secondary" onClick={onBack}>
           {TranslateString(462, 'Cancel')}
         </ButtonCancel>
         <ButtonConfirm
-          disabled={pendingTx || fullBalance === '0' || Number(val) < 0 || val > fullBalance || Number.isNaN(Number(val))}
+          disabled={pendingTx || Number(fullBalance) === 0 || Number(val) > Number(fullBalance)}
           onClick={async () => {
             setPendingTx(true)
             await onConfirm(val)

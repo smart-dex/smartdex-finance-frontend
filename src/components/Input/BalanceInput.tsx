@@ -34,7 +34,7 @@ const StyledTokenSymbol = styled.span`
   font-weight: 700;
 `
 
-const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, value }) => {
+const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, value, thousandSeparator }) => {
   const TranslateString = useI18n()
 
   return (
@@ -54,6 +54,7 @@ const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, val
         onChange={onChange}
         placeholder="0"
         value={value}
+        thousandSeparator={thousandSeparator}
       />
       <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${symbol} Available`)}</StyledMaxText>
     </div>
