@@ -67,12 +67,6 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
   const sdcCosts = (amount: string): number => {
     return +amount * LOTTERY_TICKET_PRICE
   }
-  const eventKeyPress = (event) => {
-    const charCode = (event.which) ? event.which : event.keyCode;
-    if (charCode < 48 || charCode > 57) {
-      event.preventDefault();
-    }
-  }
   return (
     <Modal title={TranslateString(450, 'Enter amount of tickets to buy')} onDismiss={onDismiss}>
       <TicketInput
@@ -83,7 +77,6 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         symbol="TICKET"
         availableSymbol="SDC"
         thousandSeparator=""
-        // onkeypress={eventKeyPress}
       />
       <div>
         <Tips>{TranslateString(999, `1 Ticket = ${LOTTERY_TICKET_PRICE} SDC`, { num: LOTTERY_TICKET_PRICE })}</Tips>

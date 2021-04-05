@@ -13,6 +13,12 @@ export interface InputProps {
 }
 
 const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, startAdornment, value, thousandSeparator="," }) => {
+  const eventKeyPress = (event) => {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode === 46 && !thousandSeparator) {
+      event.preventDefault();
+    }
+  }
   return (
     <StyledInputWrapper>
       {!!startAdornment && startAdornment}
@@ -23,6 +29,7 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
           onChange={onChange}
           thousandSeparator={thousandSeparator}
           allowNegative={false}
+          onKeyPress={eventKeyPress}
         />
       </StyledInput>
       {!!endAdornment && endAdornment}

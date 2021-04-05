@@ -58,7 +58,6 @@ const handleColor = (theme) => (
   theme.isDark ? darkColors.colorWap : ' #8F8FA0'
 )
 
-
 const TicketCard: React.FC = () => {
   const TranslateString = useI18n()
   const allowance = useLotteryAllowance()

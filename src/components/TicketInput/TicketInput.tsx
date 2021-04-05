@@ -15,7 +15,6 @@ interface TokenInputProps extends InputProps {
 
 const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, onChange, onSelectMax, value, thousandSeparator }) => {
   const TranslateString = useI18n()
-
   return (
     <StyledTokenInput>
       <Input

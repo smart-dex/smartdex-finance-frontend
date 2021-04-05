@@ -28,7 +28,11 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
 
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
-      setVal(e.currentTarget.value)
+      if (e.currentTarget.value) {
+        setVal(String(Number(e.currentTarget.value.replaceAll(',',''))))
+      } else {
+        setVal('')
+      }
     },
     [setVal],
   )
@@ -53,7 +57,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
             {TranslateString(462, 'Cancel')}
           </ButtonCancel>
           <ButtonConfirm
-            disabled={pendingTx || fullBalance === '0' || Number(val) < 0 || val > fullBalance || Number.isNaN(Number(val))}
+            disabled={pendingTx || Number(fullBalance) === 0 || Number(val) > Number(fullBalance) || Number(val) === 0}
             onClick={async () => {
               setPendingTx(true)
               await onConfirm(val)
