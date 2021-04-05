@@ -47,10 +47,9 @@ const StyledInput = styled(Input)`
   }
   ${({ theme }) => theme.mediaQueries.sm} {
     width: 51%;
-    height: 60px;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 63%;
+    width: 62%;
   }
   &:focus {
     box-shadow: none !important;
@@ -77,6 +76,7 @@ const ButtonMax = styled(Button)`
   line-height: 38px;
   color: #FFFFFF;
   height: 38px;
+  margin-left: 8px !important;
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     background: #0085FF;
     opacity: 0.7;
@@ -97,7 +97,7 @@ const StyledTokenSymbol = styled.span`
   font-weight: 700;
   font-weight: 600;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 18px;
   display: flex;
 `
 
