@@ -33,6 +33,10 @@ const Farms: React.FC = () => {
     }
   }, [account, dispatch, fastRefresh])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [stackedOnly, setStackedOnly] = useState(false)
 
   const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
