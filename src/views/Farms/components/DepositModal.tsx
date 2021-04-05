@@ -29,7 +29,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       if (e.currentTarget.value) {
-        setVal(String(Number(e.currentTarget.value.replaceAll(',',''))))
+        setVal((e.currentTarget.value.replaceAll(',','')))
       } else {
         setVal('')
       }

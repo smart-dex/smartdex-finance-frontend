@@ -28,7 +28,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       if (e.currentTarget.value) {
-        setVal(String(Number(e.currentTarget.value.replaceAll(',',''))))
+        setVal((e.currentTarget.value.replaceAll(',','')))
       } else {
         setVal('')
       }
@@ -42,7 +42,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
 
   return (
     <ModalStyle title={`${TranslateString(316, 'Deposit')} ${tokenName} Tokens`} onDismiss={onBack}>
-      <StyledModal>
+      <StyledModal> 
         <TokenInput
           value={val}
           onSelectMax={handleSelectMax}

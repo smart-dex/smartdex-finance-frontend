@@ -23,11 +23,10 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   const fullBalance = useMemo(() => {
     return getFullDisplayBalance(max)
   }, [max])
-
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       if (e.currentTarget.value) {
-        setVal(String(Number(e.currentTarget.value.replaceAll(',',''))))
+        setVal(e.currentTarget.value.replaceAll(',',''))
       } else {
         setVal('')
       }
