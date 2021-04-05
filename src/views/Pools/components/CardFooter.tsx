@@ -6,6 +6,8 @@ import useI18n from 'hooks/useI18n'
 import { Flex, Link } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
 import Balance from 'components/Balance'
+import {registerToken} from 'utils/wallet'
+import { BASE_URL } from 'config'
 
 interface Props {
   isOpenDetail: boolean
@@ -14,6 +16,9 @@ interface Props {
   blocksRemaining: number
   isFinished: boolean
   blocksUntilStart: number
+  tokenName: string
+  tokenAddress: string
+  tokenDecimals: number
 }
 
 const StyledFooter = styled.div<{ isFinished: boolean }>`
@@ -40,6 +45,7 @@ const TokenLink = styled(Link)`
   : hover{
     text-decoration: underline !important;
   }
+  cursor: pointer;
 `
 const LabelFooter = styled(Label)<{ isDisabled: boolean }>`
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
@@ -62,8 +68,13 @@ const CardFooter: React.FC<Props> = ({
   isFinished,
   blocksUntilStart,
   isOpenDetail,
+  tokenAddress,
+  tokenName,
+  tokenDecimals,
+  projectLink
 }) => {
   const TranslateString = useI18n()
+  const imageSrc = `${BASE_URL}/images/tokens/${tokenName.toLowerCase()}.png`
   return (
     <StyledFooter isFinished={isFinished}>
       {isOpenDetail && (
@@ -84,8 +95,15 @@ const CardFooter: React.FC<Props> = ({
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
             </Detail>
           )}
+           {tokenAddress && (
+            <Flex mb="10px">
+              <TokenLink onClick={() => registerToken(tokenAddress, tokenName, tokenDecimals, imageSrc)}>
+                Add {tokenName} to Metamask
+              </TokenLink>
+            </Flex>
+          )}
           <Flex justifyContent="space-between" alignItems='center'>
-            <TokenLink href='/' target="_blank">
+            <TokenLink href={projectLink} target="_blank">
               {TranslateString(412, 'View project site')}
             </TokenLink>
           </Flex>

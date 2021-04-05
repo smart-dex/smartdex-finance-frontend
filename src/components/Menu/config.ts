@@ -91,11 +91,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Voting',
-        href: 'https://voting.pancakeswap.finance',
+        href: '',
       },
       {
         label: 'Github',
-        href: 'https://github.com/pancakeswap',
+        href: '',
       },
       {
         label: 'Docs',
@@ -103,7 +103,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Blog',
-        href: 'https://pancakeswap.medium.com',
+        href: '',
       },
     ],
   },

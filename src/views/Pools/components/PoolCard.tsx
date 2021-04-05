@@ -36,12 +36,13 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     sousId,
     image,
     tokenName,
+    tokenAddress,
+    tokenDecimals,
     stakingTokenName,
     stakingTokenAddress,
     projectLink,
     harvest,
     apy,
-    tokenDecimals,
     poolCategory,
     totalStaked,
     startBlock,
@@ -181,9 +182,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <DetailPool>
             <StyledDetails style={{ marginBottom: '26px' }}>
               <StyleFlexDetail isFinished={isFinished}>{TranslateString(736, 'APR')}:</StyleFlexDetail>
-              {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ? (
-                '-'
-              ) : (
+              {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ?
+                (
+                  <StyleFlexDetail isFinished={isFinished}> - </StyleFlexDetail>
+                )
+                : (
                   <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
                 )}
             </StyledDetails>
@@ -237,6 +240,9 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             isFinished={isFinished}
             blocksUntilStart={blocksUntilStart}
             isOpenDetail={isOpenDetail}
+            tokenName={tokenName}
+            tokenAddress={tokenAddress}
+            tokenDecimals={tokenDecimals}
           />
         )}
       </CardContent>
