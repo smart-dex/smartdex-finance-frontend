@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '@pancakeswap-libs/uikit'
+import { Button } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import Input, { InputProps } from './Input'
 
 interface Props extends InputProps {
@@ -21,7 +22,7 @@ const StyledTokenAdornmentWrapper = styled.div`
 
 const StyledMaxText = styled.div`
   align-items: center;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.textMenuLeft)};
   display: flex;
   font-size: 14px;
   font-weight: 700;
@@ -30,8 +31,17 @@ const StyledMaxText = styled.div`
 `
 
 const StyledTokenSymbol = styled.span`
-  color: ${(props) => props.theme.colors.primary};
-  font-weight: 700;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
+  font-weight: 600;
+`
+const ButtonMAX = styled(Button)`
+  background: ${baseColors.primary} !important;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 38px;
+  height: 38px;
 `
 
 const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, value }) => {
@@ -45,9 +55,9 @@ const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, val
             <StyledTokenSymbol>{symbol}</StyledTokenSymbol>
             <StyledSpacer />
             <div>
-              <Button size="sm" onClick={onSelectMax}>
+              <ButtonMAX size="sm" onClick={onSelectMax}>
                 {TranslateString(452, 'MAX')}
-              </Button>
+              </ButtonMAX>
             </div>
           </StyledTokenAdornmentWrapper>
         }

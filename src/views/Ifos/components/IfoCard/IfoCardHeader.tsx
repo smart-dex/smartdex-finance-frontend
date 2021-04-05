@@ -74,7 +74,7 @@ const IfoCardHeader: React.FC<IfoCardHeaderProps> = ({ ifoId, name, subTitle }) 
   return (
     <StyledIfoCardHeader alignItems="center">
       <Avatar>
-        <img src={`/images/ifos/${ifoId}.svg`} alt={ifoId} />
+        <img src={`/images/ifos/${ifoId}.svg`} alt="" />
       </Avatar>
       <div>
         <Name>{name}</Name>

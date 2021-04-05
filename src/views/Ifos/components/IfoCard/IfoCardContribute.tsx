@@ -46,8 +46,12 @@ const CardButton= styled('div')`
   align-items: center;
   justify-content: center;
   & > button{
-    width: 20%;
+    width: 40%;  
+    ${({ theme }) => theme.mediaQueries.nav} {
+      width: 20%;
+    }
   }
+  
 `
 
 const ButtonApp = styled(Button)`
