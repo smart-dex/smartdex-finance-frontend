@@ -33,7 +33,7 @@ const StyledInput = styled.input`
   width: 100%;
   background: none;
   border: 0;
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colortextInput)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorTextInput)};
   flex: 1;
   height: 56px;
   margin: 0;
@@ -43,7 +43,7 @@ const StyledInput = styled.input`
   font-size: 14px;
   line-height: 17px;
   ::placeholder {
-    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colortextInput)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
   }
   
 `
