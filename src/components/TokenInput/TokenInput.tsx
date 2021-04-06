@@ -18,7 +18,7 @@ const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelect
       <StyledMaxText>
         {max.toLocaleString()} {symbol} {TranslateString(526, 'Available')}
       </StyledMaxText>
-      <Input
+      <Input 
         endAdornment={
           <StyledTokenAdornmentWrapper>
             <StyledTokenSymbol>{symbol}</StyledTokenSymbol>
@@ -46,8 +46,11 @@ const StyledSpacer = styled.div`
 `
 
 const StyledTokenAdornmentWrapper = styled.div`
-  align-items: center;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
 `
 
 const StyledMaxText = styled.div`

@@ -55,21 +55,25 @@ const StyledInputWrapper = styled.div`
 `
 
 const StyledInput = styled.div`
+  display: flex;
   width: 100%;
-  background: none;
-  border: 0;
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colortextInput)};
-  flex: 1;
-  height: 56px;
-  margin: 0;
-  padding: 0 15px 0 10px;
-  outline: none;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  ::placeholder {
+  input {
+    width: 100%;
+    background: none;
+    border: 0;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colortextInput)};
+    flex: 1;
+    height: 56px;
+    margin: 0;
+    padding: 0 15px 0 10px;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    ::placeholder {
     color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
-  }
+    }
+  
  
 `
 export default Input
