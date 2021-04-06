@@ -146,7 +146,9 @@ interface FarmCardActionsProps {
   changeOpenDetail: () => void
   isOpenDetail: boolean
   earnLabel: string
-  removed:boolean
+  removed: boolean,
+  pendingTx: boolean,
+  setPendingTx: (pendingTx: boolean) => void
 }
 
 const CardActions: React.FC<FarmCardActionsProps> = ({
@@ -157,7 +159,9 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   changeOpenDetail,
   isOpenDetail,
   earnLabel,
-  removed
+  removed,
+  pendingTx,
+  setPendingTx
 }) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
@@ -181,6 +185,8 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
       addLiquidityUrl={addLiquidityUrl}
       earnLabel={earnLabel}
       removed={removed}
+      pendingTx={pendingTx}
+      setPendingTx={setPendingTx}
     />
   )
   const { onApprove } = useApprove(lpContract)

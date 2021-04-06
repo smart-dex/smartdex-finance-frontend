@@ -21,9 +21,11 @@ interface SelectModalProps {
   tokenBalance: BigNumber
   earnLabel: string
   removed: boolean
+  pendingTx: boolean
+  setPendingTx: (pendingTx: boolean) => void
 }
 
-const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings, pid, stakedBalance, lpName, earnLabel, tokenBalance, addLiquidityUrl }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings, pid, stakedBalance, lpName, earnLabel, tokenBalance,pendingTx,setPendingTx, addLiquidityUrl }) => {
   const TranslateString = useI18n()
   const rawStakedBalance = getBalanceNumber(stakedBalance)
   const [onBack] = useModal(
@@ -36,7 +38,9 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings,
       addLiquidityUrl={addLiquidityUrl}
       earnLabel={earnLabel}
       removed={removed}
-    />
+      pendingTx={pendingTx}
+      setPendingTx={setPendingTx}
+      />
   )
   return (
     <ModalStyle title={` `} onDismiss={onDismiss}>
@@ -45,7 +49,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings,
           <ActionEarn>
             <StyledImg>
               <img src='/images/balance-icon.svg' alt='balance-icon' />
-              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss} />
+              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss} pendingTx={pendingTx} setPendingTx={setPendingTx}/>
             </StyledImg>
 
           </ActionEarn>
@@ -105,7 +109,7 @@ const Action = styled.div`
 const ActionStake = styled(Action)`
   margin-left:none;
   ${({ theme }) => theme.mediaQueries.nav} {
-          margin - left:auto;
+    margin-left: auto;
   }
 `
 const ActionEarn = styled(Action)`

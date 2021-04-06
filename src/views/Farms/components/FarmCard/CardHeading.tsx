@@ -73,7 +73,7 @@ const StyledTooltip = styled.div`
   left: 0px;
   opacity: 0;
   z-index: 99;
-  color: #FFFFFF;
+  color: ${({ theme }) => (theme.isDark ? '#E5E5E5 ' : '#FFFFFF')};
   width: calc( 100% + 20px);
   display: block;
   font-size: 15px;
@@ -81,8 +81,7 @@ const StyledTooltip = styled.div`
   border-radius: 3px;
   text-align: center;
   text-shadow: 1px 1px 2px #111;
-  background: rgba(51,51,51,0.9);
-  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  background: ${({ theme }) => (theme.isDark ? 'rgba(51,51,51,0.9) ' : '#E5E5E5')};
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
@@ -97,7 +96,7 @@ const StyledTooltip = styled.div`
     content: '';
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid rgba(51,51,51,0.9);
+    border-top: 10px solid ${({ theme }) => (theme.isDark ? 'rgba(51,51,51,0.9) ' : '#E5E5E5')};
     position: absolute;
     bottom: -10px;
     left: 43%;
@@ -107,7 +106,7 @@ const StyledTooltip = styled.div`
     content: '';
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid rgba(51,51,51,0.9);
+    border-top: 10px solid  ${({ theme }) => (theme.isDark ? 'rgba(51,51,51,0.9) ' : '#E5E5E5')};
     position: absolute;
     bottom: -10px;
     left: 43%;

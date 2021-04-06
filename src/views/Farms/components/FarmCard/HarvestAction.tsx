@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { Button, Flex } from 'uikit-sotatek'
@@ -14,6 +14,8 @@ interface FarmCardActionsProps {
   pid?: number
   earnLabel:string
   onBack:()=>void
+  pendingTx: boolean
+  setPendingTx: (pendingTx: boolean) => void
 }
 const StyledHarvestAction = styled(Flex)`
   justify-content: center;
@@ -32,7 +34,7 @@ const StyledButton = styled(Button) <{ isDisable: boolean }>`
   margin-top: 60px;
   margin-left:auto;
   margin-right:auto;
-  background: ${({ isDisable }) => !isDisable && baseColors.primary};
+  background: ${({ isDisable }) => !isDisable ?  baseColors.primary: ""};
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
   max-width: 143px;
@@ -58,9 +60,8 @@ const BalanceAndCompound = styled.div`
   }
 `
 
-const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel, onBack }) => {
+const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel, onBack,pendingTx,setPendingTx }) => {
   const TranslateString = useI18n()
-  const [pendingTx, setPendingTx] = useState(false)
   const { onReward } = useHarvest(pid)
   const rawEarningsBalance = getBalanceNumber(earnings)
   return (
@@ -73,7 +74,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel
         colorLabel={baseColors.orange}
       />
       <StyledButton
-        disabled={rawEarningsBalance === 0 || pendingTx}
+        disabled={pendingTx}
         isDisable={rawEarningsBalance === 0 || pendingTx}
         onClick={async () => {
           setPendingTx(true)
