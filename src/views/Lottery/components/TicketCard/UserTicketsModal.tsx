@@ -62,6 +62,8 @@ const TicketsList = styled.div`
   text-align: center;
   color: ${baseColors.primary};
   margin-bottom: 8px;
+  max-height: 320px;
+  overflow-y: auto;
   h2 {
     p {
       padding: 8px;

@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 12992,
-            "text": "Với mỗi giao dịch một khoản phí 0.2% được trả. 0.17% trả cho nhà cung cấp thanh khoản và 0.03% trả cho kho lưu trữ PanSDCSwap.",
+            "text": "Với mỗi giao dịch một khoản phí 0.2% được trả. 0.17% trả cho nhà cung cấp thanh khoản và 0.03% trả cho kho lưu trữ SmartDEX.",
             "user": {
                 "id": 14451626,
                 "username": "20dec",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 36118,
-            "text": "Dự án này nhận BNB, PanSDCSwap đốt SDC.",
+            "text": "Dự án này nhận BNB, SmartDEX đốt SDC.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 27634,
-            "text": "Triển khai dự án của bạn với PanSDCSwap, dự án AMM và nhà cung cấp thanh khoản được dùng nhiều nhất của Binance Smart Chain, nhằm mang trực tiếp token của bạn đến với cộng đồng năng động nhất và đang phát triển mạnh trên BSC.",
+            "text": "Triển khai dự án của bạn với SmartDEX, dự án AMM và nhà cung cấp thanh khoản được dùng nhiều nhất của Binance Smart Chain, nhằm mang trực tiếp token của bạn đến với cộng đồng năng động nhất và đang phát triển mạnh trên BSC.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",

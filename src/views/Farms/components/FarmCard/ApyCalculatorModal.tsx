@@ -45,6 +45,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
 
   return (
     <Modal title="ROI" onDismiss={onDismiss}>
+      <Wrapmodal>
       <Grid>
         <GridItem>
           <TextStyled fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
@@ -121,9 +122,15 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
           {TranslateString(999, 'Get')} {lpLabel}
         </StyledLinkExternal>
       </Flex>
+      </Wrapmodal>
     </Modal>
   )
 }
+const Wrapmodal = styled.div`
+  max-width: 100%;
+  overflow-y: auto;
+`
+
 const TextStyled = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
@@ -137,16 +144,21 @@ const TextStyled = styled(Text)`
 const DescriptionStyled = styled.div`
   margin: auto;
   width: 100%;
-  max-width:500px;
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  text-align:center;
+  justify-content: center; 
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-   
+    max-width: 500px;
   }
+  ${({ theme }) => theme.mediaQueries.xs} {
+    min-width: 100%;
+  }
+ 
 `
 const StyledLinkExternal = styled(LinkExternal)`
     font-size: 13px;

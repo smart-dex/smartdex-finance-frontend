@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 39560,
-            "text": "每次交易将收取 0.2% 的费用，其中的 0.17% 将被分配给流动性供应商，另外 0.03% 会转入 PanSDCSwap 司库。",
+            "text": "每次交易将收取 0.2% 的费用，其中的 0.17% 将被分配给流动性供应商，另外 0.03% 会转入 SmartDEX 司库。",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 39668,
-            "text": "此项目获得了 BNB，PanSDCSwap 会焚毁 SDC。",
+            "text": "此项目获得了 BNB，SmartDEX 会焚毁 SDC。",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 39672,
-            "text": "通过 Binance Smart Chain 上最常用的 AMM 项目和流动性供应商 PanSDCSwap 发起您的项目，将您的代币直接引入 BSC 上最活跃且快速发展的社区。",
+            "text": "通过 Binance Smart Chain 上最常用的 AMM 项目和流动性供应商 SmartDEX 发起您的项目，将您的代币直接引入 BSC 上最活跃且快速发展的社区。",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",

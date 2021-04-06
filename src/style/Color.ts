@@ -80,7 +80,7 @@ export const lightColors = {
   boxShadow: 'rgba(239, 239, 239, 0.24)',
   colorInput: 'rgba(95, 94, 118, 0.5)',
   colorButtonCancel: '#616171',
-  bgButtonCancel: 'rgba(95, 94, 118, 0.2)',
+  bgButtonCancel: '#D9D9DE',
   colorTicket: 'rgba(95, 94, 118, 0.7)',
   boxShadowLottery: 'rgba(120, 118, 148, 0.05)',
   borderButtonDetail: '#8F8FA0',
@@ -90,6 +90,7 @@ export const lightColors = {
   btnViewMobile:'#E8E8EB',
   btnCancle:'#D9D9DE',
   backgroundInput: '#E9F4FC',
+  colortextInput: 'rgb(69, 42, 122)',
 
 }
 

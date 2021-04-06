@@ -26,7 +26,10 @@ export interface Props {
   tokenDecimals: number
 }
 const CardLabel = styled.div`
-  width: 50%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 50%;
+  }
+  width: 100%;
   color: ${baseColors.colorbt};
   padding-top: 15px;
   label{
@@ -37,23 +40,28 @@ const CardLabel = styled.div`
     : hover{
       opacity: 0.65 !important;
       background: ${baseColors.primary} !important;
+   }
   }
 `
-
 const CardButton= styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   & > button{
-    width: 20%;
+    width: 40%;  
+    ${({ theme }) => theme.mediaQueries.nav} {
+      width: 20%;
+    }
   }
+  
 `
 
 const ButtonApp = styled(Button)`
   background: ${baseColors.primary};
   padding: 0px 20px;
   margin-top: 15px;
+  margin-right: 15px;
 `
 const TextNote = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};

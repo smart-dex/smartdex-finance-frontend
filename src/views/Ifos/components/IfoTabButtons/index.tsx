@@ -52,6 +52,9 @@ const Wrapper = styled.div`
     font-weight: normal;
     line-height: 20px;
   }
+  .active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+    opacity: 1 !important;
+}
 `
 
 const IfoTabButtons = () => {

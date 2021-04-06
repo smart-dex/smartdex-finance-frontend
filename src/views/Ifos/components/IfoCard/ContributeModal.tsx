@@ -46,8 +46,9 @@ const LinkFooter = styled(LinkExternal)`
   justify-content: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
   width: 100%;
-  margin: 10px 0px 0px 0px !important;
+  margin: 10px 5px 0px 0px !important;
   background: none !important;
+  grid-gap: 10px;
 `
 return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
@@ -57,6 +58,7 @@ return (
         symbol={currency}
         max={balance}
         onSelectMax={() => setValue(balance.toString())}
+        thousandSeparator=""
       />
       <FlexBtn>
         <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">
@@ -77,7 +79,7 @@ return (
         </ButtonConfirm>
       </FlexBtn>
       <LinkFooter
-        href="http://smartdex-exchange.sotatek.works/pool#/pools" style={{ margin: 'auto' }}
+        href="https://smartdex-exchange.sotatek.works/pool#/pools" style={{ margin: 'auto' }}
       >
         {`Get ${currency}`}
       </LinkFooter>

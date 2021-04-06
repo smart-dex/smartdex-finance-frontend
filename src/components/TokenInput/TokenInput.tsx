@@ -11,14 +11,14 @@ interface TokenInputProps extends InputProps {
   onSelectMax?: () => void
 }
 
-const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelectMax, value }) => {
+const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelectMax, value, thousandSeparator }) => {
   const TranslateString = useI18n()
   return (
     <StyledTokenInput>
       <StyledMaxText>
         {max.toLocaleString()} {symbol} {TranslateString(526, 'Available')}
       </StyledMaxText>
-      <Input
+      <Input 
         endAdornment={
           <StyledTokenAdornmentWrapper>
             <StyledTokenSymbol>{symbol}</StyledTokenSymbol>
@@ -33,6 +33,7 @@ const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelect
         onChange={onChange}
         placeholder="0"
         value={value}
+        thousandSeparator={thousandSeparator}
       />
     </StyledTokenInput>
   )
@@ -45,8 +46,11 @@ const StyledSpacer = styled.div`
 `
 
 const StyledTokenAdornmentWrapper = styled.div`
-  align-items: center;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
 `
 
 const StyledMaxText = styled.div`

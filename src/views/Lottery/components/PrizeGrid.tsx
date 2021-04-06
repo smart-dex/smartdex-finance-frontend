@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
-import { Heading, Text } from 'uikit-sotatek'
+import { Text } from 'uikit-sotatek'
 import { darkColors, lightColors } from 'style/Color'
 
 export interface PrizeGridProps {
@@ -30,14 +30,6 @@ const RightAlignedText = styled(Text)`
   }
 `
 
-const RightAlignedHeading = styled(Heading)`
-  text-align: center;
-  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  font-size: 16px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 18px;
-   }
-`
 
 const TextStyleThree = styled(Text)`
 color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
@@ -69,8 +61,9 @@ const TextStyle = styled(Text)`
    }
 `
 
-const HeadingStyle = styled(Heading)`
+const HeadingStyle = styled(Text)`
    text-align: center;
+   font-weight: 700;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   font-size: 16px;
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -118,11 +111,11 @@ const PrizeGrid: React.FC<PrizeGridProps> = ({
       </GridItem>
       {pastDraw ? (
         <PastDrawGridItem>
-          <RightAlignedHeading >{jackpotMatches}</RightAlignedHeading>
+          <HeadingStyle >{jackpotMatches}</HeadingStyle>
         </PastDrawGridItem>
       ) : <PastDrawGridItem />}
       <GridItem>
-        <RightAlignedHeading >{fourMatchesAmount.toLocaleString()}</RightAlignedHeading>
+        <HeadingStyle >{fourMatchesAmount.toLocaleString()}</HeadingStyle>
       </GridItem>
       {/* 3 matches row */}
       <GridItem>
