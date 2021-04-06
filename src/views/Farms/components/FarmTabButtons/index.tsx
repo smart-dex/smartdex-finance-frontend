@@ -82,13 +82,13 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
-  width: 100px;
+  min-width: 100px;
   font-size: 13px;
   line-height: 20px;
   font-weight: 400;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-    width: 135px;
+    min-width: 135px;
   }
 `
 const ButtonMenuStyle = styled.div`
