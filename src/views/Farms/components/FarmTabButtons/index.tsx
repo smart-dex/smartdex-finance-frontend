@@ -12,7 +12,10 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
   return (
     <Wrapper>
       <ToggleWrapper>
-        <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
+        <StyledToggle isActive={stackedOnly}>
+          <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
+        </StyledToggle>
+
         <StyledText> {TranslateString(1116, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
@@ -30,7 +33,14 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
 }
 
 export default FarmTabButtons
-
+const StyledToggle = styled.div <{ isActive: boolean }>`
+  >div{
+    background-color: ${({ isActive }) => (isActive ? "rgb(111 207 151 / 20%)" : "#E5E5E5")};
+    >div{
+      background-color: ${({ isActive }) => (isActive ? "#17C267" : "#FFFF")};
+    }
+  }
+`
 const StyledText = styled(Text)`
 font-style: normal;
 font-weight: normal;

@@ -12,7 +12,10 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
   return (
     <Wrapper>
       <ToggleWrapper>
-        <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
+        <StyledToggle isActive={stackedOnly}>
+          <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
+        </StyledToggle>
+
         <StyledText> {TranslateString(999, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
@@ -83,5 +86,13 @@ const ButtonMenuStyle = styled.div`
   border-radius: 50px;
   > div {
     border-radius: 50px;
+  }
+`
+const StyledToggle = styled.div <{ isActive: boolean }>`
+  >div{
+    background-color: ${({ isActive }) => (isActive ? "rgb(111 207 151 / 20%)" : "#E5E5E5")};
+    >div{
+      background-color: ${({ isActive }) => (isActive ? "#17C267" : "#FFFF")};
+    }
   }
 `
