@@ -58,6 +58,7 @@ return (
         symbol={currency}
         max={balance}
         onSelectMax={() => setValue(balance.toString())}
+        thousandSeparator=""
       />
       <FlexBtn>
         <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">
@@ -78,7 +79,7 @@ return (
         </ButtonConfirm>
       </FlexBtn>
       <LinkFooter
-        href="http://smartdex-exchange.sotatek.works/pool#/pools" style={{ margin: 'auto' }}
+        href="https://smartdex-exchange.sotatek.works/pool#/pools" style={{ margin: 'auto' }}
       >
         {`Get ${currency}`}
       </LinkFooter>

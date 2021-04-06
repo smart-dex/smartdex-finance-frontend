@@ -27,11 +27,6 @@ const GridItem = styled.div`
   margin-left: 20px;
 `
 
-const Description = styled(Text)`
-  max-width: 320px;
-  margin-bottom: 28px;
-`
-
 const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   onDismiss,
   lpLabel,

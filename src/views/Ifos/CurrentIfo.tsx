@@ -222,10 +222,10 @@ return (
             </List>
           </StyleList>
           <WrapGridButton>
-            <LinkPrimary href="http://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
+            <LinkPrimary href="https://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
-            <LinkSecondary href="http://smartdex-exchange.sotatek.works/swap#/pool">
+            <LinkSecondary href="https://smartdex-exchange.sotatek.works/swap#/pool">
               {TranslateString(1062, 'Get LP Tokens')}
               <ChevronDown />
             </LinkSecondary>

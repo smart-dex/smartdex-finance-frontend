@@ -76,16 +76,14 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         max={fullBalance}
         symbol="TICKET"
         availableSymbol="SDC"
+        thousandSeparator=""
       />
       <div>
         <Tips>{TranslateString(999, `1 Ticket = ${LOTTERY_TICKET_PRICE} SDC`, { num: LOTTERY_TICKET_PRICE })}</Tips>
       </div>
       <div>
         <Announce>
-          {TranslateString(
-            478,
-            'Ticket purchases are final. Your SDC cannot be returned to you after buying tickets.',
-          )}
+          {TranslateString(478, 'Ticket purchases are final. Your SDC cannot be returned to you after buying tickets.')}
         </Announce>
         <Final>{TranslateString(460, `You will spend: ${sdcCosts(val)} SDC`)}</Final>
       </div>
@@ -99,7 +97,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
             pendingTx ||
             parseInt(val) > Number(maxTickets) ||
             parseInt(val) > LOTTERY_MAX_NUMBER_OF_TICKETS ||
-            parseInt(val) < 1
+            parseInt(val) < 1 || val === ''
           }
           onClick={async () => {
             setPendingTx(true)
@@ -141,22 +139,22 @@ const Announce = styled.div`
 const StyleButtonCancel = styled(Button)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorButtonCancel : lightColors.colorButtonCancel)};
   background-color: ${({ theme }) => (theme.isDark ? darkColors.bgButtonCancel : lightColors.bgButtonCancel)};
-  box-shadow:  ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(222, 222, 222, 0.24)')};
+  box-shadow: ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(222, 222, 222, 0.24)')};
   border-radius: 10px;
   border: none;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  min-width: 145px
+  min-width: 145px;
 `
 const StyleButtonConfirm = styled(Button)`
   color: ${brandColors.white};
   background: ${baseColors.primary};
-  box-shadow:  0px 4px 10px rgba(222, 222, 222, 0.24);
+  box-shadow: 0px 4px 10px rgba(222, 222, 222, 0.24);
   border-radius: 10px;
   border: none;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  min-width: 145px
+  min-width: 145px;
 `
