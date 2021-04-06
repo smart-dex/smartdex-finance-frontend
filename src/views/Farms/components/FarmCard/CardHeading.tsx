@@ -148,18 +148,11 @@ const StyledTag = styled(Flex)`
   }
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
 `
-const StyledImg = styled.div`
-  width: 28px;
-  height: 28px;
-  margin: 0 auto;
-`
 
 const CardHeading: React.FC<ExpandableSectionProps> = ({
   lpLabel,
   multiplier,
-  isCommunityFarm,
-  farmImage,
-  tokenSymbol
+  isCommunityFarm
 }) => {
   return (
     <Flex flexDirection="column">
