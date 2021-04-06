@@ -56,7 +56,7 @@ const StyledInput = styled.div`
     font-size: 14px;
     height: 56px;
     font-weight: 600;
-    color:  ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
+    color:  ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colortextInput)};
     &:focus {
       box-shadow: none !important;
       outline: none;
