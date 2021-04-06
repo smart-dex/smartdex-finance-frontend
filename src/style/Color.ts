@@ -90,7 +90,7 @@ export const lightColors = {
   btnViewMobile:'#E8E8EB',
   btnCancle:'#D9D9DE',
   backgroundInput: '#E9F4FC',
-  colorTextInput: 'rgb(69, 42, 122)',
+  colortextInput: 'rgb(69, 42, 122)',
 
 }
 
