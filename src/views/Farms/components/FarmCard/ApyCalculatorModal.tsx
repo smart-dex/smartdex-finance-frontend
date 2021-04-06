@@ -45,6 +45,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
 
   return (
     <Modal title="ROI" onDismiss={onDismiss}>
+      <Wrapmodal>
       <Grid>
         <GridItem>
           <TextStyled fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
@@ -121,9 +122,15 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
           {TranslateString(999, 'Get')} {lpLabel}
         </StyledLinkExternal>
       </Flex>
+      </Wrapmodal>
     </Modal>
   )
 }
+const Wrapmodal = styled.div`
+  max-width: 100%;
+  overflow-y: auto;
+`
+
 const TextStyled = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
