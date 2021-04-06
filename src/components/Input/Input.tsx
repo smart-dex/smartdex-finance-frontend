@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
 import NumberFormat from 'react-number-format';

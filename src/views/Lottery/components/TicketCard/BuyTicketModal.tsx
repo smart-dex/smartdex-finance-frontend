@@ -67,7 +67,6 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
   const sdcCosts = (amount: string): number => {
     return +amount * LOTTERY_TICKET_PRICE
   }
-  console.log(val)
   return (
     <Modal title={TranslateString(450, 'Enter amount of tickets to buy')} onDismiss={onDismiss}>
       <TicketInput
