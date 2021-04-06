@@ -53,8 +53,6 @@ const fetchFarms = async () => {
         tokenDecimals,
         quoteTokenDecimals,
       ] = await multicall(erc20, calls)
-      
-
       // Ratio in % a LP tokens that are in staking, vs the total number in circulation
       const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
 
@@ -84,19 +82,22 @@ const fetchFarms = async () => {
 
       const allocPoint = new BigNumber(info.allocPoint._hex)
       const poolWeight = allocPoint.div(new BigNumber(totalAllocPoint))
-      const totalLPDeposits = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(18))
+      const totalLPDeposits = new BigNumber(lpTokenBalanceMC)
+      const rawLpTotalSupply = new BigNumber(lpTotalSupply)
+      const rawTokenBalanceLP= new BigNumber(tokenBalanceLP)
+      const rawQuoteTokenBlanceLP = new BigNumber(quoteTokenBlanceLP)
       return {
         ...farmConfig,
         tokenAmount: tokenAmount.toJSON(),
-        lpTokenBalanceMC: totalLPDeposits.toJSON(),
         quoteTokenAmount: quoteTokenAmount.toJSON(),
         lpTotalInQuoteToken: lpTotalInQuoteToken.toJSON(),
         tokenPriceVsQuote: quoteTokenAmount.div(tokenAmount).toJSON(),
         poolWeight: poolWeight.toJSON(),
         multiplier: `${allocPoint.div(100).toString()}X`,
-        lpTotalSupply,
-        tokenBalanceLP,
-        quoteTokenBlanceLP
+        lpTotalSupply: rawLpTotalSupply.toJSON(),
+        tokenBalanceLP:rawTokenBalanceLP.toJSON(),
+        quoteTokenBlanceLP:rawQuoteTokenBlanceLP.toJSON(),
+        lpTokenBalanceMC:totalLPDeposits.toJSON()
       }
     }),
   )

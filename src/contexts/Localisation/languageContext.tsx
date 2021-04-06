@@ -41,7 +41,6 @@ const LanguageContextProvider = ({ children }) => {
   const [translations, setTranslations] = useState<Array<any>>([])
   const getStoredLang = (storedLangCode: string) => {
     return allLanguages.filter((language) => {
-      console.log(storedLangCode)
       return language.code === storedLangCode
     })[0]
   }

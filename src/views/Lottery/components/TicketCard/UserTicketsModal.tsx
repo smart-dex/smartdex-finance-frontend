@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { Button, Modal } from 'uikit-sotatek'
+import { Modal } from 'uikit-sotatek'
 import styled from 'styled-components'
 import { useWinningNumbers } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'
