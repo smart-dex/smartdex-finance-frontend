@@ -263,7 +263,7 @@ return (
                 'Launch your project with SmartDEX, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
               )}
             </WrapText>
-            <LinkPrimaryPd30 href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform">
+            <LinkPrimaryPd30 href="https://docs.google.com/forms/d/e/1FAIpQLSdKvEAEQmo47eOAQOUe_iG-Kvoe0HmeV6jD1SV7_qFRnp4ZUA/viewform">
               {TranslateString(516, 'Apply to launch')}
             </LinkPrimaryPd30>
           </div>
