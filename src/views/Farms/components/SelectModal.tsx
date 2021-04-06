@@ -41,49 +41,57 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss,removed, earnings, 
   )
   return (
     <ModalStyle title={` `} onDismiss={onDismiss}>
-      <StyledModal>
-        <ActionEarn>
-          <StyledImg>
-            <img src='/images/balance-icon.svg' alt='balance-icon' />
-            <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss}/>
-          </StyledImg>
+      <WrapStyle>
+        <StyledModal>
+          <ActionEarn>
+            <StyledImg>
+              <img src='/images/balance-icon.svg' alt='balance-icon' />
+              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss}/>
+            </StyledImg>
 
-        </ActionEarn>
-        <ActionStake>
-          <StyledImg>
-            <img src='/images/balance-icon.svg' alt='balance-icon' />
-          </StyledImg>
-          <BalanceAndCompound>
-            <Balance fontSize="32px" value={displayBalance} />
-          </BalanceAndCompound>
-          <Label
-            text={`${lpName} ${TranslateString(1074, 'Staked')}`}
-            colorLabel={baseColors.orange}
-          />
-          <StakeAction
-            onBack={onBack}
-            stakedBalance={stakedBalance}
-            tokenBalance={tokenBalance}
-            tokenName={lpName}
-            pid={pid}
-            addLiquidityUrl={addLiquidityUrl}
-            removed={removed}
-          />
-        </ActionStake>
-      </StyledModal>
+          </ActionEarn>
+          <ActionStake>
+            <StyledImg>
+              <img src='/images/balance-icon.svg' alt='balance-icon' />
+            </StyledImg>
+            <BalanceAndCompound>
+              <Balance fontSize="32px" value={displayBalance} />
+            </BalanceAndCompound>
+            <Label
+              text={`${lpName} ${TranslateString(1074, 'Staked')}`}
+              colorLabel={baseColors.orange}
+            />
+            <StakeAction
+              onBack={onBack}
+              stakedBalance={stakedBalance}
+              tokenBalance={tokenBalance}
+              tokenName={lpName}
+              pid={pid}
+              addLiquidityUrl={addLiquidityUrl}
+              removed={removed}
+            />
+          </ActionStake>
+        </StyledModal>
+      </WrapStyle>
     </ModalStyle >
   )
 }
+const WrapStyle = styled.div`
+  max-height: 320px;
+  overflow-y: auto;
+`
 const StyledModal = styled(Flex)`
     ${({ theme }) => theme.mediaQueries.nav} {
-      width:662px;
+      width: 662px;
       flex-direction:row;
     }
-    flex-direction:column;
+    flex-direction: column;
+    
 `
 const ModalStyle = styled(Modal)`
   border: 1px solid #E2E2E8;
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  overflow-y: auto;
 `
 const Action = styled.div`
     ${({ theme }) => theme.mediaQueries.nav} {
@@ -112,8 +120,7 @@ const BalanceAndCompound = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  >div{
+  > div{
     font-size: 18px;
     ${({ theme }) => theme.mediaQueries.nav} {
       font-size: 32px;
