@@ -75,13 +75,6 @@ const SelectChecked = styled.div`
     & : active{
     box-shadow: none !important;
     }
-    & :focus{
-    box-shadow: none !important;
-    }
-    & < div : active{
-    box-shadow: none !important;
-    border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
-    }
     $ : after {
         left: 5px !important;
         top: 5px !important;
