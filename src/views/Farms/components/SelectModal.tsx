@@ -1,7 +1,7 @@
-import BigNumber from 'bignumber.js'
 import useI18n from 'hooks/useI18n'
 import React from 'react'
 import styled from 'styled-components'
+import { useFarmUser } from 'state/hooks'
 import { baseColors } from 'style/Color'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { Flex, Modal, useModal } from 'uikit-sotatek'
@@ -11,30 +11,26 @@ import HarvestAction from './FarmCard/HarvestAction'
 import StakeAction from './FarmCard/StakeAction'
 
 
+
 interface SelectModalProps {
   onDismiss?: () => void
-  earnings: BigNumber
   pid: number
-  stakedBalance: BigNumber
   lpName: string
   addLiquidityUrl: string
-  tokenBalance: BigNumber
   earnLabel: string
   removed: boolean
   pendingTx: boolean
   setPendingTx: (pendingTx: boolean) => void
 }
 
-const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings, pid, stakedBalance, lpName, earnLabel, tokenBalance, pendingTx, setPendingTx, addLiquidityUrl }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, pid, lpName, earnLabel, pendingTx, setPendingTx, addLiquidityUrl }) => {
   const TranslateString = useI18n()
+  const {  tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
   const rawStakedBalance = getBalanceNumber(stakedBalance)
   const [onBack] = useModal(
     <SelectModal
       pid={pid}
-      earnings={earnings}
-      stakedBalance={stakedBalance}
       lpName={lpName}
-      tokenBalance={tokenBalance}
       addLiquidityUrl={addLiquidityUrl}
       earnLabel={earnLabel}
       removed={removed}
