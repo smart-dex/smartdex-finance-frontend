@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { Flex, Text, Skeleton } from 'uikit-sotatek'
@@ -163,7 +163,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
   const { earnings, stakedBalance } = useFarmUser(pid)
-
+  useEffect(() => {
+    ReactTooltip.rebuild();
+});
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. SDC-BNB LP, LINK-BNB LP,
   // NAR-SDC LP. The images should be sdc-bnb.svg, link-bnb.svg, nar-sdc.svg
@@ -207,7 +209,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   }
   return (
     <FCard>
-       <ReactTooltip place="top" type="info" effect="solid" />
+      <ReactTooltip place="right" type="info" effect="float" />
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
@@ -319,7 +321,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           </ExpandingWrapper>
         )}
       </CardContent>
-
+     
     </FCard>
   )
 }

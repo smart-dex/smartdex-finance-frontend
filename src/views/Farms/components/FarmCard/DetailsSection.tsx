@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
@@ -147,6 +147,9 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   setPendingTx
 }) => {
   const TranslateString = useI18n()
+  useEffect(() => {
+    ReactTooltip.rebuild();
+});
   const rawEarningsBalance = getBalanceNumber(earnings)
   const { onReward } = useHarvest(pid)
   const { stakedBalance, tokenBalance } = useFarmUser(pid)
@@ -159,11 +162,10 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) * yourPoolShare.toNumber()
   const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP) * yourPoolShare.toNumber())
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
-  console.log(pendingTx);
   
   return (
     <>
-      <ReactTooltip place="top" type="info" effect="solid" />
+      
       <Flex flexDirection="column">
         <StyledText style={{ alignSelf: 'start', marginBottom: '14px' }}>{TranslateString(999, 'Your Liquidity deposits')}</StyledText>
         <Flex>
