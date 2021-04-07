@@ -35,12 +35,21 @@ const TextStep = styled(Text)`
   display: flex;
   align-items: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textStep)};
-  
 `
 const WrapperTitle = styled.div`
-  border-bottom: 1px dashed ${lightColors.lineDriver} !important;
+  border-bottom: 1px dashed ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)} !important;
   padding: 20px 0;
 `
+
+const StyleHeader = styled.div`
+  .step-active {
+    color: ${({ theme }) => (theme.isDark ? darkColors.colordarkStep : lightColors.colorLightStep)};
+  }
+  .step-not-active{
+    color: ${({ theme }) => (theme.isDark ? darkColors.darkStep : lightColors.lightStep)};
+  }
+`
+
 const steps = [
   { translationId: 776, label: 'Get Starter Collectible' },
   { translationId: 778, label: 'Set Profile Picture' },
@@ -66,9 +75,11 @@ const Header: React.FC = () => {
       <Breadcrumbs>
         {steps.map(({ translationId, label }, index) => {
           return (
-            <TextStep key={label} color={index <= currentStep ? 'text' : 'textDisabled'}>
-              {TranslateString(translationId, label)}
-            </TextStep>
+            <StyleHeader>
+              <TextStep key={label} className={currentStep >= index ? 'step-active' : 'step-not-active'}>
+                {TranslateString(translationId, label)}
+              </TextStep>
+            </StyleHeader>
           )
         })}
       </Breadcrumbs>

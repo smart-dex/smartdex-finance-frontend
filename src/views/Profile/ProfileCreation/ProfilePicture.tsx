@@ -9,7 +9,7 @@ import { useToast } from 'state/hooks'
 import { getSmartDEXChainProfileAddress } from 'utils/addressHelpers'
 import { useSmartDEXChainRabbits } from 'hooks/useContract'
 import useGetWalletNfts from 'hooks/useGetWalletNfts'
-import { lightColors, darkColors, baseColors } from 'style/Color'
+import { lightColors, darkColors, baseColors, brandColors } from 'style/Color'
 import SelectionCard from '../components/SelectionCard'
 import NextStepButton from '../components/NextStepButton'
 import { ProfileCreationContext } from './contexts/ProfileCreationProvider'
@@ -38,9 +38,10 @@ const HeadingText = styled(Heading)`
 `
 const CardBoxCon = styled(CardBody)`
   margin-top: 21px;
-  border: 1px solid #E2E2E8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
-  border-radius: 40px
+  border-radius: 40px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.white)};
 `
 const TextSubTwo = styled(Text)`
   font-size: 14px;
@@ -51,6 +52,7 @@ const TextSubTwo = styled(Text)`
   margin-bottom: 20px;
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 29%;
+  }
 `
 const LinkSub = styled(Link)`
   color: ${baseColors.primary};
@@ -60,12 +62,71 @@ const LinkSub = styled(Link)`
   
 `
 const TextTitleTwo = styled(Text)`
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   display: flex;
   align-items: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+   font-size: 16px;
+  }
 `
+const BoxSelect = styled.div`
+    box-shadow: none !important;
+    position: relative;
+    & : checked {
+    background-color: ${baseColors.primary}!important;
+    }
+    & : hover{
+    box-shadow: none !important;
+    }
+    & : active{
+    box-shadow: none !important;
+    }
+    & :focus{
+    box-shadow: none !important;
+    }
+    & < div : active{
+    box-shadow: none !important;
+    border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+    }
+    $ : after {
+        left: 5px !important;
+        top: 5px !important;
+    }
+`
+const HeadingAllow = styled(Heading)`
+  font-size: 16px;
+  line-height: 20px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+  font-weight: 700;
+`
+const TextAllow = styled(Text)`
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+`
+const BtnApprove = styled(Button) <{ isDisable: boolean }>`
+  background: ${({ isDisable }) => isDisable && ''};
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.primary)};
+  color: ${brandColors.white} !imporatant;
+  padding: 0 35px;
+  &:disabled{
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+  }
+ `
+const StepButton = styled(NextStepButton)`
+  background-color: ${baseColors.primary};
+  margin-top: 30px;
+  &:disabled{
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+  }
+`
+
 
 const ProfilePicture: React.FC = () => {
   const [isApproved, setIsApproved] = useState(false)
@@ -123,7 +184,7 @@ const ProfilePicture: React.FC = () => {
       <HeadingText as="h3" size="xl" mb="24px">
         {TranslateString(778, 'Set Profile Picture')}
       </HeadingText>
-      <CardBoxCon mb="24px">
+      <CardBoxCon mb="">
         <CardBody>
           <Heading as="h4" size="lg" mb="8px">
             {TranslateString(812, 'Choose collectible')}
@@ -145,42 +206,47 @@ const ProfilePicture: React.FC = () => {
                 const [firstTokenId] = nftsInWallet[walletNft.bunnyId].tokenIds
 
                 return (
-                  <SelectionCard
-                    name="profilePicture"
-                    key={walletNft.bunnyId}
-                    value={firstTokenId}
-                    image={`/images/nfts/${walletNft.images.md}`}
-                    isChecked={firstTokenId === tokenId}
-                    onChange={(value: string) => actions.setTokenId(parseInt(value, 10))}
-                  >
-                    <TextTitleTwo bold>{walletNft.name}</TextTitleTwo>
-                  </SelectionCard>
+                  <BoxSelect>
+                      <SelectionCard
+                        name="profilePicture"
+                        key={walletNft.bunnyId}
+                        value={firstTokenId}
+                        image={`/images/nfts/${walletNft.images.md}`}
+                        isChecked={firstTokenId === tokenId}
+                        onChange={(value: string) => actions.setTokenId(parseInt(value, 10))}
+                      >
+                        <TextTitleTwo bold>{walletNft.name}</TextTitleTwo>
+                      </SelectionCard>
+                  </BoxSelect>
                 )
               })
             )}
           </NftWrapper>
-          <Heading as="h4" size="lg" mb="8px">
+          <HeadingAllow as="h4" size="lg" mb="8px">
             {TranslateString(818, 'Allow collectible to be locked')}
-          </Heading>
-          <Text as="p" color="textSubtle" mb="16px">
+          </HeadingAllow>
+          <TextAllow as="p" color="textSubtle" mb="16px">
             {TranslateString(
               820,
               "The collectible you've chosen will be locked in a smart contract while it’s being used as your profile picture. Don't worry - you'll be able to get it back at any time.",
             )}
-          </Text>
-          <Button
-            isLoading={isApproving}
-            disabled={isApproved || isApproving || tokenId === null}
-            onClick={handleApprove}
-            endIcon={isApproving ? <AutoRenewIcon spin color="currentColor" /> : undefined}
-          >
-            {TranslateString(564, 'Approve')}
-          </Button>
+          </TextAllow>
+           <BtnApprove
+                isLoading={isApproving}
+                disabled={isApproved || isApproving || tokenId === null}
+                onClick={handleApprove}
+                endIcon={isApproving ? <AutoRenewIcon spin color="currentColor" /> : undefined}
+              >
+                {TranslateString(564, 'Approve')}
+          </BtnApprove>
+          
         </CardBody>
       </CardBoxCon>
-      <NextStepButton onClick={actions.nextStep} disabled={tokenId === null || !isApproved || isApproving}>
-        {TranslateString(798, 'Next Step')}
-      </NextStepButton>
+        <StepButton onClick={actions.nextStep} disabled={tokenId === null || !isApproved || isApproving}>
+          {TranslateString(798, 'Next Step')}
+        </StepButton>
+      
+     
     </>
   )
 }
