@@ -148,9 +148,14 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                 onClick={
                   isOldSyrup
                     ? async () => {
-                      setPendingTx(true)
-                      await onUnstake('0')
-                      setPendingTx(false)
+                      try {
+                        setPendingTx(true)
+                        await onUnstake('0')
+                      } catch (error) {
+                        console.error(error)
+                      } finally {
+                        setPendingTx(false)
+                      }   
                     }
                     : onPresentWithdraw
                 }
