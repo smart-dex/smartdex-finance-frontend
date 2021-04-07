@@ -15,6 +15,7 @@ export const baseColors = {
 export const brandColors = {
   binance: '#F0B90B',
   white: '#FFFFFF',
+  shadowbtn:'rgba(225, 225, 230, 0.24)',
 }
 
 export const lightColors = {
@@ -91,6 +92,9 @@ export const lightColors = {
   btnCancle:'#D9D9DE',
   backgroundInput: '#E9F4FC',
   colortextInput: 'rgb(69, 42, 122)',
+  textStep:'#9B99B8',
+  colorStep: 'rgba(111, 108, 153, 0.7)',
+  btnApp:'#8F8FA0',
 
 }
 

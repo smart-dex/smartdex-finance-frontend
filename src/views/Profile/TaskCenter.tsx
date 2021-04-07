@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, CardHeader, Flex, Heading, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, CardHeader, Flex, Heading, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'

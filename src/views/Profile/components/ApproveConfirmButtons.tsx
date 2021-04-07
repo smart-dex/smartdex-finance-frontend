@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronRightIcon, Button as UIKitButton, Flex, AutoRenewIcon, ChevronDownIcon } from '@pancakeswap-libs/uikit'
+import { ChevronRightIcon, Button as UIKitButton, Flex, AutoRenewIcon, ChevronDownIcon } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
+import { lightColors, darkColors, brandColors, baseColors } from 'style/Color'
+
 
 interface ApproveConfirmButtonsProps {
   isApproveDisabled: boolean
@@ -20,7 +22,20 @@ const Button = styled(UIKitButton)`
     width: auto;
   }
 `
+const ButtonApprove = styled(Button)`
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 10px ${brandColors.shadowbtn};
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)};
+`
 
+const ButtonCon = styled(Button)`
+  background: ${baseColors.primary};
+
+`
 const iconAttrs = { width: '24px', color: 'textDisabled' }
 
 const ChevronRight = styled(ChevronRightIcon).attrs(iconAttrs)`
@@ -53,24 +68,24 @@ const ApproveConfirmButtons: React.FC<ApproveConfirmButtonsProps> = ({
 
   return (
     <Flex py="8px" flexDirection={['column', null, 'row']} alignItems="center">
-      <Button
+      <ButtonApprove
         disabled={isApproveDisabled}
         onClick={onApprove}
         endIcon={isApproving ? spinnerIcon : undefined}
         isLoading={isApproving}
       >
         {isApproving ? TranslateString(800, 'Approving') : TranslateString(564, 'Approve')}
-      </Button>
+      </ButtonApprove>
       <ChevronRight />
       <ChevronBottom />
-      <Button
+      <ButtonCon
         onClick={onConfirm}
         disabled={isConfirmDisabled}
         isLoading={isConfirming}
         endIcon={isConfirming ? spinnerIcon : undefined}
       >
         {isConfirming ? TranslateString(802, 'Confirming') : TranslateString(464, 'Confirm')}
-      </Button>
+      </ButtonCon>
     </Flex>
   )
 }
