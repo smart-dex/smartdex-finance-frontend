@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { Flex, Text, Skeleton } from 'uikit-sotatek'
@@ -73,7 +73,7 @@ const InfoTextFarm = styled(Text)`
     font-size: 16px;
   }
 `
-const DetailValue= styled(Flex)`
+const DetailValue = styled(Flex)`
 font-weight: 600;
 font-size: 14px;
 line-height: 20px;
@@ -83,7 +83,7 @@ ${({ theme }) => theme.mediaQueries.nav} {
 }
 flex-wrap:wrap;
 `
-const DetailApr= styled(Flex)`
+const DetailApr = styled(Flex)`
 font-weight: 600;
 font-size: 14px;
 line-height: 20px;
@@ -157,12 +157,15 @@ interface FarmCardProps {
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, ethPrice, ethereum, account }) => {
   const TranslateString = useI18n()
+  const [pendingTx, setPendingTx] = useState(false)
   const isTest = process.env.REACT_APP_CHAIN_ID === '97'
   const linkScan = isTest ? `https://testnet.bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
   const { earnings, stakedBalance } = useFarmUser(pid)
-
+  useEffect(() => {
+    ReactTooltip.rebuild();
+});
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. SDC-BNB LP, LINK-BNB LP,
   // NAR-SDC LP. The images should be sdc-bnb.svg, link-bnb.svg, nar-sdc.svg
@@ -198,7 +201,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
   const userPoolRate = (stakedBalance.div(lpTokenBalanceMC)).times(100)
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
-  const displayUserPoolRate =userPoolRate.toNumber()
+  const displayUserPoolRate = userPoolRate.toNumber()
 
 
   const handelOpenDetail = () => {
@@ -206,6 +209,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   }
   return (
     <FCard>
+      <ReactTooltip place="right" type="info" effect="float" />
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
@@ -214,7 +218,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
         tokenSymbol={farm.tokenSymbol}
       />
       <CardContent>
-      <ReactTooltip place="top" type="info" effect="solid" />
+     
         <StyledInfoEarn>
           {!removed && (
             <Detail mb="37px" >
@@ -228,7 +232,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
                       sdcPrice={sdcPrice}
                       apy={farm.apy}
                     />
-                   <span data-tip={farmAPY}>{farmAPY}</span>   %
+                    <span data-tip={farmAPY}>{farmAPY}</span>   %
                   </>
                 ) : (
                     <Skeleton height={24} width={80} />
@@ -256,7 +260,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
               {!poolRate.isNaN() ? (
                 <>
                   <BalanceAndCompound data-tip={displayPoolRate.toFixed(3)}>
-                    <Balance fontSize="32px" value={displayPoolRate} />  <InfoTextFarm> { `SDC/${TranslateString(999, 'WEEK')}`}</InfoTextFarm>
+                    <Balance fontSize="32px" value={displayPoolRate} />  <InfoTextFarm> {`SDC/${TranslateString(999, 'WEEK')}`}</InfoTextFarm>
                   </BalanceAndCompound>
                 </>
               ) : (
@@ -269,10 +273,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             <DetailValue>
               {!userPoolRate.isNaN() ? (
                 <>
-                 <BalanceAndCompound data-tip={displayUserPoolRate.toFixed(3)}>
+                  <BalanceAndCompound data-tip={displayUserPoolRate.toFixed(3)}>
                     <Balance fontSize="32px" value={displayUserPoolRate} decimals={3} />  <InfoTextFarm>%</InfoTextFarm>
                   </BalanceAndCompound>
-                  </>
+                </>
               ) : (
                   <Skeleton height={24} width={80} />
                 )}
@@ -291,6 +295,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           changeOpenDetail={handelOpenDetail}
           isOpenDetail={showExpandableSection}
           earnLabel={earnLabel}
+          pendingTx={pendingTx}
+          setPendingTx={setPendingTx}
         />
         {showExpandableSection && (
           <ExpandingWrapper expanded={showExpandableSection}>
@@ -309,11 +315,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
               lpTotalSupply={lpTotalSupply}
               tokenBalanceLP={tokenBalanceLP}
               quoteTokenBlanceLP={quoteTokenBlanceLP}
+              pendingTx={pendingTx}
+              setPendingTx={setPendingTx}
             />
           </ExpandingWrapper>
         )}
       </CardContent>
-
+     
     </FCard>
   )
 }

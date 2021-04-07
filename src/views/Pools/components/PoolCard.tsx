@@ -60,7 +60,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const { onApprove } = useSousApprove(stakingTokenContract, sousId)
   const [requestedApproval, setRequestedApproval] = useState(false)
   const allowance = new BigNumber(userData?.allowance || 0)
-  const stakingTokenBalance = new BigNumber(userData?.stakingTokenBalance || 0)
   const stakedBalance = new BigNumber(userData?.stakedBalance || 0)
   const earnings = new BigNumber(userData?.pendingReward || 0)
   const blocksUntilStart = Math.max(startBlock - block, 0)
@@ -84,18 +83,14 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const convertedLimit = new BigNumber(stakingLimit).multipliedBy(new BigNumber(10).pow(tokenDecimals))
   const [onStart] = useModal(
     <StartModal
-      accountHasStakedBalance={accountHasStakedBalance}
       tokenName={tokenName}
       sousId={sousId}
       isBnbPool={isBnbPool}
-      earnings={earnings}
       stakingTokenName={stakingTokenName}
-      stakedBalance={stakedBalance}
       isOldSyrup={isOldSyrup}
       needsApproval={needsApproval}
       account={account}
       stakingLimit={stakingLimit}
-      stakingTokenBalance={stakingTokenBalance}
       convertedLimit={convertedLimit}
       isFinished={isFinished}
       tokenDecimals={tokenDecimals}

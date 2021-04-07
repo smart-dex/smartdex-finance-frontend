@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import { Button, Flex, IconButton, Modal, useModal } from 'uikit-sotatek'
 import Label from 'components/Label'
 import Balance from 'components/Balance'
+import { usePoolFromPid } from 'state/hooks'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { baseColors } from 'style/Color'
 import OldSyrupTitle from './OldSyrupTitle'
@@ -15,46 +16,44 @@ import CompoundModal from './CompoundModal'
 import WithdrawModal from './WithdrawModal'
 import DepositModal from './DepositModal'
 
+
 interface SelectModalProps {
   onDismiss?: () => void
-
-  accountHasStakedBalance: boolean
   tokenName: string
   sousId: number
   isBnbPool: boolean,
-  earnings: BigNumber
   stakingTokenName: string
-  stakedBalance: BigNumber
   isOldSyrup: boolean
   needsApproval: boolean
   account: string
   stakingLimit: number
-  stakingTokenBalance: BigNumber
   convertedLimit: BigNumber
   isFinished: boolean
   tokenDecimals: number
   harvest: boolean
 }
 
-const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDecimals, accountHasStakedBalance, tokenName, sousId, isBnbPool, earnings, stakingTokenName, stakedBalance, isOldSyrup, needsApproval, account, stakingLimit, stakingTokenBalance, convertedLimit, isFinished }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDecimals, tokenName, sousId, isBnbPool, stakingTokenName, isOldSyrup, needsApproval, account, stakingLimit, convertedLimit, isFinished }) => {
   const TranslateString = useI18n()
   const { onReward } = useSousHarvest(sousId, isBnbPool)
+  const { userData }= usePoolFromPid(sousId)
+  
+  const stakingTokenBalance = new BigNumber(userData?.stakingTokenBalance || 0)
+  const stakedBalance = new BigNumber(userData?.stakedBalance || 0)
+  const earnings = new BigNumber(userData?.pendingReward || 0)
+  const accountHasStakedBalance = stakedBalance?.toNumber() > 0
   const [pendingTx, setPendingTx] = useState(false)
   const { onStake } = useSousStake(sousId, isBnbPool)
   const { onUnstake } = useSousUnstake(sousId)
   const [onBack] = useModal(
     <SelectModal
-      accountHasStakedBalance={accountHasStakedBalance}
       tokenName={tokenName}
       sousId={sousId}
       isBnbPool={isBnbPool}
-      earnings={earnings}
       stakingTokenName={stakingTokenName}
-      stakedBalance={stakedBalance}
       needsApproval={needsApproval}
       account={account}
       stakingLimit={stakingLimit}
-      stakingTokenBalance={stakingTokenBalance}
       convertedLimit={convertedLimit}
       isFinished={isFinished}
       isOldSyrup={isOldSyrup}
@@ -80,96 +79,104 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
 
   return (
     <ModalStyle title={` `} onDismiss={onDismiss}>
-        <BoxModal>
-            <StyledModal>
-            <ActionEarn>
-              <StyledImg>
-                <img src='/images/balance-icon.svg' alt='balance-icon' />
-              </StyledImg>
+      <StyledModal>
+        <ActionEarn>
+          <StyledImg>
+            <img src='/images/balance-icon.svg' alt='balance-icon' />
+          </StyledImg>
 
-              {!isOldSyrup ? (
-                <BalanceAndCompound>
-                  <Balance fontSize="32px" value={getBalanceNumber(earnings, tokenDecimals)} />
-                </BalanceAndCompound>
-              ) : (
-                  <OldSyrupTitle hasBalance={accountHasStakedBalance} />
-                )}
-              <Label
-                text={TranslateString(330, `${tokenName} EARNED`)}
-                colorLabel={baseColors.orange}
-              />
-              <StyledGroupButton>
-                {account && harvest && !isOldSyrup && (
-                  <HarvestButton
-                    disabled={!earnings.toNumber() || pendingTx}
-                    isDisable={earnings.toNumber() || pendingTx}
-                    onClick={async () => {
-                      setPendingTx(true)
-                      await onReward()
-                      setPendingTx(false)
-                      onDismiss()
-                    }}
-                  >
-                    {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>
-                )}
-                {!isOldSyrup && sousId === 0 && account && harvest && (
-                  <CompoundButton
-                    disabled={!earnings.toNumber() || pendingTx}
-                    isDisable={earnings.toNumber() || pendingTx}
-                    onClick={onPresentCompound}
-                  >
-                    {pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
-                  </CompoundButton>
-                )}
+          {!isOldSyrup ? (
+            <BalanceAndCompound>
+              <Balance fontSize="32px" value={getBalanceNumber(earnings, tokenDecimals)} />
+            </BalanceAndCompound>
+          ) : (
+              <OldSyrupTitle hasBalance={accountHasStakedBalance} />
+            )}
+          <Label
+            text={TranslateString(330, `${tokenName} EARNED`)}
+            colorLabel={baseColors.orange}
+          />
+          <StyledGroupButton>
+            {account && harvest && !isOldSyrup && (
+              <HarvestButton
+                disabled={!earnings.toNumber() || pendingTx}
+                isDisable={earnings.toNumber() || pendingTx}
+                onClick={async () => {
+                  try {
+                    setPendingTx(true)
+                  await onReward()
+                  onDismiss()
+                  } catch (error) {
+                    console.error(error)
+                  } finally{
+                    setPendingTx(false)
+                  }
+                }}
+              >
+                {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>
+            )}
+            {!isOldSyrup && sousId === 0 && account && harvest && (
+              <CompoundButton
+                disabled={!earnings.toNumber() || pendingTx}
+                isDisable={earnings.toNumber() || pendingTx}
+                onClick={onPresentCompound}
+              >
+                {pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
+              </CompoundButton>
+            )}
 
-              </StyledGroupButton>
-            </ActionEarn>
-            <ActionStake>
-              <StyledImg>
-                <img src='/images/balance-icon.svg' alt='balance-icon' />
-              </StyledImg>
-              <BalanceAndCompound>
-                <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
-              </BalanceAndCompound>
-              <Label
-                text={TranslateString(999, `Your Stake`)}
-                colorLabel={baseColors.orange}
-              />
-              <StyledGroupButton>
-                {account && !needsApproval && !isOldSyrup &&
-                  <ButtonUnstake
-                    disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                    isDisable={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                    marginBottom='10px'
-                    marginTop='10px'
-                    onClick={
-                      isOldSyrup
-                        ? async () => {
-                          setPendingTx(true)
-                          await onUnstake('0')
-                          setPendingTx(false)
-                        }
-                        : onPresentWithdraw
+          </StyledGroupButton>
+        </ActionEarn>
+        <ActionStake>
+          <StyledImg>
+            <img src='/images/balance-icon.svg' alt='balance-icon' />
+          </StyledImg>
+          <BalanceAndCompound>
+            <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
+          </BalanceAndCompound>
+          <Label
+            text={TranslateString(999, `Your Stake`)}
+            colorLabel={baseColors.orange}
+          />
+          <StyledGroupButton>
+            {account && !needsApproval && !isOldSyrup &&
+              <ButtonUnstake
+                disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
+                isDisable={stakedBalance.eq(new BigNumber(0)) || pendingTx}
+                marginBottom='10px'
+                marginTop='10px'
+                onClick={
+                  isOldSyrup
+                    ? async () => {
+                      try {
+                        setPendingTx(true)
+                        await onUnstake('0')
+                      } catch (error) {
+                        console.error(error)
+                      } finally {
+                        setPendingTx(false)
+                      }   
                     }
-                  >
-                    Unstake
-                </ButtonUnstake>
+                    : onPresentWithdraw
                 }
+              >
+                Unstake
+             </ButtonUnstake>
+            }
 
-                {account &&
-                  <StyledAddButton>
-                    {!isOldSyrup && !needsApproval &&
-                      <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
-                        <img src='/images/add-icon.svg' alt='add-icon' />
-                      </IconButton>
-                    }
-                  </StyledAddButton>
+            {account &&
+              <StyledAddButton>
+                {!isOldSyrup && !needsApproval &&
+                  <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
+                    <img src='/images/add-icon.svg' alt='add-icon' />
+                  </IconButton>
                 }
+              </StyledAddButton>
+            }
 
-              </StyledGroupButton>
-            </ActionStake>
-          </StyledModal>
-        </BoxModal>
+          </StyledGroupButton>
+        </ActionStake>
+      </StyledModal>
     </ModalStyle >
   )
 }
@@ -179,10 +186,6 @@ const StyledModal = styled(Flex)`
       flex-direction:row;
     }
     flex-direction:column;
-`
-const BoxModal = styled.div`
-  max-height: 370px;
-  overflow-y: auto;
 `
 const ModalStyle = styled(Modal)`
   border: 1px solid #E2E2E8;

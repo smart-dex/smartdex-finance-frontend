@@ -63,10 +63,15 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
         <ButtonConfirm
           disabled={pendingTx || Number(fullBalance) === 0 || Number(val) > Number(fullBalance) || Number(val) === 0}
           onClick={async () => {
-            setPendingTx(true)
+            try {
+              setPendingTx(true)
             await onConfirm(val)
-            setPendingTx(false)
             onDismiss()
+            } catch (error) {
+              console.error(error)
+            } finally{
+              setPendingTx(false)
+            } 
           }}
         >
           {pendingTx ? TranslateString(488, 'Pending Confirmation') : TranslateString(464, 'Confirm')}
