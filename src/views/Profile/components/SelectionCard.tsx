@@ -71,8 +71,8 @@ const SelectionCard: React.FC<SelectionCardProps> = ({
   ...props
 }) => {
   return (
-    <StyledCardContent className="bbbbbbbbbbbbbbbbbbb" isSuccess={isChecked} isDisabled={disabled} mb="16px" {...props}>
-      <LabelText className="aaaaaaaaaaaaaaaaaaaa" isDisabled={disabled}>
+    <StyledCardContent isSuccess={isChecked} isDisabled={disabled} mb="16px" {...props}>
+      <LabelText isDisabled={disabled}>
         <Body>
           <Radio
             name={name}

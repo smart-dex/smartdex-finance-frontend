@@ -30,6 +30,7 @@ const ButtonApprove = styled(Button)`
   text-align: center;
   box-shadow: 0px 4px 10px ${brandColors.shadowbtn};
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)};
+  background: ${lightColors.colorApprove};
 `
 
 const ButtonCon = styled(Button)`

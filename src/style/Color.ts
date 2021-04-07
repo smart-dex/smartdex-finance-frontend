@@ -95,6 +95,7 @@ export const lightColors = {
   textStep:'#9B99B8',
   colorStep: 'rgba(111, 108, 153, 0.7)',
   btnApp:'#8F8FA0',
+  colorApprove:'#E1E1E6',
 
 }
 
