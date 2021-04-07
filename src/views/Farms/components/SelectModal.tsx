@@ -25,7 +25,7 @@ interface SelectModalProps {
   setPendingTx: (pendingTx: boolean) => void
 }
 
-const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings, pid, stakedBalance, lpName, earnLabel, tokenBalance,pendingTx,setPendingTx, addLiquidityUrl }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings, pid, stakedBalance, lpName, earnLabel, tokenBalance, pendingTx, setPendingTx, addLiquidityUrl }) => {
   const TranslateString = useI18n()
   const rawStakedBalance = getBalanceNumber(stakedBalance)
   const [onBack] = useModal(
@@ -40,7 +40,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings,
       removed={removed}
       pendingTx={pendingTx}
       setPendingTx={setPendingTx}
-      />
+    />
   )
   return (
     <ModalStyle title={` `} onDismiss={onDismiss}>
@@ -49,7 +49,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings,
           <ActionEarn>
             <StyledImg>
               <img src='/images/balance-icon.svg' alt='balance-icon' />
-              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss} pendingTx={pendingTx} setPendingTx={setPendingTx}/>
+              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss} pendingTx={pendingTx} setPendingTx={setPendingTx} />
             </StyledImg>
 
           </ActionEarn>
@@ -75,7 +75,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings,
             />
           </ActionStake>
         </StyledModal>
-        </WrapStyle>
+      </WrapStyle>
     </ModalStyle>
   )
 }
@@ -85,7 +85,7 @@ const WrapStyle = styled.div`
 `
 const StyledModal = styled(Flex)`
     ${({ theme }) => theme.mediaQueries.nav} {
-          width: 662px;
+      width: 662px;
       flex-direction:row;
     }
     flex-direction: column;
@@ -124,16 +124,16 @@ const BalanceAndCompound = styled.div`
   justify-content: center;
   align-items: center;
   > div{
-          font - size: 18px;
+    font-size: 18px;
     ${({ theme }) => theme.mediaQueries.nav} {
-          font - size: 32px;
+    font-size: 32px;
     }
   }
 `
 const StyledImg = styled.div`
->img{
-          margin - left: 8px;
-}
+  >img{
+    margin-left: 8px;
+  }
 
 `
 

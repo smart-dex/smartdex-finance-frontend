@@ -103,10 +103,15 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                 disabled={!earnings.toNumber() || pendingTx}
                 isDisable={earnings.toNumber() || pendingTx}
                 onClick={async () => {
-                  setPendingTx(true)
+                  try {
+                    setPendingTx(true)
                   await onReward()
-                  setPendingTx(false)
                   onDismiss()
+                  } catch (error) {
+                    console.error(error)
+                  } finally{
+                    setPendingTx(false)
+                  }
                 }}
               >
                 {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>

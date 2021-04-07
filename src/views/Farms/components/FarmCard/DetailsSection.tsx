@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, {  useEffect } from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
@@ -162,7 +162,6 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) * yourPoolShare.toNumber()
   const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP) * yourPoolShare.toNumber())
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
-  
   return (
     <>
       
@@ -187,9 +186,14 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
             disabled={rawEarningsBalance === 0 || pendingTx}
             isDisable={rawEarningsBalance === 0 || pendingTx}
             onClick={async () => {
-              setPendingTx(true)
-              await onReward()
-              setPendingTx(false)
+              try {
+                setPendingTx(true)
+                await onReward()
+              } catch (e) {
+                console.error(e)
+              } finally{
+                setPendingTx(false)
+              }
             }}
           >{TranslateString(999, 'Claim')}</ButtonClaim>
           <DetailStyled data-tip={displayPoolRate.toFixed(3)}>
