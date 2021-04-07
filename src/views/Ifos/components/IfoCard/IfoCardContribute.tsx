@@ -54,7 +54,18 @@ const CardButton= styled('div')`
       width: 20%;
     }
   }
-  
+  .disabled {
+    color: ${lightColors.btnApp};
+    background: ${({ theme }) => (theme.isDark ? darkColors.btnDisabledBg : lightColors.btnDisabledBg)};
+    cursor: not-allowed;
+    box-shadow: none;
+    &:hover:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled):not(:active) {
+      opacity: 1;
+    }
+    &:active:not(:disabled):not(.pancake-button--disabled):not(.pancake-button--disabled) {
+      opacity: 1
+    }
+  }
 `
 
 const ButtonApp = styled(Button)`
@@ -123,17 +134,21 @@ const IfoCardContribute: React.FC<Props> = ({
     return (
       <CardButton>
           <ButtonApp
-          onClick={async () => {
-            try {
-              setPendingTx(true)
-              await onApprove()
-              setPendingTx(false)
-            } catch (e) {
-              setPendingTx(false)
-              console.error(e)
-            }
-          }}
-        >
+            className={pendingTx ? "disabled" : ""}
+            onClick={async () => {
+              try {
+                if (!pendingTx) {
+                  setPendingTx(true)
+                  await onApprove()
+                  console.log('done')
+                  setPendingTx(false)
+                }
+              } catch (e) {
+                setPendingTx(false)
+                console.error(e)
+              }
+            }}
+          >
           Approve
         </ButtonApp>
       </CardButton>
