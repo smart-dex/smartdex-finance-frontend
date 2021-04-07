@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 31146,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 34670,
-            "text": "Bạn có thể thay đổi ảnh hồ sơ sau đó nếu bạn có được Món thu thập PanSDC khác được phê duyệt,",
+            "text": "Bạn có thể thay đổi ảnh hồ sơ sau đó nếu bạn có được Món thu thập SmartDEX khác được phê duyệt,",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 34714,
-            "text": "Chỉ sử dụng được Món thu thập PanSDC đã được phê duyệt.",
+            "text": "Chỉ sử dụng được Món thu thập SmartDEX đã được phê duyệt.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 34274,
-            "text": "Chúng tôi không thể tìm thấy trong ví bạn bất kì PanSDC Thu thập.",
+            "text": "Chúng tôi không thể tìm thấy trong ví bạn bất kì SmartDEX Thu thập.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 34332,
-            "text": "Bạn cần một món PanSDC Thu thập để hoàn thành việc thiết lập hồ sơ. Nếu bạn đã bán hay chuyển nhượng món thu thập khởi điểm sang ví khác, bạn sẽ cần lấy nó lại hoặc mua cái mới bằng cách sao đó. Bạn không thể có mức khởi đầu mới với địa chỉ ví này.",
+            "text": "Bạn cần một món SmartDEX Thu thập để hoàn thành việc thiết lập hồ sơ. Nếu bạn đã bán hay chuyển nhượng món thu thập khởi điểm sang ví khác, bạn sẽ cần lấy nó lại hoặc mua cái mới bằng cách sao đó. Bạn không thể có mức khởi đầu mới với địa chỉ ví này.",
             "user": {
                 "id": 13034531,
                 "username": "duydoan3874",

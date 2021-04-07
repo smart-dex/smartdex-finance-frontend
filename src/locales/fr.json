@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 38942,
-            "text": "Des frais de 0,2 % sont prélevés sur chaque transaction. 0,17 % sont redistribués aux fournisseurs de liquidités et 0,03 % revient à PanSDCSwap.",
+            "text": "Des frais de 0,2 % sont prélevés sur chaque transaction. 0,17 % sont redistribués aux fournisseurs de liquidités et 0,03 % revient à SmartDEX.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 21968,
-            "text": "Le projet obtient les BNB, PanSDCSwap détruit les SDC.",
+            "text": "Le projet obtient les BNB, SmartDEX détruit les SDC.",
             "user": {
                 "id": 14455720,
                 "username": "Asche_SDC",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 39060,
-            "text": "Lancez votre projet avec PanSDCSwap, le projet AMM et fournisseur de liquidités le plus utilisé de Binance Smart Chain, afin de proposer directement votre jeton à la communauté de BSC la plus active et en plein expansion.",
+            "text": "Lancez votre projet avec SmartDEX, le projet AMM et fournisseur de liquidités le plus utilisé de Binance Smart Chain, afin de proposer directement votre jeton à la communauté de BSC la plus active et en plein expansion.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 22032,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14455720,
                 "username": "Asche_SDC",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 39248,
-            "text": "Vous pouvez modifier votre photo de profil plus tard si vous obtenez un autre PanSDC non interchangeable approuvé,",
+            "text": "Vous pouvez modifier votre photo de profil plus tard si vous obtenez un autre SmartDEX non interchangeable approuvé,",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 39274,
-            "text": "Seuls les jetons non interchangeables PanSDC approuvés peuvent être utilisés.",
+            "text": "Seuls les jetons non interchangeables SmartDEX approuvés peuvent être utilisés.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 39312,
-            "text": "Nous n'avons trouvé aucun jeton non interchangeable PanSDC dans votre portefeuille.",
+            "text": "Nous n'avons trouvé aucun jeton non interchangeable SmartDEX dans votre portefeuille.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 39314,
-            "text": "Vous avez besoin d'un jeton non interchangeable PanSDC pour terminer la configuration de votre profil. Si vous avez vendu ou transféré votre jeton de départ dans un autre portefeuille, vous devrez le récupérer ou en acquérir un nouveau d'une manière ou d'une autre. Vous ne pouvez pas créer un nouveau starter avec cette adresse de portefeuille.",
+            "text": "Vous avez besoin d'un jeton non interchangeable SmartDEX pour terminer la configuration de votre profil. Si vous avez vendu ou transféré votre jeton de départ dans un autre portefeuille, vous devrez le récupérer ou en acquérir un nouveau d'une manière ou d'une autre. Vous ne pouvez pas créer un nouveau starter avec cette adresse de portefeuille.",
             "user": {
                 "id": 14166201,
                 "username": "judekindt",

@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 12700,
-            "text": "För varje handel betalas en avgift på 0,2%. 0,17% går till likviditetsleverantörer och 0,03% går till PanSDCSwap-kassan.",
+            "text": "För varje handel betalas en avgift på 0,2%. 0,17% går till likviditetsleverantörer och 0,03% går till SmartDEX-kassan.",
             "user": {
                 "id": 14439360,
                 "username": "gosubuster",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 42186,
-            "text": "Projektet får BNB, PanSDCSwap bränner SDC.",
+            "text": "Projektet får BNB, SmartDEX bränner SDC.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 42194,
-            "text": "Starta ditt projekt med PanSDCSwap, Binance Smart Chains mest använda AMM-projekt och likviditetsleverantör för att ta din token direkt till den mest aktiva och snabbast växande communityn på BSC.",
+            "text": "Starta ditt projekt med SmartDEX, Binance Smart Chains mest använda AMM-projekt och likviditetsleverantör för att ta din token direkt till den mest aktiva och snabbast växande communityn på BSC.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 42648,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 42556,
-            "text": "Du kan ändra din profilbild senare om du får ett till godkänt PanSDC-samlarobjekt,",
+            "text": "Du kan ändra din profilbild senare om du får ett till godkänt SmartDEX-samlarobjekt,",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 42582,
-            "text": "Endast godkända PanSDC-samlarobjekt kan användas.",
+            "text": "Endast godkända SmartDEX-samlarobjekt kan användas.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 42322,
-            "text": "Vi kunde inte hitta några PanSDC-samlarobjekt i din plånbok.",
+            "text": "Vi kunde inte hitta några SmartDEX-samlarobjekt i din plånbok.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 42324,
-            "text": "Du måste ha ett PanSDC-samlarobjekt för att slutföra din profil. Om du har sålt eller överfört ditt startsamlarobjekt till en annan plånbok måste du ta tillbaka det eller skaffa ett nytt på något sätt. Du kan inte skapa ett nytt startobjekt med den här plånboksadressen.",
+            "text": "Du måste ha ett SmartDEX-samlarobjekt för att slutföra din profil. Om du har sålt eller överfört ditt startsamlarobjekt till en annan plånbok måste du ta tillbaka det eller skaffa ett nytt på något sätt. Du kan inte skapa ett nytt startobjekt med den här plånboksadressen.",
             "user": {
                 "id": 13228087,
                 "username": "henkeasc",

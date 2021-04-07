@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 22526,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14439406,
                 "username": "Potaball",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 26860,
-            "text": "如果您获得另一个获批的 PanSDC 收藏品，则可以稍后更改个人资料照片。",
+            "text": "如果您获得另一个获批的 SmartDEX 收藏品，则可以稍后更改个人资料照片。",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 40550,
-            "text": "仅可以使用获得批准的 PanSDC 收藏品。",
+            "text": "仅可以使用获得批准的 SmartDEX 收藏品。",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 26930,
-            "text": "我们无法在您的钱包中找到任何 PanSDC 收藏品。",
+            "text": "我们无法在您的钱包中找到任何 SmartDEX 收藏品。",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 27090,
-            "text": "PanSDC",
+            "text": "SmartDEX",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 27098,
-            "text": "PanSDCswap",
+            "text": "SmartDEXswap",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",

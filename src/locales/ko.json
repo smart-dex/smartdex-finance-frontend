@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 33602,
-            "text": "모든 거래에 대해 0.2% 수수료가 지급됩니다. 0.17%는 유동성 제공자에게, 0.03%는 PanSDCSwap 금고에 제공됩니다.",
+            "text": "모든 거래에 대해 0.2% 수수료가 지급됩니다. 0.17%는 유동성 제공자에게, 0.03%는 SmartDEX 금고에 제공됩니다.",
             "user": {
                 "id": 12857418,
                 "username": "BigSeung",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 33774,
-            "text": "이 프로젝트는 BNB를 얻고, PanSDCSwap은 SDC을 소각합니다.",
+            "text": "이 프로젝트는 BNB를 얻고, SmartDEX은 SDC을 소각합니다.",
             "user": {
                 "id": 12857418,
                 "username": "BigSeung",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 33442,
-            "text": "Binance Smart Chain의 가장 많이 이용되는 AMM 프로젝트이고 유동성 공급자인 PanSDCSwap으로 프로젝트를 시작해, BSC에서 가장 활발하고 빠르게 성장하고 있는 커뮤니티로 토큰을 직접 가져올 수 있습니다.",
+            "text": "Binance Smart Chain의 가장 많이 이용되는 AMM 프로젝트이고 유동성 공급자인 SmartDEX으로 프로젝트를 시작해, BSC에서 가장 활발하고 빠르게 성장하고 있는 커뮤니티로 토큰을 직접 가져올 수 있습니다.",
             "user": {
                 "id": 12857418,
                 "username": "BigSeung",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 33878,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 12857418,
                 "username": "BigSeung",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 34122,
-            "text": "승인된 다른 PanSDC 수집품을 얻는 경우 나중에 프로필 사진을 변경할 수 있습니다.",
+            "text": "승인된 다른 SmartDEX 수집품을 얻는 경우 나중에 프로필 사진을 변경할 수 있습니다.",
             "user": {
                 "id": 12857418,
                 "username": "BigSeung",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 34156,
-            "text": "승인된 PanSDC 수집품만 사용 가능합니다.",
+            "text": "승인된 SmartDEX 수집품만 사용 가능합니다.",
             "user": {
                 "id": 12857418,
                 "username": "BigSeung",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 35730,
-            "text": "지갑에서 PanSDC 수집품을 찾을 수 없습니다.",
+            "text": "지갑에서 SmartDEX 수집품을 찾을 수 없습니다.",
             "user": {
                 "id": 12857418,
                 "username": "BigSeung",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 35768,
-            "text": "프로필 설정을 완료하려면 PanSDC 수집품이 필요합니다. 스타터 수집품을 판매하거나 다른 지갑으로 보낸 경우, 다시 가져오거나 새로운 수집품을 취득해야 합니다. 이 지갑 주소를 사용하여 새로운 스타터를 만들 수 없습니다.",
+            "text": "프로필 설정을 완료하려면 SmartDEX 수집품이 필요합니다. 스타터 수집품을 판매하거나 다른 지갑으로 보낸 경우, 다시 가져오거나 새로운 수집품을 취득해야 합니다. 이 지갑 주소를 사용하여 새로운 스타터를 만들 수 없습니다.",
             "user": {
                 "id": 12857418,
                 "username": "BigSeung",
