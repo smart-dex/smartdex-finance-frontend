@@ -66,7 +66,7 @@ const InputStyle = styled(Input)`
   }
 `
 const ButtonStyle = styled(Button)`
-  background: ${({ theme }) => (theme.isDark ? baseColors.primary : 'rgba(95, 94, 118, 0.5)')};
+  background: ${baseColors.primary};
   border-radius: 50px;
   box-shadow: 0px 4px 10px rgba(197, 197, 197, 0.24);
   width: 36px;

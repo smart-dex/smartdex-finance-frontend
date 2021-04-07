@@ -26,6 +26,8 @@ export interface Farm extends FarmConfig {
     earnings: BigNumber
   }
   lpTotalSupply?:BigNumber
+  tokenBalanceLP?:BigNumber
+  quoteTokenBlanceLP?:BigNumber
 }
 
 export interface Pool extends PoolConfig {

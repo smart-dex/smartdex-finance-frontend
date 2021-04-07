@@ -58,8 +58,8 @@ const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, token
 export default CompoundModal
 
 const BalanceRow = styled.div`
-  margin-top:90px;
-  margin-bottom:60px;
+  margin-top: 70px;
+  margin-bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,10 +86,11 @@ const ButtonCancel = styled(Button)`
 `
 const ModalStyle = styled(Modal)`
   border: 1px solid #E2E2E8;
-  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  box-shadow: 50px 38px 102px ${lightColors.cardShadow};
 `
 const StyledModal = styled.div`
   ${({ theme }) => theme.mediaQueries.nav} {
     width 551px;
+    height: 240px;
   }
 `

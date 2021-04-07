@@ -85,6 +85,10 @@ const Lottery: React.FC = () => {
     }
   }, [account, lotteryContract])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <>
     <Hero />

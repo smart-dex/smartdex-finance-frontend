@@ -116,6 +116,7 @@ const LinkPrimary = styled(Link)`
   &:hover{
     opacity:0.5;
   }
+  outline: 0;
 `
 const LinkSecondary = styled(Link)`
   ${ButtonSecondary}
@@ -124,6 +125,7 @@ const LinkSecondary = styled(Link)`
   box-shadow:none;
   border: 1px solid ${lightColors.buttonSecond};
   padding:0 5px;
+  outline: 0;
   &:hover{
     background-color:${lightColors.buttonSecond};
     color:${brandColors.white};
@@ -141,6 +143,7 @@ const LinkPrimaryPd30 = styled(Link)`
   }
   margin-top: 40px;
   margin-bottom: 40px;
+  outline: 0;
 `
 const LinkButtonBorder = styled(Link)`
   color: #fff;
@@ -219,10 +222,10 @@ return (
             </List>
           </StyleList>
           <WrapGridButton>
-            <LinkPrimary href="http://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
+            <LinkPrimary href="https://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
-            <LinkSecondary href="http://smartdex-exchange.sotatek.works/swap#/pool">
+            <LinkSecondary href="https://smartdex-exchange.sotatek.works/swap#/pool">
               {TranslateString(1062, 'Get LP Tokens')}
               <ChevronDown />
             </LinkSecondary>
@@ -260,7 +263,7 @@ return (
                 'Launch your project with SmartDEX, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
               )}
             </WrapText>
-            <LinkPrimaryPd30 href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform">
+            <LinkPrimaryPd30 href="https://docs.google.com/forms/d/e/1FAIpQLSdKvEAEQmo47eOAQOUe_iG-Kvoe0HmeV6jD1SV7_qFRnp4ZUA/viewform">
               {TranslateString(516, 'Apply to launch')}
             </LinkPrimaryPd30>
           </div>
