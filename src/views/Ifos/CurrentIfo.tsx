@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Heading, BaseLayout, Link, Card} from 'uikit-sotatek'
+import { Text, Heading, BaseLayout, Link, Card, Button} from 'uikit-sotatek'
 import { baseColors, brandColors, darkColors, lightColors } from 'style/Color'
 import { ChevronDown} from 'react-feather'
 import { ifosConfig } from 'config/constants'
@@ -118,8 +118,8 @@ const LinkPrimary = styled(Link)`
   }
   outline: 0;
 `
-const LinkSecondary = styled(Link)`
-  ${ButtonSecondary}
+const LinkSecondary = styled(Button)`
+  background: ${brandColors.white};
   border-radius:28px;
   color: ${lightColors.buttonSecond};
   box-shadow:none;
@@ -134,17 +134,24 @@ const LinkSecondary = styled(Link)`
     padding:0 20px;
   }
 `
-const LinkPrimaryPd30 = styled(Link)`
-  ${ButtonPrimary}
-  padding: 0 30px;
-  border-radius:28px;
-  &:hover{
-    opacity:0.5;
+const StyledButton = styled.div`
+  >a{
+    border-radius: 30px !important;
+    background: ${baseColors.primary};
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    box-shadow: 0px 4px 10px rgba(64, 170, 255, 0.24);
+    
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
   }
-  margin-top: 40px;
-  margin-bottom: 40px;
-  outline: 0;
+  margin-bottom:10px;
+  
+    
 `
+
 const LinkButtonBorder = styled(Link)`
   color: #fff;
   height: 56px;
@@ -263,9 +270,18 @@ return (
                 'Launch your project with SmartDEX, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
               )}
             </WrapText>
-            <LinkPrimaryPd30 href="https://docs.google.com/forms/d/e/1FAIpQLSdKvEAEQmo47eOAQOUe_iG-Kvoe0HmeV6jD1SV7_qFRnp4ZUA/viewform">
+            <StyledButton>
+              <Button
+                target="_blank"
+                as="a"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdKvEAEQmo47eOAQOUe_iG-Kvoe0HmeV6jD1SV7_qFRnp4ZUA/viewform"
+              >
+                  {TranslateString(516, 'Apply to launch')}
+              </Button>
+            </StyledButton>
+            {/* <LinkPrimaryPd30 href="https://docs.google.com/forms/d/e/1FAIpQLSdKvEAEQmo47eOAQOUe_iG-Kvoe0HmeV6jD1SV7_qFRnp4ZUA/viewform">
               {TranslateString(516, 'Apply to launch')}
-            </LinkPrimaryPd30>
+            </LinkPrimaryPd30> */}
           </div>
         </WrapCard>
       </LaunchIfoCallout>
