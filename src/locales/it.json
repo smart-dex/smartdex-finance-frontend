@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 15794,
-            "text": "Per ogni scambio viene pagata una commissione dello 0,2%. Lo 0,17% va ai fornitori di liquidità e lo 0,03% va alla tesoreria di PanSDCSwap.",
+            "text": "Per ogni scambio viene pagata una commissione dello 0,2%. Lo 0,17% va ai fornitori di liquidità e lo 0,03% va alla tesoreria di SmartDEX.",
             "user": {
                 "id": 13754187,
                 "username": "Carla78",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 30084,
-            "text": "Il progetto riceve i BNB, mentre PanSDCSwap brucia i SDC.",
+            "text": "Il progetto riceve i BNB, mentre SmartDEX brucia i SDC.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 31870,
-            "text": "Lancia il tuo progetto con PanSDCSwap, il principale progetto AMM e fornitore di liquidità di Binance Smart Chain, in grado di portare direttamente i tuoi token alla comunità più attiva e in rapida crescita su BSC.",
+            "text": "Lancia il tuo progetto con SmartDEX, il principale progetto AMM e fornitore di liquidità di Binance Smart Chain, in grado di portare direttamente i tuoi token alla comunità più attiva e in rapida crescita su BSC.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 30510,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 31258,
-            "text": "Potrai cambiare in seguito la tua foto profilo se ricevi un altro PanSDC collezionabile approvato,",
+            "text": "Potrai cambiare in seguito la tua foto profilo se ricevi un altro SmartDEX collezionabile approvato,",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 31376,
-            "text": "Possono essere usati solo PanSDC Collezionabili approvati.",
+            "text": "Possono essere usati solo SmartDEX Collezionabili approvati.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 31524,
-            "text": "Non abbiamo trovato nessun PanSDC Collezionabile nel tuo wallet.",
+            "text": "Non abbiamo trovato nessun SmartDEX Collezionabile nel tuo wallet.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 31552,
-            "text": "Ti serve un PanSDC Collezionabile per completare la configurazione del tuo profilo. Se hai venduto o trasferito il tuo oggetto collezionabile iniziale a un altro wallet, dovrai riportarlo indietro o acquisirne un altro. Non puoi creare un nuovo oggetto iniziale con l'indirizzo di questo wallet.",
+            "text": "Ti serve un SmartDEX Collezionabile per completare la configurazione del tuo profilo. Se hai venduto o trasferito il tuo oggetto collezionabile iniziale a un altro wallet, dovrai riportarlo indietro o acquisirne un altro. Non puoi creare un nuovo oggetto iniziale con l'indirizzo di questo wallet.",
             "user": {
                 "id": 13010153,
                 "username": "trezepie",

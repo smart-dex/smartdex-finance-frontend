@@ -5,8 +5,11 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import { useHarvest } from 'hooks/useHarvest'
 import { Text, Flex, Button, Link } from 'uikit-sotatek'
 import { lightColors, darkColors, baseColors } from 'style/Color'
+import ReactTooltip from 'react-tooltip'
 import BigNumber from 'bignumber.js'
 import { useFarmUser } from 'state/hooks'
+import Balance from 'components/Balance'
+
 
 interface ExpandableSectionProps {
   bscScanAddress?: string
@@ -16,6 +19,13 @@ interface ExpandableSectionProps {
   addLiquidityUrl?: string
   earnings?: BigNumber
   pid: number
+  poolRate: BigNumber,
+  quoteTokenSymbol: string
+  tokenSymbol: string
+  lpTokenBalanceMC: BigNumber,
+  lpTotalSupply: BigNumber,
+  tokenBalanceLP: BigNumber
+  quoteTokenBlanceLP: BigNumber
 }
 
 
@@ -32,6 +42,7 @@ const StyledText = styled(Text)`
   }
 `
 const StyledTextInfo = styled(Text)`
+  white-space: nowrap;
   font-weight: 500;
   line-height: 25px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
@@ -40,16 +51,7 @@ const StyledTextInfo = styled(Text)`
     font-size: 12px;
   }
 `
-// const StyledLink = styled(Link)`
-//   font-size: 13px;
-//   text-decoration: revert;
-//   color: #0085FF;
-//   font-weight: 600;
-//   line-height: 30px;
-//   ${({ theme }) => theme.mediaQueries.nav} {
-//     font-size: 16px;
-//   }
-// `
+
 const ButtonClaim = styled(Button)`
   background: #17C267;
   box-shadow: 0px 4px 10px rgba(23, 194, 103, 0.24);
@@ -61,6 +63,7 @@ const ButtonClaim = styled(Button)`
   height:40px;
   width:96px;
   margin-bottom:8px;
+  align-self: flex-end;
 `
 const StyledLink = styled(Link)`
   margin-top: 16px;
@@ -72,35 +75,107 @@ const StyledLink = styled(Link)`
     font-size: 14px;
   }
 `
+const BalanceAndCompound = styled.div`
+  display: flex;
+  flex: 1;
+  >div{
+    max-width:100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-right: 5px;
+    color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
+  }
+`
+const DetailStyled = styled.div`
+justify-content: flex-end;
+display: flex;
+margin-left:5px;
+font-weight: 500;
+line-height: 25px;
+flex-wrap:wrap;
+color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
+font-size: 12px;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 12px;
+  
+}
+>span{
+  margin-left:5px;
+}
+  >div{
+    max-width:120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+    font-weight: 500;
+    line-height: 25px;
+    color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
+    font-size: 12px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 12px;
+    }
+  }`
+const StylePoolRate = styled(Flex)`
+  max-width:100px;
+  `
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
   totalValueFormated,
   lpLabel,
   earnings,
   pid,
-  bscScanAddress
+  bscScanAddress,
+  poolRate,
+  quoteTokenSymbol,
+  tokenSymbol,
+  lpTokenBalanceMC,
+  lpTotalSupply,
+  tokenBalanceLP,
+  quoteTokenBlanceLP
 }) => {
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
   const rawEarningsBalance = getBalanceNumber(earnings)
   const { onReward } = useHarvest(pid)
-  const {  stakedBalance } = useFarmUser(pid)
+  const { stakedBalance, tokenBalance } = useFarmUser(pid)
+  const totalYourPoolToken = stakedBalance.plus(tokenBalance)
+  const rawTotalYourPoolToken = getBalanceNumber(totalYourPoolToken)
   const rawStakedBalance = getBalanceNumber(stakedBalance)
+  const displayPoolRate = poolRate.toNumber()
+  const yourPoolShare = totalYourPoolToken.div(lpTotalSupply)
+  const displayYourPoolShare = yourPoolShare.times(100).toFixed(3)
+  const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) * yourPoolShare.toNumber()
+  const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP) * yourPoolShare.toNumber())
+  const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
   return (
     <>
+   
       <Flex flexDirection="column">
-        <StyledText style={{ alignSelf: 'start',marginBottom:'14px' }}>{TranslateString(999, 'Your Liquidity deposits')}:</StyledText>
+      <ReactTooltip place="top" type="info" effect="solid" />
+        <StyledText style={{ alignSelf: 'start', marginBottom: '14px' }}>{TranslateString(999, 'Your Liquidity deposits')}</StyledText>
         <Flex>
-          <StyledText style={{ flex: '1' }}>{rawStakedBalance}</StyledText>
-          <StyledTextInfo style={{alignSelf: 'center'}}>{lpLabel}</StyledTextInfo>
+          <BalanceAndCompound  data-tip={rawStakedBalance.toFixed(3)}>
+            <Balance fontSize="32px" value={rawStakedBalance}  />
+          </BalanceAndCompound>
+          <StyledTextInfo style={{ alignSelf: 'center' }}>{lpLabel}</StyledTextInfo>
         </Flex>
       </Flex>
       <Flex mt="21px" mb="22px">
         <Flex flexDirection="column" style={{ flex: '1' }} >
-          <StyledText style={{ alignSelf: 'start' }} marginBottom='20px' marginTop='-4px'>{TranslateString(999, 'Your unclaimed SDC')}:</StyledText>
-          <StyledText style={{ alignSelf: 'start' }}>{rawEarningsBalance}</StyledText>
+          <StyledText style={{ alignSelf: 'start' }} marginBottom='20px' marginTop='-4px'>{TranslateString(999, 'Your unclaimed SDC')}</StyledText>
+          <BalanceAndCompound data-tip={rawEarningsBalance.toFixed(3)}>
+            <Balance value={rawEarningsBalance} />
+          </BalanceAndCompound>
         </Flex>
-        <Flex flexDirection="column">
+        <StylePoolRate flexDirection="column">
           <ButtonClaim
             disabled={rawEarningsBalance === 0 || pendingTx}
             isDisable={rawEarningsBalance === 0 || pendingTx}
@@ -110,27 +185,46 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
               setPendingTx(false)
             }}
           >{TranslateString(999, 'Claim')}</ButtonClaim>
-          <StyledTextInfo>1,111 SDC/WEEK</StyledTextInfo>
-        </Flex>
+          <DetailStyled data-tip={displayPoolRate.toFixed(3)}>
+            <Balance value={displayPoolRate}/> <span>SDC/{TranslateString(999, 'WEEK')}</span>
+          </DetailStyled>
+        </StylePoolRate>
       </Flex>
 
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Your total pool token')}: 345,0000</StyledTextInfo>
+        <StyledTextInfo>
+          {TranslateString(999, 'Your total pool token')}:
+        </StyledTextInfo>
+        <DetailStyled data-tip={rawTotalYourPoolToken.toFixed(3)}>
+          <Balance value={rawTotalYourPoolToken}  /> <span>{lpLabel}</span>
+        </DetailStyled>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pool token in rewards')}: 345,0000</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Pool token in rewards')}:</StyledTextInfo>
+        <DetailStyled  data-tip={displayLpTokenBalanceMC.toFixed(3)}>
+          <Balance value={displayLpTokenBalanceMC} />  <span>{lpLabel}</span>
+        </DetailStyled>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pooled SDC')}: 12,50000</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Pooled')} {tokenSymbol}:
+        </StyledTextInfo>
+        <DetailStyled data-tip={displayTokenBalanceLp.toFixed(3)}>
+          <Balance value={displayTokenBalanceLp}  />   <span>{tokenSymbol}</span>
+        </DetailStyled>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pooled DDD')}: 90,0000</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Pooled')} {quoteTokenSymbol}:
+        </StyledTextInfo>
+        <DetailStyled data-tip={displayQuoteTokenBlanceLP.toFixed(3)}>
+          <Balance value={displayQuoteTokenBlanceLP} />  <span>{quoteTokenSymbol}</span>
+        </DetailStyled>
+
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Your pool share')}: 15,432%</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Your pool share')}: <span data-tip={displayYourPoolShare}>{displayYourPoolShare}</span> %</StyledTextInfo>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Total USD')}: {totalValueFormated}</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Total USD')}: <span data-tip={totalValueFormated}>{totalValueFormated}</span></StyledTextInfo>
       </Flex>
       <Flex justifyContent="flex-start">
         <StyledLink external href={bscScanAddress} bold={false}>

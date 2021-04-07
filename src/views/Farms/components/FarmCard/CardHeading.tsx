@@ -16,6 +16,7 @@ const CardTitle = styled.div`
   position: relative;
   height: 60px;
   width: 30%;
+  min-width: 150px;
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   border-left: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
@@ -42,6 +43,7 @@ const StyleNameFarm = styled(Flex)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; 
+  display: block;
   padding:24px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   font-weight: bold;
@@ -152,7 +154,8 @@ const StyledTag = styled(Flex)`
 const CardHeading: React.FC<ExpandableSectionProps> = ({
   lpLabel,
   multiplier,
-  isCommunityFarm
+  isCommunityFarm,
+  
 }) => {
   return (
     <Flex flexDirection="column">

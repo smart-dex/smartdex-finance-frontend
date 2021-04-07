@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 30180,
-            "text": "Jokaisesta vaihdosta maksetaan 0,2 %:n maksu. 0,17 % menee likviditeetin tarjoajille ja 0,03% menee PanSDCSwap-rahastoon.",
+            "text": "Jokaisesta vaihdosta maksetaan 0,2 %:n maksu. 0,17 % menee likviditeetin tarjoajille ja 0,03% menee SmartDEX-rahastoon.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 30384,
-            "text": "Projekti saa BNB:n, PanSDCSwap polttaa SDCn.",
+            "text": "Projekti saa BNB:n, SmartDEX polttaa SDCn.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 26074,
-            "text": "Aloita oma projektisi PanSDCSwapilla, Binance Smart Chainin käytetyimmällä AMM-projektien ja likviditeetin tarjoajalla, tuodaksesi polettisi suoraan aktiviisimmalle ja nopeimmin kasvavalle yhteisölle BSC:ssä.",
+            "text": "Aloita oma projektisi SmartDEXilla, Binance Smart Chainin käytetyimmällä AMM-projektien ja likviditeetin tarjoajalla, tuodaksesi polettisi suoraan aktiviisimmalle ja nopeimmin kasvavalle yhteisölle BSC:ssä.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 26150,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 29902,
-            "text": "Voit vaihtaa profiilikuvasi myöhemmin, jos saat toisen hyväksytyn PanSDC-keräilykohteen.",
+            "text": "Voit vaihtaa profiilikuvasi myöhemmin, jos saat toisen hyväksytyn SmartDEX-keräilykohteen.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 29940,
-            "text": "Vain hyväksyttyjä PanSDC-keräilykohteita voi käyttää.",
+            "text": "Vain hyväksyttyjä SmartDEX-keräilykohteita voi käyttää.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 29984,
-            "text": "Lompakostasi ei löydy PanSDC-keräilykohteita.",
+            "text": "Lompakostasi ei löydy SmartDEX-keräilykohteita.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 30458,
-            "text": "Tarvitset PanSDC-keräilykohteen, jotta voit viimeistellä profiilisi määrittämisen. Jos myit tai siirsit aloituskeräilykohteesi toiseen lompakkoon, sinun täytyy saada se takaisin tai hankkia uusi jollakin tavalla. Et voit tehdä uutta aloituskohdetta tällä lompakon osoitteella.",
+            "text": "Tarvitset SmartDEX-keräilykohteen, jotta voit viimeistellä profiilisi määrittämisen. Jos myit tai siirsit aloituskeräilykohteesi toiseen lompakkoon, sinun täytyy saada se takaisin tai hankkia uusi jollakin tavalla. Et voit tehdä uutta aloituskohdetta tällä lompakon osoitteella.",
             "user": {
                 "id": 12744362,
                 "username": "karipeltola",

@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 38520,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 33096,
-            "text": "承認されている別のPanSDCコレクティブルを取得すれば、後からプロファイル写真を変更できます。",
+            "text": "承認されている別のSmartDEXコレクティブルを取得すれば、後からプロファイル写真を変更できます。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 33298,
-            "text": "承認されているPanSDCコレクティブルのみを使用できます。",
+            "text": "承認されているSmartDEXコレクティブルのみを使用できます。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 33450,
-            "text": "ウォレットにPanSDCコレクティブルがないようです。",
+            "text": "ウォレットにSmartDEXコレクティブルがないようです。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 38648,
-            "text": "プロファイルの設定を完了するには、PanSDCコレクティブルが必要です。スターターコレクティブルを売却したり、別のウォレットに送金したりした場合は、取り戻すか、新しいコレクティブルを取得する必要があります。このウォレットのアドレスを使って新しいスターターを始めることはできません。",
+            "text": "プロファイルの設定を完了するには、SmartDEXコレクティブルが必要です。スターターコレクティブルを売却したり、別のウォレットに送金したりした場合は、取り戻すか、新しいコレクティブルを取得する必要があります。このウォレットのアドレスを使って新しいスターターを始めることはできません。",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 37384,
-            "text": "PanSDC",
+            "text": "SmartDEX",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 37386,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",

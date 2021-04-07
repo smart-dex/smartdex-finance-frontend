@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 16958,
-            "text": "Voor elke transactie wordt een vergoeding van 0,2% betaald. 0,17% gaat naar liquiditeitsverschaffers en 0,03% gaat naar de schatkist van PanSDCSwap.",
+            "text": "Voor elke transactie wordt een vergoeding van 0,2% betaald. 0,17% gaat naar liquiditeitsverschaffers en 0,03% gaat naar de schatkist van SmartDEX.",
             "user": {
                 "id": 14451714,
                 "username": "Esen2",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 35084,
-            "text": "Het project ontvangt de BNB, PanSDCSwap verbrandt de SDC.",
+            "text": "Het project ontvangt de BNB, SmartDEX verbrandt de SDC.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 35326,
-            "text": "Start je project met PanSDCSwap, Binance Smart Chain's meest gebruikte AMM-project en liquiditeitsverschaffer, om je token direct naar de meest actieve en snel groeiende gemeenschap op BSC te brengen.",
+            "text": "Start je project met SmartDEX, Binance Smart Chain's meest gebruikte AMM-project en liquiditeitsverschaffer, om je token direct naar de meest actieve en snel groeiende gemeenschap op BSC te brengen.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 34924,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 35364,
-            "text": "Je kunt je profielfoto later wijzigen als je een andere goedgekeurde PanSDC-collectible ontvangt.",
+            "text": "Je kunt je profielfoto later wijzigen als je een andere goedgekeurde SmartDEX-collectible ontvangt.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 34884,
-            "text": "Alleen goedgekeurde PanSDC-collectibles kunnen gebruikt worden.",
+            "text": "Alleen goedgekeurde SmartDEX-collectibles kunnen gebruikt worden.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 34890,
-            "text": "We konden geen PanSDC-collectibles in je wallet vinden.",
+            "text": "We konden geen SmartDEX-collectibles in je wallet vinden.",
             "user": {
                 "id": 12458974,
                 "username": "ghpijffers",

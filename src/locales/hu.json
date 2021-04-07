@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 19338,
-            "text": "Minden egyes tranzakció után 0,2%-os jutalék fizetendő. 0,17% a likviditást biztosítókhoz 0,03% pedig a PanSDCSwap kincstárba megy.",
+            "text": "Minden egyes tranzakció után 0,2%-os jutalék fizetendő. 0,17% a likviditást biztosítókhoz 0,03% pedig a SmartDEX kincstárba megy.",
             "user": {
                 "id": 14451958,
                 "username": "archstanton11",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 34392,
-            "text": "A projekt megkapja a BNB-t, a PanSDCSwap elégeti a SDC-et.",
+            "text": "A projekt megkapja a BNB-t, a SmartDEX elégeti a SDC-et.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 34414,
-            "text": "Indíts saját projektet a PanSDCSwap, a Binance Smart Chain leggyakrabban használt AMM projekt- és likviditás-szolgáltatóval, hogy a saját zsetonod közvetlenül a BSC legaktívabb és leggyorsabban növekvő közösségéhez jusson el.",
+            "text": "Indíts saját projektet a SmartDEX, a Binance Smart Chain leggyakrabban használt AMM projekt- és likviditás-szolgáltatóval, hogy a saját zsetonod közvetlenül a BSC legaktívabb és leggyorsabban növekvő közösségéhez jusson el.",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 36796,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 12826643,
                 "username": "beejaypee01",

@@ -12,7 +12,10 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
   return (
     <Wrapper>
       <ToggleWrapper>
-        <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
+        <StyledToggle isActive={stackedOnly}>
+          <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
+        </StyledToggle>
+
         <StyledText> {TranslateString(999, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
@@ -69,13 +72,13 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
-  width: 100px;
+  min-width: 100px;
   font-size: 13px;
   line-height: 20px;
   font-weight: 400;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-    width: 135px;
+    min-width: 135px;
   }
 `
 const ButtonMenuStyle = styled.div`
@@ -83,5 +86,13 @@ const ButtonMenuStyle = styled.div`
   border-radius: 50px;
   > div {
     border-radius: 50px;
+  }
+`
+const StyledToggle = styled.div <{ isActive: boolean }>`
+  >div{
+    background-color: ${({ isActive }) => (isActive ? "rgb(111 207 151 / 20%)" : "#E5E5E5")};
+    >div{
+      background-color: ${({ isActive }) => (isActive ? "#17C267" : "#FFFF")};
+    }
   }
 `

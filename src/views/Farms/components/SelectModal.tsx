@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { baseColors } from 'style/Color'
 import { getBalanceNumber } from 'utils/formatBalance'
-import {  Flex, Modal, useModal } from 'uikit-sotatek'
+import { Flex, Modal, useModal } from 'uikit-sotatek'
 import Label from 'components/Label'
 import Balance from 'components/Balance'
 import HarvestAction from './FarmCard/HarvestAction'
@@ -19,14 +19,13 @@ interface SelectModalProps {
   lpName: string
   addLiquidityUrl: string
   tokenBalance: BigNumber
-  earnLabel:string
-  removed:boolean
+  earnLabel: string
+  removed: boolean
 }
 
-const SelectModal: React.FC<SelectModalProps> = ({ onDismiss,removed, earnings, pid, stakedBalance, lpName ,earnLabel, tokenBalance, addLiquidityUrl }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, earnings, pid, stakedBalance, lpName, earnLabel, tokenBalance, addLiquidityUrl }) => {
   const TranslateString = useI18n()
   const rawStakedBalance = getBalanceNumber(stakedBalance)
-  const displayBalance = rawStakedBalance;
   const [onBack] = useModal(
     <SelectModal
       pid={pid}
@@ -46,7 +45,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss,removed, earnings, 
           <ActionEarn>
             <StyledImg>
               <img src='/images/balance-icon.svg' alt='balance-icon' />
-              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss}/>
+              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss} />
             </StyledImg>
 
           </ActionEarn>
@@ -55,7 +54,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss,removed, earnings, 
               <img src='/images/balance-icon.svg' alt='balance-icon' />
             </StyledImg>
             <BalanceAndCompound>
-              <Balance fontSize="32px" value={displayBalance} />
+              <Balance fontSize="32px" value={rawStakedBalance} />
             </BalanceAndCompound>
             <Label
               text={`${lpName} ${TranslateString(1074, 'Staked')}`}
@@ -72,8 +71,8 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss,removed, earnings, 
             />
           </ActionStake>
         </StyledModal>
-      </WrapStyle>
-    </ModalStyle >
+        </WrapStyle>
+    </ModalStyle>
   )
 }
 const WrapStyle = styled.div`
@@ -82,11 +81,11 @@ const WrapStyle = styled.div`
 `
 const StyledModal = styled(Flex)`
     ${({ theme }) => theme.mediaQueries.nav} {
-      width: 662px;
+          width: 662px;
       flex-direction:row;
     }
     flex-direction: column;
-    
+
 `
 const ModalStyle = styled(Modal)`
   border: 1px solid #E2E2E8;
@@ -95,7 +94,7 @@ const ModalStyle = styled(Modal)`
 `
 const Action = styled.div`
     ${({ theme }) => theme.mediaQueries.nav} {
-      width: calc(50% - 20px);
+          width: calc(50% - 20px);
     }
     margin-top:10px;
     margin-bottom:10px;
@@ -106,7 +105,7 @@ const Action = styled.div`
 const ActionStake = styled(Action)`
   margin-left:none;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left:auto;
+          margin - left:auto;
   }
 `
 const ActionEarn = styled(Action)`
@@ -121,15 +120,15 @@ const BalanceAndCompound = styled.div`
   justify-content: center;
   align-items: center;
   > div{
-    font-size: 18px;
+          font - size: 18px;
     ${({ theme }) => theme.mediaQueries.nav} {
-      font-size: 32px;
+          font - size: 32px;
     }
   }
 `
 const StyledImg = styled.div`
 >img{
-  margin-left: 8px;
+          margin - left: 8px;
 }
 
 `

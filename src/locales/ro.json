@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 40754,
-            "text": "Pentru fiecare tranzacție, se va plati un comision de 0,2%, din care 0,17% se acordă furnizorilor de lichidități și 0,3% trezoreriei PanSDCSwap.",
+            "text": "Pentru fiecare tranzacție, se va plati un comision de 0,2%, din care 0,17% se acordă furnizorilor de lichidități și 0,3% trezoreriei SmartDEX.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 44478,
-            "text": "Proiectul obține BNB, PanSDCSwap consumă SDC.",
+            "text": "Proiectul obține BNB, SmartDEX consumă SDC.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 41040,
-            "text": "Lansează-ți proiectul în PanSDCSwap, cel mai utilizat proiect AMM al Binance Smart Chain și furnizor de lichidități, pentru a-ți duce jetonul direct la comunitatea cea mai activă și cu cea mai rapidă creștere de pe BSC.",
+            "text": "Lansează-ți proiectul în SmartDEX, cel mai utilizat proiect AMM al Binance Smart Chain și furnizor de lichidități, pentru a-ți duce jetonul direct la comunitatea cea mai activă și cu cea mai rapidă creștere de pe BSC.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 36734,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 44506,
-            "text": "Îți poți schimba fotografia de profil mai târziu dacă obții un alt colectibil PanSDC aprobat.",
+            "text": "Îți poți schimba fotografia de profil mai târziu dacă obții un alt colectibil SmartDEX aprobat.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 44514,
-            "text": "Se pot utiliza doar colectibile PanSDC aprobate.",
+            "text": "Se pot utiliza doar colectibile SmartDEX aprobate.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 44488,
-            "text": "Nu am putut găsi niciun colectibil PanSDC în portofelul tău.",
+            "text": "Nu am putut găsi niciun colectibil SmartDEX în portofelul tău.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 44490,
-            "text": "Ai nevoie de un colectibilPanSDC pentru a finaliza configurarea profilului tău. Dacă ai vândut sau transferat colectibilul starter către un alt portofel, va trebui să îl recuperezi sau să achiziționezi altul într-un mod oarecare. Nu poți obține un colectibil starter nou cu această adresă de portofel.",
+            "text": "Ai nevoie de un colectibilSmartDEX pentru a finaliza configurarea profilului tău. Dacă ai vândut sau transferat colectibilul starter către un alt portofel, va trebui să îl recuperezi sau să achiziționezi altul într-un mod oarecare. Nu poți obține un colectibil starter nou cu această adresă de portofel.",
             "user": {
                 "id": 12811931,
                 "username": "mihaelasinca",
