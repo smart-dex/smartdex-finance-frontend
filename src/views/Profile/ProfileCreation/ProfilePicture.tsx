@@ -44,12 +44,27 @@ const CardBoxCon = styled(CardBody)`
 `
 const TextSubTwo = styled(Text)`
   font-size: 14px;
-  line-height: 20px;
-  display: flex;
+  line-height: 25px;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   width: 100%;
+  font-weight: 400;
+  margin-bottom: 20px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 40%;
+    width: 29%;
+`
+const LinkSub = styled(Link)`
+  color: ${baseColors.primary};
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: underline;
+  
+`
+const TextTitleTwo = styled(Text)`
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
 `
 
 const ProfilePicture: React.FC = () => {
@@ -116,15 +131,12 @@ const ProfilePicture: React.FC = () => {
           <TextSubTwo as="p" color="textSubtle">
             {TranslateString(
               814,
-              'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.',
+              'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis',
             )}
+            <LinkSub to="/collectibles" style={{ marginLeft: '4px' }}>
+              {TranslateString(999, 'See the list')}
+            </LinkSub>
           </TextSubTwo>
-          <Text as="p" color="textSubtle" mb="24px">
-            {TranslateString(816, 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis ')}
-            <Link to="/collectibles" style={{ marginLeft: '4px' }}>
-              {TranslateString(999, 'See the list >')}
-            </Link>
-          </Text>
           <NftWrapper>
             {isLoading ? (
               <Skeleton height="80px" mb="16px" />
@@ -141,7 +153,7 @@ const ProfilePicture: React.FC = () => {
                     isChecked={firstTokenId === tokenId}
                     onChange={(value: string) => actions.setTokenId(parseInt(value, 10))}
                   >
-                    <Text bold>{walletNft.name}</Text>
+                    <TextTitleTwo bold>{walletNft.name}</TextTitleTwo>
                   </SelectionCard>
                 )
               })
