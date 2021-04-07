@@ -140,7 +140,6 @@ const IfoCardContribute: React.FC<Props> = ({
                 if (!pendingTx) {
                   setPendingTx(true)
                   await onApprove()
-                  console.log('done')
                   setPendingTx(false)
                 }
               } catch (e) {
