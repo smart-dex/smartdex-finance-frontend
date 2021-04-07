@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 44996,
-            "text": "Por cada negociación se paga una tarifa del 0.2%. El 0.17% se destina a distribuidores de liquidez y el 0.03% a la tesorería de PanSDCSwap.",
+            "text": "Por cada negociación se paga una tarifa del 0.2%. El 0.17% se destina a distribuidores de liquidez y el 0.03% a la tesorería de SmartDEX.",
             "user": {
                 "id": 13477006,
                 "username": "AdanM",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 22172,
-            "text": "El proyecto obtiene los BNB, PanSDCSwap quema los SDC.",
+            "text": "El proyecto obtiene los BNB, SmartDEX quema los SDC.",
             "user": {
                 "id": 14439052,
                 "username": "Jockarlos",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 44898,
-            "text": "Lanza tu proyecto con PanSDCSwap, el proyecto AMM más utilizado de Binance Smart Chain y distribuidor de liquidez, para llevar tu token directamente a la comunidad más activa y de rápido crecimiento en BSC.",
+            "text": "Lanza tu proyecto con SmartDEX, el proyecto AMM más utilizado de Binance Smart Chain y distribuidor de liquidez, para llevar tu token directamente a la comunidad más activa y de rápido crecimiento en BSC.",
             "user": {
                 "id": 13477006,
                 "username": "AdanM",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 22238,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14439052,
                 "username": "Jockarlos",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 45144,
-            "text": "Puedes cambiar tu foto de perfil más tarde si obtienes otro coleccionable de PanSDC aprobado,",
+            "text": "Puedes cambiar tu foto de perfil más tarde si obtienes otro coleccionable de SmartDEX aprobado,",
             "user": {
                 "id": 13477006,
                 "username": "AdanM",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 45352,
-            "text": "Solo pueden utilizarse los coleccionables aprobados por PanSDC.",
+            "text": "Solo pueden utilizarse los coleccionables aprobados por SmartDEX.",
             "user": {
                 "id": 13477006,
                 "username": "AdanM",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 45358,
-            "text": "No pudimos encontrar ningún coleccionable de PanSDC en tu monedero.",
+            "text": "No pudimos encontrar ningún coleccionable de SmartDEX en tu monedero.",
             "user": {
                 "id": 13477006,
                 "username": "AdanM",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 48230,
-            "text": "Necesitas un coleccionable de PanSDC para terminar la configuración de tu perfil. Si vendiste o transferiste tu coleccionable de inicio a otro monedero, tendrás que recuperarlo o adquirir uno nuevo de alguna manera. No puedes crear un nuevo coleccionable de inicio con esta dirección del monedero.",
+            "text": "Necesitas un coleccionable de SmartDEX para terminar la configuración de tu perfil. Si vendiste o transferiste tu coleccionable de inicio a otro monedero, tendrás que recuperarlo o adquirir uno nuevo de alguna manera. No puedes crear un nuevo coleccionable de inicio con esta dirección del monedero.",
             "user": {
                 "id": 13477006,
                 "username": "AdanM",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 37564,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 13477006,
                 "username": "AdanM",

@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 41158,
-            "text": "Untuk setiap perdagangan, senilai 0,2% dibayarkan untuk biaya. Senilai 0,17% diberikan kepada penyedia likuiditas, dan senilai 0,03% dimasukkan ke perbendaharaan PanSDCSwap.",
+            "text": "Untuk setiap perdagangan, senilai 0,2% dibayarkan untuk biaya. Senilai 0,17% diberikan kepada penyedia likuiditas, dan senilai 0,03% dimasukkan ke perbendaharaan SmartDEX.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 41446,
-            "text": "Proyek mendapatkan BNB, PanSDCSwap menghanguskan SDC.",
+            "text": "Proyek mendapatkan BNB, SmartDEX menghanguskan SDC.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 41490,
-            "text": "Luncurkan proyek Anda dengan PanSDCSwap, penyedia likuiditas \ndan proyek AMM yang paling banyak digunakan Binance Smart Chain, untuk membawa token Anda langsung ke komunitas yang paling aktif dan berkembang pesat di BSC.",
+            "text": "Luncurkan proyek Anda dengan SmartDEX, penyedia likuiditas \ndan proyek AMM yang paling banyak digunakan Binance Smart Chain, untuk membawa token Anda langsung ke komunitas yang paling aktif dan berkembang pesat di BSC.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 21894,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14450686,
                 "username": "chadgoff",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 40034,
-            "text": "Anda dapat mengganti gambar profil nanti jika mendapatkan Kolektibel PanSDC yang disetujui lagi,",
+            "text": "Anda dapat mengganti gambar profil nanti jika mendapatkan Kolektibel SmartDEX yang disetujui lagi,",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 40060,
-            "text": "Hanya Kolektibel PanSDC yang disetujui yang dapat digunakan.",
+            "text": "Hanya Kolektibel SmartDEX yang disetujui yang dapat digunakan.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 40098,
-            "text": "Kami tidak dapat menemukan Kolektibel PanSDC apa pun di dalam dompet Anda.",
+            "text": "Kami tidak dapat menemukan Kolektibel SmartDEX apa pun di dalam dompet Anda.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 40100,
-            "text": "Anda memerlukan Kolektibel PanSDC untuk menyelesaikan pengaturan profil Anda. Jika Anda telah menjual atau mentransfer kolektibel starter Anda ke dompet lain, Anda perlu mengambilnya kembali atau mendapatkan yang baru dengan suatu cara. Anda tidak dapat membuat starter baru dengan alamat dompet ini.",
+            "text": "Anda memerlukan Kolektibel SmartDEX untuk menyelesaikan pengaturan profil Anda. Jika Anda telah menjual atau mentransfer kolektibel starter Anda ke dompet lain, Anda perlu mengambilnya kembali atau mendapatkan yang baru dengan suatu cara. Anda tidak dapat membuat starter baru dengan alamat dompet ini.",
             "user": {
                 "id": 12721749,
                 "username": "Yusliani-Alconost",
