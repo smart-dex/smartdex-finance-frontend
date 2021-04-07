@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
-import { AutoRenewIcon, Button, Card, CardBody, Heading, Skeleton, Text } from '@pancakeswap-libs/uikit'
+import { AutoRenewIcon, Button, Card, CardBody, Heading, Skeleton, Text } from 'uikit-sotatek'
 import { Link as RouterLink } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import nftList from 'config/constants/nfts'
@@ -9,9 +9,11 @@ import { useToast } from 'state/hooks'
 import { getSmartDEXChainProfileAddress } from 'utils/addressHelpers'
 import { useSmartDEXChainRabbits } from 'hooks/useContract'
 import useGetWalletNfts from 'hooks/useGetWalletNfts'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import SelectionCard from '../components/SelectionCard'
 import NextStepButton from '../components/NextStepButton'
 import { ProfileCreationContext } from './contexts/ProfileCreationProvider'
+
 
 const Link = styled(RouterLink)`
   color: ${({ theme }) => theme.colors.primary};
@@ -19,6 +21,35 @@ const Link = styled(RouterLink)`
 
 const NftWrapper = styled.div`
   margin-bottom: 24px;
+`
+const TextStepTwo = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorStep)};
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 17px;
+ `
+const HeadingText = styled(Heading)`
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.balanceColor)};
+  margin-top: 7px;
+`
+const CardBoxCon = styled(CardBody)`
+  margin-top: 21px;
+  border: 1px solid #E2E2E8;
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  border-radius: 40px
+`
+const TextSubTwo = styled(Text)`
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  width: 100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 40%;
 `
 
 const ProfilePicture: React.FC = () => {
@@ -71,25 +102,25 @@ const ProfilePicture: React.FC = () => {
 
   return (
     <>
-      <Text fontSize="20px" color="textSubtle" bold>
+      <TextStepTwo fontSize="20px" color="textSubtle" bold>
         {TranslateString(999, `Step ${2}`)}
-      </Text>
-      <Heading as="h3" size="xl" mb="24px">
+      </TextStepTwo>
+      <HeadingText as="h3" size="xl" mb="24px">
         {TranslateString(778, 'Set Profile Picture')}
-      </Heading>
-      <Card mb="24px">
+      </HeadingText>
+      <CardBoxCon mb="24px">
         <CardBody>
           <Heading as="h4" size="lg" mb="8px">
             {TranslateString(812, 'Choose collectible')}
           </Heading>
-          <Text as="p" color="textSubtle">
+          <TextSubTwo as="p" color="textSubtle">
             {TranslateString(
               814,
-              'Choose a profile picture from the eligible collectibles (NFT) in your wallet, shown below.',
+              'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.',
             )}
-          </Text>
+          </TextSubTwo>
           <Text as="p" color="textSubtle" mb="24px">
-            {TranslateString(816, 'Only approved SmartDEX Collectibles can be used.')}
+            {TranslateString(816, 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis ')}
             <Link to="/collectibles" style={{ marginLeft: '4px' }}>
               {TranslateString(999, 'See the list >')}
             </Link>
@@ -134,7 +165,7 @@ const ProfilePicture: React.FC = () => {
             {TranslateString(564, 'Approve')}
           </Button>
         </CardBody>
-      </Card>
+      </CardBoxCon>
       <NextStepButton onClick={actions.nextStep} disabled={tokenId === null || !isApproved || isApproving}>
         {TranslateString(798, 'Next Step')}
       </NextStepButton>
