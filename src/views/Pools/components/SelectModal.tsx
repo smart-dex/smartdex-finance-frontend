@@ -80,94 +80,96 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
 
   return (
     <ModalStyle title={` `} onDismiss={onDismiss}>
-      <StyledModal>
-        <ActionEarn>
-          <StyledImg>
-            <img src='/images/balance-icon.svg' alt='balance-icon' />
-          </StyledImg>
+        <BoxModal>
+            <StyledModal>
+            <ActionEarn>
+              <StyledImg>
+                <img src='/images/balance-icon.svg' alt='balance-icon' />
+              </StyledImg>
 
-          {!isOldSyrup ? (
-            <BalanceAndCompound>
-              <Balance fontSize="32px" value={getBalanceNumber(earnings, tokenDecimals)} />
-            </BalanceAndCompound>
-          ) : (
-              <OldSyrupTitle hasBalance={accountHasStakedBalance} />
-            )}
-          <Label
-            text={TranslateString(330, `${tokenName} EARNED`)}
-            colorLabel={baseColors.orange}
-          />
-          <StyledGroupButton>
-            {account && harvest && !isOldSyrup && (
-              <HarvestButton
-                disabled={!earnings.toNumber() || pendingTx}
-                isDisable={earnings.toNumber() || pendingTx}
-                onClick={async () => {
-                  setPendingTx(true)
-                  await onReward()
-                  setPendingTx(false)
-                  onDismiss()
-                }}
-              >
-                {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>
-            )}
-            {!isOldSyrup && sousId === 0 && account && harvest && (
-              <CompoundButton
-                disabled={!earnings.toNumber() || pendingTx}
-                isDisable={earnings.toNumber() || pendingTx}
-                onClick={onPresentCompound}
-              >
-                {pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
-              </CompoundButton>
-            )}
-
-          </StyledGroupButton>
-        </ActionEarn>
-        <ActionStake>
-          <StyledImg>
-            <img src='/images/balance-icon.svg' alt='balance-icon' />
-          </StyledImg>
-          <BalanceAndCompound>
-            <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
-          </BalanceAndCompound>
-          <Label
-            text={TranslateString(999, `Your Stake`)}
-            colorLabel={baseColors.orange}
-          />
-          <StyledGroupButton>
-            {account && !needsApproval && !isOldSyrup &&
-              <ButtonUnstake
-                disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                isDisable={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                marginBottom='10px'
-                marginTop='10px'
-                onClick={
-                  isOldSyrup
-                    ? async () => {
+              {!isOldSyrup ? (
+                <BalanceAndCompound>
+                  <Balance fontSize="32px" value={getBalanceNumber(earnings, tokenDecimals)} />
+                </BalanceAndCompound>
+              ) : (
+                  <OldSyrupTitle hasBalance={accountHasStakedBalance} />
+                )}
+              <Label
+                text={TranslateString(330, `${tokenName} EARNED`)}
+                colorLabel={baseColors.orange}
+              />
+              <StyledGroupButton>
+                {account && harvest && !isOldSyrup && (
+                  <HarvestButton
+                    disabled={!earnings.toNumber() || pendingTx}
+                    isDisable={earnings.toNumber() || pendingTx}
+                    onClick={async () => {
                       setPendingTx(true)
-                      await onUnstake('0')
+                      await onReward()
                       setPendingTx(false)
+                      onDismiss()
+                    }}
+                  >
+                    {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>
+                )}
+                {!isOldSyrup && sousId === 0 && account && harvest && (
+                  <CompoundButton
+                    disabled={!earnings.toNumber() || pendingTx}
+                    isDisable={earnings.toNumber() || pendingTx}
+                    onClick={onPresentCompound}
+                  >
+                    {pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
+                  </CompoundButton>
+                )}
+
+              </StyledGroupButton>
+            </ActionEarn>
+            <ActionStake>
+              <StyledImg>
+                <img src='/images/balance-icon.svg' alt='balance-icon' />
+              </StyledImg>
+              <BalanceAndCompound>
+                <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
+              </BalanceAndCompound>
+              <Label
+                text={TranslateString(999, `Your Stake`)}
+                colorLabel={baseColors.orange}
+              />
+              <StyledGroupButton>
+                {account && !needsApproval && !isOldSyrup &&
+                  <ButtonUnstake
+                    disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
+                    isDisable={stakedBalance.eq(new BigNumber(0)) || pendingTx}
+                    marginBottom='10px'
+                    marginTop='10px'
+                    onClick={
+                      isOldSyrup
+                        ? async () => {
+                          setPendingTx(true)
+                          await onUnstake('0')
+                          setPendingTx(false)
+                        }
+                        : onPresentWithdraw
                     }
-                    : onPresentWithdraw
+                  >
+                    Unstake
+                </ButtonUnstake>
                 }
-              >
-                Unstake
-             </ButtonUnstake>
-            }
 
-            {account &&
-              <StyledAddButton>
-                {!isOldSyrup && !needsApproval &&
-                  <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
-                    <img src='/images/add-icon.svg' alt='add-icon' />
-                  </IconButton>
+                {account &&
+                  <StyledAddButton>
+                    {!isOldSyrup && !needsApproval &&
+                      <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
+                        <img src='/images/add-icon.svg' alt='add-icon' />
+                      </IconButton>
+                    }
+                  </StyledAddButton>
                 }
-              </StyledAddButton>
-            }
 
-          </StyledGroupButton>
-        </ActionStake>
-      </StyledModal>
+              </StyledGroupButton>
+            </ActionStake>
+          </StyledModal>
+        </BoxModal>
     </ModalStyle >
   )
 }
@@ -177,6 +179,10 @@ const StyledModal = styled(Flex)`
       flex-direction:row;
     }
     flex-direction:column;
+`
+const BoxModal = styled.div`
+  max-height: 370px;
+  overflow-y: auto;
 `
 const ModalStyle = styled(Modal)`
   border: 1px solid #E2E2E8;
