@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Card, Radio } from 'uikit-sotatek'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 
 interface SelectionCardProps {
   name: string
@@ -12,7 +13,8 @@ interface SelectionCardProps {
 }
 
 const StyledCardContent = styled(Card)<{ isSuccess: boolean }>`
-box-shadow: none;
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.darkRadio : lightColors.white)}; !important;
+  box-shadow: none;
  ${({ isSuccess }) => isSuccess && 'border: 1px solid #0085FF;'}
   border-radius: 16px;
   margin-bottom: 20px;
@@ -38,16 +40,15 @@ const Body = styled.div`
   display: flex;
   height: 80px;
   padding: 8px 7px 8px 16px;
-  border: 1px solid #E2E2E8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   width: 100%;
   position: relative;
+  background-color: none !important;
 `
 
 const Children = styled.div`
   margin-left: 16px;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    width: 100%;
-  }
+  width: 100%;
 `
 
 const StyledBackgroundImage = styled.div<{ src: string }>`
@@ -56,9 +57,18 @@ const StyledBackgroundImage = styled.div<{ src: string }>`
   background-size: cover;
   background-position: right top;
   background-repeat: no-repeat;
-  flex: 1 1 auto;
-  width: 73px;
+  width: 127px;
   border-radius: 14px !important;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 73px;
+  }
+  
+`
+const RadioChecked = styled(Radio)`
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.darkRadio : lightColors.lightRadio)};
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.darkBorder : lightColors.lightBorder)};
+  height: 33px;
+  width: 33px;
 `
 const SelectionCard: React.FC<SelectionCardProps> = ({
   name,
@@ -74,7 +84,7 @@ const SelectionCard: React.FC<SelectionCardProps> = ({
     <StyledCardContent isSuccess={isChecked} isDisabled={disabled} mb="16px" {...props}>
       <LabelText isDisabled={disabled}>
         <Body>
-          <Radio
+          <RadioChecked
             name={name}
             checked={isChecked}
             value={value}
