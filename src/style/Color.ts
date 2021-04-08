@@ -10,6 +10,8 @@ export const baseColors = {
   orange: '#FFA14E',
   colorbt:'#E8E8EB',
   boxShadow: 'rgba(83, 185, 234, 0.24)',
+  colorRed: '#FF6970',
+  bgrChecked:'#18A0FB',
 }
 
 export const brandColors = {
@@ -101,6 +103,7 @@ export const lightColors = {
   lightStep:'rgba(155, 153, 184, 0.5);',
   lightRadio:'rgba(224, 224, 224, 0.3)',
   lightBorder:'#E0E0E0',
+  lightCheckBox:'#F6F6F6',
 }
 
 export const darkColors = {
@@ -180,4 +183,5 @@ export const darkColors = {
   darkStep:'rgba(255, 255, 255, 0.4)',
   darkRadio:'#00071C',
   darkBorder:'#2F344B',
+  daskCheckBox:'#00071C',
 }

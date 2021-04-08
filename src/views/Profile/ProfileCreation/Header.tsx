@@ -30,11 +30,14 @@ const HeadingNote  = styled(Heading)`
 `
 const TextStep = styled(Text)`
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 20px;
   display: flex;
   align-items: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textStep)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 const WrapperTitle = styled.div`
   border-bottom: 1px dashed ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)} !important;
