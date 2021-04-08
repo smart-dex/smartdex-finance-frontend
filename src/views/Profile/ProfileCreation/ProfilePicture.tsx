@@ -144,14 +144,20 @@ const BtnApprove = styled(Button) <{ isDisable: boolean }>`
 const StepButton = styled(NextStepButton)`
   position: relative;
   background-color: ${baseColors.primary};
-  color: #fff;
+  color: ${lightColors.white};
   box-shadow: none;
   margin-top: 30px;
   padding: 0 30px 0 22px;
   font-size: 13px;
+  & svg {
+      stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.white)};
+  }
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    & svg {
+        stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    }
   }
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
@@ -174,11 +180,6 @@ const BoxIconDirect = styled.div`
     right: 2px;
   }
 `
-const IconDirect = styled.img`
-  width: 9px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.white)};
-`
-
 const ProfilePicture: React.FC = () => {
   const [isApproved, setIsApproved] = useState(false)
   const [isApproving, setIsApproving] = useState(false)
@@ -295,7 +296,11 @@ const ProfilePicture: React.FC = () => {
       </CardBoxCon>
         <StepButton onClick={actions.nextStep} disabled={tokenId === null || !isApproved || isApproving}>
           {TranslateString(798, 'Next Step >')}
-          <BoxIconDirect><IconDirect src="/images/home/icon-back.png" alt="" /></BoxIconDirect>
+          <BoxIconDirect>
+            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 13L7 7L0.999999 1" strokeWidth="2"/>
+            </svg>
+          </BoxIconDirect>
         </StepButton>
       
      

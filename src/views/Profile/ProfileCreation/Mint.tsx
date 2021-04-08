@@ -121,11 +121,22 @@ div {
 `
 const NextStepOne = styled(NextStepButton)`
   position: relative;
-  justify-content: flex-start !important;
-  &:disabled{
-    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
-    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
-  }
+  background-color: ${baseColors.primary};
+  color: ${lightColors.white};
+  box-shadow: none;
+  margin-top: 30px;
+  padding: 0 30px 0 22px;
+  font-size: 13px;
+  & svg {
+    stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.white)};
+    }
+    &:disabled{
+      background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+      color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+      & svg {
+          stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+      }
+}
   
 `
 const TextCount = styled(Text)`
@@ -151,10 +162,7 @@ const BoxIconDirect = styled.div`
     line-height: 56px;
     top: 1px;
     right: 2px;
-`
-const IconDirect = styled.img`
-  width: 9px;
-  backgcolor: #fff;
+  }
 `
 const nfts = nftList.filter((nft) => STARTER_BUNNY_IDS.includes(nft.bunnyId))
 const minimumSdcBalanceToMint = new BigNumber(MINT_COST).multipliedBy(new BigNumber(10).pow(18))
@@ -258,7 +266,11 @@ const Mint: React.FC = () => {
       </CardBox>
       <NextStepOne className="aaaa" onClick={actions.nextStep} disabled={!isConfirmed}>
         {TranslateString(798, 'Next Step >')}
-        <BoxIconDirect><IconDirect src="/images/home/icon-back.png" alt="" /></BoxIconDirect>
+        <BoxIconDirect>
+            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 13L7 7L0.999999 1" strokeWidth="2"/>
+            </svg>
+          </BoxIconDirect>
       </NextStepOne>
     </>
   )

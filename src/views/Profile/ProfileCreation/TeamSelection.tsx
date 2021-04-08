@@ -114,9 +114,15 @@ const NextStep3 = styled(NextStepButton)`
   margin-bottom: 30px;
   font-size: 13px;
   padding: 0 30px 0 22px;
+  & svg {
+        stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.white)};
+    }
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    & svg {
+      stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    }
   }
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
@@ -133,9 +139,7 @@ const BoxIconDirect = styled.div`
     line-height: 56px;
     top: 1px;
     right: 2px;
-`
-const IconDirect = styled.img`
-  width: 9px;
+  }
 `
 
 const Team: React.FC = () => {
@@ -193,7 +197,11 @@ const Team: React.FC = () => {
       </Cardbox3>
       <NextStep3 onClick={actions.nextStep} disabled={currentTeamId === null}>
         {TranslateString(798, 'Next Step ')}
-        <BoxIconDirect><IconDirect src="/images/home/icon-back.png" alt="" /></BoxIconDirect>
+        <BoxIconDirect>
+            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 13L7 7L0.999999 1" strokeWidth="2"/>
+            </svg>
+          </BoxIconDirect>
       </NextStep3>
     </>
   )
