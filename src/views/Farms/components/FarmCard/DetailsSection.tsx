@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React, {  useEffect } from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useHarvest } from 'hooks/useHarvest'
 import { Text, Flex, Button, Link } from 'uikit-sotatek'
-import { lightColors, darkColors, baseColors } from 'style/Color'
 import ReactTooltip from 'react-tooltip'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import BigNumber from 'bignumber.js'
 import { useFarmUser } from 'state/hooks'
 import Balance from 'components/Balance'
 
 
+
 interface ExpandableSectionProps {
   bscScanAddress?: string
   removed?: boolean
-  totalValueFormated?: string
+  totalValue?: BigNumber
   lpLabel?: string
   addLiquidityUrl?: string
   earnings?: BigNumber
@@ -25,7 +26,9 @@ interface ExpandableSectionProps {
   lpTokenBalanceMC: BigNumber,
   lpTotalSupply: BigNumber,
   tokenBalanceLP: BigNumber
-  quoteTokenBlanceLP: BigNumber
+  quoteTokenBlanceLP: BigNumber,
+  pendingTx: boolean,
+  setPendingTx: (pendingTx: boolean) => void
 }
 
 
@@ -128,7 +131,7 @@ const StylePoolRate = styled(Flex)`
   `
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
-  totalValueFormated,
+  totalValue,
   lpLabel,
   earnings,
   pid,
@@ -139,10 +142,14 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   lpTokenBalanceMC,
   lpTotalSupply,
   tokenBalanceLP,
-  quoteTokenBlanceLP
+  quoteTokenBlanceLP,
+  pendingTx,
+  setPendingTx
 }) => {
-  const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
+  useEffect(() => {
+    ReactTooltip.rebuild();
+});
   const rawEarningsBalance = getBalanceNumber(earnings)
   const { onReward } = useHarvest(pid)
   const { stakedBalance, tokenBalance } = useFarmUser(pid)
@@ -152,18 +159,22 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const displayPoolRate = poolRate.toNumber()
   const yourPoolShare = totalYourPoolToken.div(lpTotalSupply)
   const displayYourPoolShare = yourPoolShare.times(100).toFixed(3)
-  const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) * yourPoolShare.toNumber()
-  const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP) * yourPoolShare.toNumber())
+  const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) 
+  const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP))
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
+  const totalValueFormated = totalValue
+  ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
+  : '-'
+  const totalValueTooltip = totalValue ?   Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })
+  : 0
   return (
     <>
-   
+      
       <Flex flexDirection="column">
-      <ReactTooltip place="top" type="info" effect="solid" />
         <StyledText style={{ alignSelf: 'start', marginBottom: '14px' }}>{TranslateString(999, 'Your Liquidity deposits')}</StyledText>
         <Flex>
-          <BalanceAndCompound  data-tip={rawStakedBalance.toFixed(3)}>
-            <Balance fontSize="32px" value={rawStakedBalance}  />
+          <BalanceAndCompound data-tip={rawStakedBalance.toFixed(3)}>
+            <Balance fontSize="32px" value={rawStakedBalance} />
           </BalanceAndCompound>
           <StyledTextInfo style={{ alignSelf: 'center' }}>{lpLabel}</StyledTextInfo>
         </Flex>
@@ -180,13 +191,18 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
             disabled={rawEarningsBalance === 0 || pendingTx}
             isDisable={rawEarningsBalance === 0 || pendingTx}
             onClick={async () => {
-              setPendingTx(true)
-              await onReward()
-              setPendingTx(false)
+              try {
+                setPendingTx(true)
+                await onReward()
+              } catch (e) {
+                console.error(e)
+              } finally{
+                setPendingTx(false)
+              }
             }}
           >{TranslateString(999, 'Claim')}</ButtonClaim>
           <DetailStyled data-tip={displayPoolRate.toFixed(3)}>
-            <Balance value={displayPoolRate}/> <span>SDC/{TranslateString(999, 'WEEK')}</span>
+            <Balance value={displayPoolRate} /> <span>SDC/{TranslateString(999, 'WEEK')}</span>
           </DetailStyled>
         </StylePoolRate>
       </Flex>
@@ -196,12 +212,12 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
           {TranslateString(999, 'Your total pool token')}:
         </StyledTextInfo>
         <DetailStyled data-tip={rawTotalYourPoolToken.toFixed(3)}>
-          <Balance value={rawTotalYourPoolToken}  /> <span>{lpLabel}</span>
+          <Balance value={rawTotalYourPoolToken} /> <span>{lpLabel}</span>
         </DetailStyled>
       </Flex>
       <Flex>
         <StyledTextInfo>{TranslateString(999, 'Pool token in rewards')}:</StyledTextInfo>
-        <DetailStyled  data-tip={displayLpTokenBalanceMC.toFixed(3)}>
+        <DetailStyled data-tip={displayLpTokenBalanceMC.toFixed(3)}>
           <Balance value={displayLpTokenBalanceMC} />  <span>{lpLabel}</span>
         </DetailStyled>
       </Flex>
@@ -209,7 +225,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <StyledTextInfo>{TranslateString(999, 'Pooled')} {tokenSymbol}:
         </StyledTextInfo>
         <DetailStyled data-tip={displayTokenBalanceLp.toFixed(3)}>
-          <Balance value={displayTokenBalanceLp}  />   <span>{tokenSymbol}</span>
+          <Balance value={displayTokenBalanceLp} />   <span>{tokenSymbol}</span>
         </DetailStyled>
       </Flex>
       <Flex>
@@ -224,7 +240,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <StyledTextInfo>{TranslateString(999, 'Your pool share')}: <span data-tip={displayYourPoolShare}>{displayYourPoolShare}</span> %</StyledTextInfo>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Total USD')}: <span data-tip={totalValueFormated}>{totalValueFormated}</span></StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Total USD')}: <span data-tip={totalValueTooltip}>{totalValueFormated}</span></StyledTextInfo>
       </Flex>
       <Flex justifyContent="flex-start">
         <StyledLink external href={bscScanAddress} bold={false}>

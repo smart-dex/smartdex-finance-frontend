@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import { Button, Flex, IconButton, Modal, useModal } from 'uikit-sotatek'
 import Label from 'components/Label'
 import Balance from 'components/Balance'
+import { usePoolFromPid } from 'state/hooks'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { baseColors } from 'style/Color'
 import OldSyrupTitle from './OldSyrupTitle'
@@ -15,46 +16,44 @@ import CompoundModal from './CompoundModal'
 import WithdrawModal from './WithdrawModal'
 import DepositModal from './DepositModal'
 
+
 interface SelectModalProps {
   onDismiss?: () => void
-
-  accountHasStakedBalance: boolean
   tokenName: string
   sousId: number
   isBnbPool: boolean,
-  earnings: BigNumber
   stakingTokenName: string
-  stakedBalance: BigNumber
   isOldSyrup: boolean
   needsApproval: boolean
   account: string
   stakingLimit: number
-  stakingTokenBalance: BigNumber
   convertedLimit: BigNumber
   isFinished: boolean
   tokenDecimals: number
   harvest: boolean
 }
 
-const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDecimals, accountHasStakedBalance, tokenName, sousId, isBnbPool, earnings, stakingTokenName, stakedBalance, isOldSyrup, needsApproval, account, stakingLimit, stakingTokenBalance, convertedLimit, isFinished }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDecimals, tokenName, sousId, isBnbPool, stakingTokenName, isOldSyrup, needsApproval, account, stakingLimit, convertedLimit, isFinished }) => {
   const TranslateString = useI18n()
   const { onReward } = useSousHarvest(sousId, isBnbPool)
+  const { userData }= usePoolFromPid(sousId)
+  
+  const stakingTokenBalance = new BigNumber(userData?.stakingTokenBalance || 0)
+  const stakedBalance = new BigNumber(userData?.stakedBalance || 0)
+  const earnings = new BigNumber(userData?.pendingReward || 0)
+  const accountHasStakedBalance = stakedBalance?.toNumber() > 0
   const [pendingTx, setPendingTx] = useState(false)
   const { onStake } = useSousStake(sousId, isBnbPool)
   const { onUnstake } = useSousUnstake(sousId)
   const [onBack] = useModal(
     <SelectModal
-      accountHasStakedBalance={accountHasStakedBalance}
       tokenName={tokenName}
       sousId={sousId}
       isBnbPool={isBnbPool}
-      earnings={earnings}
       stakingTokenName={stakingTokenName}
-      stakedBalance={stakedBalance}
       needsApproval={needsApproval}
       account={account}
       stakingLimit={stakingLimit}
-      stakingTokenBalance={stakingTokenBalance}
       convertedLimit={convertedLimit}
       isFinished={isFinished}
       isOldSyrup={isOldSyrup}
@@ -103,10 +102,15 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                 disabled={!earnings.toNumber() || pendingTx}
                 isDisable={earnings.toNumber() || pendingTx}
                 onClick={async () => {
-                  setPendingTx(true)
+                  try {
+                    setPendingTx(true)
                   await onReward()
-                  setPendingTx(false)
                   onDismiss()
+                  } catch (error) {
+                    console.error(error)
+                  } finally{
+                    setPendingTx(false)
+                  }
                 }}
               >
                 {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>
@@ -144,9 +148,14 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                 onClick={
                   isOldSyrup
                     ? async () => {
-                      setPendingTx(true)
-                      await onUnstake('0')
-                      setPendingTx(false)
+                      try {
+                        setPendingTx(true)
+                        await onUnstake('0')
+                      } catch (error) {
+                        console.error(error)
+                      } finally {
+                        setPendingTx(false)
+                      }   
                     }
                     : onPresentWithdraw
                 }
