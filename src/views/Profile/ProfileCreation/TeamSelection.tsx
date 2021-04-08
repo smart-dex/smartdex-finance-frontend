@@ -25,18 +25,25 @@ const TextStep3 = styled(Text)`
   margin-bottom: 7px;
 `
 const HeadingText = styled(Heading)`
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 18px;
   line-height: 30px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.balanceColor)};
   margin-top: 7px;
   margin-bottom: 9px !important;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 24px;
+  }
+  
 `
 const TextSub3 = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorStep)};
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 13px;
   line-height: 17px;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 14px;
+  }
 `
 const Cardbox3 = styled(CardBody)`
   margin-top: 21px;
@@ -46,28 +53,34 @@ const Cardbox3 = styled(CardBody)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.white)};
 `
 const HeadingTit = styled(Heading)`
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 700;
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 16px;
+  }
 
 `
 const CardBody3 = styled(CardBody)`
   padding: 0px;
 `
 const Texttit3 = styled(Text)`
-  font-size: 14px;
+  font-size: 13px;
   line-height: 25px;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   width: 100%;
   font-weight: 400;
   margin-bottom: 20px;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 14px;
+  }
 `
 const SelectChecked = styled.div`
     box-shadow: none !important;
     position: relative;
     & : checked {
-    background-color: ${baseColors.primary}!important;
+    background-color: ${baseColors.bgrChecked}!important;
     }
     & : hover{
     box-shadow: none !important;
@@ -75,9 +88,12 @@ const SelectChecked = styled.div`
     & : active{
     box-shadow: none !important;
     }
-    $ : after {
-        left: 5px !important;
-        top: 5px !important;
+    & :focus{
+      box-shadow: none !important;
+    }
+    & :after {
+      height: 16px !important;
+      width: 16px !important;
     }
 `
 const TextCheck = styled(Text)`
@@ -92,12 +108,37 @@ const TextCheck = styled(Text)`
 `
 const NextStep3 = styled(NextStepButton)`
   background-color: ${brandColors.colorbtnNext};
+  position: relative;
   box-shadow: none;
   margin-top: 30px;
   margin-bottom: 30px;
+  font-size: 13px;
+  padding: 0 30px 0 22px;
+  & svg {
+        stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.white)};
+    }
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    & svg {
+      stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
+const BoxIconDirect = styled.div`
+  position: absolute;
+  right: 13px;
+  top: 9px;
+  justify-content: flex-end;
+  line-height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 36px;
+    line-height: 56px;
+    top: 1px;
+    right: 2px;
   }
 `
 
@@ -155,10 +196,17 @@ const Team: React.FC = () => {
         </CardBody3>
       </Cardbox3>
       <NextStep3 onClick={actions.nextStep} disabled={currentTeamId === null}>
-        {TranslateString(798, 'Next Step')}
+        {TranslateString(798, 'Next Step ')}
+        <BoxIconDirect>
+            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 13L7 7L0.999999 1" strokeWidth="2"/>
+            </svg>
+          </BoxIconDirect>
       </NextStep3>
     </>
   )
 }
 
 export default Team
+
+

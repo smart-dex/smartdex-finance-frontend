@@ -67,8 +67,11 @@ const StyledBackgroundImage = styled.div<{ src: string }>`
 const RadioChecked = styled(Radio)`
   background-color: ${({ theme }) => (theme.isDark ? darkColors.darkRadio : lightColors.lightRadio)};
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.darkBorder : lightColors.lightBorder)};
-  height: 33px;
-  width: 33px;
+  height: 30px;
+  width: 30px;
+  :disabled {
+    opacity: 1 !important;
+  }
 `
 const SelectionCard: React.FC<SelectionCardProps> = ({
   name,
