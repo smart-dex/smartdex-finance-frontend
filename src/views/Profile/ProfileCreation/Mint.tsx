@@ -26,20 +26,24 @@ const TextOne = styled(Text)`
 
 `
 const HeadingStep = styled(Heading)`
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 18px;
   line-height: 30px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.balanceColor)};
   margin-top: 7px;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 24px;
+  }
 `
 const TextSub = styled(Text)`
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   display: flex;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   width: 100%;
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 40%;
+    font-size: 14px;
   }
 `
 const CardBox = styled(Card)`
@@ -50,60 +54,108 @@ const CardBox = styled(Card)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.white)};
   
 `
-const HeadingBox= styled(Heading)`
-  font-size: 16px;
+const HeadingBox = styled(Heading)`
+  font-size: 14px;
   line-height: 20px;
   font-weight: 700;
-  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 
 const Textsubtitle = styled(Text)`
-  font-size: 14px;
+  font-size: 13px;
   line-height: 30px;
   display: flex;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
 `
 const SelectionBox = styled.div`
     box-shadow: none !important;
-    background: none !important;
     position: relative;
     & : checked {
-    background-color: ${baseColors.primary}!important;
+    background-color: ${baseColors.bgrChecked}!important;
     }
     & : hover{
     box-shadow: none !important;
-    }
-    & : active{
-    box-shadow: none !important;
-    background: none;
     }
     & :focus{
     box-shadow: none !important;
     }
     & < div : active{
     box-shadow: none !important;
-    border: 1px solid #0085FF;
-  }
+    border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+    }
+    $ : after {
+        left: 5px !important;
+        top: 5px !important;
+    }
 `
 const SelectText = styled(Text)`
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   display: flex;
   align-items: center;
-  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+  font-weight: 500;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
-const ApproveButtons = styled(ApproveConfirmButtons)`
-  
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.primary)};
+const ApproveButtons = styled.div`
+div {
+  box-shadow: none !important;
+ 
   color: ${brandColors.white} !imporatant;
-  padding: 0 35px;
+  
+  justify-content: flex-start !important;
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
   }
-
+}
+  
 `
-
+const NextStepOne = styled(NextStepButton)`
+  position: relative;
+  justify-content: flex-start !important;
+  &:disabled{
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+  }
+  
+`
+const TextCount = styled(Text)`
+  font-size: 13px;
+  line-height: 30px;
+  display: flex;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
+`
+const CardBody2 = styled(CardBody)`
+  padding: 0px;
+`
+const BoxIconDirect = styled.div`
+  position: absolute;
+  right: 12px;
+  top: 6px;
+  justify-content: flex-end;
+  line-height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 36px;
+    line-height: 56px;
+    top: 1px;
+    right: 2px;
+`
+const IconDirect = styled.img`
+  width: 9px;
+  backgcolor: #fff;
+`
 const nfts = nftList.filter((nft) => STARTER_BUNNY_IDS.includes(nft.bunnyId))
 const minimumSdcBalanceToMint = new BigNumber(MINT_COST).multipliedBy(new BigNumber(10).pow(18))
 
@@ -155,7 +207,7 @@ const Mint: React.FC = () => {
       </HeadingStep>
       <TextSub as="p">
         {TranslateString(786, 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia  consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.')}
-        </TextSub>
+      </TextSub>
       <CardBox mb="24px">
         <CardBody>
           <HeadingBox as="h4" size="lg" mb="8px">
@@ -173,37 +225,41 @@ const Mint: React.FC = () => {
             return (
               <SelectionBox>
                 <SelectionCard
-                key={nft.bunnyId}
-                name="mintStarter"
-                value={nft.bunnyId}
-                image={`/images/nfts/${nft.images.md}`}
-                isChecked={bunnyId === nft.bunnyId}
-                onChange={handleChange}
-                disabled={isApproving || isConfirming || isConfirmed || !hasMinimumSdcRequired}
-              >
-                <SelectText bold>{nft.name}</SelectText>
-              </SelectionCard>
+                  key={nft.bunnyId}
+                  name="mintStarter"
+                  value={nft.bunnyId}
+                  image={`/images/nfts/${nft.images.md}`}
+                  isChecked={bunnyId === nft.bunnyId}
+                  onChange={handleChange}
+                  disabled={isApproving || isConfirming || isConfirmed || !hasMinimumSdcRequired}
+                >
+                  <SelectText bold>{nft.name}</SelectText>
+                </SelectionCard>
               </SelectionBox>
             )
           })}
           {!hasMinimumSdcRequired && (
-            <Text color="failure" mb="16px">
+            <TextCount color="failure" mb="16px">
               {TranslateString(1098, `A minimum of ${MINT_COST} SDC is required`)}
-            </Text>
+            </TextCount>
           )}
-          <ApproveButtons
-            isApproveDisabled={bunnyId === null || isConfirmed || isConfirming || isApproved}
-            isApproving={isApproving}
-            isConfirmDisabled={!isApproved || isConfirmed || !hasMinimumSdcRequired}
-            isConfirming={isConfirming}
-            onApprove={handleApprove}
-            onConfirm={handleConfirm}
-          />
+          <ApproveButtons>
+            <ApproveConfirmButtons
+              isApproveDisabled={bunnyId === null || isConfirmed || isConfirming || isApproved}
+              isApproving={isApproving}
+              isConfirmDisabled={!isApproved || isConfirmed || !hasMinimumSdcRequired}
+              isConfirming={isConfirming}
+              onApprove={handleApprove}
+              onConfirm={handleConfirm}
+            />
+          </ApproveButtons>
+
         </CardBody>
       </CardBox>
-      <NextStepButton onClick={actions.nextStep} disabled={!isConfirmed}>
-        {TranslateString(798, 'Next Step')}
-      </NextStepButton>
+      <NextStepOne className="aaaa" onClick={actions.nextStep} disabled={!isConfirmed}>
+        {TranslateString(798, 'Next Step >')}
+        <BoxIconDirect><IconDirect src="/images/home/icon-back.png" alt="" /></BoxIconDirect>
+      </NextStepOne>
     </>
   )
 }

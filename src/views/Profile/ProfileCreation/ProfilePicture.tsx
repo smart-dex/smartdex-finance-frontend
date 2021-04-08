@@ -30,11 +30,14 @@ const TextStepTwo = styled(Text)`
   margin-top: 17px;
  `
 const HeadingText = styled(Heading)`
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 18px;
   line-height: 30px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.balanceColor)};
   margin-top: 7px;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 24px;
+  }
 `
 const CardBoxCon = styled(CardBody)`
   margin-top: 21px;
@@ -43,8 +46,18 @@ const CardBoxCon = styled(CardBody)`
   border-radius: 40px;
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.white)};
 `
-const TextSubTwo = styled(Text)`
+const HeadingChoose = styled(Heading)`
   font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
+
+const TextSubTwo = styled(Text)`
+  font-size: 13px;
   line-height: 25px;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   width: 100%;
@@ -52,6 +65,7 @@ const TextSubTwo = styled(Text)`
   margin-bottom: 20px;
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 29%;
+    font-size:14px
   }
 `
 const LinkSub = styled(Link)`
@@ -75,12 +89,9 @@ const BoxSelect = styled.div`
     box-shadow: none !important;
     position: relative;
     & : checked {
-    background-color: ${baseColors.primary}!important;
+    background-color: ${baseColors.bgrChecked}!important;
     }
     & : hover{
-    box-shadow: none !important;
-    }
-    & : active{
     box-shadow: none !important;
     }
     & :focus{
@@ -90,43 +101,83 @@ const BoxSelect = styled.div`
     box-shadow: none !important;
     border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
     }
-    $ : after {
-        left: 5px !important;
-        top: 5px !important;
+    & :after {
+      height: 16px !important;
+      width: 16px !important;
     }
 `
 const HeadingAllow = styled(Heading)`
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
   font-weight: 700;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
 `
 const TextAllow = styled(Text)`
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   display: flex;
   align-items: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+   }
+  
 `
 const BtnApprove = styled(Button) <{ isDisable: boolean }>`
   background: ${({ isDisable }) => isDisable && ''};
   background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.primary)};
+  box-shadow: none;
   color: ${brandColors.white} !imporatant;
   padding: 0 35px;
+  font-size: 13px;
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
   }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+   }
  `
 const StepButton = styled(NextStepButton)`
+  position: relative;
   background-color: ${baseColors.primary};
+  color: #fff;
+  box-shadow: none;
   margin-top: 30px;
+  padding: 0 30px 0 22px;
+  font-size: 13px;
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
   }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
-
+const CardBody2 = styled(CardBody)`
+  padding: 0px;
+`
+const BoxIconDirect = styled.div`
+  position: absolute;
+  right: 13px;
+  top: 9px;
+  justify-content: flex-end;
+  line-height: 45px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.white)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 36px;
+    line-height: 56px;
+    top: 1px;
+    right: 2px;
+  }
+`
+const IconDirect = styled.img`
+  width: 9px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.white)};
+`
 
 const ProfilePicture: React.FC = () => {
   const [isApproved, setIsApproved] = useState(false)
@@ -185,10 +236,10 @@ const ProfilePicture: React.FC = () => {
         {TranslateString(778, 'Set Profile Picture')}
       </HeadingText>
       <CardBoxCon mb="">
-        <CardBody>
-          <Heading as="h4" size="lg" mb="8px">
+        <CardBody2>
+          <HeadingChoose as="h4" size="lg" mb="8px">
             {TranslateString(812, 'Choose collectible')}
-          </Heading>
+          </HeadingChoose>
           <TextSubTwo as="p" color="textSubtle">
             {TranslateString(
               814,
@@ -240,10 +291,11 @@ const ProfilePicture: React.FC = () => {
                 {TranslateString(564, 'Approve')}
           </BtnApprove>
           
-        </CardBody>
+        </CardBody2>
       </CardBoxCon>
         <StepButton onClick={actions.nextStep} disabled={tokenId === null || !isApproved || isApproving}>
-          {TranslateString(798, 'Next Step')}
+          {TranslateString(798, 'Next Step >')}
+          <BoxIconDirect><IconDirect src="/images/home/icon-back.png" alt="" /></BoxIconDirect>
         </StepButton>
       
      
