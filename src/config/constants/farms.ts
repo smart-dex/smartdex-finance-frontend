@@ -11,7 +11,7 @@ const farms: FarmConfig[] = [
     },
     tokenSymbol: 'SYRUP',
     tokenAddresses: {
-      97: '0x863d95004611E547c32c123D6F37f765474A3e9F',
+      97: '0x92Dcd1A7e8e511f76C261610eaabB75dF2A14F8B',
       56: '',
     },
     quoteTokenSymbol: QuoteToken.BNB,
