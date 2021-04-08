@@ -14,7 +14,8 @@ interface FarmCardActionsProps {
   pid?: number
   earnLabel:string
   onBack:()=>void
-  pendingTx: boolean
+  pendingTxModal: boolean
+  setPendingTxModal:(pendingTxModal: boolean) => void
   setPendingTx: (pendingTx: boolean) => void
 }
 const StyledHarvestAction = styled(Flex)`
@@ -60,7 +61,7 @@ const BalanceAndCompound = styled.div`
   }
 `
 
-const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel, onBack,pendingTx,setPendingTx }) => {
+const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel, onBack,pendingTxModal,setPendingTxModal,setPendingTx }) => {
   const TranslateString = useI18n()
   const { onReward } = useHarvest(pid)
   const rawEarningsBalance = getBalanceNumber(earnings)
@@ -74,17 +75,19 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid,earnLabel
         colorLabel={baseColors.orange}
       />
       <StyledButton
-        disabled={rawEarningsBalance === 0  || pendingTx}
-        isDisable={rawEarningsBalance === 0 || pendingTx}
+        disabled={rawEarningsBalance === 0  || pendingTxModal}
+        isDisable={rawEarningsBalance === 0 || pendingTxModal}
         onClick={async () => {
           try {
             setPendingTx(true)
+            setPendingTxModal(true)
             await onReward()
             onBack()
           } catch (e) {
             console.error(e)
           } finally{
             setPendingTx(false)
+            setPendingTxModal(false)
           }
         
         }}

@@ -1,5 +1,5 @@
 import useI18n from 'hooks/useI18n'
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useFarmUser } from 'state/hooks'
 import { baseColors } from 'style/Color'
@@ -19,12 +19,12 @@ interface SelectModalProps {
   addLiquidityUrl: string
   earnLabel: string
   removed: boolean
-  pendingTx: boolean
   setPendingTx: (pendingTx: boolean) => void
 }
 
-const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, pid, lpName, earnLabel, pendingTx, setPendingTx, addLiquidityUrl }) => {
+const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, pid, lpName, earnLabel, setPendingTx, addLiquidityUrl }) => {
   const TranslateString = useI18n()
+  const [pendingTxModal,setPendingTxModal] = useState(false)
   const {  tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
   const rawStakedBalance = getBalanceNumber(stakedBalance)
   const [onBack] = useModal(
@@ -34,7 +34,6 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, pid, lpNa
       addLiquidityUrl={addLiquidityUrl}
       earnLabel={earnLabel}
       removed={removed}
-      pendingTx={pendingTx}
       setPendingTx={setPendingTx}
     />
   )
@@ -45,7 +44,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, pid, lpNa
           <ActionEarn>
             <StyledImg>
               <img src='/images/balance-icon.svg' alt='balance-icon' />
-              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss} pendingTx={pendingTx} setPendingTx={setPendingTx} />
+              <HarvestAction earnings={earnings} pid={pid} earnLabel={earnLabel} onBack={onDismiss} pendingTxModal={pendingTxModal} setPendingTxModal={setPendingTxModal} setPendingTx={setPendingTx} />
             </StyledImg>
 
           </ActionEarn>
@@ -67,7 +66,8 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, removed, pid, lpNa
               tokenName={lpName}
               pid={pid}
               addLiquidityUrl={addLiquidityUrl}
-              removed={removed}
+              removed={removed} 
+              pendingTxModal={pendingTxModal}
             />
           </ActionStake>
         </StyledModal>
