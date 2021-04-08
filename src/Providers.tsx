@@ -1,8 +1,10 @@
 import React from 'react'
 import { ModalProvider } from 'uikit-sotatek'
+import { Web3ReactProvider } from '@web3-react/core'
 import bsc, { UseWalletProvider } from '@binance-chain/bsc-use-wallet'
 import { Provider } from 'react-redux'
 import getRpcUrl from 'utils/getRpcUrl'
+import { getLibrary } from 'utils/web3React'
 import { LanguageContextProvider } from 'contexts/Localisation/languageContext'
 import { ThemeContextProvider } from 'contexts/ThemeContext'
 import { BlockContextProvider } from 'contexts/BlockContext'
@@ -13,6 +15,7 @@ const Providers: React.FC = ({ children }) => {
   const rpcUrl = getRpcUrl()
 
   return (
+    <Web3ReactProvider getLibrary={getLibrary}>
     <Provider store={store}>
       <ThemeContextProvider>
         <LanguageContextProvider>
@@ -32,6 +35,7 @@ const Providers: React.FC = ({ children }) => {
         </LanguageContextProvider>
       </ThemeContextProvider>
     </Provider>
+    </Web3ReactProvider>
   )
 }
 

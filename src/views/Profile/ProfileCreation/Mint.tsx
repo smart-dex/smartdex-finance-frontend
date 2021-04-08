@@ -8,7 +8,7 @@ import { useSdc, useBunnyFactory } from 'hooks/useContract'
 import useHasSdcBalance from 'hooks/useHasSdcBalance'
 import nftList from 'config/constants/nfts'
 import styled from 'styled-components'
-import { lightColors, darkColors, baseColors } from 'style/Color'
+import { lightColors, darkColors, baseColors, brandColors } from 'style/Color'
 import SelectionCard from '../components/SelectionCard'
 import NextStepButton from '../components/NextStepButton'
 import ApproveConfirmButtons from '../components/ApproveConfirmButtons'
@@ -44,9 +44,11 @@ const TextSub = styled(Text)`
 `
 const CardBox = styled(Card)`
   margin-top: 21px;
-  border: 1px solid #E2E2E8;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
-  border-radius: 40px
+  border-radius: 40px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.white)};
+  
 `
 const HeadingBox= styled(Heading)`
   font-size: 16px;
@@ -63,6 +65,7 @@ const Textsubtitle = styled(Text)`
 `
 const SelectionBox = styled.div`
     box-shadow: none !important;
+    background: none !important;
     position: relative;
     & : checked {
     background-color: ${baseColors.primary}!important;
@@ -89,6 +92,18 @@ const SelectText = styled(Text)`
   align-items: center;
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
 `
+const ApproveButtons = styled(ApproveConfirmButtons)`
+  
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.primary)};
+  color: ${brandColors.white} !imporatant;
+  padding: 0 35px;
+  &:disabled{
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+  }
+
+`
+
 const nfts = nftList.filter((nft) => STARTER_BUNNY_IDS.includes(nft.bunnyId))
 const minimumSdcBalanceToMint = new BigNumber(MINT_COST).multipliedBy(new BigNumber(10).pow(18))
 
@@ -176,7 +191,7 @@ const Mint: React.FC = () => {
               {TranslateString(1098, `A minimum of ${MINT_COST} SDC is required`)}
             </Text>
           )}
-          <ApproveConfirmButtons
+          <ApproveButtons
             isApproveDisabled={bunnyId === null || isConfirmed || isConfirming || isApproved}
             isApproving={isApproving}
             isConfirmDisabled={!isApproved || isConfirmed || !hasMinimumSdcRequired}
