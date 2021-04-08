@@ -182,7 +182,6 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
       addLiquidityUrl={addLiquidityUrl}
       earnLabel={earnLabel}
       removed={removed}
-      pendingTx={pendingTx}
       setPendingTx={setPendingTx}
     />
   )
@@ -225,7 +224,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
                           </ButtonDeposit>
                         ) : (
                           <>
-                            <SelectButton onClick={onSelect}>  {TranslateString(999, 'Select')}</SelectButton>
+                            <SelectButton onClick={onSelect} disabled={pendingTx}>  {TranslateString(999, 'Select')}</SelectButton>
                             <ButtonDetail onClick={changeOpenDetail} isShow={isOpenDetail} mt="10px" mb="10px">
                               {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
                             </ButtonDetail>

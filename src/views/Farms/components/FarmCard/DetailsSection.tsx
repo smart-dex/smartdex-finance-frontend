@@ -15,7 +15,7 @@ import Balance from 'components/Balance'
 interface ExpandableSectionProps {
   bscScanAddress?: string
   removed?: boolean
-  totalValueFormated?: string
+  totalValue?: BigNumber
   lpLabel?: string
   addLiquidityUrl?: string
   earnings?: BigNumber
@@ -131,7 +131,7 @@ const StylePoolRate = styled(Flex)`
   `
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
-  totalValueFormated,
+  totalValue,
   lpLabel,
   earnings,
   pid,
@@ -159,9 +159,14 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const displayPoolRate = poolRate.toNumber()
   const yourPoolShare = totalYourPoolToken.div(lpTotalSupply)
   const displayYourPoolShare = yourPoolShare.times(100).toFixed(3)
-  const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) * yourPoolShare.toNumber()
-  const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP) * yourPoolShare.toNumber())
+  const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) 
+  const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP))
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
+  const totalValueFormated = totalValue
+  ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
+  : '-'
+  const totalValueTooltip = totalValue ?   Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })
+  : 0
   return (
     <>
       
@@ -235,7 +240,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <StyledTextInfo>{TranslateString(999, 'Your pool share')}: <span data-tip={displayYourPoolShare}>{displayYourPoolShare}</span> %</StyledTextInfo>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Total USD')}: <span data-tip={totalValueFormated}>{totalValueFormated}</span></StyledTextInfo>
+        <StyledTextInfo>{TranslateString(999, 'Total USD')}: <span data-tip={totalValueTooltip}>{totalValueFormated}</span></StyledTextInfo>
       </Flex>
       <Flex justifyContent="flex-start">
         <StyledLink external href={bscScanAddress} bold={false}>

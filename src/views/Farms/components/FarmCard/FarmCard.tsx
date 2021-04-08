@@ -187,9 +187,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
     return farm.lpTotalInQuoteToken
   }, [bnbPrice, sdcPrice, ethPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
-  const totalValueFormated = totalValue
-    ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
-    : '-'
+
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('SMARTDEXCHAIN', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'SDC'
@@ -304,7 +302,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
               removed={removed}
               poolRate={poolRate}
               bscScanAddress={linkScan}
-              totalValueFormated={totalValueFormated}
+              totalValue={totalValue}
               lpLabel={lpLabel}
               addLiquidityUrl={addLiquidityUrl}
               earnings={earnings}
