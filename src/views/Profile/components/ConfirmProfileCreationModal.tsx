@@ -38,9 +38,7 @@ const TextPopup = styled(Text)`
     font-size: 14px;
     line-height: 20px;
     display: flex;
-  
     color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
-    
 `
 const TextStyle = styled(Text)`
     color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)} !important;

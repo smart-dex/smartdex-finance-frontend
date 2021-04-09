@@ -126,11 +126,10 @@ const TextAllow = styled(Text)`
    }
   
 `
-const BtnApprove = styled(Button) <{ isDisable: boolean }>`
-  background: ${({ isDisable }) => isDisable && ''};
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.primary)};
+const BtnApprove = styled(Button)`
+  background-color: ${lightColors.primary} !important;
   box-shadow: none;
-  color: ${brandColors.white} !imporatant;
+  color: ${brandColors.white} !important;
   padding: 0 35px;
   font-size: 13px;
   &:disabled{

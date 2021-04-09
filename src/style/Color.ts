@@ -104,6 +104,7 @@ export const lightColors = {
   lightRadio:'rgba(224, 224, 224, 0.3)',
   lightBorder:'#E0E0E0',
   lightCheckBox:'#F6F6F6',
+  colorGift: '#FFEAEB',
 }
 
 export const darkColors = {
@@ -184,4 +185,5 @@ export const darkColors = {
   darkRadio:'#00071C',
   darkBorder:'#2F344B',
   daskCheckBox:'#00071C',
+  colorGift:'#00071C;',
 }

@@ -89,9 +89,9 @@ const SelectionBox = styled.div`
     box-shadow: none !important;
     border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
     }
-    $ : after {
-        left: 5px !important;
-        top: 5px !important;
+    & :after {
+      height: 16px !important;
+      width: 16px !important;
     }
 `
 const SelectText = styled(Text)`
@@ -108,16 +108,13 @@ const SelectText = styled(Text)`
 const ApproveButtons = styled.div`
 div {
   box-shadow: none !important;
- 
   color: ${brandColors.white} !imporatant;
-  
   justify-content: flex-start !important;
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
   }
 }
-  
 `
 const NextStepOne = styled(NextStepButton)`
   position: relative;
@@ -127,6 +124,9 @@ const NextStepOne = styled(NextStepButton)`
   margin-top: 30px;
   padding: 0 30px 0 22px;
   font-size: 13px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
   & svg {
     stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.white)};
     }
@@ -137,7 +137,6 @@ const NextStepOne = styled(NextStepButton)`
           stroke: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
       }
 }
-  
 `
 const TextCount = styled(Text)`
   font-size: 13px;

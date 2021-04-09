@@ -29,8 +29,8 @@ const ButtonApprove = styled(Button)`
   align-items: center;
   text-align: center;
   box-shadow: 0px 4px 10px ${brandColors.shadowbtn};
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)};
-  background: ${lightColors.colorApprove};
+  color: ${lightColors.white};
+  background: ${lightColors.primary};
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
