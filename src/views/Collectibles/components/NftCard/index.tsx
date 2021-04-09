@@ -130,7 +130,7 @@ const NftCard: React.FC<NftCardProps> = ({ nft, onSuccess, canClaim = false, tok
         </CardBody>
         <StyleCardFooter p="0">
           <DetailsButton endIcon={<Icon width="20px" color={baseColors.primary} />} onClick={handleClick}>
-            {TranslateString(658, isOpen ? 'Hide' : 'Detail')}
+            {isOpen ? TranslateString(1066, 'Hide') : TranslateString(658, 'Detail')}
           </DetailsButton>
           <InfoBlock>{isOpen && description}</InfoBlock>
         </StyleCardFooter>
