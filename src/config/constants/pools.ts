@@ -26,7 +26,7 @@ const pools: PoolConfig[] = [
     stakingTokenName: QuoteToken.SDC,
     stakingTokenAddress: '0x863d95004611E547c32c123D6F37f765474A3e9F',
     contractAddress: {
-      97: '0x4E5E50b22831c16FA3d43f7F4658cBbE25bfC24A',
+      97: '0x287C3DF95C05ce9A62Cf085AB2d03348Efd16CbD',
       56: '',
     },
     poolCategory: PoolCategory.CORE,
@@ -44,7 +44,7 @@ const pools: PoolConfig[] = [
     stakingTokenName: QuoteToken.BNB,
     stakingTokenAddress: '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
     contractAddress: {
-      97: '0x74d8D503EEd660d6A7aF4c6B65A6E58C52aE6dF9',
+      97: '0x1f2f86E28A1a942C686836A6F299f1D8d6182Dd2',
       56: '',
     },
     poolCategory: PoolCategory.CORE,
@@ -62,7 +62,7 @@ const pools: PoolConfig[] = [
     stakingTokenName: QuoteToken.SDC,
     stakingTokenAddress: '0x863d95004611E547c32c123D6F37f765474A3e9F',
     contractAddress: {
-      97: '0xbD5eb9b63223c3446404dBA610039a30030E2fa4',
+      97: '0xfb3336C1DF28C402901a16d16fbe687cf7A31b4E',
       56: '',
     },
     poolCategory: PoolCategory.CORE,
