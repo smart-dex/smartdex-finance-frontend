@@ -3,7 +3,7 @@ import { Button, Flex, Heading, useModal, Won } from 'uikit-sotatek'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
-import { darkColors, lightColors } from 'style/Color'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 import ClaimNftAndSdcModal, { useCanClaim } from './ClaimGiftModal'
 import HeaderWrapper from './HeaderWrapper'
 import EditProfileModal from './EditProfileModal'
@@ -27,9 +27,11 @@ const ProfileHeader = () => {
             )}
           </StyledText>
           {canClaim && (
-            <Button variant="tertiary" onClick={onPresentClaimGiftModal} startIcon={<Won />}>
-              {TranslateString(999, "You've got a gift to claim!")}
-            </Button>
+            <BoxGift>
+                <ButtonGift variant="tertiary" onClick={onPresentClaimGiftModal} startIcon={<Won />}>
+                  {TranslateString(999, "You've got a gift to claim!")}
+                </ButtonGift>
+            </BoxGift>
           )}
         </StyledHeader>
       </HeaderWrapper>
@@ -49,6 +51,8 @@ const Line = styled.div`
 `
 const StyledHeader = styled(Flex)`
   flex-direction: column;
+  justify-content: center;
+  display: grid;
 `
 
 const StyledText = styled(Flex)`
@@ -56,6 +60,7 @@ const StyledText = styled(Flex)`
   align-items: center;
 `
 const TextHeading = styled(Heading)`
+  margin-top: 30px;
   font-weight: bold;
   font-size: 18px;
   line-height: 29px;
@@ -82,10 +87,21 @@ const ButtonEditProfile = styled(Button)`
   margin-bottom: 12px;
   width: 150px;
   height: 56px;
+  background-color: ${lightColors.primary};
+  box-shadow: none;
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 150px;
     height: 56px;
   }
+`
+const BoxGift = styled.div`
+  align-item: center;
+  display: flex;
+`
+const ButtonGift = styled(Button)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.colorGift : lightColors.colorGift)};
+  color: ${baseColors.colorRed};
+  
 `
 
 export default ProfileHeader

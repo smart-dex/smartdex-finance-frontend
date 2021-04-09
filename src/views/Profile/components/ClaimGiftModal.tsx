@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { Modal, Text, InjectedModalProps, Button, AutoRenewIcon } from '@pancakeswap-libs/uikit'
+import { Modal, Text, InjectedModalProps, Button, AutoRenewIcon } from 'uikit-sotatek'
 import { AbiItem } from 'web3-utils'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import claimRefundAbi from 'config/abi/claimRefund.json'
@@ -8,6 +8,8 @@ import { getContract } from 'utils/web3'
 import { useToast } from 'state/hooks'
 import useContract from 'hooks/useContract'
 import useI18n from 'hooks/useI18n'
+import styled from 'styled-components'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 
 interface ClaimGiftProps extends InjectedModalProps {
   onSuccess: () => void
@@ -73,39 +75,48 @@ const ClaimGift: React.FC<ClaimGiftProps> = ({ onSuccess, onDismiss }) => {
   return (
     <Modal title={TranslateString(999, 'Claim your Gift!')} onDismiss={onDismiss}>
       <div style={{ maxWidth: '640px' }}>
-        <Text as="p">{TranslateString(999, 'Thank you for being a day-one user of SmartDEXChain Profiles!')}</Text>
-        <Text as="p" mb="8px">
+        <TextP1 as="p">{TranslateString(999, 'Thank you for being a day-one user of SmartDEXChain Profiles!')}</TextP1>
+        <TextP1 as="p" mb="8px">
           {TranslateString(
             999,
             "If you haven't already noticed, we made a mistake and the starter bunny you chose got mixed up and changed into another bunny. Oops!",
           )}
-        </Text>
-        <Text as="p">
+        </TextP1>
+        <TextP1 as="p">
           {TranslateString(999, "To make it up to you, we'll refund you the full 4 SDC it cost to make your bunny.")}
-        </Text>
-        <Text as="p" mb="8px">
+        </TextP1>
+        <TextP1 as="p" mb="8px">
           {TranslateString(
             999,
             "We're also preparing an all-new collectible for you to claim (for free!) in the near future.",
           )}
-        </Text>
-        <Text as="p" mb="24px">
+        </TextP1>
+        <TextP1 as="p" mb="24px">
           {TranslateString(
             999,
             'Once you claim the refund, you can make another account with another wallet, mint a new bunny, and send it to your main account via the NFT page.',
           )}
-        </Text>
-        <Button
+        </TextP1>
+        <ButtonClaimGift
           endIcon={isConfirming ? <AutoRenewIcon spin color="currentColor" /> : null}
           isLoading={isConfirming}
           onClick={handleClick}
           disabled={!canClaim}
         >
           {TranslateString(999, 'Claim Your SDC')}
-        </Button>
+        </ButtonClaimGift>
       </div>
     </Modal>
   )
 }
+const TextP1 = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+`
 
+const ButtonClaimGift = styled(Button)`
+  &:disabled{
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+  }
+`
 export default ClaimGift

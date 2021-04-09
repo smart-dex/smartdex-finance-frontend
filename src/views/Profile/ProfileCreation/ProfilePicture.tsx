@@ -126,11 +126,10 @@ const TextAllow = styled(Text)`
    }
   
 `
-const BtnApprove = styled(Button) <{ isDisable: boolean }>`
-  background: ${({ isDisable }) => isDisable && ''};
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.primary)};
+const BtnApprove = styled(Button)`
+  background-color: ${lightColors.primary} !important;
   box-shadow: none;
-  color: ${brandColors.white} !imporatant;
+  color: ${brandColors.white} !important;
   padding: 0 35px;
   font-size: 13px;
   &:disabled{
@@ -283,7 +282,7 @@ const ProfilePicture: React.FC = () => {
               "The collectible you've chosen will be locked in a smart contract while it’s being used as your profile picture. Don't worry - you'll be able to get it back at any time.",
             )}
           </TextAllow>
-           <BtnApprove
+           <BtnApprove className="aaaaaaaaaaa"
                 isLoading={isApproving}
                 disabled={isApproved || isApproving || tokenId === null}
                 onClick={handleApprove}
