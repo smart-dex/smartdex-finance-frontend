@@ -11,8 +11,9 @@ import CardBusdValue from './CardBusdValue'
 import { lightColors, darkColors } from '../../../style/Color'
 
 const Block = styled.div`
-  padding-top: 20px;
+  padding-top: 4px;
   display: flex;
+  flex-direction: column;
 `
 const TextStyle = styled(Text)`
   padding-top: 0px;
@@ -40,8 +41,8 @@ const SdcHarvestBalance = () => {
 
   return (
     <Block>
-      <CardValue value={earningsSum} lineHeight="0.5" />
-      <CardBusdValue value={earningsBusd} />
+      <CardValue value={earningsSum} />
+      <CardBusdValue value={earningsBusd} lineHeight="2.6"/>
     </Block>
   )
 }

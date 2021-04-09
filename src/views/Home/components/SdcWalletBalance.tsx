@@ -25,8 +25,9 @@ const TextStyle = styled(Text)`
 `
 
 const Block = styled.div`
-  padding-top: 20px;
+  padding-top: 4px;
   display: flex;
+  flex-direction: column;
 `
 
 const SdcWalletBalance = () => {
@@ -41,8 +42,8 @@ const SdcWalletBalance = () => {
 
   return (
     <Block>
-      <CardValue value={getBalanceNumber(cakeBalance)} decimals={4} lineHeight="0.5" />
-      <CardBusdValue value={busdBalance} />
+      <CardValue value={getBalanceNumber(cakeBalance)} decimals={4} />
+      <CardBusdValue value={busdBalance} lineHeight="2.6"/>
     </Block>
   )
 }

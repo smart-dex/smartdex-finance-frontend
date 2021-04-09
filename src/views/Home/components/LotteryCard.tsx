@@ -69,31 +69,28 @@ const BlockSdcWinnings = styled.div`
   display: flex;
   margin-bottom: 30px;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     flex-direction: column;
-    align-items: flex-start;
   }
 `
 const BlockLotteryJackpot = styled.div`
   display: flex;
   margin-bottom: 30px;
   justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     flex-direction: column;
-    align-items: flex-start;
   }
 `
 const Label = styled.div`
-  color: ${baseColors.success};
+  color: ${baseColors.primary};
   font-weight: 600;
   font-size: 12px;
   line-height: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    color: ${baseColors.primary};
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 7px;
