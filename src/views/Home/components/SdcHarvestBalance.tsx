@@ -36,7 +36,7 @@ const SdcHarvestBalance = () => {
   const earningsBusd = new BigNumber(earningsSum).multipliedBy(usePriceSdcBusd()).toNumber()
 
   if (!account) {
-    return <TextStyle lineHeight="0.8">{TranslateString(298, 'LOCKED')}</TextStyle>
+    return <TextStyle lineHeight="2">{TranslateString(298, 'LOCKED')}</TextStyle>
   }
 
   return (

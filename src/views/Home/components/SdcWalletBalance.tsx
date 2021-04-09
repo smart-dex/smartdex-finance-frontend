@@ -37,7 +37,7 @@ const SdcWalletBalance = () => {
   const { account } = useWallet()
 
   if (!account) {
-    return <TextStyle lineHeight="0.8">{TranslateString(298, 'LOCKED')}</TextStyle>
+    return <TextStyle lineHeight="2">{TranslateString(298, 'LOCKED')}</TextStyle>
   }
 
   return (
