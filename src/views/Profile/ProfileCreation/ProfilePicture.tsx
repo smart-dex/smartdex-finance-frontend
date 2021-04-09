@@ -282,7 +282,7 @@ const ProfilePicture: React.FC = () => {
               "The collectible you've chosen will be locked in a smart contract while it’s being used as your profile picture. Don't worry - you'll be able to get it back at any time.",
             )}
           </TextAllow>
-           <BtnApprove className="aaaaaaaaaaa"
+           <BtnApprove
                 isLoading={isApproving}
                 disabled={isApproved || isApproving || tokenId === null}
                 onClick={handleApprove}
