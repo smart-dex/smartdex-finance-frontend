@@ -148,13 +148,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <StyleImgEaredDetail>
           <StyledImageEarned>
             <StyledImagePool>
-              <ImageCoin>
-                <img
-                  src={`/images/tokens/${image || tokenName}.png`}
-                  alt={" "}
-                  style={{ width: '100%', height: '100%' }}
-                />
-              </ImageCoin>
+              <IconDirect src="/images/home/icon-pool.png" alt="" />
             </StyledImagePool>
             <StyledCoinEarned>
               <StyledTextEarned>
@@ -176,6 +170,9 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
           <DetailPool>
             <StyledDetails style={{ marginBottom: '26px' }}>
+                  <IconWrapper>
+                    <TicketImg src="/images/pan-cake.png" />
+                  </IconWrapper>
               <StyleFlexDetail isFinished={isFinished}>{TranslateString(736, 'APR')}:</StyleFlexDetail>
               {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ?
                 (
@@ -290,6 +287,10 @@ const ImageCoin = styled.div`
 const StyledImagePool = styled(Flex)`
   margin-right:10px;
   padding-left: 10px;
+  width: 40px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+   
+  }
 `
 
 const StyledCoinEarned = styled(Flex)`
@@ -329,7 +330,8 @@ const StyleFlexDetail = styled.div<{ isFinished: boolean }>`
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  margin-right:5px;
+  margin-left: 5px;
+
 `
 
 const ButtonDetail = styled(Button) <{ isShow: boolean }>`
@@ -503,6 +505,7 @@ const StyledImageEarned = styled(Flex)`
   border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
   flex:50%;
   padding-right:10px;
+  position: relative;
 `
 
 const StyleNameFinished = styled.div`
@@ -543,6 +546,23 @@ const ButtonSelect = styled(Button)`
     ${({ theme }) => theme.mediaQueries.nav} {
       font-size: 16px;
     }
+`
+const IconDirect = styled.img`
+  width: 10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 28px;
+    height: 28px;
+  }
+`
+const IconWrapper = styled.div`
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+`
+const TicketImg = styled.img`
+  width: 25px;
+  height: 25px;
 `
 
 export default PoolCard
