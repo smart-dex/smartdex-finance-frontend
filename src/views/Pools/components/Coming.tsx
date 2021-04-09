@@ -156,7 +156,7 @@ const Coming: React.FC = () => {
         </NamePool>
       </StyledCardName>
       <CardContentComing>
-        <Image src="/images/bunny-question.svg" width={64} height={64} alt="Your project here" />
+        <Image src="/images/project.svg" width={64} height={64} alt="Your project here" />
         <Balance>???</Balance>
         <CommunityTag />
         <DetailPlaceholder>
