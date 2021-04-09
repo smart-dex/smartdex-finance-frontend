@@ -36,7 +36,7 @@ const WinningNumbers: React.FC = () => {
                   </TicketNumberBox>
                 ))}
               </Row>
-              <Link href= {`${process.env.REACT_APP_PANCAKE_API}/api/lottery?page=0&pageSize=25` } target="_blank">
+              <Link href= {`${process.env.REACT_APP_URL_LOTTERY}/api/lottery?page=0&pageSize=25` } target="_blank">
                 {TranslateString(448, 'Export recent winning numbers')}
               </Link>
             </StyledCardHeader>
