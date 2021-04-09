@@ -173,10 +173,12 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
 }
 const StyledModal = styled(Flex)`
     ${({ theme }) => theme.mediaQueries.nav} {
-      width:662px;
+      width: 662px;
       flex-direction:row;
     }
     flex-direction:column;
+    max-height: 330px;
+    overflow-y: auto;
 `
 const ModalStyle = styled(Modal)`
   border: 1px solid #E2E2E8;
