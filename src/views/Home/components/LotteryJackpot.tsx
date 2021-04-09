@@ -18,9 +18,8 @@ const TextSdc = styled(Text)`
 `
 
 const Block = styled.div`
+  padding-top: 4px;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   flex-direction: column;
 `
 

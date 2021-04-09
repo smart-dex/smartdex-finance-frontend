@@ -127,7 +127,7 @@ const PublicProfile = () => {
               <Content>
                 <Username>{`@${profile.username}`}</Username>
                 <Flex alignItems="center">
-                  <AddressLink href={`https://bscscan.com/address/${account}`} color="text" external>
+                  <AddressLink href={`${process.env.REACT_APP_BSC_SCAN}/address/${account}`} color="text" external>
                     {account}
                   </AddressLink>
                   <OpenIcon><OpenNewIcon ml="4px" /></OpenIcon>

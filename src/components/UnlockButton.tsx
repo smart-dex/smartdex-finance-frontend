@@ -4,6 +4,7 @@ import { baseColors, darkColors, lightColors } from 'style/Color'
 import { Button, useWalletModal } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
+import useAuth from '../hooks/useAuth'
 
 const ButtonStyle = styled(Button)`
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
@@ -23,8 +24,9 @@ const ButtonStyle = styled(Button)`
 `
 const UnlockButton = (props) => {
   const TranslateString = useI18n()
-  const { connect, reset } = useWallet()
-  const { onPresentConnectModal } = useWalletModal(connect, reset)
+  const { reset } = useWallet()
+  const { login } = useAuth()
+  const { onPresentConnectModal } = useWalletModal(login, reset)
 
   return (
     <ButtonStyle onClick={onPresentConnectModal} {...props}>

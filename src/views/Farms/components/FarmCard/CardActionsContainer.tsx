@@ -146,7 +146,9 @@ interface FarmCardActionsProps {
   changeOpenDetail: () => void
   isOpenDetail: boolean
   earnLabel: string
-  removed:boolean
+  removed: boolean,
+  pendingTx: boolean,
+  setPendingTx: (pendingTx: boolean) => void
 }
 
 const CardActions: React.FC<FarmCardActionsProps> = ({
@@ -157,12 +159,14 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   changeOpenDetail,
   isOpenDetail,
   earnLabel,
-  removed
+  removed,
+  pendingTx,
+  setPendingTx
 }) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses } = useFarmFromSymbol(farm.lpSymbol)
-  const { allowance, tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
+  const { allowance, tokenBalance, stakedBalance } = useFarmUser(pid)
   const lpAddress = getAddress(lpAddresses)
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
@@ -174,13 +178,11 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   const [onSelect] = useModal(
     <SelectModal
       pid={pid}
-      earnings={earnings}
-      stakedBalance={stakedBalance}
       lpName={lpName}
-      tokenBalance={tokenBalance}
       addLiquidityUrl={addLiquidityUrl}
       earnLabel={earnLabel}
       removed={removed}
+      setPendingTx={setPendingTx}
     />
   )
   const { onApprove } = useApprove(lpContract)
@@ -219,11 +221,10 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
                         (
                           <ButtonDeposit as="a" href={addLiquidityUrl} target="_blank" >
                             <span>  {TranslateString(999, 'Deposit')}</span>
-
                           </ButtonDeposit>
                         ) : (
                           <>
-                            <SelectButton onClick={onSelect}>   {TranslateString(999, 'Select')}</SelectButton>
+                            <SelectButton onClick={onSelect} disabled={pendingTx}>  {TranslateString(999, 'Select')}</SelectButton>
                             <ButtonDetail onClick={changeOpenDetail} isShow={isOpenDetail} mt="10px" mb="10px">
                               {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
                             </ButtonDetail>

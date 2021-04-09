@@ -62,18 +62,14 @@ const BlockSdcHarvest = styled.div`
   display: flex;
   margin-bottom: 30px;
   justify-content: space-between;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-bottom: 20px;
-    flex-direction: column;
-  }
+  flex-direction: column;
 `
 const Label = styled.div`
-  color: ${baseColors.success};
+  color: ${baseColors.primary};
   font-weight: 600;
   font-size: 12px;
   line-height: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    color: ${baseColors.primary};
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 7px;
@@ -119,7 +115,7 @@ const BoxIconDirect = styled.div`
   right: 0px;
   top: 0px;
   height: 100%;
-  background: #0085FF;
+  background: #0085ff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 24px;
@@ -172,7 +168,13 @@ const FarmedStakingCard = () => {
             <StyleButtonDisabled
               id="harvest-all"
               disabled={balancesWithValue.length <= 0 || pendingTx}
-              endIcon={!(balancesWithValue.length <= 0 || pendingTx) && <BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>}
+              endIcon={
+                !(balancesWithValue.length <= 0 || pendingTx) && (
+                  <BoxIconDirect>
+                    <IconDirect src="/images/home/icon-direct.svg" alt="" />
+                  </BoxIconDirect>
+                )
+              }
               onClick={harvestAllFarms}
               style={{ width: '100%' }}
             >
@@ -182,7 +184,11 @@ const FarmedStakingCard = () => {
             </StyleButtonDisabled>
           ) : (
             <UnlockButton
-              endIcon={<BoxIconDirect><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>}
+              endIcon={
+                <BoxIconDirect>
+                  <IconDirect src="/images/home/icon-direct.svg" alt="" />
+                </BoxIconDirect>
+              }
               style={{ width: '100%' }}
             />
           )}
