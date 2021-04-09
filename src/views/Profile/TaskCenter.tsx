@@ -45,9 +45,9 @@ const TaskCenter = () => {
             </Flex>
           </StyledHeader>
           <StyledBodyCard>
-            <Flex alignItems="center" justifyContent="center" style={{ height: '64px' }}>
+            <FlexSoon alignItems="center" justifyContent="center" style={{ height: '64px' }}>
               <StyledComingSoon>{TranslateString(999, 'Coming Soon')}</StyledComingSoon>
-            </Flex>
+            </FlexSoon>
           </StyledBodyCard>
         </StyledCard>
       </StyledListCard>
@@ -106,13 +106,17 @@ const StyledDescriptionHeader = styled(Text)`
 `
 const StyledComingSoon = styled(Text)`
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 22px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textComingSoon : lightColors.textComingSoon)};
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 18px;
+    font-size: 16px;
   }
 `
+const FlexSoon = styled(Flex)`
+    justify-content: flex-start;
+`
+
 const StyledBodyCard = styled(CardBody)``
 
 export default TaskCenter

@@ -12,6 +12,8 @@ export const baseColors = {
   boxShadow: 'rgba(83, 185, 234, 0.24)',
   colorRed: '#FF6970',
   bgrChecked:'#18A0FB',
+  colorAddressLink:'rgba(255, 255, 255, 0.8);',
+  colorBlue:'#50B0FC',
 }
 
 export const brandColors = {
@@ -105,6 +107,7 @@ export const lightColors = {
   lightBorder:'#E0E0E0',
   lightCheckBox:'#F6F6F6',
   colorGift: '#FFEAEB',
+  colorAchievment:'rgba(155, 153, 184, 0.6)',
 }
 
 export const darkColors = {

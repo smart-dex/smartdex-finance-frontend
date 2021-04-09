@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, InjectedModalProps, Skeleton, Text } from '@pancakeswap-libs/uikit'
+import { Button, InjectedModalProps, Skeleton, Text } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useDispatch } from 'react-redux'
 import nftList from 'config/constants/nfts'
@@ -10,8 +10,12 @@ import useGetWalletNfts from 'hooks/useGetWalletNfts'
 import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
 import { useSmartDEXChainRabbits, useProfile as useProfileContract } from 'hooks/useContract'
 import { getSmartDEXChainProfileAddress, getSmartDEXChainRabbitsAddress } from 'utils/addressHelpers'
+import styled from 'styled-components'
+import { lightColors, darkColors } from 'style/Color'
 import SelectionCard from '../SelectionCard'
 import ApproveConfirmButtons from '../ApproveConfirmButtons'
+
+
 
 type ChangeProfilePicPageProps = InjectedModalProps
 
@@ -56,9 +60,9 @@ const ChangeProfilePicPage: React.FC<ChangeProfilePicPageProps> = ({ onDismiss }
 
   return (
     <>
-      <Text as="p" color="textSubtle" mb="24px">
+      <TextChoosePic as="p" color="textSubtle" mb="24px">
         {TranslateString(999, 'Choose a new Collectible to use as your profile pic.')}
-      </Text>
+      </TextChoosePic>
       {isLoading ? (
         <Skeleton height="80px" mb="16px" />
       ) : (
@@ -82,12 +86,12 @@ const ChangeProfilePicPage: React.FC<ChangeProfilePicPageProps> = ({ onDismiss }
       )}
       {!isLoading && walletNfts.length === 0 && (
         <>
-          <Text as="p" color="textSubtle" mb="16px">
+          <NoteText as="p" color="textSubtle" mb="16px">
             {TranslateString(999, 'Sorry! You don’t have any eligible Collectibles in your wallet to use!')}
-          </Text>
-          <Text as="p" color="textSubtle" mb="24px">
+          </NoteText>
+          <NoteText as="p" color="textSubtle" mb="24px">
             {TranslateString(999, 'Make sure you have a SmartDEX Collectible in your wallet and try again!')}
-          </Text>
+          </NoteText>
         </>
       )}
       <ApproveConfirmButtons
@@ -98,11 +102,22 @@ const ChangeProfilePicPage: React.FC<ChangeProfilePicPageProps> = ({ onDismiss }
         onApprove={handleApprove}
         onConfirm={handleConfirm}
       />
-      <Button variant="text" fullWidth onClick={onDismiss} disabled={isApproving || isConfirming}>
-        {TranslateString(999, 'Close Window')}
-      </Button>
+     
     </>
   )
 }
+const TextChoosePic = styled(Text)`
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+
+`
+const NoteText = styled(Text)`
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+`
 
 export default ChangeProfilePicPage

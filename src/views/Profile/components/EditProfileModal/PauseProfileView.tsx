@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AutoRenewIcon, Button, Checkbox, Flex, InjectedModalProps, Text } from '@pancakeswap-libs/uikit'
+import { AutoRenewIcon, Button, Checkbox, Flex, InjectedModalProps, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { useDispatch } from 'react-redux'
 import { useProfile, useToast } from 'state/hooks'
@@ -8,6 +8,8 @@ import useGetProfileCosts from 'views/Profile/hooks/useGetProfileCosts'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useProfile as useProfileContract } from 'hooks/useContract'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
+import styled from 'styled-components'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 
 type PauseProfilePageProps = InjectedModalProps
 
@@ -50,26 +52,25 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
 
   return (
     <>
-      <Text as="p" color="failure" mb="24px">
+      <TextWarning as="p" color="failure" mb="24px">
         {TranslateString(999, 'This will suspend your profile and send your Collectible back to your wallet')}
-      </Text>
-      <Text as="p" color="textSubtle" mb="24px">
+      </TextWarning>
+      <TextSupport as="p" color="textSubtle" mb="24px">
         {TranslateString(
           999,
           "While your profile is suspended, you won't be able to earn points, but your achievements and points will stay associated with your profile",
         )}
-      </Text>
-      <Text as="p" color="textSubtle" mb="24px">
+      </TextSupport>
+      <TextSupport as="p" color="textSubtle" mb="24px">
         {TranslateString(999, `Cost to reactivate in future: ${getBalanceNumber(numberSdcToReactivate)} SDC`)}
-      </Text>
+      </TextSupport>
       <label htmlFor="acknowledgement" style={{ cursor: 'pointer', display: 'block', marginBottom: '24px' }}>
-        <Flex alignItems="center">
+        <FlexCheck alignItems="center">
           <Checkbox id="acknowledgement" checked={isAcknowledged} onChange={handleChange} scale="sm" />
-          <Text ml="8px">{TranslateString(999, 'I understand')}</Text>
-        </Flex>
+          <TextCheck ml="8px">{TranslateString(999, 'I understand')}</TextCheck>
+        </FlexCheck>
       </label>
-      <Button
-        fullWidth
+      <ConfirmBtn
         isLoading={isConfirming}
         endIcon={isConfirming ? <AutoRenewIcon spin color="currentColor" /> : null}
         disabled={!isAcknowledged || isConfirming}
@@ -77,12 +78,59 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
         mb="8px"
       >
         {TranslateString(999, 'Confirm')}
-      </Button>
-      <Button variant="text" fullWidth onClick={onDismiss}>
-        {TranslateString(999, 'Close Window')}
-      </Button>
+      </ConfirmBtn>
     </>
   )
 }
+
+const TextWarning = styled(Text)`
+  color: ${lightColors.colorRed};
+  font-weight: 500;
+  font-size: 13px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
+`
+const TextSupport = styled(Text)`
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+
+`
+const FlexCheck = styled(Flex)`
+  box-shadow: none !important;
+  position: relative;
+  & : checked {
+    background-color: ${baseColors.bgrChecked}!important;
+  }
+  & : hover{
+   box-shadow: none !important;
+  }
+  & :focus{
+    box-shadow: none !important;
+  }
+  & < div : active{
+    box-shadow: none !important;
+    border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  }              
+`
+const TextCheck = styled(Text)`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+`
+const ConfirmBtn = styled(Button)`
+    box-shadow: none !important;
+    color: ${lightColors.white} !imporatant;
+    background : ${baseColors.primary};
+    &:disabled{
+      background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+      color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    } 
+`
+
 
 export default PauseProfilePage

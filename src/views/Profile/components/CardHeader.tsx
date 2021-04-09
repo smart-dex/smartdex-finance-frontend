@@ -10,7 +10,7 @@ const getBackground = (theme: DefaultTheme) => {
 }
 
 const CardHeader = styled(UIKitCardHeader)`
-  background: ${({ theme }) => getBackground(theme)};
+  background: linear-gradient(91.67deg, #0085FF 5.33%, #7E86FF 104.39%);;
   position: relative;
 `
 

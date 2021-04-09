@@ -1,7 +1,7 @@
 import useI18n from 'hooks/useI18n'
 import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { baseColors, lightColors } from 'style/Color'
+import { baseColors, lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
 import { Flex, Text, ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
 
@@ -17,10 +17,13 @@ const Menu: React.FC<MenuProps> = ({ activeIndex = 0 }) => {
       <StyledMenu>
         <StyledBack>
           <RouterLink to="/teams">
-            <Flex alignItems="center">
-              <img src="/images/teams/icon/back-card-team.svg" alt="back-icon" />
+            <FlexBack alignItems="center">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 13L2 7L8 1"  strokeWidth="2"/>
+                </svg>
+
               <StyledTextBack>{TranslateString(1038, 'Teams Overview')}</StyledTextBack>
-            </Flex>
+            </FlexBack>
           </RouterLink>
         </StyledBack>
 
@@ -52,19 +55,37 @@ const StyledMenu = styled(Flex)`
 const StyledTextBack = styled(Text)`
   font-weight: 600;
   line-height: 20px;
-  color: #50b0fc;
+  color: ${lightColors.colorBlue};
   font-size: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
+    color: ${lightColors.primary};
   }
 `
+const FlexBack = styled(Flex)`
+  & svg {
+    stroke: ${lightColors.colorBlue};
+    width: 9px;
+    margin-right: 15px;
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    & svg {
+      width: 12px;
+      stroke: ${lightColors.primary};
+      }
+    }
+`
+
 const StyledButton = styled(Flex)`
   justify-content: center;
   flex: 100%;
   margin-top: 30px;
+  
   & > div {
     border-radius: 50px;
     width: 260px;
+    background: ${({ theme }) => (theme.isDark ? darkColors.backButtonTogger : lightColors.activeBackgroundMenuLeft)};
     ${({ theme }) => theme.mediaQueries.nav} {
       width: 300px;
     }
