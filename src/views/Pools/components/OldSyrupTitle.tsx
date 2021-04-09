@@ -23,7 +23,7 @@ const OldSyrupTitle: React.FC<Props> = ({ hasBalance = false }) => {
       <div style={{ marginTop: '16px' }}>
         <Title>Action Required</Title>
         <ActionLink
-          href=" https://pancakeswap.medium.com/urgent-action-required-changes-to-syrup-pools-70b98d7b2541"
+          href={`${process.env.REACT_APP_PANCAKE_MEDIUM}`}
           target="_blank"
         >
           What do I need to do?
