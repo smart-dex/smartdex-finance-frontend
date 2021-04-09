@@ -173,6 +173,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                   <IconWrapper>
                     <TicketImg src="/images/pan-cake.png" />
                   </IconWrapper>
+
               <StyleFlexDetail isFinished={isFinished}>{TranslateString(736, 'APR')}:</StyleFlexDetail>
               {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ?
                 (
@@ -182,10 +183,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                   <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
                 )}
             </StyledDetails>
-            <StyledDetails>
+            <StyledDetailsStake>
               <StyleFlexDetail isFinished={isFinished}>{TranslateString(384, 'Your Stake')}:</StyleFlexDetail>
               <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
-            </StyledDetails>
+            </StyledDetailsStake>
           </DetailPool>
         </StyleImgEaredDetail>
         <Line />
@@ -269,6 +270,16 @@ const StyledDetails = styled.div`
   }
   flex-wrap:wrap;
 `
+const StyledDetailsStake = styled.div`
+  font-size: 14px;
+  align-items: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+  flex-wrap:wrap;
+  margin-left: 25px;
+  display: flex;
+`
 
 const StyledCardName = styled.div`
 
@@ -330,8 +341,7 @@ const StyleFlexDetail = styled.div<{ isFinished: boolean }>`
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  margin-left: 5px;
-
+  margin-right:5px;
 `
 
 const ButtonDetail = styled(Button) <{ isShow: boolean }>`
@@ -503,7 +513,7 @@ const StyleImgEaredDetail = styled(Flex)`
 
 const StyledImageEarned = styled(Flex)`
   border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-  flex:50%;
+  flex: 50%;
   padding-right:10px;
   position: relative;
 `
@@ -556,8 +566,8 @@ const IconDirect = styled.img`
 `
 const IconWrapper = styled.div`
   svg {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 `
 const TicketImg = styled.img`
