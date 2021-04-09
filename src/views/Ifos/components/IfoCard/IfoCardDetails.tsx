@@ -69,7 +69,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
           <Text>
             {launchDate},
             <Link
-              href="https://www.timeanddate.com/worldclock/singapore/singapore"
+              href={`${process.env.REACT_APP_TIME_DATE}`}
               target="blank"
               rel="noopener noreferrer"
               ml="4px"

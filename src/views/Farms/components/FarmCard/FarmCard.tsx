@@ -159,7 +159,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const TranslateString = useI18n()
   const [pendingTx, setPendingTx] = useState(false)
   const isTest = process.env.REACT_APP_CHAIN_ID === '97'
-  const linkScan = isTest ? `https://testnet.bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
+  const linkScan = isTest ? `${process.env.REACT_APP_TESTNET_SCAN}/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `${process.env.REACT_APP_BSC_SCAN}/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
   const { earnings, stakedBalance } = useFarmUser(pid)

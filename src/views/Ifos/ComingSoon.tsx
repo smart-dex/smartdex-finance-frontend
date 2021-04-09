@@ -63,7 +63,7 @@ const ComingSoon = () => {
               )}
             </Text>
             <Text mb={3}>
-              <LiquidityLink href="https://smartdex-exchange.sotatek.works/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
+              <LiquidityLink href= {`${process.env.REACT_APP_EXCHANGE_URL}/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82`}>
                 {TranslateString(506, 'Get SDC-BNB LP >')}
               </LiquidityLink>
             </Text>
@@ -84,7 +84,7 @@ const ComingSoon = () => {
             </Text>
             <Button
               as="a"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdKvEAEQmo47eOAQOUe_iG-Kvoe0HmeV6jD1SV7_qFRnp4ZUA/viewform"
+              href={`${process.env.REACT_APP_GOOGLE_DOCS}` }
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -229,10 +229,10 @@ return (
             </List>
           </StyleList>
           <WrapGridButton>
-            <LinkPrimary href="https://smartdex-exchange.sotatek.works/swap#/swap" mr="16px">
+            <LinkPrimary href={`${process.env.REACT_APP_EXCHANGE_URL}/swap#/swap`} mr="16px">
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
-            <LinkSecondary href="https://smartdex-exchange.sotatek.works/swap#/pool">
+            <LinkSecondary href={`${process.env.REACT_APP_EXCHANGE_URL}/swap#/pool`}>
               {TranslateString(1062, 'Get LP Tokens')}
               <ChevronDown />
             </LinkSecondary>
@@ -253,7 +253,7 @@ return (
             </List>
           </StyleList>
           <Text as="div">
-            <LinkButtonBorder href="https://docs.pancakeswap.finance/core-products/ifo-initial-farm-offering">
+            <LinkButtonBorder href= { `${process.env.REACT_APP_DOCS_URL}orther-product/ifo-initial-farm-offering`}>
               {TranslateString(610, 'See More')}
             </LinkButtonBorder>
           </Text>
@@ -274,7 +274,7 @@ return (
               <Button
                 target="_blank"
                 as="a"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdKvEAEQmo47eOAQOUe_iG-Kvoe0HmeV6jD1SV7_qFRnp4ZUA/viewform"
+                href={`${process.env.REACT_APP_GOOGLE_DOCS}`}
               >
                   {TranslateString(516, 'Apply to launch')}
               </Button>

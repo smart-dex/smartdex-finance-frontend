@@ -79,7 +79,7 @@ return (
         </ButtonConfirm>
       </FlexBtn>
       <LinkFooter
-        href="https://smartdex-exchange.sotatek.works/pool#/pools" style={{ margin: 'auto' }}
+        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
       >
         {`Get ${currency}`}
       </LinkFooter>
