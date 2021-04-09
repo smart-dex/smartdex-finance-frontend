@@ -5,6 +5,7 @@ import useI18n from 'hooks/useI18n'
 import nfts from 'config/constants/nfts'
 import useGetWalletNfts from 'hooks/useGetWalletNfts'
 import styled from 'styled-components'
+import { lightColors, darkColors, baseColors, brandColors } from 'style/Color'
 import CollectibleCard from './CollectibleCard'
 
 const CollectibleList = styled.div`
@@ -27,6 +28,43 @@ const CollectibleList = styled.div`
     grid-template-columns: repeat(5, 1fr);
   }
 `
+const HeadingCollect = styled(Heading)`
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.textMenuLeft)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+  }
+`
+const TextCollect = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.textStep)};
+  font-size: 12px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
+
+`
+const FlexFound = styled(Flex)`
+  justify-content: start;
+  padding: 15px 0px;
+`
+const FlexCollect = styled(Flex)`
+  padding: 20px 0;
+  svg{
+    fill: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorLightStep)};
+  }
+`
+const LinkSee = styled(Link)`
+    color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorLightStep)};
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    svg{
+      fill: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorLightStep)};
+    }
+`
+
 
 const Collectibles = () => {
   const TranslateString = useI18n()
@@ -36,21 +74,21 @@ const Collectibles = () => {
 
   return (
     <>
-      <Heading as="h4" size="md" mb="8px">
+      <HeadingCollect as="h4" size="md" mb="8px">
         {TranslateString(999, 'SmartDEX Collectibles')}
-      </Heading>
-      <Text as="p">
+      </HeadingCollect>
+      <TextCollect as="p">
         {TranslateString(
           999,
           'SmartDEX Collectibles are special ERC-721 NFTs that can be used on the SmartDEXChain platform.',
         )}
-      </Text>
-      <Text as="p">
+      </TextCollect>
+      <TextCollect as="p">
         {TranslateString(
           999,
           "NFTs in this user's wallet that aren't approved SmartDEX Collectibles won't be shown here.",
         )}
-      </Text>
+      </TextCollect>
       {nftsInWallet.length > 0 && (
         <CollectibleList>
           {nftsInWallet.map((nftInWallet) => (
@@ -59,16 +97,16 @@ const Collectibles = () => {
         </CollectibleList>
       )}
       {nftsInWallet.length === 0 && (
-        <Flex justifyContent="center" p="32px">
+        <FlexFound justifyContent="center" p="32px">
           <Text fontSize="20px" bold color="textDisabled">
             {TranslateString(999, 'No NFTs Found')}
           </Text>
-        </Flex>
+        </FlexFound>
       )}
-      <Flex alignItems="center" justifyContent="flex-end">
-        <Link to="/collectibles">{TranslateString(999, 'See all approved SmartDEX Collectibles')}</Link>
+      <FlexCollect alignItems="center" justifyContent="flex-start">
+        <LinkSee to="/collectibles">{TranslateString(999, 'See all approved SmartDEX Collectibles')}</LinkSee>
         <ChevronRightIcon />
-      </Flex>
+      </FlexCollect>
     </>
   )
 }

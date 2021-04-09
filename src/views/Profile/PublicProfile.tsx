@@ -16,6 +16,7 @@ import {
 } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { useProfile } from 'state/hooks'
+import { lightColors, darkColors, baseColors, brandColors } from 'style/Color'
 import Menu from './components/Menu'
 import CardHeader from './components/CardHeader'
 import Collectibles from './components/Collectibles'
@@ -23,6 +24,7 @@ import WalletNotConnected from './components/WalletNotConnected'
 import StatBox from './components/StatBox'
 import EditProfileAvatar from './components/EditProfileAvatar'
 import AchievementsList from './components/AchievementsList'
+
 
 const Content = styled.div`
   flex: 1;
@@ -37,9 +39,10 @@ const Username = styled(Heading)`
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 8px;
+  color: ${brandColors.white};
 
-  ${({ theme }) => theme.mediaQueries.sm} {
-    font-size: 40px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 32px;
     line-height: 44px;
   }
 `
@@ -48,34 +51,61 @@ const Status = styled.div`
   position: absolute;
   right: 24px;
   top: 24px;
+  
 `
 
 const ResponsiveText = styled(Text)`
   font-size: 12px;
-
+  color:${baseColors.colorAddressLink};
   ${({ theme }) => theme.mediaQueries.sm} {
-    font-size: 16px;
+    font-size: 14px;
   }
 `
 
 const AddressLink = styled(Link)`
   display: inline-block;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 80px;
   white-space: nowrap;
+  color: ${baseColors.colorAddressLink};
 
   ${({ theme }) => theme.mediaQueries.sm} {
-    font-size: 16px;
+    font-size: 14px;
     width: auto;
   }
+`
+const OpenIcon = styled.div`
+  svg{
+    fill: ${brandColors.white}
+  }
+`
+const TagActive = styled(Tag)`
+  border: 1px solid ${brandColors.white};
+  color: ${brandColors.white};
+  svg{
+    fill: ${brandColors.white};
+  }
+`
+const BoxPublicCard = styled(CardBody)`
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
 `
 
 const Section = styled.div`
   margin-bottom: 40px;
 `
+const HeadingAch = styled(Heading)`
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.textMenuLeft)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+  }
+`
+
 
 const PublicProfile = () => {
   const { account } = useWallet()
@@ -90,8 +120,8 @@ const PublicProfile = () => {
     <>
       <Menu activeIndex={1} />
       <div>
-        <Card>
-          <CardHeader>
+        <Card >
+          <CardHeader >
             <Flex alignItems={['start', null, 'center']} flexDirection={['column', null, 'row']}>
               <EditProfileAvatar profile={profile} />
               <Content>
@@ -100,16 +130,16 @@ const PublicProfile = () => {
                   <AddressLink href={`${process.env.REACT_APP_BSC_SCAN}/address/${account}`} color="text" external>
                     {account}
                   </AddressLink>
-                  <OpenNewIcon ml="4px" />
+                  <OpenIcon><OpenNewIcon ml="4px" /></OpenIcon>
                 </Flex>
                 <ResponsiveText bold>{profile.team.name}</ResponsiveText>
               </Content>
             </Flex>
             <Status>
               {profile.isActive ? (
-                <Tag startIcon={<CheckmarkCircleIcon width="18px" />} outline>
+                <TagActive startIcon={<CheckmarkCircleIcon width="18px" />} outline>
                   {TranslateString(698, 'Active')}
-                </Tag>
+                </TagActive>
               ) : (
                 <Tag variant="failure" startIcon={<BlockIcon width="18px" />} outline>
                   {TranslateString(999, 'Paused')}
@@ -117,16 +147,16 @@ const PublicProfile = () => {
               )}
             </Status>
           </CardHeader>
-          <CardBody>
+          <BoxPublicCard className="aaa">
             <StatBox icon={PrizeIcon} title={profile.points} subtitle={TranslateString(999, 'Points')} mb="24px" />
             <Section>
-              <Heading as="h4" size="md" mb="16px">
-                {TranslateString(1092, 'Achievements')}
-              </Heading>
+              <HeadingAch as="h4" size="md" mb="16px">
+                {TranslateString(1092, 'Team Achievements')}
+              </HeadingAch>
               <AchievementsList />
             </Section>
             <Collectibles />
-          </CardBody>
+          </BoxPublicCard>
         </Card>
       </div>
     </>
