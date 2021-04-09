@@ -11,8 +11,9 @@ import CardBusdValue from './CardBusdValue'
 import { lightColors, darkColors } from '../../../style/Color'
 
 const Block = styled.div`
-  padding-top: 20px;
+  padding-top: 4px;
   display: flex;
+  flex-direction: column;
 `
 const TextStyle = styled(Text)`
   padding-top: 0px;
@@ -35,13 +36,13 @@ const SdcHarvestBalance = () => {
   const earningsBusd = new BigNumber(earningsSum).multipliedBy(usePriceSdcBusd()).toNumber()
 
   if (!account) {
-    return <TextStyle lineHeight="0.8">{TranslateString(298, 'LOCKED')}</TextStyle>
+    return <TextStyle lineHeight="2">{TranslateString(298, 'LOCKED')}</TextStyle>
   }
 
   return (
     <Block>
-      <CardValue value={earningsSum} lineHeight="0.5" />
-      <CardBusdValue value={earningsBusd} />
+      <CardValue value={earningsSum} />
+      <CardBusdValue value={earningsBusd} lineHeight="2.6"/>
     </Block>
   )
 }
