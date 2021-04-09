@@ -118,20 +118,24 @@ const LinkPrimary = styled(Link)`
   }
   outline: 0;
 `
-const LinkSecondary = styled(Button)`
+const LinkSecondary = styled(Link)`
+${ButtonPrimary}
   background: ${brandColors.white};
   border-radius:28px;
   color: ${lightColors.buttonSecond};
   box-shadow:none;
   border: 1px solid ${lightColors.buttonSecond};
-  padding:0 5px;
+  padding: 12px !important;
   outline: 0;
   &:hover{
     background-color:${lightColors.buttonSecond};
     color:${brandColors.white};
+    opacity:0.5;
   }
+  font-size: 13px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    padding:0 20px;
+    padding: 18px !important;
+    font-size: 16px;
   }
 `
 const StyledButton = styled.div`
