@@ -37,9 +37,11 @@ const ButtonChange = styled(Button)`
   background: ${lightColors.primary};
   box-shadow: none;
 `
-const ButtonClose = styled(Button)`
-  color: ${baseColors.primary};
+const ButtonReactive = styled(Button)`
+  background: ${lightColors.primary};
+  box-shadow: none;
 `
+
 
 const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemove, onDismiss }) => {
   const [needsApproval, setNeedsApproval] = useState(null)
@@ -93,13 +95,13 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
           <DangerOutline onClick={goToRemove}>{TranslateString(999, 'Remove Profile Pic')}</DangerOutline>
         </>
       ) : (
-        <Button
+        <ButtonReactive
           mb="8px"
           onClick={needsApproval === true ? goToApprove : goToChange}
           disabled={!hasMinimumSdcRequired || needsApproval === null}
         >
           {TranslateString(999, 'Reactivate Profile')}
-        </Button>
+        </ButtonReactive>
       )}
     </Flex>
   )
