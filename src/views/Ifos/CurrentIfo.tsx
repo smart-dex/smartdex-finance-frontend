@@ -120,7 +120,7 @@ const LinkPrimary = styled(Link)`
 `
 const LinkSecondary = styled(Link)`
 ${ButtonPrimary}
-  background: ${brandColors.white};
+  background: ${({ theme }) => (theme.isDark ? darkColors.colorGift : lightColors.white)};
   border-radius:28px;
   color: ${lightColors.buttonSecond};
   box-shadow:none;
