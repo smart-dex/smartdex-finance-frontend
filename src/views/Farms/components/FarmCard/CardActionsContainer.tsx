@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components'
 import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { getAddress } from 'utils/addressHelpers'
-import { getBalanceNumber } from 'utils/formatBalance'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { Button, Flex, useModal } from 'uikit-sotatek'
 import { Farm } from 'state/types'
@@ -171,7 +170,6 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
   const Icon = isOpenDetail ? ChevronUp : ChevronDown
-  const rawStakedBalance = getBalanceNumber(stakedBalance)
   const lpContract = useMemo(() => {
     return getContract(ethereum as provider, lpAddress)
   }, [ethereum, lpAddress])

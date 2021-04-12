@@ -162,10 +162,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const linkScan = isTest ? `${process.env.REACT_APP_TESTNET_SCAN}/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `${process.env.REACT_APP_BSC_SCAN}/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
-  const { earnings, stakedBalance,tokenBalance } = useFarmUser(pid)
-  useEffect(() => {
-    ReactTooltip.rebuild();
-});
+  const { earnings, stakedBalance, tokenBalance } = useFarmUser(pid)
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. SDC-BNB LP, LINK-BNB LP,
   // NAR-SDC LP. The images should be sdc-bnb.svg, link-bnb.svg, nar-sdc.svg
@@ -197,11 +194,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const displayPoolRate = poolRate.toNumber()
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
-  const userPoolRate = (stakedBalance.div(lpTokenBalanceMC)).times(100)
+  const userPoolRate = account ?(stakedBalance.div(lpTokenBalanceMC)).times(100): new BigNumber(0)
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
   const displayUserPoolRate = userPoolRate.toNumber()
-  const rawStakedBalance = getBalanceNumber(stakedBalance)
-
+  useEffect(() => {
+    ReactTooltip.rebuild();
+  });
 
   const handelOpenDetail = () => {
     setShowExpandableSection(!showExpandableSection)
@@ -217,7 +215,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
         tokenSymbol={farm.tokenSymbol}
       />
       <CardContent>
-     
+
         <StyledInfoEarn>
           {!removed && (
             <Detail mb="37px" >
@@ -234,8 +232,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
                     <span data-tip={farmAPY}>{farmAPY}</span>   %
                   </>
                 ) : (
-                    <Skeleton height={24} width={80} />
-                  )}
+                  <Skeleton height={24} width={80} />
+                )}
               </DetailApr>
             </Detail>
           )}
@@ -249,8 +247,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
                   </BalanceAndCompound>
                 </>
               ) : (
-                  <Skeleton height={24} width={80} />
-                )}
+                <Skeleton height={24} width={80} />
+              )}
             </DetailValue>
           </Detail>
           <Detail mb="37px" >
@@ -263,8 +261,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
                   </BalanceAndCompound>
                 </>
               ) : (
-                  <Skeleton height={24} width={80} />
-                )}
+                <Skeleton height={24} width={80} />
+              )}
             </DetailValue>
           </Detail>
           <Detail mb="37px" >
@@ -277,8 +275,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
                   </BalanceAndCompound>
                 </>
               ) : (
-                  <Skeleton height={24} width={80} />
-                )}
+                <Skeleton height={24} width={80} />
+              )}
             </DetailValue>
           </Detail>
 
@@ -297,7 +295,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           pendingTx={pendingTx}
           setPendingTx={setPendingTx}
         />
-        {showExpandableSection &&  !(tokenBalance.eq(0) && stakedBalance.eq(0))  && (
+        {showExpandableSection && !(tokenBalance.eq(0) && stakedBalance.eq(0)) && account && (
           <ExpandingWrapper expanded={showExpandableSection}>
             <DetailsSection
               removed={removed}
@@ -320,7 +318,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           </ExpandingWrapper>
         )}
       </CardContent>
-     
+
     </FCard>
   )
 }

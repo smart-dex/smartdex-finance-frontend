@@ -104,7 +104,6 @@ const CardContentComing = styled(CardContent)`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-wrap: nowrap;
   }
@@ -156,7 +155,7 @@ const Coming: React.FC = () => {
         </NamePool>
       </StyledCardName>
       <CardContentComing>
-        <Image src="/images/project.svg" width={64} height={64} alt="Your project here" />
+        <Image marginTop="10px" src="/images/project.svg" width={64} height={64} alt="Your project here" />
         <Balance>???</Balance>
         <CommunityTag />
         <DetailPlaceholder>
