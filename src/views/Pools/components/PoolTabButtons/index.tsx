@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useRouteMatch, Link } from 'react-router-dom'
 import { ButtonMenu, ButtonMenuItem, Toggle, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { baseColors, lightColors, darkColors } from 'style/Color'
 
-const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
-  const { url, isExact } = useRouteMatch()
+const PoolTabButtons = ({ stackedOnly, setStackedOnly,finishedPool,setFinishedPool }) => {
   const TranslateString = useI18n()
 
   return (
@@ -19,11 +17,11 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {
         <StyledText> {TranslateString(999, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
-        <ButtonMenu activeIndex={isExact ? 0 : 1}>
-          <ButtonItemStyle as={Link} to={`${url}`}>
+        <ButtonMenu activeIndex={!finishedPool? 0:1}  onItemClick={()=> setFinishedPool(!finishedPool)}>
+          <ButtonItemStyle >
             {TranslateString(698, 'Active')}
           </ButtonItemStyle>
-          <ButtonItemStyle as={Link} to={`${url}/history`}>
+          <ButtonItemStyle  >
             {TranslateString(700, 'Inactive')}
           </ButtonItemStyle>
         </ButtonMenu>

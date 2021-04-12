@@ -39,6 +39,7 @@ const Farms: React.FC = () => {
   }, [])
 
   const [stackedOnly, setStackedOnly] = useState(false)
+  const [active, setActive] = useState(true)
 
   const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
   const inactiveFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier === '0X')
@@ -100,19 +101,18 @@ const Farms: React.FC = () => {
 
   return (
     <Page>
-     
+
       <FarmHeader>
         <HeadingFarm as="h1" size="lg" color="secondary" mb="25px">
           {TranslateString(696, 'Stake LP tokens to earn SDC')}
         </HeadingFarm>
-        <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
+        <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} active={active} setActive={setActive} />
       </FarmHeader>
       <FlexLayout>
         <Route exact path={`${path}`}>
-          {stackedOnly ? farmsList(stackedOnlyFarms, false) : farmsList(activeFarms, false)}
-        </Route>
-        <Route exact path={`${path}/history`}>
-          {farmsList(inactiveFarms, true)}
+          {!active && farmsList(inactiveFarms, true)}
+          {stackedOnly && active && farmsList(stackedOnlyFarms, false) }
+          {!stackedOnly && active &&     farmsList(activeFarms, false) }
         </Route>
       </FlexLayout>
     </Page>
