@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes } from 'react'
 import styled from 'styled-components'
 import { Button, Text } from 'uikit-sotatek'
-import { lightColors, darkColors, baseColors } from 'style/Color'
+import { lightColors, darkColors } from 'style/Color'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   value: string
@@ -15,7 +15,7 @@ const ButtonWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   border: solid 1px;
-  border-radius: ${({ theme }) => theme.radii.default};
+  border-radius: 10px;
   border-color: ${({ theme }) => theme.colors.borderColor};
   padding-left: 16px;
   color: #5F5E76 !important;

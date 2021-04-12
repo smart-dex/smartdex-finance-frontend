@@ -16,6 +16,7 @@ import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import { FarmHeader, HeadingFarm } from './components/FarmHeader'
 
+
 const Farms: React.FC = () => {
   const { path } = useRouteMatch()
   const TranslateString = useI18n()
@@ -99,6 +100,7 @@ const Farms: React.FC = () => {
 
   return (
     <Page>
+     
       <FarmHeader>
         <HeadingFarm as="h1" size="lg" color="secondary" mb="25px">
           {TranslateString(696, 'Stake LP tokens to earn SDC')}

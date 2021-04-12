@@ -135,7 +135,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
               isDisabled
             />
           </StatRow>
-          <TextAchievements as="h3">{TranslateString(1044, 'Team Achievements')}</TextAchievements>
+          <TextAchievements as="h3">{TranslateString(1044, 'Team Achievements')}</TextAchievements>11
           <ComingSoon>{TranslateString(350, 'Coming Soon')}</ComingSoon>
         </CardBody>
       </StyledCard>

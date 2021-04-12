@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Tag, Flex } from 'uikit-sotatek'
 import { lightColors, darkColors } from 'style/Color'
 import { CommunityTag, CoreTag } from 'components/Tags'
+import ReactTooltip from 'react-tooltip'
 
 export interface ExpandableSectionProps {
   lpLabel?: string
@@ -16,6 +17,7 @@ const CardTitle = styled.div`
   position: relative;
   height: 60px;
   width: 30%;
+  min-width: 150px;
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   border-left: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
@@ -42,6 +44,7 @@ const StyleNameFarm = styled(Flex)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; 
+  display: block;
   padding:24px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textLogoMenuLeft : lightColors.textLogoMenuLeft)};
   font-weight: bold;
@@ -65,54 +68,54 @@ const StyleNameFarm = styled(Flex)`
   }
  
 `
-const StyledTooltip = styled.div`
-  position: absolute;
-  top: -50px;
-  left: 0px;
-  opacity: 0;
-  z-index: 99;
-  color: #FFFFFF;
-  width: calc( 100% + 20px);
-  display: block;
-  font-size: 15px;
-  padding: 5px 10px;
-  border-radius: 3px;
-  text-align: center;
-  text-shadow: 1px 1px 2px #111;
-  background: rgba(51,51,51,0.9);
-  box-shadow: 0 0 3px rgba(0,0,0,0.5);
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -o-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  &:before {
-    content: '';
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid rgba(51,51,51,0.9);
-    position: absolute;
-    bottom: -10px;
-    left: 43%;
+// const StyledTooltip = styled.div`
+//   position: absolute;
+//   top: -50px;
+//   left: 0px;
+//   opacity: 0;
+//   z-index: 99;
+//   color: ${({ theme }) => (theme.isDark ? '#E5E5E5 ' : '#000000')};
+//   width: calc( 100% + 20px);
+//   display: block;
+//   font-size: 15px;
+//   padding: 5px 10px;
+//   border-radius: 3px;
+//   text-align: center;
+//   background: ${({ theme }) => (theme.isDark ? 'rgba(51,51,51,0.9) ' : '#FFF')};
+//   border: 1px solid  ${({ theme }) => (theme.isDark ? 'transparent' : '#E5E5E5')} ;
+//   -webkit-transition: all .2s ease-in-out;
+//   -moz-transition: all .2s ease-in-out;
+//   -o-transition: all .2s ease-in-out;
+//   -ms-transition: all .2s ease-in-out;
+//   transition: all .2s ease-in-out;
+//   -webkit-transform: scale(0);
+//   -moz-transform: scale(0);
+//   -o-transform: scale(0);
+//   -ms-transform: scale(0);
+//   transform: scale(0);
+//   &:before {
+//     content: '';
+//     border-left: 10px solid transparent;
+//     border-right: 10px solid transparent;
+//     border-top: 10px solid ${({ theme }) => (theme.isDark ? 'rgba(51,51,51,0.9) ' : '#FFF')};
+//     position: absolute;
+//     bottom: -10px;
+//     left: 43%;
 
-  }
-  &:affter {
-    content: '';
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid rgba(51,51,51,0.9);
-    position: absolute;
-    bottom: -10px;
-    left: 43%;
+//   }
+//   &:affter {
+//     content: '';
+//     border: 1px solid  ${({ theme }) => (theme.isDark ? 'transparent' : '#E5E5E5')} ;
+//     border-left: 10px solid transparent;
+//     border-right: 10px solid transparent;
+//     border-top: 10px solid  ${({ theme }) => (theme.isDark ? 'rgba(51,51,51,0.9) ' : '#FFF')};
+//     position: absolute;
+//     bottom: -10px;
+//     left: 43%;
 
-  }
+//   }
   
-`
+// `
 const StyledTriangle = styled.div`
     width: 0;
     height: 0;
@@ -148,27 +151,20 @@ const StyledTag = styled(Flex)`
   }
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
 `
-const StyledImg = styled.div`
-  width: 28px;
-  height: 28px;
-  margin: 0 auto;
-`
 
 const CardHeading: React.FC<ExpandableSectionProps> = ({
   lpLabel,
   multiplier,
   isCommunityFarm,
-  farmImage,
-  tokenSymbol
+  
 }) => {
   return (
     <Flex flexDirection="column">
+      <ReactTooltip id="title" place="top" type="info" effect="float" />
       <NamePool>
         <CardTitle>
-          <StyleNameFarm>
+          <StyleNameFarm data-for="title" data-tip={lpLabel}>
             {lpLabel}
-            <StyledTooltip>  {lpLabel}
-            </StyledTooltip>
           </StyleNameFarm>
           <StyledTriangle />
         </CardTitle>

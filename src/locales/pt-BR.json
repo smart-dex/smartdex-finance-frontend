@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 25410,
-            "text": "Para cada negociação uma taxa de 0,2% é paga. 0,17% vai para os provedores de liquidez e 0,03% para o tesouro da PanSDCSwap.",
+            "text": "Para cada negociação uma taxa de 0,2% é paga. 0,17% vai para os provedores de liquidez e 0,03% para o tesouro da SmartDEX.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 28600,
-            "text": "O projeto obtém o BNB, PanSDCSwap queima o SDC.",
+            "text": "O projeto obtém o BNB, SmartDEX queima o SDC.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 27944,
-            "text": "Lance seu projeto com PanSDCSwap, o provedor de liquidez e projeto AMM mais usado da Binance Smart Chain, para levar seu token diretamente para a comunidade mais ativa e de crescimento mais rápido na BSC.",
+            "text": "Lance seu projeto com SmartDEX, o provedor de liquidez e projeto AMM mais usado da Binance Smart Chain, para levar seu token diretamente para a comunidade mais ativa e de crescimento mais rápido na BSC.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 21690,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 14440850,
                 "username": "arrobaxbit",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 28638,
-            "text": "Você pode alterar sua imagem de perfil posteriormente se receber outro Colecionável PanSDC aprovado,",
+            "text": "Você pode alterar sua imagem de perfil posteriormente se receber outro Colecionável SmartDEX aprovado,",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 28644,
-            "text": "Apenas Colecionáveis PanSDC aprovados podem ser utilizados.",
+            "text": "Apenas Colecionáveis SmartDEX aprovados podem ser utilizados.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 28646,
-            "text": "Não encontramos nenhum Colecionável PanSDC em sua carteira.",
+            "text": "Não encontramos nenhum Colecionável SmartDEX em sua carteira.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 28668,
-            "text": "Você precisa de um Colecionável PanSDC para concluir as configurações de seu perfil. Se você vender ou transferir seu colecionável inicial para outra carteira, você precisará recuperá-lo ou obter um novo de alguma forma. Você não pode criar mais um inicial com este endereço de carteira.",
+            "text": "Você precisa de um Colecionável SmartDEX para concluir as configurações de seu perfil. Se você vender ou transferir seu colecionável inicial para outra carteira, você precisará recuperá-lo ou obter um novo de alguma forma. Você não pode criar mais um inicial com este endereço de carteira.",
             "user": {
                 "id": 12717268,
                 "username": "GZTranslations",

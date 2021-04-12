@@ -23,7 +23,7 @@ export const setupNetwork = async () => {
               decimals: 18,
             },
             rpcUrls: nodes,
-            blockExplorerUrls: ['https://bscscan.com/'],
+            blockExplorerUrls: [`${process.env.REACT_APP_BSC_SCAN}/`],
           },
         ],
       })
@@ -55,7 +55,6 @@ export const registerToken = async (
  
   const provider = (window as WindowChain).ethereum
   if (provider) {
-    const chainId = parseInt(process.env.REACT_APP_CHAIN_ID, 10)
     try {
       await provider.request({
         method: 'wallet_watchAsset',

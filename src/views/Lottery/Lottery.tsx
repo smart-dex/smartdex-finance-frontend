@@ -63,7 +63,7 @@ const Lottery: React.FC = () => {
   const [mostRecentLotteryNumber, setMostRecentLotteryNumber] = useState(1)
 
   useEffect(() => {
-    fetch(`https://api.pancakeswap.com/api/lotteryHistory`)
+    fetch(`${process.env.REACT_APP_PANCAKE_API}/api/lotteryHistory`)
       .then((response) => response.json())
       .then((data) => setHistoryData(data))
       .catch(() => {

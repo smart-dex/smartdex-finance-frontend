@@ -15,7 +15,7 @@ import {
   useModal,
   Skeleton,
   Checkbox,
-} from '@pancakeswap-libs/uikit'
+} from 'uikit-sotatek'
 import { parseISO, formatDistance } from 'date-fns'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useToast } from 'state/hooks'
@@ -23,9 +23,11 @@ import useWeb3 from 'hooks/useWeb3'
 import useI18n from 'hooks/useI18n'
 import useHasSdcBalance from 'hooks/useHasSdcBalance'
 import debounce from 'lodash/debounce'
+import { lightColors, darkColors, baseColors} from 'style/Color'
 import ConfirmProfileCreationModal from '../components/ConfirmProfileCreationModal'
 import useProfileCreation from './contexts/hook'
 import { USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH, REGISTER_COST } from './config'
+
 
 enum ExistingUserState {
   IDLE = 'idle', // initial state
@@ -39,10 +41,31 @@ const minimumSdcToRegister = new BigNumber(REGISTER_COST).multipliedBy(new BigNu
 const InputWrap = styled.div`
   position: relative;
   max-width: 240px;
+  & : focus{
+    box-shadow: none !important;
+  }
+  & svg {
+    fill: ${lightColors.primary} !important;
+  }
 `
 
 const Input = styled(UIKitInput)`
   padding-right: 40px;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: -0.03em;
+  height: 56px;
+  border-radius: 50px;
+  box-shadow: none !important;
+  color: ${({ theme }) => (theme.isDark ? darkColors.white : lightColors.textSubtle)} !important;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.darkBorder : lightColors.lightBorder)};
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.daskCheckBox : lightColors.white)} !important;
+  &:focus:not(:disabled) {
+    box-shadow: none;
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
 `
 
 const Indicator = styled(Flex)`
@@ -55,6 +78,138 @@ const Indicator = styled(Flex)`
   top: 50%;
   width: 24px;
 `
+const PanText4 = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorStep)};
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 17px;
+  margin-bottom: 7px;
+`
+const HeadingName = styled(Heading)`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.balanceColor)};
+  margin-top: 7px;
+  margin-bottom: 9px !important;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 24px;
+  }
+`
+const TextName = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorStep)};
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 14px;
+  }
+`
+const CardName = styled(CardBody)`
+  margin-top: 21px;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
+  border-radius: 40px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.white)};
+`
+const HeadingSetName = styled(Heading)`
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+  ${({ theme }) => theme.mediaQueries.sm} {
+    font-size: 16px;
+  }
+`
+const CardBodyName = styled(CardBody)`
+  padding: 0px;
+`
+const NameSub = styled(Text)`
+  font-size: 13px;
+  line-height: 25px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  width: 100%;
+  font-weight: 400;
+  margin-bottom: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
+`
+
+const NoteText = styled(Text)`
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorStep)};
+` 
+
+const TextSubTitle = styled(Text)`  
+  color: ${baseColors.colorRed};
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
+`
+const TextCheckbox = styled(Text)`
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 14px;
+    }
+`
+const StyleCheck = styled.div`
+  box-shadow: none !important;
+  position: relative;
+  & : checked {
+  background-color: ${baseColors.primary}!important;
+  }
+  & : hover{
+  box-shadow: none !important;
+  }
+  & : active{
+  box-shadow: none !important;
+  }
+  & : focus{
+    box-shadow: none !important;
+  }
+`
+const StyleCheckbox = styled(Checkbox)`
+  background-color: ${({ theme }) => (theme.isDark ? darkColors.daskCheckBox : lightColors.lightCheckBox)} !important;
+  border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.darkBorder : lightColors.lightBorder)};
+  border-radius: 4px;
+`
+const BtnConfirm = styled(Button)`
+    background: ${lightColors.primary};
+    box-shadow: 0px 4px 10px rgba(0, 133, 255, 0.24);
+    border-radius: 10px;
+    padding: 0 35px;
+    font-size: 13px;
+    &:disabled{
+      background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+      color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    }
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
+`
+const ButtonComplete = styled(Button)`
+  background: ${baseColors.success};
+  box-shadow: none;
+  font-size: 13px;
+  &:disabled{
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
+
 
 const UserName: React.FC = () => {
   const [isAcknowledged, setIsAcknoledged] = useState(false)
@@ -170,29 +325,29 @@ const UserName: React.FC = () => {
 
   return (
     <>
-      <Text fontSize="20px" color="textSubtle" bold>
+      <PanText4 fontSize="20px" color="textSubtle" bold>
         {TranslateString(999, `Step ${4}`)}
-      </Text>
-      <Heading as="h3" size="xl" mb="24px">
+      </PanText4>
+      <HeadingName as="h3" size="xl" mb="24px">
         {TranslateString(1110, 'Set Your Name')}
-      </Heading>
-      <Text as="p" mb="24px">
+      </HeadingName>
+      <TextName as="p" mb="24px">
         {TranslateString(
           999,
-          'This name will be shown in team leaderboards and search results as long as your profile is active.',
+          'Amet minim mollit non deserunt ullamco est sit aliqua dolor ',
         )}
-      </Text>
-      <Card mb="24px">
-        <CardBody>
-          <Heading as="h4" size="lg" mb="8px">
+      </TextName>
+      <CardName mb="24px">
+        <CardBodyName>
+          <HeadingSetName as="h4" size="lg" mb="8px">
             {TranslateString(1110, 'Set Your Name')}
-          </Heading>
-          <Text as="p" color="textSubtle" mb="24px">
+          </HeadingSetName>
+          <NameSub as="p" color="textSubtle" mb="24px">
             {TranslateString(
               840,
-              'Your name must be at least 3 and at most 15 standard letters and numbers long. You can’t change this once you click Confirm.',
+              'Amet minim mollit non deserunt ullamco est sit aliqua dolor ',
             )}
-          </Text>
+          </NameSub>
           {existingUserState === ExistingUserState.IDLE ? (
             <Skeleton height="40px" width="240px" />
           ) : (
@@ -204,7 +359,7 @@ const UserName: React.FC = () => {
                 minLength={USERNAME_MIN_LENGTH}
                 maxLength={USERNAME_MAX_LENGTH}
                 disabled={isUserCreated}
-                placeholder={TranslateString(1094, 'Enter your name...')}
+                placeholder={TranslateString(1094, 'Abc')}
                 value={userName}
               />
               <Indicator>
@@ -214,33 +369,33 @@ const UserName: React.FC = () => {
               </Indicator>
             </InputWrap>
           )}
-          <Text color="textSubtle" fontSize="14px" py="4px" mb="16px" style={{ minHeight: '30px' }}>
-            {message}
-          </Text>
-          <Text as="p" color="failure" mb="8px">
+          <NoteText color="textSubtle" fontSize="14px" py="4px" mb="16px" style={{ minHeight: '30px' }}>
+          {TranslateString(1101, "Minimum length: 3 characters")}
+          </NoteText>
+          <TextSubTitle as="p" color="failure" mb="8px">
             {TranslateString(
               1100,
-              "Only reuse a name from other social media if you're OK with people viewing your wallet. You can't change your name once you click Confirm.",
+              "Amet minim mollit non deserunt ullamco est sit aliqua dolor ",
             )}
-          </Text>
+          </TextSubTitle>
           <label htmlFor="checkbox" style={{ display: 'block', cursor: 'pointer', marginBottom: '24px' }}>
             <Flex alignItems="center">
-              <div style={{ flex: 'none' }}>
-                <Checkbox id="checkbox" scale="sm" checked={isAcknowledged} onChange={handleAcknoledge} />
-              </div>
-              <Text ml="8px">
+              <StyleCheck>
+                 <StyleCheckbox id="checkbox" scale="sm" checked={isAcknowledged} onChange={handleAcknoledge} />
+              </StyleCheck>
+              <TextCheckbox ml="8px">
                 {TranslateString(1096, 'I understand that people can view my wallet if they know my username')}
-              </Text>
+              </TextCheckbox>
             </Flex>
           </label>
-          <Button onClick={handleConfirm} disabled={!isValid || isUserCreated || isLoading || !isAcknowledged}>
+          <BtnConfirm onClick={handleConfirm} disabled={!isValid || isUserCreated || isLoading || !isAcknowledged}>
             {TranslateString(464, 'Confirm')}
-          </Button>
-        </CardBody>
-      </Card>
-      <Button onClick={onPresentConfirmProfileCreation} disabled={!isValid || !isUserCreated}>
+          </BtnConfirm>
+        </CardBodyName>
+      </CardName>
+      <ButtonComplete onClick={onPresentConfirmProfileCreation} disabled={!isValid || !isUserCreated}>
         {TranslateString(842, 'Complete Profile')}
-      </Button>
+      </ButtonComplete>
       {!hasMinimumSdcRequired && (
         <Text color="failure" mt="16px">
           {TranslateString(1098, `A minimum of ${REGISTER_COST} SDC is required`, { num: REGISTER_COST })}

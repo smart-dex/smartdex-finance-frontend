@@ -156,7 +156,7 @@ const Coming: React.FC = () => {
         </NamePool>
       </StyledCardName>
       <CardContentComing>
-        <Image src="/images/bunny-question.svg" width={64} height={64} alt="Your project here" />
+        <Image src="/images/project.svg" width={64} height={64} alt="Your project here" />
         <Balance>???</Balance>
         <CommunityTag />
         <DetailPlaceholder>
@@ -167,7 +167,7 @@ const Coming: React.FC = () => {
           <Button
             target="_blank"
             as="a"
-            href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform"
+            href={`${process.env.REACT_APP_GOOGLE_DOCS}`}
           >
             {TranslateString(418, 'Apply Now')}
           </Button>

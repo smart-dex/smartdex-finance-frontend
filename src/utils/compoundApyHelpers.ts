@@ -19,5 +19,5 @@ export const calculateSdcEarnedPerThousandDollars = ({ numberOfDays, farmApy, sd
 
 export const apyModalRoi = ({ amountEarned, amountInvested }) => {
   const percentage = (amountEarned / amountInvested) * 100
-  return percentage.toFixed(2)
+  return percentage.toFixed(2)  
 }

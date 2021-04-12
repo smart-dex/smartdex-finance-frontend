@@ -1,10 +1,11 @@
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
-import { Button, Heading, Won, useModal } from '@pancakeswap-libs/uikit'
+import { Button, Heading, Won, useModal } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useMultiClaimLottery } from 'hooks/useBuyLottery'
 import useTickets, { useTotalClaim } from 'hooks/useTickets'
+import { baseColors, lightColors, darkColors } from 'style/Color'
 import Loading from '../Loading'
 import MyTicketsModal from '../TicketCard/UserTicketsModal'
 
@@ -36,6 +37,35 @@ const StyledCardContentInner = styled.div`
 
 const StyledButton = styled(Button)`
   margin-top: ${(props) => props.theme.spacing[1]}px;
+  color: ${baseColors.primary};
+  font-size: 14px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 18px;
+  }
+`
+
+const handleBgDarkMode = (theme) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)
+
+const handleColorDarkMode = (theme) => (theme.isDark ? 'rgba(255, 255, 255, 0.6)' : '#8F8FA0')
+
+const ButtonCollect = styled(Button)`
+  font-size: 12px;
+  padding: 0 12px;
+  height: 45px;
+  background: ${({ disabled, theme }) => (disabled ? handleBgDarkMode(theme) : baseColors.primary)} !important;
+  color: ${({ disabled, theme }) => (disabled ? handleColorDarkMode(theme) : lightColors.invertedContrast)} !important;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    padding: 0 24px;
+    height: 56px;
+  }
+`
+
+const HeadingStyle = styled(Heading)`
+  font-size: 18px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 24px;
+  }
 `
 
 const PrizesWonContent: React.FC = () => {
@@ -66,26 +96,20 @@ const PrizesWonContent: React.FC = () => {
       <IconWrapper>
         <Won />
       </IconWrapper>
-      <Heading as="h3" size="lg" color="secondary">
-        {TranslateString(660, 'You won!')}
-      </Heading>
+      <HeadingStyle color="secondary">{TranslateString(660, 'You won!')}</HeadingStyle>
       {claimLoading && <Loading />}
       {!claimLoading && (
         <>
           <WinningsWrapper>
-            <Heading as="h4" size="xl" style={{ marginRight: '6px' }}>
-              {winnings}
-            </Heading>
-            <Heading as="h4" size="lg">
-              SDC
-            </Heading>
+            <HeadingStyle style={{ marginRight: '6px' }}>{winnings}</HeadingStyle>
+            <HeadingStyle>SDC</HeadingStyle>
           </WinningsWrapper>
         </>
       )}
       <StyledCardActions>
-        <Button fullWidth disabled={requestedClaim} onClick={handleClaim}>
+        <ButtonCollect disabled={requestedClaim} onClick={handleClaim} style={{ width: '100%' }}>
           {TranslateString(1056, 'Collect')}
-        </Button>
+        </ButtonCollect>
       </StyledCardActions>
       <StyledButton variant="text" onClick={onPresentMyTickets}>
         {TranslateString(432, 'View Your Tickets')}

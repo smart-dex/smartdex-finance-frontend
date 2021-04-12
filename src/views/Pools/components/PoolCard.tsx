@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { Button, useModal, Flex } from 'uikit-sotatek'
+import { Button, useModal, Flex, Text } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -60,7 +60,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const { onApprove } = useSousApprove(stakingTokenContract, sousId)
   const [requestedApproval, setRequestedApproval] = useState(false)
   const allowance = new BigNumber(userData?.allowance || 0)
-  const stakingTokenBalance = new BigNumber(userData?.stakingTokenBalance || 0)
   const stakedBalance = new BigNumber(userData?.stakedBalance || 0)
   const earnings = new BigNumber(userData?.pendingReward || 0)
   const blocksUntilStart = Math.max(startBlock - block, 0)
@@ -84,18 +83,14 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const convertedLimit = new BigNumber(stakingLimit).multipliedBy(new BigNumber(10).pow(tokenDecimals))
   const [onStart] = useModal(
     <StartModal
-      accountHasStakedBalance={accountHasStakedBalance}
       tokenName={tokenName}
       sousId={sousId}
       isBnbPool={isBnbPool}
-      earnings={earnings}
       stakingTokenName={stakingTokenName}
-      stakedBalance={stakedBalance}
       isOldSyrup={isOldSyrup}
       needsApproval={needsApproval}
       account={account}
       stakingLimit={stakingLimit}
-      stakingTokenBalance={stakingTokenBalance}
       convertedLimit={convertedLimit}
       isFinished={isFinished}
       tokenDecimals={tokenDecimals}
@@ -153,13 +148,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <StyleImgEaredDetail>
           <StyledImageEarned>
             <StyledImagePool>
-              <ImageCoin>
-                <img
-                  src={`/images/tokens/${image || tokenName}.png`}
-                  alt={" "}
-                  style={{ width: '100%', height: '100%' }}
-                />
-              </ImageCoin>
+              <IconDirect src="/images/home/icon-pool.png" alt="" />
             </StyledImagePool>
             <StyledCoinEarned>
               <StyledTextEarned>
@@ -181,6 +170,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
           <DetailPool>
             <StyledDetails style={{ marginBottom: '26px' }}>
+                  <IconWrapper>
+                    <TicketImg src="/images/pan-cake.png" />
+                  </IconWrapper>
+
               <StyleFlexDetail isFinished={isFinished}>{TranslateString(736, 'APR')}:</StyleFlexDetail>
               {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ?
                 (
@@ -190,13 +183,19 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                   <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
                 )}
             </StyledDetails>
-            <StyledDetails>
+            <StyledDetailsStake>
               <StyleFlexDetail isFinished={isFinished}>{TranslateString(384, 'Your Stake')}:</StyleFlexDetail>
               <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
-            </StyledDetails>
+            </StyledDetailsStake>
           </DetailPool>
         </StyleImgEaredDetail>
         <Line />
+        <BoxTextCard>
+            <TextTitleCon as="p">
+              {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(1250, 'LP STAKED')}
+            </TextTitleCon>
+        </BoxTextCard>
+       
 
         <StyledCardActions>
           {!account &&
@@ -277,6 +276,16 @@ const StyledDetails = styled.div`
   }
   flex-wrap:wrap;
 `
+const StyledDetailsStake = styled.div`
+  font-size: 14px;
+  align-items: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+  flex-wrap:wrap;
+  margin-left: 25px;
+  display: flex;
+`
 
 const StyledCardName = styled.div`
 
@@ -295,6 +304,10 @@ const ImageCoin = styled.div`
 const StyledImagePool = styled(Flex)`
   margin-right:10px;
   padding-left: 10px;
+  width: 34px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 40px;
+  }
 `
 
 const StyledCoinEarned = styled(Flex)`
@@ -506,8 +519,9 @@ const StyleImgEaredDetail = styled(Flex)`
 
 const StyledImageEarned = styled(Flex)`
   border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-  flex:50%;
+  flex: 50%;
   padding-right:10px;
+  position: relative;
 `
 
 const StyleNameFinished = styled.div`
@@ -549,5 +563,35 @@ const ButtonSelect = styled(Button)`
       font-size: 16px;
     }
 `
-
+const IconDirect = styled.img`
+  width: 26px;
+  height: 26px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 28px;
+    height: 28px;
+  }
+`
+const IconWrapper = styled.div`
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+`
+const TicketImg = styled.img`
+  width: 25px;
+  height: 25px;
+`
+const BoxTextCard = styled.div`
+  display: flex;
+  width: 100%;
+`
+const TextTitleCon = styled(Text)`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorWap)};
+  align-items: flex-start !important;
+  margin-left: 20px;
+`
 export default PoolCard

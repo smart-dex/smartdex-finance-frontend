@@ -40,10 +40,17 @@ const CompoundModal: React.FC<DepositModalProps> = ({ earnings, onConfirm, token
           id="compound-sdc"
           disabled={pendingTx}
           onClick={async () => {
-            setPendingTx(true)
-            await onConfirm(fullBalance)
-            setPendingTx(false)
-            onDismiss()
+            try {
+              setPendingTx(true)
+              await onConfirm(fullBalance)
+              onDismiss()
+            } catch (error) {
+              console.error(error)
+            } finally {
+              setPendingTx(false)
+            }
+           
+        
           }}
         >
           {pendingTx ? TranslateString(488, 'Pending Confirmation') : TranslateString(464, 'Confirm')}

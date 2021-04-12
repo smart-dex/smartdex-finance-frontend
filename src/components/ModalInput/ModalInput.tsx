@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
-import { Text, Button, Input, InputProps, Flex, Link } from 'uikit-sotatek'
+import { Text, Button, InputProps, Flex, Link } from 'uikit-sotatek'
 import NumberFormat from 'react-number-format';
 import useI18n from '../../hooks/useI18n'
-
 
 interface ModalInputProps {
   max: string
@@ -56,7 +55,7 @@ const StyledInput = styled.div`
     font-size: 14px;
     height: 56px;
     font-weight: 600;
-    color:  ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
+    color:  ${({ theme }) => (theme.isDark ? darkColors.colorInputModal : lightColors.colorInputModal)};
     &:focus {
       box-shadow: none !important;
       outline: none;

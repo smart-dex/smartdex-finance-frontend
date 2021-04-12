@@ -11,7 +11,7 @@ const farms: FarmConfig[] = [
     },
     tokenSymbol: 'SYRUP',
     tokenAddresses: {
-      97: '0x863d95004611E547c32c123D6F37f765474A3e9F',
+      97: '0x92Dcd1A7e8e511f76C261610eaabB75dF2A14F8B',
       56: '',
     },
     quoteTokenSymbol: QuoteToken.BNB,
@@ -91,6 +91,21 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.JEL,
     quoteTokenAdresses: contracts.jel,
+  },
+  {
+    pid: 6,
+    lpSymbol: 'WETH-BUSD LP',
+    lpAddresses: {
+      97: '0xCe709ED48CB7Fb0aB1aBcB5611687E7A90336C77',
+      56: '',
+    },
+    tokenSymbol: 'WETH',
+    tokenAddresses: {
+      97: '0xbB3F4b50745c36C47A592dd78def97066C5E8EdC',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
   },
   // {
   //   pid: 0,

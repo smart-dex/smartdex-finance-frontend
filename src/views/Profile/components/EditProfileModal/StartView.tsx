@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Button, Flex, Text, InjectedModalProps } from '@pancakeswap-libs/uikit'
+import { Button, Flex, Text, InjectedModalProps } from 'uikit-sotatek'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import { getSmartDEXChainProfileAddress } from 'utils/addressHelpers'
 import { useSdc } from 'hooks/useContract'
@@ -10,8 +10,11 @@ import useI18n from 'hooks/useI18n'
 import { useProfile } from 'state/hooks'
 import useGetProfileCosts from 'views/Profile/hooks/useGetProfileCosts'
 import useHasSdcBalance from 'hooks/useHasSdcBalance'
+import { baseColors, lightColors } from 'style/Color'
 import { UseEditProfileResponse } from './reducer'
 import ProfileAvatar from '../ProfileAvatar'
+
+
 
 interface StartPageProps extends InjectedModalProps {
   goToChange: UseEditProfileResponse['goToChange']
@@ -21,14 +24,24 @@ interface StartPageProps extends InjectedModalProps {
 
 const DangerOutline = styled(Button).attrs({ color: 'secondary', fullWidth: true })`
   border-color: ${({ theme }) => theme.colors.failure};
-  color: ${({ theme }) => theme.colors.failure};
+  color: ${lightColors.white};
+  background: ${lightColors.primary};
   margin-bottom: 24px;
-
+  box-shadow: none;
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     border-color: ${({ theme }) => theme.colors.failure};
     opacity: 0.8;
   }
 `
+const ButtonChange = styled(Button)`
+  background: ${lightColors.primary};
+  box-shadow: none;
+`
+const ButtonReactive = styled(Button)`
+  background: ${lightColors.primary};
+  box-shadow: none;
+`
+
 
 const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemove, onDismiss }) => {
   const [needsApproval, setNeedsApproval] = useState(null)
@@ -71,29 +84,25 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
       </Flex>
       {profile.isActive ? (
         <>
-          <Button
+          <ButtonChange
             fullWidth
             mb="8px"
             onClick={needsApproval === true ? goToApprove : goToChange}
             disabled={!hasMinimumSdcRequired || needsApproval === null}
           >
             {TranslateString(999, 'Change Profile Pic')}
-          </Button>
+          </ButtonChange>
           <DangerOutline onClick={goToRemove}>{TranslateString(999, 'Remove Profile Pic')}</DangerOutline>
         </>
       ) : (
-        <Button
-          fullWidth
+        <ButtonReactive
           mb="8px"
           onClick={needsApproval === true ? goToApprove : goToChange}
           disabled={!hasMinimumSdcRequired || needsApproval === null}
         >
           {TranslateString(999, 'Reactivate Profile')}
-        </Button>
+        </ButtonReactive>
       )}
-      <Button variant="text" fullWidth onClick={onDismiss}>
-        {TranslateString(999, 'Close Window')}
-      </Button>
     </Flex>
   )
 }

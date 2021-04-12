@@ -11,8 +11,8 @@ const Grid = styled.div`
   grid-gap: 16px;
   grid-template-columns: 1fr;
 
-  ${({ theme }) => theme.mediaQueries.sm} {
-    grid-template-columns: repeat(2, 1fr);
+  ${({ theme }) => theme.mediaQueries.nav} {
+    grid-template-columns: repeat(1, 1fr);
   }
 `
 
@@ -37,11 +37,12 @@ const AchievementsList = () => {
 }
 const StyledText = styled(Heading)`
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 22px;
-  color: ${({ theme }) => (theme.isDark ? darkColors.textComingSoon : lightColors.textComingSoon)};
+  align-item: left;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorAchievment)};
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 18px;
+    font-size: 16px;
   }
 `
 

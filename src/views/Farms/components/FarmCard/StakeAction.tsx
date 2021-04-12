@@ -19,6 +19,7 @@ interface FarmCardActionsProps {
   addLiquidityUrl?: string
   onBack: () => void
   removed: boolean
+  pendingTxModal: boolean
 }
 
 const StyledAddButton = styled(Flex)`
@@ -84,7 +85,8 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   pid,
   addLiquidityUrl,
   onBack,
-  removed
+  removed,
+  pendingTxModal
 }) => {
   const TranslateString = useI18n()
   const { onStake } = useStake(pid)
@@ -101,12 +103,12 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
 
   const renderStakingButtons = () => {
     return rawStakedBalance === 0 ? (
-      <StakeButton onClick={onPresentDeposit} disabled={removed}>
+      <StakeButton onClick={onPresentDeposit} disabled={removed || pendingTxModal}>
         {TranslateString(999, 'Stake LP')}
       </StakeButton>
     ) : (
         <>
-          <ButtonUnstake onClick={onPresentWithdraw}>
+          <ButtonUnstake onClick={onPresentWithdraw} disabled={pendingTxModal}>
             {TranslateString(999, 'Unstake')}
           </ButtonUnstake>
           <StyledAddButton>

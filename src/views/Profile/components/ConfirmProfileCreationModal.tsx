@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, Flex, Text } from '@pancakeswap-libs/uikit'
+import { Modal, Flex, Text } from 'uikit-sotatek'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import useI18n from 'hooks/useI18n'
@@ -7,8 +7,12 @@ import { useSdc, useSmartDEXChainRabbits, useProfile } from 'hooks/useContract'
 import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
 import { fetchProfile } from 'state/profile'
 import { useToast } from 'state/hooks'
+import styled from 'styled-components'
+import { lightColors, darkColors, baseColors} from 'style/Color'
 import { REGISTER_COST } from '../ProfileCreation/config'
 import ApproveConfirmButtons from './ApproveConfirmButtons'
+
+
 
 interface Props {
   userName: string
@@ -19,6 +23,48 @@ interface Props {
   allowance: BigNumber
   onDismiss?: () => void
 }
+
+const ModalTitPop = styled(Modal)`
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700 !important;
+  padding: 30px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width: 551px !important;
+  }
+`
+const TextPopup = styled(Text)`
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+`
+const TextStyle = styled(Text)`
+    color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)} !important;
+    font-weight: 600;
+`
+const TextNum = styled(Text)`
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: right;
+    font-weight: 600;
+    color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+    margin: 15px 0;
+`
+const BoxContent = styled.div`
+${({ theme }) => theme.mediaQueries.nav} {
+  width: 450px;
+  height: 185px;
+  
+`
+const BtnAll = styled(ApproveConfirmButtons)`
+  display: grid ;
+  flex-direction: row;
+  grid-gap: 30px;
+  justify-content: center;
+`
 
 const ConfirmProfileCreationModal: React.FC<Props> = ({
   account,
@@ -68,23 +114,25 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
   })
 
   return (
-    <Modal title="Complete Profile" onDismiss={onDismiss}>
-      <Text color="textSubtle" mb="8px">
-        {TranslateString(999, 'Submitting NFT to contract and confirming User Name and Team.')}
-      </Text>
-      <Flex justifyContent="space-between" mb="16px">
-        <Text>{TranslateString(999, 'Cost')}</Text>
-        <Text>{TranslateString(999, `${REGISTER_COST} SDC`, { num: REGISTER_COST })}</Text>
-      </Flex>
-      <ApproveConfirmButtons
-        isApproveDisabled={isConfirmed || isConfirming || isApproved}
-        isApproving={isApproving}
-        isConfirmDisabled={!isApproved || isConfirmed}
-        isConfirming={isConfirming}
-        onApprove={handleApprove}
-        onConfirm={handleConfirm}
-      />
-    </Modal>
+    <ModalTitPop title="Complete Profile" onDismiss={onDismiss}>
+      <BoxContent>
+          <TextPopup color="textSubtle" mb="8px">
+            {TranslateString(999, 'Submitting NFT to contract and confirming User Name and Team. Cost')}
+          </TextPopup>
+          <Flex justifyContent="flex-end" mb="16px">
+            {/* <TextStyle>{TranslateString(999, 'Cost')}</TextStyle> */}
+            <TextNum>{TranslateString(999, `${REGISTER_COST} SDC`, { num: REGISTER_COST })}</TextNum>
+          </Flex>
+          <BtnAll
+            isApproveDisabled={isConfirmed || isConfirming || isApproved}
+            isApproving={isApproving}
+            isConfirmDisabled={!isApproved || isConfirmed}
+            isConfirming={isConfirming}
+            onApprove={handleApprove}
+            onConfirm={handleConfirm}
+          />
+      </BoxContent>
+    </ModalTitPop>
   )
 }
 

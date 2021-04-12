@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { StringTranslations } from '@crowdin/crowdin-api-client'
 import { TranslationsContext } from 'contexts/Localisation/translationsContext'
 import { allLanguages, EN } from 'config/localisation/languageCodes'
 import {listLanguage} from '../../locales/index'
@@ -25,23 +24,12 @@ const LanguageContext = React.createContext({
   setTranslatedLanguage: () => undefined,
 } as LanguageState)
 
-const fileId = 8
-const projectId = parseInt(process.env.REACT_APP_CROWDIN_PROJECTID)
-const stringTranslationsApi = new StringTranslations({
-  token: process.env.REACT_APP_CROWDIN_APIKEY,
-})
-
-const fetchTranslationsForSelectedLanguage = (selectedLanguage) => {
-  return stringTranslationsApi.listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
-}
-
 const LanguageContextProvider = ({ children }) => {
   const [selectedLanguage, setSelectedLanguage] = useState<any>(EN)
   const [translatedLanguage, setTranslatedLanguage] = useState<any>(EN)
   const [translations, setTranslations] = useState<Array<any>>([])
   const getStoredLang = (storedLangCode: string) => {
     return allLanguages.filter((language) => {
-      console.log(storedLangCode)
       return language.code === storedLangCode
     })[0]
   }
@@ -55,24 +43,6 @@ const LanguageContextProvider = ({ children }) => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   if (selectedLanguage) {
-      
-  //     fetchTranslationsForSelectedLanguage(selectedLanguage)
-  //       .then((translationApiResponse) => {
-  //         if (translationApiResponse.data.length < 1) {
-  //           setTranslations([])
-  //         } else {
-  //           setTranslations(translationApiResponse.data)
-  //         }
-  //       })
-  //       .then(() => setTranslatedLanguage(selectedLanguage))
-  //       .catch((e) => {
-  //         setTranslations([])
-  //         console.error('Error while loading translations', e)
-  //       })
-  //   }
-  // }, [selectedLanguage, setTranslations])
   useEffect(() => {
     let translationData = []
     if (selectedLanguage) {

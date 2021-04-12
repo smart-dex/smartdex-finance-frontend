@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
 import NumberFormat from 'react-number-format'
@@ -33,7 +33,7 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
           decimalScale={8}
           isAllowed={(values) => {
             const {floatValue} = values;
-            if (floatValue >= 10000000000000000 && thousandSeparator) {
+            if ((floatValue >= 10000000000000000 && thousandSeparator) || (floatValue > 50 && !thousandSeparator)) {
               return false;
             }
             return true;
@@ -55,12 +55,13 @@ const StyledInputWrapper = styled.div`
 `
 
 const StyledInput = styled.div`
+  display: flex;
   width: 100%;
   input {
     width: 100%;
     background: none;
     border: 0;
-    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInputModal : lightColors.colorInputModal)};
     flex: 1;
     height: 56px;
     margin: 0;
@@ -70,9 +71,9 @@ const StyledInput = styled.div`
     font-size: 14px;
     line-height: 17px;
     ::placeholder {
-      color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
     }
-  }
+  
+ 
 `
-
 export default Input

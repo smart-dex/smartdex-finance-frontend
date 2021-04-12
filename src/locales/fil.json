@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 30578,
-            "text": "Para sa bawat trade isang fee na 0.2% ang binabayaran. Ang 0.17% ay napupunta sa mga nagbibigay ng liquidity at ang 0.03% ay napupunta sa treasury ng PanSDCSwap.",
+            "text": "Para sa bawat trade isang fee na 0.2% ang binabayaran. Ang 0.17% ay napupunta sa mga nagbibigay ng liquidity at ang 0.03% ay napupunta sa treasury ng SmartDEX.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 28826,
-            "text": "Nakuha ng proyektong ito ang BNB, na-burn naman ng PanSDCSwap ang SDC.",
+            "text": "Nakuha ng proyektong ito ang BNB, na-burn naman ng SmartDEX ang SDC.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 31720,
-            "text": "I-launch ang iyong proyekto gamit ang PanSDCSwap, ang Binance Smart Chain na pinaka-ginagamit na proyekto ng AMM at provider ng liquidity, upang direktang dalhin ang iyong token sa pinaka-aktibo at mabilis na lumalagong komunidad sa BSC.",
+            "text": "I-launch ang iyong proyekto gamit ang SmartDEX, ang Binance Smart Chain na pinaka-ginagamit na proyekto ng AMM at provider ng liquidity, upang direktang dalhin ang iyong token sa pinaka-aktibo at mabilis na lumalagong komunidad sa BSC.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 28918,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 29708,
-            "text": "Maaari mong baguhin ang iyong profile na larawan sa ibang pagkakataon kung nakakakuha ka ng isa pang naaprubahang PanSDC Collectible,",
+            "text": "Maaari mong baguhin ang iyong profile na larawan sa ibang pagkakataon kung nakakakuha ka ng isa pang naaprubahang SmartDEX Collectible,",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 29274,
-            "text": "Tanging mga naaprubahang PanSDC Collectibles lamang ang maaaring magamit.",
+            "text": "Tanging mga naaprubahang SmartDEX Collectibles lamang ang maaaring magamit.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 29868,
-            "text": "Wala kaming nahanap na mga PanSDC Collectible sa iyong wallet.",
+            "text": "Wala kaming nahanap na mga SmartDEX Collectible sa iyong wallet.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",
@@ -5899,7 +5899,7 @@
             "stringId": 856,
             "contentType": "text/plain",
             "translationId": 29886,
-            "text": "Kailangan mo ng isang PanSDC Collectible upang matapos ang pag-set up ng iyong profile. Kung naibenta o inilipat mo ang iyong starter collectible sa ibang wallet, kakailanganin mong ibalik ito o kumuha ng bago kahit papaano. Hindi ka makakagawa ng isang bagong starter sa address ng wallet na ito.",
+            "text": "Kailangan mo ng isang SmartDEX Collectible upang matapos ang pag-set up ng iyong profile. Kung naibenta o inilipat mo ang iyong starter collectible sa ibang wallet, kakailanganin mong ibalik ito o kumuha ng bago kahit papaano. Hindi ka makakagawa ng isang bagong starter sa address ng wallet na ito.",
             "user": {
                 "id": 12705916,
                 "username": "raymond-Alconost",

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, CardHeader, Flex, Heading, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, CardHeader, Flex, Heading, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
@@ -106,13 +106,14 @@ const StyledDescriptionHeader = styled(Text)`
 `
 const StyledComingSoon = styled(Text)`
   font-weight: bold;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 22px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textComingSoon : lightColors.textComingSoon)};
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 18px;
+    font-size: 16px;
   }
 `
+
 const StyledBodyCard = styled(CardBody)``
 
 export default TaskCenter

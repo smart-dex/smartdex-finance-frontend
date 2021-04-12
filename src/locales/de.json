@@ -1129,7 +1129,7 @@
             "stringId": 230,
             "contentType": "text/plain",
             "translationId": 24262,
-            "text": "Für jeden Handel wird eine Gebühr von 0,2 % gezahlt. Davon gehen 0,17 % an die Liquiditätsanbieter und 0,03 % gehen an die PanSDCSwap-Finanzabteilung.",
+            "text": "Für jeden Handel wird eine Gebühr von 0,2 % gezahlt. Davon gehen 0,17 % an die Liquiditätsanbieter und 0,03 % gehen an die SmartDEX-Finanzabteilung.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3409,7 +3409,7 @@
             "stringId": 508,
             "contentType": "text/plain",
             "translationId": 24466,
-            "text": "Das Projekt erzielt BNB, PanSDCSwap vernichtet SDC.",
+            "text": "Das Projekt erzielt BNB, SmartDEX vernichtet SDC.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3454,7 +3454,7 @@
             "stringId": 514,
             "contentType": "text/plain",
             "translationId": 24472,
-            "text": "Starten Sie Ihr Projekt mit PanSDCSwap, dem meistgenutzten AMM-Projekt und Liquiditätsanbieter von Binance Smart Chain, um Ihren Token direkt in die aktivste und schnell wachsende Community in der BSC zu bringen.",
+            "text": "Starten Sie Ihr Projekt mit SmartDEX, dem meistgenutzten AMM-Projekt und Liquiditätsanbieter von Binance Smart Chain, um Ihren Token direkt in die aktivste und schnell wachsende Community in der BSC zu bringen.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -3844,7 +3844,7 @@
             "stringId": 576,
             "contentType": "text/plain",
             "translationId": 24528,
-            "text": "PanSDCSwap",
+            "text": "SmartDEX",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5404,7 +5404,7 @@
             "stringId": 790,
             "contentType": "text/plain",
             "translationId": 24736,
-            "text": "Sie können Ihr Profilbild später ändern, wenn Sie ein anderes genehmigtes PanSDC-Collectible erhalten.",
+            "text": "Sie können Ihr Profilbild später ändern, wenn Sie ein anderes genehmigtes SmartDEX-Collectible erhalten.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5599,7 +5599,7 @@
             "stringId": 816,
             "contentType": "text/plain",
             "translationId": 24762,
-            "text": "Es können nur genehmigte PanSDC Collectibles verwendet werden.",
+            "text": "Es können nur genehmigte SmartDEX Collectibles verwendet werden.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -5884,7 +5884,7 @@
             "stringId": 854,
             "contentType": "text/plain",
             "translationId": 24800,
-            "text": "Wir konnten keine PanSDC-Collectibles in Ihrem Wallet finden.",
+            "text": "Wir konnten keine SmartDEX-Collectibles in Ihrem Wallet finden.",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -6844,7 +6844,7 @@
             "stringId": 984,
             "contentType": "text/plain",
             "translationId": 24930,
-            "text": "PanSDC",
+            "text": "SmartDEX",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -6904,7 +6904,7 @@
             "stringId": 992,
             "contentType": "text/plain",
             "translationId": 24938,
-            "text": "PanSDCswap",
+            "text": "SmartDEXswap",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",
@@ -7654,7 +7654,7 @@
             "stringId": 1092,
             "contentType": "text/plain",
             "translationId": 46584,
-            "text": "Achievements",
+            "text": "Team Achievements",
             "user": {
                 "id": 13755775,
                 "username": "markusmeuter",

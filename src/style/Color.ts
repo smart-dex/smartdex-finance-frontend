@@ -10,11 +10,17 @@ export const baseColors = {
   orange: '#FFA14E',
   colorbt:'#E8E8EB',
   boxShadow: 'rgba(83, 185, 234, 0.24)',
+  colorRed: '#FF6970',
+  bgrChecked:'#18A0FB',
+  colorAddressLink:'rgba(255, 255, 255, 0.8);',
+  colorBlue:'#50B0FC',
 }
 
 export const brandColors = {
   binance: '#F0B90B',
   white: '#FFFFFF',
+  shadowbtn:'rgba(225, 225, 230, 0.24)',
+  colorbtnNext: '#FFA14E',
 }
 
 export const lightColors = {
@@ -91,7 +97,18 @@ export const lightColors = {
   btnCancle:'#D9D9DE',
   backgroundInput: '#E9F4FC',
   colortextInput: 'rgb(69, 42, 122)',
-
+  textStep:'#9B99B8',
+  colorStep: 'rgba(111, 108, 153, 0.7)',
+  btnApp:'#8F8FA0',
+  colorApprove:'#E1E1E6',
+  colorLightStep:'#9B99B8',
+  lightStep:'rgba(155, 153, 184, 0.5);',
+  lightRadio:'rgba(224, 224, 224, 0.3)',
+  lightBorder:'#E0E0E0',
+  lightCheckBox:'#F6F6F6',
+  colorGift: '#FFEAEB',
+  colorAchievment:'rgba(155, 153, 184, 0.6)',
+  colorInputModal: 'rgb(69, 42, 122)',
 }
 
 export const darkColors = {
@@ -166,4 +183,12 @@ export const darkColors = {
   shadowDark:'rgba(0, 0, 0, 0.14)',
   backgroundArrowMb: 'rgba(216, 247, 228, 0.1)',
   backgroundInput: '#151C31',
+  btnApp:'#2A3145',
+  colordarkStep:'rgba(255, 255, 255, 0.6)',
+  darkStep:'rgba(255, 255, 255, 0.4)',
+  darkRadio:'#00071C',
+  darkBorder:'#2F344B',
+  daskCheckBox:'#00071C',
+  colorGift:'#00071C;',
+  colorInputModal: 'rgb(234, 226, 252)',
 }

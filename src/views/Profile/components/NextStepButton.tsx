@@ -1,8 +1,12 @@
 import React from 'react'
-import { ArrowForwardIcon, Button, ButtonProps } from '@pancakeswap-libs/uikit'
+import styled from 'styled-components'
+import { Button, ButtonProps } from 'uikit-sotatek'
+
+
 
 const NextStepButton: React.FC<ButtonProps> = (props) => {
-  return <Button endIcon={<ArrowForwardIcon color="currentColor" />} {...props} />
+  return <Button {...props} />
 }
+
 
 export default NextStepButton
