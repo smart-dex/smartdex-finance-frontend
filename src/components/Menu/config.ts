@@ -86,24 +86,6 @@ const config: MenuEntry[] = [
     href: '/ifo',
   },
   {
-    label: 'My Page',
-    icon: 'MyPageIcon',
-    items: [
-      {
-        label: 'Wallet',
-        href: '',
-      },
-      {
-        label: 'Referral',
-        href: '/referral',
-      },
-      {
-        label: 'Refferral Management',
-        href: '',
-      },
-    ],
-  },
-  {
     label: 'More',
     icon: 'MoreIcon',
     items: [
