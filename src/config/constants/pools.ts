@@ -44,10 +44,10 @@ const pools: PoolConfig[] = [
     stakingTokenName: QuoteToken.BNB,
     stakingTokenAddress: '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
     contractAddress: {
-      97: '0x1f2f86E28A1a942C686836A6F299f1D8d6182Dd2',
+      97: '0xCD4f38c9836a65Dd3E2eDfB4F887e3Ea528E2935',
       56: '',
     },
-    poolCategory: PoolCategory.CORE,
+    poolCategory: PoolCategory.BINANCE,
     projectLink: '',
     harvest: true,
     tokenPerBlock: '10',
