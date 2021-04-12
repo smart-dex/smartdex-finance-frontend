@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { Button, useModal, Flex } from 'uikit-sotatek'
+import { Button, useModal, Flex, Text } from 'uikit-sotatek'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -190,6 +190,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           </DetailPool>
         </StyleImgEaredDetail>
         <Line />
+        <BoxTextCard>
+            <TextTitleCon as="p">
+              {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(1250, 'LP STAKED')}
+            </TextTitleCon>
+        </BoxTextCard>
+       
 
         <StyledCardActions>
           {!account &&
@@ -298,9 +304,9 @@ const ImageCoin = styled.div`
 const StyledImagePool = styled(Flex)`
   margin-right:10px;
   padding-left: 10px;
-  width: 40px;
+  width: 34px;
   ${({ theme }) => theme.mediaQueries.nav} {
-   
+    width: 40px;
   }
 `
 
@@ -558,7 +564,8 @@ const ButtonSelect = styled(Button)`
     }
 `
 const IconDirect = styled.img`
-  width: 10px;
+  width: 26px;
+  height: 26px;
   ${({ theme }) => theme.mediaQueries.nav} {
     width: 28px;
     height: 28px;
@@ -574,5 +581,17 @@ const TicketImg = styled.img`
   width: 25px;
   height: 25px;
 `
-
+const BoxTextCard = styled.div`
+  display: flex;
+  width: 100%;
+`
+const TextTitleCon = styled(Text)`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorWap)};
+  align-items: flex-start !important;
+  margin-left: 20px;
+`
 export default PoolCard
