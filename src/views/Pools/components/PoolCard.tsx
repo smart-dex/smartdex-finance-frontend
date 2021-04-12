@@ -24,6 +24,7 @@ import OldSyrupTitle from './OldSyrupTitle'
 import CardFooter from './CardFooter'
 import CardContent from './CardContent'
 
+
 interface PoolWithApy extends Pool {
   apy: BigNumber
 }
@@ -61,8 +62,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const { onApprove } = useSousApprove(stakingTokenContract, sousId)
   const [requestedApproval, setRequestedApproval] = useState(false)
   const allowance = new BigNumber(userData?.allowance || 0)
-  const stakedBalance = new BigNumber(userData?.stakedBalance || 0)
-  const earnings = new BigNumber(userData?.pendingReward || 0)
+  const stakedBalance = account? new BigNumber(userData?.stakedBalance || 0): new BigNumber(0)
+  const earnings = account? new BigNumber(userData?.pendingReward || 0): new BigNumber(0)
   const blocksUntilStart = Math.max(startBlock - block, 0)
   const blocksRemaining = Math.max(endBlock - block, 0)
   const isOldSyrup = stakingTokenName === QuoteToken.SYRUP
@@ -242,7 +243,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             </ButtonDetail>
           }
         </StyledCardActions>
-        {isOpenDetail && (
+        {isOpenDetail && account  && !needsApproval && (
           <CardFooter
             projectLink={projectLink}
             totalStaked={totalStaked}
@@ -318,11 +319,6 @@ const NamePool = styled(Flex)`
   order: 1;
   height: 60px;
   align-self: flex-start;
-`
-const ImageCoin = styled.div`
-  width: 28px;
-  height: 28px;
-  margin: 0 auto;
 `
 const StyledImagePool = styled(Flex)`
   margin-right:10px;

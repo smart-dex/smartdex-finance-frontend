@@ -171,7 +171,6 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
   const Icon = isOpenDetail ? ChevronUp : ChevronDown
-  const rawStakedBalance = getBalanceNumber(stakedBalance)
   const lpContract = useMemo(() => {
     return getContract(ethereum as provider, lpAddress)
   }, [ethereum, lpAddress])
