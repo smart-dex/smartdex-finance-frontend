@@ -204,7 +204,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <Line />
         <BoxTextCard>
           <TextTitleCon as="p">
-            {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(1250, 'LP STAKED')}
+            {isOldSyrup && '[OLD]'} {stakingTokenName} {TranslateString(1250, 'STAKED')}
           </TextTitleCon>
         </BoxTextCard>
 
@@ -237,13 +237,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 </ButtonSelect>
               </>
             ))}
-          {account && !needsApproval &&
             <ButtonDetail onClick={handleClick} marginBottom='10px' marginTop='10px' isShow={isOpenDetail}>
               {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
             </ButtonDetail>
-          }
         </StyledCardActions>
-        {isOpenDetail && account  && !needsApproval && (
+        {isOpenDetail && (
           <CardFooter
             projectLink={projectLink}
             totalStaked={totalStaked}
@@ -433,12 +431,12 @@ const StyledTag = styled(Flex)`
   align-items: center;
   justify-content: flex-end;
   background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : 'transparent')};
-  width: 200px;
+  width: 250px;
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
 `
 
 const StyleNamePool = styled.div`
-  width:200px;
+  width:150px;
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -451,6 +449,7 @@ const StyleNamePool = styled.div`
   align-self: flex-start;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
+    width:200px;
   }
   &:hover{
     >div{
@@ -466,7 +465,7 @@ const StyleNamePool = styled.div`
 `
 const StyledButtonUnlock = styled(UnlockButton)`
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
-  width: 100%;
+  width: calc(50% - 9px);
   font-weight: 600;
   font-size: 13px;
   height:56px;
@@ -515,7 +514,7 @@ const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
   font-weight: 600;
   font-size: 13px;
   line-height: 20px;
-  width: 100%;
+  width: calc(50% - 9px);
   border: 1px solid #17C267;
   border-radius: 10px;
   box-shadow: none;
