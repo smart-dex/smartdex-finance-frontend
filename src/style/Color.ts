@@ -108,6 +108,7 @@ export const lightColors = {
   lightCheckBox:'#F6F6F6',
   colorGift: '#FFEAEB',
   colorAchievment:'rgba(155, 153, 184, 0.6)',
+  colorInputModal: 'rgb(69, 42, 122)',
 }
 
 export const darkColors = {
@@ -189,4 +190,5 @@ export const darkColors = {
   darkBorder:'#2F344B',
   daskCheckBox:'#00071C',
   colorGift:'#00071C;',
+  colorInputModal: 'rgb(234, 226, 252)',
 }
