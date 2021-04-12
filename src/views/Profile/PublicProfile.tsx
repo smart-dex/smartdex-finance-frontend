@@ -91,6 +91,14 @@ const TagActive = styled(Tag)`
 `
 const BoxPublicCard = styled(CardBody)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+  box-shadow: none;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+`
+const CardTeam = styled(Card)`
+  box-shadow: none;
+  background: none;
+  
 `
 
 const Section = styled.div`
@@ -120,7 +128,7 @@ const PublicProfile = () => {
     <>
       <Menu activeIndex={1} />
       <div>
-        <Card >
+        <CardTeam >
           <CardHeader >
             <Flex alignItems={['start', null, 'center']} flexDirection={['column', null, 'row']}>
               <EditProfileAvatar profile={profile} />
@@ -147,7 +155,7 @@ const PublicProfile = () => {
               )}
             </Status>
           </CardHeader>
-          <BoxPublicCard className="aaa">
+          <BoxPublicCard >
             <StatBox icon={PrizeIcon} title={profile.points} subtitle={TranslateString(999, 'Points')} mb="24px" />
             <Section>
               <HeadingAch as="h4" size="md" mb="16px">
@@ -157,7 +165,7 @@ const PublicProfile = () => {
             </Section>
             <Collectibles />
           </BoxPublicCard>
-        </Card>
+        </CardTeam>
       </div>
     </>
   )

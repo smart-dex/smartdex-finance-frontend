@@ -61,7 +61,7 @@ const StyledInput = styled.div`
     width: 100%;
     background: none;
     border: 0;
-    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colortextInput)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInputModal : lightColors.colorInputModal)};
     flex: 1;
     height: 56px;
     margin: 0;

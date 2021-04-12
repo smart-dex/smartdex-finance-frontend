@@ -162,7 +162,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const linkScan = isTest ? `${process.env.REACT_APP_TESTNET_SCAN}/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}` : `${process.env.REACT_APP_BSC_SCAN}/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
-  const { earnings, stakedBalance } = useFarmUser(pid)
+  const { earnings, stakedBalance,tokenBalance } = useFarmUser(pid)
   useEffect(() => {
     ReactTooltip.rebuild();
 });
@@ -200,6 +200,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const userPoolRate = (stakedBalance.div(lpTokenBalanceMC)).times(100)
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
   const displayUserPoolRate = userPoolRate.toNumber()
+  const rawStakedBalance = getBalanceNumber(stakedBalance)
 
 
   const handelOpenDetail = () => {
@@ -296,7 +297,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           pendingTx={pendingTx}
           setPendingTx={setPendingTx}
         />
-        {showExpandableSection && (
+        {showExpandableSection &&  !(tokenBalance.eq(0) && stakedBalance.eq(0))  && (
           <ExpandingWrapper expanded={showExpandableSection}>
             <DetailsSection
               removed={removed}

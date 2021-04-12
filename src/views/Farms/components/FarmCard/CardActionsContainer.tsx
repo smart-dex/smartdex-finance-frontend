@@ -217,7 +217,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
                 isApproved && (
                   <>
                     {
-                      tokenBalance.eq(0) && rawStakedBalance === 0 ?
+                      tokenBalance.eq(0) && stakedBalance.eq(0) ?
                         (
                           <ButtonDeposit as="a" href={addLiquidityUrl} target="_blank" >
                             <span>  {TranslateString(999, 'Deposit')}</span>
