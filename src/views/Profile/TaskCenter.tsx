@@ -45,9 +45,9 @@ const TaskCenter = () => {
             </Flex>
           </StyledHeader>
           <StyledBodyCard>
-            <FlexSoon alignItems="center" justifyContent="center" style={{ height: '64px' }}>
+            <Flex alignItems="center" justifyContent="center" style={{ height: '64px' }}>
               <StyledComingSoon>{TranslateString(999, 'Coming Soon')}</StyledComingSoon>
-            </FlexSoon>
+            </Flex>
           </StyledBodyCard>
         </StyledCard>
       </StyledListCard>
@@ -112,9 +112,6 @@ const StyledComingSoon = styled(Text)`
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
-`
-const FlexSoon = styled(Flex)`
-    justify-content: flex-start;
 `
 
 const StyledBodyCard = styled(CardBody)``
