@@ -83,7 +83,7 @@ const pools: PoolConfig[] = [
       97: '0xCa9dDe19ba77233bB8EBa8641D45CA78a128a755',
       56: '',
     },
-    poolCategory: PoolCategory.BINANCE,
+    poolCategory: PoolCategory.CORE,
     projectLink: '',
     harvest: true,
     tokenPerBlock: '10',
