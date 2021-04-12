@@ -236,7 +236,7 @@ return (
             <LinkPrimary href={`${process.env.REACT_APP_EXCHANGE_URL}/swap#/swap`} mr="16px">
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
-            <LinkSecondary href={`${process.env.REACT_APP_EXCHANGE_URL}/swap#/pool`}>
+            <LinkSecondary href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/add/ETH/0x863d95004611E547c32c123D6F37f765474A3e9F`}>
               {TranslateString(1062, 'Get LP Tokens')}
               <ChevronDown />
             </LinkSecondary>
