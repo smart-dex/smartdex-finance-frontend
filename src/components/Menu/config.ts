@@ -6,24 +6,7 @@ const config: MenuEntry[] = [
     icon: 'HomeIcon',
     href: '/',
   },
-  {
-    label: 'My Wallet',
-    icon: 'GroupsIcon',
-    items: [
-      {
-        label: 'Wallet',
-        href: '',
-      },
-      {
-        label: 'Referral',
-        href: '/referral',
-      },
-      {
-        label: 'Refferral Management',
-        href: '',
-      },
-    ],
-  },
+  
   {
     label: 'Trade',
     icon: 'TradeIcon',
@@ -102,6 +85,24 @@ const config: MenuEntry[] = [
     label: 'IFO',
     icon: 'IfoIcon',
     href: '/ifo',
+  },
+  {
+    label: 'My Wallet',
+    icon: 'GroupsIcon',
+    items: [
+      {
+        label: 'Wallet',
+        href: '',
+      },
+      {
+        label: 'Referral',
+        href: '/referral',
+      },
+      {
+        label: 'Refferral Management',
+        href: '',
+      },
+    ],
   },
   {
     label: 'More',
