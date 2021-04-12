@@ -322,7 +322,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
             <UnlockButtonStyle fullWidth />
             <BoxIconDirect onClick={onPresentConnectModal}><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
           </ButtonStyle>  }
-          <LinkExternalStyle href={`${process.env.REACT_APP_BETA}`}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
+          <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
         </WrapButtonRow>
       </CardBody>
     </StyledIfoCard>
