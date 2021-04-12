@@ -19,6 +19,16 @@ const ButtonWrapper = styled.div`
   border-color: ${({ theme }) => theme.colors.borderColor};
   padding-left: 16px;
   color: #5F5E76 !important;
+  button{
+    padding: 7px 25px;
+    border-radius: 10px;
+    background: ${lightColors.primary};
+    &:disabled{
+      background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+      color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    }
+   
+  }
 `
 const Textlbl = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textIfolight)} !important;
@@ -33,6 +43,10 @@ const TextInput = styled(Text)`
   font-weight: 600;
 
 `
+const ButtonActive = styled(Button)`
+    
+`
+
 const LabelButton: React.FC<Props> = ({ value, label, buttonLabel, onClick, disabled = false }) => {
   return (
     <div>
@@ -45,9 +59,9 @@ const LabelButton: React.FC<Props> = ({ value, label, buttonLabel, onClick, disa
         <TextInput bold fontSize="20px">
           {value}
         </TextInput>
-        <Button onClick={onClick} disabled={disabled}>
+        <ButtonActive onClick={onClick} disabled={disabled}>
           {buttonLabel}
-        </Button>
+        </ButtonActive>
       </ButtonWrapper>
     </div>
   )
