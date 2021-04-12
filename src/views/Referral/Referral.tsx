@@ -5,7 +5,7 @@ import { Heading } from 'uikit-sotatek'
 const Referral = () => {
   return (
     <Page>
-      <Heading>Coming Soon</Heading>
+      <Heading>Coming Soon Update</Heading>
     </Page>
   )
 }
