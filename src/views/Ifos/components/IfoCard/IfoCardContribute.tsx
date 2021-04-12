@@ -37,10 +37,8 @@ const CardLabel = styled.div`
   }
   & button{
     background: ${baseColors.primary};
-    : hover{
-      opacity: 0.65 !important;
-      background: ${baseColors.primary} !important;
-   }
+    box-shadow: none;
+  
   }
 `
 const CardButton= styled('div')`
@@ -158,7 +156,7 @@ const IfoCardContribute: React.FC<Props> = ({
   return (
     <CardLabel>
         <LabelButton
-          disabled={pendingTx || userInfo.claimed}
+          disabled={pendingTx || userInfo.claimed || (isFinished &&  getBalanceNumber(offeringTokenBalance, tokenDecimals) === 0)}
           buttonLabel={isFinished ? 'Claim' : 'Contribute'}
           label={isFinished ? 'Your tokens to claim' : `Your contribution (${currency})`}
           value={

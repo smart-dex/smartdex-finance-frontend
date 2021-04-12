@@ -45,10 +45,6 @@ const TextCollect = styled(Text)`
   }
 
 `
-const FlexFound = styled(Flex)`
-  justify-content: start;
-  padding: 15px 0px;
-`
 const FlexCollect = styled(Flex)`
   padding: 15px 0;
   svg{
@@ -68,6 +64,11 @@ const TextFound = styled(Text)`
     font-size: 16px;
     line-height: 20px;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorAchievment)};
+`
+const BoxFound = styled.div`
+    display: flex;
+    justify-content: start;
+    padding: 32px 0;
 `
 
 const Collectibles = () => {
@@ -101,11 +102,13 @@ const Collectibles = () => {
         </CollectibleList>
       )}
       {nftsInWallet.length === 0 && (
-        <FlexFound justifyContent="center" p="32px">
-          <TextFound fontSize="20px" bold color="textDisabled">
-            {TranslateString(999, 'No NFTs Found')}
-          </TextFound>
-        </FlexFound>
+        <Flex>
+          <BoxFound>
+            <TextFound fontSize="20px" bold color="textDisabled">
+              {TranslateString(999, 'No NFTs Found')}
+            </TextFound>
+          </BoxFound>
+        </Flex>
       )}
       <FlexCollect alignItems="center" justifyContent="flex-start">
         <LinkSee to="/collectibles">{TranslateString(999, 'See all approved SmartDEX Collectibles')}</LinkSee>

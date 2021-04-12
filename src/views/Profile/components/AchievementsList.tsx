@@ -11,8 +11,8 @@ const Grid = styled.div`
   grid-gap: 16px;
   grid-template-columns: 1fr;
 
-  ${({ theme }) => theme.mediaQueries.sm} {
-    grid-template-columns: repeat(2, 1fr);
+  ${({ theme }) => theme.mediaQueries.nav} {
+    grid-template-columns: repeat(1, 1fr);
   }
 `
 
@@ -28,9 +28,9 @@ const AchievementsList = () => {
         ))}
       </Grid>
       {achievements.length === 0 && (
-        <FlexText alignItems="center" justifyContent="center" style={{ height: '64px' }}>
+        <Flex alignItems="center" justifyContent="center" style={{ height: '64px' }}>
           <StyledText>{TranslateString(999, 'No achievments yet!')}</StyledText>
-        </FlexText>
+        </Flex>
       )}
     </>
   )
@@ -44,9 +44,6 @@ const StyledText = styled(Heading)`
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
-`
-const FlexText = styled(Flex)`
-  justify-content: start;
 `
 
 export default AchievementsList
