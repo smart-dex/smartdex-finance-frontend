@@ -101,10 +101,10 @@ const LinkExternalStyle = styled(LinkExternal)`
     height: 45px;
     font-size: 13px;
   }
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorViewSite)};
+  color: ${lightColors.primary};
   background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.buttonView)};
   & svg {
-    fill: ${lightColors.fillSvg};
+    fill: ${lightColors.primary};
     position: relative;
     margin-left: 7px;
   }
@@ -322,7 +322,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
             <UnlockButtonStyle fullWidth />
             <BoxIconDirect onClick={onPresentConnectModal}><IconDirect src="/images/home/icon-direct.svg" alt="" /></BoxIconDirect>
           </ButtonStyle>  }
-          <LinkExternalStyle href={`${process.env.REACT_APP_BETA}`}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
+          <LinkExternalStyle href={projectSiteUrl}>{TranslateString(412, 'View project site ')}</LinkExternalStyle>
         </WrapButtonRow>
       </CardBody>
     </StyledIfoCard>

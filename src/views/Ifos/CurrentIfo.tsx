@@ -120,7 +120,7 @@ const LinkPrimary = styled(Link)`
 `
 const LinkSecondary = styled(Link)`
 ${ButtonPrimary}
-  background: ${brandColors.white};
+  background: ${({ theme }) => (theme.isDark ? darkColors.colorGift : lightColors.white)};
   border-radius:28px;
   color: ${lightColors.buttonSecond};
   box-shadow:none;
@@ -236,9 +236,8 @@ return (
             <LinkPrimary href={`${process.env.REACT_APP_EXCHANGE_URL}/swap#/swap`} mr="16px">
               {TranslateString(1060, 'Buy SDC')}
             </LinkPrimary>
-            <LinkSecondary href={`${process.env.REACT_APP_EXCHANGE_URL}/swap#/pool`}>
+            <LinkSecondary href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/add/ETH/0x863d95004611E547c32c123D6F37f765474A3e9F`}>
               {TranslateString(1062, 'Get LP Tokens')}
-              <ChevronDown />
             </LinkSecondary>
           </WrapGridButton>
           <WrapHeading mb="16px">{TranslateString(600, 'During Sale')}:</WrapHeading>
