@@ -92,6 +92,21 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.JEL,
     quoteTokenAdresses: contracts.jel,
   },
+  {
+    pid: 6,
+    lpSymbol: 'WETH-BUSD LP',
+    lpAddresses: {
+      97: '0xCe709ED48CB7Fb0aB1aBcB5611687E7A90336C77',
+      56: '',
+    },
+    tokenSymbol: 'WETH',
+    tokenAddresses: {
+      97: '0xbB3F4b50745c36C47A592dd78def97066C5E8EdC',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
   // {
   //   pid: 0,
   //   lpSymbol: 'CAKE',
