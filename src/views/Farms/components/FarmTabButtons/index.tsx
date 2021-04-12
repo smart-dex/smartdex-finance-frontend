@@ -66,6 +66,7 @@ const ToggleWrapper = styled.div`
   align-items: center;
   margin-bottom: 16px;
   margin-right: 32px;
+  margin-left: 32px;
   ${Text} {
     ${({ theme }) => theme.mediaQueries.nav} {
       font-size: 16px;
@@ -76,6 +77,7 @@ const ToggleWrapper = styled.div`
     letter-spacing: -0.03em;
     font-size: 13px;
     color: ${({ theme }) => (theme.isDark ? darkColors.stakedOnly : lightColors.stakedOnly)};
+    align-self: baseline;
   }
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`

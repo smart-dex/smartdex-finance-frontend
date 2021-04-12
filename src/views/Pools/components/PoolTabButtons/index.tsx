@@ -42,6 +42,7 @@ ${({ theme }) => theme.mediaQueries.nav} {
 }
 line-height: 143%;
 letter-spacing: -0.03em;
+align-self: baseline;
 `
 const Wrapper = styled.div`
   display: flex;
@@ -55,9 +56,11 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 24px;
+  margin-left: 24px;
   margin-bottom: 8px;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-right: 4px;
+    margin-left: 4px;
     margin-bottom: 16px;
   }
   ${Text} {
@@ -74,21 +77,28 @@ const ToggleWrapper = styled.div`
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`
   padding: 14px 8px;
+  min-width: 90px;
+
   border-radius: 50px;
+
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
-  min-width: 90px;
+ 
   font-size: 13px;
   font-weight: 400;
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 16px;
-    min-width: 135px;
     padding: 20px;
+
+    font-size: 16px;
+
+    min-width: 135px;
+
     line-height: 20px;
   }
 `
 const ButtonMenuStyle = styled.div`
   margin-bottom: 16px;
+
   border-radius: 50px;
   > div {
     border-radius: 50px;
