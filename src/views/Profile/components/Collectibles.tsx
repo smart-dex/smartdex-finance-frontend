@@ -1,11 +1,11 @@
 import React from 'react'
-import { Heading, Text, Flex, ChevronRightIcon } from '@pancakeswap-libs/uikit'
+import { Heading, Text, Flex, ChevronRightIcon } from 'uikit-sotatek'
 import { Link } from 'react-router-dom'
 import useI18n from 'hooks/useI18n'
 import nfts from 'config/constants/nfts'
 import useGetWalletNfts from 'hooks/useGetWalletNfts'
 import styled from 'styled-components'
-import { lightColors, darkColors, baseColors, brandColors } from 'style/Color'
+import { lightColors, darkColors } from 'style/Color'
 import CollectibleCard from './CollectibleCard'
 
 const CollectibleList = styled.div`
@@ -50,7 +50,7 @@ const FlexFound = styled(Flex)`
   padding: 15px 0px;
 `
 const FlexCollect = styled(Flex)`
-  padding: 20px 0;
+  padding: 15px 0;
   svg{
     fill: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorLightStep)};
   }
@@ -64,7 +64,11 @@ const LinkSee = styled(Link)`
       fill: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorLightStep)};
     }
 `
-
+const TextFound = styled(Text)`
+    font-size: 16px;
+    line-height: 20px;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorAchievment)};
+`
 
 const Collectibles = () => {
   const TranslateString = useI18n()
@@ -98,9 +102,9 @@ const Collectibles = () => {
       )}
       {nftsInWallet.length === 0 && (
         <FlexFound justifyContent="center" p="32px">
-          <Text fontSize="20px" bold color="textDisabled">
+          <TextFound fontSize="20px" bold color="textDisabled">
             {TranslateString(999, 'No NFTs Found')}
-          </Text>
+          </TextFound>
         </FlexFound>
       )}
       <FlexCollect alignItems="center" justifyContent="flex-start">

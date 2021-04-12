@@ -11,11 +11,33 @@ import useApproveConfirmTransaction from 'hooks/useApproveConfirmTransaction'
 import { useSmartDEXChainRabbits, useProfile as useProfileContract } from 'hooks/useContract'
 import { getSmartDEXChainProfileAddress, getSmartDEXChainRabbitsAddress } from 'utils/addressHelpers'
 import styled from 'styled-components'
-import { lightColors, darkColors } from 'style/Color'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import SelectionCard from '../SelectionCard'
 import ApproveConfirmButtons from '../ApproveConfirmButtons'
 
 
+const BoxChooseImage = styled.div`
+    box-shadow: none !important;
+    position: relative;
+    & : checked {
+    background-color: ${baseColors.bgrChecked}!important;
+    }
+    & : hover{
+    box-shadow: none !important;
+    }
+    & :focus{
+    box-shadow: none !important;
+    }
+    & < div : active{
+    box-shadow: none !important;
+    border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
+    }
+    & :after {
+      height: 16px !important;
+      width: 16px !important;
+    }
+
+`
 
 type ChangeProfilePicPageProps = InjectedModalProps
 
@@ -70,17 +92,20 @@ const ChangeProfilePicPage: React.FC<ChangeProfilePicPageProps> = ({ onDismiss }
           const [firstTokenId] = nftsInWallet[walletNft.bunnyId].tokenIds
 
           return (
-            <SelectionCard
-              name="profilePicture"
-              key={walletNft.bunnyId}
-              value={firstTokenId}
-              image={`/images/nfts/${walletNft.images.md}`}
-              isChecked={firstTokenId === tokenId}
-              onChange={(value: string) => setTokenId(parseInt(value, 10))}
-              disabled={isApproving || isConfirming || isConfirmed}
-            >
-              <Text bold>{walletNft.name}</Text>
-            </SelectionCard>
+            <BoxChooseImage>
+                <SelectionCard
+                  name="profilePicture"
+                  key={walletNft.bunnyId}
+                  value={firstTokenId}
+                  image={`/images/nfts/${walletNft.images.md}`}
+                  isChecked={firstTokenId === tokenId}
+                  onChange={(value: string) => setTokenId(parseInt(value, 10))}
+                  disabled={isApproving || isConfirming || isConfirmed}
+                >
+                  <Text bold>{walletNft.name}</Text>
+                </SelectionCard>
+
+            </BoxChooseImage>
           )
         })
       )}

@@ -36,6 +36,7 @@ export default FarmTabButtons
 const StyledToggle = styled.div <{ isActive: boolean }>`
   >div{
     background-color: ${({ isActive }) => (isActive ? "rgb(111 207 151 / 20%)" : "#E5E5E5")};
+    background: ${({ theme, isActive }) => (theme.isDark && !isActive && "rgb(53, 53, 71)")};
     >div{
       background-color: ${({ isActive }) => (isActive ? "#17C267" : "#FFFF")};
     }
