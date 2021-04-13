@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { Modal, Button, LinkExternal } from 'uikit-sotatek'
@@ -54,12 +54,24 @@ ${({ theme }) => theme.mediaQueries.nav} {
 }
 `
 
+const handleChange = useCallback(
+  (e: React.FormEvent<HTMLInputElement>) => {
+    if (e.currentTarget.value) {
+      const data = e.currentTarget.value.replaceAll(',','')
+      setValue(data)
+    } else {
+      setValue('')
+    }
+  },
+  [setValue],
+)
+
 return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
       <StyledModal> </StyledModal>
       <BalanceInput
         value={value}
-        onChange={(e) => setValue(e.currentTarget.value)}
+        onChange={handleChange}
         symbol={currency}
         max={balance}
         onSelectMax={() => setValue(balance.toString())}
