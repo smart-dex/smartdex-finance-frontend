@@ -61,6 +61,27 @@ const ifos: Ifo[] = [
     releaseBlockNumber: 7932100,
     campaignId: '3',
   },
+  
+  {
+    id: 'Vanptn',
+    address: '0xFEE0e82e965e33A0E112c5898a1F9747073A5ef0',
+    isActive: true,
+    name: 'Vanptn',
+    subTitle: 'Token for Liverpool club',
+    description:
+      'To buy Christiano Ronaldo for Liverpool',
+    launchDate: 'Apr. 13',
+    launchTime: '4AM UTC',
+    saleAmount: '1,000 LIV',
+    raiseAmount: `$${(10000 * 15).toString()}`,
+    sdcToBurn: `$${(10000 * 7.5).toString()}`,
+    projectSiteUrl: '',
+    currency: 'SDC',
+    currencyAddress: '0x863d95004611E547c32c123D6F37f765474A3e9F',
+    tokenDecimals: 18,
+    releaseBlockNumber: 7932100,
+    campaignId: '3',
+  },
   // {
   //   id: 'berry',
   //   address: '0x5d028cE3435B2bB9AceBfaC599EEbA1ccD63d7dd',
