@@ -9,7 +9,7 @@ const CardTitle = styled.div<StyledTitleProps>`
   background: ${({ isFinished }) => isFinished ? '#17C267' : ''};
   position: relative;
   height: 60px;
-  width: 150px;
+  width: 180px;
   border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   border-left: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   ${({ theme }) => theme.mediaQueries.nav} {
