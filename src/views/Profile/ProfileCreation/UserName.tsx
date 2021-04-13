@@ -399,7 +399,7 @@ const UserName: React.FC = () => {
               <StyleCheck>
                  <StyleCheckbox 
                  id="checkbox" 
-                 disabled={!isValid || isUserCreated || isLoading || !isAcknowledged}
+                 disabled={!isValid || isUserCreated || isLoading}
                  scale="sm" 
                  checked={isAcknowledged} 
                  onChange={handleAcknoledge} />
