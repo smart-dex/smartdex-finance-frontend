@@ -17,7 +17,7 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly,active,setActive }) => {
         <StyledText> {TranslateString(1116, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
-        <ButtonMenu activeIndex={active? 0:1}  onItemClick={()=> setActive(!active)}>
+        <ButtonMenu activeIndex={active? 0:1}  onItemClick={()=> setActive(!active)} scale="sm">
           <ButtonItemStyle >
             {TranslateString(698, 'Active')}
           </ButtonItemStyle>
@@ -53,9 +53,8 @@ letter-spacing: -0.03em;
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 0px 16px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 `
 
 const ToggleWrapper = styled.div`
@@ -63,8 +62,11 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
-  margin-right: 32px;
-  margin-left: 32px;
+  margin-right: 10px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-right: 32px;
+  }
+  
   ${Text} {
     ${({ theme }) => theme.mediaQueries.nav} {
       font-size: 16px;
@@ -83,22 +85,22 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
-  min-width: 100px;
+  min-width: 75px;
   font-size: 13px;
   line-height: 20px;
   font-weight: 400;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
-    min-width: 135px;
+    min-width: 100px;
   }
 `
 const ButtonMenuStyle = styled.div`
   margin-bottom: 16px;
   & > div {
-    ${({ theme }) => theme.mediaQueries.nav} {
-      width: 270px;
-    }
-    width: 200px;
+     ${({ theme }) => theme.mediaQueries.nav} {
+      width: 200px;
+     }
+    width: 150px;
     border-radius: 50px;
   }
 `

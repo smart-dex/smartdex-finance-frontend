@@ -4,7 +4,6 @@ import { lightColors, darkColors } from 'style/Color'
 
 export const FarmHeader = styled.div`
   text-align: center;
-  padding: 0px 16px;
   margin-bottom: 43px;
 `
 export const HeadingFarm = styled(Heading)`

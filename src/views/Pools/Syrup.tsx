@@ -31,7 +31,7 @@ const Farm: React.FC = () => {
   const block = useBlock()
   const [stackedOnly, setStackedOnly] = useState(false)
   const [finishedPool, setFinishedPool] = useState(false)
-  
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -114,14 +114,11 @@ const Farm: React.FC = () => {
             {
               !stackedOnly && !finishedPool && orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
             }
-
-
           </>
         </Route>
       </FlexLayout>
-      <Route exact path={`${path}`}>
-        <Coming />
-      </Route>
+      {!finishedPool && <Coming />}
+
     </Page>
   )
 }

@@ -19,8 +19,11 @@ interface BalanceProps extends TextProps {
 
 const StyledText = styled(Text) <TextProps>`
 
-  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
-  ${(props) =>
+  // color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  >span{
+    color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  }
+    ${(props) =>
     props.isDisabled &&
     css`
       opacity: 0.5;
@@ -30,7 +33,6 @@ const StyledText = styled(Text) <TextProps>`
     css`
       font-size: ${props.resFontSize}
     `}
-  color: ${({ color }) => color};
   font-weight: 600;
   line-height: 17px;
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -51,7 +53,7 @@ const Balance: React.FC<BalanceProps> = ({ value, fontSize, color, decimals, isD
   return (
     <StyledText bold color={color} fontSize={fontSize} isDisabled={isDisabled} resFontSize={resFontSize}>
       <CountUp start={previousValue.current} end={value} decimals={decimals} duration={1} separator="," />
-      { value && unit ?  <span>{unit}</span> : ""}
+      { value && unit ? <span>{unit}</span> : ""}
     </StyledText>
   )
 }
