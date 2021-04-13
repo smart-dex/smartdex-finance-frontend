@@ -114,6 +114,8 @@ const StyledComingSoon = styled(Text)`
   }
 `
 
-const StyledBodyCard = styled(CardBody)``
+const StyledBodyCard = styled(CardBody)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.background)};
+`
 
 export default TaskCenter
