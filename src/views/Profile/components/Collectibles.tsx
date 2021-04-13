@@ -52,7 +52,7 @@ const FlexCollect = styled(Flex)`
   }
 `
 const LinkSee = styled(Link)`
-    color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorLightStep)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorWap)};
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
