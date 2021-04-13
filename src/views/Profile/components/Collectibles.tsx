@@ -38,8 +38,9 @@ const HeadingCollect = styled(Heading)`
   }
 `
 const TextCollect = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.textStep)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textDescriptionMenu : lightColors.textDescriptionMenu)};
   font-size: 12px;
+  font-weight: 400;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
   }

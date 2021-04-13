@@ -47,6 +47,17 @@ const InputWrap = styled.div`
   & svg {
     fill: ${lightColors.primary} !important;
   }
+  input{
+    letter-spacing: -0.03em;
+    font-size: 14px;
+    line-height: 143%;
+    font-weight: 500;
+    ::placeholder {
+      color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)} !important;
+      }
+    ${({ theme }) => theme.mediaQueries.nav} {
+        font-size: 16px;
+    }
 `
 
 const Input = styled(UIKitInput)`
@@ -182,6 +193,11 @@ const StyleCheckbox = styled(Checkbox)`
   background-color: ${({ theme }) => (theme.isDark ? darkColors.daskCheckBox : lightColors.lightCheckBox)} !important;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.darkBorder : lightColors.lightBorder)};
   border-radius: 4px;
+  &:disabled{
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    opacity: 1;
+  }
 `
 const BtnConfirm = styled(Button)`
     background: ${lightColors.primary};
@@ -381,7 +397,12 @@ const UserName: React.FC = () => {
           <label htmlFor="checkbox" style={{ display: 'block', cursor: 'pointer', marginBottom: '24px' }}>
             <Flex alignItems="center">
               <StyleCheck>
-                 <StyleCheckbox id="checkbox" scale="sm" checked={isAcknowledged} onChange={handleAcknoledge} />
+                 <StyleCheckbox 
+                 id="checkbox" 
+                 disabled={!isValid || isUserCreated || isLoading || !isAcknowledged}
+                 scale="sm" 
+                 checked={isAcknowledged} 
+                 onChange={handleAcknoledge} />
               </StyleCheck>
               <TextCheckbox ml="8px">
                 {TranslateString(1096, 'I understand that people can view my wallet if they know my username')}
