@@ -80,7 +80,7 @@ const ifos: Ifo[] = [
     currencyAddress: '0x863d95004611E547c32c123D6F37f765474A3e9F',
     tokenDecimals: 18,
     releaseBlockNumber: 7932100,
-    campaignId: '3',
+    campaignId: '4',
   },
   // {
   //   id: 'berry',
