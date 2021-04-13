@@ -107,6 +107,21 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  {
+    pid: 7,
+    lpSymbol: 'COO-ETH LP',
+    lpAddresses: {
+      97: '0x8B57e0Df2fD97B4441D6E41166e0da4Fe05dE37d',
+      56: '',
+    },
+    tokenSymbol: 'COO',
+    tokenAddresses: {
+      97: '0xAcB677819A1B53B67f4917442C723d45c24c23B3',
+      56: '',
+    },
+    quoteTokenSymbol: QuoteToken.ETH,
+    quoteTokenAdresses: contracts.eth,
+  },
   // {
   //   pid: 0,
   //   lpSymbol: 'CAKE',
