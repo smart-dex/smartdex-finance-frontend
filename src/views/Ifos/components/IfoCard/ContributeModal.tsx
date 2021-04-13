@@ -27,9 +27,7 @@ const FlexBtn = styled.div`
   align-items: center;
   justify-content: center;
   grid-gap: 10px;
-  & > button{
-    width: 33%;
-  }
+  padding: 24px 0 0 0;
 `
 const ButtonCancel = styled(Button)`
   color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
@@ -50,39 +48,47 @@ const LinkFooter = styled(LinkExternal)`
   background: none !important;
   grid-gap: 10px;
 `
+const StyledModal = styled.div`
+${({ theme }) => theme.mediaQueries.nav} {
+  width 551px;
+}
+`
+
 return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
-      <BalanceInput
-        value={value}
-        onChange={(e) => setValue(e.currentTarget.value)}
-        symbol={currency}
-        max={balance}
-        onSelectMax={() => setValue(balance.toString())}
-        thousandSeparator=","
-      />
-      <FlexBtn>
-        <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">
-          Cancel
-        </ButtonCancel>
-        <ButtonConfirm
-          disabled={pendingTx}
-          onClick={async () => {
-            setPendingTx(true)
-            await contract.methods
-              .deposit(new BigNumber(value).times(new BigNumber(10).pow(18)).toString())
-              .send({ from: account })
-            setPendingTx(false)
-            onDismiss()
-          }}
+      <StyledModal>
+        <BalanceInput
+          value={value}
+          onChange={(e) => setValue(e.currentTarget.value)}
+          symbol={currency}
+          max={balance}
+          onSelectMax={() => setValue(balance.toString())}
+          thousandSeparator=","
+        />
+        <FlexBtn>
+          <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">
+            Cancel
+          </ButtonCancel>
+          <ButtonConfirm
+            disabled={pendingTx}
+            onClick={async () => {
+              setPendingTx(true)
+              await contract.methods
+                .deposit(new BigNumber(value).times(new BigNumber(10).pow(18)).toString())
+                .send({ from: account })
+              setPendingTx(false)
+              onDismiss()
+            }}
+          >
+            Confirm
+          </ButtonConfirm>
+        </FlexBtn>
+        <LinkFooter
+          href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
         >
-          Confirm
-        </ButtonConfirm>
-      </FlexBtn>
-      <LinkFooter
-        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
-      >
-        {`Get ${currency}`}
-      </LinkFooter>
+          {`Get ${currency}`}
+        </LinkFooter>
+      </StyledModal>
     </Modal>
   )
 }
