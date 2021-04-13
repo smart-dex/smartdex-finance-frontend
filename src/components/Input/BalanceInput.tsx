@@ -21,13 +21,14 @@ const StyledTokenAdornmentWrapper = styled.div`
 `
 
 const StyledMaxText = styled.div`
+  color:  ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
   align-items: center;
-  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.textMenuLeft)};
   display: flex;
-  font-size: 14px;
-  font-weight: 700;
   height: 44px;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 `
 
 const StyledTokenSymbol = styled.span`
@@ -49,6 +50,7 @@ const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, val
 
   return (
     <div>
+      <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${symbol} Available`)}</StyledMaxText>
       <Input
         endAdornment={
           <StyledTokenAdornmentWrapper>
@@ -66,7 +68,6 @@ const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, val
         value={value}
         thousandSeparator={thousandSeparator}
       />
-      <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${symbol} Available`)}</StyledMaxText>
     </div>
   )
 }
