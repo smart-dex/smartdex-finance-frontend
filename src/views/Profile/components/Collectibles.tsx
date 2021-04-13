@@ -1,6 +1,5 @@
 import React from 'react'
 import { Heading, Text, Flex, ChevronRightIcon } from 'uikit-sotatek'
-import { Link } from 'react-router-dom'
 import useI18n from 'hooks/useI18n'
 import nfts from 'config/constants/nfts'
 import useGetWalletNfts from 'hooks/useGetWalletNfts'
@@ -52,7 +51,7 @@ const FlexCollect = styled(Flex)`
     fill: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorLightStep)};
   }
 `
-const LinkSee = styled(Link)`
+const LinkSee = styled.a`
     color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorWap)};
     font-weight: 600;
     font-size: 16px;
@@ -112,7 +111,7 @@ const Collectibles = () => {
         </Flex>
       )}
       <FlexCollect alignItems="center" justifyContent="flex-start">
-        <LinkSee to="/collectibles">{TranslateString(999, 'See all approved SmartDEX Collectibles')}</LinkSee>
+        <LinkSee href="/collectibles">{TranslateString(999, 'See all approved SmartDEX Collectibles')}</LinkSee>
         <ChevronRightIcon />
       </FlexCollect>
     </>
