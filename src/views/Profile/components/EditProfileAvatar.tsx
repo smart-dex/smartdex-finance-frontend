@@ -40,7 +40,7 @@ const EditProfileAvatar: React.FC<ProfileAvatarProps> = ({ profile }) => {
   return (
     <StyledEditProfileAvatar onClick={onEditProfileModal}>
       <ProfileAvatar profile={profile} />
-      <EditOverlay />
+      {/* <EditOverlay /> */}
     </StyledEditProfileAvatar>
   )
 }
