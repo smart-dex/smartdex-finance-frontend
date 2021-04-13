@@ -75,7 +75,7 @@ const ClaimGift: React.FC<ClaimGiftProps> = ({ onSuccess, onDismiss }) => {
   return (
     <Modal title={TranslateString(999, 'Claim your Gift!')} onDismiss={onDismiss}>
       <div style={{ maxWidth: '640px' }}>
-        <TextP1 as="p">{TranslateString(999, 'Thank you for being a day-one user of SmartDEXChain Profiles!')}</TextP1>
+        <TextP1 as="p">{TranslateString(999, 'Thank you for being a day-one user of SmartDEX Profiles!')}</TextP1>
         <TextP1 as="p" mb="8px">
           {TranslateString(
             999,
