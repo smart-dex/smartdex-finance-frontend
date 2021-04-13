@@ -168,6 +168,15 @@ const BoxIconDirect = styled.div`
     top: 0px;
   }
 `
+const BoxLive = styled.div`
+  & >div {
+    background-color: ${lightColors.primary} !important;
+    &:before,:after {
+      background-color:${lightColors.primary};
+  }
+  }
+
+`
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
   if (currentBlock < startBlock) {
     return 'coming_soon'
@@ -190,7 +199,12 @@ const getRibbonComponent = (status: IfoStatus, TranslateString: (translationId: 
   }
 
   if (status === 'live') {
-    return <CardRibbon variantColor="primary" text={TranslateString(999, 'LIVE NOW!')} />
+    return (
+      <BoxLive>
+            <CardRibbon variantColor="primary" text={TranslateString(999, 'LIVE NOW!')} />
+      </BoxLive>
+      
+    )
   }
 
   return null

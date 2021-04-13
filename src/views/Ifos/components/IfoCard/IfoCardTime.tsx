@@ -24,6 +24,9 @@ const Details = styled.div`
     margin-right: 25%;
     justify-content: flex-end;
   }
+  & < div{
+    margin-right: 0;
+  }
 `
 
 const Countdown = styled.div`
@@ -36,6 +39,20 @@ const Countdown = styled.div`
     font-size: 16px;
     line-height: 20px;
   }
+`
+const Details1 = styled.div`
+  align-items: center;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    margin-right: 9%;
+    justify-content: flex-end;
+  }
+`
+const Linkblock = styled(Link)`
+  color: ${lightColors.primary};
 `
 
 const IfoCardTime: React.FC<IfoCardTimeProps> = ({ isLoading, status, secondsUntilStart, secondsUntilEnd, block }) => {
@@ -57,12 +74,12 @@ const IfoCardTime: React.FC<IfoCardTimeProps> = ({ isLoading, status, secondsUnt
   }
 
   return (
-    <Details>
+    <Details1>
       <Countdown>{`${timeUntil.days}d, ${timeUntil.hours}h, ${timeUntil.minutes}m until ${suffix}`}</Countdown>
-      <Link href={`${process.env.REACT_APP_BSC_SCAN}/block/countdown/${block}`} target="blank" rel="noopener noreferrer" ml="8px">
+      <Linkblock href={`${process.env.REACT_APP_BSC_SCAN}/block/countdown/${block}`} target="blank" rel="noopener noreferrer" ml="8px">
         (blocks)
-      </Link>
-    </Details>
+      </Linkblock>
+    </Details1>
   )
 }
 
