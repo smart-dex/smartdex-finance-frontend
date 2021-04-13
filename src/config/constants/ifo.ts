@@ -4,7 +4,7 @@ const ifos: Ifo[] = [
   {
     id: 'chelsea',
     address: '0x48780C6ba46A7A63641E452112939880b3d6ba46',
-    isActive: true,
+    isActive: false,
     name: 'Chelsea',
     subTitle: 'Token for Chelsea club',
     description:
@@ -20,6 +20,26 @@ const ifos: Ifo[] = [
     tokenDecimals: 18,
     releaseBlockNumber: 7328299,
     campaignId: '1',
+  },
+  {
+    id: 'arsenal',
+    address: '0x5A739EB3299F02dF71639094CeFC0C2322bB6e95',
+    isActive: true,
+    name: 'Arsenal',
+    subTitle: 'Token for Arsenal club',
+    description:
+      'To buy Christiano Ronaldo for Arsenal',
+    launchDate: 'Apr. 13',
+    launchTime: '2AM UTC',
+    saleAmount: '1,000 ARS',
+    raiseAmount: `$${(10000 * 15).toString()}`,
+    sdcToBurn: `$${(10000 * 7.5).toString()}`,
+    projectSiteUrl: '',
+    currency: 'SDC',
+    currencyAddress: '0x863d95004611E547c32c123D6F37f765474A3e9F',
+    tokenDecimals: 18,
+    releaseBlockNumber: 7929842,
+    campaignId: '2',
   },
   // {
   //   id: 'berry',
