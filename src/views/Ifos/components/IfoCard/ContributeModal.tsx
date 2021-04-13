@@ -58,7 +58,7 @@ return (
         symbol={currency}
         max={balance}
         onSelectMax={() => setValue(balance.toString())}
-        thousandSeparator=""
+        thousandSeparator=","
       />
       <FlexBtn>
         <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">

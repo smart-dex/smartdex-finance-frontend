@@ -138,10 +138,14 @@ const PublicProfile = () => {
               <Content>
                 <Username>{`@${profile.username}`}</Username>
                 <Flex alignItems="center">
-                  <AddressLink href={`${process.env.REACT_APP_BSC_SCAN}/address/${account}`} color="text" external>
+                  <ResponsiveText>
                     {account}
-                  </AddressLink>
+                  </ResponsiveText>
+
+                  <AddressLink href={`${process.env.REACT_APP_TESTNET_SCAN}/address/${account}`} color="text" external>
                   <OpenIcon><OpenNewIcon ml="4px" /></OpenIcon>
+                  </AddressLink>
+                  
                 </Flex>
                 <ResponsiveText bold>{profile.team.name}</ResponsiveText>
               </Content>

@@ -47,6 +47,17 @@ const InputWrap = styled.div`
   & svg {
     fill: ${lightColors.primary} !important;
   }
+  input{
+    letter-spacing: -0.03em;
+    font-size: 14px;
+    line-height: 143%;
+    font-weight: 500;
+    ::placeholder {
+      color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)} !important;
+      }
+    ${({ theme }) => theme.mediaQueries.nav} {
+        font-size: 16px;
+    }
 `
 
 const Input = styled(UIKitInput)`

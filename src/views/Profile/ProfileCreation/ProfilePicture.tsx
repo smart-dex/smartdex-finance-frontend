@@ -179,6 +179,11 @@ const BoxIconDirect = styled.div`
     right: 2px;
   }
 `
+
+const HeadingOops = styled(Heading)`
+  color: ${baseColors.primary};
+`
+
 const ProfilePicture: React.FC = () => {
   const [isApproved, setIsApproved] = useState(false)
   const [isApproving, setIsApproving] = useState(false)
@@ -211,9 +216,9 @@ const ProfilePicture: React.FC = () => {
   if (!isLoading && walletNfts.length === 0) {
     return (
       <>
-        <Heading size="xl" mb="24px">
+        <HeadingOops size="xl" mb="24px">
           {TranslateString(852, 'Oops!')}
-        </Heading>
+        </HeadingOops>
         <Text bold fontSize="20px" mb="24px">
           {TranslateString(854, 'We couldn’t find any SmartDEX Collectibles in your wallet.')}
         </Text>
