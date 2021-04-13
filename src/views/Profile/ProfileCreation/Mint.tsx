@@ -142,7 +142,7 @@ const TextCount = styled(Text)`
   font-size: 13px;
   line-height: 30px;
   display: flex;
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  color: ${baseColors.colorRed};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
   }
