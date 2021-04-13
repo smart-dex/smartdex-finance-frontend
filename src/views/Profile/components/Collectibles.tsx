@@ -86,7 +86,7 @@ const Collectibles = () => {
       <TextCollect as="p">
         {TranslateString(
           999,
-          'SmartDEX Collectibles are special ERC-721 NFTs that can be used on the SmartDEXChain platform.',
+          'SmartDEX Collectibles are special ERC-721 NFTs that can be used on the SmartDEX platform.',
         )}
       </TextCollect>
       <TextCollect as="p">
