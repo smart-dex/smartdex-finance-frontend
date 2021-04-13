@@ -4,7 +4,7 @@ import { ButtonMenu, ButtonMenuItem, Toggle, Text } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 import { baseColors, lightColors, darkColors } from 'style/Color'
 
-const PoolTabButtons = ({ stackedOnly, setStackedOnly,finishedPool,setFinishedPool }) => {
+const PoolTabButtons = ({ stackedOnly, setStackedOnly, finishedPool, setFinishedPool }) => {
   const TranslateString = useI18n()
 
   return (
@@ -17,7 +17,7 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly,finishedPool,setFinishedPo
         <StyledText> {TranslateString(999, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
-        <ButtonMenu activeIndex={!finishedPool? 0:1}  onItemClick={()=> setFinishedPool(!finishedPool)}>
+        <ButtonMenu activeIndex={!finishedPool ? 0 : 1} onItemClick={() => setFinishedPool(!finishedPool)} scale="sm" >
           <ButtonItemStyle >
             {TranslateString(698, 'Active')}
           </ButtonItemStyle>
@@ -46,59 +46,54 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 `
 
 const ToggleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 24px;
-  margin-left: 24px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  margin-right: 10px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    margin-right: 4px;
-    margin-left: 4px;
-    margin-bottom: 16px;
+    margin-right: 32px;
   }
+
   ${Text} {
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
     margin-left: 13px;
+    font-size: 13px;
     line-height: 143%;
     letter-spacing: -0.03em;
     font-size: 13px;
     color: ${({ theme }) => (theme.isDark ? darkColors.stakedOnly : lightColors.stakedOnly)};
-    ${({ theme }) => theme.mediaQueries.nav} {
-      font-size: 16px;
-      margin-right: 32px;
-    }
+    align-self: baseline;
   }
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`
-  padding: 14px 8px;
-  min-width: 90px;
-
-  border-radius: 50px;
-
-  background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
-  color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
- 
-  font-size: 13px;
-  font-weight: 400;
-  ${({ theme }) => theme.mediaQueries.nav} {
-    padding: 20px;
-
-    font-size: 16px;
-
-    min-width: 135px;
-
-    line-height: 20px;
-  }
+padding: 20px;
+border-radius: 50px;
+background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
+color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
+min-width: 75px;
+font-size: 13px;
+line-height: 20px;
+font-weight: 400;
+${({ theme }) => theme.mediaQueries.nav} {
+  font-size: 16px;
+  min-width: 100px;
+}
 `
 const ButtonMenuStyle = styled.div`
   margin-bottom: 16px;
-
-  border-radius: 50px;
-  > div {
+  margin-bottom: 16px;
+  & > div {
+     ${({ theme }) => theme.mediaQueries.nav} {
+      width: 200px;
+     }
+    width: 150px;
     border-radius: 50px;
   }
 `
