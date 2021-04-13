@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useRouteMatch, Link } from 'react-router-dom'
 import { lightColors, baseColors, darkColors } from 'style/Color'
 import { ButtonMenu, ButtonMenuItem, Text, Toggle } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 
-const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
-  const { url, isExact } = useRouteMatch()
+const FarmTabButtons = ({ stackedOnly, setStackedOnly,active,setActive }) => {
   const TranslateString = useI18n()
 
   return (
@@ -19,11 +17,11 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly }) => {
         <StyledText> {TranslateString(1116, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
-        <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="primary">
-          <ButtonItemStyle as={Link} to={`${url}`}>
+        <ButtonMenu activeIndex={active? 0:1}  onItemClick={()=> setActive(!active)}>
+          <ButtonItemStyle >
             {TranslateString(698, 'Active')}
           </ButtonItemStyle>
-          <ButtonItemStyle as={Link} to={`${url}/history`}>
+          <ButtonItemStyle>
             {TranslateString(700, 'Inactive')}
           </ButtonItemStyle>
         </ButtonMenu>
@@ -66,6 +64,7 @@ const ToggleWrapper = styled.div`
   align-items: center;
   margin-bottom: 16px;
   margin-right: 32px;
+  margin-left: 32px;
   ${Text} {
     ${({ theme }) => theme.mediaQueries.nav} {
       font-size: 16px;
@@ -76,6 +75,7 @@ const ToggleWrapper = styled.div`
     letter-spacing: -0.03em;
     font-size: 13px;
     color: ${({ theme }) => (theme.isDark ? darkColors.stakedOnly : lightColors.stakedOnly)};
+    align-self: baseline;
   }
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`

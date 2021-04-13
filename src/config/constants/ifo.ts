@@ -14,7 +14,7 @@ const ifos: Ifo[] = [
     saleAmount: '10,000 CHE',
     raiseAmount: '$1,000,000',
     sdcToBurn: '$500,000',
-    projectSiteUrl: '',
+    projectSiteUrl: 'https://smartdex.sotatek.works/',
     currency: 'SDC',
     currencyAddress: '0x04e6407bf994D225Fd02a6f42e8C02ECD907033a',
     tokenDecimals: 18,

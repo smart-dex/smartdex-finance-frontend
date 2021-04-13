@@ -30,7 +30,8 @@ const Farm: React.FC = () => {
   const ethPriceBnb = usePriceEthBnb()
   const block = useBlock()
   const [stackedOnly, setStackedOnly] = useState(false)
-
+  const [finishedPool, setFinishedPool] = useState(false)
+  
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -95,21 +96,28 @@ const Farm: React.FC = () => {
             <span> {TranslateString(406, 'Rewards are calculated per block.')}</span>
           </DescriptionHeading>
         </ContentHeader>
-        <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
+        <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} finishedPool={finishedPool} setFinishedPool={setFinishedPool} />
       </PoolHeader>
       <FlexLayout>
-      <Route exact path={`${path}`}>
-        <>
-          {stackedOnly
-            ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
-            : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
-        </>
-      </Route>
-      <Route path={`${path}/history`}>
-        {orderBy(finishedPools, ['sortOrder']).map((pool) => (
-          <PoolCard key={pool.sousId} pool={pool} />
-        ))}
-      </Route>
+        <Route exact path={`${path}`}>
+          <>
+            {
+              finishedPool && orderBy(finishedPools, ['sortOrder']).map((pool) => (
+                <PoolCard key={pool.sousId} pool={pool} />
+              ))
+            }
+            {
+              stackedOnly && !finishedPool &&
+              orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
+
+            }
+            {
+              !stackedOnly && !finishedPool && orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
+            }
+
+
+          </>
+        </Route>
       </FlexLayout>
       <Route exact path={`${path}`}>
         <Coming />

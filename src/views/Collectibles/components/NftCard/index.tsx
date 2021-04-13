@@ -61,7 +61,8 @@ const DetailsButton = styled(Button)`
 const StyleCard = styled(Card)`
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
-  box-shadow: 50px 38px 102px ${({ theme }) => (theme.isDark ? darkColors.shadowCardCollectibles : lightColors.shadowCardCollectibles)};
+  box-shadow: 50px 38px 102px
+    ${({ theme }) => (theme.isDark ? darkColors.shadowCardCollectibles : lightColors.shadowCardCollectibles)};
   border-radius: 40px;
 `
 
@@ -82,6 +83,43 @@ const SubCard = styled.div`
 `
 const StyleCardFooter = styled(CardFooter)`
   border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+`
+
+const ButtonTransfer = styled(Button)`
+  color: ${baseColors.primary};
+  border-color: ${baseColors.primary};
+  font-size: 12px;
+  padding: 0 12px;
+  height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    padding: 0 24px;
+    height: 56px;
+  }
+`
+
+const ButtonClaim = styled(Button)`
+  background: ${baseColors.primary};
+  font-size: 12px;
+  padding: 0 12px;
+  height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    padding: 0 24px;
+    height: 56px;
+  }
+`
+
+const BlockButton = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+`
+const TagStyle = styled(Tag)`
+  border: 2px solid ${baseColors.primary};
+  color: ${baseColors.primary};
+  margin-left: 8px;
 `
 
 const NftCard: React.FC<NftCardProps> = ({ nft, onSuccess, canClaim = false, tokenIds = [] }) => {
@@ -107,26 +145,28 @@ const NftCard: React.FC<NftCardProps> = ({ nft, onSuccess, canClaim = false, tok
           <Header>
             <Heading>{name}</Heading>
             {walletOwnsNft && (
-              <Tag outline variant="secondary">
+              <TagStyle outline variant="secondary">
                 {TranslateString(999, 'In Wallet')}
-              </Tag>
+              </TagStyle>
             )}
             {profile?.nft?.bunnyId === bunnyId && (
-              <Tag outline variant="success">s
+              <TagStyle outline variant="success">
                 {TranslateString(999, 'Profile Pic')}
-              </Tag>
+              </TagStyle>
             )}
           </Header>
-          {canClaim && (
-            <Button mt="24px" onClick={onPresentClaimModal}>
-              {TranslateString(999, 'Claim this NFT')}
-            </Button>
-          )}
-          {walletOwnsNft && (
-            <Button variant="secondary" mt="24px" onClick={onPresentTransferModal}>
-              {TranslateString(999, 'Transfer')}
-            </Button>
-          )}
+          <BlockButton>
+            {canClaim && (
+              <ButtonClaim mt="24px" onClick={onPresentClaimModal}>
+                {TranslateString(999, 'Claim this NFT')}
+              </ButtonClaim>
+            )}
+            {walletOwnsNft && (
+              <ButtonTransfer variant="secondary" mt="24px" onClick={onPresentTransferModal}>
+                {TranslateString(999, 'Transfer')}
+              </ButtonTransfer>
+            )}
+          </BlockButton>
         </CardBody>
         <StyleCardFooter p="0">
           <DetailsButton endIcon={<Icon width="20px" color={baseColors.primary} />} onClick={handleClick}>

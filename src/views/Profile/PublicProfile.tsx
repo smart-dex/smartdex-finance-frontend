@@ -113,7 +113,10 @@ const HeadingAch = styled(Heading)`
     font-size: 18px;
   }
 `
-
+const BoxListAchievemnts = styled.div`
+    display:flex;
+    justify-content: start;
+`
 
 const PublicProfile = () => {
   const { account } = useWallet()
@@ -161,7 +164,10 @@ const PublicProfile = () => {
               <HeadingAch as="h4" size="md" mb="16px">
                 {TranslateString(1092, 'Team Achievements')}
               </HeadingAch>
-              <AchievementsList />
+              <BoxListAchievemnts>
+                 <AchievementsList />
+              </BoxListAchievemnts>
+              
             </Section>
             <Collectibles />
           </BoxPublicCard>

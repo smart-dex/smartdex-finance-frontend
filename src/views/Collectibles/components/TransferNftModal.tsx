@@ -7,6 +7,7 @@ import { useToast } from 'state/hooks'
 import { Nft } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import { useSmartDEXChainRabbits } from 'hooks/useContract'
+import { darkColors, lightColors, baseColors } from 'style/Color'
 import InfoRow from './InfoRow'
 
 interface TransferNftModalProps {
@@ -18,6 +19,7 @@ interface TransferNftModalProps {
 
 const Value = styled(Text)`
   font-weight: 600;
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
 
 const ModalContent = styled.div`
@@ -31,11 +33,62 @@ const Actions = styled.div`
 `
 
 const Label = styled.label`
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
   display: block;
   margin-bottom: 8px;
   margin-top: 24px;
 `
+
+const TextStyle = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+`
+
+const InputStyle = styled(Input)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.backgroundCover)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  box-shadow: none;
+  &:focus:not(:disabled) {
+    box-shadow: none;
+  }
+  ::placeholder {
+    color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+  }
+`
+
+const handleBgDarkMode = (theme)=>(
+  theme.isDark ? darkColors.buttonView : lightColors.buttonView
+)
+
+const handleColorDarkMode = (theme)=>(
+  theme.isDark ? 'rgba(255, 255, 255, 0.6)' : '#8F8FA0'
+)
+
+const ButtonConfirm = styled(Button)`
+  font-size: 12px;
+  padding: 0 12px;
+  height: 45px;
+  background: ${({ disabled, theme }) => (disabled ? handleBgDarkMode(theme) : baseColors.primary)} !important;
+  color: ${({ disabled, theme }) => (disabled ? handleColorDarkMode(theme) : lightColors.invertedContrast)} !important;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    padding: 0 24px;
+    height: 56px;
+  }
+`
+
+const ButtonCancel = styled(Button)`
+  color: ${ baseColors.primary};
+  border-color: ${ baseColors.primary};
+  font-size: 12px;
+  padding: 0 12px;
+  height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    padding: 0 24px;
+    height: 56px;
+  }
+`
+
 
 const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSuccess, onDismiss }) => {
   const [isLoading, setIsLoading] = useState(false)
@@ -84,16 +137,16 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
     <Modal title={TranslateString(999, 'Transfer NFT')} onDismiss={onDismiss}>
       <ModalContent>
         {error && (
-          <Text color="failure" mb="8px">
+          <TextStyle color="failure" mb="8px">
             {error}
-          </Text>
+          </TextStyle>
         )}
         <InfoRow>
-          <Text>{TranslateString(999, 'Transferring')}:</Text>
+          <TextStyle>{TranslateString(999, 'Transferring')}:</TextStyle>
           <Value>{`1x "${nft.name}" NFT`}</Value>
         </InfoRow>
         <Label htmlFor="transferAddress">{TranslateString(999, 'Receiving address')}:</Label>
-        <Input
+        <InputStyle
           id="transferAddress"
           name="address"
           type="text"
@@ -105,12 +158,12 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
         />
       </ModalContent>
       <Actions>
-        <Button variant="secondary" onClick={onDismiss}>
+        <ButtonCancel variant="secondary" onClick={onDismiss}>
           {TranslateString(462, 'Cancel')}
-        </Button>
-        <Button onClick={handleConfirm} disabled={!account || isLoading || !value}>
+        </ButtonCancel>
+        <ButtonConfirm onClick={handleConfirm} disabled={!account || isLoading || !value}>
           {TranslateString(464, 'Confirm')}
-        </Button>
+        </ButtonConfirm>
       </Actions>
     </Modal>
   )

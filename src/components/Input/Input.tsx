@@ -1,7 +1,7 @@
 import React from 'react'
 import { lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
-import NumberFormat from 'react-number-format';
+import NumberFormat from 'react-number-format'
 
 export interface InputProps {
   endAdornment?: React.ReactNode
@@ -25,7 +25,7 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
       <StyledInput>
         <NumberFormat
           value={value}
-          placeholder={placeholder}
+          placeholder={placeholder} 
           onChange={onChange}
           thousandSeparator={thousandSeparator}
           allowNegative={false}

@@ -29,7 +29,7 @@ const Text = styled('div')`
   font-size: 13px;
   line-height: 16px;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  width: 160px;
+  max-width: 765px;
   text-align: left;
   @media (max-width: 767px) {
     width: 120px;
