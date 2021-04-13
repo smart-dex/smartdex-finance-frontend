@@ -113,7 +113,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                   }
                 }}
               >
-                {pendingTx ? 'Collecting' : `${ TranslateString(999, 'Claim')}`}</HarvestButton>
+                { TranslateString(999, 'Claim')}</HarvestButton>
             )}
             {!isOldSyrup && sousId === 0 && account && harvest && (
               <CompoundButton
@@ -121,7 +121,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                 isDisable={earnings.toNumber() || pendingTx}
                 onClick={onPresentCompound}
               >
-                {pendingTx ? TranslateString(999, 'Compounding') : TranslateString(704, 'Compound')}
+                {TranslateString(704, 'Compound')}
               </CompoundButton>
             )}
 
@@ -237,7 +237,7 @@ font-size: 13px;
 line-height: 20px;
 margin-top: 10px;
 margin-bottom: 10px;
-max-width: 143px;
+min-width: 143px;
 ${({ theme }) => theme.mediaQueries.nav} {
   font-size: 16px;
   width: 143px;

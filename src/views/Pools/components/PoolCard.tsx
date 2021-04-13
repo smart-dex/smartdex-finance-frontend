@@ -10,7 +10,7 @@ import { useERC20 } from 'hooks/useContract'
 import { useSousApprove } from 'hooks/useApprove'
 import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
-import { getBalanceNumber,getFullDisplayBalance } from 'utils/formatBalance'
+import { getBalanceNumber } from 'utils/formatBalance'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import { Pool } from 'state/types'
 import { ChevronDown, ChevronUp } from 'react-feather'
@@ -117,7 +117,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     ReactTooltip.rebuild();
   });
   const rawEarning = getBalanceNumber(earnings, tokenDecimals)
-  const rawUserStake= getFullDisplayBalance(stakedBalance)
+  const rawUserStake= getBalanceNumber(stakedBalance).toFixed(3)
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       <ReactTooltip id="title" place="top" type="info" effect="float" />
@@ -569,7 +569,7 @@ const TextTitleCon = styled(Text)`
 `
 const StyledAprDetail = styled.div`
 >div{
-  max-width: 40px;
+  max-width: 50px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
