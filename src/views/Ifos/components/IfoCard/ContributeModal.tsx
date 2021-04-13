@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { Modal, Button, LinkExternal } from 'uikit-sotatek'
@@ -54,41 +54,52 @@ ${({ theme }) => theme.mediaQueries.nav} {
 }
 `
 
+const handleChange = useCallback(
+  (e: React.FormEvent<HTMLInputElement>) => {
+    if (e.currentTarget.value) {
+      const data = e.currentTarget.value.replaceAll(',','')
+      setValue(data)
+    } else {
+      setValue('')
+    }
+  },
+  [setValue],
+)
+
 return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
-      <StyledModal>
-        <BalanceInput
-          value={value}
-          onChange={(e) => setValue(e.currentTarget.value)}
-          symbol={currency}
-          max={balance}
-          onSelectMax={() => setValue(balance.toString())}
-          thousandSeparator=","
-        />
-        <FlexBtn>
-          <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">
-            Cancel
-          </ButtonCancel>
-          <ButtonConfirm
-            disabled={pendingTx}
-            onClick={async () => {
-              setPendingTx(true)
-              await contract.methods
-                .deposit(new BigNumber(value).times(new BigNumber(10).pow(18)).toString())
-                .send({ from: account })
-              setPendingTx(false)
-              onDismiss()
-            }}
-          >
-            Confirm
-          </ButtonConfirm>
-        </FlexBtn>
-        <LinkFooter
-          href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
+      <StyledModal> </StyledModal>
+      <BalanceInput
+        value={value}
+        onChange={handleChange}
+        symbol={currency}
+        max={balance}
+        onSelectMax={() => setValue(balance.toString())}
+        thousandSeparator=","
+      />
+      <FlexBtn>
+        <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">
+          Cancel
+        </ButtonCancel>
+        <ButtonConfirm
+          disabled={pendingTx}
+          onClick={async () => {
+            setPendingTx(true)
+            await contract.methods
+              .deposit(new BigNumber(value).times(new BigNumber(10).pow(18)).toString())
+              .send({ from: account })
+            setPendingTx(false)
+            onDismiss()
+          }}
         >
-          {`Get ${currency}`}
-        </LinkFooter>
-      </StyledModal>
+          Confirm
+        </ButtonConfirm>
+      </FlexBtn>
+      <LinkFooter
+        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
+      >
+        {`Get ${currency}`}
+      </LinkFooter>
     </Modal>
   )
 }
