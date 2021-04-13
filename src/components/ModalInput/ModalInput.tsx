@@ -138,14 +138,6 @@ const ModalInput: React.FC<ModalInputProps> = ({
               onChange={onChange}
               thousandSeparator=","
               allowNegative={false}
-              decimalScale={8}
-              isAllowed={(values) => {
-                const {floatValue} = values;
-                if (floatValue >= 10000000000000000) {
-                  return false;
-                }
-                return true;
-              }}
             />
           </StyledInput>
           <Flex alignItems="center" >

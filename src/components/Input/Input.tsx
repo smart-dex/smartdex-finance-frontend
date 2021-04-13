@@ -30,10 +30,9 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
           thousandSeparator={thousandSeparator}
           allowNegative={false}
           onKeyPress={eventKeyPress}
-          decimalScale={8}
           isAllowed={(values) => {
             const {floatValue} = values;
-            if ((floatValue >= 10000000000000000 && thousandSeparator) || (floatValue > 50 && !thousandSeparator)) {
+            if (floatValue > 50 && !thousandSeparator) {
               return false;
             }
             return true;
