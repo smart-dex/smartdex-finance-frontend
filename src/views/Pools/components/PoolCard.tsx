@@ -117,7 +117,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     ReactTooltip.rebuild();
   });
   const rawEarning = getBalanceNumber(earnings, tokenDecimals)
-  const rawUserStake= getFullDisplayBalance(stakedBalance,18,3)
+  const rawUserStake= getFullDisplayBalance(stakedBalance)
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       <ReactTooltip id="title" place="top" type="info" effect="float" />
