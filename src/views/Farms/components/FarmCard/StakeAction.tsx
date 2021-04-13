@@ -71,7 +71,7 @@ const ButtonUnstake = styled(Button)`
   line-height: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  max-width: 143px;
+  min-width: 143px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     width: 143px;

@@ -39,6 +39,7 @@ const StyledButton = styled(Button) <{ isDisable: boolean }>`
   box-shadow: 0px 4px 10px rgba(83, 185, 234, 0.24);
   font-weight: 600;
   min-width: 143px;
+  font-size: 13px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     width: 143px;
