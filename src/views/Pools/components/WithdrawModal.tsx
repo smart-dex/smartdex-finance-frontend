@@ -42,6 +42,7 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   return (
     <ModalStyle title={`Withdraw ${tokenName}`} onDismiss={onBack}>
       <StyledModal>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
       <TokenInput
         onSelectMax={handleSelectMax}
         onChange={handleChange}

@@ -45,6 +45,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
   return (
     <ModalStyle title={TranslateString(1068, 'Stake LP tokens')} onDismiss={onBack}>
       <StyledModal>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
         <ModalInput
           value={val}
           onSelectMax={handleSelectMax}

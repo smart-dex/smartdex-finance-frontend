@@ -44,6 +44,7 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   return (
     <ModalStyle title={TranslateString(1126, 'Unstake LP tokens')} onDismiss={onBack}>
       <StyledModal>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
         <ModalInput
           onSelectMax={handleSelectMax}
           onChange={handleChange}
