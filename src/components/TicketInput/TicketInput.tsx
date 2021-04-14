@@ -17,6 +17,7 @@ const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, 
   const TranslateString = useI18n()
   return (
     <StyledTokenInput>
+       <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${availableSymbol} Available`)}</StyledMaxText>
       <Input
         endAdornment={
           <StyledTokenAdornmentWrapper>
@@ -34,7 +35,7 @@ const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, 
         value={value}
         thousandSeparator={thousandSeparator}
       />
-      <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${availableSymbol} Available`)}</StyledMaxText>
+     
     </StyledTokenInput>
   )
 }
@@ -65,10 +66,10 @@ const StyledMaxText = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
   display: flex;
   height: 44px;
-  justify-content: flex-end;
+  justify-content: flex-start;
   font-weight: 600;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 14px;
 `
 const StyledTokenSymbol = styled.span`
   color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
