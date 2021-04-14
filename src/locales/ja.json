@@ -4894,7 +4894,7 @@
             "stringId": 720,
             "contentType": "text/plain",
             "translationId": 31624,
-            "text": "第%num%ラウンド",
+            "text": "第#%num%ラウンド",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
