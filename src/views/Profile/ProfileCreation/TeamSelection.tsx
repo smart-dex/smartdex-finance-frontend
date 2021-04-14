@@ -107,7 +107,7 @@ const TextCheck = styled(Text)`
   }
 `
 const NextStep3 = styled(NextStepButton)`
-  background-color: ${brandColors.colorbtnNext};
+  background-color: ${lightColors.primary};
   position: relative;
   box-shadow: none;
   margin-top: 30px;
