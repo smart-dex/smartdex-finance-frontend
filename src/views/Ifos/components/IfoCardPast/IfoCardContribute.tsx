@@ -24,6 +24,7 @@ export interface Props {
   status: IfoStatus
   raisingAmount: BigNumber
   tokenDecimals: number
+  secondsUntilEnd: number
 }
 const CardLabel = styled.div`
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -93,6 +94,7 @@ const IfoCardContribute: React.FC<Props> = ({
   status,
   raisingAmount,
   tokenDecimals,
+  secondsUntilEnd,
 }) => {
   const [pendingTx, setPendingTx] = useState(false)
   const [offeringTokenBalance, setOfferingTokenBalance] = useState(new BigNumber(0))
@@ -132,7 +134,7 @@ const IfoCardContribute: React.FC<Props> = ({
   const isFinished = status === 'finished'
   const percentOfUserContribution = new BigNumber(userInfo.amount).div(raisingAmount).times(100)
 
-  if (allowance <= 0) {
+  if (allowance <= 0 && secondsUntilEnd > 0) {
     return (
       <CardButton>
           <ButtonApp
