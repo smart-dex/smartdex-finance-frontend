@@ -26,7 +26,8 @@ const CardActions = styled.div`
 `
 
 const ButtonStyle = styled(Button)`
-  background: ${baseColors.primary};
+  background-color: ${({ theme, disabled }) => (disabled ? handleBg(theme) : baseColors.primary)} !important;
+  color: ${({ theme, disabled }) => (disabled ? handleColor(theme) : '#fff')} !important;
   height: 35px;
   padding: 18px;
   font-size: 13px;
