@@ -194,11 +194,12 @@ const ModalStyle = styled(Modal)`
   box-shadow: 50px 38px 102px rgba(120, 118, 148, 0.14);
 `
 const Action = styled.div`
+    margin: 5px 10px;
     ${({ theme }) => theme.mediaQueries.nav} {
       width: calc(50% - 20px);
+      margin: 10px 0px;
     }
-    margin-top:10px;
-    margin-bottom:10px;
+   
     text-align: center;
     border: 1px solid #E2E2E8;
     border-radius: 20px;

@@ -19,12 +19,12 @@ const WinningNumbers: React.FC = () => {
   return (
     <CardWrapper>
       <CardStyle>
-        <CardBody>
+        <CardBodyStyle>
           <StyledCardContentInner>
             <StyledCardHeader>
               <Title>
                 {account && lotteryHasDrawn
-                  ? `🥳${TranslateString(570, 'Winning Numbers This Round')}🥳`
+                  ? `🥳 ${TranslateString(570, 'Winning Numbers This Round')} 🥳`
                   : TranslateString(572, 'Latest Winning Numbers')}
               </Title>
               <br />
@@ -61,7 +61,7 @@ const WinningNumbers: React.FC = () => {
               </RowNoPadding>
             </Column>
           </StyledCardContentInner>
-        </CardBody>
+        </CardBodyStyle>
       </CardStyle>
       <ImgStyle>
         <img src="/images/Saly-15.png" alt="" />
@@ -82,6 +82,13 @@ const CardWrapper = styled.div`
 const CardStyle = styled(Card)`
   background: ${({ theme }) => (theme.isDark ? darkColors.backgroundLastest : lightColors.backgroundLastest)};
   padding: 12px;
+`
+
+const CardBodyStyle = styled(CardBody)`
+  padding: 24px 6px 24px 6px ;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding: 24px;
+  }
 `
 
 const ImgStyle = styled.a`
@@ -115,10 +122,16 @@ const Row = styled.div`
 `
 
 const RowNoPadding = styled.div`
-  align-items: center;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: 8px;
+  width: 100%;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 `
 const Column = styled.div`
   margin-top: 1.8em;

@@ -15,7 +15,7 @@ import { lightColors, darkColors} from '../../../style/Color'
 const ProgressWrapper = styled.div`
   display: block;
   width: 100%;
-  
+
   &>div:nth-child(1){
     background-color: ${ ({theme}) => theme.isDark ? darkColors.progressBg : lightColors.progressBg};
     &>div:nth-child(2){
@@ -68,7 +68,8 @@ const LotteryProgress = () => {
   const timeUntilLotteryDraw = getLotteryDrawTime(currentMillis)
   return (
     <ProgressWrapper>
-      <Progress primaryStep={getLotteryDrawStep(currentMillis)} secondaryStep={getTicketSaleStep()} showProgressBunny />
+      {/* <Progress primaryStep={getLotteryDrawStep(currentMillis)} secondaryStep={getTicketSaleStep()} showProgressBunny /> */}
+      <Progress primaryStep={getTicketSaleStep()} secondaryStep={getLotteryDrawStep(currentMillis)} showProgressBunny />
       <TopTextWrapper>
         <StyledPrimaryText bold >
           {lotteryHasDrawn ? timeUntilTicketSale : timeUntilLotteryDraw}

@@ -16,20 +16,30 @@ const getClosestLotteryHour = (currentHour) => {
 
 const getNextLotteryDrawTime = (currentMillis) => {
   const date = new Date(currentMillis)
-  const currentHour = date.getUTCHours()
-  const nextLotteryHour = getClosestLotteryHour(currentHour)
-  // next lottery is tomorrow if the next lottery is at 2am UTC...
-  // ...and current time is between 02:00am & 23:59pm UTC
-  const nextLotteryIsTomorrow = nextLotteryHour === 2 && currentHour >= 2 && currentHour <= 23
-  let millisTimeOfNextDraw
+  // const currentHour = date.getUTCHours()
+  // const nextLotteryHour = getClosestLotteryHour(currentHour)
+  // // next lottery is tomorrow if the next lottery is at 2am UTC...
+  // // ...and current time is between 02:00am & 23:59pm UTC
+  // const nextLotteryIsTomorrow = nextLotteryHour === 2 && currentHour >= 2 && currentHour <= 23
+  // let millisTimeOfNextDraw
 
-  if (nextLotteryIsTomorrow) {
-    const tomorrow = new Date(currentMillis)
-    const nextDay = tomorrow.getUTCDate() + 1
-    tomorrow.setUTCDate(nextDay)
-    millisTimeOfNextDraw = tomorrow.setUTCHours(nextLotteryHour, 0, 0, 0)
+  // if (nextLotteryIsTomorrow) {
+  //   const tomorrow = new Date(currentMillis)
+  //   const nextDay = tomorrow.getUTCDate() + 1
+  //   tomorrow.setUTCDate(nextDay)
+  //   millisTimeOfNextDraw = tomorrow.setUTCHours(nextLotteryHour, 0, 0, 0)
+  // } else {
+  //   millisTimeOfNextDraw = date.setUTCHours(nextLotteryHour, 0, 0, 0)
+  // }
+
+  // TEMP
+  const currentHour = date.getUTCHours()
+  const currentMinute = date.getUTCMinutes()
+  let millisTimeOfNextDraw
+  if (currentMinute < 45) {
+    millisTimeOfNextDraw = date.setUTCHours(currentHour, 45, 0, 0)
   } else {
-    millisTimeOfNextDraw = date.setUTCHours(nextLotteryHour, 0, 0, 0)
+    millisTimeOfNextDraw = date.setUTCHours(currentHour+1, 45, 0, 0)
   }
 
   return millisTimeOfNextDraw
@@ -55,10 +65,11 @@ export const getLotteryDrawTime = (currentMillis): string => {
   return hoursAndMinutesString(hours, minutes)
 }
 
-export const getTicketSaleStep = () => (1 / 12) * 100
+// export const getTicketSaleStep = () => (1 / 12) * 100
+export const getTicketSaleStep = () => 0
 
 export const getLotteryDrawStep = (currentMillis) => {
-  const msBetweenLotteries = 43200000
+  const msBetweenLotteries =  3600000 // 1h     // 43200000 - 12h
   const endTime = getNextLotteryDrawTime(currentMillis)
   const msUntilLotteryDraw = endTime - currentMillis
   const percentageRemaining = (msUntilLotteryDraw / msBetweenLotteries) * 100

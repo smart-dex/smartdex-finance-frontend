@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 import { Modal, Button, LinkExternal } from 'uikit-sotatek'
@@ -27,7 +27,9 @@ const FlexBtn = styled.div`
   align-items: center;
   justify-content: center;
   grid-gap: 10px;
-  padding: 24px 0 0 0;
+  & > button{
+    width: 33%;
+  }
 `
 const ButtonCancel = styled(Button)`
   color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
@@ -48,30 +50,11 @@ const LinkFooter = styled(LinkExternal)`
   background: none !important;
   grid-gap: 10px;
 `
-const StyledModal = styled.div`
-${({ theme }) => theme.mediaQueries.nav} {
-  width 551px;
-}
-`
-
-const handleChange = useCallback(
-  (e: React.FormEvent<HTMLInputElement>) => {
-    if (e.currentTarget.value) {
-      const data = e.currentTarget.value.replaceAll(',','')
-      setValue(data)
-    } else {
-      setValue('')
-    }
-  },
-  [setValue],
-)
-
 return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
-      <StyledModal> </StyledModal>
       <BalanceInput
         value={value}
-        onChange={handleChange}
+        onChange={(e) => setValue(e.currentTarget.value)}
         symbol={currency}
         max={balance}
         onSelectMax={() => setValue(balance.toString())}
@@ -82,7 +65,7 @@ return (
           Cancel
         </ButtonCancel>
         <ButtonConfirm
-          disabled={pendingTx || Number(balance) === 0 || Number(value) > Number(balance) || Number(value) === 0}
+          disabled={pendingTx}
           onClick={async () => {
             setPendingTx(true)
             await contract.methods

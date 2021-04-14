@@ -68,18 +68,17 @@ const StyleCard = styled(Card)`
 
 const InfoBlock = styled.div`
   font-size: 12px;
-  line-height: 143%;
+  line-height: 14px;
   text-align: center;
   letter-spacing: -0.03em;
-  color: ${lightColors.colorbt};
   color: ${({ theme }) => (theme.isDark ? darkColors.colorInfoBlock : lightColors.colorInfoBlock)};
-  min-height: 65px;
+  min-height: 70px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    height: 65px;
+   height: 70px;
   }
 `
 const SubCard = styled.div`
-  padding: 0 30px;
+  padding: 0 25px;
 `
 const StyleCardFooter = styled(CardFooter)`
   border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};

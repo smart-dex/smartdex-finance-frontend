@@ -210,7 +210,6 @@ const TitleEnd = styled(Text)`
   }
 `
 
-const activeIfo = ifosConfig.find((ifo) => ifo.isActive)
 
 const Ifo = () => {
 
@@ -218,7 +217,8 @@ const TranslateString = useI18n()
 return (
     <div>
       <IfoCards isSingle>
-        <IfoCard ifo={activeIfo} />
+        { ifosConfig.map(ifo => (<IfoCard ifo={ifo} /> ))}
+        
       </IfoCards>
       <LaunchIfoCallout>
         <WrapCard>

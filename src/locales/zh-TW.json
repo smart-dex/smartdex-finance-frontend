@@ -4894,7 +4894,7 @@
             "stringId": 720,
             "contentType": "text/plain",
             "translationId": 38706,
-            "text": "第 %num% 回合",
+            "text": "第 #%num% 回合",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
