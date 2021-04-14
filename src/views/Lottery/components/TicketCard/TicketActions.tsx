@@ -84,9 +84,6 @@ const TicketCard: React.FC = () => {
   const nextLotteryDrawTime = getNextLotteryDrawTime(currentMillis)
   const msUntilLotteryDraw = nextLotteryDrawTime - currentMillis
 
-  console.log(msUntilLotteryDraw);
-  
-  
   const renderLotteryTicketButtons = () => {
     if (!allowance.toNumber()) {
       return (
