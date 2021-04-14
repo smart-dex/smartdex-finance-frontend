@@ -9,6 +9,7 @@ import ModalActions from 'components/ModalActions'
 import { useMultiBuyLottery, useMaxNumber } from 'hooks/useBuyLottery'
 import useI18n from 'hooks/useI18n'
 import { LOTTERY_MAX_NUMBER_OF_TICKETS, LOTTERY_TICKET_PRICE } from 'config'
+import { useCurrentTime } from 'hooks/useTimer'
 
 interface BuyTicketModalProps {
   max: BigNumber
@@ -67,6 +68,25 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
   const sdcCosts = (amount: string): number => {
     return +amount * LOTTERY_TICKET_PRICE
   }
+
+
+  const currentMillis = useCurrentTime()
+  const getNextLotteryDrawTime = (currentMilliss) => {
+    const date = new Date(currentMilliss)
+    const currentHour = date.getUTCHours()
+    const currentMinute = date.getUTCMinutes()
+    let millisTimeOfNextDraw
+    if (currentMinute < 45) {
+      millisTimeOfNextDraw = date.setUTCHours(currentHour, 45, 0, 0)
+    } else {
+      millisTimeOfNextDraw = date.setUTCHours(currentHour + 1, 45, 0, 0)
+    }
+
+    return millisTimeOfNextDraw
+  }
+  const nextLotteryDrawTime = getNextLotteryDrawTime(currentMillis)
+  const msUntilLotteryDraw = nextLotteryDrawTime - currentMillis
+
   return (
     <Modal title={TranslateString(450, 'Enter amount of tickets to buy')} onDismiss={onDismiss}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
@@ -98,7 +118,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
             pendingTx ||
             parseInt(val) > Number(maxTickets) ||
             parseInt(val) > LOTTERY_MAX_NUMBER_OF_TICKETS ||
-            parseInt(val) < 1 || val === ''
+            parseInt(val) < 1 || val === '' || msUntilLotteryDraw < 10000 || msUntilLotteryDraw > 2700000
           }
           onClick={async () => {
             setPendingTx(true)
