@@ -87,7 +87,7 @@ const config: MenuEntry[] = [
   },
   {
     label: 'My Page',
-    icon: 'GroupsIcon',
+    icon: 'MyPageIcon',
     items: [
       {
         label: 'Wallet',
