@@ -28,7 +28,7 @@ const useGetProfileCosts = () => {
           numberSdcToUpdate: new BigNumber(numberSdcToUpdate as string),
         })
       } catch (error) {
-        toastError('Error', 'Could not retrieve SDC costs for profile')
+        // toastError('Error', 'Could not retrieve SDC costs for profile')
       }
     }
 
