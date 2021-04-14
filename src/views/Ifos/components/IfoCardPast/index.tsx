@@ -297,6 +297,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
         </CardHeaderFlex>
         {(isActive || isFinished) && (
           <IfoCardContribute
+            secondsUntilEnd={state.secondsUntilEnd}
             address={address}
             currency={currency}
             currencyAddress={currencyAddress}
