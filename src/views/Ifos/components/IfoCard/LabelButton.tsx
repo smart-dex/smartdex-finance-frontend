@@ -21,7 +21,7 @@ const ButtonWrapper = styled.div`
   color: #5F5E76 !important;
 `
 const Textlbl = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textIfolight)} !important;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textIfolight)} !important;
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 7px;
