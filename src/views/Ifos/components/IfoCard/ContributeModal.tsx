@@ -82,7 +82,7 @@ return (
           Cancel
         </ButtonCancel>
         <ButtonConfirm
-          disabled={pendingTx}
+          disabled={pendingTx || Number(balance) === 0 || Number(value) > Number(balance) || Number(value) === 0}
           onClick={async () => {
             setPendingTx(true)
             await contract.methods
