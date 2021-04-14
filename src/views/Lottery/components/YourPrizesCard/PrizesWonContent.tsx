@@ -106,8 +106,10 @@ const PrizesWonContent: React.FC = () => {
           </WinningsWrapper>
         </>
       )}
+
+    
       <StyledCardActions>
-        <ButtonCollect disabled={requestedClaim} onClick={handleClaim} style={{ width: '100%' }}>
+        <ButtonCollect disabled={requestedClaim || Number(winnings) <= 0} onClick={handleClaim} style={{ width: '100%' }}>
           {TranslateString(1056, 'Collect')}
         </ButtonCollect>
       </StyledCardActions>

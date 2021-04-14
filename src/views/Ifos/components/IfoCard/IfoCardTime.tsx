@@ -76,7 +76,7 @@ const IfoCardTime: React.FC<IfoCardTimeProps> = ({ isLoading, status, secondsUnt
   return (
     <Details1>
       <Countdown>{`${timeUntil.days}d, ${timeUntil.hours}h, ${timeUntil.minutes}m until ${suffix}`}</Countdown>
-      <Linkblock href={`${process.env.REACT_APP_BSC_SCAN}/block/countdown/${block}`} target="blank" rel="noopener noreferrer" ml="8px">
+      <Linkblock href={`${process.env.REACT_APP_TESTNET_SCAN}/block/countdown/${block}`} target="blank" rel="noopener noreferrer" ml="8px">
         (blocks)
       </Linkblock>
     </Details1>
