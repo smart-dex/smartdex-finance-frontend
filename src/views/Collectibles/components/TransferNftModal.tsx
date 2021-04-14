@@ -42,6 +42,9 @@ const Label = styled.label`
 const TextStyle = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
 `
+const TextErrorStyle = styled(Text)`
+  color: red;
+`
 
 const InputStyle = styled(Input)`
   background: ${({ theme }) => (theme.isDark ? darkColors.background : lightColors.backgroundCover)};
@@ -136,11 +139,6 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
   return (
     <Modal title={TranslateString(999, 'Transfer NFT')} onDismiss={onDismiss}>
       <ModalContent>
-        {error && (
-          <TextStyle color="failure" mb="8px">
-            {error}
-          </TextStyle>
-        )}
         <InfoRow>
           <TextStyle>{TranslateString(999, 'Transferring')}:</TextStyle>
           <Value>{`1x "${nft.name}" NFT`}</Value>
@@ -157,6 +155,11 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
           disabled={isLoading}
         />
       </ModalContent>
+      {error && (
+          <TextErrorStyle color="failure" mb="8px">
+            {error}
+          </TextErrorStyle>
+        )}
       <Actions>
         <ButtonCancel variant="secondary" onClick={onDismiss}>
           {TranslateString(462, 'Cancel')}
