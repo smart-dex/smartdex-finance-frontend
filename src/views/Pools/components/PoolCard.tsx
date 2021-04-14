@@ -504,7 +504,7 @@ const StyleNameFinished = styled.div`
 
 
 const StyledTextEarned = styled.div`
-  margin-bottom:25px;
+  margin-bottom:35px;
 `
 
 const ButtonApprove = styled(Button) <{ isDisable: boolean }>`
