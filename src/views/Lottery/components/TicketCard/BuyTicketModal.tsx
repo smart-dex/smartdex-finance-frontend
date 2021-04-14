@@ -122,6 +122,7 @@ const Tips = styled.div`
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 9px;
+  margin-top: 12px;
 `
 const Final = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.textMenuLeft : lightColors.textMenuLeft)};
@@ -144,9 +145,16 @@ const StyleButtonCancel = styled(Button)`
   border-radius: 10px;
   border: none;
   font-weight: 600;
-  font-size: 16px;
   line-height: 20px;
   min-width: 145px;
+  font-size: 12px;
+  padding: 0 12px;
+  height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    padding: 0 24px;
+    height: 56px;
+  }
 `
 const StyleButtonConfirm = styled(Button)`
   color: ${brandColors.white};
@@ -155,7 +163,14 @@ const StyleButtonConfirm = styled(Button)`
   border-radius: 10px;
   border: none;
   font-weight: 600;
-  font-size: 16px;
   line-height: 20px;
   min-width: 145px;
+  font-size: 12px;
+  padding: 0 12px;
+  height: 45px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+    padding: 0 24px;
+    height: 56px;
+  }
 `
