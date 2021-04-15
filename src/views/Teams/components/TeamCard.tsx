@@ -40,6 +40,7 @@ const StyledCard = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   box-shadow: 50px 38px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
   border-radius: 40px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 
 const StyledCardHeader = styled(CardHeader)`
