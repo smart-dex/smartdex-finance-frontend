@@ -93,6 +93,7 @@ const PrizesWonContent: React.FC = () => {
         setRequestedClaim(false)
         setTotalChange('0.00')
       }
+      else setRequestedClaim(false)
     } catch (e) {
       console.error(e)
     }
