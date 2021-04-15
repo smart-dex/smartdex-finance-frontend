@@ -54,10 +54,13 @@ const FlexCollect = styled(Flex)`
 const LinkSee = styled.a`
     color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorWap)};
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 20px;
     svg{
       fill: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.colorLightStep)};
+    }
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
     }
 `
 const TextFound = styled(Text)`
