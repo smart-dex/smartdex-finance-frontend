@@ -14,6 +14,7 @@ const StyledIfoCardHeader = styled(Flex)`
   & > div {
     flex: 1;
   }
+  margin-bottom: 20px;
 `
 const Avatar = styled(Flex)`
   position: static;
@@ -62,7 +63,7 @@ const Description = styled(Text)`
   font-size: 11px;
   line-height: 13px;
   color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 14px;
     line-height: 17px;
