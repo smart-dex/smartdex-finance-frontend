@@ -30,7 +30,7 @@ const ModalTitPop = styled(Modal)`
   font-weight: 700 !important;
   padding: 30px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 551px !important;
+  
   }
 `
 const TextPopup = styled(Text)`
@@ -43,15 +43,16 @@ const TextPopup = styled(Text)`
 const TextStyle = styled(Text)`
     color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)} !important;
     font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
 `
 const TextNum = styled(Text)`
-    font-size: 14px;
-    line-height: 17px;
-    display: flex;
-    justify-content: right;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 600;
     color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
-    margin: 15px 0;
+    margin-left: 5px;
+
 `
 const BoxContent = styled.div`
 ${({ theme }) => theme.mediaQueries.nav} {
@@ -64,6 +65,9 @@ const BtnAll = styled(ApproveConfirmButtons)`
   flex-direction: row;
   grid-gap: 30px;
   justify-content: center;
+`
+const FlexCost = styled(Flex)`
+
 `
 
 const ConfirmProfileCreationModal: React.FC<Props> = ({
@@ -117,12 +121,12 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
     <ModalTitPop title="Complete Profile" onDismiss={onDismiss}>
       <BoxContent>
           <TextPopup color="textSubtle" mb="8px">
-            {TranslateString(999, 'Submitting NFT to contract and confirming User Name and Team. Cost')}
+            {TranslateString(999, 'Submitting NFT to contract and confirming User Name and Team')}
           </TextPopup>
-          <Flex justifyContent="flex-end" mb="16px">
-            {/* <TextStyle>{TranslateString(999, 'Cost')}</TextStyle> */}
+          <FlexCost  mb="16px">
+            <TextStyle>{TranslateString(999, 'Cost: ')}</TextStyle>
             <TextNum>{TranslateString(999, `${REGISTER_COST} SDC`, { num: REGISTER_COST })}</TextNum>
-          </Flex>
+          </FlexCost>
           <BtnAll
             isApproveDisabled={isConfirmed || isConfirming || isApproved}
             isApproving={isApproving}
