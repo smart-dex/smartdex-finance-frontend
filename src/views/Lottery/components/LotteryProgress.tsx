@@ -10,19 +10,19 @@ import {
   getTicketSaleTime,
   getTicketSaleStep,
 } from '../helpers/CountdownHelpers'
-import { lightColors, darkColors} from '../../../style/Color'
+import { lightColors, darkColors } from '../../../style/Color'
 
 const ProgressWrapper = styled.div`
   display: block;
   width: 100%;
 
-  &>div:nth-child(1){
-    background-color: ${ ({theme}) => theme.isDark ? darkColors.progressBg : lightColors.progressBg};
-    &>div:nth-child(2){
-      background: ${ ({ theme}) => theme.isDark ? darkColors.progress : lightColors.progress};
+  & > div:nth-child(1) {
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.progressBg : lightColors.progressBg)};
+    & > div:nth-child(2) {
+      background: ${({ theme }) => (theme.isDark ? darkColors.progress : lightColors.progress)};
     }
-    &>div:nth-child(3){
-      background:${ ({ theme}) => theme.isDark ? darkColors.progressLottery : lightColors.progressLottery};
+    & > div:nth-child(3) {
+      background: ${({ theme }) => (theme.isDark ? darkColors.progressLottery : lightColors.progressLottery)};
     }
   }
 `
@@ -45,18 +45,18 @@ const StyledPrimaryText = styled(Text)`
   margin-right: 16px;
   font-size: 22px;
   font-weight: bold;
-  color: ${({ theme})=> theme.isDark ? darkColors.textLottery : lightColors.textLottery};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLottery : lightColors.textLottery)};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 24px;
-   }
+  }
 `
 
 const TextStyle = styled(Text)`
   font-size: 12px;
-  color: ${({ theme})=> theme.isDark ? darkColors.textLottery : lightColors.textLottery};
+  color: ${({ theme }) => (theme.isDark ? darkColors.textLottery : lightColors.textLottery)};
   font-weight: 500;
   ${({ theme }) => theme.mediaQueries.nav} {
-   font-size: 16px;
+    font-size: 16px;
   }
 `
 
@@ -66,25 +66,31 @@ const LotteryProgress = () => {
   const currentMillis = useCurrentTime()
   const timeUntilTicketSale = getTicketSaleTime(currentMillis)
   const timeUntilLotteryDraw = getLotteryDrawTime(currentMillis)
-  
+
   return (
     <ProgressWrapper>
       {/* <Progress primaryStep={getLotteryDrawStep(currentMillis)} secondaryStep={getTicketSaleStep()} showProgressBunny /> */}
       <Progress primaryStep={getTicketSaleStep()} secondaryStep={getLotteryDrawStep(currentMillis)} showProgressBunny />
       <TopTextWrapper>
-        <StyledPrimaryText bold >
-          {lotteryHasDrawn ? timeUntilTicketSale : timeUntilLotteryDraw}
-        </StyledPrimaryText>
+        <StyledPrimaryText bold>{lotteryHasDrawn ? timeUntilTicketSale : timeUntilLotteryDraw}</StyledPrimaryText>
         <TextStyle>
           {lotteryHasDrawn ? TranslateString(0, 'Until ticket sale') : TranslateString(0, 'Until lottery draw')}
         </TextStyle>
       </TopTextWrapper>
       {lotteryHasDrawn && (
-        <BottomTextWrapper>
-          <TextStyle>
-            {timeUntilLotteryDraw} {TranslateString(0, 'Until lottery draw')}
-          </TextStyle>
-        </BottomTextWrapper>
+        <>
+          {' '}
+          <BottomTextWrapper style={{marginBottom: '4px'}}>
+            <TextStyle>
+              <TextStyle>The system is dialing</TextStyle>
+            </TextStyle>
+          </BottomTextWrapper>
+          <BottomTextWrapper>
+            <TextStyle>
+              {timeUntilLotteryDraw} {TranslateString(0, 'Until lottery draw')}
+            </TextStyle>
+          </BottomTextWrapper>
+        </>
       )}
     </ProgressWrapper>
   )
