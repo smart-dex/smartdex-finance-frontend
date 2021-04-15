@@ -100,7 +100,7 @@ const ButtonMenuStyle = styled.div`
      ${({ theme }) => theme.mediaQueries.nav} {
       width: 200px;
      }
-    width: 150px;
+    width: 155px;
     border-radius: 50px;
   }
 `
