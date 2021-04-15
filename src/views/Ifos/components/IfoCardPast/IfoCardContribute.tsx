@@ -39,9 +39,13 @@ const CardLabel = styled.div`
   & button{
     background: ${baseColors.primary};
     box-shadow: none;
+    width: 37%;
     &:disabled{
       background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
       color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+    }
+    ${({ theme }) => theme.mediaQueries.nav} {
+      width: 27%;
     }
   
   }
