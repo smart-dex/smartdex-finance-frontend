@@ -31,7 +31,6 @@ const CardLabel = styled.div`
   }
   width: 100%;
   color: ${baseColors.colorbt};
-  padding-top: 15px;
   label{
     color: ${baseColors.colorbt} !important;
   }
@@ -44,7 +43,7 @@ const CardLabel = styled.div`
       color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
     }
     ${({ theme }) => theme.mediaQueries.nav} {
-      width: 27%;
+      width: 127px;
     }
   }
 `
