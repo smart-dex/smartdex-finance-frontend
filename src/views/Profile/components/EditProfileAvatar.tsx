@@ -24,7 +24,8 @@ const EditOverlay = styled.div`
 
 const StyledEditProfileAvatar = styled.div`
   position: relative;
-
+  margin-top: 20px;
+  marfin-left: 20px;
   &:hover {
     cursor: pointer;
 
