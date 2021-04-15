@@ -108,6 +108,8 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
 
       if (!isValidAddress) {
         setError(TranslateString(999, 'Please enter a valid wallet address'))
+      } else if (value === account) {
+        setError('You cannot transfer to your address')
       } else {
         await smartDEXChainRabbitsContract.methods
           .transferFrom(account, value, tokenIds[0])
