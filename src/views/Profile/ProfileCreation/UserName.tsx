@@ -214,7 +214,7 @@ const BtnConfirm = styled(Button)`
     }
 `
 const ButtonComplete = styled(Button)`
-  background: ${baseColors.success};
+  background: ${baseColors.primary};
   box-shadow: none;
   font-size: 13px;
   &:disabled{
