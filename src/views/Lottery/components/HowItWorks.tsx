@@ -52,7 +52,7 @@ const HowItWorks = () => {
             999,
             'Spend SDC to buy tickets, contributing to the lottery pot. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their exact order!',
           )}
-          <StyledLink href={`${process.env.REACT_APP_DOCS_URL}lottery/lottery`}>Read more</StyledLink>
+          <StyledLink href={`${process.env.REACT_APP_DOCS_URL}products/lottery/lottery`}>Read more</StyledLink>
         </p>
       </TextStyle>
     </LayoutWrapper>

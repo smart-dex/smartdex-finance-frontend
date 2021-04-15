@@ -256,7 +256,7 @@ return (
             </List>
           </StyleList>
           <Text as="div">
-            <LinkButtonBorder href= { `${process.env.REACT_APP_DOCS_URL}orther-product/ifo-initial-farm-offering`}>
+            <LinkButtonBorder href= { `${process.env.REACT_APP_DOCS_URL}products/ifo-initial-farm-offering/ifo-initial-farm-offering`}>
               {TranslateString(610, 'See More')}
             </LinkButtonBorder>
           </Text>
