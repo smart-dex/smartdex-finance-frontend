@@ -54,7 +54,7 @@ const InputStyle = styled(Input)`
     box-shadow: none;
   }
   ::placeholder {
-    color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
   }
 `
 
