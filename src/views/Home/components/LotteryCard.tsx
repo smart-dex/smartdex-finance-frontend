@@ -169,6 +169,7 @@ const FarmedStakingCard = () => {
       if (txHash) {
         setRequestedClaim(false)
       }
+      else setRequestedClaim(false)
     } catch (e) {
       console.error(e)
     }
