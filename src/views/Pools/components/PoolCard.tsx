@@ -433,6 +433,7 @@ const StyledTag = styled(Flex)`
   background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : '')};
   width: 250px;
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  box-shadow: none;
 `
 
 const StyleNamePool = styled.div`
