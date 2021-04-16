@@ -13,7 +13,6 @@ import BuyModal from 'views/Lottery/components/TicketCard/BuyTicketModal'
 import { useLotteryAllowance } from 'hooks/useAllowance'
 import { useApproval } from 'hooks/useApproval'
 import PurchaseWarningModal from 'views/Lottery/components/TicketCard/PurchaseWarningModal'
-import { useWallet } from '@binance-chain/bsc-use-wallet'
 import SdcWinnings from './SdcWinnings'
 import LotteryJackpot from './LotteryJackpot'
 
@@ -165,18 +164,10 @@ const FarmedStakingCard = () => {
   const sdcCollect = getBalanceNumber(claimAmount)
   const [sdcCollected, setSdcCollected] = useState(sdcCollect)
 
-  const { account } = useWallet()
-
   useEffect(() => {
     setSdcCollected(sdcCollect)
   }, [sdcCollect])
 
-  useEffect(() => {
-    if ( account === null){
-      setSdcCollected(0)
-    }
-    else setSdcCollected(sdcCollect)
-  }, [account, sdcCollect])
 
   const handleClaim = useCallback(async () => {
     try {
