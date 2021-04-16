@@ -3,7 +3,7 @@ import { Ifo } from './types'
 const ifos: Ifo[] = [
   {
     id: 'arsenal',
-    address: '0xD2F80De397F0148268c5a407B6992B9Ee7fA87ed',
+    address: '0xb804e65e6Edc99017A66c2395d3dBAcF9B26f3A9',
     isActive: true,
     name: 'Arsenal',
     subTitle: 'Token for Arsenal club',
@@ -18,7 +18,7 @@ const ifos: Ifo[] = [
     currency: 'SDC-BNB LP',
     currencyAddress: '0x1accbdfc32c26935ecb5768d58c195cd238c3932',
     tokenDecimals: 18,
-    releaseBlockNumber: 8017687,
+    releaseBlockNumber: 8017973,
     campaignId: '2',
   },
   // {
