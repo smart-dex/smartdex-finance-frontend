@@ -18,13 +18,14 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 const useAuth = () => {
   const { activate, deactivate } = useWeb3React()
   const { toastError } = useToast()
-  const { account, connect } = useWallet()
+  const { connect } = useWallet()
 
   const login = useCallback((connectorID: ConnectorNames) => {
     const connector = connectorsByName[connectorID]
     if (connector) {
       connect(connectorID)
       activate(connector, async (error: Error) => {
+        console.log(error)
         if (error instanceof UnsupportedChainIdError) {
           const hasSetup = await setupNetwork()
           if (hasSetup) {
@@ -43,6 +44,8 @@ const useAuth = () => {
               walletConnector.walletConnectProvider = null
             }
             toastError('Authorization Error', 'Please authorize to access your account')
+          } else {
+            toastError(error.name, error.message)
           }
         }
       })
