@@ -10,11 +10,12 @@ import Label from 'components/Label'
 import Balance from 'components/Balance'
 import { usePoolFromPid } from 'state/hooks'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { baseColors } from 'style/Color'
+import { baseColors,lightColors,darkColors } from 'style/Color'
 import OldSyrupTitle from './OldSyrupTitle'
 import CompoundModal from './CompoundModal'
 import WithdrawModal from './WithdrawModal'
 import DepositModal from './DepositModal'
+
 
 
 interface SelectModalProps {
@@ -132,7 +133,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
             <img src='/images/balance-icon.svg' alt='balance-icon' />
           </StyledImg>
           <BalanceAndCompound>
-            <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
+            <Balance fontSize="14px" value={getBalanceNumber(stakedBalance)} />
           </BalanceAndCompound>
           <Label
             text={TranslateString(999, `Your Stake`)}
@@ -143,7 +144,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
               <ButtonUnstake
                 disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
                 isDisable={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                marginBottom='10px'
+                marginBottom='10px's
                 marginTop='10px'
                 onClick={
                   isOldSyrup
@@ -180,6 +181,10 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
     </ModalStyle >
   )
 }
+const BalanceText = styled(Balance)`
+ 
+
+`
 const StyledModal = styled(Flex)`
     ${({ theme }) => theme.mediaQueries.nav} {
       width: 662px;
