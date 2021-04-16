@@ -18,7 +18,7 @@ const ifos: Ifo[] = [
     currency: 'SDC-BNB LP',
     currencyAddress: '0x1accbdfc32c26935ecb5768d58c195cd238c3932',
     tokenDecimals: 18,
-    releaseBlockNumber: 7929842,
+    releaseBlockNumber: 8017687,
     campaignId: '2',
   },
   // {
