@@ -31,12 +31,14 @@ const ButtonApprove = styled(Button)`
   box-shadow: 0px 4px 10px ${brandColors.shadowbtn};
   color: ${lightColors.white};
   background: ${lightColors.primary};
+  margin-right: 30px;
   &:disabled{
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
+    margin-right: 0px;
   }
 `
 
@@ -74,8 +76,12 @@ const ChevronBottom = styled(ChevronDownIcon).attrs(iconAttrs)`
 const FlexBtnPop = styled(Flex)`
   display: flex;
   flex-direction: row;
-  grid-gap: 30px;
+  grid-gap: 0px;
   justify-content: center;
+  
+  ${({ theme }) => theme.mediaQueries.nav} {
+    grid-gap: 30px;
+  }
 `
 
 const spinnerIcon = <AutoRenewIcon spin color="currentColor" />

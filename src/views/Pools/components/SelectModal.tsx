@@ -10,11 +10,12 @@ import Label from 'components/Label'
 import Balance from 'components/Balance'
 import { usePoolFromPid } from 'state/hooks'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { baseColors } from 'style/Color'
+import { baseColors,lightColors,darkColors } from 'style/Color'
 import OldSyrupTitle from './OldSyrupTitle'
 import CompoundModal from './CompoundModal'
 import WithdrawModal from './WithdrawModal'
 import DepositModal from './DepositModal'
+
 
 
 interface SelectModalProps {
@@ -132,7 +133,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
             <img src='/images/balance-icon.svg' alt='balance-icon' />
           </StyledImg>
           <BalanceAndCompound>
-            <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
+            <Balance fontSize="14px" value={getBalanceNumber(stakedBalance)} />
           </BalanceAndCompound>
           <Label
             text={TranslateString(999, `Your Stake`)}
@@ -143,7 +144,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
               <ButtonUnstake
                 disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
                 isDisable={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                marginBottom='10px'
+                marginBottom='10px's
                 marginTop='10px'
                 onClick={
                   isOldSyrup
@@ -167,8 +168,10 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
             {account &&
               <StyledAddButton>
                 {!isOldSyrup && !needsApproval &&
-                  <IconButton disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
-                    <img src='/images/add-icon.svg' alt='add-icon' />
+                  <IconButton disabled={(isFinished && sousId !== 0) || pendingTx} className={((isFinished && sousId !== 0) || pendingTx) ? 'icon-disabled' : ''} onClick={onPresentDeposit}>
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.5625 17.3125C8.5625 17.5611 8.66127 17.7996 8.83709 17.9754C9.0129 18.1512 9.25136 18.25 9.5 18.25C9.74864 18.25 9.9871 18.1512 10.1629 17.9754C10.3387 17.7996 10.4375 17.5611 10.4375 17.3125V10.4375H17.3125C17.5611 10.4375 17.7996 10.3387 17.9754 10.1629C18.1512 9.9871 18.25 9.74864 18.25 9.5C18.25 9.25136 18.1512 9.0129 17.9754 8.83709C17.7996 8.66127 17.5611 8.5625 17.3125 8.5625H10.4375V1.6875C10.4375 1.43886 10.3387 1.2004 10.1629 1.02459C9.9871 0.848772 9.74864 0.75 9.5 0.75C9.25136 0.75 9.0129 0.848772 8.83709 1.02459C8.66127 1.2004 8.5625 1.43886 8.5625 1.6875V8.5625H1.6875C1.43886 8.5625 1.2004 8.66127 1.02459 8.83709C0.848772 9.0129 0.75 9.25136 0.75 9.5C0.75 9.74864 0.848772 9.9871 1.02459 10.1629C1.2004 10.3387 1.43886 10.4375 1.6875 10.4375H8.5625V17.3125Z"/>
+                    </svg>
                   </IconButton>
                 }
               </StyledAddButton>
@@ -180,6 +183,10 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
     </ModalStyle >
   )
 }
+const BalanceText = styled(Balance)`
+ 
+
+`
 const StyledModal = styled(Flex)`
     ${({ theme }) => theme.mediaQueries.nav} {
       width: 662px;
@@ -259,6 +266,14 @@ justify-content:center;
   height:56px;
   background: #0085FF;
   border: 1px solid #0085FF;
+}
+svg path {
+  fill: white;
+}
+.icon-disabled {
+  svg path {
+    fill: ${({ theme }) => theme.isDark ? darkColors.textDisabled : lightColors.textDisabled};
+  }
 }
 `
 const HarvestButton = styled(Button) <{ isDisable: boolean }>`

@@ -27,9 +27,7 @@ const FlexBtn = styled.div`
   align-items: center;
   justify-content: center;
   grid-gap: 10px;
-  & > button{
-    width: 33%;
-  }
+  padding: 24px 0 0 0;
 `
 const ButtonCancel = styled(Button)`
   color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
