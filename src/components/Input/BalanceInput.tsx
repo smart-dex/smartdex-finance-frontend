@@ -34,6 +34,9 @@ const StyledMaxText = styled.div`
 const StyledTokenSymbol = styled.span`
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textMenuLeft)};
   font-weight: 600;
+  ${({ theme }) => theme.mediaQueries.sm} {
+    width: 105px;
+  }
 `
 const ButtonMAX = styled(Button)`
   background: ${baseColors.primary} !important;
@@ -45,11 +48,17 @@ const ButtonMAX = styled(Button)`
   height: 38px;
 `
 
+const StyledModal = styled.div`
+  ${({ theme }) => theme.mediaQueries.nav} {
+    width 551px;
+  }
+`
+
 const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, value, thousandSeparator }) => {
   const TranslateString = useI18n()
 
   return (
-    <div>
+    <StyledModal>
       <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${symbol} Available`)}</StyledMaxText>
       <Input
         endAdornment={
@@ -68,7 +77,7 @@ const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, val
         value={value}
         thousandSeparator={thousandSeparator}
       />
-    </div>
+    </StyledModal>
   )
 }
 
