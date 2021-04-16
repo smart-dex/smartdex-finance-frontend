@@ -121,7 +121,7 @@ const TagStyle = styled(Tag)`
   margin-left: 8px;
 `
 
-const NftCard: React.FC<NftCardProps> = ({ nft, onSuccess, canClaim = false, tokenIds = [] }) => {
+const NftCard: React.FC<NftCardProps> = ({ nft, onSuccess, canClaim, tokenIds = [] }) => {
   const [isOpen, setIsOpen] = useState(false)
   const TranslateString = useI18n()
   const { profile } = useProfile()
