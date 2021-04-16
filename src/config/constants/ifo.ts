@@ -3,7 +3,7 @@ import { Ifo } from './types'
 const ifos: Ifo[] = [
   {
     id: 'arsenal',
-    address: '0xf5839c51D0F9EbfbC2fA378f9A709b3d9Ab33D6e',
+    address: '0xD2F80De397F0148268c5a407B6992B9Ee7fA87ed',
     isActive: true,
     name: 'Arsenal',
     subTitle: 'Token for Arsenal club',
@@ -11,9 +11,9 @@ const ifos: Ifo[] = [
       'To buy Christiano Ronaldo for Arsenal',
     launchDate: 'Apr. 13',
     launchTime: '2AM UTC',
-    saleAmount: '1,000 ARS',
-    raiseAmount: `$${(100 * 15).toString()}`,
-    sdcToBurn: `$${(100 * 7.5).toString()}`,
+    saleAmount: '100 ARS',
+    raiseAmount: `10 SDC-BNB LP`,
+    sdcToBurn: `23,43415 SDC`,
     projectSiteUrl: '',
     currency: 'SDC-BNB LP',
     currencyAddress: '0x1accbdfc32c26935ecb5768d58c195cd238c3932',
