@@ -3,7 +3,7 @@ import { Ifo } from './types'
 const ifos: Ifo[] = [
   {
     id: 'arsenal',
-    address: '0xb804e65e6Edc99017A66c2395d3dBAcF9B26f3A9',
+    address: '0xcBdcFD15bcd44210E44d30F35271aF8490EAE087',
     isActive: true,
     name: 'Arsenal',
     subTitle: 'Token for Arsenal club',
@@ -18,8 +18,28 @@ const ifos: Ifo[] = [
     currency: 'SDC-BNB LP',
     currencyAddress: '0x1accbdfc32c26935ecb5768d58c195cd238c3932',
     tokenDecimals: 18,
-    releaseBlockNumber: 8017973,
+    releaseBlockNumber: 8025057,
     campaignId: '2',
+  },
+  {
+    id: 'arsenal',
+    address: '0xaeb07259647b53F92730B5A8a869f56546Dd7ea2',
+    isActive: true,
+    name: 'Arsenal',
+    subTitle: 'Token for Arsenal club',
+    description:
+      'To buy Christiano Ronaldo for Arsenal',
+    launchDate: 'Apr. 13',
+    launchTime: '2AM UTC',
+    saleAmount: '100 ARS',
+    raiseAmount: `10 SDC-BNB LP`,
+    sdcToBurn: `23,43415 SDC`,
+    projectSiteUrl: '',
+    currency: 'SDC-BNB LP',
+    currencyAddress: '0x1accbdfc32c26935ecb5768d58c195cd238c3932',
+    tokenDecimals: 18,
+    releaseBlockNumber: 8025137,
+    campaignId: '3',
   },
   // {
   //   id: 'berry',
