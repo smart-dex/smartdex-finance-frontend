@@ -40,6 +40,7 @@ const StyledCard = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   box-shadow: 50px 38px 102px ${({ theme }) => (theme.isDark ? darkColors.cardShadow : lightColors.cardShadow)};
   border-radius: 40px;
+  background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
 `
 
 const StyledCardHeader = styled(CardHeader)`
@@ -135,7 +136,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
               isDisabled
             />
           </StatRow>
-          <TextAchievements as="h3">{TranslateString(1044, 'Team Achievements')}</TextAchievements>11
+          <TextAchievements as="h3">{TranslateString(1044, 'Team Achievements')}</TextAchievements>
           <ComingSoon>{TranslateString(350, 'Coming Soon')}</ComingSoon>
         </CardBody>
       </StyledCard>

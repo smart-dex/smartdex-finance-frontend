@@ -15,13 +15,13 @@ const ButtonWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   border: solid 1px;
-  border-radius: 10px;
+  border-radius: 11px;
   border-color: ${({ theme }) => theme.colors.borderColor};
   padding-left: 16px;
   color: #5F5E76 !important;
 `
 const Textlbl = styled(Text)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.textIfolight)} !important;
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textIfolight)} !important;
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 7px;

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect} from 'react'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
 import { Heading, Card, CardBody, Button, useModal } from 'uikit-sotatek'
@@ -13,6 +13,7 @@ import BuyModal from 'views/Lottery/components/TicketCard/BuyTicketModal'
 import { useLotteryAllowance } from 'hooks/useAllowance'
 import { useApproval } from 'hooks/useApproval'
 import PurchaseWarningModal from 'views/Lottery/components/TicketCard/PurchaseWarningModal'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 import SdcWinnings from './SdcWinnings'
 import LotteryJackpot from './LotteryJackpot'
 
@@ -161,6 +162,22 @@ const FarmedStakingCard = () => {
   const sdcBalance = useTokenBalance(getSdcAddress())
   const { handleApprove, requestedApproval } = useApproval(onPresentApprove)
 
+  const sdcCollect = getBalanceNumber(claimAmount)
+  const [sdcCollected, setSdcCollected] = useState(sdcCollect)
+
+  const { account } = useWallet()
+
+  useEffect(() => {
+    setSdcCollected(sdcCollect)
+  }, [sdcCollect])
+
+  useEffect(() => {
+    if ( account === null){
+      setSdcCollected(0)
+    }
+    else setSdcCollected(sdcCollect)
+  }, [account, sdcCollect])
+
   const handleClaim = useCallback(async () => {
     try {
       setRequestedClaim(true)
@@ -168,7 +185,9 @@ const FarmedStakingCard = () => {
       // user rejected tx or didn't go thru
       if (txHash) {
         setRequestedClaim(false)
+        setSdcCollected(0)
       }
+      else setRequestedClaim(false)
     } catch (e) {
       console.error(e)
     }
@@ -226,7 +245,7 @@ const FarmedStakingCard = () => {
 
         <BlockSdcWinnings>
           <Label>{TranslateString(552, 'SDC to Collect')}:</Label>
-          <SdcWinnings />
+          <SdcWinnings sdcCollected={sdcCollected} />
         </BlockSdcWinnings>
         <BlockLotteryJackpot>
           <Label>{TranslateString(554, 'Total jackpot this round')}:</Label>
@@ -236,10 +255,10 @@ const FarmedStakingCard = () => {
         <Actions>
           <ButtonStyle
             id="dashboard-collect-winnings"
-            disabled={getBalanceNumber(claimAmount) === 0 || requesteClaim}
+            disabled={sdcCollected === 0 || requesteClaim}
             onClick={handleClaim}
             endIcon={
-              !(getBalanceNumber(claimAmount) === 0 || requesteClaim) && (
+              !(sdcCollected === 0 || requesteClaim) && (
                 <BoxIconDirect>
                   <IconDirect src="/images/home/icon-direct.svg" alt="" />
                 </BoxIconDirect>

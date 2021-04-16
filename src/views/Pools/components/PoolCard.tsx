@@ -430,9 +430,10 @@ const StyledTriangle = styled.div<{ isFinished: boolean }>`
 const StyledTag = styled(Flex)`
   align-items: center;
   justify-content: flex-end;
-  background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : 'transparent')};
+  background-color:  ${({ theme }) => (theme.isDark ? '#151C31' : '')};
   width: 250px;
   border-bottom: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
+  box-shadow: none;
 `
 
 const StyleNamePool = styled.div`

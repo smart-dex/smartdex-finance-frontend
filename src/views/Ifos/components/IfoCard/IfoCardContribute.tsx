@@ -31,18 +31,20 @@ const CardLabel = styled.div`
   }
   width: 100%;
   color: ${baseColors.colorbt};
-  padding-top: 15px;
   label{
     color: ${baseColors.colorbt} !important;
   }
   & button{
     background: ${baseColors.primary};
     box-shadow: none;
+    width: 50%;
     &:disabled{
       background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
       color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
     }
-  
+    ${({ theme }) => theme.mediaQueries.nav} {
+      width: 127px;
+    }
   }
 `
 const CardButton= styled('div')`
@@ -75,6 +77,7 @@ const ButtonApp = styled(Button)`
   padding: 0px 20px;
   margin-top: 15px;
   margin-right: 15px;
+  text-align: center;
 `
 const TextNote = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};

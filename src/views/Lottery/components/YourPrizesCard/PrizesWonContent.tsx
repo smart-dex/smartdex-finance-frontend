@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Button, Heading, Won, useModal } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
@@ -76,20 +76,30 @@ const PrizesWonContent: React.FC = () => {
   const tickets = useTickets()
   const [onPresentMyTickets] = useModal(<MyTicketsModal myTicketNumbers={tickets} from="buy" />)
 
+
+  const winnings = getBalanceNumber(claimAmount).toFixed(2)
+  const [totalChange, setTotalChange] = useState(winnings)
+
+  useEffect(() => {
+    setTotalChange(winnings)
+  }, [winnings])
+
   const handleClaim = useCallback(async () => {
     try {
-      setRequestedClaim(true)
+      setRequestedClaim(true) 
       const txHash = await onMultiClaim()
       // user rejected tx or didn't go thru
       if (txHash) {
         setRequestedClaim(false)
+        setTotalChange('0.00')
       }
+      else setRequestedClaim(false)
     } catch (e) {
       console.error(e)
     }
   }, [onMultiClaim, setRequestedClaim])
 
-  const winnings = getBalanceNumber(claimAmount).toFixed(2)
+  
 
   return (
     <StyledCardContentInner>
@@ -101,7 +111,7 @@ const PrizesWonContent: React.FC = () => {
       {!claimLoading && (
         <>
           <WinningsWrapper>
-            <HeadingStyle style={{ marginRight: '6px' }}>{winnings}</HeadingStyle>
+            <HeadingStyle style={{ marginRight: '6px' }}>{totalChange}</HeadingStyle>
             <HeadingStyle>SDC</HeadingStyle>
           </WinningsWrapper>
         </>
@@ -109,7 +119,7 @@ const PrizesWonContent: React.FC = () => {
 
     
       <StyledCardActions>
-        <ButtonCollect disabled={requestedClaim || Number(winnings) <= 0} onClick={handleClaim} style={{ width: '100%' }}>
+        <ButtonCollect disabled={requestedClaim || Number(totalChange) <= 0} onClick={handleClaim} style={{ width: '100%' }}>
           {TranslateString(1056, 'Collect')}
         </ButtonCollect>
       </StyledCardActions>

@@ -28,30 +28,38 @@ import AchievementsList from './components/AchievementsList'
 
 const Content = styled.div`
   flex: 1;
-  padding: 16px 0;
+  padding: 16px 0 16px 10px;
 
   ${({ theme }) => theme.mediaQueries.sm} {
     padding: 0 16px;
   }
+ 
+ 
 `
 
 const Username = styled(Heading)`
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 8px;
+  
   color: ${brandColors.white};
 
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 32px;
     line-height: 44px;
+    margin-bottom: 8px;
   }
 `
 
 const Status = styled.div`
   position: absolute;
   right: 24px;
-  top: 24px;
+  top: 20px;
   
+  ${({ theme }) => theme.mediaQueries.nav} {
+    right: 24px;
+    top: 24px;
+
+  }
 `
 
 const ResponsiveText = styled(Text)`
@@ -79,16 +87,39 @@ const AddressLink = styled(Link)`
 `
 const OpenIcon = styled.div`
   svg{
-    fill: ${brandColors.white}
+    fill: ${brandColors.white};
   }
 `
 const TagActive = styled(Tag)`
   border: 1px solid ${brandColors.white};
+  font-size: 9px;
+  font-weight: 500;
+  light-height: 11px;
   color: ${brandColors.white};
   svg{
     fill: ${brandColors.white};
+
+  }
+
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
   }
 `
+const TagPause = styled(Tag)`
+  font-size: 9px;
+  font-weight: 500;
+  light-height: 11px;
+  svg{
+    width: 12px;
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+    svg{
+      width: 18px;
+    }
+  }
+`
+
 const BoxPublicCard = styled(CardBody)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   box-shadow: none;
@@ -117,6 +148,9 @@ const BoxListAchievemnts = styled.div`
     display:flex;
     justify-content: start;
 `
+const FlexProfile = styled(Flex)`
+  display: flex;
+`
 
 const PublicProfile = () => {
   const { account } = useWallet()
@@ -133,7 +167,7 @@ const PublicProfile = () => {
       <div>
         <CardTeam >
           <CardHeader >
-            <Flex alignItems={['start', null, 'center']} flexDirection={['column', null, 'row']}>
+            <FlexProfile alignItems={['start', null, 'center']}>
               <EditProfileAvatar profile={profile} />
               <Content>
                 <Username>{`@${profile.username}`}</Username>
@@ -149,16 +183,16 @@ const PublicProfile = () => {
                 </Flex>
                 <ResponsiveText bold>{profile.team.name}</ResponsiveText>
               </Content>
-            </Flex>
+            </FlexProfile>
             <Status>
               {profile.isActive ? (
                 <TagActive startIcon={<CheckmarkCircleIcon width="18px" />} outline>
                   {TranslateString(698, 'Active')}
                 </TagActive>
               ) : (
-                <Tag variant="failure" startIcon={<BlockIcon width="18px" />} outline>
+                <TagPause variant="failure" startIcon={<BlockIcon width="18px" />} outline>
                   {TranslateString(999, 'Paused')}
-                </Tag>
+                </TagPause>
               )}
             </Status>
           </CardHeader>

@@ -54,7 +54,7 @@ const InputStyle = styled(Input)`
     box-shadow: none;
   }
   ::placeholder {
-    color: ${({ theme }) => (theme.isDark ? darkColors.text : lightColors.textMenuLeft)};
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorInput : lightColors.colorInput)};
   }
 `
 
@@ -108,6 +108,8 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
 
       if (!isValidAddress) {
         setError(TranslateString(999, 'Please enter a valid wallet address'))
+      } else if (value === account) {
+        setError('You cannot transfer to your address')
       } else {
         await smartDEXChainRabbitsContract.methods
           .transferFrom(account, value, tokenIds[0])

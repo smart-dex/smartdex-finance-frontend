@@ -20,14 +20,12 @@ const Block = styled.div`
   display: flex;
   flex-direction: column;
 `
-const SdcWinnings = () => {
-  const { claimAmount } = useTotalClaim()
-  const cakeAmount = getBalanceNumber(claimAmount)
-  const claimAmountBusd = new BigNumber(cakeAmount).multipliedBy(usePriceSdcBusd()).toNumber()
+const SdcWinnings = ({sdcCollected}) => {
+  const claimAmountBusd = new BigNumber(sdcCollected).multipliedBy(usePriceSdcBusd()).toNumber()
 
   return (
     <Block>
-      <CardValueStyle value={cakeAmount} />
+      <CardValueStyle value={sdcCollected} />
       <CardBusdValue value={claimAmountBusd} decimals={2} lineHeight="2.6" />
     </Block>
   )
