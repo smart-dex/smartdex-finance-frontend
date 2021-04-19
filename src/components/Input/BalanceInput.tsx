@@ -18,6 +18,7 @@ const StyledSpacer = styled.div`
 const StyledTokenAdornmentWrapper = styled.div`
   align-items: center;
   display: flex;
+  font-size: 14px;
 `
 
 const StyledMaxText = styled.div`
@@ -46,6 +47,8 @@ const ButtonMAX = styled(Button)`
   font-size: 14px;
   line-height: 38px;
   height: 38px;
+  min-width: auto;
+  white-space: nowrap;
 `
 
 const StyledModal = styled.div`
