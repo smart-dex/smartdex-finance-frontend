@@ -138,6 +138,7 @@ const ModalInput: React.FC<ModalInputProps> = ({
               onChange={onChange}
               thousandSeparator=","
               allowNegative={false}
+              allowedDecimalSeparators={[".", ","]}
             />
           </StyledInput>
           <Flex alignItems="center" >

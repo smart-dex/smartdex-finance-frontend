@@ -15,7 +15,7 @@ export interface InputProps {
 const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, startAdornment, value, thousandSeparator="," }) => {
   const eventKeyPress = (event) => {
     const charCode = (event.which) ? event.which : event.keyCode;
-    if (charCode === 46 && !thousandSeparator) {
+    if ((charCode === 44 || charCode === 46) && !thousandSeparator) {
       event.preventDefault();
     }
   }
@@ -30,6 +30,7 @@ const Input: React.FC<InputProps> = ({ endAdornment, onChange, placeholder, star
           thousandSeparator={thousandSeparator}
           allowNegative={false}
           onKeyPress={eventKeyPress}
+          allowedDecimalSeparators={[".", ","]}
           isAllowed={(values) => {
             const {floatValue} = values;
             if (floatValue > 50 && !thousandSeparator) {
