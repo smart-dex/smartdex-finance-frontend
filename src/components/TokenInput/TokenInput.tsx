@@ -77,6 +77,8 @@ const ButtonMax = styled(Button)`
   border:none;
   box-shadow:none;
   height: 38px;
+  min-width: auto;
+  white-space: nowrap;
 `
 
 export default TokenInput
