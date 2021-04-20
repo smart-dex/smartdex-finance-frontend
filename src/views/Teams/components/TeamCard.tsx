@@ -131,6 +131,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ team }) => {
             <StatBox icon={CommunityIcon} title={team.users} subtitle={TranslateString(1048, 'Active Members')} />
             <StatBox
               icon={PrizeIcon}
+              tabName='ComingSoon'
               title={TranslateString(350, 'Coming Soon')}
               subtitle={TranslateString(1046, 'Team Points')}
               isDisabled

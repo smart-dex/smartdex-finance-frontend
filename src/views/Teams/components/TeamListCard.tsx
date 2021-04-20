@@ -127,6 +127,18 @@ const StyledButtonSeeMore = styled(Button)`
     color: #ffffff;
   }
 `
+const FlexItem1 = styled(Flex)`  
+  border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
+  flex: 50%;
+  padding-right:10px;
+  position: relative;
+`
+const FlexItem2 = styled(Flex)`
+  flex: 50%;
+`
+const FlexTeamBox = styled(Flex)`
+  width: 100%;
+`
 
 const TeamCard: React.FC<TeamCardProps> = ({ rank, team }) => {
   const TranslateString = useI18n()
@@ -147,20 +159,20 @@ const TeamCard: React.FC<TeamCardProps> = ({ rank, team }) => {
             <TeamName>{team.name}</TeamName>
           </Flex>
           <TeamDescription as="p">{team.description}</TeamDescription>
-          <Flex justifyContent="space-around" mb="32px">
-            <Flex flexDirection="column" alignItems="center">
+          <FlexTeamBox justifyContent="space-around" mb="32px">
+            <FlexItem1 flexDirection="column" alignItems="center">
               <img src="/images/teams/icon/prize-icon.svg" alt="prize-icon" />
               <PrizeText fontSize="16px" bold>
                 {team.points.toLocaleString()}
               </PrizeText>
-            </Flex>
-            <Flex flexDirection="column" alignItems="center">
+            </FlexItem1>
+            <FlexItem2 flexDirection="column" alignItems="center">
               <img src="/images/teams/icon/community-icon.svg" alt="community-icon" />
               <PrizeText fontSize="16px" bold>
                 {team.users.toLocaleString()}
               </PrizeText>
-            </Flex>
-          </Flex>
+            </FlexItem2>
+          </FlexTeamBox>
           <Flex justifyContent="center">
             <StyledButtonSeeMore as={Link} to={`/teams/${team?.id}`}>
               {TranslateString(1042, 'See More')}
