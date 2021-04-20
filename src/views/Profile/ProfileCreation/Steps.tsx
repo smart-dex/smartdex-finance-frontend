@@ -13,6 +13,8 @@ import UserName from './UserName'
 
 const Loading = styled.div`
   color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.balanceColor)};
+  font-size: 14px;
+  padding-top: 10px;
 `
 
 const Steps = () => {
