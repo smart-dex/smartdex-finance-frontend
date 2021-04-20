@@ -6,6 +6,7 @@ import BalanceInput from 'components/Input/BalanceInput'
 import useTokenBalance from 'hooks/useTokenBalance'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import styled from 'styled-components'
+import useI18n from 'hooks/useI18n'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 
 interface Props {
@@ -20,6 +21,7 @@ const [value, setValue] = useState('')
 const [pendingTx, setPendingTx] = useState(false)
 const { account } = useWallet()
 const balance = getFullDisplayBalance(useTokenBalance(currencyAddress))
+const TranslateString = useI18n()
 
 const FlexBtn = styled.div`
   display: flex;
@@ -67,7 +69,7 @@ const handleChange = useCallback(
 )
 
 return (
-    <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
+    <Modal title={`${TranslateString(1231, "Contribute")}${currency}`} onDismiss={onDismiss}>
       <StyledModal> </StyledModal>
       <BalanceInput
         value={value}
@@ -79,7 +81,8 @@ return (
       />
       <FlexBtn>
         <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">
-          Cancel
+        {TranslateString(1232, "Cancel")}
+         
         </ButtonCancel>
         <ButtonConfirm
           disabled={pendingTx || Number(balance) === 0 || Number(value) > Number(balance) || Number(value) === 0}
@@ -92,13 +95,14 @@ return (
             onDismiss()
           }}
         >
-          Confirm
+           {TranslateString(1233, "Confirm")}
+          
         </ButtonConfirm>
       </FlexBtn>
       <LinkFooter
         href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
       >
-        {`Get ${currency}`}
+        {`${TranslateString(1235, "Get")} ${currency}`}
       </LinkFooter>
     </Modal>
   )

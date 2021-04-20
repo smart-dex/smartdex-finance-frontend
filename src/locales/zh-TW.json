@@ -8173,5 +8173,80 @@
             },
             "createdAt": "2021-02-15T09:33:53+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 1231,
+            "contentType": "text/plain",
+            "translationId": 50955,
+            "text": "貢獻",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1232,
+            "contentType": "text/plain",
+            "translationId": 50957,
+            "text": "取消",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1233,
+            "contentType": "text/plain",
+            "translationId": 50957,
+            "text": "確認",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1234,
+            "contentType": "text/plain",
+            "translationId": 50957,
+            "text": "提供",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1235,
+            "contentType": "text/plain",
+            "translationId": 50959,
+            "text": "獲取",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
     }
 ]

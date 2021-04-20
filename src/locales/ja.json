@@ -8203,6 +8203,81 @@
             },
             "createdAt": "2021-03-15T15:44:32+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 1231,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": "助ける",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1232,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": "キャンセル",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1233,
+            "contentType": "text/plain",
+            "translationId": 50948,
+            "text": "確認",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1234,
+            "contentType": "text/plain",
+            "translationId": 50950,
+            "text": "が利用可能",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1235,
+            "contentType": "text/plain",
+            "translationId": 50952,
+            "text": "入手する",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
     }
    
 ]
