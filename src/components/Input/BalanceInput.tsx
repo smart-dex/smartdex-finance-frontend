@@ -62,7 +62,7 @@ const BalanceInput: React.FC<Props> = ({ max, symbol, onChange, onSelectMax, val
 
   return (
     <StyledModal>
-      <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${symbol} Available`)}</StyledMaxText>
+      <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${symbol} ${TranslateString(1234, "Available")}`)}</StyledMaxText>
       <Input
         endAdornment={
           <StyledTokenAdornmentWrapper>
