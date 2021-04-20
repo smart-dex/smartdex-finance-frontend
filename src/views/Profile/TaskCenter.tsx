@@ -1,17 +1,20 @@
 import React from 'react'
 import { Card, CardBody, CardHeader, Flex, Heading, Text } from 'uikit-sotatek'
+import Page from 'components/layout/Page'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
 import AchievementsList from './components/AchievementsList'
 import ClaimPointsCallout from './components/ClaimPointsCallout '
+import Header from './components/Header'
 import Menu from './components/Menu'
 
 const TaskCenter = () => {
   const TranslateString = useI18n()
 
   return (
-    <>
+    <Page>
+      <Header />
       <Menu />
       <ClaimPointsCallout />
       <StyledListCard justifyContent="center">
@@ -51,7 +54,7 @@ const TaskCenter = () => {
           </StyledBodyCard>
         </StyledCard>
       </StyledListCard>
-    </>
+    </Page>
   )
 }
 const StyledListCard = styled(Flex)`

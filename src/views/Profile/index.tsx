@@ -33,7 +33,7 @@ const Profile = () => {
       <Route exact path="/profile">
         <PublicProfile />
       </Route>
-      <Route path="/profile/tasks">
+      <Route path="/tasks">
         <TaskCenter />
       </Route>
     </Page>

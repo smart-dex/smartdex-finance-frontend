@@ -29,7 +29,7 @@ const Menu: React.FC<MenuProps> = ({ activeIndex = 0 }) => {
 
         <StyledButton>
           <ButtonMenu activeIndex={activeIndex} variant="primary" scale="md">
-            <ButtonItemStyle as={RouterLink} to="/profile/tasks">
+            <ButtonItemStyle as={RouterLink} to="/tasks">
               {TranslateString(1090, 'Task Center')}
             </ButtonItemStyle>
             <ButtonItemStyle as={RouterLink} to="/profile">

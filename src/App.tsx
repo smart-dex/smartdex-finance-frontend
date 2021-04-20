@@ -24,6 +24,7 @@ const Collectibles = lazy(() => import('./views/Collectibles'))
 const Teams = lazy(() => import('./views/Teams'))
 const Team = lazy(() => import('./views/Teams/Team'))
 const Profile = lazy(() => import('./views/Profile'))
+const Tasks = lazy(() => import('./views/Profile/TaskCenter'))
 
 // This config is required for number formating
 BigNumber.config({
@@ -82,6 +83,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/profile">
               <Profile />
+            </Route>
+            <Route path="/tasks">
+              <Tasks />
             </Route>
             <Route path="/referral">
               <Referral />
