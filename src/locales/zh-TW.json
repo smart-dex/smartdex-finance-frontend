@@ -8251,7 +8251,7 @@
     },
     {
         "data": {
-            "stringId": 1236,
+            "stringId": 1256,
             "contentType": "text/plain",
             "translationId": 51462,
             "text": "SmartDEX收藏品",
@@ -8266,7 +8266,7 @@
     },
     {
         "data": {
-            "stringId": 1237,
+            "stringId": 1257,
             "contentType": "text/plain",
             "translationId": 51464,
             "text": "在錢包裡",
@@ -8281,7 +8281,7 @@
     },
     {
         "data": {
-            "stringId": 1238,
+            "stringId": 1258,
             "contentType": "text/plain",
             "translationId": 51466,
             "text": "轉移",
@@ -8296,7 +8296,7 @@
     },
     {
         "data": {
-            "stringId": 1239,
+            "stringId": 1259,
             "contentType": "text/plain",
             "translationId": 51468,
             "text": "轉移NFT",
@@ -8311,7 +8311,7 @@
     },
     {
         "data": {
-            "stringId": 1240,
+            "stringId": 1260,
             "contentType": "text/plain",
             "translationId": 51470,
             "text": "轉移中",
@@ -8326,7 +8326,7 @@
     },
     {
         "data": {
-            "stringId": 1241,
+            "stringId": 1261,
             "contentType": "text/plain",
             "translationId": 51472,
             "text": "收貨地址",
@@ -8341,7 +8341,7 @@
     },
     {
         "data": {
-            "stringId": 1242,
+            "stringId": 1262,
             "contentType": "text/plain",
             "translationId": 51474,
             "text": "請輸入有效的錢包地址",
@@ -8356,7 +8356,7 @@
     },
     {
         "data": {
-            "stringId": 1243,
+            "stringId": 1263,
             "contentType": "text/plain",
             "translationId": 51474,
             "text": "您無法轉移到您的地址",
@@ -8371,7 +8371,7 @@
     },
     {
         "data": {
-            "stringId": 1244,
+            "stringId": 1264,
             "contentType": "text/plain",
             "translationId": 51476,
             "text": "NFT成功轉移！",
@@ -8386,7 +8386,7 @@
     },
     {
         "data": {
-            "stringId": 1245,
+            "stringId": 1265,
             "contentType": "text/plain",
             "translationId": 51478,
             "text": "用戶照片",
@@ -8401,7 +8401,7 @@
     },
     {
         "data": {
-            "stringId": 1246,
+            "stringId": 1266,
             "contentType": "text/plain",
             "translationId": 51480,
             "text": "索取此NFT",
@@ -8416,7 +8416,7 @@
     },
     {
         "data": {
-            "stringId": 1247,
+            "stringId": 1267,
             "contentType": "text/plain",
             "translationId": 51482,
             "text": "索賠收藏",

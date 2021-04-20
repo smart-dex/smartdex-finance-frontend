@@ -145,24 +145,24 @@ const NftCard: React.FC<NftCardProps> = ({ nft, onSuccess, canClaim, tokenIds = 
             <Heading>{name}</Heading>
             {walletOwnsNft && (
               <TagStyle outline variant="secondary">
-                {TranslateString(1237, 'In Wallet')}
+                {TranslateString(1257, 'In Wallet')}
               </TagStyle>
             )}
             {profile?.nft?.bunnyId === bunnyId && (
               <TagStyle outline variant="success">
-                {TranslateString(1245, 'Profile Pic')}
+                {TranslateString(1265, 'Profile Pic')}
               </TagStyle>
             )}
           </Header>
           <BlockButton>
             {canClaim && (
               <ButtonClaim mt="24px" onClick={onPresentClaimModal}>
-                {TranslateString(1246, 'Claim this NFT')}
+                {TranslateString(1266, 'Claim this NFT')}
               </ButtonClaim>
             )}
             {walletOwnsNft && (
               <ButtonTransfer variant="secondary" mt="24px" onClick={onPresentTransferModal}>
-                {TranslateString(1238, 'Transfer')}
+                {TranslateString(1258, 'Transfer')}
               </ButtonTransfer>
             )}
           </BlockButton>

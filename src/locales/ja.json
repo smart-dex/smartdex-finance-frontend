@@ -8281,7 +8281,7 @@
     },
     {
         "data": {
-            "stringId": 1236,
+            "stringId": 1256,
             "contentType": "text/plain",
             "translationId": 50960,
             "text": "SmartDEXグッズ",
@@ -8296,7 +8296,7 @@
     },
     {
         "data": {
-            "stringId": 1237,
+            "stringId": 1257,
             "contentType": "text/plain",
             "translationId": 50962,
             "text": "ウォレット内",
@@ -8311,7 +8311,7 @@
     },
     {
         "data": {
-            "stringId": 1238,
+            "stringId": 1258,
             "contentType": "text/plain",
             "translationId": 50666,
             "text": "転送",
@@ -8326,7 +8326,7 @@
     },
     {
         "data": {
-            "stringId": 1239,
+            "stringId": 1259,
             "contentType": "text/plain",
             "translationId": 50668,
             "text": "NFTを転送する",
@@ -8341,7 +8341,7 @@
     },
     {
         "data": {
-            "stringId": 1240,
+            "stringId": 1260,
             "contentType": "text/plain",
             "translationId": 50668,
             "text": "転送",
@@ -8356,7 +8356,7 @@
     },
     {
         "data": {
-            "stringId": 1241,
+            "stringId": 1261,
             "contentType": "text/plain",
             "translationId": 50670,
             "text": "受信アドレス",
@@ -8371,7 +8371,7 @@
     },
     {
         "data": {
-            "stringId": 1242,
+            "stringId": 1262,
             "contentType": "text/plain",
             "translationId": 50672,
             "text": "有効なウォレットアドレスを入力してください",
@@ -8386,7 +8386,7 @@
     },
     {
         "data": {
-            "stringId": 1243,
+            "stringId": 1263,
             "contentType": "text/plain",
             "translationId": 50674,
             "text": "自分の住所に転送することはできません",
@@ -8401,7 +8401,7 @@
     },
     {
         "data": {
-            "stringId": 1244,
+            "stringId": 1264,
             "contentType": "text/plain",
             "translationId": 50676,
             "text": "NFTが正常に転送されました！",
@@ -8416,7 +8416,7 @@
     },
     {
         "data": {
-            "stringId": 1245,
+            "stringId": 1265,
             "contentType": "text/plain",
             "translationId": 50678,
             "text": "プロフィール写真",
@@ -8431,7 +8431,7 @@
     },
     {
         "data": {
-            "stringId": 1246,
+            "stringId": 1266,
             "contentType": "text/plain",
             "translationId": 50680,
             "text": "このNFTを主張する",
@@ -8446,7 +8446,7 @@
     },
     {
         "data": {
-            "stringId": 1247,
+            "stringId": 1267,
             "contentType": "text/plain",
             "translationId": 50682,
             "text": "収集品の請求",

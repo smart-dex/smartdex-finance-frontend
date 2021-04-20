@@ -87,7 +87,7 @@ const ClaimNftModal: React.FC<ClaimNftModalProps> = ({ nft, onSuccess, onDismiss
   }
 
   return (
-    <Modal title={TranslateString(1247, 'Claim Collectible')} onDismiss={onDismiss}>
+    <Modal title={TranslateString(1267, 'Claim Collectible')} onDismiss={onDismiss}>
       <ModalContent>
         <Flex alignItems="center" mb="8px" justifyContent="space-between">
           <TextStyle>{TranslateString(626, 'You will receive')}: </TextStyle>
