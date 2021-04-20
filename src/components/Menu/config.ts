@@ -99,7 +99,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Refferral Management',
-        href: '',
+        href: '/refferral-management',
       },
     ],
   },
