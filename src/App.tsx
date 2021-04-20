@@ -11,6 +11,7 @@ import PageLoader from './components/PageLoader'
 import Pools from './views/Pools'
 import Referral from './views/Referral'
 import Wallet from './views/Wallet'
+import RefferralManagement from './views/RefferralManagement'
 import GlobalCheckBullHiccupClaimStatus from './views/Collectibles/components/GlobalCheckBullHiccupClaimStatus'
 import history from './routerHistory'
 
@@ -93,6 +94,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/wallet">
               <Wallet />
+            </Route>
+            <Route path="/refferral-management">
+              <RefferralManagement />
             </Route>
             {/* Redirect */}
             <Route path="/staking">
