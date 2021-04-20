@@ -10,6 +10,7 @@ import ToastListener from './components/ToastListener'
 import PageLoader from './components/PageLoader'
 import Pools from './views/Pools'
 import Referral from './views/Referral'
+import Wallet from './views/Wallet'
 import GlobalCheckBullHiccupClaimStatus from './views/Collectibles/components/GlobalCheckBullHiccupClaimStatus'
 import history from './routerHistory'
 
@@ -85,6 +86,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/referral">
               <Referral />
+            </Route>
+            <Route path="/wallet">
+              <Wallet />
             </Route>
             {/* Redirect */}
             <Route path="/staking">

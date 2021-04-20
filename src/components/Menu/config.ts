@@ -91,7 +91,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Wallet',
-        href: '',
+        href: '/wallet',
       },
       {
         label: 'Referral',
