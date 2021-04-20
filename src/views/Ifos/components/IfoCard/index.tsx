@@ -177,6 +177,7 @@ const BoxLive = styled.div`
   }
 
 `
+
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
   if (currentBlock < startBlock) {
     return 'coming_soon'
@@ -195,13 +196,13 @@ const getStatus = (currentBlock: number, startBlock: number, endBlock: number): 
 
 const getRibbonComponent = (status: IfoStatus, TranslateString: (translationId: number, fallback: string) => any) => {
   if (status === 'coming_soon') {
-    return <CardRibbon variantColor="textDisabled" text={TranslateString(999, 'Coming Soon')} />
+    return <CardRibbon variantColor="textDisabled" text={TranslateString(1225, 'Coming Soon')} />
   }
 
   if (status === 'live') {
     return (
       <BoxLive>
-            <CardRibbon variantColor="primary" text={TranslateString(999, 'LIVE NOW!')} />
+            <CardRibbon variantColor="primary" text={TranslateString(1224, 'LIVE NOW!')} />
       </BoxLive>
       
     )

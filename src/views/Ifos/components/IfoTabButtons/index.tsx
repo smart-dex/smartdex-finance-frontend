@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
 import { ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
 import { lightColors, darkColors, baseColors } from 'style/Color'
+import useI18n from 'hooks/useI18n'
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -59,15 +61,16 @@ const Wrapper = styled.div`
 
 const IfoTabButtons = () => {
   const { url, isExact } = useRouteMatch()
+  const TranslateString = useI18n()
 
   return (
     <Wrapper>
       <ButtonMenu activeIndex={!isExact ? 1 : 0} variant="subtle">
         <ButtonMenuItem className={isExact ? 'active' : 'not-active'} as={Link} to={`${url}`}>
-          Next IFO
+          {TranslateString(1203, "Next IFO")}
         </ButtonMenuItem>
         <ButtonMenuItem className={!isExact ? 'active' : 'not-active'} as={Link} to={`${url}/history`}>
-          Past IFOs
+          {TranslateString(1205, "Past IFO")}
         </ButtonMenuItem>
       </ButtonMenu>
     </Wrapper>

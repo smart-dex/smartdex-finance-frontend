@@ -59,7 +59,8 @@ const IfoCardTime: React.FC<IfoCardTimeProps> = ({ isLoading, status, secondsUnt
   const TranslateString = useI18n()
   const countdownToUse = status === 'coming_soon' ? secondsUntilStart : secondsUntilEnd
   const timeUntil = getTimePeriods(countdownToUse)
-  const suffix = status === 'coming_soon' ? 'start' : 'finish'
+  const suffix = status === 'coming_soon' ? TranslateString(1221, "start"): TranslateString(1222, "finish")
+  
 
   if (isLoading) {
     return <Details>{TranslateString(656, 'Loading...')}</Details>
@@ -75,9 +76,9 @@ const IfoCardTime: React.FC<IfoCardTimeProps> = ({ isLoading, status, secondsUnt
 
   return (
     <Details1>
-      <Countdown>{`${timeUntil.days}d, ${timeUntil.hours}h, ${timeUntil.minutes}m until ${suffix}`}</Countdown>
+      <Countdown>{`${timeUntil.days}d, ${timeUntil.hours}h, ${timeUntil.minutes}m ${TranslateString(1220, "until")} ${suffix}`}</Countdown>
       <Linkblock href={`${process.env.REACT_APP_TESTNET_SCAN}/block/countdown/${block}`} target="blank" rel="noopener noreferrer" ml="8px">
-        (blocks)
+        {TranslateString(1223, "(blocks)")}
       </Linkblock>
     </Details1>
   )
