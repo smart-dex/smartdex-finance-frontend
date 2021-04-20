@@ -7933,5 +7933,276 @@
             },
             "createdAt": "2021-03-15T15:44:32+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 1203,
+            "contentType": "text/plain",
+            "translationId": 50926,
+            "text": "次のIFO",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1205,
+            "contentType": "text/plain",
+            "translationId": 50928,
+            "text": "過去のIFO",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1207,
+            "contentType": "text/plain",
+            "translationId": 50930,
+            "text": "承認する",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1209,
+            "contentType": "text/plain",
+            "translationId": 50932,
+            "text": "請求",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1212,
+            "contentType": "text/plain",
+            "translationId": 50934,
+            "text": "助ける",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1214,
+            "contentType": "text/plain",
+            "translationId": 50936,
+            "text": "あなたの貢献",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1216,
+            "contentType": "text/plain",
+            "translationId": 50938,
+            "text": "全体の",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1218,
+            "contentType": "text/plain",
+            "translationId": 50938,
+            "text": "まで",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1220,
+            "contentType": "text/plain",
+            "translationId": 50940,
+            "text": "まで",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1221,
+            "contentType": "text/plain",
+            "translationId": 50942,
+            "text": "開始",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1222,
+            "contentType": "text/plain",
+            "translationId": 50944,
+            "text": " 仕上げ",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1223,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": " (ブロック)",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1224,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": "今を生きる！",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1225,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": "近日公開",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1227,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": "上げるには",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1228,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": "調達総額（目標の％）",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1229,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": "あなたが主張するとき、あなたはどんな余分なトークンも払い戻されます",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1230,
+            "contentType": "text/plain",
+            "translationId": 50946,
+            "text": "主張するあなたのトークン",
+            "user": {
+                "id": 14144439,
+                "username": "nozomi.kugita",
+                "fullName": "nozomi.kugita",
+                "avatarUrl": "https://www.gravatar.com/avatar/d905b683b7887ec9315ed5ff9f128ad9?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T15:44:32+00:00"
+        }
     }
+   
 ]

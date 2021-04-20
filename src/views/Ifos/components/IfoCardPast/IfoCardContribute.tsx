@@ -10,6 +10,7 @@ import { IfoStatus } from 'config/constants/types'
 import { getBalanceNumber } from 'utils/formatBalance'
 import styled from 'styled-components'
 import { lightColors, darkColors, baseColors } from 'style/Color'
+import useI18n from 'hooks/useI18n'
 import LabelButton from './LabelButton'
 import ContributeModal from './ContributeModal'
 
@@ -103,7 +104,7 @@ const IfoCardContribute: React.FC<Props> = ({
   const [pendingTx, setPendingTx] = useState(false)
   const [offeringTokenBalance, setOfferingTokenBalance] = useState(new BigNumber(0))
   const [userInfo, setUserInfo] = useState({ amount: 0, claimed: false })
-
+  const TranslateString = useI18n()
   const { account } = useWallet()
   const contractRaisingToken = useERC20(currencyAddress)
   const allowance = useIfoAllowance(contractRaisingToken, address, pendingTx)
@@ -156,7 +157,7 @@ const IfoCardContribute: React.FC<Props> = ({
               }
             }}
           >
-          Approve
+         {TranslateString(1207, "Approve")}
         </ButtonApp>
       </CardButton>
       
@@ -167,8 +168,8 @@ const IfoCardContribute: React.FC<Props> = ({
     <CardLabel>
         <LabelButton
           disabled={pendingTx || userInfo.claimed || (isFinished &&  getBalanceNumber(offeringTokenBalance, tokenDecimals) === 0)}
-          buttonLabel={isFinished ? 'Claim' : 'Contribute'}
-          label={isFinished ? 'Your tokens to claim' : `Your contribution (${currency})`}
+          buttonLabel={isFinished ? TranslateString(1209, "Claim") : TranslateString(1212, "Contribute")}
+          label={isFinished ? TranslateString(1230, "Your tokens to claim") : `${TranslateString(1214, "Your contribution")} ${currency}`}
           value={
             // eslint-disable-next-line no-nested-ternary
             isFinished
@@ -182,7 +183,7 @@ const IfoCardContribute: React.FC<Props> = ({
     
         <TextNote>
           {isFinished
-            ? `You'll be refunded any excess tokens when you claim`
+            ? `${TranslateString(1229, "You'll be refunded any excess tokens when you claim")}`
             : `${percentOfUserContribution.toFixed(5)}% of total`}
         </TextNote>
       </CardLabel>

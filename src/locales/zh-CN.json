@@ -7918,5 +7918,261 @@
             },
             "createdAt": "2021-03-12T01:47:03+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 1203,
+            "contentType": "text/plain",
+            "translationId": 50926,
+            "text": "下一个IFO",
+            "user": {
+                "id": 13470937,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:47:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1205,
+            "contentType": "text/plain",
+            "translationId": 50928,
+            "text": "過去的IFO",
+            "user": {
+                "id": 13470939,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:47:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1207,
+            "contentType": "text/plain",
+            "translationId": 50930,
+            "text": "批准",
+            "user": {
+                "id": 13470941,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:47:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1209,
+            "contentType": "text/plain",
+            "translationId": 50932,
+            "text": "宣称",
+            "user": {
+                "id": 13470943,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:47:03+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1212,
+            "contentType": "text/plain",
+            "translationId": 50934,
+            "text": "贡献",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1214,
+            "contentType": "text/plain",
+            "translationId": 50934,
+            "text": "您的贡献",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1216,
+            "contentType": "text/plain",
+            "translationId": 48442,
+            "text": "占总数的",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1220,
+            "contentType": "text/plain",
+            "translationId": 48450,
+            "text": "直到",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1221,
+            "contentType": "text/plain",
+            "translationId": 48452,
+            "text": "开始",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1222,
+            "contentType": "text/plain",
+            "translationId": 48454,
+            "text": "结束",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1223,
+            "contentType": "text/plain",
+            "translationId": 48456,
+            "text": "(块)",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1224,
+            "contentType": "text/plain",
+            "translationId": 48456,
+            "text": "现在直播！",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1225,
+            "contentType": "text/plain",
+            "translationId": 48456,
+            "text": "即将推出",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1227,
+            "contentType": "text/plain",
+            "translationId": 48456,
+            "text": "募集",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1228,
+            "contentType": "text/plain",
+            "translationId": 48456,
+            "text": "筹集资金总额（占目标的百分比）",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1229,
+            "contentType": "text/plain",
+            "translationId": 48456,
+            "text": "領取任何多餘的代幣後，您將獲得退款",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1230,
+            "contentType": "text/plain",
+            "translationId": 48458,
+            "text": "您要申领的代币",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-16T01:29:25+00:00"
+        }
     }
+
 ]
