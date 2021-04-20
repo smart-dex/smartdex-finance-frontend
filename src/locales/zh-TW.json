@@ -8248,5 +8248,185 @@
             },
             "createdAt": "2021-02-15T09:33:53+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 1256,
+            "contentType": "text/plain",
+            "translationId": 51462,
+            "text": "SmartDEX收藏品",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1257,
+            "contentType": "text/plain",
+            "translationId": 51464,
+            "text": "在錢包裡",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1258,
+            "contentType": "text/plain",
+            "translationId": 51466,
+            "text": "轉移",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1259,
+            "contentType": "text/plain",
+            "translationId": 51468,
+            "text": "轉移NFT",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1260,
+            "contentType": "text/plain",
+            "translationId": 51470,
+            "text": "轉移中",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1261,
+            "contentType": "text/plain",
+            "translationId": 51472,
+            "text": "收貨地址",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1262,
+            "contentType": "text/plain",
+            "translationId": 51474,
+            "text": "請輸入有效的錢包地址",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1263,
+            "contentType": "text/plain",
+            "translationId": 51474,
+            "text": "您無法轉移到您的地址",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1264,
+            "contentType": "text/plain",
+            "translationId": 51476,
+            "text": "NFT成功轉移！",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1265,
+            "contentType": "text/plain",
+            "translationId": 51478,
+            "text": "用戶照片",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1266,
+            "contentType": "text/plain",
+            "translationId": 51480,
+            "text": "索取此NFT",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1267,
+            "contentType": "text/plain",
+            "translationId": 51482,
+            "text": "索賠收藏",
+            "user": {
+                "id": 13476071,
+                "username": "Kbph",
+                "fullName": "Kbph",
+                "avatarUrl": "https://www.gravatar.com/avatar/e09b1f79b720812911a2f7d11f1c145b?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-02-15T09:33:53+00:00"
+        }
     }
 ]
