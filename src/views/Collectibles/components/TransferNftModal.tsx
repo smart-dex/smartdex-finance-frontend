@@ -107,9 +107,9 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
       const isValidAddress = Web3.utils.isAddress(value)
 
       if (!isValidAddress) {
-        setError(TranslateString(999, 'Please enter a valid wallet address'))
+        setError(TranslateString(1242, 'Please enter a valid wallet address'))
       } else if (value === account) {
-        setError('You cannot transfer to your address')
+        setError(TranslateString(1243, 'You cannot transfer to your address'))
       } else {
         await smartDEXChainRabbitsContract.methods
           .transferFrom(account, value, tokenIds[0])
@@ -120,7 +120,7 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
           .on('receipt', () => {
             onDismiss()
             onSuccess()
-            toastSuccess('NFT successfully transferred!')
+            toastSuccess(TranslateString(1244, 'NFT successfully transferred!'))
           })
           .on('error', () => {
             console.error(error)
@@ -139,13 +139,13 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
   }
 
   return (
-    <Modal title={TranslateString(999, 'Transfer NFT')} onDismiss={onDismiss}>
+    <Modal title={TranslateString(1239, 'Transfer NFT')} onDismiss={onDismiss}>
       <ModalContent>
         <InfoRow>
-          <TextStyle>{TranslateString(999, 'Transferring')}:</TextStyle>
+          <TextStyle>{TranslateString(1240, 'Transferring')}:</TextStyle>
           <Value>{`1x "${nft.name}" NFT`}</Value>
         </InfoRow>
-        <Label htmlFor="transferAddress">{TranslateString(999, 'Receiving address')}:</Label>
+        <Label htmlFor="transferAddress">{TranslateString(1241, 'Receiving address')}:</Label>
         <InputStyle
           id="transferAddress"
           name="address"

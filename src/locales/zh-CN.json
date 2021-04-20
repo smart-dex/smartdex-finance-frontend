@@ -8248,6 +8248,186 @@
             },
             "createdAt": "2021-02-16T01:29:25+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 1236,
+            "contentType": "text/plain",
+            "translationId": 49600,
+            "text": "SmartDEX Collectibles",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1237,
+            "contentType": "text/plain",
+            "translationId": 49600,
+            "text": "在钱包里",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1238,
+            "contentType": "text/plain",
+            "translationId": 49612,
+            "text": "转移",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1239,
+            "contentType": "text/plain",
+            "translationId": 49612,
+            "text": "转移NFT",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1240,
+            "contentType": "text/plain",
+            "translationId": 49614,
+            "text": "转移中",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1241,
+            "contentType": "text/plain",
+            "translationId": 49616,
+            "text": "收货地址",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1242,
+            "contentType": "text/plain",
+            "translationId": 49618,
+            "text": "请输入有效的钱包地址",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1243,
+            "contentType": "text/plain",
+            "translationId": 49620,
+            "text": "您无法转移到您的地址",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1244,
+            "contentType": "text/plain",
+            "translationId": 49622,
+            "text": "NFT成功转移！",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1245,
+            "contentType": "text/plain",
+            "translationId": 49624,
+            "text": "用户照片",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1246,
+            "contentType": "text/plain",
+            "translationId": 49626,
+            "text": "索取此NFT",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1247,
+            "contentType": "text/plain",
+            "translationId": 49628,
+            "text": "索赔收藏",
+            "user": {
+                "id": 13470935,
+                "username": "Liangzdz",
+                "fullName": "Liangzdz",
+                "avatarUrl": "https://www.gravatar.com/avatar/54837bf1cdeb956139ecb2ebd7eaa7cf?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-12T01:38:02+00:00"
+        }
     }
 
 ]
