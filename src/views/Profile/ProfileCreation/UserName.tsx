@@ -23,7 +23,7 @@ import useWeb3 from 'hooks/useWeb3'
 import useI18n from 'hooks/useI18n'
 import useHasSdcBalance from 'hooks/useHasSdcBalance'
 import debounce from 'lodash/debounce'
-import { lightColors, darkColors, baseColors} from 'style/Color'
+import { lightColors, darkColors, baseColors } from 'style/Color'
 import ConfirmProfileCreationModal from '../components/ConfirmProfileCreationModal'
 import useProfileCreation from './contexts/hook'
 import { USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH, REGISTER_COST } from './config'
@@ -128,7 +128,7 @@ const HeadingSetName = styled(Heading)`
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
-  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor: lightColors.balanceColor)};
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 16px;
   }
@@ -153,7 +153,7 @@ const NoteText = styled(Text)`
   font-size: 10px;
   line-height: 20px;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorStep)};
-` 
+`
 
 const TextSubTitle = styled(Text)`  
   color: ${baseColors.colorRed};
@@ -236,6 +236,7 @@ const UserName: React.FC = () => {
   const web3 = useWeb3()
   const [existingUserState, setExistingUserState] = useState<ExistingUserState>(ExistingUserState.IDLE)
   const [isValid, setIsValid] = useState(false)
+  const [isExist, setIsExist] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState('')
   const hasMinimumSdcRequired = useHasSdcBalance(minimumSdcToRegister)
@@ -252,28 +253,40 @@ const UserName: React.FC = () => {
   )
   const isUserCreated = existingUserState === ExistingUserState.CREATED
 
-  const checkUsernameValidity = debounce(async (value: string) => {
+  const checkUsernameExist = debounce(async (value: string) => {
     try {
       setIsLoading(true)
-      const res = await fetch(`${profileApiUrl}/api/users/valid/${value}`)
-
-      if (res.ok) {
-        setIsValid(true)
+      const res = await fetch(`${profileApiUrl}/api/users/${value}`)
+      const data = await res.json()
+      if (!data.status) {
+        setIsExist(true)
         setMessage('')
       } else {
-        const data = await res.json()
-        setIsValid(false)
-        setMessage(data?.error?.message)
+        setIsExist(false)
+        setMessage("User name exist")
       }
     } finally {
       setIsLoading(false)
     }
   }, 200)
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const checkUsernameValid = (value) => {
+    const regex = /^(?=.{3,15}$)[a-zA-Z0-9]+$/
+    const checkValid = regex.test(value)
+
+    if (checkValid) {
+      setIsValid(true)
+      setMessage('')
+    } else {
+      setIsValid(false)
+      setMessage('Username include 3 - 15 characters word and number, not include special characters')
+    }
+  }
+
+  const handleChange = async(event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
     actions.setUserName(value)
-    checkUsernameValidity(value)
+    checkUsernameValid(value)
   }
 
   const handleConfirm = async () => {
@@ -285,7 +298,7 @@ const UserName: React.FC = () => {
         ? (await provider.bnbSign(account, userName))?.signature
         : await web3.eth.personal.sign(userName, account, null) // Last param is the password, and is null to request a signature in the wallet
 
-      const response = await fetch(`${profileApiUrl}/api/users/register`, {
+      const response = await fetch(`${profileApiUrl}/api/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -296,12 +309,11 @@ const UserName: React.FC = () => {
           signature,
         }),
       })
-
-      if (response.ok) {
+      const data = await response.json()
+      if (!data.errors) {
         setExistingUserState(ExistingUserState.CREATED)
       } else {
-        const data = await response.json()
-        toastError(data?.error?.message)
+        toastError(data?.errors[0]?.message)
       }
     } catch (error) {
       toastError(error?.message ? error.message : JSON.stringify(error))
@@ -319,11 +331,10 @@ const UserName: React.FC = () => {
         const response = await fetch(`${profileApiUrl}/api/users/${account}`)
         const data = await response.json()
 
-        if (response.ok) {
-          const dateCreated = formatDistance(parseISO(data.created_at), new Date())
-          setMessage(`Created ${dateCreated} ago`)
-
-          actions.setUserName(data.username)
+        if (data.status) {
+          // const dateCreated = formatDistance(parseISO(data.created_at), new Date())
+          // setMessage(`Created ${dateCreated} ago`)
+          actions.setUserName(data.data.username)
           setExistingUserState(ExistingUserState.CREATED)
           setIsValid(true)
         } else {
@@ -375,7 +386,7 @@ const UserName: React.FC = () => {
                 minLength={USERNAME_MIN_LENGTH}
                 maxLength={USERNAME_MAX_LENGTH}
                 disabled={isUserCreated}
-                placeholder={TranslateString(1094, 'Abc')}
+                placeholder={TranslateString(1094, 'User Name')}
                 value={userName}
               />
               <Indicator>
@@ -386,23 +397,22 @@ const UserName: React.FC = () => {
             </InputWrap>
           )}
           <NoteText color="textSubtle" fontSize="14px" py="4px" mb="16px" style={{ minHeight: '30px' }}>
-          {TranslateString(1101, "Minimum length: 3 characters")}
+            {TranslateString(1101, "Minimum length: 3 characters")}
           </NoteText>
           <TextSubTitle as="p" color="failure" mb="8px">
-            {TranslateString(
-              1100,
-              "Amet minim mollit non deserunt ullamco est sit aliqua dolor ",
-            )}
+            {
+              userName &&message && message
+            }
           </TextSubTitle>
           <label htmlFor="checkbox" style={{ display: 'block', cursor: 'pointer', marginBottom: '24px' }}>
             <Flex alignItems="center">
               <StyleCheck>
-                 <StyleCheckbox 
-                 id="checkbox" 
-                 disabled={!isValid || isUserCreated || isLoading}
-                 scale="sm" 
-                 checked={isAcknowledged} 
-                 onChange={handleAcknoledge} />
+                <StyleCheckbox
+                  id="checkbox"
+                  disabled={!isValid || isUserCreated || isLoading}
+                  scale="sm"
+                  checked={isAcknowledged && isValid}
+                  onChange={handleAcknoledge} />
               </StyleCheck>
               <TextCheckbox ml="8px">
                 {TranslateString(1096, 'I understand that people can view my wallet if they know my username')}

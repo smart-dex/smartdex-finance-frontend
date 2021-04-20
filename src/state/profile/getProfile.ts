@@ -20,13 +20,12 @@ export interface GetProfileResponse {
 const getUsername = async (address: string): Promise<string> => {
   try {
     const response = await fetch(`${profileApi}/api/users/${address}`)
-
-    if (!response.ok) {
+    const data = await response.json()
+    
+    if (!data.status) {
       return ''
     }
-
-    const { username = '' } = await response.json()
-
+    const { username = '' } = data.data
     return username
   } catch (error) {
     return ''
