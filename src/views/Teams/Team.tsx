@@ -11,6 +11,7 @@ import { lightColors } from 'style/Color'
 import TeamCard from './components/TeamCard'
 import TeamHeader from './components/TeamHeader'
 
+
 const Team = () => {
   const { id: idStr }: { id: string } = useParams()
   const id = Number(idStr)
@@ -32,9 +33,9 @@ const Team = () => {
       <Flex mb="24px">
         <Link to="/teams">
           <FlexBack alignItems="center">
-            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 13L2 7L8 1"  strokeWidth="2"/>
-                  </svg>
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 13L2 7L8 1"  strokeWidth="2"/>
+                </svg>
             <StyledTextBack>{TranslateString(1038, 'Teams Overview')}</StyledTextBack>
           </FlexBack>
         </Link>
