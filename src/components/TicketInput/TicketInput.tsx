@@ -17,7 +17,7 @@ const TicketInput: React.FC<TokenInputProps> = ({ max, symbol, availableSymbol, 
   const TranslateString = useI18n()
   return (
     <StyledTokenInput>
-       <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${availableSymbol} Available`)}</StyledMaxText>
+       <StyledMaxText>{TranslateString(454, `${max.toLocaleString()} ${availableSymbol} `)} { TranslateString(526, "Available")}</StyledMaxText>
       <Input
         endAdornment={
           <StyledTokenAdornmentWrapper>

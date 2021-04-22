@@ -3109,7 +3109,7 @@
             "stringId": 460,
             "contentType": "text/plain",
             "translationId": 38318,
-            "text": "支払額: %num% SDC",
+            "text": "支払額:",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -3559,7 +3559,7 @@
             "stringId": 532,
             "contentType": "text/plain",
             "translationId": 38484,
-            "text": "すべて収穫（%count%）",
+            "text": "すべて収穫",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -8458,6 +8458,95 @@
             },
             "createdAt": "2021-03-15T15:44:32+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 1199,
+            "contentType": "text/plain",
+            "translationId": 50919,
+            "text": "まで稼ぐ",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 1201,
+            "contentType": "text/plain",
+            "translationId": 50920,
+            "text": "農場で",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12201,
+            "contentType": "text/plain",
+            "translationId": 50921,
+            "text": "プールで",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12202,
+            "contentType": "text/plain",
+            "translationId": 50922,
+            "text": "宝くじ",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12203,
+            "contentType": "text/plain",
+            "translationId": 50923,
+            "text": "手に入れるために",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12204,
+            "contentType": "text/plain",
+            "translationId": 50924,
+            "text": "チケット",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
     }
-   
 ]
