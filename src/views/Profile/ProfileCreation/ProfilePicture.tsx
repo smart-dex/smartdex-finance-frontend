@@ -235,7 +235,7 @@ const ProfilePicture: React.FC = () => {
   return (
     <>
       <TextStepTwo fontSize="20px" color="textSubtle" bold>
-        {TranslateString(999, `Step ${2}`)}
+      {`${TranslateString(12209, "Step")} ${2}`}
       </TextStepTwo>
       <HeadingText as="h3" size="xl" mb="24px">
         {TranslateString(778, 'Set Profile Picture')}

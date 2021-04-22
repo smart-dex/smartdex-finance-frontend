@@ -207,7 +207,7 @@ const Mint: React.FC = () => {
   return (
     <>
       <TextOne fontSize="20px" color="textSubtle" bold>
-        {TranslateString(999, `Step ${1}`)}
+      {`${TranslateString(12209, "Step")} ${1}`}
       </TextOne>
       <HeadingStep as="h3" size="xl" mb="24px">
         {TranslateString(776, 'Get Starter Collectible')}
