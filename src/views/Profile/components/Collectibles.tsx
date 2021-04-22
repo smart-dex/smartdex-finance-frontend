@@ -64,14 +64,20 @@ const LinkSee = styled.a`
     }
 `
 const TextFound = styled(Text)`
-    font-size: 16px;
+    font-size: 12px;
     line-height: 20px;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorAchievment)};
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
 `
 const BoxFound = styled.div`
     display: flex;
     justify-content: start;
-    padding: 32px 0;
+    padding: 12px 0;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      padding: 32px 0;
+    }
 `
 
 const Collectibles = () => {

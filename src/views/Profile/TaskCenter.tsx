@@ -100,7 +100,7 @@ const StyledTextHeader = styled(Heading)`
 
 const StyledDescriptionHeader = styled(Text)`
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 17px;
   color: #ffffff;
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -109,11 +109,11 @@ const StyledDescriptionHeader = styled(Text)`
 `
 const StyledComingSoon = styled(Text)`
   font-weight: bold;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 22px;
   color: ${({ theme }) => (theme.isDark ? darkColors.textComingSoon : lightColors.textComingSoon)};
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 16px;
+    font-size: 18px;
   }
 `
 

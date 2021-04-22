@@ -28,21 +28,27 @@ const AchievementsList = () => {
         ))}
       </Grid>
       {achievements.length === 0 && (
-        <Flex alignItems="center" justifyContent="center" style={{ height: '64px' }}>
+        <FlexNote alignItems="center" justifyContent="center"  style={{ height: '64px'}}>
           <StyledText>{TranslateString(999, 'No achievments yet!')}</StyledText>
-        </Flex>
+        </FlexNote>
       )}
     </>
   )
 }
 const StyledText = styled(Heading)`
   font-weight: bold;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 22px;
   align-item: left;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorAchievment)};
   ${({ theme }) => theme.mediaQueries.nav} {
-    font-size: 16px;
+    font-size: 18px;
+  }
+`
+const FlexNote = styled(Flex)`
+  height: 34px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    height: 64px;
   }
 `
 
