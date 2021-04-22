@@ -55,7 +55,7 @@ const StyledMenu = styled(Flex)`
 const StyledTextBack = styled(Text)`
   font-weight: 600;
   line-height: 20px;
-  color: ${lightColors.colorBlue};
+  color: ${lightColors.primary};
   font-size: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
@@ -64,7 +64,7 @@ const StyledTextBack = styled(Text)`
 `
 const FlexBack = styled(Flex)`
   & svg {
-    stroke: ${lightColors.colorBlue};
+    stroke: ${lightColors.primary};
     width: 9px;
     margin-right: 15px;
     }
