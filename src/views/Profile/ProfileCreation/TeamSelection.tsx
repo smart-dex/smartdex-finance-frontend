@@ -147,7 +147,9 @@ const Team: React.FC = () => {
   const TranslateString = useI18n()
   const { teams } = useTeams()
   const handleTeamSelection = (value: string) => actions.setTeamId(parseInt(value, 10))
-  const teamValues = useMemo(() => shuffle(Object.values(teams)), [teams])
+  const teamValues = useMemo(() => shuffle(Object.values(teams)), [teams]);
+
+
 
   return (
     <>
@@ -182,7 +184,7 @@ const Team: React.FC = () => {
                       isChecked={currentTeamId === team.id}
                       image={`/images/teams/${team.images.md}`}
                       onChange={handleTeamSelection}
-                      disabled={!team.isJoinable}
+                      disabled={team.isJoinable}
                     >
                       <TextCheck bold>{team.name}</TextCheck>
                       {/* <Flex>
