@@ -54,11 +54,9 @@ const Status = styled.div`
   position: absolute;
   right: 24px;
   top: 20px;
-  
   ${({ theme }) => theme.mediaQueries.nav} {
     right: 24px;
     top: 24px;
-
   }
 `
 
@@ -98,7 +96,6 @@ const TagActive = styled(Tag)`
   color: ${brandColors.white};
   svg{
     fill: ${brandColors.white};
-
   }
 
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -133,23 +130,45 @@ const CardTeam = styled(Card)`
 `
 
 const Section = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 0px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    margin-bottom: 10px;
+  }
 `
 const HeadingAch = styled(Heading)`
   font-size: 14px;
   line-height: 22px;
   font-weight: 700;
+  margin-bottom: 0px;
   color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.textMenuLeft)};
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 18px;
-  }
+  } 
 `
 const BoxListAchievemnts = styled.div`
     display:flex;
     justify-content: start;
+    padding: 7px 0 10px 0;
+  h2 {
+    font-size: 12px;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px !important;
+    }
+  }
+    
 `
 const FlexProfile = styled(Flex)`
   display: flex;
+`
+const ListText = styled.div`
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  align-item: left;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorAchievment)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px !important;
+  }
 `
 
 const PublicProfile = () => {
@@ -203,7 +222,7 @@ const PublicProfile = () => {
                 {TranslateString(1092, 'Team Achievements')}
               </HeadingAch>
               <BoxListAchievemnts>
-                 <AchievementsList />
+                  <AchievementsList />
               </BoxListAchievemnts>
               
             </Section>
