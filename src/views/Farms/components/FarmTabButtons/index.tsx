@@ -93,6 +93,9 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
     font-size: 16px;
     min-width: 100px;
   }
+  &:hover{
+    opacity: 1 !important; 
+  }
 `
 const ButtonMenuStyle = styled.div`
   margin-bottom: 16px;

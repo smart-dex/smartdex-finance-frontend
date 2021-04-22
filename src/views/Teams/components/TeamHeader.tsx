@@ -11,7 +11,6 @@ const TeamHeader = () => {
   const TranslateString = useI18n()
   const { isInitialized, profile } = useProfile()
   const showProfileCallout = isInitialized && !profile
-
   return (
     <>
       {showProfileCallout && <NoProfileCard />}
