@@ -49,7 +49,7 @@ const TaskCenter = () => {
           </StyledHeader>
           <StyledBodyCard>
             <Flex alignItems="center" justifyContent="center" style={{ height: '64px' }}>
-              <StyledComingSoon>{TranslateString(999, 'Coming Soon')}</StyledComingSoon>
+              <StyledComingSoon>{TranslateString(999, 'Coming Soon!')}</StyledComingSoon>
             </Flex>
           </StyledBodyCard>
         </StyledCard>
