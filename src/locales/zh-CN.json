@@ -8578,5 +8578,65 @@
             },
             "createdAt": "2021-03-15T14:00:31+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 12212,
+            "contentType": "text/plain",
+            "translationId": 51000,
+            "text": "查看清单",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12214,
+            "contentType": "text/plain",
+            "translationId": 51002,
+            "text": "完整的个人资料",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 2000,
+            "contentType": "text/plain",
+            "translationId": 51004,
+            "text": "提交NFT合同并确认用户名和团队",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+    "data": {
+        "stringId": 2001,
+        "contentType": "text/plain",
+        "translationId": 51006,
+        "text": "成本",
+        "user": {
+            "id": 13288016,
+            "username": "Chris66",
+            "fullName": "Chris66",
+            "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+        },
+        "createdAt": "2021-03-15T14:00:31+00:00"
     }
+}
 ]
