@@ -101,7 +101,7 @@ return (
         </ButtonConfirm>
       </FlexBtn>
       <LinkFooter
-        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
+        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/add/ETH/0x863d95004611E547c32c123D6F37f765474A3e9F`} style={{ margin: 'auto' }}
       >
         {`${TranslateString(1235, "Get")} ${currency}`}
       </LinkFooter>
