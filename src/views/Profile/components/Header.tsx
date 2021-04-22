@@ -1,12 +1,14 @@
 import React from 'react'
-import { Button, Flex, Heading, useModal, Won } from 'uikit-sotatek'
+import { Button, Flex, Heading, useModal, Won, Text } from 'uikit-sotatek'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { darkColors, lightColors, baseColors } from 'style/Color'
+import { useWallet } from '@binance-chain/bsc-use-wallet'
 import ClaimNftAndSdcModal, { useCanClaim } from './ClaimGiftModal'
 import HeaderWrapper from './HeaderWrapper'
 import EditProfileModal from './EditProfileModal'
+
 
 const ProfileHeader = () => {
   const TranslateString = useI18n()
@@ -14,7 +16,9 @@ const ProfileHeader = () => {
   const [onPresentClaimGiftModal] = useModal(<ClaimNftAndSdcModal onSuccess={checkClaimStatus} />)
   const [onEditProfileModal] = useModal(<EditProfileModal />, false)
   const { hasProfile } = useProfile()
-
+  const { account } = useWallet()
+  
+  
   return (
     <div>
       <HeaderWrapper>
@@ -22,7 +26,7 @@ const ProfileHeader = () => {
           <StyledText>
             <TextHeading>{TranslateString(999, 'Your Profile')}</TextHeading>
             <TextDescription>{TranslateString(999, 'Check your stats and collect achievements')}</TextDescription>
-            {!hasProfile && (
+            {account && hasProfile && (
               <ButtonEditProfile onClick={onEditProfileModal}>{TranslateString(999, 'Edit Profile')}</ButtonEditProfile>
             )}
           </StyledText>
@@ -39,7 +43,16 @@ const ProfileHeader = () => {
     </div>
   )
 }
-
+const TextStyle = styled(Text)`
+  padding-top: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    padding-top: 8px;
+    font-size: 18px;
+  }
+`
 const Line = styled.div`
   margin-top: 5px;
   border: 1px dashed ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
