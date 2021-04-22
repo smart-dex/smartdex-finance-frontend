@@ -8656,6 +8656,7 @@
     },
     {
         "data": {
+    
             "stringId": 12218,
             "contentType": "text/plain",
             "translationId": 50928,
@@ -8735,6 +8736,7 @@
             "contentType": "text/plain",
             "translationId": 50933,
             "text": "トークン",
+>>>>>>> 66aa0a6e6633c252be71188ac7126a8b6f7ad467
             "user": {
                 "id": 13288016,
                 "username": "Chris66",

@@ -251,7 +251,7 @@ const ProfilePicture: React.FC = () => {
               'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis',
             )}
             <LinkSub to="/collectibles" style={{ marginLeft: '4px' }}>
-              {TranslateString(999, 'See the list')}
+              {TranslateString(12212, 'See the list')}
             </LinkSub>
           </TextSubTwo>
           <NftWrapper>
