@@ -154,7 +154,7 @@ const Team: React.FC = () => {
   return (
     <>
       <TextStep3 fontSize="20px" color="textSubtle" bold>
-        {TranslateString(999, `Step ${3}`)}
+        {`${TranslateString(12209, "Step")} ${3}`}
       </TextStep3>
       <HeadingText as="h3" size="xl" mb="24px">
         {TranslateString(826, 'Join a Team')}

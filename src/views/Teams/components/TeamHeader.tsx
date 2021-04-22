@@ -20,7 +20,7 @@ const TeamHeader = () => {
         </StyledHeading>
         <StyledDescription>
           {TranslateString(
-            999,
+            12206,
             'Show off your stats and collectibles with your unique profile. Team features will be revealed soon!',
           )}
         </StyledDescription>
