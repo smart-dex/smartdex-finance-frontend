@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Heading, Text } from 'uikit-sotatek'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
@@ -13,7 +13,7 @@ const TeamHeader = () => {
   const showProfileCallout = isInitialized && !profile
   return (
     <>
-      {showProfileCallout   && <NoProfileCard />}
+      {showProfileCallout && <NoProfileCard />}
       <HeaderWrapper>
         <StyledHeading as="h1" size="lg" color="secondary">
           {TranslateString(1082, 'Teams & Profiles')}
