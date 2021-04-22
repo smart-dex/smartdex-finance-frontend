@@ -8026,10 +8026,10 @@
     },
     {
         "data": {
-            "stringId": 12214,
+            "stringId": 12215,
             "contentType": "text/plain",
-            "translationId": 50924,
-            "text": "Complete Profile",
+            "translationId": 50925,
+            "text": "Collectibles",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -8041,10 +8041,10 @@
     },
     {
         "data": {
-            "stringId": 2000,
+            "stringId": 12216,
             "contentType": "text/plain",
             "translationId": 50926,
-            "text": "Submitting NFT to contract and confirming User Name and Team",
+            "text": "Team & Profile",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -8067,6 +8067,111 @@
             "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
         },
         "createdAt": "2021-03-15T14:00:31+00:00"
+
+        "data": {
+            "stringId": 12217,
+            "contentType": "text/plain",
+            "translationId": 50927,
+            "text": "Leaderboard",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12218,
+            "contentType": "text/plain",
+            "translationId": 50928,
+            "text": "Your Profile",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12219,
+            "contentType": "text/plain",
+            "translationId": 50929,
+            "text": "My Page",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12220,
+            "contentType": "text/plain",
+            "translationId": 50930,
+            "text": "Wallet",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12221,
+            "contentType": "text/plain",
+            "translationId": 50931,
+            "text": "Referral",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12222,
+            "contentType": "text/plain",
+            "translationId": 50932,
+            "text": "Referral Management",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 12223,
+            "contentType": "text/plain",
+            "translationId": 50933,
+            "text": "Tokens",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+>>>>>>> 66aa0a6e6633c252be71188ac7126a8b6f7ad467
     }
 }
     
