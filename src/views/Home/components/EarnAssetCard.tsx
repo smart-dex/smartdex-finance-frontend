@@ -5,7 +5,9 @@ import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from '@pancakeswap-li
 import { NavLink } from 'react-router-dom'
 import pools from 'config/constants/pools'
 import { Pool } from 'state/types'
-import { lightColors, darkColors } from '../../../style/Color'
+import useI18n from 'hooks/useI18n'
+import { lightColors, darkColors } from 'style/Color'
+
 
 const StyledFarmStakingCard = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
@@ -57,6 +59,7 @@ const NavLinkStyle = styled(NavLink)`
 `
 
 const EarnAssetCard = () => {
+  const TranslateString = useI18n()
   const activeNonSdcPools = pools.filter((pool) => !pool.isFinished && !pool.tokenName.includes('SDC'))
   const latestPools: Pool[] = orderBy(activeNonSdcPools, ['sortOrder', 'pid'], ['desc', 'desc']).slice(0, 3)
   // Always include SDC
@@ -65,10 +68,10 @@ const EarnAssetCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBodyStyle>
-        <HeadingEarn>Earn</HeadingEarn>
+        <HeadingEarn>{TranslateString(318, "Earn")}</HeadingEarn>
         <CardMidContent>{assets}</CardMidContent>
         <Flex style={{ flexDirection: 'column' }}>
-          <HeadingEarn>in Pools</HeadingEarn>
+          <HeadingEarn>{TranslateString(12201, "in Pools")}</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/syrup" id="pool-cta">
             <ArrowForwardIcon mt={30} color="#FFFFFF" style={{ margin: '5px' }} />
           </NavLinkStyle>

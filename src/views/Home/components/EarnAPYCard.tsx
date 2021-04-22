@@ -117,7 +117,7 @@ const EarnAPYCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <HeadingEarn>Earn up to</HeadingEarn>
+        <HeadingEarn>{TranslateString(1199, 'Earn up to')}</HeadingEarn>
         <CardMidContent>
           {getHighestAPY() ? (
             `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
@@ -126,7 +126,7 @@ const EarnAPYCard = () => {
           )}
         </CardMidContent>
         <Flex style={{ flexDirection: 'column' }}>
-          <HeadingEarn>in Farms</HeadingEarn>
+          <HeadingEarn>{TranslateString(1201, 'in Farms')}</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/farms" id="farm-apy-cta">
             <ArrowForwardIcon color="#17C267" width={18} style={{ margin: '5px' }} />
           </NavLinkStyle>
