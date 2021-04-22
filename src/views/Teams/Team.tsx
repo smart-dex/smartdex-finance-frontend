@@ -7,8 +7,10 @@ import teams from 'config/constants/teams'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import { useTeam } from 'state/hooks'
+import { lightColors } from 'style/Color'
 import TeamCard from './components/TeamCard'
 import TeamHeader from './components/TeamHeader'
+
 
 const Team = () => {
   const { id: idStr }: { id: string } = useParams()
@@ -30,10 +32,12 @@ const Team = () => {
       <TeamHeader />
       <Flex mb="24px">
         <Link to="/teams">
-          <Flex alignItems="center">
-            <img src="/images/teams/icon/back-card-team.svg" alt="back-icon" />
+          <FlexBack alignItems="center">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 13L2 7L8 1"  strokeWidth="2"/>
+                </svg>
             <StyledTextBack>{TranslateString(1038, 'Teams Overview')}</StyledTextBack>
-          </Flex>
+          </FlexBack>
         </Link>
       </Flex>
       <TeamCard team={team} />
@@ -43,10 +47,24 @@ const Team = () => {
 const StyledTextBack = styled(Text)`
   font-weight: 600;
   line-height: 20px;
-  color: #50b0fc;
+  color: ${lightColors.primary};
   font-size: 12px;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
+`
+const FlexBack = styled(Flex)`
+  & svg {
+    stroke: ${lightColors.primary};
+    width: 9px;
+    margin-right: 15px;
+    }
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    & svg {
+      width: 12px;
+      stroke: ${lightColors.primary};
+      }
+    }
 `
 export default Team
