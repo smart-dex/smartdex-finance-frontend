@@ -8581,17 +8581,10 @@
     },
     {
         "data": {
-<<<<<<< HEAD
-            "stringId": 12212,
-            "contentType": "text/plain",
-            "translationId": 51002,
-            "text": "查看清單",
-=======
             "stringId": 12215,
             "contentType": "text/plain",
             "translationId": 50925,
             "text": "收藏品",
->>>>>>> 66aa0a6e6633c252be71188ac7126a8b6f7ad467
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -8723,10 +8716,40 @@
     },
     {
         "data": {
-            "stringId": 12223,
+            "stringId": 3000,
             "contentType": "text/plain",
             "translationId": 50933,
-            "text": "代幣",
+            "text": "完整的個人資料",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3001,
+            "contentType": "text/plain",
+            "translationId": 61000,
+            "text": "您的個人資料",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3002,
+            "contentType": "text/plain",
+            "translationId": 61002,
+            "text": "查看您的統計數據並收集成就",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",

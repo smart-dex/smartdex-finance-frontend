@@ -24,8 +24,8 @@ const ProfileHeader = () => {
       <HeaderWrapper>
         <StyledHeader>
           <StyledText>
-            <TextHeading>{TranslateString(999, 'Your Profile')}</TextHeading>
-            <TextDescription>{TranslateString(999, 'Check your stats and collect achievements')}</TextDescription>
+            <TextHeading>{TranslateString(3001, 'Your Profile')}</TextHeading>
+            <TextDescription>{TranslateString(3002, 'Check your stats and collect achievements')}</TextDescription>
             {account && hasProfile && (
               <ButtonEditProfile onClick={onEditProfileModal}>{TranslateString(999, 'Edit Profile')}</ButtonEditProfile>
             )}
