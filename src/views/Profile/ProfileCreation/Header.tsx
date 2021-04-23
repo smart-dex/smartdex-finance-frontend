@@ -52,6 +52,11 @@ const StyleHeader = styled.div`
     color: ${({ theme }) => (theme.isDark ? darkColors.darkStep : lightColors.lightStep)};
   }
 `
+const TextNoteSDC = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.textSubtle : lightColors.textIfolight)};
+  font-weight: 700;
+  font-size: 14px;
+`
 
 const steps = [
   { translationId: 776, label: 'Get Starter Collectible' },
@@ -67,14 +72,14 @@ const Header: React.FC = () => {
   return (
     <WrapperTitle>
       <HeadingTitle as="h1" size="xxl" color="secondary" mb="8px">
-        {TranslateString(770, 'Profile Setup')}
+        {TranslateString(3006, 'Profile Setup')}
       </HeadingTitle>
       <HeadingNote as="h2" size="lg" mb="8px">
-        {TranslateString(772, 'Check your stats and collect achievements')}
+        {TranslateString(3007, 'Check your stats and collect achievements')}
       </HeadingNote>
-      {/* <Text color="textSubtle" mb="24px">
-        {TranslateString(999, 'Total cost: 1.5 SDC')}
-      </Text> */}
+      <TextNoteSDC color="textSubtle" mb="24px">
+        {TranslateString(3023, 'Total cost: 1.5 SDC')}
+      </TextNoteSDC> 
       <Breadcrumbs>
         {steps.map(({ translationId, label }, index) => {
           return (

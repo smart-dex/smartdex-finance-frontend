@@ -125,10 +125,10 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
     <ModalTitPop title={TranslateString(3000, 'Complete Profile')} onDismiss={onDismiss}>
       <BoxContent>
           <TextPopup color="textSubtle" mb="8px">
-            {TranslateString(2000, 'Submitting NFT to contract and confirming User Name and Team')}
+            {TranslateString(3003, 'Submitting NFT to contract and confirming User Name and Team')}
           </TextPopup>
           <Flex  mb="16px">
-            <TextStyle>{TranslateString(2001, 'Cost: ')}</TextStyle>
+            <TextStyle>{TranslateString(3004, 'Cost: ')}</TextStyle>
             <TextNum>{TranslateString(999, `${REGISTER_COST} SDC`, { num: REGISTER_COST })}</TextNum>
           </Flex>
           <BtnAll

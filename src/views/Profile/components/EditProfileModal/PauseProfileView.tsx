@@ -36,8 +36,7 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
       .on('receipt', async () => {
         // Re-fetch profile
         await dispatch(fetchProfile(account))
-        toastSuccess('Profile Paused!')
-
+        toastSuccess(`${TranslateString(3031,"Profile Paused!")}`) 
         onDismiss()
       })
       .on('error', (error) => {
@@ -53,21 +52,21 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
   return (
     <>
       <TextWarning as="p" color="failure" mb="24px">
-        {TranslateString(999, 'This will suspend your profile and send your Collectible back to your wallet')}
+        {TranslateString(3015, 'This will suspend your profile and send your Collectible back to your wallet')}
       </TextWarning>
       <TextSupport as="p" color="textSubtle" mb="24px">
         {TranslateString(
-          999,
+          3016,
           "While your profile is suspended, you won't be able to earn points, but your achievements and points will stay associated with your profile",
         )}
       </TextSupport>
       <TextSupport as="p" color="textSubtle" mb="24px">
-        {TranslateString(999, `Cost to reactivate in future: ${getBalanceNumber(numberSdcToReactivate)} SDC`)}
+        {`${TranslateString(3027, "Cost to reactivate in future:")} ${getBalanceNumber(numberSdcToReactivate)} SDC`}
       </TextSupport>
       <label htmlFor="acknowledgement" style={{ cursor: 'pointer', display: 'block', marginBottom: '24px' }}>
         <FlexCheck alignItems="center">
           <Checkbox id="acknowledgement" checked={isAcknowledged} onChange={handleChange} scale="sm" />
-          <TextCheck ml="8px">{TranslateString(999, 'I understand')}</TextCheck>
+          <TextCheck ml="8px">{TranslateString(3017, 'I understand')}</TextCheck>
         </FlexCheck>
       </label>
       <ConfirmBtn
