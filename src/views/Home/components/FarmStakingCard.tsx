@@ -180,7 +180,7 @@ const FarmedStakingCard = () => {
             >
               {pendingTx
                 ? TranslateString(548, 'Collecting SDC')
-                : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
+                : `${TranslateString(532, 'Harvest all')} (${balancesWithValue.length})`}
             </StyleButtonDisabled>
           ) : (
             <UnlockButton

@@ -100,7 +100,7 @@ const useGetWalletNfts = () => {
 
           dispatch({ type: 'set_nfts', data: nfts })
         } else {
-          // Reset it in case of wallet change
+          // Reset it in case of wallet change      
           dispatch({ type: 'reset' })
         }
       } catch (error) {

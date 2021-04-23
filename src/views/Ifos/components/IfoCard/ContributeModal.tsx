@@ -69,7 +69,8 @@ const handleChange = useCallback(
 )
 
 return (
-    <Modal title={`${TranslateString(1231, "Contribute")}${currency}`} onDismiss={onDismiss}>
+    <Modal title={`${TranslateString(1231, "Contribute")} ${currency}`} onDismiss={onDismiss}>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
       <StyledModal> </StyledModal>
       <BalanceInput
         value={value}
@@ -100,7 +101,7 @@ return (
         </ButtonConfirm>
       </FlexBtn>
       <LinkFooter
-        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
+        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/add/ETH/0x863d95004611E547c32c123D6F37f765474A3e9F`} style={{ margin: 'auto' }}
       >
         {`${TranslateString(1235, "Get")} ${currency}`}
       </LinkFooter>

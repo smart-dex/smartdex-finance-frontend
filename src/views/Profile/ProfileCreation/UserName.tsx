@@ -353,7 +353,7 @@ const UserName: React.FC = () => {
   return (
     <>
       <PanText4 fontSize="20px" color="textSubtle" bold>
-        {TranslateString(999, `Step ${4}`)}
+      {`${TranslateString(12209, "Step")} ${4}`}
       </PanText4>
       <HeadingName as="h3" size="xl" mb="24px">
         {TranslateString(1110, 'Set Your Name')}
@@ -397,7 +397,7 @@ const UserName: React.FC = () => {
             </InputWrap>
           )}
           <NoteText color="textSubtle" fontSize="14px" py="4px" mb="16px" style={{ minHeight: '30px' }}>
-            {TranslateString(1101, "Minimum length: 3 characters")}
+            {TranslateString(3008, "Minimum length: 3 characters")}
           </NoteText>
           <TextSubTitle as="p" color="failure" mb="8px">
             {

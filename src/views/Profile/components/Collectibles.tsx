@@ -64,14 +64,20 @@ const LinkSee = styled.a`
     }
 `
 const TextFound = styled(Text)`
-    font-size: 16px;
+    font-size: 12px;
     line-height: 20px;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorAchievment)};
+    ${({ theme }) => theme.mediaQueries.nav} {
+      font-size: 16px;
+    }
 `
 const BoxFound = styled.div`
     display: flex;
     justify-content: start;
-    padding: 32px 0;
+    padding: 12px 0;
+    ${({ theme }) => theme.mediaQueries.nav} {
+      padding: 32px 0;
+    }
 `
 
 const Collectibles = () => {
@@ -87,13 +93,13 @@ const Collectibles = () => {
       </HeadingCollect>
       <TextCollect as="p">
         {TranslateString(
-          999,
+          3032,
           'SmartDEX Collectibles are special ERC-721 NFTs that can be used on the SmartDEX platform.',
         )}
       </TextCollect>
       <TextCollect as="p">
         {TranslateString(
-          999,
+          3033,
           "NFTs in this user's wallet that aren't approved SmartDEX Collectibles won't be shown here.",
         )}
       </TextCollect>
@@ -108,13 +114,13 @@ const Collectibles = () => {
         <Flex>
           <BoxFound>
             <TextFound fontSize="20px" bold color="textDisabled">
-              {TranslateString(999, 'No NFTs Found')}
+              {TranslateString(3034, 'No NFTs Found')}
             </TextFound>
           </BoxFound>
         </Flex>
       )}
       <FlexCollect alignItems="center" justifyContent="flex-start">
-        <LinkSee href="/collectibles">{TranslateString(999, 'See all approved SmartDEX Collectibles')}</LinkSee>
+        <LinkSee href="/collectibles">{TranslateString(3028, 'See all approved SmartDEX Collectibles')}</LinkSee>
         <ChevronRightIcon />
       </FlexCollect>
     </>

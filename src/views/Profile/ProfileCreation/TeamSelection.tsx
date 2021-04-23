@@ -147,12 +147,14 @@ const Team: React.FC = () => {
   const TranslateString = useI18n()
   const { teams } = useTeams()
   const handleTeamSelection = (value: string) => actions.setTeamId(parseInt(value, 10))
-  const teamValues = useMemo(() => shuffle(Object.values(teams)), [teams])
+  const teamValues = useMemo(() => shuffle(Object.values(teams)), [teams]);
+
+
 
   return (
     <>
       <TextStep3 fontSize="20px" color="textSubtle" bold>
-        {TranslateString(999, `Step ${3}`)}
+        {`${TranslateString(12209, "Step")} ${3}`}
       </TextStep3>
       <HeadingText as="h3" size="xl" mb="24px">
         {TranslateString(826, 'Join a Team')}
@@ -182,7 +184,7 @@ const Team: React.FC = () => {
                       isChecked={currentTeamId === team.id}
                       image={`/images/teams/${team.images.md}`}
                       onChange={handleTeamSelection}
-                      disabled={!team.isJoinable}
+                      disabled={false}       
                     >
                       <TextCheck bold>{team.name}</TextCheck>
                       {/* <Flex>
