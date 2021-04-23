@@ -78,6 +78,7 @@ const StyledTokenSymbol = styled.span`
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  white-space: nowrap;
 `
 
 export default TicketInput
