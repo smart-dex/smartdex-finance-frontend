@@ -397,7 +397,7 @@ const UserName: React.FC = () => {
             </InputWrap>
           )}
           <NoteText color="textSubtle" fontSize="14px" py="4px" mb="16px" style={{ minHeight: '30px' }}>
-            {TranslateString(1101, "Minimum length: 3 characters")}
+            {TranslateString(3008, "Minimum length: 3 characters")}
           </NoteText>
           <TextSubTitle as="p" color="failure" mb="8px">
             {

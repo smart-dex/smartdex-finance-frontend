@@ -8221,7 +8221,249 @@
             "createdAt": "2021-03-15T14:00:31+00:00"
         }
 
+    },
+    {
+        "data": {
+            "stringId": 3003,
+            "contentType": "text/plain",
+            "translationId": 61032,
+            "text": "Submitting NFT to contract and confirming User Name and Team",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3004,
+            "contentType": "text/plain",
+            "translationId": 61032,
+            "text": "Cost",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3005,
+            "contentType": "text/plain",
+            "translationId": 61032,
+            "text": "See the list",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3006,
+            "contentType": "text/plain",
+            "translationId": 61034,
+            "text": "Profile Setup",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3007,
+            "contentType": "text/plain",
+            "translationId": 61034,
+            "text": "Check your stats and collect achievements",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3008,
+            "contentType": "text/plain",
+            "translationId": 61034,
+            "text": "Minimum length: 3 characters",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3009,
+            "contentType": "text/plain",
+            "translationId": 61036,
+            "text": "Edit Profile",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3010,
+            "contentType": "text/plain",
+            "translationId": 61038,
+            "text": "Change Profile Pic",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3011,
+            "contentType": "text/plain",
+            "translationId": 61040,
+            "text": "Remove Profile Pic",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3012,
+            "contentType": "text/plain",
+            "translationId": 61042,
+            "text": "Choose a new Collectible to use as your profile pic.",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3013,
+            "contentType": "text/plain",
+            "translationId": 61044,
+            "text": "Sorry! You don’t have any eligible Collectibles in your wallet to use!",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3014,
+            "contentType": "text/plain",
+            "translationId": 61046,
+            "text": "Make sure you have a SmartDEX Collectible in your wallet and try again!",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3015,
+            "contentType": "text/plain",
+            "translationId": 61048,
+            "text": "This will suspend your profile and send your Collectible back to your wallet",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3016,
+            "contentType": "text/plain",
+            "translationId": 61050,
+            "text": "While your profile is suspended, you won't be able to earn points, but your achievements and points will stay associated with your profile",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 3017,
+            "contentType": "text/plain",
+            "translationId": 61052,
+            "text": "I understand",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
     }
+
+    
     
     
 ]

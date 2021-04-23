@@ -8774,7 +8774,234 @@
             },
             "createdAt": "2021-03-15T14:00:31+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 3003,
+            "contentType": "text/plain",
+            "translationId": 61020,
+            "text": "提交NFT合同并确认用户名和团队",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3004,
+            "contentType": "text/plain",
+            "translationId": 61020,
+            "text": "成本",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3005,
+            "contentType": "text/plain",
+            "translationId": 61020,
+            "text": "查看清单",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3006,
+            "contentType": "text/plain",
+            "translationId": 61022,
+            "text": "您的个人资料",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3007,
+            "contentType": "text/plain",
+            "translationId": 61024,
+            "text": "查看您的统计数据并收集成就",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3008,
+            "contentType": "text/plain",
+            "translationId": 61026,
+            "text": "最小长度：3个字符",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3009,
+            "contentType": "text/plain",
+            "translationId": 61028,
+            "text": "编辑个人资料",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3010,
+            "contentType": "text/plain",
+            "translationId": 61028,
+            "text": "更改个人资料图片",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3011,
+            "contentType": "text/plain",
+            "translationId": 61030,
+            "text": "删除个人资料照片",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3012,
+            "contentType": "text/plain",
+            "translationId": 61032,
+            "text": "选择一个新的收藏品作为您的个人资料照片。",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3013,
+            "contentType": "text/plain",
+            "translationId": 61032,
+            "text": "对不起！ 您是钱包中可以使用的任何合格收藏品！",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3014,
+            "contentType": "text/plain",
+            "translationId": 61034,
+            "text": "确保您的钱包中有SmartDEX收藏品，然后重试！",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3015,
+            "contentType": "text/plain",
+            "translationId": 61036,
+            "text": "这将暂停您的个人资料，并将您的收藏品发送回您的钱包",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3016,
+            "contentType": "text/plain",
+            "translationId": 61038,
+            "text": "个人资料被暂停后，您将无法获得积分，但是您的成就和积分将与您的个人资料保持关联",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3017,
+            "contentType": "text/plain",
+            "translationId": 61040,
+            "text": "我明白",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
     }
+
+    
 
 
 ]
