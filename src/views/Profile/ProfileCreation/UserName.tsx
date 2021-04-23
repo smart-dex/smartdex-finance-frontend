@@ -353,7 +353,7 @@ const UserName: React.FC = () => {
   return (
     <>
       <PanText4 fontSize="20px" color="textSubtle" bold>
-        {TranslateString(999, `Step ${4}`)}
+      {`${TranslateString(12209, "Step")} ${4}`}
       </PanText4>
       <HeadingName as="h3" size="xl" mb="24px">
         {TranslateString(1110, 'Set Your Name')}
