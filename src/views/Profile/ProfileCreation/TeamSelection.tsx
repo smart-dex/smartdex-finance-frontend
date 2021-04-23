@@ -182,7 +182,7 @@ const Team: React.FC = () => {
                       isChecked={currentTeamId === team.id}
                       image={`/images/teams/${team.images.md}`}
                       onChange={handleTeamSelection}
-                      disabled={!team.isJoinable}
+                      disabled={team.isJoinable}
                     >
                       <TextCheck bold>{team.name}</TextCheck>
                       {/* <Flex>
