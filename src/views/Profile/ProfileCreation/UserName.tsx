@@ -316,7 +316,7 @@ const UserName: React.FC = () => {
         toastError(data?.errors[0]?.message)
       }
     } catch (error) {
-      toastError(error?.message ? error.message : JSON.stringify(error))
+      toastError('MetaMask Message Signature: User denied message signature.')
     } finally {
       setIsLoading(false)
     }
