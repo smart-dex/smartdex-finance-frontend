@@ -100,7 +100,7 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
           onClick={needsApproval === true ? goToApprove : goToChange}
           disabled={!hasMinimumSdcRequired || needsApproval === null}
         >
-          {TranslateString(999, 'Reactivate Profile')}
+          {TranslateString(3029, 'Reactivate Profile')}
         </ButtonReactive>
       )}
     </Flex>

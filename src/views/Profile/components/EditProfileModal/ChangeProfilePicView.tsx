@@ -72,8 +72,7 @@ const ChangeProfilePicPage: React.FC<ChangeProfilePicPageProps> = ({ onDismiss }
     onSuccess: async () => {
       // Re-fetch profile
       await dispatch(fetchProfile(account))
-      toastSuccess('Profile Updated!')
-
+      toastSuccess(`${TranslateString(3030,"Profile Updated!")}`)
       onDismiss()
     },
   })

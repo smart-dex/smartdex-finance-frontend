@@ -224,7 +224,8 @@ const Mint: React.FC = () => {
             {TranslateString(794, 'Choose wisely: you can only ever make one starter collectible!')}
           </Textsubtitle>
           <Textsubtitle as="p" mb="24px" color="textSubtle">
-            {TranslateString(999, `Cost: ${MINT_COST} SDC`, { num: MINT_COST })}
+            {`${TranslateString(3026, "Cost:")} ${MINT_COST} ${TranslateString(999,"SDC")}`}
+            
           </Textsubtitle>
           {nfts.map((nft) => {
             const handleChange = (value: string) => setBunnyId(parseInt(value, 10))
@@ -247,7 +248,7 @@ const Mint: React.FC = () => {
           })}
           {!hasMinimumSdcRequired && (
             <TextCount color="failure" mb="16px">
-              {TranslateString(1098, `A minimum of ${MINT_COST} SDC is required`)}
+             {`${TranslateString(3021, "A minimum of")} ${MINT_COST} ${TranslateString(3022,"SDC is required")}`} 
             </TextCount>
           )}
           <ApproveButtons>

@@ -78,7 +78,7 @@ const Header: React.FC = () => {
         {TranslateString(3007, 'Check your stats and collect achievements')}
       </HeadingNote>
       <TextNoteSDC color="textSubtle" mb="24px">
-        {TranslateString(999, 'Total cost: 1.5 SDC')}
+        {TranslateString(3023, 'Total cost: 1.5 SDC')}
       </TextNoteSDC> 
       <Breadcrumbs>
         {steps.map(({ translationId, label }, index) => {

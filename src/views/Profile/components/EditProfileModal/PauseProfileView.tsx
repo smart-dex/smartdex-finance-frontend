@@ -36,8 +36,7 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
       .on('receipt', async () => {
         // Re-fetch profile
         await dispatch(fetchProfile(account))
-        toastSuccess('Profile Paused!')
-
+        toastSuccess(`${TranslateString(3031,"Profile Paused!")}`) 
         onDismiss()
       })
       .on('error', (error) => {
@@ -62,7 +61,7 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
         )}
       </TextSupport>
       <TextSupport as="p" color="textSubtle" mb="24px">
-        {TranslateString(999, `Cost to reactivate in future: ${getBalanceNumber(numberSdcToReactivate)} SDC`)}
+        {`${TranslateString(3027, "Cost to reactivate in future:")} ${getBalanceNumber(numberSdcToReactivate)} SDC`}
       </TextSupport>
       <label htmlFor="acknowledgement" style={{ cursor: 'pointer', display: 'block', marginBottom: '24px' }}>
         <FlexCheck alignItems="center">
