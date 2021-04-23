@@ -83,7 +83,7 @@ const ChangeProfilePicPage: React.FC<ChangeProfilePicPageProps> = ({ onDismiss }
   return (
     <>
       <TextChoosePic as="p" color="textSubtle" mb="24px">
-        {TranslateString(999, 'Choose a new Collectible to use as your profile pic.')}
+        {TranslateString(3012, 'Choose a new Collectible to use as your profile pic.')}
       </TextChoosePic>
       {isLoading ? (
         <Skeleton height="80px" mb="16px" />
@@ -112,10 +112,10 @@ const ChangeProfilePicPage: React.FC<ChangeProfilePicPageProps> = ({ onDismiss }
       {!isLoading && walletNfts.length === 0 && (
         <>
           <NoteText as="p" color="textSubtle" mb="16px">
-            {TranslateString(999, 'Sorry! You don’t have any eligible Collectibles in your wallet to use!')}
+            {TranslateString(3013, 'Sorry! You don’t have any eligible Collectibles in your wallet to use!')}
           </NoteText>
           <NoteText as="p" color="textSubtle" mb="24px">
-            {TranslateString(999, 'Make sure you have a SmartDEX Collectible in your wallet and try again!')}
+            {TranslateString(3014, 'Make sure you have a SmartDEX Collectible in your wallet and try again!')}
           </NoteText>
         </>
       )}

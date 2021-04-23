@@ -90,9 +90,9 @@ const StartPage: React.FC<StartPageProps> = ({ goToApprove, goToChange, goToRemo
             onClick={needsApproval === true ? goToApprove : goToChange}
             disabled={!hasMinimumSdcRequired || needsApproval === null}
           >
-            {TranslateString(999, 'Change Profile Pic')}
+            {TranslateString(3010, 'Change Profile Pic')}
           </ButtonChange>
-          <DangerOutline onClick={goToRemove}>{TranslateString(999, 'Remove Profile Pic')}</DangerOutline>
+          <DangerOutline onClick={goToRemove}>{TranslateString(3011, 'Remove Profile Pic')}</DangerOutline>
         </>
       ) : (
         <ButtonReactive
