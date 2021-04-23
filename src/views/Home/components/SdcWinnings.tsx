@@ -39,7 +39,7 @@ const SdcWinnings = ({sdcCollected}) => {
   const claimAmountBusd = new BigNumber(sdcCollected).multipliedBy(usePriceSdcBusd()).toNumber()
 
   if (!account) {
-    return <TextStyle lineHeight="2">{TranslateString(298, 'LOCKED')}</TextStyle>
+    return <TextStyle lineHeight="1.2">{TranslateString(298, 'LOCKED')}</TextStyle>
   }
   return (
     <Block>

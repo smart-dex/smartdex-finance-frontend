@@ -19,7 +19,6 @@ const TextStyle = styled(Text)`
   font-weight: 600;
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
   ${({ theme }) => theme.mediaQueries.nav} {
-    padding-top: 8px;
     font-size: 18px;
   }
 `
@@ -37,7 +36,7 @@ const SdcWalletBalance = () => {
   const { account } = useWallet()
 
   if (!account) {
-    return <TextStyle lineHeight="2">{TranslateString(298, 'LOCKED')}</TextStyle>
+    return <TextStyle lineHeight="1.2">{TranslateString(298, 'LOCKED')}</TextStyle>
   }
 
   return (
