@@ -49,7 +49,7 @@
             "stringId": 10,
             "contentType": "text/plain",
             "translationId": 5566,
-            "text": "文档",
+            "text": "文件资料",
             "user": {
                 "id": 14439406,
                 "username": "Potaball",
@@ -4714,7 +4714,7 @@
             "stringId": 694,
             "contentType": "text/plain",
             "translationId": 26428,
-            "text": "账户",
+            "text": "帐目",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",
@@ -8729,6 +8729,22 @@
             },
             "createdAt": "2021-03-15T14:00:31+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 12224,
+            "contentType": "text/plain",
+            "translationId": 50934,
+            "text": "票",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
     },
     {
         "data": {

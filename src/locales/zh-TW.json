@@ -49,7 +49,7 @@
             "stringId": 10,
             "contentType": "text/plain",
             "translationId": 6192,
-            "text": "文檔",
+            "text": "文件資料",
             "user": {
                 "id": 14439406,
                 "username": "Potaball",
@@ -4609,7 +4609,7 @@
             "stringId": 680,
             "contentType": "text/plain",
             "translationId": 38664,
-            "text": "資訊",
+            "text": "信息",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -4714,7 +4714,7 @@
             "stringId": 694,
             "contentType": "text/plain",
             "translationId": 38678,
-            "text": "帳戶",
+            "text": "帳目",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -8713,6 +8713,38 @@
             },
             "createdAt": "2021-03-15T14:00:31+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 12223,
+            "contentType": "text/plain",
+            "translationId": 50933,
+            "text": "代幣",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
+    },
+    {
+        "data": {
+            "stringId": 12224,
+            "contentType": "text/plain",
+            "translationId": 50934,
+            "text": "票",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+
     },
     {
         "data": {
