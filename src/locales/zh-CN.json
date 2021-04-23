@@ -8254,7 +8254,7 @@
             "stringId": 1256,
             "contentType": "text/plain",
             "translationId": 49600,
-            "text": "SmartDEX Collectibles",
+            "text": "SmartDEX收藏品",
             "user": {
                 "id": 13470935,
                 "username": "Liangzdz",
@@ -8991,6 +8991,21 @@
             "contentType": "text/plain",
             "translationId": 61040,
             "text": "我明白",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3018,
+            "contentType": "text/plain",
+            "translationId": 61042,
+            "text": "贴上地址",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
