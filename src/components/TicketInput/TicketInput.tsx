@@ -56,6 +56,8 @@ const StyledButton = styled(Button)`
   line-height: 17px;
   box-shadow: none;
   padding: 0px 20px;
+  white-space: nowrap;
+  
 `
 const StyledTokenAdornmentWrapper = styled.div`
   align-items: center;
