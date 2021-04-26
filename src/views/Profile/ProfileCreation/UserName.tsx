@@ -263,7 +263,7 @@ const UserName: React.FC = () => {
         setMessage('')
       } else {
         setIsExist(false)
-        setMessage("User name exist")
+        setMessage('User name exist')
       }
     } finally {
       setIsLoading(false)
@@ -279,7 +279,8 @@ const UserName: React.FC = () => {
       setMessage('')
     } else {
       setIsValid(false)
-      setMessage('Username include 3 - 15 characters word and number, not include special characters')
+      setMessage(`${TranslateString(3036,'Username include 3 - 15 characters word and number, not include special characters')}`)
+     
     }
   }
 
@@ -313,10 +314,10 @@ const UserName: React.FC = () => {
       if (!data.errors) {
         setExistingUserState(ExistingUserState.CREATED)
       } else {
-        toastError(data?.errors[0]?.message)
+        toastError(`${TranslateString(3039,'Username is already been used.')}`)
       }
     } catch (error) {
-      toastError('MetaMask Message Signature: User denied message signature.')
+      toastError(`${TranslateString(3035, 'MetaMask Message Signature: User denied message signature.')}`)
     } finally {
       setIsLoading(false)
     }

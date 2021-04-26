@@ -232,13 +232,13 @@ const PublicProfile = () => {
                 </TagActive>
               ) : (
                 <TagPause variant="failure" startIcon={<BlockIcon width="18px" />} outline>
-                  {TranslateString(999, 'Paused')}
+                  {TranslateString(3041, 'Paused')}
                 </TagPause>
               )}
             </Status>
           </CardHeader>
           <BoxPublicCard >
-            <StatBox icon={PrizeIcon} title={profile.points} subtitle={TranslateString(999, 'Points')} mb="24px" />
+            <StatBox icon={PrizeIcon} title={profile.points} subtitle={TranslateString(3042, 'Points')} mb="24px" />
             <Section>
               <HeadingAch as="h4" size="md" mb="16px">
                 {TranslateString(1092, 'Team Achievements')}
