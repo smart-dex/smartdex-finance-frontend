@@ -201,7 +201,7 @@ const Mint: React.FC = () => {
     onConfirm: () => {
       return bunnyFactoryContract.methods.mintNFT(bunnyId).send({ from: account })
     },
-    onSuccess: () => actions.nextStep(),
+    onSuccess: () => null,
   })
 
   return (
