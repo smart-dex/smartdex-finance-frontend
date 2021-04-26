@@ -8554,7 +8554,7 @@
             "stringId": 12208,
             "contentType": "text/plain",
             "translationId": 51000,
-            "text": "即将推出",
+            "text": "即将推出!",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -9412,6 +9412,66 @@
             "contentType": "text/plain",
             "translationId": 61089,
             "text": "批准交易时发生错误",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3045,
+            "contentType": "text/plain",
+            "translationId": 61089,
+            "text": "编辑个人资料",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3046,
+            "contentType": "text/plain",
+            "translationId": 61097,
+            "text": "更改个人资料图片",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3047,
+            "contentType": "text/plain",
+            "translationId": 610197,
+            "text": "删除个人资料照片",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3048,
+            "contentType": "text/plain",
+            "translationId": 610197,
+            "text": "确认",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",

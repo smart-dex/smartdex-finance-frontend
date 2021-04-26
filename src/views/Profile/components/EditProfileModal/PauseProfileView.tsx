@@ -76,7 +76,7 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
         onClick={handleDeactivateProfile}
         mb="8px"
       >
-        {TranslateString(999, 'Confirm')}
+        {TranslateString(3048, 'Confirm')}
       </ConfirmBtn>
     </>
   )
