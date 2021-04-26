@@ -209,7 +209,7 @@ const ProfilePicture: React.FC = () => {
       })
       .on('error', (error) => {
 
-        toastError(`${TranslateString(3037,'Error')} ${TranslateString(3038,'MetaMask Tx Signature: User denied transaction signature')}`)
+        toastError(`${TranslateString(3044,'An error occurred approving transaction')}`)
         setIsApproving(false)
       })
   }
