@@ -10,9 +10,9 @@ import ApproveSdcView from './ApproveSdcView'
 type EditProfileModalProps = InjectedModalProps
 
 const viewTitle = {
-  [Views.START]: { id: 999, label: 'Edit Profile' },
-  [Views.CHANGE]: { id: 999, label: 'Change Profile Pic' },
-  [Views.REMOVE]: { id: 999, label: 'Remove Profile Pic' },
+  [Views.START]: { id: 3045, label: 'Edit Profile' },
+  [Views.CHANGE]: { id: 3046, label: 'Change Profile Pic' },
+  [Views.REMOVE]: { id: 3047, label: 'Remove Profile Pic' },
   [Views.APPROVE]: { id: 999, label: 'Approve SDC' },
 }
 

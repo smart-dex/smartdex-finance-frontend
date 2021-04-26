@@ -8584,7 +8584,7 @@
             "stringId": 12208,
             "contentType": "text/plain",
             "translationId": 50926,
-            "text": "近日公開",
+            "text": "近日公開!",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -9427,6 +9427,66 @@
             "contentType": "text/plain",
             "translationId": 610191,
             "text": "トランザクションの承認中にエラーが発生しました",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3045,
+            "contentType": "text/plain",
+            "translationId": 610191,
+            "text": "プロファイル編集",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3046,
+            "contentType": "text/plain",
+            "translationId": 610195,
+            "text": "プロフィール写真の変更",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3047,
+            "contentType": "text/plain",
+            "translationId": 610197,
+            "text": "プロフィール写真を削除",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3048,
+            "contentType": "text/plain",
+            "translationId": 610199,
+            "text": "確認",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
