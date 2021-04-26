@@ -17,7 +17,7 @@ const PoolTabButtons = ({ stackedOnly, setStackedOnly, finishedPool, setFinished
         <StyledText> {TranslateString(999, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
-        <ButtonMenu activeIndex={!finishedPool ? 0 : 1} onItemClick={() => setFinishedPool(!finishedPool)} scale="sm" >
+        <ButtonMenu activeIndex={!finishedPool ? 0 : 1} onItemClick={() => setFinishedPool(!finishedPool)} scale="md" >
           <ButtonItemStyle >
             {TranslateString(698, 'Active')}
           </ButtonItemStyle>
@@ -71,7 +71,6 @@ const ToggleWrapper = styled.div`
   }
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`
-padding: 20px;
 border-radius: 50px;
 background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
 color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
@@ -92,7 +91,6 @@ ${({ theme }) => theme.mediaQueries.nav} {
 const ButtonMenuStyle = styled.div`
   & > div {
     border-radius: 50px;
-    min-width:160px;
   }
 `
 const StyledToggle = styled.div <{ isActive: boolean }>`

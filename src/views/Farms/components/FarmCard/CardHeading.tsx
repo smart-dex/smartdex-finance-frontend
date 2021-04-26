@@ -17,7 +17,7 @@ const CardTitle = styled.div`
   position: relative;
   height: 60px;
   width: 30%;
-  min-width: 150px;
+  min-width: 140px;
   background: ${({ theme }) => (theme.isDark ? darkColors.bgCardCollectibles : lightColors.bgCardCollectibles)};
   border-top: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
   border-left: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderCard : lightColors.borderCard)};
