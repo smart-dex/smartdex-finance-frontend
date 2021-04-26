@@ -10,14 +10,29 @@ const ThemeContextProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(() => {
     const isDarkUserSetting = localStorage.getItem(CACHE_KEY)
     return isDarkUserSetting ? JSON.parse(isDarkUserSetting) : false
-  })
+  })            
 
   const toggleTheme = () => {
-    setIsDark((prevState) => {
+    setIsDark((prevState: any) => {
       localStorage.setItem(CACHE_KEY, JSON.stringify(!prevState))
+
+      const iframE=document.getElementById("iframe-x-exchange")
+      if (iframE instanceof HTMLIFrameElement){
+        const win = iframE.contentWindow;
+        win.postMessage({key: CACHE_KEY, value: JSON.stringify(!prevState)},"*")
+      }
+
+      const iframeI=document.getElementById("iframe-x-info")
+      if (iframeI instanceof HTMLIFrameElement){
+        const win = iframeI.contentWindow;
+        win.postMessage({action: "update", item: 'UNISWAP',key: "DARK_MODE", value: JSON.stringify(!prevState)},"*")
+      }
+
       return !prevState
     })
   }
+
+
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
