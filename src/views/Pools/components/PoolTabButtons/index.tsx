@@ -92,7 +92,6 @@ ${({ theme }) => theme.mediaQueries.nav} {
 const ButtonMenuStyle = styled.div`
   & > div {
     border-radius: 50px;
-    min-width:160px;
   }
 `
 const StyledToggle = styled.div <{ isActive: boolean }>`
