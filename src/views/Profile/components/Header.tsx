@@ -98,12 +98,12 @@ const TextDescription = styled(Heading)`
 const ButtonEditProfile = styled(Button)`
   margin-top: 12px;
   margin-bottom: 12px;
-  width: 150px;
+  width: auto;
   height: 56px;
   background-color: ${lightColors.primary};
   box-shadow: none;
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 150px;
+    width: auto;
     height: 56px;
   }
 `
