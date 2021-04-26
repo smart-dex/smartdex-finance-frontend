@@ -17,7 +17,7 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly,active,setActive }) => {
         <StyledText> {TranslateString(1116, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
-        <ButtonMenu activeIndex={active? 0:1}  onItemClick={()=> setActive(!active)} scale="sm">
+        <ButtonMenu activeIndex={active? 0:1}  onItemClick={()=> setActive(!active)} scale="md">
           <ButtonItemStyle >
             {TranslateString(698, 'Active')}
           </ButtonItemStyle>
@@ -80,7 +80,6 @@ const ToggleWrapper = styled.div`
   }
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`
-  padding: 20px;
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
