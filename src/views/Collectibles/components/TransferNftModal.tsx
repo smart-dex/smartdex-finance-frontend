@@ -124,7 +124,7 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
           })
           .on('error', () => {
             console.error(error)
-            setError('Unable to transfer NFT')
+            setError(TranslateString(3050,'Unable to transfer NFT'))
             setIsLoading(false)
           })
       }
