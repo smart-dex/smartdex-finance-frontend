@@ -372,7 +372,7 @@ const UserName: React.FC = () => {
           </HeadingSetName>
           <NameSub as="p" color="textSubtle" mb="24px">
             {TranslateString(
-              840,
+              999,
               'Amet minim mollit non deserunt ullamco est sit aliqua dolor ',
             )}
           </NameSub>
