@@ -41,6 +41,8 @@ const LanguageContextProvider = ({ children }) => {
     } else {
       setSelectedLanguage(EN)
     }
+    
+
   }, [])
 
   useEffect(() => {
@@ -58,7 +60,14 @@ const LanguageContextProvider = ({ children }) => {
   const handleLanguageSelect = (langObject: LangType) => {
     setSelectedLanguage(langObject)
     localStorage.setItem(CACHE_KEY, langObject.code)
+
+    const iframe=document.getElementById("iframe-x-exchange")
+    if (iframe instanceof HTMLIFrameElement){
+      const win = iframe.contentWindow
+      win.postMessage({key: CACHE_KEY, value: langObject.code},"*")
+    }
   }
+
   return (
     <LanguageContext.Provider
       value={{ selectedLanguage, setSelectedLanguage: handleLanguageSelect, translatedLanguage, setTranslatedLanguage }}

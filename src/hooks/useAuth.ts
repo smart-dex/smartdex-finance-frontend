@@ -18,7 +18,7 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 const useAuth = () => {
   const { activate, deactivate } = useWeb3React()
   const { toastError } = useToast()
-  const { connect } = useWallet()
+  const { connect, reset } = useWallet()
 
   const login = useCallback((connectorID: ConnectorNames) => {
     const connector = connectorsByName[connectorID]
@@ -49,13 +49,32 @@ const useAuth = () => {
           }
         }
       })
+
+      const iframe=document.getElementById("iframe-x-exchange")
+
+      if (iframe instanceof HTMLIFrameElement){
+        const win = iframe.contentWindow;
+        win.postMessage({key: connectorLocalStorageKey, value: "injected"},"*")
+      }
+
     } else {
       toastError("Can't find connector", 'The connector config is wrong')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return { login, logout: deactivate }
+  const logout = ()=>{
+    deactivate()
+    reset()
+    const iframe=document.getElementById("iframe-x-exchange")
+
+    if (iframe instanceof HTMLIFrameElement){
+      const win = iframe.contentWindow;
+      win.postMessage({action: "remove", key: connectorLocalStorageKey},"*")
+    }
+  }
+
+  return { login, logout }
 }
 
 export default useAuth

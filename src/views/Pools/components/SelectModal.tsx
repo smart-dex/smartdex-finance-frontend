@@ -236,7 +236,7 @@ const BalanceAndCompound = styled.div`
     }
   }
 `
-const ButtonUnstake = styled(Button) <{ isDisable: boolean }>`
+const ButtonUnstake = styled(Button) <{ isDisable: any }>`
 padding: 0 20px;
 background: ${({ isDisable }) => !isDisable && baseColors.primary};
 box-shadow: none;
@@ -276,7 +276,7 @@ svg path {
   }
 }
 `
-const HarvestButton = styled(Button) <{ isDisable: boolean }>`
+const HarvestButton = styled(Button) <{ isDisable: any }>`
     background: ${baseColors.primary};
     box-shadow: none;
     font-weight: 600;
@@ -293,7 +293,7 @@ const HarvestButton = styled(Button) <{ isDisable: boolean }>`
       margin-right:7px;
     }
 `
-const CompoundButton = styled(Button) <{ isDisable: boolean }>`
+const CompoundButton = styled(Button) <{ isDisable: any }>`
   background: ${baseColors.primary};
   box-shadow: none;
   font-weight: 600;

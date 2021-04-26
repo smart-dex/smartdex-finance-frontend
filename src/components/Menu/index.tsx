@@ -10,7 +10,7 @@ import config from './config'
 
 const Menu = (props) => {
   const { account, reset } = useWallet()
-  const { login } = useAuth()
+  const { login, logout } = useAuth()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const sdcPriceUsd = usePriceSdcBusd()
@@ -20,7 +20,7 @@ const Menu = (props) => {
     <UikitMenu
       account={account}
       login={login}
-      logout={reset}
+      logout={logout}
       isDark={isDark}
       toggleTheme={toggleTheme}
       currentLang={selectedLanguage && selectedLanguage.code}
