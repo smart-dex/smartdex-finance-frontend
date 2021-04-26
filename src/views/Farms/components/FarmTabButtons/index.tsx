@@ -4,7 +4,7 @@ import { lightColors, baseColors, darkColors } from 'style/Color'
 import { ButtonMenu, ButtonMenuItem, Text, Toggle } from 'uikit-sotatek'
 import useI18n from 'hooks/useI18n'
 
-const FarmTabButtons = ({ stackedOnly, setStackedOnly,active,setActive }) => {
+const FarmTabButtons = ({ stackedOnly, setStackedOnly, active, setActive }) => {
   const TranslateString = useI18n()
 
   return (
@@ -17,7 +17,7 @@ const FarmTabButtons = ({ stackedOnly, setStackedOnly,active,setActive }) => {
         <StyledText> {TranslateString(1116, 'Staked Only')}</StyledText>
       </ToggleWrapper>
       <ButtonMenuStyle>
-        <ButtonMenu activeIndex={active? 0:1}  onItemClick={()=> setActive(!active)} scale="md">
+        <ButtonMenu activeIndex={active ? 0 : 1} onItemClick={() => setActive(!active)} scale="md">
           <ButtonItemStyle >
             {TranslateString(698, 'Active')}
           </ButtonItemStyle>
@@ -54,7 +54,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 `
 
 const ToggleWrapper = styled.div`
@@ -62,6 +62,8 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 16px;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-right: 32px;
   }
@@ -74,22 +76,20 @@ const ToggleWrapper = styled.div`
     font-size: 13px;
     line-height: 143%;
     letter-spacing: -0.03em;
+    word-break: keep-all;
     font-size: 13px;
     color: ${({ theme }) => (theme.isDark ? darkColors.stakedOnly : lightColors.stakedOnly)};
     align-self: baseline;
   }
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`
+  word-break: keep-all;
   border-radius: 50px;
   background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
   font-size: 13px;
   line-height: 20px;
   font-weight: 400;
-  @media screen and (max-width: 320px)
-  {
-      font-size: 9px;
-  }
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
   }
@@ -99,6 +99,7 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
 `
 const ButtonMenuStyle = styled.div`
   & > div {
+    margin-bottom: 16px;
     border-radius: 50px;
   }
 `
