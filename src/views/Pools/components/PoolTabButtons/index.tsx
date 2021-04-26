@@ -53,12 +53,10 @@ const ToggleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
   margin-right: 10px;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-right: 32px;
   }
-
   ${Text} {
     ${({ theme }) => theme.mediaQueries.nav} {
       font-size: 16px;
@@ -77,27 +75,24 @@ padding: 20px;
 border-radius: 50px;
 background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
 color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
-min-width: 75px;
 font-size: 13px;
 line-height: 20px;
 font-weight: 400;
+@media screen and (max-width: 320px)
+{
+    font-size: 9px;
+}
 ${({ theme }) => theme.mediaQueries.nav} {
   font-size: 16px;
-  min-width: 100px;
 }
 &:hover{
   opacity: 1 !important; 
 }
 `
 const ButtonMenuStyle = styled.div`
-  margin-bottom: 16px;
-  margin-bottom: 16px;
   & > div {
-     ${({ theme }) => theme.mediaQueries.nav} {
-      width: 200px;
-     }
-    width: 155px;
     border-radius: 50px;
+    min-width:160px;
   }
 `
 const StyledToggle = styled.div <{ isActive: boolean }>`
