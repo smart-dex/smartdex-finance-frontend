@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 `
 
 const ToggleWrapper = styled.div`
@@ -54,6 +54,8 @@ const ToggleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 16px;
   ${({ theme }) => theme.mediaQueries.nav} {
     margin-right: 32px;
   }
@@ -62,6 +64,7 @@ const ToggleWrapper = styled.div`
       font-size: 16px;
     }
     margin-left: 13px;
+    word-break: keep-all;
     font-size: 13px;
     line-height: 143%;
     letter-spacing: -0.03em;
@@ -72,15 +75,12 @@ const ToggleWrapper = styled.div`
 `
 const ButtonItemStyle = styled(ButtonMenuItem)`
 border-radius: 50px;
+word-break: keep-all;
 background-color: ${({ isActive }) => (isActive ? baseColors.primary : '')};
 color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
 font-size: 13px;
 line-height: 20px;
 font-weight: 400;
-@media screen and (max-width: 320px)
-{
-    font-size: 9px;
-}
 ${({ theme }) => theme.mediaQueries.nav} {
   font-size: 16px;
 }
@@ -91,6 +91,7 @@ ${({ theme }) => theme.mediaQueries.nav} {
 const ButtonMenuStyle = styled.div`
   & > div {
     border-radius: 50px;
+    margin-bottom: 16px;
   }
 `
 const StyledToggle = styled.div <{ isActive: boolean }>`
