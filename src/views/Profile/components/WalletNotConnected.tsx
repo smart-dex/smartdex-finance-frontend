@@ -56,7 +56,7 @@ const WalletNotConnected = () => {
         {TranslateString(852, 'Oops!')}
       </HeadingStyle>
       <TextStyle>
-        {TranslateString(999, 'Please connect your wallet to continue')}
+        {TranslateString(3024, 'Please connect your wallet to continue')}
       </TextStyle>
       <UnlockButtonStyle />
     </CotnetStyle>

@@ -11,7 +11,6 @@ const TeamHeader = () => {
   const TranslateString = useI18n()
   const { isInitialized, profile } = useProfile()
   const showProfileCallout = isInitialized && !profile
-
   return (
     <>
       {showProfileCallout && <NoProfileCard />}
@@ -21,7 +20,7 @@ const TeamHeader = () => {
         </StyledHeading>
         <StyledDescription>
           {TranslateString(
-            999,
+            12206,
             'Show off your stats and collectibles with your unique profile. Team features will be revealed soon!',
           )}
         </StyledDescription>

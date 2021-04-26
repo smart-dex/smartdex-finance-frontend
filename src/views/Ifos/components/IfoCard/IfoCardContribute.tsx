@@ -185,7 +185,7 @@ const IfoCardContribute: React.FC<Props> = ({
         <TextNote>
           {isFinished
             ? `${TranslateString(1229, "You'll be refunded any excess tokens when you claim")}`
-            : `${percentOfUserContribution.toFixed(5)}${TranslateString(1216, "% of total")}`}
+            : `${percentOfUserContribution.toFixed(5)}%${TranslateString(1216, " of total")}`}
         </TextNote>
       </CardLabel>
   )

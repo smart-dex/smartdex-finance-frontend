@@ -29,7 +29,7 @@ const AchievementsList = () => {
       </Grid>
       {achievements.length === 0 && (
         <FlexNote alignItems="center" justifyContent="center"  style={{ height: '64px'}}>
-          <StyledText>{TranslateString(999, 'No achievments yet!')}</StyledText>
+          <StyledText>{TranslateString(12207, 'No achievments yet!')}</StyledText>
         </FlexNote>
       )}
     </>

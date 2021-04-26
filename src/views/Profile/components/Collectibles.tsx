@@ -89,17 +89,17 @@ const Collectibles = () => {
   return (
     <>
       <HeadingCollect as="h4" size="md" mb="8px">
-        {TranslateString(999, 'SmartDEX Collectibles')}
+        {TranslateString(3043, 'SmartDEX Collectibles')}
       </HeadingCollect>
       <TextCollect as="p">
         {TranslateString(
-          999,
+          3032,
           'SmartDEX Collectibles are special ERC-721 NFTs that can be used on the SmartDEX platform.',
         )}
       </TextCollect>
       <TextCollect as="p">
         {TranslateString(
-          999,
+          3033,
           "NFTs in this user's wallet that aren't approved SmartDEX Collectibles won't be shown here.",
         )}
       </TextCollect>
@@ -114,13 +114,13 @@ const Collectibles = () => {
         <Flex>
           <BoxFound>
             <TextFound fontSize="20px" bold color="textDisabled">
-              {TranslateString(999, 'No NFTs Found')}
+              {TranslateString(3034, 'No NFTs Found')}
             </TextFound>
           </BoxFound>
         </Flex>
       )}
       <FlexCollect alignItems="center" justifyContent="flex-start">
-        <LinkSee href="/collectibles">{TranslateString(999, 'See all approved SmartDEX Collectibles')}</LinkSee>
+        <LinkSee href="/collectibles">{TranslateString(3028, 'See all approved SmartDEX Collectibles')}</LinkSee>
         <ChevronRightIcon />
       </FlexCollect>
     </>

@@ -63,9 +63,11 @@ const Status = styled.div`
 const ResponsiveText = styled(Text)`
   font-size: 12px;
   color:${baseColors.colorAddressLink};
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
+    width: auto;
   }
+  
 `
 
 const AddressLink = styled(Link)`
@@ -74,18 +76,25 @@ const AddressLink = styled(Link)`
   font-size: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 80px;
+  width: 50px;
   white-space: nowrap;
   color: ${baseColors.colorAddressLink};
-
-  ${({ theme }) => theme.mediaQueries.sm} {
+  ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 14px;
-    width: auto;
   }
 `
 const OpenIcon = styled.div`
   svg{
     fill: ${brandColors.white};
+    width: 15px;
+    margin-top: 2px;
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    svg{
+      fill: ${brandColors.white};
+      width: 15px;
+
+    }
   }
 `
 const TagActive = styled(Tag)`
@@ -170,11 +179,24 @@ const ListText = styled.div`
     font-size: 16px !important;
   }
 `
+const AccountMobile = styled.span`
+  display: block;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    display:none;
+  }
+`
+const AccountDesktop = styled.span`
+  display: none;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    display: block;
+  }
+`
 
 const PublicProfile = () => {
   const { account } = useWallet()
   const { profile } = useProfile()
   const TranslateString = useI18n()
+  const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
   if (!account) {
     return <WalletNotConnected />
@@ -192,11 +214,11 @@ const PublicProfile = () => {
                 <Username>{`@${profile.username}`}</Username>
                 <Flex alignItems="center">
                   <ResponsiveText>
-                    {account}
+                    <AccountMobile>{accountEllipsis}</AccountMobile>
+                    <AccountDesktop>{account}</AccountDesktop>
                   </ResponsiveText>
-
-                  <AddressLink href={`${process.env.REACT_APP_TESTNET_SCAN}/address/${account}`} color="text" external>
-                  <OpenIcon><OpenNewIcon ml="4px" /></OpenIcon>
+                    <AddressLink href={`${process.env.REACT_APP_TESTNET_SCAN}/address/${account}`} color="text" external>
+                    <OpenIcon><OpenNewIcon ml="4px" /></OpenIcon>
                   </AddressLink>
                   
                 </Flex>
@@ -210,13 +232,13 @@ const PublicProfile = () => {
                 </TagActive>
               ) : (
                 <TagPause variant="failure" startIcon={<BlockIcon width="18px" />} outline>
-                  {TranslateString(999, 'Paused')}
+                  {TranslateString(3041, 'Paused')}
                 </TagPause>
               )}
             </Status>
           </CardHeader>
           <BoxPublicCard >
-            <StatBox icon={PrizeIcon} title={profile.points} subtitle={TranslateString(999, 'Points')} mb="24px" />
+            <StatBox icon={PrizeIcon} title={profile.points} subtitle={TranslateString(3042, 'Points')} mb="24px" />
             <Section>
               <HeadingAch as="h4" size="md" mb="16px">
                 {TranslateString(1092, 'Team Achievements')}

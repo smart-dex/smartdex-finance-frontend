@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from 'uikit-sotatek'
 import { NavLink } from 'react-router-dom'
 import useLotteryTotalPrizesUsd from 'hooks/useLotteryTotalPrizesUsd'
+import useI18n from 'hooks/useI18n'
 
 const StyledFarmStakingCard = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
@@ -58,15 +59,16 @@ const NavLinkStyle = styled(NavLink)`
 `
 
 const WinCard = () => {
+  const TranslateString = useI18n()
   const lotteryPrize = Math.round(useLotteryTotalPrizesUsd()).toLocaleString()
 
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <HeadingEarn>Lottery with</HeadingEarn>
+        <HeadingEarn> { TranslateString( 12202, "Lottery with")}</HeadingEarn>
         <CardMidContent>${lotteryPrize}</CardMidContent>
         <Flex style={{ flexDirection: 'column' }}>
-          <HeadingEarn>up for grabs</HeadingEarn>
+          <HeadingEarn>{ TranslateString(12203, "up for grabs")}</HeadingEarn>
           <NavLinkStyle exact activeClassName="active" to="/lottery" id="lottery-pot-cta">
             <ArrowForwardIcon color="#17C267" style={{ margin: '5px' }} />
           </NavLinkStyle>

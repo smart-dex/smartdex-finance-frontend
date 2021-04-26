@@ -2,12 +2,14 @@ import React, { useContext } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import styled from 'styled-components'
 import { lightColors, darkColors} from 'style/Color'
+import useI18n from 'hooks/useI18n'
 import NoWalletConnected from '../components/WalletNotConnected'
 import { ProfileCreationContext } from './contexts/ProfileCreationProvider'
 import Mint from './Mint'
 import ProfilePicture from './ProfilePicture'
 import TeamSelection from './TeamSelection'
 import UserName from './UserName'
+
 
 
 
@@ -20,13 +22,14 @@ const Loading = styled.div`
 const Steps = () => {
   const { isInitialized, currentStep } = useContext(ProfileCreationContext)
   const { account } = useWallet()
+  const TranslateString = useI18n()
 
   if (!account) {
     return <NoWalletConnected />
   }
 
   if (!isInitialized) {
-    return <Loading>Loading...</Loading>
+    return <Loading>{TranslateString(3019, 'Loading...')}</Loading>
   }
 
   if (currentStep === 0) {

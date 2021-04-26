@@ -263,7 +263,7 @@ const UserName: React.FC = () => {
         setMessage('')
       } else {
         setIsExist(false)
-        setMessage("User name exist")
+        setMessage('User name exist')
       }
     } finally {
       setIsLoading(false)
@@ -279,7 +279,8 @@ const UserName: React.FC = () => {
       setMessage('')
     } else {
       setIsValid(false)
-      setMessage('Username include 3 - 15 characters word and number, not include special characters')
+      setMessage(`${TranslateString(3036,'Username include 3 - 15 characters word and number, not include special characters')}`)
+     
     }
   }
 
@@ -313,10 +314,10 @@ const UserName: React.FC = () => {
       if (!data.errors) {
         setExistingUserState(ExistingUserState.CREATED)
       } else {
-        toastError(data?.errors[0]?.message)
+        toastError(`${TranslateString(3039,'Username is already been used.')}`)
       }
     } catch (error) {
-      toastError(error?.message ? error.message : JSON.stringify(error))
+      toastError(`${TranslateString(3035, 'MetaMask Message Signature: User denied message signature.')}`)
     } finally {
       setIsLoading(false)
     }
@@ -353,7 +354,7 @@ const UserName: React.FC = () => {
   return (
     <>
       <PanText4 fontSize="20px" color="textSubtle" bold>
-        {TranslateString(999, `Step ${4}`)}
+      {`${TranslateString(12209, "Step")} ${4}`}
       </PanText4>
       <HeadingName as="h3" size="xl" mb="24px">
         {TranslateString(1110, 'Set Your Name')}
@@ -397,7 +398,7 @@ const UserName: React.FC = () => {
             </InputWrap>
           )}
           <NoteText color="textSubtle" fontSize="14px" py="4px" mb="16px" style={{ minHeight: '30px' }}>
-            {TranslateString(1101, "Minimum length: 3 characters")}
+            {TranslateString(3008, "Minimum length: 3 characters")}
           </NoteText>
           <TextSubTitle as="p" color="failure" mb="8px">
             {

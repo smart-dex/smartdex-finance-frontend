@@ -208,7 +208,8 @@ const ProfilePicture: React.FC = () => {
         setIsApproved(true)
       })
       .on('error', (error) => {
-        toastError('Error', error?.message)
+
+        toastError(`${TranslateString(3037,'Error')} ${TranslateString(3038,'MetaMask Tx Signature: User denied transaction signature')}`)
         setIsApproving(false)
       })
   }
@@ -224,7 +225,7 @@ const ProfilePicture: React.FC = () => {
         </Text>
         <Text as="p">
           {TranslateString(
-            856,
+            3040,
             'You need a SmartDEX Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.',
           )}
         </Text>
@@ -235,7 +236,7 @@ const ProfilePicture: React.FC = () => {
   return (
     <>
       <TextStepTwo fontSize="20px" color="textSubtle" bold>
-        {TranslateString(999, `Step ${2}`)}
+      {`${TranslateString(12209, "Step")} ${2}`}
       </TextStepTwo>
       <HeadingText as="h3" size="xl" mb="24px">
         {TranslateString(778, 'Set Profile Picture')}
@@ -251,7 +252,7 @@ const ProfilePicture: React.FC = () => {
               'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis',
             )}
             <LinkSub to="/collectibles" style={{ marginLeft: '4px' }}>
-              {TranslateString(999, 'See the list')}
+              {TranslateString(3005, 'See the list')}
             </LinkSub>
           </TextSubTwo>
           <NftWrapper>
