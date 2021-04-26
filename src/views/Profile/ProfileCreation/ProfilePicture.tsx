@@ -182,6 +182,10 @@ const BoxIconDirect = styled.div`
 
 const HeadingOops = styled(Heading)`
   color: ${baseColors.primary};
+  margin-top:20px;
+`
+const TextWarning = styled(Text)`
+  color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorWap)};
 `
 
 const ProfilePicture: React.FC = () => {
@@ -208,7 +212,6 @@ const ProfilePicture: React.FC = () => {
         setIsApproved(true)
       })
       .on('error', (error) => {
-
         toastError(`${TranslateString(3044,'An error occurred approving transaction')}`)
         setIsApproving(false)
       })
@@ -220,15 +223,15 @@ const ProfilePicture: React.FC = () => {
         <HeadingOops size="xl" mb="24px">
           {TranslateString(852, 'Oops!')}
         </HeadingOops>
-        <Text bold fontSize="20px" mb="24px">
+        <TextWarning bold fontSize="20px" mb="24px">
           {TranslateString(854, 'We couldn’t find any SmartDEX Collectibles in your wallet.')}
-        </Text>
-        <Text as="p">
+        </TextWarning>
+        <TextWarning as="p">
           {TranslateString(
             3040,
             'You need a SmartDEX Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.',
           )}
-        </Text>
+        </TextWarning>
       </>
     )
   }

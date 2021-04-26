@@ -264,7 +264,7 @@ const Mint: React.FC = () => {
 
         </CardBody>
       </CardBox>
-      <NextStepOne className="aaaa" onClick={actions.nextStep} disabled={!isConfirmed}>
+      <NextStepOne onClick={actions.nextStep} disabled={!isConfirmed}>
         {TranslateString(798, 'Next Step >')}
         <BoxIconDirect>
             <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">

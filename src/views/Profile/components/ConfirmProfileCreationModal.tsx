@@ -117,7 +117,7 @@ const ConfirmProfileCreationModal: React.FC<Props> = ({
     onSuccess: async () => {
       await dispatch(fetchProfile(account))
       onDismiss()
-      toastSuccess('Profile created!')
+      toastSuccess(`${TranslateString(3049,'Profile created!')}`)
     },
   })
 
