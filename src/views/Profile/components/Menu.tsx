@@ -84,10 +84,9 @@ const StyledButton = styled(Flex)`
   
   & > div {
     border-radius: 50px;
-    width: 260px;
     background: ${({ theme }) => (theme.isDark ? darkColors.backButtonTogger : lightColors.activeBackgroundMenuLeft)};
     ${({ theme }) => theme.mediaQueries.nav} {
-      width: 300px;
+      width: auto;
     }
   }
   ${({ theme }) => theme.mediaQueries.nav} {
@@ -99,7 +98,7 @@ const StyledButton = styled(Flex)`
 const ButtonItemStyle = styled(ButtonMenuItem)`
   padding: 20px;
   border-radius: 50px;
-  width: 130px;
+  width: auto;
   font-size: 13px;
   background-color: ${({ isActive, theme }) => (isActive ? baseColors.primary : checkDarkBg(theme))};
   color: ${({ isActive }) => (isActive ? lightColors.invertedContrast : lightColors.textMenuLeft)};
@@ -108,7 +107,7 @@ const ButtonItemStyle = styled(ButtonMenuItem)`
     background-color: ${({ isActive, theme }) => (isActive ? '#5ba7ec' : checkDarkBg(theme))}!important;
   }
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 150px;
+    width: auto;
     font-size: 16px;
   }
 `
