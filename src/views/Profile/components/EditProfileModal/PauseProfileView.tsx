@@ -40,7 +40,7 @@ const PauseProfilePage: React.FC<PauseProfilePageProps> = ({ onDismiss }) => {
         onDismiss()
       })
       .on('error', (error) => {
-        toastError('Error', error?.message)
+        toastError(TranslateString(3051,'An error occurred confirming transaction'))
         setIsConfirming(false)
       })
   }
