@@ -89,7 +89,7 @@ const Collectibles = () => {
   return (
     <>
       <HeadingCollect as="h4" size="md" mb="8px">
-        {TranslateString(999, 'SmartDEX Collectibles')}
+        {TranslateString(3043, 'SmartDEX Collectibles')}
       </HeadingCollect>
       <TextCollect as="p">
         {TranslateString(

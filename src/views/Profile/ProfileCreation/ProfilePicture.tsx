@@ -208,7 +208,8 @@ const ProfilePicture: React.FC = () => {
         setIsApproved(true)
       })
       .on('error', (error) => {
-        toastError('Error', error?.message)
+
+        toastError(`${TranslateString(3037,'Error')} ${TranslateString(3038,'MetaMask Tx Signature: User denied transaction signature')}`)
         setIsApproving(false)
       })
   }
@@ -224,7 +225,7 @@ const ProfilePicture: React.FC = () => {
         </Text>
         <Text as="p">
           {TranslateString(
-            856,
+            3040,
             'You need a SmartDEX Collectible to finish setting up your profile. If you sold or transferred your starter collectible to another wallet, you’ll need to get it back or acquire a new one somehow. You can’t make a new starter with this wallet address.',
           )}
         </Text>
