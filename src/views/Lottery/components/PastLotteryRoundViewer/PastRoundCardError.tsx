@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Text } from 'uikit-sotatek'
 import { darkColors, lightColors } from 'style/Color'
+import useI18n from 'hooks/useI18n'
 
 interface PastRoundCardErrorProps {
   error: {
@@ -19,7 +20,8 @@ ${({ theme }) => theme.mediaQueries.nav} {
 
 `
 const PastRoundCardError: React.FC<PastRoundCardErrorProps> = ({ error }) => {
-  return <TextStyle>{error.message}</TextStyle>
+  const TranslateString = useI18n()
+  return <TextStyle>{error.message === 'The lottery number you provided does not exist'? TranslateString(1076, 'The lottery number you provided does not exist') : error.message }</TextStyle>
 }
 
 export default PastRoundCardError
