@@ -49,7 +49,7 @@ const PastLotteryRoundViewer = () => {
           setState((prevState) => ({
             ...prevState,
             error: {
-              message: TranslateString(1076, 'The lottery number you provided does not exist'),
+              message: 'The lottery number you provided does not exist',
               type: 'out of range',
             },
             isLoading: false,
@@ -68,7 +68,7 @@ const PastLotteryRoundViewer = () => {
       .catch(() => {
         setState((prevState) => ({
           ...prevState,
-          error: { message: TranslateString(1076, 'The lottery number you provided does not exist'), type: 'api' },
+          error: { message: 'The lottery number you provided does not exist', type: 'api' },
           isLoading: false,
           isInitialized: true,
         }))
