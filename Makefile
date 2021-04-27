@@ -17,6 +17,7 @@ build-staging:
 	npm run build:staging
 	
 build-development:
+	npm i uikit-sotatek
 	npm run build:development
 
 build-production:
