@@ -213,7 +213,7 @@ const Mint: React.FC = () => {
         {TranslateString(776, 'Get Starter Collectible')}
       </HeadingStep>
       <TextSub as="p">
-        {TranslateString(786, 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia  consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.')}
+        {TranslateString(999, 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia  consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.')}
       </TextSub>
       <CardBox mb="24px">
         <CardBody>
@@ -221,7 +221,7 @@ const Mint: React.FC = () => {
             {TranslateString(792, 'Choose your Starter!')}
           </HeadingBox>
           <Textsubtitle as="p" color="textSubtle">
-            {TranslateString(794, 'Choose wisely: you can only ever make one starter collectible!')}
+            {TranslateString(999, 'Choose wisely: you can only ever make one starter collectible!')}
           </Textsubtitle>
           <Textsubtitle as="p" mb="24px" color="textSubtle">
             {`${TranslateString(3026, "Cost:")} ${MINT_COST} ${TranslateString(999,"SDC")}`}

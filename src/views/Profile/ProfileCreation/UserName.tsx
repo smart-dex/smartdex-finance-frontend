@@ -28,7 +28,6 @@ import ConfirmProfileCreationModal from '../components/ConfirmProfileCreationMod
 import useProfileCreation from './contexts/hook'
 import { USERNAME_MIN_LENGTH, USERNAME_MAX_LENGTH, REGISTER_COST } from './config'
 
-
 enum ExistingUserState {
   IDLE = 'idle', // initial state
   CREATED = 'created', // username has already been created
@@ -155,7 +154,7 @@ const NoteText = styled(Text)`
   color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.colorStep)};
 `
 
-const TextSubTitle = styled(Text)`  
+const TextSubTitle = styled(Text)`
   color: ${baseColors.colorRed};
   font-weight: 500;
   font-size: 13px;
@@ -165,27 +164,27 @@ const TextSubTitle = styled(Text)`
   }
 `
 const TextCheckbox = styled(Text)`
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 20px;
-    color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
-    ${({ theme }) => theme.mediaQueries.nav} {
-      font-size: 14px;
-    }
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: ${({ theme }) => (theme.isDark ? darkColors.balanceColor : lightColors.balanceColor)};
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 14px;
+  }
 `
 const StyleCheck = styled.div`
   box-shadow: none !important;
   position: relative;
-  & : checked {
-  background-color: ${baseColors.primary}!important;
+  &: checked {
+    background-color: ${baseColors.primary}!important;
   }
-  & : hover{
-  box-shadow: none !important;
+  &: hover {
+    box-shadow: none !important;
   }
-  & : active{
-  box-shadow: none !important;
+  &: active {
+    box-shadow: none !important;
   }
-  & : focus{
+  &: focus {
     box-shadow: none !important;
   }
 `
@@ -193,31 +192,19 @@ const StyleCheckbox = styled(Checkbox)`
   background-color: ${({ theme }) => (theme.isDark ? darkColors.daskCheckBox : lightColors.lightCheckBox)} !important;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.darkBorder : lightColors.lightBorder)};
   border-radius: 4px;
-  &:disabled{
+  &:disabled {
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
     opacity: 1;
   }
 `
 const BtnConfirm = styled(Button)`
-    background: ${lightColors.primary};
-    box-shadow: 0px 4px 10px rgba(0, 133, 255, 0.24);
-    border-radius: 10px;
-    padding: 0 35px;
-    font-size: 13px;
-    &:disabled{
-      background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
-      color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
-    }
-    ${({ theme }) => theme.mediaQueries.nav} {
-      font-size: 16px;
-    }
-`
-const ButtonComplete = styled(Button)`
-  background: ${baseColors.primary};
-  box-shadow: none;
+  background: ${lightColors.primary};
+  box-shadow: 0px 4px 10px rgba(0, 133, 255, 0.24);
+  border-radius: 10px;
+  padding: 0 35px;
   font-size: 13px;
-  &:disabled{
+  &:disabled {
     background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
     color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
   }
@@ -225,7 +212,18 @@ const ButtonComplete = styled(Button)`
     font-size: 16px;
   }
 `
-
+const ButtonComplete = styled(Button)`
+  background: ${baseColors.primary};
+  box-shadow: none;
+  font-size: 13px;
+  &:disabled {
+    background-color: ${({ theme }) => (theme.isDark ? darkColors.btnApp : lightColors.colorApprove)} !important;
+    color: ${({ theme }) => (theme.isDark ? darkColors.colorWap : lightColors.btnApp)} !important;
+  }
+  ${({ theme }) => theme.mediaQueries.nav} {
+    font-size: 16px;
+  }
+`
 
 const UserName: React.FC = () => {
   const [isAcknowledged, setIsAcknoledged] = useState(false)
@@ -279,12 +277,11 @@ const UserName: React.FC = () => {
       setMessage('')
     } else {
       setIsValid(false)
-      setMessage(`${TranslateString(3036,'Username include 3 - 15 characters word and number, not include special characters')}`)
-     
+      setMessage('Username include 3 - 15 characters word and number, not include special characters')
     }
   }
 
-  const handleChange = async(event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target
     actions.setUserName(value)
     checkUsernameValid(value)
@@ -314,7 +311,7 @@ const UserName: React.FC = () => {
       if (!data.errors) {
         setExistingUserState(ExistingUserState.CREATED)
       } else {
-        toastError(`${TranslateString(3039,'Username is already been used.')}`)
+        toastError(`${TranslateString(3039, 'Username is already been used.')}`)
       }
     } catch (error) {
       toastError(`${TranslateString(3035, 'MetaMask Message Signature: User denied message signature.')}`)
@@ -354,16 +351,13 @@ const UserName: React.FC = () => {
   return (
     <>
       <PanText4 fontSize="20px" color="textSubtle" bold>
-      {`${TranslateString(12209, "Step")} ${4}`}
+        {`${TranslateString(12209, 'Step')} ${4}`}
       </PanText4>
       <HeadingName as="h3" size="xl" mb="24px">
         {TranslateString(1110, 'Set Your Name')}
       </HeadingName>
       <TextName as="p" mb="24px">
-        {TranslateString(
-          999,
-          'Amet minim mollit non deserunt ullamco est sit aliqua dolor ',
-        )}
+        {TranslateString(999, 'Amet minim mollit non deserunt ullamco est sit aliqua dolor ')}
       </TextName>
       <CardName mb="24px">
         <CardBodyName>
@@ -372,9 +366,10 @@ const UserName: React.FC = () => {
           </HeadingSetName>
           <NameSub as="p" color="textSubtle" mb="24px">
             {TranslateString(
-              840,
+              999,
               'Amet minim mollit non deserunt ullamco est sit aliqua dolor ',
             )}
+
           </NameSub>
           {existingUserState === ExistingUserState.IDLE ? (
             <Skeleton height="40px" width="240px" />
@@ -398,12 +393,14 @@ const UserName: React.FC = () => {
             </InputWrap>
           )}
           <NoteText color="textSubtle" fontSize="14px" py="4px" mb="16px" style={{ minHeight: '30px' }}>
-            {TranslateString(3008, "Minimum length: 3 characters")}
+            {TranslateString(3008, 'Minimum length: 3 characters')}
           </NoteText>
           <TextSubTitle as="p" color="failure" mb="8px">
-            {
-              userName &&message && message
-            }
+            {userName &&
+              message &&
+              (message === 'Username include 3 - 15 characters word and number, not include special characters'
+                ? TranslateString(3036, 'Username include 3 - 15 characters word and number, not include special characters')
+                : message)}
           </TextSubTitle>
           <label htmlFor="checkbox" style={{ display: 'block', cursor: 'pointer', marginBottom: '24px' }}>
             <Flex alignItems="center">
@@ -413,7 +410,8 @@ const UserName: React.FC = () => {
                   disabled={!isValid || isUserCreated || isLoading}
                   scale="sm"
                   checked={isAcknowledged && isValid}
-                  onChange={handleAcknoledge} />
+                  onChange={handleAcknoledge}
+                />
               </StyleCheck>
               <TextCheckbox ml="8px">
                 {TranslateString(1096, 'I understand that people can view my wallet if they know my username')}
