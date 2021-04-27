@@ -17,60 +17,59 @@ interface Props {
 }
 
 const ContributeModal: React.FC<Props> = ({ currency, contract, currencyAddress, onDismiss }) => {
-const [value, setValue] = useState('')
-const [pendingTx, setPendingTx] = useState(false)
-const { account } = useWallet()
-const balance = getFullDisplayBalance(useTokenBalance(currencyAddress))
-const TranslateString = useI18n()
+  const [value, setValue] = useState('')
+  const [pendingTx, setPendingTx] = useState(false)
+  const { account } = useWallet()
+  const balance = getFullDisplayBalance(useTokenBalance(currencyAddress))
+  const TranslateString = useI18n()
 
-const FlexBtn = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 10px;
-  padding: 24px 0 0 0;
-`
-const ButtonCancel = styled(Button)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
-  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.btnCancle)};
-  border: none;
-`
-const ButtonConfirm = styled(Button)`
+  const FlexBtn = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 24px 0 0 0;
+  `
+  const ButtonCancel = styled(Button)`
+    color: ${baseColors.primary};
+    border-color: ${baseColors.primary};
+  `
+  const ButtonConfirm = styled(Button)`
   background: ${baseColors.primary}; !important;
 `
-const LinkFooter = styled(LinkExternal)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
-  width: 100%;
-  margin: 10px 5px 0px 0px !important;
-  background: none !important;
-  grid-gap: 10px;
-`
-const StyledModal = styled.div`
+  const LinkFooter = styled(LinkExternal)`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
+    width: 100%;
+    margin: 10px 5px 0px 0px !important;
+    background: none !important;
+    grid-gap: 10px;
+  `
+  const StyledModal = styled.div`
 ${({ theme }) => theme.mediaQueries.nav} {
   width 551px;
 }
 `
 
-const handleChange = useCallback(
-  (e: React.FormEvent<HTMLInputElement>) => {
-    if (e.currentTarget.value) {
-      const data = e.currentTarget.value.replaceAll(',','')
-      setValue(data)
-    } else {
-      setValue('')
-    }
-  },
-  [setValue],
-)
+  const handleChange = useCallback(
+    (e: React.FormEvent<HTMLInputElement>) => {
+      if (e.currentTarget.value) {
+        const data = e.currentTarget.value.replaceAll(',', '')
+        setValue(data)
+      } else {
+        setValue('')
+      }
+    },
+    [setValue],
+  )
 
-return (
-    <Modal title={`${TranslateString(1231, "Contribute")} ${currency}`} onDismiss={onDismiss}>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+  return (
+    <Modal title={`${TranslateString(1231, 'Contribute')} ${currency}`} onDismiss={onDismiss}>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
       <StyledModal> </StyledModal>
       <BalanceInput
         value={value}
@@ -82,8 +81,7 @@ return (
       />
       <FlexBtn>
         <ButtonCancel variant="secondary" onClick={onDismiss} mr="8px">
-        {TranslateString(1232, "Cancel")}
-         
+          {TranslateString(1232, 'Cancel')}
         </ButtonCancel>
         <ButtonConfirm
           disabled={pendingTx || Number(balance) === 0 || Number(value) > Number(balance) || Number(value) === 0}
@@ -96,14 +94,14 @@ return (
             onDismiss()
           }}
         >
-           {TranslateString(1233, "Confirm")}
-          
+          {TranslateString(1233, 'Confirm')}
         </ButtonConfirm>
       </FlexBtn>
       <LinkFooter
-        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/add/ETH/0x863d95004611E547c32c123D6F37f765474A3e9F`} style={{ margin: 'auto' }}
+        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/add/ETH/0x863d95004611E547c32c123D6F37f765474A3e9F`}
+        style={{ margin: 'auto' }}
       >
-        {`${TranslateString(1235, "Get")} ${currency}`}
+        {`${TranslateString(1235, 'Get')} ${currency}`}
       </LinkFooter>
     </Modal>
   )

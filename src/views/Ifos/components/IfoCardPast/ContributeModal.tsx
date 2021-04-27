@@ -16,39 +16,38 @@ interface Props {
 }
 
 const ContributeModal: React.FC<Props> = ({ currency, contract, currencyAddress, onDismiss }) => {
-const [value, setValue] = useState('')
-const [pendingTx, setPendingTx] = useState(false)
-const { account } = useWallet()
-const balance = getFullDisplayBalance(useTokenBalance(currencyAddress))
+  const [value, setValue] = useState('')
+  const [pendingTx, setPendingTx] = useState(false)
+  const { account } = useWallet()
+  const balance = getFullDisplayBalance(useTokenBalance(currencyAddress))
 
-const FlexBtn = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 10px;
-  padding: 24px 0 0 0;
-`
-const ButtonCancel = styled(Button)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
-  background: ${({ theme }) => (theme.isDark ? darkColors.buttonView : lightColors.btnCancle)};
-  border: none;
-`
-const ButtonConfirm = styled(Button)`
+  const FlexBtn = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 24px 0 0 0;
+  `
+  const ButtonCancel = styled(Button)`
+    color: ${baseColors.primary};
+    border-color: ${baseColors.primary};
+  `
+  const ButtonConfirm = styled(Button)`
   background: ${baseColors.primary}; !important;
 `
-const LinkFooter = styled(LinkExternal)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
-  width: 100%;
-  margin: 10px 5px 0px 0px !important;
-  background: none !important;
-  grid-gap: 10px;
-`
-return (
+  const LinkFooter = styled(LinkExternal)`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: ${({ theme }) => (theme.isDark ? darkColors.txtBlurbdark : lightColors.colorButtonCancel)} !important;
+    width: 100%;
+    margin: 10px 5px 0px 0px !important;
+    background: none !important;
+    grid-gap: 10px;
+  `
+  return (
     <Modal title={`Contribute ${currency}`} onDismiss={onDismiss}>
       <BalanceInput
         value={value}
@@ -76,9 +75,7 @@ return (
           Confirm
         </ButtonConfirm>
       </FlexBtn>
-      <LinkFooter
-        href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}
-      >
+      <LinkFooter href={`${process.env.REACT_APP_EXCHANGE_URL}/pool#/pools`} style={{ margin: 'auto' }}>
         {`Get ${currency}`}
       </LinkFooter>
     </Modal>
