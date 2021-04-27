@@ -160,7 +160,7 @@ const Team: React.FC = () => {
         {TranslateString(826, 'Join a Team')}
       </HeadingText>
       <TextSub3 as="p" mb="24px">
-        {TranslateString(828, 'It won’t be possible to undo the choice you make for the foreseeable future!')}
+        {TranslateString(999, 'Amet minim mollit non deserunt ullamco est sit aliqua dolor ')}
       </TextSub3>
       <Cardbox3 mb="24px">
         <CardBody3>

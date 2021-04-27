@@ -365,7 +365,11 @@ const UserName: React.FC = () => {
             {TranslateString(1110, 'Set Your Name')}
           </HeadingSetName>
           <NameSub as="p" color="textSubtle" mb="24px">
-            {TranslateString(840, 'Amet minim mollit non deserunt ullamco est sit aliqua dolor ')}
+            {TranslateString(
+              999,
+              'Amet minim mollit non deserunt ullamco est sit aliqua dolor ',
+            )}
+
           </NameSub>
           {existingUserState === ExistingUserState.IDLE ? (
             <Skeleton height="40px" width="240px" />
