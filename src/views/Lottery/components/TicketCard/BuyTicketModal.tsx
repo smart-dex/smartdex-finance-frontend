@@ -159,11 +159,10 @@ const Announce = styled.div`
   line-height: 13px;
 `
 const StyleButtonCancel = styled(Button)`
-  color: ${({ theme }) => (theme.isDark ? darkColors.colorButtonCancel : lightColors.colorButtonCancel)};
-  background-color: ${({ theme }) => (theme.isDark ? darkColors.bgButtonCancel : lightColors.bgButtonCancel)};
+color: ${ baseColors.primary};
+border-color: ${ baseColors.primary};
   box-shadow: ${({ theme }) => (theme.isDark ? 'none' : '0px 4px 10px rgba(222, 222, 222, 0.24)')};
   border-radius: 10px;
-  border: none;
   font-weight: 600;
   line-height: 20px;
   min-width: 145px;
