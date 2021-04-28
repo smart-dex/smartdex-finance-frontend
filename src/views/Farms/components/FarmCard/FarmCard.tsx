@@ -197,6 +197,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const userPoolRate = account ?(stakedBalance.div(lpTokenBalanceMC)).times(100): new BigNumber(0)
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
   const displayUserPoolRate = userPoolRate.toNumber()
+  console.log(displayLpTokenBalanceMC.toLocaleString('en-US'),"hi");
+  
   useEffect(() => {
     ReactTooltip.rebuild();
   });
@@ -242,7 +244,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             <DetailValue>
               {lpTokenBalanceMC ? (
                 <>
-                  <BalanceAndCompound data-tip={displayLpTokenBalanceMC.toFixed(3)} >
+                  <BalanceAndCompound data-tip={displayLpTokenBalanceMC.toLocaleString('en-US')} >
                     <Balance value={displayLpTokenBalanceMC} /> <InfoTextFarm>{lpLabel}</InfoTextFarm>
                   </BalanceAndCompound>
                 </>
@@ -256,7 +258,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             <DetailValue>
               {!poolRate.isNaN() ? (
                 <>
-                  <BalanceAndCompound data-tip={displayPoolRate.toFixed(3)}>
+                  <BalanceAndCompound data-tip={displayPoolRate.toLocaleString('en-US')}>
                     <Balance fontSize="32px" value={displayPoolRate} />  <InfoTextFarm> {`SDC/${TranslateString(999, 'WEEK')}`}</InfoTextFarm>
                   </BalanceAndCompound>
                 </>
@@ -270,7 +272,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             <DetailValue>
               {!userPoolRate.isNaN() ? (
                 <>
-                  <BalanceAndCompound data-tip={displayUserPoolRate.toFixed(3)}>
+                  <BalanceAndCompound data-tip={displayUserPoolRate.toLocaleString('en-US')}>
                     <Balance fontSize="32px" value={displayUserPoolRate} decimals={3} />  <InfoTextFarm>%</InfoTextFarm>
                   </BalanceAndCompound>
                 </>
