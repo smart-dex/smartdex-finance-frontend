@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
-import { useFarms, usePriceBnbBusd } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePriceEthBusd, usePriceSdcBusd } from 'state/hooks'
 import { BLOCKS_PER_YEAR, SDC_PER_BLOCK, SDC_POOL_PID } from 'config'
 
 const StyledFarmStakingCard = styled(Card)`
@@ -65,14 +65,14 @@ const EarnAPYCard = () => {
   const TranslateString = useI18n()
   const farmsLP = useFarms()
   const bnbPrice = usePriceBnbBusd()
-
+  const ethPriceUsd = usePriceEthBusd()
+  const sdcPrice = usePriceSdcBusd()
+  
   const maxAPY = useRef(Number.MIN_VALUE)
-
+  
   const getHighestAPY = () => {
     const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
-
     calculateAPY(activeFarms)
-
     return (maxAPY.current * 100).toLocaleString('en-US').slice(0, -1)
   }
 
@@ -91,7 +91,13 @@ const EarnAPYCard = () => {
 
         if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
           apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
+        } 
+        else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
+          apy = sdcPrice.div(ethPriceUsd).times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
         } else if (farm.quoteTokenSymbol === QuoteToken.SDC) {
+          apy = sdcRewardPerYear.div(farm.lpTotalInQuoteToken)
+        }
+        else if (farm.quoteTokenSymbol === QuoteToken.SDC) {
           apy = sdcRewardPerYear.div(farm.lpTotalInQuoteToken)
         } else if (farm.dual) {
           const sdcApy =
@@ -105,13 +111,12 @@ const EarnAPYCard = () => {
 
           apy = sdcApy && dualApy && sdcApy.plus(dualApy)
         }
-
+        
         if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()
-
         return apy
       })
     },
-    [bnbPrice, farmsLP],
+    [bnbPrice, farmsLP, ethPriceUsd, sdcPrice],
   )
 
   return (
