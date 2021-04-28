@@ -117,7 +117,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     ReactTooltip.rebuild();
   });
   const rawEarning = getBalanceNumber(earnings, tokenDecimals)
-  const rawUserStake= getBalanceNumber(stakedBalance).toFixed(3)
+  const rawUserStake= getBalanceNumber(stakedBalance).toLocaleString('en-US')
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       <ReactTooltip id="title" place="top" type="info" effect="float" />
@@ -186,7 +186,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                   <StyleFlexDetail isFinished={isFinished}> - </StyleFlexDetail>
                 )
                 : (
-                  <StyledAprDetail data-tip={apy?.toFixed(2)}>
+                  <StyledAprDetail data-tip={apy?.toNumber().toLocaleString('en-US')}>
                     <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
                   </StyledAprDetail>
 

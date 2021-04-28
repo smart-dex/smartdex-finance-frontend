@@ -105,7 +105,7 @@ const CardFooter: React.FC<Props> = ({
         <Details>
           <Detail justifyContent="space-between" alignItems='center'>
             <LabelFooter isDisabled={isFinished}>{TranslateString(408, 'Total')}</LabelFooter>
-            <StyledFooterDetail data-tip={getBalanceNumber(totalStaked)} data-for="detail">
+            <StyledFooterDetail data-tip={getBalanceNumber(totalStaked).toLocaleString('en-US')} data-for="detail">
             <Balance fontSize="16px" isDisabled={isFinished} value={getBalanceNumber(totalStaked)} />
             </StyledFooterDetail>
             
@@ -113,7 +113,7 @@ const CardFooter: React.FC<Props> = ({
           {blocksUntilStart > 0 && (
             <Detail justifyContent="space-between" alignItems='center'>
               <LabelFooter isDisabled={isFinished}>{TranslateString(410, 'Start')}</LabelFooter>
-              <StyledFooterDetail data-tip={blocksUntilStart} data-for="detail">
+              <StyledFooterDetail data-tip={blocksUntilStart.toLocaleString('en-US')} data-for="detail">
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
               </StyledFooterDetail>
             
@@ -122,7 +122,7 @@ const CardFooter: React.FC<Props> = ({
           {blocksUntilStart === 0 && blocksRemaining > 0 && (
             <Detail justifyContent="space-between" alignItems='center'>
               <LabelFooter isDisabled={isFinished}>{TranslateString(410, 'End')}</LabelFooter>
-              <StyledFooterDetail data-tip={blocksRemaining} data-for="detail">
+              <StyledFooterDetail data-tip={blocksRemaining.toLocaleString('en-US')} data-for="detail">
               <Balance fontSize="16px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
               </StyledFooterDetail>
              

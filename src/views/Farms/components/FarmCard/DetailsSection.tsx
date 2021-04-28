@@ -158,7 +158,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const rawStakedBalance = getBalanceNumber(stakedBalance)
   const displayPoolRate = poolRate.toNumber()
   const yourPoolShare = totalYourPoolToken.div(lpTotalSupply)
-  const displayYourPoolShare = yourPoolShare.times(100).toFixed(3)
+  const displayYourPoolShare = yourPoolShare.times(100).toNumber().toLocaleString('en-US')
   const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) 
   const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP))
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
@@ -173,7 +173,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       <Flex flexDirection="column">
         <StyledText style={{ alignSelf: 'start', marginBottom: '14px' }}>{TranslateString(999, 'Your Liquidity deposits')}</StyledText>
         <Flex>
-          <BalanceAndCompound data-tip={rawStakedBalance.toFixed(3)}>
+          <BalanceAndCompound data-tip={rawStakedBalance.toLocaleString('en-US')}>
             <Balance fontSize="32px" value={rawStakedBalance} />
           </BalanceAndCompound>
           <StyledTextInfo style={{ alignSelf: 'center' }}>{lpLabel}</StyledTextInfo>
@@ -182,7 +182,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       <Flex mt="21px" mb="22px">
         <Flex flexDirection="column" style={{ flex: '1' }} >
           <StyledText style={{ alignSelf: 'start' }} marginBottom='20px' marginTop='-4px'>{TranslateString(999, 'Your unclaimed SDC')}</StyledText>
-          <BalanceAndCompound data-tip={rawEarningsBalance.toFixed(3)}>
+          <BalanceAndCompound data-tip={rawEarningsBalance.toLocaleString('en-US')}>
             <Balance value={rawEarningsBalance} />
           </BalanceAndCompound>
         </Flex>
@@ -201,7 +201,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
               }
             }}
           >{TranslateString(999, 'Claim')}</ButtonClaim>
-          <DetailStyled data-tip={displayPoolRate.toFixed(3)}>
+          <DetailStyled data-tip={displayPoolRate.toLocaleString('en-US')}>
             <Balance value={displayPoolRate} /> <span>SDC/{TranslateString(999, 'WEEK')}</span>
           </DetailStyled>
         </StylePoolRate>
@@ -211,27 +211,27 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <StyledTextInfo>
           {TranslateString(999, 'Your total pool token')}:
         </StyledTextInfo>
-        <DetailStyled data-tip={rawTotalYourPoolToken.toFixed(3)}>
+        <DetailStyled data-tip={rawTotalYourPoolToken.toLocaleString('en-US')}>
           <Balance value={rawTotalYourPoolToken} /> <span>{lpLabel}</span>
         </DetailStyled>
       </Flex>
       <Flex>
         <StyledTextInfo>{TranslateString(999, 'Pool token in rewards')}:</StyledTextInfo>
-        <DetailStyled data-tip={displayLpTokenBalanceMC.toFixed(3)}>
+        <DetailStyled data-tip={displayLpTokenBalanceMC.toLocaleString('en-US')}>
           <Balance value={displayLpTokenBalanceMC} />  <span>{lpLabel}</span>
         </DetailStyled>
       </Flex>
       <Flex>
         <StyledTextInfo>{TranslateString(999, 'Pooled')} {tokenSymbol}:
         </StyledTextInfo>
-        <DetailStyled data-tip={displayTokenBalanceLp.toFixed(3)}>
+        <DetailStyled data-tip={displayTokenBalanceLp.toLocaleString('en-US')}>
           <Balance value={displayTokenBalanceLp} />   <span>{tokenSymbol}</span>
         </DetailStyled>
       </Flex>
       <Flex>
         <StyledTextInfo>{TranslateString(999, 'Pooled')} {quoteTokenSymbol}:
         </StyledTextInfo>
-        <DetailStyled data-tip={displayQuoteTokenBlanceLP.toFixed(3)}>
+        <DetailStyled data-tip={displayQuoteTokenBlanceLP.toLocaleString('en-US')}>
           <Balance value={displayQuoteTokenBlanceLP} />  <span>{quoteTokenSymbol}</span>
         </DetailStyled>
 
