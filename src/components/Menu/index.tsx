@@ -103,24 +103,6 @@ const Menu = (props) => {
       href: '/ifo',
     },
     {
-      label: `${TranslateString(12219, 'My Page')}`,
-      icon: 'MyPageIcon',
-      items: [
-        {
-          label: `${TranslateString(12220, 'Wallet')}`,
-          href: '/wallet',
-        },
-        {
-          label: `${TranslateString(12221, 'Referral')}`,
-          href: '/referral',
-        },
-        {
-          label: `${TranslateString(12222, 'Refferral Management')}`,
-          href: '/refferral-management',
-        },
-      ],
-    },
-    {
       label: `${TranslateString(684, 'More')}`,
       icon: 'MoreIcon',
       items: [
@@ -144,6 +126,27 @@ const Menu = (props) => {
     },
   ]
 
+  const linkMyPage = [
+    {
+      label: "My Page",
+      icon: "MyPageIcon",
+      items: [
+        {
+          label: "Wallet",
+          href: "/wallet",
+        },
+        {
+          label: "Referral",
+          href: "/referral",
+        },
+        {
+          label: "Refferral Management",
+          href: "/refferral-management",
+        },
+      ],
+    },
+  ];
+
   return (
     <UikitMenu
       account={account}
@@ -156,6 +159,7 @@ const Menu = (props) => {
       setLang={setSelectedLanguage}
       cakePriceUsd={sdcPriceUsd.toNumber()}
       links={configLinks}
+      linkMyPage={linkMyPage}
       profile={{
         username: profile?.username,
         image: profile?.nft ? `/images/nfts/${profile.nft?.images.sm}` : undefined,
