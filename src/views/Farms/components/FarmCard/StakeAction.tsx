@@ -47,7 +47,7 @@ const StyledAddButton = styled(Flex)`
   }
 `
 const StakeButton = styled(Button)`
-  color: ${baseColors.primary};
+  background: ${baseColors.primary};
   border-color: ${baseColors.primary};
   font-weight: 600;
   font-size: 13px;
