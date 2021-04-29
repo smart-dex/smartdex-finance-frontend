@@ -136,8 +136,8 @@ const Menu = (props) => {
           href: "/referral",
         },
         {
-          label: "Refferral Management",
-          href: "/refferral-management",
+          label: "Referral Management",
+          href: "/referral-management",
         },
       ],
     },
