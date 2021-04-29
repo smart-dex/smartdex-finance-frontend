@@ -112,15 +112,11 @@ const Menu = (props) => {
         },
         {
           label: 'Github',
-          href: '',
+          href: process.env.REACT_APP_GIT,
         },
         {
           label: `${TranslateString(10, 'Docs')}`,
           href: process.env.REACT_APP_DOCS_URL,
-        },
-        {
-          label: `${TranslateString(310, 'Blog')}`,
-          href: '',
         },
       ],
     },
