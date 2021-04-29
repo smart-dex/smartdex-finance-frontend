@@ -54,8 +54,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     stakingLimit,
   } = pool
   // Pools using native BNB behave differently than pools using a token
-
-  const pathImg= image || "/images/project.svg"
   const isBnbPool = poolCategory === PoolCategory.BINANCE
   const TranslateString = useI18n()
   const stakingTokenContract = useERC20(stakingTokenAddress)
@@ -119,7 +117,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     ReactTooltip.rebuild();
   });
   const rawEarning = getBalanceNumber(earnings, tokenDecimals)
-  const rawUserStake= getBalanceNumber(stakedBalance).toLocaleString('en-US')
+  const rawUserStake= getBalanceNumber(stakedBalance).toFixed(3)
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       <ReactTooltip id="title" place="top" type="info" effect="float" />
@@ -153,11 +151,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           </>
         )
         }
-        <StyledImagePool>
-              <IconDirect src={pathImg} alt="" />
-            </StyledImagePool>
         <StyleImgEaredDetail>
-          {/* <StyledImageEarned> */}
+          <StyledImageEarned>
+            <StyledImagePool>
+              <IconDirect src="/images/home/icon-pool.png" alt="" />
+            </StyledImagePool>
             <StyledCoinEarned>
               <StyledTextEarned>
                 <Label
@@ -167,14 +165,14 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 />
               </StyledTextEarned>
               {!isOldSyrup ? (
-                <BalanceAndCompound data-tip={rawEarning.toLocaleString('en-US')}>
+                <BalanceAndCompound data-tip={rawEarning.toFixed(3)}>
                   <Balance value={rawEarning} isDisabled={isFinished} fontSize="20px" />
                 </BalanceAndCompound>
               ) : (
                 <OldSyrupTitle hasBalance={accountHasStakedBalance} />
               )}
             </StyledCoinEarned>
-          {/* </StyledImageEarned> */}
+          </StyledImageEarned>
 
           <DetailPool>
             <StyledDetails style={{ marginBottom: '26px' }}>
@@ -188,7 +186,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                   <StyleFlexDetail isFinished={isFinished}> - </StyleFlexDetail>
                 )
                 : (
-                  <StyledAprDetail data-tip={apy?.toNumber().toLocaleString('en-US')}>
+                  <StyledAprDetail data-tip={apy?.toFixed(2)}>
                     <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
                   </StyledAprDetail>
 
@@ -321,25 +319,20 @@ const NamePool = styled(Flex)`
   align-self: flex-start;
 `
 const StyledImagePool = styled(Flex)`
-  margin-top: 25px;
-  align-self: flex-start;
-  margin-left:20px;
-  width: 50px;
+  margin-right:10px;
+  padding-left: 10px;
+  width: 34px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 60px;
+    width: 40px;
   }
-
 `
 
 const StyledCoinEarned = styled(Flex)`
+  flex:50%;
   flex-direction:column;
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction:column;
   }
-  align-items: center;
-  border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-  flex: 50%;
-  padding-right:10px;
 `
 const DetailPool = styled.div`
   padding-left: 10px;
@@ -495,6 +488,12 @@ const StyleImgEaredDetail = styled(Flex)`
   width: 100%;
 `
 
+const StyledImageEarned = styled(Flex)`
+  border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
+  flex: 50%;
+  padding-right:10px;
+  position: relative;
+`
 
 const StyleNameFinished = styled.div`
   font-weight: 600;
@@ -536,11 +535,11 @@ const ButtonSelect = styled(Button)`
     }
 `
 const IconDirect = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 26px;
+  height: 26px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 64px;
-    height: 64px;
+    width: 28px;
+    height: 28px;
   }
 `
 const IconWrapper = styled.div`
