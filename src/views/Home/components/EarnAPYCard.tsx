@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { darkColors, lightColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
 import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from 'uikit-sotatek'
@@ -67,20 +67,19 @@ const EarnAPYCard = () => {
   const bnbPrice = usePriceBnbBusd()
   const ethPriceUsd = usePriceEthBusd()
   const sdcPrice = usePriceSdcBusd()
-  
+ const [ListAPY,setListAPY] = useState([])
   const maxAPY = useRef(Number.MIN_VALUE)
-  
   const getHighestAPY = () => {
     const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
     calculateAPY(activeFarms)
+    console.log(maxAPY.current);
+    
     return (maxAPY.current * 100).toLocaleString('en-US').slice(0, -1)
   }
-
   const calculateAPY = useCallback(
     (farmsToDisplay) => {
       const sdcPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === SDC_POOL_PID)?.tokenPriceVsQuote || 0)
-
-      farmsToDisplay.map((farm) => {
+      const result = farmsToDisplay.map((farm) => {
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
@@ -91,7 +90,7 @@ const EarnAPYCard = () => {
 
         if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
           apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
-        } 
+        }
         else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
           apy = sdcPrice.div(ethPriceUsd).times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
         } else if (farm.quoteTokenSymbol === QuoteToken.SDC) {
@@ -111,10 +110,11 @@ const EarnAPYCard = () => {
 
           apy = sdcApy && dualApy && sdcApy.plus(dualApy)
         }
-        
-        if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()
-        return apy
+
+        // if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()
+        return apy.toNumber()
       })
+      maxAPY.current=Math.max(...result)
     },
     [bnbPrice, farmsLP, ethPriceUsd, sdcPrice],
   )
@@ -124,11 +124,11 @@ const EarnAPYCard = () => {
       <CardBody>
         <HeadingEarn>{TranslateString(1199, 'Earn up to')}</HeadingEarn>
         <CardMidContent>
-          {getHighestAPY() ? (
+          {getHighestAPY() && maxAPY.current ? (
             `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
           ) : (
-            <Skeleton animation="pulse" variant="rect" height="44px" />
-          )}
+              <Skeleton animation="pulse" variant="rect" height="44px" />
+            )}
         </CardMidContent>
         <Flex style={{ flexDirection: 'column' }}>
           <HeadingEarn>{TranslateString(1201, 'in Farms')}</HeadingEarn>

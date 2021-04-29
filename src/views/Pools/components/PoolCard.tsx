@@ -54,6 +54,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     stakingLimit,
   } = pool
   // Pools using native BNB behave differently than pools using a token
+
+  const pathImg= image || "/images/project.svg"
   const isBnbPool = poolCategory === PoolCategory.BINANCE
   const TranslateString = useI18n()
   const stakingTokenContract = useERC20(stakingTokenAddress)
@@ -151,11 +153,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           </>
         )
         }
-        <StyleImgEaredDetail>
-          <StyledImageEarned>
-            <StyledImagePool>
-              <IconDirect src="/images/home/icon-pool.png" alt="" />
+        <StyledImagePool>
+              <IconDirect src={pathImg} alt="" />
             </StyledImagePool>
+        <StyleImgEaredDetail>
+          {/* <StyledImageEarned> */}
             <StyledCoinEarned>
               <StyledTextEarned>
                 <Label
@@ -165,14 +167,14 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 />
               </StyledTextEarned>
               {!isOldSyrup ? (
-                <BalanceAndCompound data-tip={rawEarning.toFixed(3)}>
+                <BalanceAndCompound data-tip={rawEarning.toLocaleString('en-US')}>
                   <Balance value={rawEarning} isDisabled={isFinished} fontSize="20px" />
                 </BalanceAndCompound>
               ) : (
                 <OldSyrupTitle hasBalance={accountHasStakedBalance} />
               )}
             </StyledCoinEarned>
-          </StyledImageEarned>
+          {/* </StyledImageEarned> */}
 
           <DetailPool>
             <StyledDetails style={{ marginBottom: '26px' }}>
@@ -319,20 +321,25 @@ const NamePool = styled(Flex)`
   align-self: flex-start;
 `
 const StyledImagePool = styled(Flex)`
-  margin-right:10px;
-  padding-left: 10px;
-  width: 34px;
+  margin-top: 25px;
+  align-self: flex-start;
+  margin-left:20px;
+  width: 50px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 40px;
+    width: 60px;
   }
+
 `
 
 const StyledCoinEarned = styled(Flex)`
-  flex:50%;
   flex-direction:column;
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction:column;
   }
+  align-items: center;
+  border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
+  flex: 50%;
+  padding-right:10px;
 `
 const DetailPool = styled.div`
   padding-left: 10px;
@@ -488,12 +495,6 @@ const StyleImgEaredDetail = styled(Flex)`
   width: 100%;
 `
 
-const StyledImageEarned = styled(Flex)`
-  border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
-  flex: 50%;
-  padding-right:10px;
-  position: relative;
-`
 
 const StyleNameFinished = styled.div`
   font-weight: 600;
@@ -535,11 +536,11 @@ const ButtonSelect = styled(Button)`
     }
 `
 const IconDirect = styled.img`
-  width: 26px;
-  height: 26px;
+  width: 50px;
+  height: 50px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    width: 28px;
-    height: 28px;
+    width: 64px;
+    height: 64px;
   }
 `
 const IconWrapper = styled.div`
