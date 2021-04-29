@@ -95,7 +95,7 @@ const App: React.FC = () => {
             <Route path="/wallet">
               <Wallet />
             </Route>
-            <Route path="/refferral-management">
+            <Route path="/referral-management">
               <RefferralManagement />
             </Route>
             {/* Redirect */}
