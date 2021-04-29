@@ -88,7 +88,7 @@ const Farm: React.FC = () => {
       <PoolHeader>
         <ContentHeader>
           <HeadingPage as="h1" size="lg" mb="14px">
-            {TranslateString(738, 'Syrup Pool')}
+            {TranslateString(738, 'Pool')}
           </HeadingPage>
           <DescriptionHeading>
             <span> {TranslateString(580, 'Stake SDC to earn new tokens.')} </span>
