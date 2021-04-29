@@ -1,7 +1,7 @@
 import React from 'react'
 import { darkColors, lightColors } from 'style/Color'
 import styled from 'styled-components'
-import { Card, CardBody, Heading, Text } from 'uikit-sotatek'
+import { Card, CardBody, Heading, Text } from 'smartdex-uikit'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, ButtonProps } from 'uikit-sotatek'
+import { Button, ButtonProps } from 'smartdex-uikit'
 
 
 

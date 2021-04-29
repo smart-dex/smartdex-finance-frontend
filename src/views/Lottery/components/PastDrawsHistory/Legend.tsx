@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Heading } from 'uikit-sotatek'
+import { Text, Heading } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import { darkColors, lightColors, baseColors } from '../../../../style/Color'
 

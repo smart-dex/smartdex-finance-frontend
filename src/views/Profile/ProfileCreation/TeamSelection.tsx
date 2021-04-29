@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Card, CardBody, CommunityIcon, Flex, Heading, Text } from 'uikit-sotatek'
+import { Card, CardBody, CommunityIcon, Flex, Heading, Text } from 'smartdex-uikit'
 import shuffle from 'lodash/shuffle'
 import { useTeams } from 'state/hooks'
 import useI18n from 'hooks/useI18n'

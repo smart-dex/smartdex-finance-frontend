@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { darkColors, lightColors } from 'style/Color'
 import styled from 'styled-components'
-import { Text } from 'uikit-sotatek'
+import { Text } from 'smartdex-uikit'
 import { useCountUp } from 'react-countup'
 
 const TextStyle = styled(Text)`

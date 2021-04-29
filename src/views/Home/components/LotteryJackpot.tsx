@@ -1,7 +1,7 @@
 import React from 'react'
 import { darkColors, lightColors } from 'style/Color'
 import styled from 'styled-components'
-import { Text } from 'uikit-sotatek'
+import { Text } from 'smartdex-uikit'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalRewards } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'

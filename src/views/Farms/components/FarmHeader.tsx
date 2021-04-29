@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Heading } from 'uikit-sotatek'
+import { Heading } from 'smartdex-uikit'
 import { lightColors, darkColors } from 'style/Color'
 
 export const FarmHeader = styled.div`

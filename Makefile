@@ -14,11 +14,11 @@ build-image:
 	docker push registry-server:5000/smartdex-frontend:latest
 
 build-staging:
-	npm i uikit-sotatek
+	npm i smartdex-uikit
 	npm run build:staging
 	
 build-development:
-	npm i uikit-sotatek
+	npm i smartdex-uikit
 	npm run build:development
 
 build-production:

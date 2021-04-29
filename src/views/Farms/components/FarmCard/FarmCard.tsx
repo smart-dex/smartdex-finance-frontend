@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-import { Flex, Text, Skeleton } from 'uikit-sotatek'
+import { Flex, Text, Skeleton } from 'smartdex-uikit'
 import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'

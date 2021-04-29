@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text, Flex, ChevronRightIcon } from 'uikit-sotatek'
+import { Heading, Text, Flex, ChevronRightIcon } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import nfts from 'config/constants/nfts'
 import useGetWalletNfts from 'hooks/useGetWalletNfts'

@@ -1,6 +1,6 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
-import { CalculateIcon, IconButton, useModal } from 'uikit-sotatek'
+import { CalculateIcon, IconButton, useModal } from 'smartdex-uikit'
 import styled from 'styled-components'
 import ApyCalculatorModal from './ApyCalculatorModal'
 

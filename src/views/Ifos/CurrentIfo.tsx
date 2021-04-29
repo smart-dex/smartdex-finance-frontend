@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Heading, BaseLayout, Link, Card, Button} from 'uikit-sotatek'
+import { Text, Heading, BaseLayout, Link, Card, Button} from 'smartdex-uikit'
 import { baseColors, brandColors, darkColors, lightColors } from 'style/Color'
 import { ChevronDown} from 'react-feather'
 import { ifosConfig } from 'config/constants'

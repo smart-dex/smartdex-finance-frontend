@@ -1,4 +1,4 @@
-import { Toast } from 'uikit-sotatek'
+import { Toast } from 'smartdex-uikit'
 import BigNumber from 'bignumber.js'
 import { CampaignType, FarmConfig, Nft, PoolConfig, Team } from 'config/constants/types'
 

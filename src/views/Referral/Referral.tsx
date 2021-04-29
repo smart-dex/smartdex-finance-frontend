@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Page from 'components/layout/Page'
 import styled from 'styled-components'
 import { lightColors} from 'style/Color'
-import { Text } from 'uikit-sotatek'
+import { Text } from 'smartdex-uikit'
 
 
 const StyledReferral = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { baseColors } from 'style/Color'
-import { Progress } from 'uikit-sotatek'
+import { Progress } from 'smartdex-uikit'
 
 interface IfoCardProgressProps {
   progress: number

@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button } from 'uikit-sotatek'
+import { Heading, Card, CardBody, Button } from 'smartdex-uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 import { useAllHarvest } from 'hooks/useHarvest'
