@@ -197,7 +197,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const userPoolRate = account ?(stakedBalance.div(lpTokenBalanceMC)).times(100): new BigNumber(0)
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
   const displayUserPoolRate = userPoolRate.toNumber()
-  console.log(displayLpTokenBalanceMC.toLocaleString('en-US'),"hi");
   
   useEffect(() => {
     ReactTooltip.rebuild();
