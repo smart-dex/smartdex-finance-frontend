@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useRef } from 'react'
 import { darkColors, lightColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
 import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from 'uikit-sotatek'
@@ -67,13 +67,11 @@ const EarnAPYCard = () => {
   const bnbPrice = usePriceBnbBusd()
   const ethPriceUsd = usePriceEthBusd()
   const sdcPrice = usePriceSdcBusd()
- const [ListAPY,setListAPY] = useState([])
   const maxAPY = useRef(Number.MIN_VALUE)
   const getHighestAPY = () => {
     const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
     calculateAPY(activeFarms)
-    console.log(maxAPY.current);
-    
+ 
     return (maxAPY.current * 100).toLocaleString('en-US').slice(0, -1)
   }
   const calculateAPY = useCallback(
