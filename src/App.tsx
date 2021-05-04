@@ -65,16 +65,16 @@ const App: React.FC = () => {
             <Route path="/farms">
               <Farms />
             </Route>
-            <Route path="/pools">
+            {/* <Route path="/pools">
               <Pools />
             </Route>
             <Route path="/lottery">
               <Lottery />
-            </Route>
+            </Route> */}
             <Route path="/ifo">
               <Ifos />
             </Route>
-            <Route path="/collectibles">
+            {/* <Route path="/collectibles">
               <Collectibles />
             </Route>
             <Route exact path="/teams">
@@ -88,7 +88,7 @@ const App: React.FC = () => {
             </Route>
             <Route path="/tasks">
               <Tasks />
-            </Route>
+            </Route> */}
             <Route path="/referral">
               <Referral />
             </Route>
@@ -99,15 +99,15 @@ const App: React.FC = () => {
               <RefferralManagement />
             </Route>
             {/* Redirect */}
-            <Route path="/staking">
+            {/* <Route path="/staking">
               <Redirect to="/pools" />
             </Route>
             <Route path="/syrup">
               <Redirect to="/pools" />
-            </Route>
-            <Route path="/nft">
+            </Route> */}
+            {/* <Route path="/nft">
               <Redirect to="/collectibles" />
-            </Route>
+            </Route> */}
             {/* 404 */}
             <Route component={NotFound} />
           </Switch>
