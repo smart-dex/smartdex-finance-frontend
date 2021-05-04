@@ -1,5 +1,5 @@
 import React from 'react'
-import { ModalProvider } from 'uikit-sotatek'
+import { ModalProvider } from 'smartdex-uikit'
 import { Web3ReactProvider } from '@web3-react/core'
 import bsc, { UseWalletProvider } from '@binance-chain/bsc-use-wallet'
 import { Provider } from 'react-redux'

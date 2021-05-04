@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronRightIcon, Button as UIKitButton, Flex, AutoRenewIcon, ChevronDownIcon } from 'uikit-sotatek'
+import { ChevronRightIcon, Button as UIKitButton, Flex, AutoRenewIcon, ChevronDownIcon } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import { lightColors, darkColors, brandColors, baseColors } from 'style/Color'
 

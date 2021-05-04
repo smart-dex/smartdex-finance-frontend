@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Heading, Text, TicketRound } from 'uikit-sotatek'
+import { Flex, Heading, Text, TicketRound } from 'smartdex-uikit'
 import { darkColors, lightColors } from '../../../style/Color'
 
 interface HeadingProps {

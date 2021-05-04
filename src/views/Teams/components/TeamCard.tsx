@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text, Flex } from 'uikit-sotatek'
+import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text, Flex } from 'smartdex-uikit'
 import { Team } from 'config/constants/types'
 import { darkColors, lightColors, brandColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'

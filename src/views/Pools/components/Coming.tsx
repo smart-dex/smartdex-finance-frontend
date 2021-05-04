@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Image, Button, Flex } from 'uikit-sotatek'
+import { Image, Button, Flex } from 'smartdex-uikit'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
 import { darkColors, lightColors,baseColors } from 'style/Color'

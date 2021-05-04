@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { lightColors, baseColors, darkColors } from 'style/Color'
-import { ButtonMenu, ButtonMenuItem, Text, Toggle } from 'uikit-sotatek'
+import { ButtonMenu, ButtonMenuItem, Text, Toggle } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 
 const FarmTabButtons = ({ stackedOnly, setStackedOnly, active, setActive }) => {

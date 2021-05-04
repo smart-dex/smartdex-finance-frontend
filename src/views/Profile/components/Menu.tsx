@@ -3,7 +3,7 @@ import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { baseColors, lightColors, darkColors } from 'style/Color'
 import styled from 'styled-components'
-import { Flex, Text, ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
+import { Flex, Text, ButtonMenu, ButtonMenuItem } from 'smartdex-uikit'
 
 interface MenuProps {
   activeIndex?: number

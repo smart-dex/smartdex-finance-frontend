@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
-import { ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
+import { ButtonMenu, ButtonMenuItem } from 'smartdex-uikit'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
 

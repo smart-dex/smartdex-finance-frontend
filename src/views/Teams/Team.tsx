@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/layout/Page'
 import { Link, Redirect, useParams } from 'react-router-dom'
-import { Flex, Text } from 'uikit-sotatek'
+import { Flex, Text } from 'smartdex-uikit'
 import PageLoader from 'components/PageLoader'
 import teams from 'config/constants/teams'
 import useI18n from 'hooks/useI18n'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text } from 'uikit-sotatek'
+import { Heading, Text } from 'smartdex-uikit'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'

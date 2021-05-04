@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, CardHeader, Flex, Heading, Text } from 'uikit-sotatek'
+import { Card, CardBody, CardHeader, Flex, Heading, Text } from 'smartdex-uikit'
 import Page from 'components/layout/Page'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'

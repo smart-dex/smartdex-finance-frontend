@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
-import { Modal, Button, LinkExternal } from 'uikit-sotatek'
+import { Modal, Button, LinkExternal } from 'smartdex-uikit'
 import BalanceInput from 'components/Input/BalanceInput'
 import useTokenBalance from 'hooks/useTokenBalance'
 import { getFullDisplayBalance } from 'utils/formatBalance'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { AutoRenewIcon, Flex, Heading } from 'uikit-sotatek'
+import { AutoRenewIcon, Flex, Heading } from 'smartdex-uikit'
 import orderBy from 'lodash/orderBy'
 import { useTeams } from 'state/hooks'
 import styled from 'styled-components'

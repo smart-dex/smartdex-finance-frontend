@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
-import { Heading, Text } from 'uikit-sotatek'
+import { Heading, Text } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 
 const Title = styled(Heading).attrs({ as: 'h1' })`

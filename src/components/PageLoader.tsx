@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Image } from 'uikit-sotatek'
+import { Image } from 'smartdex-uikit'
 import Page from './layout/Page'
 
 const pulse = keyframes`

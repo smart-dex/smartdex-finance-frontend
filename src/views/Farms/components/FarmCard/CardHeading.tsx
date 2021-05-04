@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Tag, Flex } from 'uikit-sotatek'
+import { Tag, Flex } from 'smartdex-uikit'
 import { lightColors, darkColors } from 'style/Color'
 import { CommunityTag, CoreTag } from 'components/Tags'
 import ReactTooltip from 'react-tooltip'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { InjectedModalProps, Modal } from 'uikit-sotatek'
+import { InjectedModalProps, Modal } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import useEditProfile, { Views } from './reducer'
 import StartView from './StartView'

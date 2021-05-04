@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Button, useModal } from 'uikit-sotatek'
+import { Text, Button, useModal } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import useTickets from 'hooks/useTickets'
 import { darkColors, lightColors, baseColors } from 'style/Color'

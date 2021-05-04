@@ -1,7 +1,7 @@
 import React from 'react'
 import { darkColors, lightColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
-import { Button, Modal } from 'uikit-sotatek'
+import { Button, Modal } from 'smartdex-uikit'
 import ModalActions from 'components/ModalActions'
 import useI18n from 'hooks/useI18n'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { baseColors, darkColors, lightColors } from 'style/Color'
-import { Button, useWalletModal } from 'uikit-sotatek'
+import { Button, useWalletModal } from 'smartdex-uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
 import useAuth from '../hooks/useAuth'
