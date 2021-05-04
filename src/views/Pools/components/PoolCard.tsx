@@ -23,6 +23,7 @@ import Card from './Card'
 import OldSyrupTitle from './OldSyrupTitle'
 import CardFooter from './CardFooter'
 import CardContent from './CardContent'
+import ImagePool from './ImagePool'
 
 
 interface PoolWithApy extends Pool {
@@ -117,7 +118,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     ReactTooltip.rebuild();
   });
   const rawEarning = getBalanceNumber(earnings, tokenDecimals)
-  const rawUserStake= getBalanceNumber(stakedBalance).toFixed(3)
+  const rawUserStake= getBalanceNumber(stakedBalance).toLocaleString('en-US')
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       <ReactTooltip id="title" place="top" type="info" effect="float" />
@@ -151,11 +152,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           </>
         )
         }
+        <ImagePool  tokenName={tokenName} stakingTokenName={stakingTokenName} />
         <StyleImgEaredDetail>
-          <StyledImageEarned>
-            <StyledImagePool>
+          {/* <StyledImageEarned> */}
+            {/* <StyledImagePool>
               <IconDirect src="/images/home/icon-pool.png" alt="" />
-            </StyledImagePool>
+            </StyledImagePool> */}
             <StyledCoinEarned>
               <StyledTextEarned>
                 <Label
@@ -165,14 +167,14 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 />
               </StyledTextEarned>
               {!isOldSyrup ? (
-                <BalanceAndCompound data-tip={rawEarning.toFixed(3)}>
+                <BalanceAndCompound data-tip={rawEarning.toLocaleString('en-US')}>
                   <Balance value={rawEarning} isDisabled={isFinished} fontSize="20px" />
                 </BalanceAndCompound>
               ) : (
                 <OldSyrupTitle hasBalance={accountHasStakedBalance} />
               )}
             </StyledCoinEarned>
-          </StyledImageEarned>
+          {/* </StyledImageEarned> */}
 
           <DetailPool>
             <StyledDetails style={{ marginBottom: '26px' }}>
@@ -186,7 +188,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                   <StyleFlexDetail isFinished={isFinished}> - </StyleFlexDetail>
                 )
                 : (
-                  <StyledAprDetail data-tip={apy?.toFixed(2)}>
+                  <StyledAprDetail data-tip={apy?.toNumber().toLocaleString('en-US').slice(0, -1)}>
                     <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()} decimals={2} unit="%" />
                   </StyledAprDetail>
 
@@ -197,7 +199,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               <StyledYourStakeDetail data-tip={rawUserStake}>
                 <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
               </StyledYourStakeDetail>
-
             </StyledDetailsStake>
           </DetailPool>
         </StyleImgEaredDetail>
@@ -333,6 +334,9 @@ const StyledCoinEarned = styled(Flex)`
   ${({ theme }) => theme.mediaQueries.nav} {
     flex-direction:column;
   }
+  justify-content: center;
+  align-items: center;
+  border-right:1px solid ${({ theme }) => (theme.isDark ? darkColors.lineDriver : lightColors.lineDriver)};
 `
 const DetailPool = styled.div`
   padding-left: 10px;
