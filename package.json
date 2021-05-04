@@ -59,7 +59,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "react-tooltip": "^4.2.17",
-    "smartdex-uikit": "^1.0.0",
+    "smartdex-uikit": "^1.1.1",
     "styled-components": "^5.1.1",
     "typescript": "^4.1.5",
     "uikit-sotatek": "^1.7.1",
