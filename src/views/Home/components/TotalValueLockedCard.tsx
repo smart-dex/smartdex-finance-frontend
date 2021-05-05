@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Card, CardBody, Heading, Skeleton, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
-import { useGetStats } from 'hooks/api'
 import { darkColors, lightColors } from '../../../style/Color'
+import { useGlobalData } from '../../../contexts/GlobalData'
 
 const StyledTotalValueLockedCard = styled(Card)`
   min-height: 212px;
@@ -50,20 +50,21 @@ const HeadingStyle = styled(Heading)`
     font-size: 36px;
   }
 `
+
 const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
-  const data = useGetStats()
-  const tvl = data ? data.total_value_locked_all.toLocaleString('en-US', { maximumFractionDigits: 0 }) : null
+  const { totalLiquidityUSD } = useGlobalData()
+  const tvl = totalLiquidityUSD
 
   return (
     <StyledTotalValueLockedCard>
       <CardBody>
         <HeadingBlock>
           <HeadingEarn>{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
-          {data ? <HeadingStyle>{`$${tvl}`}</HeadingStyle> : <> </>}
+          {tvl ? <HeadingStyle>{`$${tvl}`}</HeadingStyle> : <> </>}
         </HeadingBlock>
 
-        {data ? (
+        {tvl ? (
           <TextStyle>{TranslateString(764, 'Across all LPs and Syrup Pools')}</TextStyle>
         ) : (
           <>
