@@ -2,7 +2,7 @@ import React from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
-import { Modal, Text, LinkExternal, Flex } from 'uikit-sotatek'
+import { Modal, Text, LinkExternal, Flex } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import { calculateSdcEarnedPerThousandDollars, apyModalRoi } from 'utils/compoundApyHelpers'
 

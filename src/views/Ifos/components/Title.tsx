@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { lightColors } from 'style/Color'
-import { Heading } from 'uikit-sotatek'
+import { Heading } from 'smartdex-uikit'
 
 const Title = styled(Heading).attrs({ size: 'lg' })`
   color: ${lightColors.textMenuLeft};

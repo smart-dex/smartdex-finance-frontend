@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { Button, useModal, Flex, Text } from 'uikit-sotatek'
+import { Button, useModal, Flex, Text } from 'smartdex-uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, Radio } from 'uikit-sotatek'
+import { Card, Radio } from 'smartdex-uikit'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 
 interface SelectionCardProps {

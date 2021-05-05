@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { darkColors, lightColors } from 'style/Color'
-import { Text, Button, InputProps, Flex, Link } from 'uikit-sotatek'
+import { Text, Button, InputProps, Flex, Link } from 'smartdex-uikit'
 import NumberFormat from 'react-number-format';
 import useI18n from '../../hooks/useI18n'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card } from 'uikit-sotatek'
+import { Card } from 'smartdex-uikit'
 import { DataResponse } from 'utils/getLotteryRoundData'
 import { darkColors, lightColors } from 'style/Color'
 import PastRoundCardError from './PastRoundCardError'

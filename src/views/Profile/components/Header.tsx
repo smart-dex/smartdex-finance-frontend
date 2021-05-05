@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Flex, Heading, useModal, Won, Text } from 'uikit-sotatek'
+import { Button, Flex, Heading, useModal, Won, Text } from 'smartdex-uikit'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'

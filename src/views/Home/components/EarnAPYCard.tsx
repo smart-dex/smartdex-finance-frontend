@@ -1,7 +1,7 @@
 import React, { useCallback, useRef } from 'react'
 import { darkColors, lightColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from 'uikit-sotatek'
+import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from 'smartdex-uikit'
 import { NavLink } from 'react-router-dom'
 import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'

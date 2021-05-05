@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect} from 'react'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button, useModal } from 'uikit-sotatek'
+import { Heading, Card, CardBody, Button, useModal } from 'smartdex-uikit'
 import { getSdcAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'

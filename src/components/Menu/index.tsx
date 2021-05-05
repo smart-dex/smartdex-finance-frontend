@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Menu as UikitMenu } from 'uikit-sotatek'
+import { Menu as UikitMenu } from 'smartdex-uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
@@ -42,39 +42,39 @@ const Menu = (props) => {
       icon: 'FarmIcon',
       href: '/farms',
     },
-    {
-      label: `${TranslateString(676, 'Pools')}`,
-      icon: 'PoolIcon',
-      href: '/pools',
-    },
-    {
-      label: `${TranslateString(14, 'Lottery')}`,
-      icon: 'TicketIcon',
-      href: '/lottery',
-    },
-    {
-      label: `${TranslateString(12215, 'Collectibles')}`,
-      icon: 'NftIcon',
-      href: '/collectibles',
-    },
-    {
-      label: `${TranslateString(12216, 'Teams & Profile')}`,
-      icon: 'GroupsIcon',
-      items: [
-        {
-          label: `${TranslateString(12217, 'Leaderboard')}`,
-          href: '/teams',
-        },
-        {
-          label: `${TranslateString(1090, 'Task Center')}`,
-          href: '/tasks',
-        },
-        {
-          label: `${TranslateString(12218, 'Your Profile')}`,
-          href: '/profile',
-        },
-      ],
-    },
+    // {
+    //   label: `${TranslateString(676, 'Pools')}`,
+    //   icon: 'PoolIcon',
+    //   href: '/pools',
+    // },
+    // {
+    //   label: `${TranslateString(14, 'Lottery')}`,
+    //   icon: 'TicketIcon',
+    //   href: '/lottery',
+    // },
+    // {
+    //   label: `${TranslateString(12215, 'Collectibles')}`,
+    //   icon: 'NftIcon',
+    //   href: '/collectibles',
+    // },
+    // {
+    //   label: `${TranslateString(12216, 'Teams & Profile')}`,
+    //   icon: 'GroupsIcon',
+    //   items: [
+    //     {
+    //       label: `${TranslateString(12217, 'Leaderboard')}`,
+    //       href: '/teams',
+    //     },
+    //     {
+    //       label: `${TranslateString(1090, 'Task Center')}`,
+    //       href: '/tasks',
+    //     },
+    //     {
+    //       label: `${TranslateString(12218, 'Your Profile')}`,
+    //       href: '/profile',
+    //     },
+    //   ],
+    // },
     {
       label: `${TranslateString(680, 'Info')}`,
       icon: 'InfoIcon',

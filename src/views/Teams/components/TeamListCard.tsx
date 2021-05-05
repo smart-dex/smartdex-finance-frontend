@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Button, Flex, Heading, Text } from 'uikit-sotatek'
+import { Button, Flex, Heading, Text } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import { darkColors, lightColors } from 'style/Color'
 import { Team } from 'config/constants/types'

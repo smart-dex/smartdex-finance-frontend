@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
-import { Link } from 'uikit-sotatek'
+import { Link } from 'smartdex-uikit'
 import { darkColors, lightColors, baseColors } from 'style/Color'
 import useI18n from 'hooks/useI18n'
 

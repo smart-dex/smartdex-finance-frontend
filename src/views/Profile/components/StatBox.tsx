@@ -1,5 +1,5 @@
 import React, { ElementType, ReactNode } from 'react'
-import { Flex, Heading, Text, TextProps } from 'uikit-sotatek'
+import { Flex, Heading, Text, TextProps } from 'smartdex-uikit'
 import styled, { css } from 'styled-components'
 import { lightColors, darkColors } from 'style/Color'
 import SecondaryCard from './SecondaryCard'

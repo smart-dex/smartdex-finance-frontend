@@ -1,6 +1,6 @@
 import React from 'react'
 import { darkColors, lightColors } from 'style/Color'
-import { Text } from 'uikit-sotatek'
+import { Text } from 'smartdex-uikit'
 import styled from 'styled-components'
 import { usePriceSdcBusd } from 'state/hooks'
 import { BigNumber } from 'bignumber.js'

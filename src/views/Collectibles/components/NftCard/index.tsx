@@ -11,7 +11,7 @@ import {
   ChevronDownIcon,
   CardFooter,
   useModal,
-} from 'uikit-sotatek'
+} from 'smartdex-uikit'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import { Nft } from 'config/constants/types'

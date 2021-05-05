@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes } from 'react'
 import styled from 'styled-components'
-import { Button, Text } from 'uikit-sotatek'
+import { Button, Text } from 'smartdex-uikit'
 import { lightColors, darkColors } from 'style/Color'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

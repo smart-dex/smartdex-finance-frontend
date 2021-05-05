@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'uikit-sotatek'
+import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'smartdex-uikit'
 
 const CoreTag = () => (
   <StyledCoreTag outline startIcon={<VerifiedIcon />}>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { ToastContainer, Toast } from 'uikit-sotatek'
+import { ToastContainer, Toast } from 'smartdex-uikit'
 import { useToast } from 'state/hooks'
 import { State } from 'state/types'
 

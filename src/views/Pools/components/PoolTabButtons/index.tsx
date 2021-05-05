@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ButtonMenu, ButtonMenuItem, Toggle, Text } from 'uikit-sotatek'
+import { ButtonMenu, ButtonMenuItem, Toggle, Text } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import { baseColors, lightColors, darkColors } from 'style/Color'
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { ButtonMenu, ButtonMenuItem } from 'uikit-sotatek'
+import { ButtonMenu, ButtonMenuItem } from 'smartdex-uikit'
 import { useRouteMatch, Link, Route } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'

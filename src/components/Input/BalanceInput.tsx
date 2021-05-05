@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from 'uikit-sotatek'
+import { Button } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import Input, { InputProps } from './Input'

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, Flex } from 'uikit-sotatek'
+import { Heading, Text, Flex } from 'smartdex-uikit'
 import { darkColors, lightColors } from 'style/Color'
 
 interface IfoCardHeaderProps {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { darkColors, lightColors, baseColors, brandColors } from 'style/Color'
 import styled from 'styled-components'
-import { Heading, Text } from 'uikit-sotatek'
+import { Heading, Text } from 'smartdex-uikit'
 import useI18n from 'hooks/useI18n'
 import UnlockButton from 'components/UnlockButton'
 
