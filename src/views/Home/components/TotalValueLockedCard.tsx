@@ -6,14 +6,14 @@ import { useGetStats } from 'hooks/api'
 import { darkColors, lightColors } from '../../../style/Color'
 
 const StyledTotalValueLockedCard = styled(Card)`
-  min-height: 212px;
+min-height: 203px;
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
   background: ${({ theme }) => (theme.isDark ? darkColors.backIfo : lightColors.backIfo)};
   box-shadow: 14px 14px 20px rgba(120, 118, 148, 0.1);
   border-radius: 40px;
   margin-bottom: 25px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    min-height: 393px;
+    min-height: 230px;
     margin-bottom: 20px;
   }
 `

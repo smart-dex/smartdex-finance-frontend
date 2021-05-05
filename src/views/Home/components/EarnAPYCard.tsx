@@ -18,7 +18,7 @@ const StyledFarmStakingCard = styled(Card)`
   min-height: 203px;
   padding-bottom: 30px;
   ${({ theme }) => theme.mediaQueries.nav} {
-    min-height: 255px;
+    min-height: 230px;
     margin-bottom: 20px;
   }
 `
