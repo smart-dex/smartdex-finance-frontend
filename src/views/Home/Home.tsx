@@ -77,15 +77,16 @@ const Home: React.FC = () => {
       <CardBlock>
         <Cards>
           <FarmStakingCard />
-          <LotteryCard />
+          {/* <LotteryCard /> */}
         </Cards>
-        <CardsMid>
-          <EarnAPYCard />
-          <EarnAssetCard />
-          <WinCard />
-        </CardsMid>
+        {/* <CardsMid> */}
+        {/* <EarnAPYCard /> */}
+        {/* <EarnAssetCard /> */}
+        {/* <WinCard /> */}
+        {/* </CardsMid> */}
         <Cards>
-          <SdcStats />
+          <EarnAPYCard />
+          {/* <SdcStats /> */}
           <TotalValueLockedCard />
         </Cards>
       </CardBlock>
