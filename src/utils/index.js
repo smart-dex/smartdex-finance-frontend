@@ -2,6 +2,7 @@ import React from 'react'
 import { BigNumber } from 'bignumber.js'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
+import Numeral from 'numeral'
 import { blockClient } from '../apollo/client'
 import { GET_BLOCK, GET_BLOCKS } from '../apollo/queries'
 
@@ -111,5 +112,54 @@ export const getPercentChange = (valueNow, value24HoursAgo) => {
     return 0
   }
   return adjustedPercentChange
+}
+
+export const toK = (num) => {
+  return Numeral(num).format('0.[00]a')
+}
+
+export const formatDollarAmount = (num, digits) => {
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  })
+  return formatter.format(num)
+}
+
+export const formattedNum = (number, usd = false, acceptNegatives = false) => {
+  if (Number.isNaN(number) || number === '' || number === undefined) {
+    return usd ? '$0' : 0
+  }
+  const num = parseFloat(number)
+
+  if (num > 500000000) {
+    return (usd ? '$' : '') + toK(num.toFixed(0), true)
+  }
+
+  if (num === 0) {
+    if (usd) {
+      return '$0'
+    }
+    return 0
+  }
+
+  if (num < 0.0001 && num > 0) {
+    return usd ? '< $0.0001' : '< 0.0001'
+  }
+
+  if (num > 1000) {
+    return usd ? formatDollarAmount(num, 0) : Number(parseFloat(num).toFixed(0)).toLocaleString()
+  }
+
+  if (usd) {
+    if (num < 0.1) {
+      return formatDollarAmount(num, 4)
+    }
+    return formatDollarAmount(num, 2)
+  }
+
+  return Number(parseFloat(num).toFixed(5)).toLocaleString()
 }
 

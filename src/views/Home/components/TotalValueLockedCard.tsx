@@ -4,6 +4,7 @@ import { Card, CardBody, Heading, Skeleton, Text } from '@pancakeswap-libs/uikit
 import useI18n from 'hooks/useI18n'
 import { darkColors, lightColors } from '../../../style/Color'
 import { useGlobalData } from '../../../contexts/GlobalData'
+import { formattedNum } from '../../../utils'
 
 const StyledTotalValueLockedCard = styled(Card)`
   min-height: 212px;
@@ -54,14 +55,14 @@ const HeadingStyle = styled(Heading)`
 const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
   const { totalLiquidityUSD } = useGlobalData()
-  const tvl = totalLiquidityUSD.toFixed(3)
+  const tvl = formattedNum(totalLiquidityUSD, true)
 
   return (
     <StyledTotalValueLockedCard>
       <CardBody>
         <HeadingBlock>
           <HeadingEarn>{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
-          {tvl|| tvl ===0 ? <HeadingStyle>{`$${tvl}`}</HeadingStyle> : <> </>}
+          {tvl|| tvl ===0 ? <HeadingStyle>{`${tvl}`}</HeadingStyle> : <> </>}
         </HeadingBlock>
         {tvl || tvl ===0  ? (
           <TextStyle>{TranslateString(764, 'Across all LPs and Syrup Pools')}</TextStyle>
