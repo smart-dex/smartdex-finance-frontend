@@ -1,18 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'smartdex-uikit'
+import useI18n from 'hooks/useI18n'
 
-const CoreTag = () => (
-  <StyledCoreTag outline startIcon={<VerifiedIcon />}>
-    Core
-  </StyledCoreTag>
-)
+const CoreTag = () => {
+  const TranslateString = useI18n()
+  return (
+    <StyledCoreTag outline startIcon={<VerifiedIcon />}>
+      {TranslateString(522, 'Core')}
+    </StyledCoreTag>
+  )
+}
 
-const CommunityTag = () => (
-  <StyledCoreCommunity variant="textSubtle" outline startIcon={<CommunityIcon />}>
-    Community
-  </StyledCoreCommunity>
-)
+const CommunityTag = () => {
+  const TranslateString = useI18n()
+  return (
+    <StyledCoreCommunity variant="textSubtle" outline startIcon={<CommunityIcon />}>
+      {TranslateString(520, 'Community')}
+    </StyledCoreCommunity>
+  )
+}
 
 const BinanceTag = () => (
   <Tag variant="binance" outline startIcon={<BinanceIcon />}>
@@ -27,12 +34,12 @@ const StyledCoreTag = styled(Tag)`
     fill: #ffa14e;
   }
 `
-const StyledCoreCommunity =styled(Tag)`
-border: 1px solid #E2E2E8;
-border-radius: 20px;
-color: #5F5E76;
-svg {
-  fill: #5F5E76;
-}
+const StyledCoreCommunity = styled(Tag)`
+  border: 1px solid #e2e2e8;
+  border-radius: 20px;
+  color: #5f5e76;
+  svg {
+    fill: #5f5e76;
+  }
 `
 export { CoreTag, CommunityTag, BinanceTag }

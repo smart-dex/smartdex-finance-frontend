@@ -41,10 +41,10 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   const sdcEarnedPerThousand1D = calculateSdcEarnedPerThousandDollars({ numberOfDays: 1, farmApy, sdcPrice })
   const sdcEarnedPerThousand7D = calculateSdcEarnedPerThousandDollars({ numberOfDays: 7, farmApy, sdcPrice })
   const sdcEarnedPerThousand30D = calculateSdcEarnedPerThousandDollars({ numberOfDays: 30, farmApy, sdcPrice })
-  const sdcEarnedPerThousand365D = calculateSdcEarnedPerThousandDollars({ numberOfDays: 365, farmApy, sdcPrice })
+  const sdcEarnedPerThousand365D = calculateSdcEarnedPerThousandDollars({ numberOfDays: 365, farmApy, sdcPrice })  
 
   return (
-    <Modal title="ROI" onDismiss={onDismiss}>
+    <Modal title={TranslateString(858, 'ROI')} onDismiss={onDismiss}>
       <Wrapmodal>
       <Grid>
         <GridItem>
@@ -64,7 +64,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 1 day row */}
         <GridItem>
-          <TextStyled>1d</TextStyled>
+          <TextStyled>1{TranslateString(3057, 'd')}</TextStyled>
         </GridItem>
         <GridItem>
           <TextStyled>
@@ -76,7 +76,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 7 day row */}
         <GridItem>
-          <TextStyled>7d</TextStyled>
+          <TextStyled>7{TranslateString(3057, 'd')}</TextStyled>
         </GridItem>
         <GridItem>
           <TextStyled>
@@ -88,7 +88,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 30 day row */}
         <GridItem>
-          <TextStyled>30d</TextStyled>
+          <TextStyled>30{TranslateString(3057, 'd')}</TextStyled>
         </GridItem>
         <GridItem>
           <TextStyled>
@@ -100,15 +100,15 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 365 day / APY row */}
         <GridItem>
-          <TextStyled>365d(APY)</TextStyled>
+          <TextStyled>365{TranslateString(3057, 'd')}(APY)</TextStyled>
         </GridItem>
         <GridItem>
           <TextStyled>
-            {apyModalRoi({ amountEarned: sdcEarnedPerThousand365D, amountInvested: oneThousandDollarsWorthOfSdc })}%
+            {apyModalRoi({ amountEarned: sdcEarnedPerThousand365D, amountInvested: oneThousandDollarsWorthOfSdc })  === "Infinity" ? TranslateString(3058, 'Infinity') : apyModalRoi({ amountEarned: sdcEarnedPerThousand365D, amountInvested: oneThousandDollarsWorthOfSdc })}%
           </TextStyled>
         </GridItem>
         <GridItem>
-          <TextStyled>{sdcEarnedPerThousand365D}</TextStyled>
+          <TextStyled>{sdcEarnedPerThousand365D.toString() === "Infinity" ? TranslateString(3058, 'Infinity') : sdcEarnedPerThousand365D}</TextStyled>
         </GridItem>
       </Grid>
       <DescriptionStyled>

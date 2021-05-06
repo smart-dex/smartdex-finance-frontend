@@ -83,7 +83,7 @@ const DepositModal: React.FC<DepositModalProps> = ({
         </ModalActions>
         <Stylelink>
           <StyledLinkExternal href={addLiquidityUrl} style={{ alignSelf: 'center' }}>
-            {TranslateString(999, 'Get')} {tokenName}
+            {TranslateString(3061, 'Get')} {tokenName}
           </StyledLinkExternal>
         </Stylelink>
       </StyledModal>
