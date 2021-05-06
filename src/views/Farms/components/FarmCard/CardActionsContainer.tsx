@@ -218,11 +218,11 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
                       tokenBalance.eq(0) && stakedBalance.eq(0) ?
                         (
                           <ButtonDeposit as="a" href={addLiquidityUrl} target="_blank" >
-                            <span>  {TranslateString(999, 'Deposit')}</span>
+                            <span>  {TranslateString(316, 'Deposit')}</span>
                           </ButtonDeposit>
                         ) : (
                           <>
-                            <SelectButton onClick={onSelect} disabled={pendingTx}>  {TranslateString(999, 'Select')}</SelectButton>
+                            <SelectButton onClick={onSelect} disabled={pendingTx}>  {TranslateString(568, 'Select')}</SelectButton>
                             <ButtonDetail onClick={changeOpenDetail} isShow={isOpenDetail} mt="10px" mb="10px">
                               {isOpenDetail ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
                             </ButtonDetail>

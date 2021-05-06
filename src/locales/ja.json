@@ -1414,7 +1414,7 @@
             "stringId": 268,
             "contentType": "text/plain",
             "translationId": 9014,
-            "text": "プール済",
+            "text": "プール",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -1444,7 +1444,7 @@
             "stringId": 272,
             "contentType": "text/plain",
             "translationId": 37340,
-            "text": "あなたのプールシェア:",
+            "text": "あなたのプールシェア",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -1759,7 +1759,7 @@
             "stringId": 316,
             "contentType": "text/plain",
             "translationId": 9084,
-            "text": "入金",
+            "text": "保証金",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -3499,7 +3499,7 @@
             "stringId": 522,
             "contentType": "text/plain",
             "translationId": 21388,
-            "text": "コア",
+            "text": "芯",
             "user": {
                 "id": 14451920,
                 "username": "cryptobluecat",
@@ -3934,7 +3934,7 @@
             "stringId": 588,
             "contentType": "text/plain",
             "translationId": 38550,
-            "text": "ステーク解除",
+            "text": "アンステーク",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -5914,7 +5914,7 @@
             "stringId": 858,
             "contentType": "text/plain",
             "translationId": 33482,
-            "text": "投資効率",
+            "text": "ロッド",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -7489,7 +7489,7 @@
             "stringId": 1070,
             "contentType": "text/plain",
             "translationId": 47634,
-            "text": "ステーキング",
+            "text": "ステーク",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -9540,8 +9540,155 @@
             },
             "createdAt": "2021-03-15T14:00:31+00:00"
         }
+    }, 
+    {
+        "data": {
+            "stringId": 3052,
+            "contentType": "text/plain",
+            "translationId": 610107,
+            "text": "総預金",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3053,
+            "contentType": "text/plain",
+            "translationId": 610108,
+            "text": "プールレート",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3054,
+            "contentType": "text/plain",
+            "translationId": 610109,
+            "text": "あなたのプールレート",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3055,
+            "contentType": "text/plain",
+            "translationId": 610110,
+            "text": "あなたの流動性預金",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3056,
+            "contentType": "text/plain",
+            "translationId": 610111,
+            "text": "未請求のSDC",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3057,
+            "contentType": "text/plain",
+            "translationId": 610112,
+            "text": "日",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3058,
+            "contentType": "text/plain",
+            "translationId": 610113,
+            "text": "インフィニティ",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3059,
+            "contentType": "text/plain",
+            "translationId": 610114,
+            "text": "合計プールトークン",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3060,
+            "contentType": "text/plain",
+            "translationId": 610115,
+            "text": "報酬のプールトークン",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3061,
+            "contentType": "text/plain",
+            "translationId": 610116,
+            "text": "取得する",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
     }
-    
-    
-    
 ]

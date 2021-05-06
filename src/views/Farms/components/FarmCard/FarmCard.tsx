@@ -239,7 +239,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             </Detail>
           )}
           <Detail mb="37px" >
-            <DetailInFo>{TranslateString(999, 'Total Deposits')}: </DetailInFo>
+            <DetailInFo>{TranslateString(3052, 'Total Deposits')}: </DetailInFo>
             <DetailValue>
               {lpTokenBalanceMC ? (
                 <>
@@ -253,7 +253,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             </DetailValue>
           </Detail>
           <Detail mb="37px" >
-            <DetailInFo>{TranslateString(999, 'Pool Rate')}: </DetailInFo>
+            <DetailInFo>{TranslateString(3053, 'Pool Rate')}: </DetailInFo>
             <DetailValue>
               {!poolRate.isNaN() ? (
                 <>
@@ -267,7 +267,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             </DetailValue>
           </Detail>
           <Detail mb="37px" >
-            <DetailInFo>{TranslateString(999, 'Your Pool Rate')}: </DetailInFo>
+            <DetailInFo>{TranslateString(3054, 'Your Pool Rate')}: </DetailInFo>
             <DetailValue>
               {!userPoolRate.isNaN() ? (
                 <>

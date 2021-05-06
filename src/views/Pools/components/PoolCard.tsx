@@ -234,7 +234,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                   marginTop='10px'
                   onClick={onStart}
                 >
-                  {TranslateString(999, 'Select')}
+                  {TranslateString(568, 'Select')}
                 </ButtonSelect>
               </>
             ))}

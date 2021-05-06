@@ -1414,7 +1414,7 @@
             "stringId": 268,
             "contentType": "text/plain",
             "translationId": 36600,
-            "text": "已儲集",
+            "text": "匯集",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -1444,7 +1444,7 @@
             "stringId": 272,
             "contentType": "text/plain",
             "translationId": 36606,
-            "text": "您的資金池持份：",
+            "text": "您的泳池份額",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -1759,7 +1759,7 @@
             "stringId": 316,
             "contentType": "text/plain",
             "translationId": 36768,
-            "text": "儲值",
+            "text": "訂金",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3499,7 +3499,7 @@
             "stringId": 522,
             "contentType": "text/plain",
             "translationId": 38000,
-            "text": "核心",
+            "text": "核",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -3934,7 +3934,7 @@
             "stringId": 588,
             "contentType": "text/plain",
             "translationId": 22716,
-            "text": "取回",
+            "text": "放心",
             "user": {
                 "id": 14439406,
                 "username": "Potaball",
@@ -7474,7 +7474,7 @@
             "stringId": 1070,
             "contentType": "text/plain",
             "translationId": 47392,
-            "text": "質押",
+            "text": "股權",
             "user": {
                 "id": 13476071,
                 "username": "Kbph",
@@ -9525,6 +9525,155 @@
             },
             "createdAt": "2021-03-15T14:00:31+00:00"
         }
+    },
+    {
+        "data": {
+            "stringId": 3052,
+            "contentType": "text/plain",
+            "translationId": 610107,
+            "text": "存款總額",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3053,
+            "contentType": "text/plain",
+            "translationId": 610108,
+            "text": "池價",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3054,
+            "contentType": "text/plain",
+            "translationId": 610109,
+            "text": "您的泳池費用",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3055,
+            "contentType": "text/plain",
+            "translationId": 610110,
+            "text": "您的流動資金存款",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3056,
+            "contentType": "text/plain",
+            "translationId": 610111,
+            "text": "您無人認領的SDC",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3057,
+            "contentType": "text/plain",
+            "translationId": 610112,
+            "text": "日",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3058,
+            "contentType": "text/plain",
+            "translationId": 610113,
+            "text": "無限",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3059,
+            "contentType": "text/plain",
+            "translationId": 610114,
+            "text": "您的總池令牌",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3060,
+            "contentType": "text/plain",
+            "translationId": 610115,
+            "text": "獎池中的代幣",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
+    },
+    {
+        "data": {
+            "stringId": 3061,
+            "contentType": "text/plain",
+            "translationId": 610116,
+            "text": "得到",
+            "user": {
+                "id": 13288016,
+                "username": "Chris66",
+                "fullName": "Chris66",
+                "avatarUrl": "https://www.gravatar.com/avatar/43b207a064212b2f0b164662b3a4f43f?s=96&d=https%3A%2F%2Fcrowdin.com%2Fimages%2Fuser-picture.png"
+            },
+            "createdAt": "2021-03-15T14:00:31+00:00"
+        }
     }
-    
 ]

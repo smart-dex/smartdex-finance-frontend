@@ -171,7 +171,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
     <>
       
       <Flex flexDirection="column">
-        <StyledText style={{ alignSelf: 'start', marginBottom: '14px' }}>{TranslateString(999, 'Your Liquidity deposits')}</StyledText>
+        <StyledText style={{ alignSelf: 'start', marginBottom: '14px' }}>{TranslateString(3055, 'Your Liquidity deposits')}</StyledText>
         <Flex>
           <BalanceAndCompound data-tip={rawStakedBalance.toLocaleString('en-US')}>
             <Balance fontSize="32px" value={rawStakedBalance} />
@@ -181,7 +181,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       </Flex>
       <Flex mt="21px" mb="22px">
         <Flex flexDirection="column" style={{ flex: '1' }} >
-          <StyledText style={{ alignSelf: 'start' }} marginBottom='20px' marginTop='-4px'>{TranslateString(999, 'Your unclaimed SDC')}</StyledText>
+          <StyledText style={{ alignSelf: 'start' }} marginBottom='20px' marginTop='-4px'>{TranslateString(3056, 'Your unclaimed SDC')}</StyledText>
           <BalanceAndCompound data-tip={rawEarningsBalance.toLocaleString('en-US')}>
             <Balance value={rawEarningsBalance} />
           </BalanceAndCompound>
@@ -200,7 +200,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
                 setPendingTx(false)
               }
             }}
-          >{TranslateString(999, 'Claim')}</ButtonClaim>
+          >{TranslateString(1209, 'Claim')}</ButtonClaim>
           <DetailStyled data-tip={displayPoolRate.toLocaleString('en-US')}>
             <Balance value={displayPoolRate} /> <span>SDC/{TranslateString(999, 'WEEK')}</span>
           </DetailStyled>
@@ -209,27 +209,27 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 
       <Flex>
         <StyledTextInfo>
-          {TranslateString(999, 'Your total pool token')}:
+          {TranslateString(3059, 'Your total pool token')}:
         </StyledTextInfo>
         <DetailStyled data-tip={rawTotalYourPoolToken.toLocaleString('en-US')}>
           <Balance value={rawTotalYourPoolToken} /> <span>{lpLabel}</span>
         </DetailStyled>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pool token in rewards')}:</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(3060, 'Pool token in rewards')}:</StyledTextInfo>
         <DetailStyled data-tip={displayLpTokenBalanceMC.toLocaleString('en-US')}>
           <Balance value={displayLpTokenBalanceMC} />  <span>{lpLabel}</span>
         </DetailStyled>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pooled')} {tokenSymbol}:
+        <StyledTextInfo>{TranslateString(268, 'Pooled')} {tokenSymbol}:
         </StyledTextInfo>
         <DetailStyled data-tip={displayTokenBalanceLp.toLocaleString('en-US')}>
           <Balance value={displayTokenBalanceLp} />   <span>{tokenSymbol}</span>
         </DetailStyled>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Pooled')} {quoteTokenSymbol}:
+        <StyledTextInfo>{TranslateString(268, 'Pooled')} {quoteTokenSymbol}:
         </StyledTextInfo>
         <DetailStyled data-tip={displayQuoteTokenBlanceLP.toLocaleString('en-US')}>
           <Balance value={displayQuoteTokenBlanceLP} />  <span>{quoteTokenSymbol}</span>
@@ -237,10 +237,10 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Your pool share')}: <span data-tip={displayYourPoolShare}>{displayYourPoolShare}</span> %</StyledTextInfo>
+        <StyledTextInfo>{TranslateString(272, 'Your pool share')}: <span data-tip={displayYourPoolShare}>{displayYourPoolShare}</span> %</StyledTextInfo>
       </Flex>
       <Flex>
-        <StyledTextInfo>{TranslateString(999, 'Total USD')}: <span data-tip={totalValueTooltip}>{totalValueFormated}</span></StyledTextInfo>
+        <StyledTextInfo>{TranslateString(408, 'Total')} USD: <span data-tip={totalValueTooltip}>{totalValueFormated}</span></StyledTextInfo>
       </Flex>
       <Flex justifyContent="flex-start">
         <StyledLink external href={bscScanAddress} bold={false}>

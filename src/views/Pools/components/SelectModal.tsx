@@ -114,7 +114,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                   }
                 }}
               >
-                { TranslateString(999, 'Claim')}</HarvestButton>
+                { TranslateString(1209, 'Claim')}</HarvestButton>
             )}
             {!isOldSyrup && sousId === 0 && account && harvest && (
               <CompoundButton
@@ -161,7 +161,7 @@ const SelectModal: React.FC<SelectModalProps> = ({ onDismiss, harvest, tokenDeci
                     : onPresentWithdraw
                 }
               >
-                Unstake
+                {TranslateString(588, `Unstake`)}
              </ButtonUnstake>
             }
 
