@@ -9,6 +9,7 @@ import { LanguageContextProvider } from 'contexts/Localisation/languageContext'
 import { ThemeContextProvider } from 'contexts/ThemeContext'
 import { BlockContextProvider } from 'contexts/BlockContext'
 import { RefreshContextProvider } from 'contexts/RefreshContext'
+import GlobalDataContextProvider from 'contexts/GlobalData'
 import store from 'state'
 
 const Providers: React.FC = ({ children }) => {
@@ -26,11 +27,13 @@ const Providers: React.FC = ({ children }) => {
               bsc,
             }}
           >
+            <GlobalDataContextProvider>
             <BlockContextProvider>
               <RefreshContextProvider>
                 <ModalProvider>{children}</ModalProvider>
               </RefreshContextProvider>
             </BlockContextProvider>
+            </GlobalDataContextProvider>
           </UseWalletProvider>
         </LanguageContextProvider>
       </ThemeContextProvider>
