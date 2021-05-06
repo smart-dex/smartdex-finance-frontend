@@ -54,17 +54,16 @@ const HeadingStyle = styled(Heading)`
 const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
   const { totalLiquidityUSD } = useGlobalData()
-  const tvl = totalLiquidityUSD
+  const tvl = totalLiquidityUSD.toFixed(3)
 
   return (
     <StyledTotalValueLockedCard>
       <CardBody>
         <HeadingBlock>
           <HeadingEarn>{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
-          {tvl ? <HeadingStyle>{`$${tvl}`}</HeadingStyle> : <> </>}
+          {tvl|| tvl ===0 ? <HeadingStyle>{`$${tvl}`}</HeadingStyle> : <> </>}
         </HeadingBlock>
-
-        {tvl ? (
+        {tvl || tvl ===0  ? (
           <TextStyle>{TranslateString(764, 'Across all LPs and Syrup Pools')}</TextStyle>
         ) : (
           <>
