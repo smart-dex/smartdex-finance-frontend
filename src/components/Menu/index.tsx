@@ -124,19 +124,19 @@ const Menu = (props) => {
 
   const linkMyPage = [
     {
-      label: "My Page",
+      label: `${TranslateString(12219, "My Page")}`,
       icon: "MyPageIcon",
       items: [
         {
-          label: "Wallet",
+          label: `${TranslateString(12220, 'Wallet')}`,
           href: "/wallet",
         },
         {
-          label: "Referral",
+          label: `${TranslateString(12221, 'Referral')}`,
           href: "/referral",
         },
         {
-          label: "Referral Management",
+          label: `${TranslateString(12222, 'Referral Management')}`,
           href: "/referral-management",
         },
       ],
