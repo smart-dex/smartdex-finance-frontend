@@ -89,6 +89,21 @@ export const ALL_TOKENS = gql`
         }
     }
 `
+export const TOKEN = gql`
+    query token($id: ID!) {
+        token(id: $id) {
+            id
+            name
+            symbol
+            derivedETH
+            tradeVolume
+            tradeVolumeUSD
+            untrackedVolumeUSD
+            totalLiquidity
+            txCount
+        }
+    }
+`
 
 export const ALL_PAIRS = gql`
     query pairs($skip: Int!) {

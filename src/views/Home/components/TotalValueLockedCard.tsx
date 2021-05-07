@@ -62,9 +62,9 @@ const TotalValueLockedCard = () => {
       <CardBody>
         <HeadingBlock>
           <HeadingEarn>{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
-          {tvl|| tvl ===0 ? <HeadingStyle>{`${tvl}`}</HeadingStyle> : <> </>}
+          {tvl ? <HeadingStyle>{`${tvl}`}</HeadingStyle> : <> </>}
         </HeadingBlock>
-        {tvl || tvl ===0  ? (
+        {tvl ? (
           <TextStyle>{TranslateString(764, 'Across all LPs and Syrup Pools')}</TextStyle>
         ) : (
           <>
