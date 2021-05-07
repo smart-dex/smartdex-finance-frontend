@@ -12,8 +12,11 @@ import {
 } from '../utils'
 import {
   GLOBAL_DATA,
-  ETH_PRICE
+  ETH_PRICE,
+  TOKEN
 } from '../apollo/queries'
+
+import {SDC} from '../constants'
 
 const UPDATE = 'UPDATE'
 const UPDATE_ETH_PRICE = 'UPDATE_ETH_PRICE'
@@ -116,6 +119,8 @@ async function getGlobalData(ethPrice, oldEthPrice) {
     const utcTwoDaysBack = utcCurrentTime.subtract(2, 'day').unix()
     const utcOneWeekBack = utcCurrentTime.subtract(1, 'week').unix()
     const utcTwoWeeksBack = utcCurrentTime.subtract(2, 'week').unix()
+    const sdcToken = await getSDCToken();
+    const sdcPrice = sdcToken?.derivedETH * ethPrice
 
     // get the blocks needed for time travel queries
     const [oneDayBlock, twoDayBlock, oneWeekBlock, twoWeekBlock] = await getBlocksFromTimestamps([
@@ -131,7 +136,10 @@ async function getGlobalData(ethPrice, oldEthPrice) {
       fetchPolicy: 'cache-first',
     })
     data = result.data.uniswapFactories[0]
-
+    if (data) {
+      data.sdcPriceUsd = sdcPrice
+    }
+    console.log("888888888888888", data)
     // fetch the historical data
     const oneDayResult = await client.query({
       query: GLOBAL_DATA(oneDayBlock?.number),
@@ -232,6 +240,22 @@ const getEthPrice = async () => {
   return [ethPrice, ethPriceOneDay, priceChangeETH]
 }
 
+const getSDCToken = async () => {
+  let sdcToken = {}
+  try {
+    const sdc = await client.query({
+      query: TOKEN,
+      variables: {
+        id: SDC,
+      },
+      fetchPolicy: 'cache-first',
+    })
+    sdcToken =  sdc.data?.token
+  } catch (e) {
+    console.log(e)
+  }
+  return sdcToken
+}
 /**
  * Hook that fetches overview data, plus all tokens and pairs for search
  */
