@@ -5,15 +5,16 @@ import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
 import useTheme from 'hooks/useTheme'
 import useAuth from 'hooks/useAuth'
-import { usePriceSdcBusd, useProfile } from 'state/hooks'
+import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
+import { useGlobalData } from '../../contexts/GlobalData'
 
 const Menu = (props) => {
   const { account, reset } = useWallet()
   const { login, logout } = useAuth()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
-  const sdcPriceUsd = usePriceSdcBusd()
+  const {sdcPriceUsd} = useGlobalData()
   const { profile } = useProfile()
   const TranslateString = useI18n()
 
@@ -153,7 +154,7 @@ const Menu = (props) => {
       currentLang={selectedLanguage && selectedLanguage.code}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      cakePriceUsd={sdcPriceUsd.toNumber()}
+      cakePriceUsd={sdcPriceUsd}
       links={configLinks}
       linkMyPage={linkMyPage}
       profile={{
