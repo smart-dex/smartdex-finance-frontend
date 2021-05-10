@@ -56,21 +56,25 @@ const TotalValueLockedCard = () => {
   const TranslateString = useI18n()
   const { totalLiquidityUSD } = useGlobalData()
   const tvl = formattedNum(totalLiquidityUSD, true)
-
+  if (tvl) {
+    localStorage.setItem("tvl",tvl.toString())
+  }
+  const tvlLocalStorage = localStorage.getItem("tvl")
+  const valueTvl = tvl || tvlLocalStorage 
   return (
     <StyledTotalValueLockedCard>
       <CardBody>
         <HeadingBlock>
           <HeadingEarn>{TranslateString(762, 'Total Value Locked (TVL)')}</HeadingEarn>
-          {tvl|| tvl ===0 ? <HeadingStyle>{`${tvl}`}</HeadingStyle> : <> </>}
+          {valueTvl  ? <HeadingStyle>{valueTvl}</HeadingStyle> : <> </>}
         </HeadingBlock>
-        {tvl || tvl ===0  ? (
+        {valueTvl ? (
           <TextStyle>{TranslateString(764, 'Across all LPs')}</TextStyle>
         ) : (
-          <>
-            <Skeleton height={66} />
-          </>
-        )}
+            <>
+              <Skeleton height={66} />
+            </>
+          )}
       </CardBody>
     </StyledTotalValueLockedCard>
   )
