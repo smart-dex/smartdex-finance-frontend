@@ -170,7 +170,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
         </CardTitle>
         <StyledTag>
           {isCommunityFarm ? <CommunityTag /> : <CoreTag />}
-          <MultiplierTag>{multiplier}</MultiplierTag>
+          {/* <MultiplierTag>{multiplier}</MultiplierTag> */}
         </StyledTag>
       </NamePool>
     </Flex >
