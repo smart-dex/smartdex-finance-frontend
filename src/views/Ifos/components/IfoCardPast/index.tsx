@@ -96,6 +96,7 @@ const LinkExternalStyle = styled(LinkExternal)`
   justify-content: center;
   &:hover {
     text-decoration: none;
+    opacity: 0.65;
   }
   @media (max-width: 767px) {
     height: 45px;
