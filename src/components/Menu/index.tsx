@@ -36,11 +36,11 @@ const Menu = (props) => {
       items: [
         {
           label: `${TranslateString(8, 'Exchange')}`,
-          href: `${process.env.REACT_APP_EXCHANGE_URL}/pool#/swap` ,
+          href: `${process.env.REACT_APP_EXCHANGE_URL}/#/swap` ,
         },
         {
           label: `${TranslateString(262, 'Liquidity')}`,
-          href: `${process.env.REACT_APP_EXCHANGE_URL}/pool#/pool` ,
+          href: `${process.env.REACT_APP_EXCHANGE_URL}/#/pool` ,
         },
       ],
     },
