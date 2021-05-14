@@ -183,7 +183,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
       setPendingTx={setPendingTx}
     />
   )
-  const { onApprove } = useApprove(lpContract)
+  const { onApprove } = useApprove(lpContract, pid)
 
   const handleApprove = useCallback(async () => {
     try {

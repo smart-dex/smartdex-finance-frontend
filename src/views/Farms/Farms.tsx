@@ -53,7 +53,6 @@ const Farms: React.FC = () => {
     (farmsToDisplay, removed: boolean) => {
       const farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
         const sdcPriceInQuote = new BigNumber(farm.tokenPriceVsQuote)
-        console.log(farm.tokenPriceVsQuote)
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }

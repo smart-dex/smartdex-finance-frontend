@@ -15,6 +15,7 @@ import {
   getBunnySpecialAddress,
 } from 'utils/addressHelpers'
 import { poolsConfig } from 'config/constants'
+import farms from 'config/constants/farms'
 import { PoolCategory } from 'config/constants/types'
 import ifo from 'config/abi/ifo.json'
 import erc20 from 'config/abi/erc20.json'
@@ -23,6 +24,7 @@ import smartDEXChainRabbits from 'config/abi/smartDEXChainRabbits.json'
 import lottery from 'config/abi/lottery.json'
 import lotteryTicket from 'config/abi/lotteryNft.json'
 import masterChef from 'config/abi/masterchef.json'
+import stakingRewards from 'config/abi/stakingRewards.json'
 import sousChef from 'config/abi/sousChef.json'
 import sousChefBnb from 'config/abi/sousChefBnb.json'
 import profile from 'config/abi/smartDEXChainProfile.json'
@@ -81,6 +83,12 @@ export const useLottery = () => {
 export const useLotteryTicket = () => {
   const abi = (lotteryTicket as unknown) as AbiItem
   return useContract(abi, getLotteryTicketAddress())
+}
+
+export const useStakingReward = (id) => {
+  const abi = (stakingRewards as unknown) as AbiItem
+  const selectedFarm = farms.find((farm) => farm.pid === id)
+  return useContract(abi, getAddress(selectedFarm.stakingAddresses))
 }
 
 export const useMasterchef = () => {
