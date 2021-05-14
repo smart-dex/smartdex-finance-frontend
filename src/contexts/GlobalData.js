@@ -139,7 +139,6 @@ async function getGlobalData(ethPrice, oldEthPrice) {
     if (data) {
       data.sdcPriceUsd = sdcPrice
     }
-    console.log("888888888888888", data)
     // fetch the historical data
     const oneDayResult = await client.query({
       query: GLOBAL_DATA(oneDayBlock?.number),

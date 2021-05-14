@@ -8,7 +8,8 @@ import { getAddress } from 'utils/addressHelpers'
 export const fetchFarmUserAllowances = async (account: string) => {
   const calls = farmsConfig.map((farm) => {
     const lpContractAddress = getAddress(farm.lpAddresses)
-    return { address: lpContractAddress, name: 'allowance', params: [account, farm.stakingAddresses] }
+    const stakingAddress = getAddress(farm.stakingAddresses)
+    return { address: lpContractAddress, name: 'allowance', params: [account, stakingAddress] }
   })
 
   const rawLpAllowances = await multicall(erc20ABI, calls)
@@ -37,8 +38,9 @@ export const fetchFarmUserTokenBalances = async (account: string) => {
 
 export const fetchFarmUserStakedBalances = async (account: string) => {
   const calls = farmsConfig.map((farm) => {
+    const stakingAddress = getAddress(farm.stakingAddresses)
     return {
-      address: farm.stakingAddresses.toString(),
+      address: stakingAddress,
       name: 'balanceOf',
       params: [account],
     }
@@ -53,8 +55,9 @@ export const fetchFarmUserStakedBalances = async (account: string) => {
 
 export const fetchFarmUserEarnings = async (account: string) => {
   const calls = farmsConfig.map((farm) => {
+    const stakingAddress = getAddress(farm.stakingAddresses)
     return {
-      address: farm.stakingAddresses.toString(),
+      address: stakingAddress,
       name: 'earned',
       params: [account],
     }
