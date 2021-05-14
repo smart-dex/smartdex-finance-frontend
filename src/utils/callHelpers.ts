@@ -54,8 +54,8 @@ export const unstake = async (stakingContract, pid, amount, account) => {
   // }
 
   return stakingContract.methods
-    .exit()
-    // .withdraw(pid, new BigNumber(amount).times(new BigNumber(10).pow(18)).toString())
+    // .exit()
+    .withdraw(new BigNumber(amount).times(new BigNumber(10).pow(18)).toString())
     .send({ from: account, gas: 200000 })
     .on('transactionHash', (tx) => {
       return tx.transactionHash
