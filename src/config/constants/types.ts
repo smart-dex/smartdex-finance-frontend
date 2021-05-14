@@ -2,6 +2,13 @@ import { TranslatableText } from 'state/types'
 
 export type IfoStatus = 'coming_soon' | 'live' | 'finished'
 
+export interface Token {
+  symbol: string
+  address?: Address
+  decimals?: number
+  projectLink?: string
+}
+
 export interface Ifo {
   id: string
   isActive: boolean
@@ -48,11 +55,10 @@ export interface Address {
 export interface FarmConfig {
   pid: number
   lpSymbol: string
-  lpAddresses: Address
-  tokenSymbol: string
-  tokenAddresses: Address
-  quoteTokenSymbol: QuoteToken
-  quoteTokenAdresses: Address
+  lpAddresses: Address,
+  stakingAddresses: Address,
+  token: Token
+  quoteToken: Token
   multiplier?: string
   isCommunity?: boolean
   dual?: {

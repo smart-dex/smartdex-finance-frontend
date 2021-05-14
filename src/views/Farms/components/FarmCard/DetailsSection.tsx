@@ -15,18 +15,18 @@ import Balance from 'components/Balance'
 interface ExpandableSectionProps {
   bscScanAddress?: string
   removed?: boolean
+  poolRate?: BigNumber
   totalValue?: BigNumber
   lpLabel?: string
   addLiquidityUrl?: string
   earnings?: BigNumber
   pid: number
-  poolRate: BigNumber,
   quoteTokenSymbol: string
   tokenSymbol: string
-  lpTokenBalanceMC: BigNumber,
+  lpTokenBalanceSR: BigNumber,
   lpTotalSupply: BigNumber,
   tokenBalanceLP: BigNumber
-  quoteTokenBlanceLP: BigNumber,
+  quoteTokenBalanceLP: BigNumber,
   pendingTx: boolean,
   setPendingTx: (pendingTx: boolean) => void
 }
@@ -107,7 +107,7 @@ color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors
 font-size: 12px;
 ${({ theme }) => theme.mediaQueries.nav} {
   font-size: 12px;
-  
+
 }
 >span{
   margin-left:5px;
@@ -117,7 +117,7 @@ ${({ theme }) => theme.mediaQueries.nav} {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  
+
     font-weight: 500;
     line-height: 25px;
     color: ${({ theme }) => (theme.isDark ? darkColors.textHeaderFarms : lightColors.textHeaderFarms)};
@@ -132,17 +132,17 @@ const StylePoolRate = styled(Flex)`
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
   totalValue,
+  poolRate,
   lpLabel,
   earnings,
   pid,
   bscScanAddress,
-  poolRate,
   quoteTokenSymbol,
   tokenSymbol,
-  lpTokenBalanceMC,
+  lpTokenBalanceSR,
   lpTotalSupply,
   tokenBalanceLP,
-  quoteTokenBlanceLP,
+  quoteTokenBalanceLP,
   pendingTx,
   setPendingTx
 }) => {
@@ -159,9 +159,9 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const displayPoolRate = poolRate.toNumber()
   const yourPoolShare = totalYourPoolToken.div(lpTotalSupply)
   const displayYourPoolShare = yourPoolShare.times(100).toNumber().toLocaleString('en-US')
-  const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP) 
-  const displayQuoteTokenBlanceLP = (getBalanceNumber(quoteTokenBlanceLP))
-  const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
+  const displayTokenBalanceLp = getBalanceNumber(tokenBalanceLP)
+  const displayQuoteTokenBalanceLP = (getBalanceNumber(quoteTokenBalanceLP))
+  const displayLpTokenBalanceSR = getBalanceNumber(lpTokenBalanceSR)
   const totalValueFormated = totalValue
   ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
   : '-'
@@ -169,7 +169,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   : 0
   return (
     <>
-      
+
       <Flex flexDirection="column">
         <StyledText style={{ alignSelf: 'start', marginBottom: '14px' }}>{TranslateString(3055, 'Your Liquidity deposits')}</StyledText>
         <Flex>
@@ -217,8 +217,8 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       </Flex>
       <Flex>
         <StyledTextInfo>{TranslateString(3060, 'Pool token in rewards')}:</StyledTextInfo>
-        <DetailStyled data-tip={displayLpTokenBalanceMC.toLocaleString('en-US')}>
-          <Balance value={displayLpTokenBalanceMC} />  <span>{lpLabel}</span>
+        <DetailStyled data-tip={displayLpTokenBalanceSR.toLocaleString('en-US')}>
+          <Balance value={displayLpTokenBalanceSR} />  <span>{lpLabel}</span>
         </DetailStyled>
       </Flex>
       <Flex>
@@ -231,8 +231,8 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       <Flex>
         <StyledTextInfo>{TranslateString(268, 'Pooled')} {quoteTokenSymbol}:
         </StyledTextInfo>
-        <DetailStyled data-tip={displayQuoteTokenBlanceLP.toLocaleString('en-US')}>
-          <Balance value={displayQuoteTokenBlanceLP} />  <span>{quoteTokenSymbol}</span>
+        <DetailStyled data-tip={displayQuoteTokenBalanceLP.toLocaleString('en-US')}>
+          <Balance value={displayQuoteTokenBalanceLP} />  <span>{quoteTokenSymbol}</span>
         </DetailStyled>
 
       </Flex>
