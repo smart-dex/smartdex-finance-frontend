@@ -42,7 +42,7 @@ const Farms: React.FC = () => {
   const [active, setActive] = useState(true)
 
   const activeFarms = farmsLP
-  const inactiveFarms = null
+  const inactiveFarms = []
   const stackedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
