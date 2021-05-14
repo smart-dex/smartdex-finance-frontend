@@ -41,8 +41,8 @@ const Farms: React.FC = () => {
   const [stackedOnly, setStackedOnly] = useState(false)
   const [active, setActive] = useState(true)
 
-  const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
-  const inactiveFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier === '0X')
+  const activeFarms = farmsLP
+  const inactiveFarms = null
   const stackedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
@@ -52,7 +52,8 @@ const Farms: React.FC = () => {
   const farmsList = useCallback(
     (farmsToDisplay, removed: boolean) => {
       const farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
-        const sdcPriceInQuote = farm.tokenPriceVsQuote
+        const sdcPriceInQuote = new BigNumber(farm.tokenPriceVsQuote)
+        console.log(farm.tokenPriceVsQuote)
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
