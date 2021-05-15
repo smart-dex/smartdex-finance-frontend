@@ -10,7 +10,7 @@ const farms: FarmConfig[] = [
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     },
     stakingAddresses: {
-      97: '0xe3e8c547c087a0e5a266794c3782a0dafbff529a',
+      97: '0x474E43abd61d98c5aEe1bb50c4e7bb9FA5367383',
       56: '',
     },
     token: tokens.sdc,
