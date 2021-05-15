@@ -36,7 +36,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
 }) => {
   const TranslateString = useI18n()
   const farmApy = apy.times(new BigNumber(100)).toNumber()
-  const oneThousandDollarsWorthOfSdc = 1000 / sdcPrice.toNumber()
+  const oneThousandDollarsWorthOfSdc = new BigNumber(1000).div(new BigNumber(sdcPrice))
 
   const sdcEarnedPerThousand1D = calculateSdcEarnedPerThousandDollars({ numberOfDays: 1, farmApy, sdcPrice })
   const sdcEarnedPerThousand7D = calculateSdcEarnedPerThousandDollars({ numberOfDays: 7, farmApy, sdcPrice })

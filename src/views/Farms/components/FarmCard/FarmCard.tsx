@@ -179,13 +179,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'SDC'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
   const { lpTokenBalanceSR, lpTotalSupply, tokenBalanceLP, quoteTokenBalanceLP } = farm
-  const quoteTokenAddresses = farm.quoteToken.address
+  const quoteTokenAddress = farm.quoteToken.address
   const quoteTokenSymbol = farm.quoteToken.symbol
-  const tokenAddresses = farm.token.address
+  const tokenAddress = farm.token.address
   const tokenSymbol = farm.token.symbol
   const poolRate = ((new BigNumber(farm.rewardRate)).div(new BigNumber(10).pow(18)).times(60).times(60).times(24).times(7))
   const displayPoolRate = poolRate.toNumber()
-  const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAddresses, quoteTokenSymbol, tokenAddresses })
+  const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAddress, tokenAddress })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
   const userPoolRate = account ?(stakedBalance.div(lpTokenBalanceSR)).times(100): new BigNumber(0)
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceSR)
@@ -220,7 +220,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
                     <ApyButton
                       lpLabel={lpLabel}
                       addLiquidityUrl={addLiquidityUrl}
-                      sdcPrice={sdcPrice}
+                      sdcPrice={farm.tokenPriceVsQuote}
                       apy={farm.apy}
                     />
                     <span data-tip={farmAPY}>{farmAPY}</span>   %

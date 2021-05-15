@@ -88,7 +88,7 @@ export const usePriceBnbBusd = (): BigNumber => {
 }
 
 export const usePriceSdcBusd = (): BigNumber => {
-  const pid = 1 // SDC-BNB LP
+  const pid = 0 // SDC-BNB LP
   const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
   return new BigNumber(0)
