@@ -6,6 +6,7 @@ import {
   updateUserStakedBalance,
   updateUserBalance,
   updateUserPendingReward,
+  fetchFarmsPublicDataAsync,
 } from 'state/actions'
 import { unstake, sousUnstake, sousEmegencyUnstake } from 'utils/callHelpers'
 import { useMasterchef, useStakingReward, useSousChef } from './useContract'
@@ -19,6 +20,7 @@ const useUnstake = (pid: number) => {
     async (amount: string) => {
       const txHash = await unstake(stakingContract, pid, amount, account)
       dispatch(fetchFarmUserDataAsync(account))
+      dispatch(fetchFarmsPublicDataAsync())
       console.info(txHash)
     },
     [account, dispatch, stakingContract, pid],

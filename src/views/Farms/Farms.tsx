@@ -59,19 +59,20 @@ const Farms: React.FC = () => {
         const sdcRewardPerYear = farm.sdcPerYear
 
         // sdcPriceInQuote * sdcRewardPerYear / lpTotalInQuoteToken
-        let apy = sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
+        const apy = sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
 
-        if (farm.dual) {
-          const sdcApy =
-            farm && sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
-          const dualApy =
-            sdcPriceInQuote &&
-            new BigNumber(sdcPriceInQuote)
-              .times(farm.dual.sdcRewardPerYear)
-              .div(farm.lpTotalInQuoteToken)
+        // if (farm.dual) {
+        //   console.log("a")
+        //   const sdcApy =
+        //     farm && sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
+        //   const dualApy =
+        //     sdcPriceInQuote &&
+        //     new BigNumber(sdcPriceInQuote)
+        //       .times(farm.dual.sdcRewardPerYear)
+        //       .div(farm.lpTotalInQuoteToken)
 
-          apy = sdcApy && dualApy && sdcApy.plus(dualApy)
-        }
+        //   apy = sdcApy && dualApy && sdcApy.plus(dualApy)
+        // }
 
         return { ...farm, apy }
       })
@@ -93,7 +94,6 @@ const Farms: React.FC = () => {
 
   return (
     <Page>
-
       <FarmHeader>
         <HeadingFarm as="h1" size="lg" color="secondary" mb="25px">
           {TranslateString(696, 'Stake LP tokens to earn SDC')}
