@@ -115,7 +115,7 @@ const Menu = (props) => {
       items: [
         {
           label: `${TranslateString(12, 'Voting')}`,
-          href: '',
+          href: process.env.REACT_APP_VOTING,
         },
         {
           label: 'Github',
