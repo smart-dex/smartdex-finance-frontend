@@ -88,11 +88,11 @@ export const usePriceBnbBusd = (): BigNumber => {
 }
 
 export const usePriceSdcBusd = (): BigNumber => {
-  const pid = 0 // SDC-BNB LP
-  const bnbPriceUSD = usePriceBnbBusd()
-  const farm = useFarmFromPid(pid)
-  return new BigNumber(0)
-  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+  const pid = 2 // SDC-BUSD LP
+  // const bnbPriceUSD = usePriceBnbBusd()
+  const farm = useFarmFromPid(pid)  
+  // return new BigNumber(0)
+  return  farm.tokenPriceVsQuote? new BigNumber(farm.tokenPriceVsQuote):  ZERO
 }
 
 export const usePriceEthBusd = (): BigNumber => {
