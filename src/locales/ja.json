@@ -34,7 +34,7 @@
             "stringId": 8,
             "contentType": "text/plain",
             "translationId": 4930,
-            "text": "通貨の交換",
+            "text": "交換",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -1759,7 +1759,7 @@
             "stringId": 316,
             "contentType": "text/plain",
             "translationId": 9084,
-            "text": "保証金",
+            "text": "デポジット",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -1774,7 +1774,7 @@
             "stringId": 318,
             "contentType": "text/plain",
             "translationId": 9086,
-            "text": "獲得",
+            "text": "稼ぐ",
             "user": {
                 "id": 14439204,
                 "username": "bocaabajo",
@@ -3499,7 +3499,7 @@
             "stringId": 522,
             "contentType": "text/plain",
             "translationId": 21388,
-            "text": "芯",
+            "text": "コア",
             "user": {
                 "id": 14451920,
                 "username": "cryptobluecat",
@@ -3934,7 +3934,7 @@
             "stringId": 588,
             "contentType": "text/plain",
             "translationId": 38550,
-            "text": "アンステーク",
+            "text": "ステークを解除",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -4639,7 +4639,7 @@
             "stringId": 684,
             "contentType": "text/plain",
             "translationId": 31278,
-            "text": "もっと",
+            "text": "詳細",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -7489,7 +7489,7 @@
             "stringId": 1070,
             "contentType": "text/plain",
             "translationId": 47634,
-            "text": "ステーク",
+            "text": "をステークする",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -8299,7 +8299,7 @@
             "stringId": 1257,
             "contentType": "text/plain",
             "translationId": 50962,
-            "text": "ウォレット内",
+            "text": "ウォレット",
             "user": {
                 "id": 14144439,
                 "username": "nozomi.kugita",
@@ -8464,7 +8464,7 @@
             "stringId": 1199,
             "contentType": "text/plain",
             "translationId": 50919,
-            "text": "まで稼ぐ",
+            "text": "稼ぎましょう",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -8479,7 +8479,7 @@
             "stringId": 1201,
             "contentType": "text/plain",
             "translationId": 50920,
-            "text": "農場で",
+            "text": "ファーミングで",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -8660,7 +8660,7 @@
             "stringId": 12218,
             "contentType": "text/plain",
             "translationId": 50928,
-            "text": "あなたのプロフィール",
+            "text": "プロフィール",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -8690,7 +8690,7 @@
             "stringId": 12220,
             "contentType": "text/plain",
             "translationId": 50930,
-            "text": "財布",
+            "text": "ウォレット",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",
@@ -9591,7 +9591,7 @@
             "stringId": 3055,
             "contentType": "text/plain",
             "translationId": 610110,
-            "text": "あなたの流動性預金",
+            "text": "流動性デポジット",
             "user": {
                 "id": 13288016,
                 "username": "Chris66",

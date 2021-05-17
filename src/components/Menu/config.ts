@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: `${process.env.REACT_APP_EXCHANGE_URL}/pool#/swap` ,
+        href: `${process.env.REACT_APP_EXCHANGE_URL}/#/swap` ,
       },
       {
         label: 'Liquidity',
-        href: `${process.env.REACT_APP_EXCHANGE_URL}/pool#/pool` ,
+        href: `${process.env.REACT_APP_EXCHANGE_URL}/#/pool` ,
       },
     ],
   },
