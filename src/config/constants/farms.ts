@@ -10,7 +10,7 @@ const farms: FarmConfig[] = [
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     },
     stakingAddresses: {
-      97: '0x4A218861048cDA35A756393c7CDa7a1f0c2B6BCA',
+      97: '0x4fB4B47F5774eD690015f9b12a3Dd73350E66D68',
       56: '',
     },
     token: tokens.sdc,
@@ -24,7 +24,7 @@ const farms: FarmConfig[] = [
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     },
     stakingAddresses: {
-      97: '0x11f2dE09451d1B2F1c0f48131074B71b1ed77A7D',
+      97: '0xC9Ae08373412FbA5a2c95Df1344303C625169326',
       56: '',
     },
     token: tokens.sdc,
@@ -38,7 +38,7 @@ const farms: FarmConfig[] = [
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     },
     stakingAddresses: {
-      97: '0xf8b9bD2aEF0B698A4301b134fDBB8B8D9ec8795E',
+      97: '0x5e073e1a5fBE1480D551811636b9c3581deAB4Ec',
       56: '',
     },
     token: tokens.sdc,
