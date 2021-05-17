@@ -17,7 +17,7 @@ const tokens = {
     symbol: 'CAKE',
     address: {
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-      97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
+      97: '0x56C350f6909eE0105389cC84d147047697511ebf',
     },
     decimals: 18,
     projectLink: 'https://pancakeswap.finance/',
@@ -35,7 +35,7 @@ const tokens = {
     symbol: 'BUSD',
     address: {
       56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-      97: '',
+      97: '0xD1a4A72C351f9e51c4124040019Ba7266BBfE84A',
     },
     decimals: 18,
     projectLink: 'https://www.paxos.com/busd/',

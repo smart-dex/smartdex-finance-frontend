@@ -10,11 +10,39 @@ const farms: FarmConfig[] = [
       56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     },
     stakingAddresses: {
-      97: '0x474E43abd61d98c5aEe1bb50c4e7bb9FA5367383',
+      97: '0x4A218861048cDA35A756393c7CDa7a1f0c2B6BCA',
       56: '',
     },
     token: tokens.sdc,
     quoteToken: tokens.wbnb,
+  },
+  {
+    pid: 1,
+    lpSymbol: 'SDC-CAKE LP',
+    lpAddresses: {
+      97: '0x6b2E169b4fF9F281DC30cD20cfe1893922D35F5B',
+      56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    },
+    stakingAddresses: {
+      97: '0x11f2dE09451d1B2F1c0f48131074B71b1ed77A7D',
+      56: '',
+    },
+    token: tokens.sdc,
+    quoteToken: tokens.cake,
+  },
+  {
+    pid: 2,
+    lpSymbol: 'SDC-BUSD LP',
+    lpAddresses: {
+      97: '0xa0f45226059B9Da29322a95e297D03C98527Aa69',
+      56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    },
+    stakingAddresses: {
+      97: '0xf8b9bD2aEF0B698A4301b134fDBB8B8D9ec8795E',
+      56: '',
+    },
+    token: tokens.sdc,
+    quoteToken: tokens.busd,
   }
 ]
 
