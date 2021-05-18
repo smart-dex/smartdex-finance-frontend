@@ -220,7 +220,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
                     <ApyButton
                       lpLabel={lpLabel}
                       addLiquidityUrl={addLiquidityUrl}
-                      sdcPrice={farm.tokenPriceVsQuote}
+                      sdcPrice={sdcPrice}
                       apy={farm.apy}
                     />
                     <span data-tip={farmAPY}>{farmAPY}</span>   %
