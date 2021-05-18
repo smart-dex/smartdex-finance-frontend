@@ -77,7 +77,6 @@ const EarnAPYCard = () => {
   }
   const calculateAPY = 
     (farmsToDisplay) => {
-     
       const result = farmsToDisplay.map((farm) => {
         const sdcPriceInQuote = new BigNumber(farm.tokenPriceVsQuote)
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
@@ -86,12 +85,12 @@ const EarnAPYCard = () => {
         const sdcRewardPerYear = farm.sdcPerYear
 
         // sdcPriceInQuote * sdcRewardPerYear / lpTotalInQuoteToken
-        const apy = sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
-
+        const apy = sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken) 
+      
         // if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()
-        return apy.toNumber()
+        return !apy.isNaN() ? apy.toNumber(): new BigNumber(0)
       })
-      maxAPY.current=Math.max(...result)
+      maxAPY.current=Math.max(...result)    
     }
   
 

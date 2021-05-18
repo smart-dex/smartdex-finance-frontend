@@ -24,6 +24,7 @@ export interface Farm extends FarmConfig {
   lpTokenBalanceSR?: BigNumber
   rewardRate?: BigNumber
   sdcPerYear?: BigNumber
+  priceRate?:BigNumber
   userData?: {
     allowance: BigNumber
     tokenBalance: BigNumber

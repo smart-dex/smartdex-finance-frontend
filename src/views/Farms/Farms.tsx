@@ -59,7 +59,7 @@ const Farms: React.FC = () => {
         const sdcRewardPerYear = farm.sdcPerYear
 
         // sdcPriceInQuote * sdcRewardPerYear / lpTotalInQuoteToken
-        const apy = sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
+        const apy =  sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken) 
 
         // if (farm.dual) {
         //   console.log("a")

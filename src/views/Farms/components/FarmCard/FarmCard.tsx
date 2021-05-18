@@ -215,7 +215,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             <Detail mb="37px" >
               <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
               <DetailApr >
-                {farm.apy  && !farm.apy.isNaN()  ? (
+                {farm.apy  ? (
                   <>
                     <ApyButton
                       lpLabel={lpLabel}

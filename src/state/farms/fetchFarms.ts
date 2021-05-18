@@ -68,7 +68,7 @@ const fetchFarms = async () => {
       const quoteTokenAmount = new BigNumber(quoteTokenBalanceLP)
         .div(new BigNumber(10).pow(quoteTokenDecimals))
         .times(lpTokenRatio)
-
+      const priceRate = new BigNumber(quoteTokenBalanceLP).div(new BigNumber(tokenBalanceLP))
       const [rewardDuration, rewardDistribution, rewardRate] = await multicall(stakingRewardsABI, [
         {
           address: stakingAddress,
@@ -103,7 +103,8 @@ const fetchFarms = async () => {
         quoteTokenBalanceLP: rawQuoteTokenBalanceLP.toJSON(),
         lpTokenBalanceSR: totalLPDeposits.toJSON(),
         rewardRate: rewardRate.toString(),
-        sdcPerYear: sdcPerYear.toString()
+        sdcPerYear: sdcPerYear.toString(),
+        priceRate:priceRate.toJSON()
       }
     }),
   )

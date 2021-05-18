@@ -92,7 +92,7 @@ export const usePriceSdcBusd = (): BigNumber => {
   // const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)  
   // return new BigNumber(0)
-  return  farm.tokenPriceVsQuote? new BigNumber(farm.tokenPriceVsQuote):  ZERO
+  return  farm.priceRate? new BigNumber(farm.priceRate):  ZERO
 }
 
 export const usePriceEthBusd = (): BigNumber => {
