@@ -177,7 +177,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('SMARTDEXCHAIN', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'SDC'
-  const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
+  const farmAPY = farm.apy  &&   farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)  || "0.00"
+  
   const { lpTokenBalanceSR, lpTotalSupply, tokenBalanceLP, quoteTokenBalanceLP } = farm
   const quoteTokenAddress = farm.quoteToken.address
   const quoteTokenSymbol = farm.quoteToken.symbol
@@ -189,8 +190,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
   const userPoolRate = account ?(stakedBalance.div(lpTokenBalanceSR)).times(100): new BigNumber(0)
   const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceSR)
-  const displayUserPoolRate = userPoolRate.toNumber()
-
+  const displayUserPoolRate = !userPoolRate.isNaN() ?  userPoolRate.toNumber(): 0
+  
   useEffect(() => {
     ReactTooltip.rebuild();
   });
@@ -262,7 +263,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           <Detail mb="37px" >
             <DetailInFo>{TranslateString(3054, 'Your Pool Rate')}: </DetailInFo>
             <DetailValue>
-              {!userPoolRate.isNaN() ? (
+              {userPoolRate ? (
                 <>
                   <BalanceAndCompound data-tip={displayUserPoolRate.toLocaleString('en-US')}>
                     <Balance fontSize="32px" value={displayUserPoolRate} decimals={3} />  <InfoTextFarm>%</InfoTextFarm>

@@ -59,8 +59,8 @@ const Farms: React.FC = () => {
         const sdcRewardPerYear = farm.sdcPerYear
 
         // sdcPriceInQuote * sdcRewardPerYear / lpTotalInQuoteToken
-        const apy =  sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken) 
-
+        const apy =   sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken) 
+        const resultApy = !apy.isNaN() ? apy: new BigNumber(0)
         // if (farm.dual) {
         //   console.log("a")
         //   const sdcApy =
@@ -74,7 +74,7 @@ const Farms: React.FC = () => {
         //   apy = sdcApy && dualApy && sdcApy.plus(dualApy)
         // }
 
-        return { ...farm, apy }
+        return { ...farm, apy:resultApy }
       })
       return farmsToDisplayWithAPY.map((farm) => (
         <FarmCard

@@ -88,7 +88,7 @@ const EarnAPYCard = () => {
         const apy = sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken) 
       
         // if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()
-        return !apy.isNaN() ? apy.toNumber(): new BigNumber(0)
+        return !apy.isNaN() ? apy.toNumber(): 0
       })
       maxAPY.current=Math.max(...result)    
     }
