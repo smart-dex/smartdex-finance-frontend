@@ -43,6 +43,20 @@ const farms: FarmConfig[] = [
     },
     token: tokens.sdc,
     quoteToken: tokens.busd,
+  },
+  {
+    pid: 3,
+    lpSymbol: 'SDC-USDT LP',
+    lpAddresses: {
+      97: '0x306f56EC884F789b1c55D84E5DFE70E2b311796b',
+      56: '',
+    },
+    stakingAddresses: {
+      97: '0xCac3C1d9d8F2B611Dc892F5F31949Da39558615f',
+      56: '',
+    },
+    token: tokens.sdc,
+    quoteToken: tokens.usdt,
   }
 ]
 

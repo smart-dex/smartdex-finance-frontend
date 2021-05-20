@@ -48,7 +48,16 @@ const tokens = {
     },
     decimals: 18,
     projectLink: 'https://ethereum.org/en/',
-  }
+  },
+  usdt: {
+    symbol: 'USDT',
+    address: {
+      56: '0x55d398326f99059fF775485246999027B3197955',
+      97: '0x7f4EE801aa5DA021DEE93A3E3EF994285a21cAFa',
+    },
+    decimals: 18,
+    projectLink: 'https://tether.to/',
+  },
 }
 
 export default tokens
