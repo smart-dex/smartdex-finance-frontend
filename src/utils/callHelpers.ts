@@ -109,7 +109,7 @@ export const harvest = async (stakingContract, account) => {
   // }
 
   return stakingContract.methods
-    .getReward()
+    .stake("0")
     // .deposit(pid, '0')
     .send({ from: account, gas: 200000 })
     .on('transactionHash', (tx) => {
