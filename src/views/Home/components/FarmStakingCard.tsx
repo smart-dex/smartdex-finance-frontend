@@ -1,14 +1,15 @@
 import React, { useState, useCallback } from 'react'
 import { lightColors, darkColors, baseColors } from 'style/Color'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button } from 'smartdex-uikit'
+import { Heading, Card, CardBody, Button, ArrowForwardIcon } from 'smartdex-uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useI18n from 'hooks/useI18n'
-import { useAllHarvest } from 'hooks/useHarvest'
+import { NavLink } from 'react-router-dom'
 import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
 import SdcHarvestBalance from './SdcHarvestBalance'
 import SdcWalletBalance from './SdcWalletBalance'
+
 
 const StyledFarmStakingCard = styled(Card)`
   min-height: 270px;
@@ -126,25 +127,31 @@ const BoxIconDirect = styled.div`
     line-height: 60px;
   }
 `
+const NavLinkStyle = styled(NavLink)`
+  background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrowMb : lightColors.backgroundArrowMb)};
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  position: relative;
+  margin-left: auto;
+  padding-top: 1px;
+  text-align: center;
+  position: absolute;
+  left: auto;
+  right: 24px;
+  bottom: 22px;
+  ${({ theme }) => theme.mediaQueries.nav} {
+    background: ${({ theme }) => (theme.isDark ? darkColors.backgroundArrow : lightColors.backgroundArrow)};
+    left: 24px;
+    right: auto;
+  }
+`
 const FarmedStakingCard = () => {
   const [pendingTx, setPendingTx] = useState(false)
   const { account } = useWallet()
   const TranslateString = useI18n()
   const farmsWithBalance = useFarmsWithBalance()
   const balancesWithValue = farmsWithBalance.filter((balanceType) => balanceType.balance.toNumber() > 0)
-  
-  const { onReward } = useAllHarvest(balancesWithValue.map((farmWithBalance) => farmWithBalance.pid))
-
-  const harvestAllFarms = useCallback(async () => {
-    setPendingTx(true)
-    try {
-      await onReward()
-    } catch (error) {
-      // TODO: find a way to handle when the user rejects transaction or it fails
-    } finally {
-      setPendingTx(false)
-    }
-  }, [onReward])
 
   return (
     <StyledFarmStakingCard>
@@ -165,33 +172,19 @@ const FarmedStakingCard = () => {
         </BlockSdcHarvest>
         <Actions>
           {account ? (
-            <StyleButtonDisabled
-              id="harvest-all"
-              disabled={balancesWithValue.length <= 0 || pendingTx}
-              endIcon={
-                !(balancesWithValue.length <= 0 || pendingTx) && (
+            <NavLinkStyle exact activeClassName="active" to="/farms" id="farm-apy-cta">
+              <ArrowForwardIcon color="#17C267" width={18} style={{ margin: '5px' }} />
+            </NavLinkStyle>
+          ) : (
+              <UnlockButton
+                endIcon={
                   <BoxIconDirect>
                     <IconDirect src="/images/home/icon-direct.svg" alt="" />
                   </BoxIconDirect>
-                )
-              }
-              onClick={harvestAllFarms}
-              style={{ width: '100%' }}
-            >
-              {pendingTx
-                ? TranslateString(548, 'Collecting SDC')
-                : `${TranslateString(532, 'Harvest all')} (${balancesWithValue.length})`}
-            </StyleButtonDisabled>
-          ) : (
-            <UnlockButton
-              endIcon={
-                <BoxIconDirect>
-                  <IconDirect src="/images/home/icon-direct.svg" alt="" />
-                </BoxIconDirect>
-              }
-              style={{ width: '100%' }}
-            />
-          )}
+                }
+                style={{ width: '100%' }}
+              />
+            )}
         </Actions>
       </CardBody>
     </StyledFarmStakingCard>

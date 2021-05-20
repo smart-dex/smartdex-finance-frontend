@@ -15,6 +15,8 @@ const Menu = (props) => {
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const {sdcPriceUsd} = useGlobalData()
+  console.log(sdcPriceUsd);
+  
   if (sdcPriceUsd || sdcPriceUsd === 0) {
     localStorage.setItem("sdcPrice",sdcPriceUsd.toString())
   }

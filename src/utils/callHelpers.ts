@@ -98,7 +98,7 @@ export const sousEmegencyUnstake = async (sousChefContract, amount, account) => 
     })
 }
 
-export const harvest = async (stakingContract, pid, account) => {
+export const harvest = async (stakingContract, account) => {
   // if (pid === 0) {
   //   return masterChefContract.methods
   //     .leaveStaking('0')

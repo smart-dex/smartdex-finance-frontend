@@ -71,9 +71,9 @@ const EarnAPYCard = () => {
   const sdcPrice = usePriceSdcBusd()
   const maxAPY = useRef(Number.MIN_VALUE)
   const getHighestAPY = () => {
-    const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
+    const activeFarms = farmsLP
     calculateAPY(activeFarms)
-    return (maxAPY.current * 100).toLocaleString('en-US').slice(0, -1)
+    return  maxAPY.current? (maxAPY.current * 100).toLocaleString('en-US').slice(0, -1): "0.00"
   }
   const calculateAPY = 
     (farmsToDisplay) => {
@@ -90,6 +90,7 @@ const EarnAPYCard = () => {
         // if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()
         return !apy.isNaN() ? apy.toNumber(): 0
       })
+      
       maxAPY.current=Math.max(...result)    
     }
   
@@ -99,7 +100,7 @@ const EarnAPYCard = () => {
       <CardBody>
         <HeadingEarn>{TranslateString(1199, 'Earn up to')}</HeadingEarn>
         <CardMidContent>
-          {getHighestAPY() && maxAPY.current ? (
+          {getHighestAPY() || maxAPY.current  ? (
             `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
           ) : (
               <Skeleton animation="pulse" variant="rect" height="44px" />
