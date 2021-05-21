@@ -79,6 +79,7 @@ const ButtonUnstake = styled(Button)`
   margin-top: 10px;
   margin-bottom: 10px;
   min-width: 143px;
+  white-space: nowrap;
   ${({ theme }) => theme.mediaQueries.nav} {
     font-size: 16px;
     width: 143px;
@@ -117,7 +118,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   const renderStakingButtons = () => {
     return rawStakedBalance === 0 ? (
       <StakeButton onClick={onPresentDeposit} disabled={removed || pendingTxModal}>
-        {TranslateString(1070, 'Stake')} LP
+        {TranslateString(1070, 'Stake LP')} 
       </StakeButton>
     ) : (
       <>

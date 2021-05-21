@@ -246,6 +246,7 @@ line-height: 20px;
 margin-top: 10px;
 margin-bottom: 10px;
 min-width: 143px;
+white-space: nowrap;
 ${({ theme }) => theme.mediaQueries.nav} {
   font-size: 16px;
   width: 143px;
