@@ -4,14 +4,17 @@ import { Contract } from 'web3-eth-contract'
 import { ethers } from 'ethers'
 import { useDispatch } from 'react-redux'
 import { useToast } from 'state/hooks'
+import useI18n from 'hooks/useI18n'
 import { updateUserAllowance, fetchFarmUserDataAsync } from 'state/actions'
 import { approve } from 'utils/callHelpers'
 import { useStakingReward, useSdc, useSousChef, useLottery } from './useContract'
+
 
 // Approve a Farm
 export const useApprove = (lpContract: Contract, farmPid: number) => {
   const dispatch = useDispatch()
   const { toastError } = useToast()
+  const TranslateString = useI18n()
   const { account }: { account: string } = useWallet()
   const stakingContract = useStakingReward(farmPid)
 
@@ -21,10 +24,10 @@ export const useApprove = (lpContract: Contract, farmPid: number) => {
       dispatch(fetchFarmUserDataAsync(account))
       return tx
     } catch (e) {
-      toastError('Error', "Please try again. Confirm the transaction and make sure you are paying enough gas!")
+      toastError(`${TranslateString(9999,"Error")}`, `${TranslateString(9999," Please try again. Confirm the transaction and make sure you are paying enough gas!")}` )
       return false
     }
-  }, [account, dispatch, lpContract, stakingContract,toastError])
+  }, [account, dispatch, lpContract, stakingContract,toastError,TranslateString])
 
   return { onApprove: handleApprove }
 }
