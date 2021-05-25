@@ -1,13 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
-import { Flex, Text, Skeleton } from 'smartdex-uikit'
-import { communityFarms } from 'config/constants'
+import { Flex, Text, Skeleton } from 'uikit-sotatek'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
 import useI18n from 'hooks/useI18n'
 import { getBalanceNumber } from 'utils/formatBalance'
-// import ExpandableSectionButton from 'components/ExpandableSectionButton'
 import { QuoteToken } from 'config/constants/types'
 import { BASE_ADD_LIQUIDITY_URL, BLOCKS_PER_WEEK, SDC_PER_BLOCK } from 'config'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
@@ -99,7 +97,7 @@ span{
 }
 `
 const DetailInFo = styled.div`
-  min-width: 120px; 
+  min-width: 120px;
   flex: 1;
   color: ${({ theme }) => (theme.isDark ? darkColors.detailPool : lightColors.detailPool)};
   font-style: normal;
@@ -163,7 +161,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
   const { pid, } = useFarmFromSymbol(farm.lpSymbol)
   const { earnings, stakedBalance, tokenBalance } = useFarmUser(pid)
-  const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
+  const isCommunityFarm = farm.isCommunity
   // We assume the token name is coin pair + lp e.g. SDC-BNB LP, LINK-BNB LP,
   // NAR-SDC LP. The images should be sdc-bnb.svg, link-bnb.svg, nar-sdc.svg
   const farmImage = farm.lpSymbol.split(' ')[0].toLocaleLowerCase()
@@ -172,31 +170,27 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
     if (!farm.lpTotalInQuoteToken) {
       return null
     }
-    if (farm.quoteTokenSymbol === QuoteToken.BNB) {
-      return bnbPrice.times(farm.lpTotalInQuoteToken)
-    }
-    if (farm.quoteTokenSymbol === QuoteToken.SDC) {
-      return sdcPrice.times(farm.lpTotalInQuoteToken)
-    }
-    if (farm.quoteTokenSymbol === QuoteToken.ETH) {
-      return ethPrice.times(farm.lpTotalInQuoteToken)
-    }
     return farm.lpTotalInQuoteToken
-  }, [bnbPrice, sdcPrice, ethPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
+  }, [farm.lpTotalInQuoteToken])
 
 
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('SMARTDEXCHAIN', '')
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'SDC'
-  const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
-  const { quoteTokenAdresses, quoteTokenSymbol, lpTokenBalanceMC, tokenAddresses, poolWeight, tokenSymbol, lpTotalSupply, tokenBalanceLP, quoteTokenBlanceLP } = farm
-  const poolRate = (BLOCKS_PER_WEEK.times(SDC_PER_BLOCK.times(new BigNumber(poolWeight))))
+  const farmAPY = farm.apy  &&   farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)  || "0.00"
+  
+  const { lpTokenBalanceSR, lpTotalSupply, tokenBalanceLP, quoteTokenBalanceLP } = farm
+  const quoteTokenAddress = farm.quoteToken.address
+  const quoteTokenSymbol = farm.quoteToken.symbol
+  const tokenAddress = farm.token.address
+  const tokenSymbol = farm.token.symbol
+  const poolRate = ((new BigNumber(farm.rewardRate)).div(new BigNumber(10).pow(18)).times(60).times(60).times(24).times(7))
   const displayPoolRate = poolRate.toNumber()
-  const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
+  const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAddress, tokenAddress })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
-  const userPoolRate = account ?(stakedBalance.div(lpTokenBalanceMC)).times(100): new BigNumber(0)
-  const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceMC)
-  const displayUserPoolRate = userPoolRate.toNumber()
+  const userPoolRate = account ?(stakedBalance.div(lpTokenBalanceSR)).times(100): new BigNumber(0)
+  const displayLpTokenBalanceMC = getBalanceNumber(lpTokenBalanceSR)
+  const displayUserPoolRate = !userPoolRate.isNaN() ?  userPoolRate.toNumber(): 0
   
   useEffect(() => {
     ReactTooltip.rebuild();
@@ -213,7 +207,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
         multiplier={farm.multiplier}
         isCommunityFarm={isCommunityFarm}
         farmImage={farmImage}
-        tokenSymbol={farm.tokenSymbol}
+        tokenSymbol={farm.token.symbol}
       />
       <CardContent>
 
@@ -222,7 +216,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
             <Detail mb="37px" >
               <DetailInFo>{TranslateString(736, 'APR')}: </DetailInFo>
               <DetailApr >
-                {farm.apy ? (
+                {farm.apy  ? (
                   <>
                     <ApyButton
                       lpLabel={lpLabel}
@@ -241,7 +235,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           <Detail mb="37px" >
             <DetailInFo>{TranslateString(3052, 'Total Deposits')}: </DetailInFo>
             <DetailValue>
-              {lpTokenBalanceMC ? (
+              {lpTokenBalanceSR ? (
                 <>
                   <BalanceAndCompound data-tip={displayLpTokenBalanceMC.toLocaleString('en-US')} >
                     <Balance value={displayLpTokenBalanceMC} /> <InfoTextFarm>{lpLabel}</InfoTextFarm>
@@ -269,7 +263,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
           <Detail mb="37px" >
             <DetailInFo>{TranslateString(3054, 'Your Pool Rate')}: </DetailInFo>
             <DetailValue>
-              {!userPoolRate.isNaN() ? (
+              {userPoolRate ? (
                 <>
                   <BalanceAndCompound data-tip={displayUserPoolRate.toLocaleString('en-US')}>
                     <Balance fontSize="32px" value={displayUserPoolRate} decimals={3} />  <InfoTextFarm>%</InfoTextFarm>
@@ -309,10 +303,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, sdcPrice, bnbPrice, 
               pid={pid}
               quoteTokenSymbol={quoteTokenSymbol}
               tokenSymbol={tokenSymbol}
-              lpTokenBalanceMC={lpTokenBalanceMC}
+              lpTokenBalanceSR={lpTokenBalanceSR}
               lpTotalSupply={lpTotalSupply}
               tokenBalanceLP={tokenBalanceLP}
-              quoteTokenBlanceLP={quoteTokenBlanceLP}
+              quoteTokenBalanceLP={quoteTokenBalanceLP}
               pendingTx={pendingTx}
               setPendingTx={setPendingTx}
             />

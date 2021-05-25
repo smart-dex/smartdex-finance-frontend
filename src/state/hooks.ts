@@ -83,20 +83,23 @@ export const usePoolFromPid = (sousId): Pool => {
 export const usePriceBnbBusd = (): BigNumber => {
   const pid = 2 // BUSD-BNB LP
   const farm = useFarmFromPid(pid)
+  return new BigNumber(1)
   return farm.tokenPriceVsQuote ? new BigNumber(1).div(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceSdcBusd = (): BigNumber => {
-  const pid = 1 // SDC-BNB LP
-  const bnbPriceUSD = usePriceBnbBusd()
-  const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+  const pid = 2 // SDC-BUSD LP
+  // const bnbPriceUSD = usePriceBnbBusd()
+  const farm = useFarmFromPid(pid)  
+  // return new BigNumber(0)
+  return  farm.priceRate? new BigNumber(farm.priceRate):  ZERO
 }
 
 export const usePriceEthBusd = (): BigNumber => {
   const pid = 4 // ETH-BNB LP
   const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
+  return new BigNumber(0)
   return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
 }
 
@@ -147,7 +150,7 @@ export const useFetchProfile = () => {
 
 export const useProfile = () => {
   const { isInitialized, isLoading, data, hasRegistered }: ProfileState = useSelector((state: State) => state.profile)
-  
+
   return { profile: data, hasProfile: isInitialized && hasRegistered, isInitialized, isLoading }
 }
 

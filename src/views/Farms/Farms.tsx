@@ -4,13 +4,13 @@ import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { BLOCKS_PER_YEAR, SDC_PER_BLOCK, SDC_POOL_PID } from 'config'
+// import { BLOCKS_PER_YEAR, SDC_PER_BLOCK, SDC_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
 import { useFarms, usePriceBnbBusd, usePriceSdcBusd, usePriceEthBusd } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
-import { QuoteToken } from 'config/constants/types'
+// import { QuoteToken } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
@@ -41,8 +41,8 @@ const Farms: React.FC = () => {
   const [stackedOnly, setStackedOnly] = useState(false)
   const [active, setActive] = useState(true)
 
-  const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
-  const inactiveFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier === '0X')
+  const activeFarms = farmsLP
+  const inactiveFarms = []
   const stackedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
@@ -51,37 +51,30 @@ const Farms: React.FC = () => {
   // to retrieve assets prices against USD
   const farmsList = useCallback(
     (farmsToDisplay, removed: boolean) => {
-      const sdcPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === SDC_POOL_PID)?.tokenPriceVsQuote || 0)
       const farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
+        const sdcPriceInQuote = new BigNumber(farm.tokenPriceVsQuote)
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        const sdcRewardPerBlock = SDC_PER_BLOCK.times(farm.poolWeight)
-        const sdcRewardPerYear = sdcRewardPerBlock.times(BLOCKS_PER_YEAR)
+        const sdcRewardPerYear = farm.sdcPerYear
 
         // sdcPriceInQuote * sdcRewardPerYear / lpTotalInQuoteToken
-        let apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
+        const apy =   sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken) 
+        const resultApy = !apy.isNaN() ? apy: new BigNumber(0)
+        // if (farm.dual) {
+        //   console.log("a")
+        //   const sdcApy =
+        //     farm && sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
+        //   const dualApy =
+        //     sdcPriceInQuote &&
+        //     new BigNumber(sdcPriceInQuote)
+        //       .times(farm.dual.sdcRewardPerYear)
+        //       .div(farm.lpTotalInQuoteToken)
 
-        if (farm.quoteTokenSymbol === QuoteToken.BUSD || farm.quoteTokenSymbol === QuoteToken.UST) {
-          apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
-        } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
-          apy = sdcPrice.div(ethPriceUsd).times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
-        } else if (farm.quoteTokenSymbol === QuoteToken.SDC) {
-          apy = sdcRewardPerYear.div(farm.lpTotalInQuoteToken)
-        } else if (farm.dual) {
-          const sdcApy =
-            farm && sdcPriceVsBNB.times(sdcRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
-          const dualApy =
-            farm.tokenPriceVsQuote &&
-            new BigNumber(farm.tokenPriceVsQuote)
-              .times(farm.dual.rewardPerBlock)
-              .times(BLOCKS_PER_YEAR)
-              .div(farm.lpTotalInQuoteToken)
+        //   apy = sdcApy && dualApy && sdcApy.plus(dualApy)
+        // }
 
-          apy = sdcApy && dualApy && sdcApy.plus(dualApy)
-        }
-
-        return { ...farm, apy }
+        return { ...farm, apy:resultApy }
       })
       return farmsToDisplayWithAPY.map((farm) => (
         <FarmCard
@@ -96,12 +89,11 @@ const Farms: React.FC = () => {
         />
       ))
     },
-    [farmsLP, bnbPrice, ethPriceUsd, sdcPrice, ethereum, account],
+    [bnbPrice, ethPriceUsd, sdcPrice, ethereum, account],
   )
 
   return (
     <Page>
-
       <FarmHeader>
         <HeadingFarm as="h1" size="lg" color="secondary" mb="25px">
           {TranslateString(696, 'Stake LP tokens to earn SDC')}

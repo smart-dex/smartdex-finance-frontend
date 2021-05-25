@@ -183,7 +183,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
       setPendingTx={setPendingTx}
     />
   )
-  const { onApprove } = useApprove(lpContract)
+  const { onApprove } = useApprove(lpContract, pid)
 
   const handleApprove = useCallback(async () => {
     try {
@@ -217,7 +217,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({
                     {
                       tokenBalance.eq(0) && stakedBalance.eq(0) ?
                         (
-                          <ButtonDeposit as="a" href={addLiquidityUrl} target="_blank" >
+                          <ButtonDeposit as="a" href={addLiquidityUrl} >
                             <span>  {TranslateString(316, 'Deposit')}</span>
                           </ButtonDeposit>
                         ) : (

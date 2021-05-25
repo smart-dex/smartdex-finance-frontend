@@ -28,7 +28,7 @@ const TextStyle = styled(Text)`
 const SdcHarvestBalance = () => {
   const TranslateString = useI18n()
   const { account } = useWallet()
-  const allEarnings = useAllEarnings()
+  const allEarnings = useAllEarnings()  
   const earningsSum = allEarnings.reduce((accum, earning) => {
     return accum + new BigNumber(earning).div(new BigNumber(10).pow(18)).toNumber()
   }, 0)

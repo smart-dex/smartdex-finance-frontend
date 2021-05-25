@@ -8,6 +8,7 @@ import BigNumber from 'bignumber.js'
 import { QuoteToken } from 'config/constants/types'
 import { useFarms, usePriceBnbBusd, usePriceEthBusd, usePriceSdcBusd } from 'state/hooks'
 import { BLOCKS_PER_YEAR, SDC_PER_BLOCK, SDC_POOL_PID } from 'config'
+import useRefresh from 'hooks/useRefresh'
 
 const StyledFarmStakingCard = styled(Card)`
   border: 1px solid ${({ theme }) => (theme.isDark ? darkColors.borderColor : lightColors.borderColor)};
@@ -63,66 +64,43 @@ const NavLinkStyle = styled(NavLink)`
 `
 const EarnAPYCard = () => {
   const TranslateString = useI18n()
+  const { fastRefresh } = useRefresh()
   const farmsLP = useFarms()
   const bnbPrice = usePriceBnbBusd()
   const ethPriceUsd = usePriceEthBusd()
   const sdcPrice = usePriceSdcBusd()
   const maxAPY = useRef(Number.MIN_VALUE)
   const getHighestAPY = () => {
-    const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
+    const activeFarms = farmsLP
     calculateAPY(activeFarms)
- 
-    return (maxAPY.current * 100).toLocaleString('en-US').slice(0, -1)
+    return  maxAPY.current? (maxAPY.current * 100).toLocaleString('en-US').slice(0, -1): "0.00"
   }
-  const calculateAPY = useCallback(
+  const calculateAPY = 
     (farmsToDisplay) => {
-      const sdcPriceVsBNB = new BigNumber(farmsLP.find((farm) => farm.pid === SDC_POOL_PID)?.tokenPriceVsQuote || 0)
       const result = farmsToDisplay.map((farm) => {
+        const sdcPriceInQuote = new BigNumber(farm.tokenPriceVsQuote)
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        const sdcRewardPerBlock = SDC_PER_BLOCK.times(farm.poolWeight)
-        const sdcRewardPerYear = sdcRewardPerBlock.times(BLOCKS_PER_YEAR)
+        const sdcRewardPerYear = farm.sdcPerYear
 
-        let apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
-
-        if (farm.quoteTokenSymbol === QuoteToken.BUSD) {
-          apy = sdcPriceVsBNB.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
-        }
-        else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
-          apy = sdcPrice.div(ethPriceUsd).times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken)
-        } else if (farm.quoteTokenSymbol === QuoteToken.SDC) {
-          apy = sdcRewardPerYear.div(farm.lpTotalInQuoteToken)
-        }
-        else if (farm.quoteTokenSymbol === QuoteToken.SDC) {
-          apy = sdcRewardPerYear.div(farm.lpTotalInQuoteToken)
-        } else if (farm.dual) {
-          const sdcApy =
-            farm && sdcPriceVsBNB.times(sdcRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
-          const dualApy =
-            farm.tokenPriceVsQuote &&
-            new BigNumber(farm.tokenPriceVsQuote)
-              .times(farm.dual.rewardPerBlock)
-              .times(BLOCKS_PER_YEAR)
-              .div(farm.lpTotalInQuoteToken)
-
-          apy = sdcApy && dualApy && sdcApy.plus(dualApy)
-        }
-
+        // sdcPriceInQuote * sdcRewardPerYear / lpTotalInQuoteToken
+        const apy = sdcPriceInQuote.times(sdcRewardPerYear).div(farm.lpTotalInQuoteToken) 
+      
         // if (maxAPY.current < apy.toNumber()) maxAPY.current = apy.toNumber()
-        return apy.toNumber()
+        return !apy.isNaN() ? apy.toNumber(): 0
       })
-      maxAPY.current=Math.max(...result)
-    },
-    [bnbPrice, farmsLP, ethPriceUsd, sdcPrice],
-  )
+      
+      maxAPY.current=Math.max(...result)    
+    }
+  
 
   return (
     <StyledFarmStakingCard>
       <CardBody>
         <HeadingEarn>{TranslateString(1199, 'Earn up to')}</HeadingEarn>
         <CardMidContent>
-          {getHighestAPY() && maxAPY.current ? (
+          {getHighestAPY() || maxAPY.current  ? (
             `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
           ) : (
               <Skeleton animation="pulse" variant="rect" height="44px" />
