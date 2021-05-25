@@ -14,9 +14,7 @@ const Menu = (props) => {
   const { login, logout } = useAuth()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
-  const {sdcPriceUsd} = useGlobalData()
-  console.log(sdcPriceUsd);
-  
+  const {sdcPriceUsd} = useGlobalData()  
   if (sdcPriceUsd || sdcPriceUsd === 0) {
     localStorage.setItem("sdcPrice",sdcPriceUsd.toString())
   }
