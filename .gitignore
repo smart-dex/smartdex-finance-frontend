@@ -26,6 +26,8 @@
 .env.test.local
 .env.production.local
 .env
+.env.development
+.env.staging
 
 package-lock.json
 
